@@ -1,0 +1,184 @@
+[
+  {
+    "query": "Dark mode fintech landing page, premium SaaS, gold and purple accents, minimalist UI, dashboard perspective",
+    "image_info": {
+      "url": "https://cdn.dribbble.com/userupload/45028974/file/c1c9eee4af45d8ba2815f848f93d2b44.png?resize=400x0",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 139178,
+      "width": 400,
+      "height": 300,
+      "total_pixels": 120000,
+      "basic_score": 0.7267085141550227,
+      "file_name": "dark-mode-fintech-saas-landing-page-purple-gold-ui.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 85.0,
+      "watermark_score": 100.0,
+      "overall_score": 90.0,
+      "explanation": "The image perfectly aligns with the search query, showcasing a high-quality dark mode fintech landing page with the specific purple and gold/orange gradient color scheme requested. The design is modern and relevant to SaaS trends. The resolution is decent for a design mockup, though slightly soft on smaller text.",
+      "file_name": "dark-mode-fintech-saas-landing-page-purple-gold-ui.jpg",
+      "caption": "A modern dark-mode fintech SaaS landing page mockup featuring 3D floating credit cards, dynamic purple and gold fluid gradients, and sleek typography focused on financial management.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Dark mode fintech landing page, premium SaaS, gold and purple accents, minimalist UI, dashboard perspective",
+    "image_info": {
+      "url": "https://mir-s3-cdn-cf.behance.net/project_modules/1400/d2833c180507383.654ccf93c2128.png",
+      "img_format": "PNG",
+      "mode": "P",
+      "file_size": 271149,
+      "width": 1400,
+      "height": 1050,
+      "total_pixels": 1470000,
+      "basic_score": 0.8870641815359535,
+      "file_name": "dark-mode-saas-fintech-landing-page-purple-ui-design.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 85.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 88.0,
+      "explanation": "The image excellently depicts a dark mode SaaS landing page with a modern, premium aesthetic and prominent purple accents, matching most of the query. However, the requested 'gold' accents are minimal, appearing mostly as orange/amber hues in the icons rather than a distinct gold theme. The dashboard elements and layout fit the fintech context well.",
+      "file_name": "dark-mode-saas-fintech-landing-page-purple-ui-design.jpg",
+      "caption": "A sleek dark mode landing page design for a SaaS platform named 'inexas', featuring vibrant purple gradients, floating dashboard elements, and a clean layout with orange-accented feature icons.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Futuristic AI crypto trading interface, glassmorphism, deep blue and neon purple, neural network visualizations, glowing UI",
+    "image_info": {
+      "url": "https://cdn.dribbble.com/userupload/43677613/file/original-63298e823db292d23c034827c3067436.png?resize=752x&vertical=center",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 237879,
+      "width": 752,
+      "height": 564,
+      "total_pixels": 424128,
+      "basic_score": 0.840951419734286,
+      "file_name": "futuristic_ai_crypto_trading_ui_dashboard.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 90.0,
+      "clarity_score": 95.0,
+      "watermark_score": 100.0,
+      "overall_score": 92.0,
+      "explanation": "The image is highly relevant to the search query, effectively showcasing a futuristic UI with AI elements (the robot) and crypto trading data. The dark theme and glassmorphism style are present and well-executed. While it lacks the specific 'neural network visualizations' and 'neon purple' mentioned in the prompt, the overall aesthetic fits the 'deep blue' and 'glowing UI' requirements perfectly. The resolution is high, and the text is legible.",
+      "file_name": "futuristic_ai_crypto_trading_ui_dashboard.jpg",
+      "caption": "A presentation of four mobile UI screens for an AI-powered cryptocurrency trading app, featuring a dark blue glassmorphism design, a 3D robot mascot, trading history, and account settings.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Futuristic AI crypto trading interface, glassmorphism, deep blue and neon purple, neural network visualizations, glowing UI",
+    "image_info": {
+      "url": "https://mir-s3-cdn-cf.behance.net/projects/404/c2749a230260711.Y3JvcCwxMzQyLDEwNTAsMjksMA.png",
+      "img_format": "PNG",
+      "mode": "RGB",
+      "file_size": 159544,
+      "width": 404,
+      "height": 316,
+      "total_pixels": 127664,
+      "basic_score": 0.732253757490984,
+      "file_name": "futuristic-crypto-trading-dashboard-ui-dark-mode.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 85.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 88.0,
+      "explanation": "The image is a professional UI mockup that aligns well with the crypto trading and dark mode requirements. It features the requested color palette (deep blue and purple). However, it lacks specific 'neural network visualizations' and strong 'glassmorphism' effects, leaning more towards a modern gradient-based material design.",
+      "file_name": "futuristic-crypto-trading-dashboard-ui-dark-mode.jpg",
+      "caption": "A sleek, dark-themed user interface design for a cryptocurrency trading platform featuring real-time market charts, asset allocation graphs, and transaction history in a perspective view with deep purple and green accents.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Futuristic AI crypto trading interface, glassmorphism, deep blue and neon purple, neural network visualizations, glowing UI",
+    "image_info": {
+      "url": "https://cdn.dribbble.com/userupload/13839987/file/original-b1d13f414aad53fe1d3046ee5a75f42a.png?resize=400x0",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 122255,
+      "width": 400,
+      "height": 300,
+      "total_pixels": 120000,
+      "basic_score": 0.7235746841127928,
+      "file_name": "futuristic_dark_crypto_dashboard_ui_glassmorphism.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 85.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 88.0,
+      "explanation": "The image is a high-quality representation of a dark-themed crypto dashboard with glassmorphism elements, aligning well with the core search query. However, it misses specific prompt details like 'neon purple' accents and explicit 'neural network visualizations', sticking instead to a standard cyan/blue palette.",
+      "file_name": "futuristic_dark_crypto_dashboard_ui_glassmorphism.jpg",
+      "caption": "A modern dark-themed cryptocurrency trading dashboard UI featuring glassmorphism effects, real-time price charts for Bitcoin and Ethereum, and a sidebar navigation menu in deep blue tones.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Futuristic AI crypto trading interface, glassmorphism, deep blue and neon purple, neural network visualizations, glowing UI",
+    "image_info": {
+      "url": "https://promptsmint.com/images/futuristic-crypto-dashboard-dark-mode/futuristic-crypto-dashboard-dark-mode-chatgpt-optimized.webp",
+      "img_format": "WEBP",
+      "mode": "RGB",
+      "file_size": 42078,
+      "width": 800,
+      "height": 533,
+      "total_pixels": 426400,
+      "basic_score": 0.8387943059374562,
+      "file_name": "futuristic_neon_crypto_trading_dashboard_ui.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 95.0,
+      "clarity_score": 90.0,
+      "watermark_score": 100.0,
+      "overall_score": 88.0,
+      "explanation": "The image precisely visualizes the 'futuristic AI crypto trading dashboard' concept with the requested dark theme, deep blue and neon purple color palette, and glowing glassmorphism effects. The UI layout is comprehensive and visually striking. While there are minor text anomalies typical of AI generation (e.g., 'Bictoin'), the overall aesthetic is highly professional and fits the search intent perfectly.",
+      "file_name": "futuristic_neon_crypto_trading_dashboard_ui.jpg",
+      "caption": "A high-tech, futuristic cryptocurrency trading dashboard interface featuring a dark background with glowing neon blue and purple glassmorphism elements, displaying Bitcoin price charts, portfolio values, and asset allocation widgets.",
+      "recommend": true,
+      "error": ""
+    }
+  },
+  {
+    "query": "Minimalist swiss style financial data terminal, black background, white grid, cool blue data visualization, strict typography",
+    "image_info": {
+      "url": "https://s3-alpha.figma.com/hub/file/2236181106077961447/2e8cc624-8e7a-40fb-bf87-e8af90f2f294-cover.png",
+      "img_format": "PNG",
+      "mode": "RGBA",
+      "file_size": 362043,
+      "width": 1920,
+      "height": 1080,
+      "total_pixels": 2073600,
+      "basic_score": 0.7267198855401689,
+      "file_name": "dark-mode-crypto-financial-dashboard-ui-design.jpg"
+    },
+    "llm_score": {
+      "success": true,
+      "relevance_score": 82.0,
+      "clarity_score": 88.0,
+      "watermark_score": 100.0,
+      "overall_score": 89.0,
+      "explanation": "The image captures the essence of a dark financial UI with excellent data visualization. However, it leans more towards a modern, rounded-corner dashboard aesthetic rather than the strict 'Swiss style' or 'terminal' look requested (which typically implies sharper edges, grids, and monospaced typography). The color palette matches the 'cool blue' description well.",
+      "file_name": "dark-mode-crypto-financial-dashboard-ui-design.jpg",
+      "caption": "A sleek, dark-themed financial dashboard UI mock-up titled 'Cryptoline', featuring modules for earnings, expenses, credit card details, and real-time cryptocurrency tracking with teal and purple data visualization accents set against a geometric background.",
+      "recommend": true,
+      "error": ""
+    }
+  }
+]
