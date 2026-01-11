@@ -1,0 +1,77 @@
+{
+  "color": {
+    "primary": {
+      "500": { "value": "#D4AF37", "type": "color", "comment": "Gold - Main Brand" },
+      "hover": { "value": "#C5A028", "type": "color" },
+      "100": { "value": "#3E3418", "type": "color", "comment": "Gold Tint" }
+    },
+    "accent": {
+      "500": { "value": "#7B61FF", "type": "color", "comment": "Purple - AI" },
+      "glow": { "value": "rgba(123, 97, 255, 0.15)", "type": "color" }
+    },
+    "bg": {
+      "900": { "value": "#050505", "type": "color", "comment": "Page Background" },
+      "800": { "value": "#0F0F11", "type": "color", "comment": "Surface 1" },
+      "700": { "value": "#18181B", "type": "color", "comment": "Surface 2" }
+    },
+    "text": {
+      "900": { "value": "#FFFFFF", "type": "color", "comment": "Headings" },
+      "500": { "value": "#A1A1AA", "type": "color", "comment": "Body" },
+      "inverse": { "value": "#000000", "type": "color", "comment": "Text on Gold" }
+    },
+    "border": {
+      "default": { "value": "#27272A", "type": "color" },
+      "light": { "value": "rgba(255, 255, 255, 0.08)", "type": "color" }
+    },
+    "status": {
+      "success": { "value": "#10B981", "type": "color" },
+      "error": { "value": "#EF4444", "type": "color" }
+    }
+  },
+  "typography": {
+    "fontFamily": {
+      "heading": { "value": "'Plus Jakarta Sans', sans-serif" },
+      "body": { "value": "'Inter', sans-serif" },
+      "mono": { "value": "'JetBrains Mono', monospace" }
+    },
+    "fontSize": {
+      "h1": { "value": "64px" },
+      "h2": { "value": "48px" },
+      "h3": { "value": "24px" },
+      "body": { "value": "16px" },
+      "sm": { "value": "14px" }
+    },
+    "lineHeight": {
+      "heading": { "value": "1.2" },
+      "body": { "value": "1.6" }
+    }
+  },
+  "spacing": {
+    "section": { "value": "96px" },
+    "block": { "value": "48px" },
+    "card": { "value": "32px" },
+    "gap": { "value": "24px" },
+    "unit": { "value": "4px" }
+  },
+  "borderRadius": {
+    "card": { "value": "16px" },
+    "button": { "value": "8px" },
+    "input": { "value": "12px" },
+    "full": { "value": "9999px" }
+  },
+  "boxShadow": {
+    "gold": { "value": "0 4px 12px rgba(212, 175, 55, 0.2)" },
+    "glow": { "value": "0 0 120px rgba(123, 97, 255, 0.15)" },
+    "glass": { "value": "0 8px 32px 0 rgba(0, 0, 0, 0.37)" }
+  },
+  "animation": {
+    "duration": {
+      "fast": { "value": "200ms" },
+      "normal": { "value": "300ms" },
+      "slow": { "value": "700ms" }
+    },
+    "easing": {
+      "default": { "value": "cubic-bezier(0.4, 0, 0.2, 1)" }
+    }
+  }
+}
