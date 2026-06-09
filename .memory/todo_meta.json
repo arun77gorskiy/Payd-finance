@@ -1,0 +1,41 @@
+{
+  "todos": {
+    "Coordinator": {
+      "1": {
+        "id": "1",
+        "content": "Создать модуль MarketAPI.js для API Binance/CoinGecko",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "Добавить переключатель таймфреймов в UI",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "Реализовать выбор монет с проверкой Binance",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "4": {
+        "id": "4",
+        "content": "Создать два режима: Учебный и Свободный анализ",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "5": {
+        "id": "5",
+        "content": "Интегрировать MarketAPI с компонентом графика",
+        "details": "",
+        "status": "completed",
+        "priority": "medium"
+      }
+    }
+  }
+}
