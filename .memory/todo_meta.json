@@ -3,38 +3,31 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Создать модуль MarketAPI.js для API Binance/CoinGecko",
-        "details": "",
+        "content": "Fix JavaScript errors",
+        "details": "Fix `setTimeframe`, `setReplaySpeed`, `setFreeTimeframe` to pass `event` as parameter. Remove duplicate `calculateConfirmationScore` function. Fix `validateCurrentStage` to use correct element IDs. Fix `restartScenario` to reset confirmations array.",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Добавить переключатель таймфреймов в UI",
-        "details": "",
+        "content": "Rename 'Trainer' tab to 'Обучение'",
+        "details": "Update navigation button label. Update tab ID references. Ensure trainer is properly accessible from 'Обучение' tab.",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Реализовать выбор монет с проверкой Binance",
-        "details": "",
+        "content": "Fix remaining bugs and edge cases",
+        "details": "Fix escaped quotes in HTML template. Show prev-stage-btn when stage > 1. Fix confirmationSeries undefined. Fix getConfidenceCalibration template literals.",
         "status": "completed",
-        "priority": "high"
+        "priority": "medium"
       },
       "4": {
         "id": "4",
-        "content": "Создать два режима: Учебный и Свободный анализ",
-        "details": "",
+        "content": "Test fixes locally and deploy",
+        "details": "Test the website in browser. Verify all navigation tabs work. Verify trainer functionality in 'Обучение' tab. Deploy to production.",
         "status": "completed",
         "priority": "high"
-      },
-      "5": {
-        "id": "5",
-        "content": "Интегрировать MarketAPI с компонентом графика",
-        "details": "",
-        "status": "completed",
-        "priority": "medium"
       }
     }
   }
