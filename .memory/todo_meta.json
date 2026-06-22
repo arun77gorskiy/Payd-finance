@@ -3,29 +3,29 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Fix JavaScript errors",
-        "details": "Fix `setTimeframe`, `setReplaySpeed`, `setFreeTimeframe` to pass `event` as parameter. Remove duplicate `calculateConfirmationScore` function. Fix `validateCurrentStage` to use correct element IDs. Fix `restartScenario` to reset confirmations array.",
+        "content": "Создать единый переиспользуемый компонент PaydTradingViewWidget.js на основе tv.js",
+        "details": "Использует тот же подход, что и index.html (new TradingView.widget через tv.js). Поддержка symbol, interval, theme, height, locale. Обрабатывает скрытые контейнеры через ResizeObserver/IntersectionObserver. Защита от двойной инициализации.",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Rename 'Trainer' tab to 'Обучение'",
-        "details": "Update navigation button label. Update tab ID references. Ensure trainer is properly accessible from 'Обучение' tab.",
+        "content": "Обновить trading-lab.html: подключить tv.js и PaydTradingViewWidget.js, заменить renderChart() и initFreeChart()",
+        "details": "Удалить lightweight-charts script, TradingViewChart.js. Заменить вызовы TradingViewChart и PaydTradingChart (для free-chart) на PaydTradingViewWidget.",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Fix remaining bugs and edge cases",
-        "details": "Fix escaped quotes in HTML template. Show prev-stage-btn when stage > 1. Fix confirmationSeries undefined. Fix getConfidenceCalibration template literals.",
-        "status": "completed",
+        "content": "index.html оставлен без изменений (он уже работает)",
+        "details": "Добавить script для PaydTradingViewWidget, использовать его в tradingview_oi, tradingview_market, tradingview_dashboard.",
+        "status": "cancelled",
         "priority": "medium"
       },
       "4": {
         "id": "4",
-        "content": "Test fixes locally and deploy",
-        "details": "Test the website in browser. Verify all navigation tabs work. Verify trainer functionality in 'Обучение' tab. Deploy to production.",
+        "content": "Задеплоить и протестировать",
+        "details": "Проверить что график работает на основной странице, в trainer-view и free-analysis-view Trading Lab.",
         "status": "completed",
         "priority": "high"
       }
