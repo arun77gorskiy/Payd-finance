@@ -1,0 +1,29 @@
+📄 Extracted from page: PAYD Trading Lab — Интерактивное обучение трейдингу
+URL: https://q7uq1jgc2ctf.space.minimax.io/trading-lab.html
+
+Extracted content:
+```json
+{
+    "title": "PAYD Trading Lab — Интерактивное обучение трейдингу",
+    "url": "https://q7uq1jgc2ctf.space.minimax.io/trading-lab.html",
+    "summary": "Interactive trading education platform (PAYD Trading Lab) with six learning modules for building a trading system. The currently active/loaded scenario is from Module 01 titled 'Почему уровень сам по себе ничего не значит' (Why a level by itself means nothing), focused on BTC/USDT on 1H timeframe. The chart shows a price level of $67,500 with future hidden. Users make trading decisions (direction, market context, confirmations, entry, stop loss, take profit, risk, invalidation, reasoning) which are scored on quality (Decision Score) rather than profit. The result panel shows 76/100 score with feedback about the main error being premature entry without confirmation.",
+    "key_points": [
+        "Current scenario title: 'Почему уровень сам по себе ничего не значит' (Why a level by itself means nothing)",
+        "This is Module 01 (the first active module), not Module 02",
+        "Module 02 is titled 'Подтверждение входа' (Entry Confirmation) — candle, volume, and retest",
+        "Chart is showing BTC/USDT on 1H timeframe",
+        "The chart is NOT displaying candlesticks explicitly mentioned — it shows a price level of $67,500 with 'Будущее скрыто' (Future hidden)",
+        "Current loaded scenario: Scenario 1 of 1 within Module 01",
+        "Chart contents: price level marker at $67,500, timeframe selector (15m, 1H, 4H, 1D), playback speed controls (0.5×, 1×, 2×)",
+        "Decision scoring: Context 25%, Evidence 20%, Entry 20%, Invalidation 20%, Risk 15%",
+        "Sample result shown: 76/100 score, main error was entry chosen too early before confirmation, recommendation to wait for confirmation",
+        "Next recommended module: 'Подтверждение входа: свеча, объём и ретест' (Entry Confirmation: candle, volume, and retest)",
+        "Six total modules: 01 Evidence, 02 Entry Confirmation, 03 Context, 04 Risk Management, 05 Psychology, 06 Strategy Validation",
+        "System evaluates quality of decisions, not profit"
+    ],
+    "relevant_links": [
+        "https://q7uq1jgc2ctf.space.minimax.io/trading-lab.html"
+    ],
+    "file_name": "payd_trading_lab_scenario.json"
+}
+```
