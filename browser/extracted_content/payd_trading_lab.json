@@ -1,34 +1,26 @@
 📄 Extracted from page: PAYD Trading Lab — Интерактивное обучение трейдингу
-URL: https://yirbq3l1m68i.space.minimax.io/trading-lab.html
+URL: https://9qu8koq071sf.space.minimax.io/trading-lab.html
 
 Extracted content:
 ```json
 {
     "title": "PAYD Trading Lab — Интерактивное обучение трейдингу",
-    "url": "https://yirbq3l1m68i.space.minimax.io/trading-lab.html",
-    "summary": "PAYD Trading Lab is an interactive trading education platform that evaluates the quality of trading decisions rather than profit. The page features a Dashboard with progress tracking (Decision Score, scenarios completed, No Trade decisions, main mistake), a list of 6 training modules (Evidence, Entry Confirmation, Market Context, Risk Management, Trading Psychology, Strategy Validation), and an active scenario module. The current active scenario is 'Module 2: Подтверждение • Сценарий 1 / 3' for BTC/USDT on 1H timeframe, covering a breakout without retest at key level $67,500. The scenario progresses through three steps: Step 1 (Analysis) - identifying confirmations on the chart with checkboxes; Step 2 (Decision) - choosing one of 5 trading actions; Step 3 (Confirmation) - confirming the decision. The page also includes a results section showing scores across Context, Evidence, Entry, Invalidation, and Risk categories, a Trade Autopsy section, and progress tracking with error maps, skill profile, and decision history.",
+    "url": "https://9qu8koq071sf.space.minimax.io/trading-lab.html",
+    "summary": "PAYD Trading Lab is an interactive trading education platform in Russian. The page features a dashboard, training modules, a trainer interface, and progress tracking. It offers six progressive learning modules covering: (1) Why levels alone mean nothing, (2) Entry confirmation, (3) Market context, (4) Risk management, (5) Trader psychology, and (6) Strategy validation. The first module is active, the second is available, the third is coming soon, and modules 4-6 are locked. A sample scenario for BTC/USDT (1H) showing resistance breakout confirmation at $67,500 is displayed with a chart area mentioning 50 historical candles, volume, and key level. The page also shows progress tracking sections including error map, skills profile, and decision history (currently empty). A results panel shows scoring criteria: Context (25%), Evidence (20%), Entry (20%), Invalidation (20%), Risk (15%), with a sample result of 76/100 showing strong side in market context and main error being premature entry without confirmation. No visible errors on the page were detected.",
     "key_points": [
-        "Platform name: PAYD Trading Lab — Интерактивное обучение трейдингу",
-        "Main principle: 'Система оценивает качество решений, а не прибыль' (System evaluates quality of decisions, not profit)",
-        "Active scenario: Module 2 (Подтверждение), Scenario 1 of 3, BTC/USDT 1H timeframe",
-        "Scenario context: 'Пробой без ретеста' (Breakout without retest), Key level $67,500",
-        "Market context shown: Module 1 → Context, бычий (bullish), тест поддержки · 20% уверенности, Слабый бычий моментум · Объём в норме, Продолжение ≈ 47% · Разворот ≈ 53%",
-        "Шаг 1 из 3 (Step 1/3): Анализ — 'Какие подтверждения уже присутствуют?' with checkboxes for multiple selection: 'Есть пробой уровня', 'Есть закрытие за уровнем', 'Есть повышенный объём', 'Есть ретест', 'Есть удержание уровня', 'Есть импульс', 'Подтверждения недостаточно'",
-        "Шаг 2 из 3 (Step 2/3): Решение — 'Какое решение сейчас наиболее оправдано?' with 5 decision options: PARTIAL (partial entry ½ or ⅓ position, Low risk, R:R 1:2), SCALE IN (staged entry 2-3 entries, Medium risk, R:R 1:2), SHORT (standard short entry on confirmed breakdown, Medium risk, R:R 1:2), WAIT (no entry, wait for clearer structure, Low risk, R:R —), NO TRADE (full refusal, Low risk, R:R —)",
-        "Шаг 3 из 3 (Step 3/3): Подтверждение with 'Подтвердить решение' button and message 'Решение зафиксировано. Подождите окончания проигрывания.'",
-        "6 training modules: 1) Evidence (Active) - 'Почему уровень сам по себе ничего не значит', 7-10 min; 2) Entry Confirmation (Active) - 'Подтверждение входа: Свеча, объём и ретест', 10-15 min; 3) Market Context (Soon) - 'Рыночный контекст: Тренд, диапазон, переходная фаза'; 4) Risk Management (Locked); 5) Trading Psychology (Locked); 6) Strategy Validation (Locked)",
-        "Progress tracking: Средний Decision Score (0), Сценариев пройдено (0%), Решений No Trade, Главная ошибка",
-        "Results scoring breakdown: Context (25%), Evidence (20%), Entry (20%), Invalidation (20%), Risk (15%)",
-        "Example result: 76/100, Strong side: 'Рыночный контекст определён правильно', Main error: 'Вход был выбран слишком рано, до подтверждения', Conclusion: 'Уровень — это не сигнал. Дождитесь подтверждения.'",
-        "Trade Autopsy fields: Гипотеза, Качество Entry, Выбрано, Stop Loss, Пропущено, Take Profit, Противоречия, Риск, Логика, Итог, Классификация ошибки, Итог качества решения",
-        "Disclaimer: 'Результаты сценариев не являются индивидуальной инвестиционной рекомендацией и не гарантируют финансовую прибыль'",
-        "Footer: © 2026 PAYD Trading Lab. Все права защищены.",
-        "Post-scenario buttons: 'Повторить сценарий', 'К модулям', 'Открыть прогресс'",
-        "Progress section includes: Карта ошибок (Error Map), Профиль навыков (Skill Profile), История решений (Decision History)",
-        "Navigation menu: Dashboard, Modules, Trainer, Progress"
+        "Interactive trading education platform in Russian language",
+        "Six progressive training modules: Levels, Entry Confirmation, Market Context, Risk Management, Psychology, Strategy Validation",
+        "Module 1 (active) and Module 2 (active) available, Module 3 coming soon, Modules 4-6 locked",
+        "Progress tracking with Decision Score, scenarios completed percentage, No Trade decisions, and main error identification",
+        "Sample BTC/USDT 1H scenario showing resistance breakout at $67,500",
+        "Scoring system based on 5 criteria: Context 25%, Evidence 20%, Entry 20%, Invalidation 20%, Risk 15%",
+        "Sample result of 76/100 demonstrating trade autopsy with hypothesis, entry quality, stop loss, take profit, and risk analysis",
+        "Empty state for Error Map, Skills Profile, and Decision History (user hasn't started yet)",
+        "Disclaimer stating the trainer is for educational purposes, not individual investment advice",
+        "Copyright 2026 PAYD Trading Lab"
     ],
     "relevant_links": [
-        "https://yirbq3l1m68i.space.minimax.io/trading-lab.html"
+        "https://9qu8koq071sf.space.minimax.io/trading-lab.html"
     ],
     "file_name": "payd_trading_lab.json"
 }
