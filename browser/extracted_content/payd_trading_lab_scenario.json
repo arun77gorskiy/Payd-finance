@@ -1,28 +1,63 @@
 📄 Extracted from page: PAYD Trading Lab — Интерактивное обучение трейдингу
-URL: https://q7uq1jgc2ctf.space.minimax.io/trading-lab.html
+URL: https://ycdtvgzwoh5k.space.minimax.io/trading-lab.html
 
 Extracted content:
 ```json
 {
     "title": "PAYD Trading Lab — Интерактивное обучение трейдингу",
-    "url": "https://q7uq1jgc2ctf.space.minimax.io/trading-lab.html",
-    "summary": "Interactive trading education platform (PAYD Trading Lab) with six learning modules for building a trading system. The currently active/loaded scenario is from Module 01 titled 'Почему уровень сам по себе ничего не значит' (Why a level by itself means nothing), focused on BTC/USDT on 1H timeframe. The chart shows a price level of $67,500 with future hidden. Users make trading decisions (direction, market context, confirmations, entry, stop loss, take profit, risk, invalidation, reasoning) which are scored on quality (Decision Score) rather than profit. The result panel shows 76/100 score with feedback about the main error being premature entry without confirmation.",
+    "url": "https://ycdtvgzwoh5k.space.minimax.io/trading-lab.html",
+    "summary": "PAYD Trading Lab is an interactive trading education platform. The current page displays a trading scenario within 'Module 2: Подтверждение (Confirmation) • Сценарий 1 / 3' for BTC/USDT on a 1H timeframe, focused on the topic 'Пробой без ретеста' (Breakout without retest) with a key level at $67,500. The layout is organized in multiple sections: a progress overview at the top, six educational modules listed vertically with Module 1 active, the main trading scenario area showing all three steps of the decision-making process (Step 1: Analysis, Step 2: Decision, Step 3: Confirmation), a 'Your Progress' section with error map and decision history, and a footer. The scenario includes market context (bullish, support test, 20% confidence), candlestick chart with 50 historical candles, and a detailed evaluation result showing 76/100 score.",
     "key_points": [
-        "Current scenario title: 'Почему уровень сам по себе ничего не значит' (Why a level by itself means nothing)",
-        "This is Module 01 (the first active module), not Module 02",
-        "Module 02 is titled 'Подтверждение входа' (Entry Confirmation) — candle, volume, and retest",
-        "Chart is showing BTC/USDT on 1H timeframe",
-        "The chart is NOT displaying candlesticks explicitly mentioned — it shows a price level of $67,500 with 'Будущее скрыто' (Future hidden)",
-        "Current loaded scenario: Scenario 1 of 1 within Module 01",
-        "Chart contents: price level marker at $67,500, timeframe selector (15m, 1H, 4H, 1D), playback speed controls (0.5×, 1×, 2×)",
-        "Decision scoring: Context 25%, Evidence 20%, Entry 20%, Invalidation 20%, Risk 15%",
-        "Sample result shown: 76/100 score, main error was entry chosen too early before confirmation, recommendation to wait for confirmation",
-        "Next recommended module: 'Подтверждение входа: свеча, объём и ретест' (Entry Confirmation: candle, volume, and retest)",
-        "Six total modules: 01 Evidence, 02 Entry Confirmation, 03 Context, 04 Risk Management, 05 Psychology, 06 Strategy Validation",
-        "System evaluates quality of decisions, not profit"
+        "Current scenario: Module 2 (Подтверждение/Confirmation), Scenario 1 of 3",
+        "Asset: BTC/USDT on 1H timeframe",
+        "Topic: 'Пробой без ретеста' (Breakout without retest) at key level $67,500",
+        "All three steps are visible on the page: Step 1/3 (Analysis), Step 2/3 (Decision), Step 3/3 (Confirmation)",
+        "Step 1 asks 'Какие подтверждения уже присутствуют?' (Which confirmations are already present?) with 7 checkbox options",
+        "Step 2 asks 'Какое решение сейчас наиболее оправдано?' with 5 trading decision options: PARTIAL, SCALE IN, SHORT, WAIT, NO TRADE",
+        "Step 3 is a confirmation section with 'Подтвердить решение' button",
+        "Market context shown: bullish, support test, 20% confidence, continuation ≈47%, reversal ≈53%",
+        "Chart displays 50 historical candles with volume and key level",
+        "Result panel shows 76/100 score with detailed breakdown: Context 25%, Evidence 20%, Entry 20%, Invalidation 20%, Risk 15%",
+        "Strong side: Market context correctly identified; Main error: Entry selected too early before confirmation",
+        "Conclusion: 'Уровень — это не сигнал. Дождитесь подтверждения.' (Level is not a signal. Wait for confirmation.)",
+        "Six educational modules listed: Module 1 (Evidence - active), Module 2 (active), Modules 3-6 locked",
+        "Recommendation for next module: 'Подтверждение входа: свеча, объём и ретест'"
     ],
+    "visible_buttons": {
+        "navigation": ["Dashboard", "Modules", "Trainer", "Progress", "Меню"],
+        "module_buttons": ["Начать", "Начать сценарий", "Начать модуль", "Скоро", "Заблокировано"],
+        "step_1_checkboxes": [
+            "Есть пробой уровня",
+            "Есть закрытие за уровнем",
+            "Есть повышенный объём",
+            "Есть ретест",
+            "Есть удержание уровня",
+            "Есть импульс",
+            "Подтверждения недостаточно"
+        ],
+        "step_2_decisions": [
+            "PARTIAL - Вход неполным объёмом (½ или ⅓ позиции), Low risk, R:R 1:2",
+            "SCALE IN - Поэтапный набор позиции: 2–3 входа, Medium risk, R:R 1:2",
+            "SHORT - Стандартный вход в шорт при подтверждённом пробое вниз, Medium risk, R:R 1:2",
+            "WAIT - Не входить сейчас, ждать более чёткой структуры, Low risk, R:R —",
+            "NO TRADE - Полный отказ от сделки, Low risk, R:R —"
+        ],
+        "step_3_buttons": ["Подтвердить решение"],
+        "result_actions": ["Повторить сценарий", "К модулям", "Открыть прогресс"]
+    },
+    "layout_description": {
+        "header": "Top navigation with PAYD logo and 'Trading Lab' title, plus four nav items: Dashboard, Modules, Trainer, Progress",
+        "progress_section": "Top section showing user's progress metrics: Average Decision Score (0), Scenarios completed (0%), No Trade decisions (0), Main error (-), 'Continue learning' button",
+        "recommended_module": "Module 1: 'Почему уровень сам по себе ничего не значит' (Evidence, 7-10 min)",
+        "modules_list": "Vertical list of 6 modules with status badges (Активен/Скоро/Заблокировано), titles, descriptions, durations, and action buttons",
+        "main_scenario_area": "Header showing 'Module 2: Подтверждение • Сценарий 1 / 3' with BTC/USDT • 1H. Title 'Пробой без ретеста' with key level $67,500. Contains all three steps stacked vertically: Step 1 (checkbox analysis), Step 2 (5 decision options in card format with risk/R:R labels), Step 3 (confirmation button)",
+        "chart_section": "Displays 50 historical candles with volume and key level marker",
+        "progress_tracking": "Three columns: Error Map, Skills Profile, Decision History (all empty prompting user to start)",
+        "result_panel": "Score 76/100 with breakdown by category, strong side, main error, conclusion, and detailed Trade Autopsy with empty fields"
+    },
     "relevant_links": [
-        "https://q7uq1jgc2ctf.space.minimax.io/trading-lab.html"
+        "Другие модули (Other modules)",
+        "Module 1 → Контекст (Context link)"
     ],
     "file_name": "payd_trading_lab_scenario.json"
 }

@@ -1,0 +1,48 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://ycdtvgzwoh5k.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://ycdtvgzwoh5k.space.minimax.io/",
+    "summary": "Payd_Finance is an AI-powered SaaS platform for crypto trading and education. It combines institutional-grade market analysis, AI-driven signals, and an interactive Trading Lab where users practice decision-making through simulated scenarios. The platform features real-time market data for top cryptocurrencies (BTC, ETH, SOL, XRP, BNB, DOGE), smart indicators (Market Structure, Volume Intelligence, Volatility Regime, Momentum Score, Signal Generator), an AI Scanner with confidence-rated buy/hold/wait signals, and a Narrative Engine for market context. The PAYD Trading Lab offers 200+ trading scenarios across 6 difficulty levels, courses (Market Awareness, Evidence, Execution, Risk Architecture), and tools like Blind Chart, Risk Calculator, Trade Journal, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. Pricing tiers: Basic ($29/mo, 50 scenarios) and Premium ($79/mo, 200+ scenarios with personal mentor). The platform targets beginners, active traders, investors, and AI enthusiasts, offering 7-day free demo access.",
+    "key_points": [
+        "AI-driven crypto trading platform combining market analysis and education",
+        "Real-time market data for BTC, ETH, SOL, XRP, BNB, DOGE with Open Interest, Funding Rate, L/S Ratio",
+        "AI Scanner provides BUY/HOLD/WAIT signals with confidence percentages (e.g., BTC: BUY 78%)",
+        "PAYD Trading Lab with 200+ scenarios across 6 difficulty levels",
+        "Interactive learning modules: Blind Chart, Market Replay, Decision Score, Mistake Map, Skill Passport",
+        "Structured courses: Market Awareness, Evidence, Execution, Risk Architecture",
+        "Pricing: Basic $29/mo, Premium $79/mo (with personal mentor)",
+        "AI Market Regime analysis with ATR, RSI, Volume Z-Score indicators",
+        "Risk Management tools with automated position sizing",
+        "7-day free demo access, no card required"
+    ],
+    "relevant_links": [
+        "https://ycdtvgzwoh5k.space.minimax.io/",
+        "https://ycdtvgzwoh5k.space.minimax.io/trading-lab.html",
+        "#features",
+        "#how-it-works",
+        "#benefits",
+        "#cta",
+        "https://s.tradingview.com/widgetembed/?hideideas=1&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=ru#%7B%22symbol%22%3A%22BINANCE%3ABTCUSDT.P%22%2C%22frameElementId%22%3A%22tradingview_c80a2%22%2C%22interval%22%3A%2260%22%2C%22hide_side_toolbar%22%3A%220%22%2C%22allow_symbol_change%22%3A%220%22%2C%22save_image%22%3A%220%22%2C%22backgroundColor%22%3A%22rgba(15%2C%2015%2C%2017%2C%201)%22%2C%22gridColor%22%3A%22rgba(42%2C%2046%2C%2057%2C%200.2)%22%2C%22studies%22%3A%22%5B%7B%5C%22id%5C%22%3A%5C%22STD%3BOpen_Interest%5C%22%2C%22inputs%5C%22%3A%7B%7D%7D%5D%22%2C%22theme%22%3A%22dark%22%2C%22style%22%3A%221%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22withdateranges%22%3A%221%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22ycdtvgzwoh5k.space.minimax.io%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22BINANCE%3ABTCUSDT.P%22%2C%22page-uri%22%3A%22ycdtvgzwoh5k.space.minimax.io%2F%22%7D"
+    ],
+    "navigation_to_module_2": {
+        "note": "Module 2 (Entry Confirmation / 'Определяем вход') is part of the PAYD Trading Lab interactive exercise flow on the homepage. The visible module shows Exercise 1/3 with a 3-step program.",
+        "steps": [
+            "Step 1: From the main page, locate the 'PAYD Trading Lab' section near the bottom of the page",
+            "Step 2: The current visible exercise shows 'Упражнение 1/3' (Exercise 1/3) with three modules: (1) Читаем график - Chart Reading, (2) Определяем вход - Determining Entry [Module 2 - Entry Confirmation], (3) Управление риском - Risk Management",
+            "Step 3: Answer the current question about market trend (LONG/SHORT/Neutral) by clicking one of the answer buttons",
+            "Step 4: Click the 'Следующее упражнение' (Next Exercise) button in the 'Разбор решения' (Decision Review) panel to proceed to Exercise 2/3, which is Module 2 (Entry Confirmation)",
+            "Alternative: Click 'Обучение' in the top navigation menu, or visit the dedicated trading-lab.html page at https://ycdtvgzwoh5k.space.minimax.io/trading-lab.html"
+        ],
+        "module_2_details": {
+            "title": "Определяем вход (Determining Entry / Entry Confirmation)",
+            "subtitle": "Точка входа и стоп-лосс (Entry point and stop-loss)",
+            "position": "Exercise 2 of 3 in the Trading Lab program"
+        }
+    },
+    "file_name": "payd_finance_summary.json"
+}
+```

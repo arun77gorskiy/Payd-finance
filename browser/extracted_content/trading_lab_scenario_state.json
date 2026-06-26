@@ -1,0 +1,32 @@
+📄 Extracted from page: PAYD Trading Lab — Интерактивное обучение трейдингу
+URL: https://ycdtvgzwoh5k.space.minimax.io/trading-lab.html
+
+Extracted content:
+```json
+{
+    "title": "PAYD Trading Lab — Интерактивное обучение трейдингу",
+    "url": "https://ycdtvgzwoh5k.space.minimax.io/trading-lab.html",
+    "summary": "Interactive trading education platform showing Module 2 (Подтверждение) Scenario 1/3 for BTC/USDT on 1H timeframe. The scenario is about 'Пробой без ретеста' (Breakout without retest) at key level $67,500. The page shows a 3-step decision process: Step 1 (Analysis) for identifying confirmations, Step 2 (Decision) with 5 trade options, and Step 3 (Confirmation) to finalize the decision. Market context is bullish (support test, 20% confidence) with weak bullish momentum and normal volume. Continuation probability ~47%, reversal ~53%. Results panel shows 76/100 score with zero scores across all categories (Context, Evidence, Entry, Invalidation, Risk).",
+    "key_points": [
+        "Current scenario state: Module 2 'Подтверждение', Scenario 1/3, BTC/USDT 1H, 'Пробой без ретеста' at key level $67,500",
+        "Currently on Step 2 of 3 (Решение/Decision) - no decision button appears highlighted/selected",
+        "No confirmation checkboxes at the top - the checkboxes are part of Step 1 (Analysis) for identifying chart confirmations: 'Есть пробой уровня', 'Есть закрытие за уровнем', 'Есть повышенный объём', 'Есть ретест', 'Есть удержание уровня', 'Есть импульс', 'Подтверждения недостаточно'",
+        "Step 1 (Analysis): 7 confirmation checkboxes for chart confirmations - none shown as checked",
+        "Step 2 (Decision) shows 5 decision buttons: PARTIAL, SCALE IN, SHORT, WAIT, NO TRADE",
+        "PARTIAL: Entry with incomplete volume (½ or ⅓ position) - Low risk, R:R 1:2",
+        "SCALE IN: Gradual position building 2-3 entries on confirmation - Medium risk, R:R 1:2",
+        "SHORT: Standard short entry on confirmed breakdown - Medium risk, R:R 1:2",
+        "WAIT: No entry, wait for clearer structure - Low risk, R:R —",
+        "NO TRADE: Full refusal - no statistical edge - Low risk, R:R —",
+        "Step 3 (Confirmation): 'Подтвердить решение' button - shows 'Решение зафиксировано. Подождите окончания проигрывания.'",
+        "Market context: Bullish, support test, 20% confidence, weak bullish momentum, normal volume",
+        "Probability: Continuation ~47%, Reversal ~53%",
+        "Results panel (visible): 76/100 score, all categories at 0 - Context, Evidence, Entry, Invalidation, Risk",
+        "Strong point: Market context correctly identified; Main error: Entry too early before confirmation",
+        "Conclusion: Level is not a signal, wait for confirmation",
+        "6 learning modules available: Module 1 (Evidence) active, Module 2 (Evidence) active, Modules 3-6 locked"
+    ],
+    "relevant_links": [],
+    "file_name": "trading_lab_scenario_state.json"
+}
+```
