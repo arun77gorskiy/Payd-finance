@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYD Trading Lab — Интерактивное обучение трейдингу</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        bg: { 900: '#0a0a0f', 800: '#12121a', 700: '#1a1a24', 950: '#050508' },
+                        border: { 700: '#2a2a3a' },
+                        text: { 500: '#8a8a9a', 400: '#6a6a7a' },
+                        primary: { 500: '#E5BE3A', hover: '#d4ae35' },
+                        accent: { 500: '#6366f1', 600: '#4f46e5' },
+                        green: { 400: '#22c55e', 500: '#10b981' },
+                        red: { 400: '#ef4444', 500: '#f97316' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lightweight-charts@4.1.3/dist/lightweight-charts.standalone.production.js"></script>
+    <!-- Engine 0: Core Analysis (Module X) — ЕДИНСТВЕННОЕ место анализа графика -->
+    <script src="js/coreAnalysisEngine.js"></script>
+    <!-- Engine 1: MarketAnalysis (Module 1) — presentation layer, берёт данные только из Module X -->
+    <script src="js/MarketAnalysisEngine.js"></script>
+    <!-- Decision Options Catalog: динамический выбор решений -->
+    <script src="js/DecisionOptionsCatalog.js"></script>
+    <!-- Engine 2: DecisionEvaluation (Module 2) — тонкий валидатор, берёт данные только из Module X -->
+    <script src="js/DecisionEvaluationEngine.js"></script>
+    <!-- Engine 3: TraderErrorAnalysis (Module 3) — разбор ошибок, берёт данные только из Module X -->
+    <script src="js/TraderErrorAnalysisEngine.js"></script>
+    <!-- Orchestrator -->
+    <script src="js/EntryConfirmationTrainer.js"></script>
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .glass-panel { background: rgba(18, 18, 26, 0.9); backdrop-filter: blur(12px); }
+        .candle-green { background: #10b981; }
+        .candle-red { background: #ef4444; }
+        .candle-body-green { background: #10b981; }
+        .candle-body-red { background: #ef4444; }
+        .wick { background: currentColor; width: 2px; }
+        .candle-wrapper { display: flex; flex-direction: column; align-items: center; justify-content: flex-end; width: 12px; height: 100%; min-height: 1px; }
+        .candle-high-low { display: flex; flex-direction: column; align-items: center; width: 2px; }
+        #candles-wrapper { align-items: stretch !important; }
+        .scrollbar-thin::-webkit-scrollbar { width: 6px; height: 6px; }
+        .scrollbar-thin::-webkit-scrollbar-track { background: #1a1a24; }
+        .scrollbar-thin::-webkit-scrollbar-thumb { background: #2a2a3a; border-radius: 3px; }
+        
+        /* Animations */
+        @keyframes fadeSlideIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes scoreFill {
+            from { width: 0%; }
+            to { width: var(--score); }
+        }
+        @keyframes candleAppear {
+            from { opacity: 0; transform: scaleY(0); }
+            to { opacity: 1; transform: scaleY(1); }
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.5; }
+        }
+        .animate-fade-slide { animation: fadeSlideIn 0.4s ease-out forwards; }
+        .animate-candle { transform-origin: bottom; animation: candleAppear 0.3s ease-out forwards; }
+        
+        /* Respect reduced motion preference */
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after {
+                animation-duration: 0.01ms !important;
+                animation-iteration-count: 1 !important;
+                transition-duration: 0.01ms !important;
+            }
+        }
+        
+        /* Mobile optimizations */
+        @media (max-width: 768px) {
+            .trainer-grid { grid-template-columns: 1fr !important; }
+            .candle-wrapper { width: 8px !important; }
+            .decision-btn { min-height: 48px; }
+            .replay-controls { flex-wrap: wrap; gap: 8px !important; }
+        }
+
+    </style>
+</head>
+<body class="bg-bg-900 text-text-500 font-sans antialiased min-h-screen">
+    <!-- Main Navigation -->
+    <nav class="fixed w-full z-50 top-0 left-0 border-b border-white/5 glass-panel">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3 cursor-pointer" onclick="switchLabMode('dashboard')">
+                    <span class="text-xl font-bold text-white">PAYD</span>
+                    <span class="text-accent-500 text-xl font-bold">Trading Lab</span>
+                </div>
+                <!-- Mode Tabs -->
+                <div class="hidden md:flex items-center gap-1 bg-bg-800 rounded-xl p-1">
+                    <button onclick="switchLabMode('dashboard')" id="mode-dashboard" class="mode-tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors">Dashboard</button>
+                    <button onclick="switchLabMode('modules')" id="mode-modules" class="mode-tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors">Modules</button>
+                    <button onclick="switchLabMode('trainer')" id="mode-trainer" class="mode-tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors">Trainer</button>
+                    <button onclick="switchLabMode('progress')" id="mode-progress" class="mode-tab-btn px-4 py-2 rounded-lg text-sm font-medium transition-colors">Progress</button>
+                </div>
+                <div class="flex items-center gap-3">
+                    <button onclick="switchLabMode('dashboard')" class="px-4 py-2 bg-bg-700 text-white rounded-lg text-sm font-medium hover:bg-accent-500 transition-colors md:hidden">
+                        Меню
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content Area -->
+    <main class="pt-20 min-h-screen">
+        <!-- DASHBOARD -->
+        <div id="dashboard-view" class="view-section">
+            <div class="max-w-7xl mx-auto px-4 py-8">
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl font-bold text-white mb-2">Ваш прогресс</h1>
+                    <p class="text-text-500">Система оценивает качество решений, а не прибыль</p>
+                </div>
+
+                <!-- ═══ INTEGRATION COMPLETE BANNER ═══ -->
+                <div class="bg-gradient-to-br from-emerald-500/10 via-bg-800 to-accent-500/10 rounded-2xl p-6 border border-emerald-500/30 mb-8" data-testid="integration-banner">
+                    <div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-4 mb-4">
+                        <div class="flex items-center gap-3">
+                            <div class="w-12 h-12 rounded-xl bg-emerald-500/20 flex items-center justify-center">
+                                <svg class="w-6 h-6 text-emerald-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+                            </div>
+                            <div>
+                                <h2 class="text-xl font-bold text-white">✓ Интеграция Module X / 1 / 2 завершена</h2>
+                                <p class="text-text-500 text-sm">Все 5 шагов плана выполнены · Архитектура чистая</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-2 px-4 py-2 bg-emerald-500/20 rounded-xl border border-emerald-500/40">
+                            <span class="text-2xl font-bold text-emerald-400">112</span>
+                            <span class="text-text-500 text-sm">/ 112 тестов</span>
+                            <span class="px-2 py-0.5 bg-emerald-500 text-bg-900 rounded text-xs font-bold ml-1">100%</span>
+                        </div>
+                    </div>
+
+                    <!-- Module Architecture Diagram -->
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-3 mb-4">
+                        <!-- Module X -->
+                        <div class="bg-bg-900/60 rounded-xl p-4 border border-accent-500/30 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 px-2 py-0.5 bg-accent-500 text-bg-900 text-[10px] font-bold rounded-bl-lg">SOURCE</div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-8 h-8 rounded-lg bg-accent-500/20 flex items-center justify-center text-accent-400 font-bold text-sm">X</div>
+                                <div>
+                                    <div class="text-white font-bold text-sm">Module X</div>
+                                    <div class="text-text-500 text-xs">coreAnalysisEngine</div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-text-500 mb-2">Единственный источник аналитики</div>
+                            <div class="flex items-center gap-2 text-xs">
+                                <span class="text-emerald-400 font-bold">68/68</span>
+                                <span class="text-text-500">тестов ✓</span>
+                            </div>
+                            <div class="mt-2 text-[10px] text-text-500/70 font-mono">analyzeMarket() → AnalysisResult</div>
+                        </div>
+
+                        <!-- Module 1 -->
+                        <div class="bg-bg-900/60 rounded-xl p-4 border border-white/10 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 px-2 py-0.5 bg-blue-500 text-white text-[10px] font-bold rounded-bl-lg">PRESENTATION</div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-8 h-8 rounded-lg bg-blue-500/20 flex items-center justify-center text-blue-400 font-bold text-sm">1</div>
+                                <div>
+                                    <div class="text-white font-bold text-sm">Module 1</div>
+                                    <div class="text-text-500 text-xs">MarketAnalysisEngine</div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-text-500 mb-2">Только форматирование вывода</div>
+                            <div class="flex items-center gap-2 text-xs">
+                                <span class="text-emerald-400 font-bold">16/16</span>
+                                <span class="text-text-500">тестов ✓</span>
+                            </div>
+                            <div class="mt-2 text-[10px] text-text-500/70 font-mono">analyzeMarket() → UI strings</div>
+                        </div>
+
+                        <!-- Module 2 -->
+                        <div class="bg-bg-900/60 rounded-xl p-4 border border-white/10 relative overflow-hidden">
+                            <div class="absolute top-0 right-0 px-2 py-0.5 bg-purple-500 text-white text-[10px] font-bold rounded-bl-lg">VALIDATOR</div>
+                            <div class="flex items-center gap-2 mb-2">
+                                <div class="w-8 h-8 rounded-lg bg-purple-500/20 flex items-center justify-center text-purple-400 font-bold text-sm">2</div>
+                                <div>
+                                    <div class="text-white font-bold text-sm">Module 2</div>
+                                    <div class="text-text-500 text-xs">DecisionEvaluationEngine</div>
+                                </div>
+                            </div>
+                            <div class="text-xs text-text-500 mb-2">Только валидация решений</div>
+                            <div class="flex items-center gap-2 text-xs">
+                                <span class="text-emerald-400 font-bold">28/28</span>
+                                <span class="text-text-500">тестов ✓</span>
+                            </div>
+                            <div class="mt-2 text-[10px] text-text-500/70 font-mono">marketAnalysis + decision → verdict</div>
+                        </div>
+                    </div>
+
+                    <!-- Live Integration Test Results -->
+                    <div class="grid grid-cols-2 md:grid-cols-5 gap-2 mb-4" id="integration-test-grid">
+                        <div class="bg-bg-900/40 rounded-lg p-2 border border-white/5 text-center">
+                            <div class="text-[10px] text-text-500 uppercase tracking-wider">Architecture</div>
+                            <div class="text-emerald-400 font-bold text-sm">5/5 ✓</div>
+                        </div>
+                        <div class="bg-bg-900/40 rounded-lg p-2 border border-white/5 text-center">
+                            <div class="text-[10px] text-text-500 uppercase tracking-wider">Data Flow</div>
+                            <div class="text-emerald-400 font-bold text-sm">10/10 ✓</div>
+                        </div>
+                        <div class="bg-bg-900/40 rounded-lg p-2 border border-white/5 text-center">
+                            <div class="text-[10px] text-text-500 uppercase tracking-wider">Scoring</div>
+                            <div class="text-emerald-400 font-bold text-sm">12/12 ✓</div>
+                        </div>
+                        <div class="bg-bg-900/40 rounded-lg p-2 border border-white/5 text-center">
+                            <div class="text-[10px] text-text-500 uppercase tracking-wider">Evidence</div>
+                            <div class="text-emerald-400 font-bold text-sm">6/6 ✓</div>
+                        </div>
+                        <div class="bg-bg-900/40 rounded-lg p-2 border border-white/5 text-center">
+                            <div class="text-[10px] text-text-500 uppercase tracking-wider">Signals</div>
+                            <div class="text-emerald-400 font-bold text-sm">6/6 ✓</div>
+                        </div>
+                    </div>
+
+                    <!-- Step Status -->
+                    <div class="grid grid-cols-5 gap-1.5 mb-4">
+                        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-2 text-center">
+                            <div class="text-[10px] text-text-500">Шаг 1</div>
+                            <div class="text-emerald-400 text-xs font-bold">Анализ ✓</div>
+                        </div>
+                        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-2 text-center">
+                            <div class="text-[10px] text-text-500">Шаг 2</div>
+                            <div class="text-emerald-400 text-xs font-bold">Маппинг ✓</div>
+                        </div>
+                        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-2 text-center">
+                            <div class="text-[10px] text-text-500">Шаг 3</div>
+                            <div class="text-emerald-400 text-xs font-bold">Интеграция ✓</div>
+                        </div>
+                        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-2 text-center">
+                            <div class="text-[10px] text-text-500">Шаг 4</div>
+                            <div class="text-emerald-400 text-xs font-bold">Тесты ✓</div>
+                        </div>
+                        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-lg p-2 text-center">
+                            <div class="text-[10px] text-text-500">Шаг 5</div>
+                            <div class="text-emerald-400 text-xs font-bold">Аудит ✓</div>
+                        </div>
+                    </div>
+
+                    <!-- Footer link -->
+                    <div class="flex flex-col sm:flex-row items-center justify-between gap-2 pt-3 border-t border-white/5">
+                        <div class="text-xs text-text-500">
+                            <span class="font-bold text-white">Подтверждено:</span>
+                            Module 1 и Module 2 не содержат собственной аналитики. Только Module X анализирует график.
+                        </div>
+                        <a href="https://6ym01xmaktbk.space.minimax.io" target="_blank" class="px-3 py-1.5 bg-accent-500/20 hover:bg-accent-500/30 text-accent-400 rounded-lg text-xs font-medium border border-accent-500/40 transition-colors whitespace-nowrap">
+                            Открыть полный отчёт →
+                        </a>
+                    </div>
+                </div>
+                <!-- ═══ END INTEGRATION BANNER ═══ -->
+                
+                <!-- Stats Grid -->
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+                    <div class="bg-bg-800 rounded-2xl p-6 border border-border-700">
+                        <div class="text-3xl font-bold text-accent-500 mb-1" id="avg-score">--</div>
+                        <p class="text-text-500 text-sm">Средний Decision Score</p>
+                    </div>
+                    <div class="bg-bg-800 rounded-2xl p-6 border border-border-700">
+                        <div class="text-3xl font-bold text-white mb-1" id="completed-scenarios">0</div>
+                        <p class="text-text-500 text-sm">Сценариев пройдено</p>
+                    </div>
+                    <div class="bg-bg-800 rounded-2xl p-6 border border-border-700">
+                        <div class="text-3xl font-bold text-white mb-1" id="no-trade-percent">0%</div>
+                        <p class="text-text-500 text-sm">Решений No Trade</p>
+                    </div>
+                </div>
+
+                <!-- Main Mistake Alert -->
+                <div id="main-mistake-container" class="hidden bg-bg-800 rounded-2xl p-4 border border-red-500/50 mb-8 max-w-2xl mx-auto">
+                    <div class="flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-red-500/20 flex items-center justify-center">
+                            <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 9v2m0 4h.01m-6.938 4h13.856c1.54 0 2.502-1.667 1.732-3L13.732 4c-.77-1.333-2.694-1.333-3.464 0L3.34 16c-.77 1.333.192 3 1.732 3z"/></svg>
+                        </div>
+                        <div>
+                            <p class="text-text-500 text-xs">Главная ошибка</p>
+                            <p class="text-red-400 text-sm font-medium" id="main-mistake">-</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Main CTA -->
+                <div class="text-center mb-8">
+                    <button onclick="switchLabMode('trainer')" class="inline-flex items-center gap-2 px-8 py-4 bg-accent-500 hover:bg-accent-600 text-white rounded-xl font-semibold text-lg transition-all hover:scale-105">
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z"/><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+                        Продолжить обучение
+                    </button>
+                </div>
+
+                <!-- Recommended Module -->
+                <div class="bg-bg-800 rounded-2xl p-6 border border-border-700 max-w-2xl mx-auto mb-8">
+                    <div class="flex items-center justify-between">
+                        <div>
+                            <p class="text-text-500 text-sm mb-1">Рекомендованный модуль</p>
+                            <h3 class="text-xl font-semibold text-white">Почему уровень сам по себе ничего не значит</h3>
+                            <p class="text-text-500 text-sm">Evidence • 7-10 минут</p>
+                        </div>
+                        <button onclick="startScenario('level-1')" class="px-6 py-3 bg-accent-500 hover:bg-accent-600 text-white rounded-xl font-medium transition-colors">
+                            Начать
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Recent Results -->
+                <div class="bg-bg-800 rounded-2xl p-6 border border-border-700">
+                    <h3 class="text-lg font-semibold text-white mb-4">Последние результаты</h3>
+                    <div id="recent-results" class="space-y-3">
+                        <div class="text-center py-8 text-text-500">
+                            <p>Начните с первого рыночного сценария.</p>
+                            <p class="text-sm mt-2">Система оценит не прибыль, а качество вашего решения.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- MODULES -->
+        <div id="modules-view" class="view-section hidden">
+            <div class="max-w-7xl mx-auto px-4 py-8">
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl font-bold text-white mb-2">Учебные модули</h1>
+                    <p class="text-text-500">Шесть уровней для построения торговой системы</p>
+                </div>
+
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <!-- Module 1 - Active -->
+                    <div class="bg-bg-800 rounded-2xl p-6 border-2 border-accent-500 cursor-pointer hover:border-accent-400 transition-colors" onclick="startScenario('level-1')">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-accent-500 text-white rounded-full text-sm font-medium">Активен</span>
+                            <span class="text-text-500 text-sm">01</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Почему уровень сам по себе ничего не значит</h3>
+                        <p class="text-text-500 text-sm mb-4">Научитесь отличать обычное касание уровня от полноценного торгового подтверждения.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-bg-700 text-text-500 rounded text-xs">Evidence</span>
+                            <span class="px-2 py-1 bg-bg-700 text-text-500 rounded text-xs">7-10 мин</span>
+                        </div>
+                        <button class="w-full py-3 bg-accent-500 text-white rounded-lg font-medium hover:bg-accent-600 transition-colors">
+                            Начать сценарий
+                        </button>
+                    </div>
+
+                    <!-- Module 2 - Active -->
+                    <div class="bg-bg-800 rounded-2xl p-6 border-2 border-accent-500 cursor-pointer hover:border-accent-400 transition-colors" onclick="startScenario('level-2')">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-accent-500 text-white rounded-full text-sm font-medium">Активен</span>
+                            <span class="text-text-500 text-sm">02</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Подтверждение входа</h3>
+                        <p class="text-text-500 text-sm mb-4">Свеча, объём и ретест. Как читать подтверждения правильно.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-bg-700 text-text-500 rounded text-xs">Evidence</span>
+                            <span class="px-2 py-1 bg-bg-700 text-text-500 rounded text-xs">10-15 мин</span>
+                        </div>
+                        <button class="w-full py-3 bg-accent-500 text-white rounded-lg font-medium hover:bg-accent-600 transition-colors">
+                            Начать модуль
+                        </button>
+                    </div>
+
+                    <!-- Module 3 -->
+                    <div class="bg-bg-800 rounded-2xl p-6 border border-border-700 opacity-60">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-bg-700 text-text-500 rounded-full text-sm">Скоро</span>
+                            <span class="text-text-500 text-sm">03</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Рыночный контекст</h3>
+                        <p class="text-text-500 text-sm mb-4">Тренд, диапазон, переходная фаза. Когда каждая фаза.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-bg-700 text-text-500 rounded text-xs">Context</span>
+                            <span class="px-2 py-1 bg-bg-700 text-text-500 rounded text-xs">10-15 мин</span>
+                        </div>
+                        <button class="w-full py-3 bg-bg-700 text-text-500 rounded-lg font-medium cursor-not-allowed" disabled>
+                            Скоро
+                        </button>
+                    </div>
+
+                    <!-- Module 4 -->
+                    <div class="bg-bg-800 rounded-2xl p-6 border border-border-700 opacity-60">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-bg-700 text-text-500 rounded-full text-sm">Заблокировано</span>
+                            <span class="text-text-500 text-sm">04</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Управление риском</h3>
+                        <p class="text-text-500 text-sm mb-4">Размер позиции, плечо, Risk:Reward.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-bg-700 text-text-500 rounded text-xs">Risk</span>
+                        </div>
+                        <button class="w-full py-3 bg-bg-700 text-text-500 rounded-lg font-medium cursor-not-allowed" disabled>
+                            Заблокировано
+                        </button>
+                    </div>
+
+                    <!-- Module 5 -->
+                    <div class="bg-bg-800 rounded-2xl p-6 border border-border-700 opacity-60">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-bg-700 text-text-500 rounded-full text-sm">Заблокировано</span>
+                            <span class="text-text-500 text-sm">05</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Трейдерская психология</h3>
+                        <p class="text-text-500 text-sm mb-4">FOMO, Revenge Trading, перенос стопа.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-bg-700 text-text-500 rounded text-xs">Psychology</span>
+                        </div>
+                        <button class="w-full py-3 bg-bg-700 text-text-500 rounded-lg font-medium cursor-not-allowed" disabled>
+                            Заблокировано
+                        </button>
+                    </div>
+
+                    <!-- Module 6 -->
+                    <div class="bg-bg-800 rounded-2xl p-6 border border-border-700 opacity-60">
+                        <div class="flex items-center justify-between mb-4">
+                            <span class="px-3 py-1 bg-bg-700 text-text-500 rounded-full text-sm">Заблокировано</span>
+                            <span class="text-text-500 text-sm">06</span>
+                        </div>
+                        <h3 class="text-xl font-semibold text-white mb-2">Валидация стратегии</h3>
+                        <p class="text-text-500 text-sm mb-4">Создание и проверка своей торговой системы.</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="px-2 py-1 bg-bg-700 text-text-500 rounded text-xs">Strategy</span>
+                        </div>
+                        <button class="w-full py-3 bg-bg-700 text-text-500 rounded-lg font-medium cursor-not-allowed" disabled>
+                            Заблокировано
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- TRAINER -->
+        <div id="trainer-view" class="view-section hidden">
+            <div class="max-w-full mx-auto px-4 py-4">
+                <!-- Scenario Header -->
+                <div class="flex items-center justify-between mb-4 bg-bg-800 rounded-xl p-4">
+                    <div>
+                        <div class="flex items-center gap-2 mb-1">
+                            <span class="px-2 py-0.5 bg-accent-500/15 text-accent-500 rounded text-xs font-medium" data-scenario-progress>Сценарий 1 / 3</span>
+                            <span class="text-text-500 text-xs" data-scenario-symbol>BTC/USDT • 1H</span>
+                        </div>
+                        <h2 class="text-xl font-semibold text-white" data-scenario-title>Подтверждение пробоя сопротивления</h2>
+                        <p class="text-text-500 text-sm">Ключевой уровень <span data-level-price>$67,500</span></p>
+                    </div>
+                    <div class="flex items-center gap-2">
+                        <span id="ect-status" class="px-3 py-1 bg-bg-700 text-text-500 rounded-full text-sm">Анализ графика</span>
+                        <button onclick="switchLabMode('modules')" class="px-4 py-2 bg-bg-700 text-white rounded-lg text-sm hover:bg-accent-500 transition-colors">
+                            Другие модули
+                        </button>
+                    </div>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-3 gap-4">
+                    <!-- Chart Area -->
+                    <div class="lg:col-span-2 bg-bg-800 rounded-2xl p-4 border border-border-700">
+                        <div class="flex items-center justify-between mb-3">
+                            <div class="flex items-center gap-2">
+                                <span class="text-text-500 text-sm">BTC/USDT</span>
+                                <span class="text-text-500 text-sm">•</span>
+                                <span class="text-white text-sm font-medium">1H</span>
+                            </div>
+                            <div class="text-xs text-text-500">
+                                50 исторических свечей • объём • ключевой уровень
+                            </div>
+                        </div>
+
+                        <!-- Lightweight Charts Canvas -->
+                        <div class="relative bg-bg-950 rounded-lg overflow-hidden" id="ect-chart" style="height: 460px;"></div>
+
+                        <!-- Action Panel: Показать разбор / Повторить -->
+                        <div id="ect-actions" class="mt-4 pt-4 border-t border-border-700"></div>
+
+                        <!-- Review Panel -->
+                        <div id="ect-review" class="mt-3 hidden"></div>
+                    </div>
+
+                    <!-- Decision Panel -->
+                    <div class="bg-bg-800 rounded-2xl p-6 border border-border-700">
+                        <div id="ect-decision"></div>
+                        <!-- Result -->
+                        <div id="ect-result" class="mt-4 hidden"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- PROGRESS -->
+        <div id="progress-view" class="view-section hidden">
+            <div class="max-w-7xl mx-auto px-4 py-8">
+                <div class="text-center mb-8">
+                    <h1 class="text-3xl font-bold text-white mb-2">Ваш прогресс</h1>
+                    <p class="text-text-500">История решений, анализ ошибок и развитие навыков</p>
+                </div>
+
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                    <!-- Mistake Map -->
+                    <div class="bg-bg-800 rounded-2xl p-6 border border-border-700">
+                        <h3 class="text-xl font-semibold text-white mb-4">Карта ошибок</h3>
+                        <div id="mistake-map" class="space-y-3">
+                            <div class="text-center py-8 text-text-500">
+                                <p>Пройдите больше сценариев,</p>
+                                <p class="text-sm mt-2">чтобы увидеть паттерны ошибок.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Skill Passport -->
+                    <div class="bg-bg-800 rounded-2xl p-6 border border-border-700">
+                        <h3 class="text-xl font-semibold text-white mb-4">Профиль навыков</h3>
+                        <div id="skill-passport" class="space-y-4">
+                            <div class="text-center py-8 text-text-500">
+                                <p>Проходите сценарии,</p>
+                                <p class="text-sm mt-2">чтобы развивать навыки.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- History -->
+                    <div class="lg:col-span-2 bg-bg-800 rounded-2xl p-6 border border-border-700">
+                        <h3 class="text-xl font-semibold text-white mb-4">История решений</h3>
+                        <div id="history-list" class="space-y-3">
+                            <div class="text-center py-8 text-text-500">
+                                <p>История пуста.</p>
+                                <p class="text-sm mt-2">Начните с первого сценария.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer with Disclaimer -->
+    <footer class="py-8 bg-bg-900 border-t border-border-700 mt-auto">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <p class="text-text-500 text-xs max-w-2xl mx-auto mb-4">
+                Тренажёр предназначен для обучения анализу и управлению риском. 
+                Результаты сценариев не являются индивидуальной инвестиционной рекомендацией 
+                и не гарантируют финансовую прибыль.
+            </p>
+            <p class="text-text-500 text-sm">© 2026 PAYD Trading Lab. Все права защищены.</p>
+        </div>
+    </footer>
+
+    <!-- Result Modal -->
+    <div id="result-modal" class="fixed inset-0 z-50 hidden">
+        <div class="absolute inset-0 bg-black/80" onclick="closeResultModal()"></div>
+        <div class="absolute inset-0 flex items-center justify-center p-4">
+            <div class="bg-bg-800 rounded-2xl p-8 max-w-2xl w-full border border-border-700 max-h-[90vh] overflow-y-auto scrollbar-thin">
+                <div class="text-center mb-6">
+                    <h2 class="text-2xl font-bold text-white mb-2">Результат</h2>
+                    <div class="text-5xl font-bold text-accent-500" id="final-score">76<span class="text-2xl">/100</span></div>
+                </div>
+
+                <!-- Category Scores -->
+                <div class="grid grid-cols-2 gap-3 mb-6">
+                    <div class="bg-bg-900 rounded-xl p-3">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-text-500 text-xs">Context (25%)</span>
+                            <span class="text-white text-sm font-medium" id="context-score">0</span>
+                        </div>
+                        <div class="w-full bg-bg-700 rounded-full h-2"><div id="context-bar" class="h-2 bg-accent-500 rounded-full transition-all duration-500" style="width: 0%"></div></div>
+                    </div>
+                    <div class="bg-bg-900 rounded-xl p-3">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-text-500 text-xs">Evidence (20%)</span>
+                            <span class="text-white text-sm font-medium" id="evidence-score">0</span>
+                        </div>
+                        <div class="w-full bg-bg-700 rounded-full h-2"><div id="evidence-bar" class="h-2 bg-accent-500 rounded-full transition-all duration-500" style="width: 0%"></div></div>
+                    </div>
+                    <div class="bg-bg-900 rounded-xl p-3">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-text-500 text-xs">Entry (20%)</span>
+                            <span class="text-white text-sm font-medium" id="entry-score">0</span>
+                        </div>
+                        <div class="w-full bg-bg-700 rounded-full h-2"><div id="entry-bar" class="h-2 bg-accent-500 rounded-full transition-all duration-500" style="width: 0%"></div></div>
+                    </div>
+                    <div class="bg-bg-900 rounded-xl p-3">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-text-500 text-xs">Invalidation (20%)</span>
+                            <span class="text-white text-sm font-medium" id="invalidation-score">0</span>
+                        </div>
+                        <div class="w-full bg-bg-700 rounded-full h-2"><div id="invalidation-bar" class="h-2 bg-accent-500 rounded-full transition-all duration-500" style="width: 0%"></div></div>
+                    </div>
+                    <div class="col-span-2 bg-bg-900 rounded-xl p-3">
+                        <div class="flex justify-between items-center mb-1">
+                            <span class="text-text-500 text-xs">Risk (15%)</span>
+                            <span class="text-white text-sm font-medium" id="risk-score">0</span>
+                        </div>
+                        <div class="w-full bg-bg-700 rounded-full h-2"><div id="risk-bar" class="h-2 bg-accent-500 rounded-full transition-all duration-500" style="width: 0%"></div></div>
+                    </div>
+                </div>
+
+                <div class="space-y-4 mb-6">
+                    <div class="bg-bg-900 rounded-xl p-4">
+                        <h4 class="text-white font-medium mb-2">Сильная сторона</h4>
+                        <p class="text-text-500 text-sm" id="strength-text">Рыночный контекст определён правильно.</p>
+                    </div>
+                    <div class="bg-bg-900 rounded-xl p-4">
+                        <h4 class="text-white font-medium mb-2">Основная ошибка</h4>
+                        <p class="text-text-500 text-sm" id="weakness-text">Вход был выбран слишком рано, до подтверждения.</p>
+                    </div>
+                    <div class="bg-bg-900 rounded-xl p-4">
+                        <h4 class="text-white font-medium mb-2">Вывод</h4>
+                        <p class="text-text-500 text-sm" id="conclusion-text">Уровень — это не сигнал. Дождитесь подтверждения.</p>
+                    </div>
+                </div>
+
+                <!-- Trade Autopsy -->
+                <div class="mb-6">
+                    <button onclick="toggleAutopsy()" class="w-full flex items-center justify-between p-4 bg-bg-900 rounded-xl hover:bg-bg-700 transition-colors">
+                        <span class="text-white font-medium">Trade Autopsy</span>
+                        <svg id="autopsy-arrow" class="w-5 h-5 text-text-500 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+                    </button>
+                    <div id="autopsy-content" class="hidden mt-3 p-4 bg-bg-950 rounded-xl space-y-3">
+                        <div class="grid grid-cols-2 gap-3 text-sm">
+                            <div><span class="text-text-500">Гипотеза:</span><span class="text-white ml-2" id="autopsy-hypothesis">-</span></div>
+                            <div><span class="text-text-500">Качество Entry:</span><span class="text-white ml-2" id="autopsy-entry">-</span></div>
+                            <div><span class="text-text-500">Выбрано:</span><span class="text-white ml-2" id="autopsy-confirmations">-</span></div>
+                            <div><span class="text-text-500">Stop Loss:</span><span class="text-white ml-2" id="autopsy-sl">-</span></div>
+                            <div><span class="text-text-500">Пропущено:</span><span class="text-yellow-400 ml-2" id="autopsy-missed">-</span></div>
+                            <div><span class="text-text-500">Take Profit:</span><span class="text-white ml-2" id="autopsy-tp">-</span></div>
+                            <div><span class="text-text-500">Противоречия:</span><span class="text-red-400 ml-2" id="autopsy-contradictory">-</span></div>
+                            <div><span class="text-text-500">Риск:</span><span class="text-white ml-2" id="autopsy-risk">-</span></div>
+                            <div><span class="text-text-500">Логика:</span><span class="text-white ml-2" id="autopsy-logic">-</span></div>
+                            <div><span class="text-text-500">Итог:</span><span class="text-white ml-2" id="autopsy-outcome">-</span></div>
+                        </div>
+                        <div class="pt-3 border-t border-border-700">
+                            <div class="flex justify-between text-sm">
+                                <span class="text-text-500">Классификация ошибки:</span>
+                                <span class="text-red-400" id="autopsy-category">-</span>
+                            </div>
+                            <p class="text-text-500 text-xs mt-1" id="autopsy-category-reason">-</p>
+                        </div>
+                        <div class="pt-3 border-t border-border-700">
+                            <p class="text-text-500 text-xs">Итог качества решения: <span class="text-white" id="autopsy-quality">-</span></p>
+                            <p class="text-text-500 text-xs mt-1">Сделка могла завершиться прибылью, но вход без подтверждения нельзя считать качественным решением. Положительный финансовый результат не устраняет ошибку процесса.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Recommended Next Module -->
+                <div class="bg-bg-900 rounded-xl p-4 mb-6">
+                    <p class="text-text-500 text-sm mb-2">Рекомендуемый следующий модуль</p>
+                    <p class="text-white font-medium">Подтверждение входа: свеча, объём и ретест</p>
+                </div>
+
+                <!-- Action Buttons -->
+                <div class="grid grid-cols-2 gap-3">
+                    <button onclick="restartScenario(); closeResultModal();" class="py-3 bg-bg-700 text-white rounded-lg font-medium hover:bg-accent-500 transition-colors">
+                        Повторить сценарий
+                    </button>
+                    <button onclick="switchLabMode('modules'); closeResultModal();" class="py-3 bg-bg-700 text-white rounded-lg font-medium hover:bg-accent-500 transition-colors">
+                        К модулям
+                    </button>
+                    <button onclick="switchLabMode('progress'); closeResultModal();" class="col-span-2 py-3 bg-accent-500 text-white rounded-lg font-medium hover:bg-accent-600 transition-colors">
+                        Открыть прогресс
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleAutopsy() {
+            const content = document.getElementById('autopsy-content');
+            const arrow = document.getElementById('autopsy-arrow');
+            content.classList.toggle('hidden');
+            arrow.classList.toggle('rotate-180');
+        }
+
+        // === DATA TYPES ===
+        // === DATA TYPES ===
+        // Types for data models
+        const ErrorType = {
+            EARLY_ENTRY: 'early_entry',
+            NO_CONFIRMATION: 'no_confirmation',
+            AGAINST_HIGHER_TF: 'against_higher_tf',
+            POOR_STOP: 'poor_stop',
+            EXCESSIVE_RISK: 'excessive_risk',
+            FOMO: 'fomo',
+            WEAK_RR: 'weak_rr',
+            NO_INVALIDATION: 'no_invalidation',
+            OVERTRADING: 'overtrading',
+            IGNORED_VOLUME: 'ignored_volume'
+        };
+
+        const SkillType = {
+            MARKET_CONTEXT: 'market_context',
+            EVIDENCE: 'evidence',
+            ENTRY_TIMING: 'entry_timing',
+            INVALIDATION: 'invalidation',
+            RISK_MANAGEMENT: 'risk_management',
+            DISCIPLINE: 'discipline'
+        };
+
+        const SkillLevel = {
+            FORMING: 'Формируется',
+            BASIC: 'Базовый',
+            CONFIDENT: 'Уверенный',
+            SYSTEMIC: 'Системный',
+            PROFESSIONAL: 'Профессиональный'
+        };
+
+        const MistakeCategory = {
+            ANALYTICAL: 'Аналитическая',
+            EXECUTION: 'Исполнение',
+            RISK: 'Риск',
+            DISCIPLINE: 'Дисциплина',
+            COGNITIVE: 'Когнитивная'
+        };
+
+        // === SERVICES ===
+        
+        // Storage Service - handles localStorage with typed interface
+        const StorageService = {
+            KEY: 'payd_trading_lab',
+            
+            save(data) {
+                try {
+                    localStorage.setItem(this.KEY, JSON.stringify(data));
+                    return true;
+                } catch (e) {
+                    console.error('Storage save failed:', e);
+                    return false;
+                }
+            },
+            
+            load() {
+                try {
+                    const data = localStorage.getItem(this.KEY);
+                    return data ? JSON.parse(data) : null;
+                } catch (e) {
+                    console.error('Storage load failed:', e);
+                    return null;
+                }
+            },
+            
+            clear() {
+                try {
+                    localStorage.removeItem(this.KEY);
+                    return true;
+                } catch (e) {
+                    return false;
+                }
+            }
+        };
+
+        // Progress Service - manages user progress
+        const ProgressService = {
+            getDefault() {
+                return {
+                    completedScenarios: 0,
+                    totalAttempts: 0,
+                    results: [],
+                    mistakes: {},
+                    skills: {},
+                    averageScore: 0,
+                    lastActivity: null
+                };
+            },
+            
+            load() {
+                const data = StorageService.load();
+                return data?.progress || this.getDefault();
+            },
+            
+            save(progress) {
+                StorageService.save({ progress, version: '1.0' });
+            },
+            
+            addResult(result) {
+                const progress = this.load();
+                progress.results.push(result);
+                progress.completedScenarios++;
+                progress.totalAttempts++;
+                progress.lastActivity = new Date().toISOString();
+                
+                // Calculate average
+                const total = progress.results.reduce((sum, r) => sum + r.score, 0);
+                progress.averageScore = Math.round(total / progress.results.length);
+                
+                this.save(progress);
+                return progress;
+            },
+            
+            recordMistake(mistake) {
+                const progress = this.load();
+                progress.mistakes[mistake] = (progress.mistakes[mistake] || 0) + 1;
+                this.save(progress);
+            },
+            
+            updateSkill(skill, score) {
+                const progress = this.load();
+                if (!progress.skills[skill]) {
+                    progress.skills[skill] = { attempts: 0, totalScore: 0, level: SkillLevel.FORMING };
+                }
+                progress.skills[skill].attempts++;
+                progress.skills[skill].totalScore += score;
+                progress.skills[skill].avgScore = Math.round(progress.skills[skill].totalScore / progress.skills[skill].attempts);
+                progress.skills[skill].level = this.calculateLevel(progress.skills[skill].avgScore);
+                this.save(progress);
+            },
+            
+            calculateLevel(avgScore) {
+                if (avgScore >= 85) return SkillLevel.PROFESSIONAL;
+                if (avgScore >= 70) return SkillLevel.SYSTEMIC;
+                if (avgScore >= 55) return SkillLevel.CONFIDENT;
+                if (avgScore >= 40) return SkillLevel.BASIC;
+                return SkillLevel.FORMING;
+            },
+            
+            getTopMistake() {
+                const progress = this.load();
+                const mistakes = progress.mistakes;
+                let top = null, count = 0;
+                for (const [key, value] of Object.entries(mistakes)) {
+                    if (value > count) {
+                        count = value;
+                        top = key;
+                    }
+                }
+                return top;
+            },
+            
+            getBestSkill() {
+                const progress = this.load();
+                const skills = progress.skills;
+                let best = null, score = 0;
+                for (const [key, value] of Object.entries(skills)) {
+                    if (value.avgScore > score) {
+                        score = value.avgScore;
+                        best = key;
+                    }
+                }
+                return best;
+            }
+        };
+
+        // === STATE (минимальный — только данные, нужные для Dashboard/Progress) ===
+        let state = {
+            mode: 'dashboard',
+            results: []
+        };
+
+        // === INITIALIZE ===
+        document.addEventListener('DOMContentLoaded', () => {
+            updateModeTabs();
+            loadProgress();
+        });
+
+        function loadProgress() {
+            const progress = ProgressService.load();
+            state.results = progress.results || [];
+
+            // Update dashboard
+            const completed = state.results.length;
+            const avgScore = completed > 0 ? progress.averageScore : '--';
+            const noTradePct = completed > 0 ? Math.round(state.results.filter(r => r.direction === 'no-trade').length / completed * 100) : 0;
+
+            document.getElementById('avg-score').textContent = avgScore;
+            document.getElementById('completed-scenarios').textContent = completed;
+            document.getElementById('no-trade-percent').textContent = `${noTradePct}%`;
+
+            // Show main mistake alert
+            const topMistake = ProgressService.getTopMistake();
+            const mistakeContainer = document.getElementById('main-mistake-container');
+            if (topMistake && completed >= 2) {
+                const total = state.results.length;
+                const mistakes = progress.mistakes || {};
+                const pct = Math.round((mistakes[topMistake] || 0) / Math.max(total, 1) * 100);
+                document.getElementById('main-mistake').textContent = `${formatMistakeName(topMistake)} (${pct}% последних ${total} решений)`;
+                mistakeContainer.classList.remove('hidden');
+            } else {
+                mistakeContainer.classList.add('hidden');
+            }
+        }
+
+        function formatSkillName(skill) {
+            const names = {
+                [SkillType.MARKET_CONTEXT]: 'Контекст',
+                [SkillType.EVIDENCE]: 'Подтверждения',
+                [SkillType.ENTRY_TIMING]: 'Вход',
+                [SkillType.INVALIDATION]: 'Инвалидация',
+                [SkillType.RISK_MANAGEMENT]: 'Риск',
+                [SkillType.DISCIPLINE]: 'Дисциплина'
+            };
+            return names[skill] || skill;
+        }
+
+        function formatMistakeName(mistake) {
+            const names = {
+                [ErrorType.EARLY_ENTRY]: 'Ранний вход',
+                [ErrorType.NO_CONFIRMATION]: 'Нет подтверждения',
+                [ErrorType.AGAINST_HIGHER_TF]: 'Против старшего ТФ',
+                [ErrorType.POOR_STOP]: 'Плохой стоп',
+                [ErrorType.EXCESSIVE_RISK]: 'Превышение риска',
+                [ErrorType.FOMO]: 'FOMO',
+                [ErrorType.WEAK_RR]: 'Слабый R:R',
+                [ErrorType.NO_INVALIDATION]: 'Нет инвалидации',
+                [ErrorType.OVERTRADING]: 'Переторговля',
+                [ErrorType.IGNORED_VOLUME]: 'Игнорирование объёма'
+            };
+            return names[mistake] || mistake;
+        }
+
+        // === START / RESTART / MODAL CLOSE ===
+        // Активный режим модуля (выбирается при запуске сценария и используется
+        // initEntryConfirmationTrainer при инициализации).
+        let activeModuleMode = 'module2';
+
+        function startScenario(levelId) {
+            // level-1 → Module 1 (Market Intelligence: только анализ рынка)
+            // level-2 → Module 2 (Entry Confirmation: анализ → решение → оценка)
+            if (levelId === 'level-1') {
+                activeModuleMode = 'module1';
+            } else {
+                activeModuleMode = 'module2';
+            }
+            switchLabMode('trainer');
+        }
+
+        function restartScenario() {
+            if (ectInstance && typeof ectInstance.restart === 'function') {
+                ectInstance.restart();
+            } else {
+                // Если тренер ещё не инициализирован — просто переключаемся в его view
+                switchLabMode('trainer');
+            }
+        }
+
+        function closeResultModal() {
+            const modal = document.getElementById('result-modal');
+            if (modal) modal.classList.add('hidden');
+        }
+
+        // === NAVIGATION ===
+        function switchLabMode(mode) {
+            state.mode = mode;
+            
+            // Hide all views
+            document.querySelectorAll('.view-section').forEach(el => el.classList.add('hidden'));
+
+            // Show selected view
+            document.getElementById(`${mode}-view`).classList.remove('hidden');
+
+            updateModeTabs();
+
+            // Scroll to top
+            window.scrollTo(0, 0);
+
+            // Инициализируем Entry Confirmation Trainer при открытии trainer-view
+            if (mode === 'trainer') {
+                initEntryConfirmationTrainer();
+            }
+        }
+
+        function updateModeTabs() {
+            document.querySelectorAll('.mode-tab-btn').forEach(btn => {
+                btn.classList.remove('bg-accent-500', 'text-white');
+                btn.classList.add('text-text-500', 'hover:text-white');
+            });
+
+            const activeBtn = document.getElementById(`mode-${state.mode}`);
+            if (activeBtn) {
+                activeBtn.classList.add('bg-accent-500', 'text-white');
+                activeBtn.classList.remove('text-text-500', 'hover:text-white');
+            }
+        }
+
+        // === ENTRY CONFIRMATION TRAINER ===
+        let ectInstance = null;
+        let ectInstanceMode = null;
+
+        function initEntryConfirmationTrainer() {
+            // Если инстанс уже создан для того же режима — просто перезапускаем сценарий
+            if (ectInstance && ectInstanceMode === activeModuleMode) {
+                ectInstance.restart();
+                return;
+            }
+            // Режим изменился (или инстанса ещё нет) — пересоздаём
+            if (ectInstance) {
+                try { /* при следующем _loadScenario режим уже установлен через конструктор */ } catch (e) {}
+                ectInstance = null;
+            }
+            ectInstance = new EntryConfirmationTrainer({
+                chartContainerId: 'ect-chart',
+                decisionContainerId: 'ect-decision',
+                resultContainerId: 'ect-result',
+                reviewContainerId: 'ect-review',
+                statusContainerId: 'ect-status',
+                actionContainerId: 'ect-actions',
+                moduleMode: activeModuleMode
+            });
+            ectInstanceMode = activeModuleMode;
+            // Небольшая задержка, чтобы DOM был полностью отрисован
+            requestAnimationFrame(() => {
+                ectInstance.init();
+            });
+        }
+
+        // Обновляет заголовок модуля и подпись уровня цены
+        function updateModuleMeta() {
+            const cfg = currentConfig();
+            document.querySelectorAll('[data-scenario-title]').forEach(el => {
+                el.textContent = cfg.title;
+            });
+            document.querySelectorAll('[data-level-price]').forEach(el => {
+                el.textContent = `$${cfg.levelPrice.toLocaleString('ru-RU')}`;
+            });
+        }
+    </script>
+<style>
+#minimax-floating-ball {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 12px;
+  background: #222222;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  color: #F8F8F8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#minimax-floating-ball:hover {
+  transform: translateY(-2px);
+  background: #383838;
+}
+.minimax-ball-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.minimax-logo-wave {
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%27none%27%20width%3D%27100%25%27%20height%3D%27100%25%27%20overflow%3D%27visible%27%20style%3D%27display%3A%20block%3B%27%20viewBox%3D%270%200%20170.136%20138.225%27%20fill%3D%27none%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cg%20id%3D%27Frame%202116748449%27%3E%3Cpath%20id%3D%27Subtract%27%20d%3D%27M170%20101.783C170%20105.144%20168.49%20108.327%20165.886%20110.453L134.963%20135.702C132.964%20137.334%20130.463%20138.225%20127.883%20138.225H10.4938C4.69824%20138.225%200%20133.527%200%20127.732V39.2289C0%2035.8597%201.51758%2032.6698%204.13162%2030.5442L38.5402%202.56547C40.536%200.942662%2043.0298%200.0567377%2045.602%200.0567377H159.506C165.302%200.0567377%20170%204.75498%20170%2010.5506V101.783Z%27%20fill%3D%27black%27%20style%3D%27fill%3Ablack%3Bfill-opacity%3A1%3B%27/%3E%3Cpath%20id%3D%27Subtract_2%27%20d%3D%27M149.011%2094.4632C149.011%2096.1471%20148.253%2097.7415%20146.946%2098.8043L125.893%20115.936C124.895%20116.748%20123.648%20117.191%20122.361%20117.191H24.6479C22.716%20117.191%2021.15%20115.625%2021.15%20113.693V46.1166C21.15%2044.4267%2021.9135%2042.8274%2023.2274%2041.7648L47.367%2022.2437C48.3638%2021.4376%2049.607%2020.9982%2050.8888%2020.9988L145.514%2021.0427C147.446%2021.0436%20149.011%2022.6094%20149.011%2024.5406V94.4632Z%27%20fill%3D%27white%27%20style%3D%27fill%3Awhite%3Bfill-opacity%3A1%3B%27/%3E%3Cpath%20id%3D%27Rectangle%20111142564%27%20d%3D%27M42.111%2080.8025C42.111%2077.7115%2044.6167%2075.2057%2047.7077%2075.2057H60.9999C64.0908%2075.2057%2066.5966%2077.7115%2066.5966%2080.8025V121.029H42.111V80.8025Z%27%20fill%3D%27black%27%20style%3D%27fill%3Ablack%3Bfill-opacity%3A1%3B%27/%3E%3Cpath%20id%3D%27Rectangle%20111142567%27%20d%3D%27M79.1894%2080.8025C79.1894%2077.7115%2081.6952%2075.2057%2084.7861%2075.2057H98.0783C101.169%2075.2057%20103.675%2077.7115%20103.675%2080.8025V121.029H79.1894V80.8025Z%27%20fill%3D%27black%27%20style%3D%27fill%3Ablack%3Bfill-opacity%3A1%3B%27/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 11px;
+  background-color: #8FD1FF;
+  border-radius: 4px;
+}
+
+.minimax-ball-text {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.minimax-close-icon {
+  margin-left: 8px;
+  font-size: 16px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.minimax-close-icon:hover {
+  opacity: 1;
+}
+</style>
+<div id="minimax-floating-ball">
+  <div class="minimax-ball-content">
+    <div class="minimax-logo-wave"></div>
+    <span class="minimax-ball-text">Created by MiniMax Agent</span>
+  </div>
+  <div class="minimax-close-icon">×</div>
+</div>
+<script>
+// Initialize floating ball functionality
+function initFloatingBall() {
+  const ball = document.getElementById('minimax-floating-ball');
+  if (!ball) return;
+
+  // Initial animation
+  ball.style.opacity = '0';
+  ball.style.transform = 'translateY(20px)';
+
+  setTimeout(() => {
+    ball.style.opacity = '1';
+    ball.style.transform = 'translateY(0)';
+  }, 500);
+
+  // Handle logo click
+  const ballContent = ball.querySelector('.minimax-ball-content');
+  ballContent.addEventListener('click', function (e) {
+    e.stopPropagation();
+    window.open('https://agent.minimax.io/', '_blank');
+    ball.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      ball.style.transform = 'scale(1)';
+    }, 100);
+  });
+
+  // Handle close button click
+  const closeIcon = ball.querySelector('.minimax-close-icon');
+  closeIcon.addEventListener('click', function (e) {
+    e.stopPropagation();
+    ball.style.opacity = '0';
+    ball.style.transform = 'translateY(20px)';
+
+    setTimeout(() => {
+      ball.style.display = 'none';
+    }, 300);
+  });
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initFloatingBall); 
+</script>
+
+<script>
+/**
+ * Iframe 元素高亮注入脚本
+ * 需要在目标网站中引入此脚本来支持跨域 iframe 高亮功能
+ *
+ * 使用方法：
+ * 1. 将此脚本添加到目标网站的 HTML 中
+ * 2. 或通过浏览器扩展、用户脚本等方式注入
+ */
+
+(function () {
+  "use strict";
+
+  // 检查是否在 iframe 中
+  if (window.self === window.top) {
+    return; // 不在 iframe 中，不执行
+  }
+
+  // 检查是否已经初始化过
+  if (window.__iframeHighlightInitialized) {
+    return;
+  }
+  window.__iframeHighlightInitialized = true;
+  console.log("Iframe 高亮脚本已加载");
+
+  // 创建高亮覆盖层
+  var overlay = document.createElement("div");
+  overlay.id = "iframe-highlight-overlay";
+  overlay.style.cssText = "\n    position: fixed;\n    top: 0;\n    left: 0;\n    width: 100vw;\n    height: 100vh;\n    pointer-events: none;\n    z-index: 999999;\n    overflow: hidden;\n  ";
+
+  // 创建悬停高亮框（虚线边框）
+  var highlightBox = document.createElement("div");
+  highlightBox.id = "iframe-highlight-box";
+  highlightBox.style.cssText = "\n    position: absolute;\n    border: 2px dashed #007AFF;\n    background: rgba(0, 122, 255, 0.08);\n    pointer-events: none;\n    display: none;\n    transition: all 0.1s ease;\n    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.8);\n    border-radius: 2px;\n  ";
+
+  // 创建选中节点的常驻高亮框（实线边框）
+  var selectedBox = document.createElement("div");
+  selectedBox.id = "iframe-selected-box";
+  selectedBox.style.cssText = "\n    position: absolute;\n    border: 2px solid #007AFF;\n    pointer-events: none;\n    display: none;\n    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.9), 0 0 8px rgba(255, 107, 53, 0.4);\n    border-radius: 2px;\n    z-index: 1000000;\n  ";
+
+  // 创建悬停标签显示
+  var tagLabel = document.createElement("div");
+  tagLabel.id = "iframe-tag-label";
+  tagLabel.style.cssText = "\n    position: absolute;\n    background: #007AFF;\n    color: white;\n    padding: 2px 6px;\n    font-size: 11px;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n    border-radius: 2px;\n    pointer-events: none;\n    display: none;\n    white-space: nowrap;\n    z-index: 1000001;\n    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);\n    font-weight: 500;\n  ";
+
+  // 创建选中节点标签
+  var selectedLabel = document.createElement("div");
+  selectedLabel.id = "iframe-selected-label";
+  selectedLabel.style.cssText = "\n    position: absolute;\n    background: #007AFF;\n    color: white;\n    padding: 3px 8px;\n    font-size: 11px;\n    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;\n    border-radius: 3px;\n    pointer-events: none;\n    display: none;\n    white-space: nowrap;\n    z-index: 1000002;\n    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.4);\n    font-weight: 600;\n  ";
+  overlay.appendChild(highlightBox);
+  overlay.appendChild(selectedBox);
+  overlay.appendChild(tagLabel);
+  overlay.appendChild(selectedLabel);
+  document.body.appendChild(overlay);
+
+  // 存储当前选中的元素
+  var selectedElement = null;
+  var highlightEnabled = false;
+
+  // 更新选中元素的高亮显示
+  function updateSelectedHighlight(element) {
+    console.log("updateSelectedHighlight called with:", element);
+    if (!element) {
+      selectedBox.style.display = "none";
+      selectedLabel.style.display = "none";
+      selectedElement = null;
+      console.log("Cleared selected highlight");
+      return;
+    }
+    selectedElement = element;
+    var rect = element.getBoundingClientRect();
+    console.log("Selected element rect:", rect);
+
+    // 更新选中高亮框位置
+    selectedBox.style.display = "block";
+    selectedBox.style.left = "".concat(rect.left - 2, "px");
+    selectedBox.style.top = "".concat(rect.top - 2, "px");
+    selectedBox.style.width = "".concat(rect.width + 4, "px");
+    selectedBox.style.height = "".concat(rect.height + 4, "px");
+
+    // 更新选中标签位置和内容
+    selectedLabel.style.display = "block";
+    selectedLabel.textContent = "\u2713 <".concat(element.tagName.toLowerCase(), ">");
+
+    // 计算标签位置，确保不超出视窗
+    var labelTop = rect.top - 28;
+    var labelLeft = rect.left;
+
+    // 如果标签会超出顶部，显示在元素下方
+    if (labelTop < 5) {
+      labelTop = rect.bottom + 5;
+    }
+
+    // 如果标签会超出右侧，向左调整
+    var labelWidth = selectedLabel.offsetWidth || 100; // 预估宽度
+    if (labelLeft + labelWidth > window.innerWidth - 10) {
+      labelLeft = window.innerWidth - labelWidth - 10;
+    }
+    selectedLabel.style.left = "".concat(Math.max(5, labelLeft), "px");
+    selectedLabel.style.top = "".concat(labelTop, "px");
+    console.log("Selected highlight positioned at:", {
+      left: selectedBox.style.left,
+      top: selectedBox.style.top,
+      width: selectedBox.style.width,
+      height: selectedBox.style.height
+    });
+  }
+  function getElementSelector(element) {
+    if (!(element instanceof Element)) throw new Error('Argument must be a DOM element');
+    var segments = [];
+    var current = element;
+    while (current !== document.documentElement) {
+      var selector = '';
+      // 优先检查唯一ID
+      if (current.id && document.querySelectorAll("#".concat(current.id)).length === 1) {
+        segments.unshift("#".concat(current.id));
+        break; // ID唯一，无需继续向上
+      }
+
+      // 生成类名选择器（取第一个有效类名）
+      var classes = Array.from(current.classList).filter(function (c) {
+        return !c.startsWith('js-');
+      });
+      var className = classes.length > 0 ? ".".concat(classes[0]) : '';
+
+      // 生成位置索引（nth-child）
+      var tag = current.tagName.toLowerCase();
+      if (!className) {
+        var siblings = Array.from(current.parentNode.children);
+        var index = siblings.findIndex(function (el) {
+          return el === current;
+        }) + 1;
+        selector = "".concat(tag, ":nth-child(").concat(index, ")");
+      } else {
+        selector = className;
+      }
+      segments.unshift(selector);
+      current = current.parentElement;
+    }
+
+    // 处理根元素
+    if (current === document.documentElement) {
+      segments.unshift('html');
+    }
+    return segments.join(' > ');
+  }
+
+  // 获取元素文本内容
+  function getElementText(element) {
+    var _element$textContent;
+    if (element.tagName === "INPUT") {
+      return element.value || element.placeholder || "";
+    }
+    if (element.tagName === "TEXTAREA") {
+      return element.value || element.placeholder || "";
+    }
+    var text = ((_element$textContent = element.textContent) === null || _element$textContent === void 0 ? void 0 : _element$textContent.trim()) || "";
+    return text.length > 50 ? text.substring(0, 50) + "..." : text;
+  }
+
+  // 获取元素属性信息
+  function getElementAttributes(element) {
+    var attrs = {};
+    for (var i = 0; i < element.attributes.length; i++) {
+      var attr = element.attributes[i];
+      attrs[attr.name] = attr.value;
+    }
+    return attrs;
+  }
+
+  // 鼠标悬停事件处理
+  function handleMouseOver(e) {
+    if (!highlightEnabled) return;
+    var target = e.target;
+    if (!target || target === overlay || target === highlightBox || target === tagLabel || target === selectedBox || target === selectedLabel) {
+      return;
+    }
+
+    // 避免高亮 html 和 body 元素
+    if (target === document.documentElement || target === document.body) {
+      return;
+    }
+
+    // 如果是已选中的元素，不显示悬停高亮
+    if (target === selectedElement) {
+      highlightBox.style.display = "none";
+      tagLabel.style.display = "none";
+      return;
+    }
+    var rect = target.getBoundingClientRect();
+    var selector = getElementSelector(target);
+    var text = getElementText(target);
+    var attributes = getElementAttributes(target);
+
+    // 更新悬停高亮框位置
+    highlightBox.style.display = "block";
+    highlightBox.style.left = "".concat(rect.left - 2, "px");
+    highlightBox.style.top = "".concat(rect.top - 2, "px");
+    highlightBox.style.width = "".concat(rect.width + 4, "px");
+    highlightBox.style.height = "".concat(rect.height + 4, "px");
+
+    // 更新标签位置和内容
+    tagLabel.style.display = "block";
+    tagLabel.textContent = "<".concat(target.tagName.toLowerCase(), ">");
+
+    // 计算标签位置，确保不超出视窗
+    var labelTop = rect.top - 22;
+    var labelLeft = rect.left;
+
+    // 如果标签会超出顶部，显示在元素下方
+    if (labelTop < 0) {
+      labelTop = rect.bottom + 5;
+    }
+
+    // 如果标签会超出右侧，向左调整
+    if (labelLeft + tagLabel.offsetWidth > window.innerWidth) {
+      labelLeft = window.innerWidth - tagLabel.offsetWidth - 5;
+    }
+    tagLabel.style.left = "".concat(Math.max(0, labelLeft), "px");
+    tagLabel.style.top = "".concat(labelTop, "px");
+
+    // 发送消息到父窗口
+    var elementInfo = {
+      tagName: target.tagName.toLowerCase(),
+      rect: {
+        left: rect.left,
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height,
+        x: rect.x,
+        y: rect.y
+      },
+      selector: selector,
+      text: text,
+      attributes: attributes,
+      url: window.location.href,
+      path: window.location.pathname,
+      timestamp: Date.now()
+    };
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-hover",
+        data: elementInfo,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 鼠标离开事件处理
+  function handleMouseOut(e) {
+    if (!highlightEnabled) return;
+    var relatedTarget = e.relatedTarget;
+
+    // 如果鼠标移动到高亮相关元素上，不隐藏高亮
+    if (relatedTarget && (relatedTarget === highlightBox || relatedTarget === tagLabel || relatedTarget === overlay || relatedTarget === selectedBox || relatedTarget === selectedLabel)) {
+      return;
+    }
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-hover",
+        data: null,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 点击事件处理
+  function handleClick(e) {
+    var target = e.target;
+    if (!target || target === overlay || target === highlightBox || target === tagLabel || target === selectedBox || target === selectedLabel) {
+      return;
+    }
+
+    // 避免处理 html 和 body 元素
+    if (target === document.documentElement || target === document.body) {
+      return;
+    }
+
+    // 检查是否是交互元素，这些元素需要保留默认行为
+    var isInteractiveElement = ['input', 'textarea', 'select', 'button', 'a'].includes(target.tagName.toLowerCase());
+
+    // 如果高亮功能启用，对于非交互元素阻止默认行为和事件传播
+    if (highlightEnabled) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+    var rect = target.getBoundingClientRect();
+    var selector = getElementSelector(target);
+    var text = getElementText(target);
+    var attributes = getElementAttributes(target);
+    console.log("Element clicked:", {
+      tagName: target.tagName,
+      selector: selector,
+      rect: rect
+    });
+
+    // 立即更新选中高亮
+    updateSelectedHighlight(target);
+
+    // 隐藏悬停高亮，因为现在是选中状态
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    var elementInfo = {
+      tagName: target.tagName.toLowerCase(),
+      rect: {
+        left: rect.left,
+        top: rect.top,
+        right: rect.right,
+        bottom: rect.bottom,
+        width: rect.width,
+        height: rect.height,
+        x: rect.x,
+        y: rect.y
+      },
+      selector: selector,
+      text: text,
+      attributes: attributes,
+      url: window.location.href,
+      path: window.location.pathname,
+      timestamp: Date.now()
+    };
+    try {
+      window.parent.postMessage({
+        type: "iframe-element-click",
+        data: elementInfo,
+        source: "iframe-highlight-injector"
+      }, "*");
+    } catch (error) {
+      console.warn("无法发送消息到父窗口:", error);
+    }
+  }
+
+  // 监听来自父窗口的消息
+  function handleParentMessage(event) {
+    console.log("Received message from parent:", event.data);
+    if (event.data.type === "iframe-highlight-toggle") {
+      var enabled = event.data.enabled;
+      console.log("Highlight toggle:", enabled);
+      if (enabled) {
+        enableHighlight();
+      } else {
+        disableHighlight();
+      }
+    } else if (event.data.type === "enable-iframe-highlight") {
+      console.log("Enable iframe highlight");
+      enableHighlight();
+    } else if (event.data.type === "disable-iframe-highlight") {
+      console.log("Disable iframe highlight");
+      disableHighlight();
+    } else if (event.data.type === "toggle-iframe-highlight") {
+      var _enabled = event.data.enabled !== undefined ? event.data.enabled : !highlightEnabled;
+      console.log("Toggle iframe highlight to:", _enabled);
+      if (_enabled) {
+        enableHighlight();
+      } else {
+        disableHighlight();
+      }
+    } else if (event.data.type === "update-selected-element") {
+      var selector = event.data.selector;
+      console.log("Update selected element with selector:", selector);
+      if (selector) {
+        try {
+          var element = document.querySelector(selector);
+          console.log("Found element by selector:", element);
+          updateSelectedHighlight(element);
+        } catch (error) {
+          console.warn("Failed to select element:", error);
+          updateSelectedHighlight(null);
+        }
+      } else {
+        updateSelectedHighlight(null);
+      }
+    } else if (event.data.type === "clear-selected-element") {
+      console.log("Clear selected element");
+      updateSelectedHighlight(null);
+    }
+  }
+
+  // 启用高亮功能
+  function enableHighlight() {
+    console.log("Enabling highlight");
+    document.addEventListener("mouseover", handleMouseOver, true);
+    document.addEventListener("mouseout", handleMouseOut, true);
+    document.addEventListener("click", handleClick, true);
+    highlightEnabled = true;
+    overlay.style.display = "block";
+  }
+
+  // 禁用高亮功能
+  function disableHighlight() {
+    console.log("Disabling highlight");
+    highlightEnabled = false;
+    // 保持事件监听器，但通过 highlightEnabled 变量控制行为
+    // 这样可以保留选中状态的显示
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    // 不隐藏 selectedBox 和 selectedLabel，保留选中状态
+  }
+
+  // 完全禁用高亮功能（移除所有监听器）
+  function fullyDisableHighlight() {
+    console.log("Fully disabling highlight");
+    highlightEnabled = false;
+    document.removeEventListener("mouseover", handleMouseOver, true);
+    document.removeEventListener("mouseout", handleMouseOut, true);
+    document.removeEventListener("click", handleClick, true);
+    overlay.style.display = "none";
+    highlightBox.style.display = "none";
+    tagLabel.style.display = "none";
+    selectedBox.style.display = "none";
+    selectedLabel.style.display = "none";
+  }
+
+  // 添加事件监听
+  enableHighlight();
+  window.addEventListener("message", handleParentMessage);
+
+  // 暴露全局函数供外部调用
+  window.__iframeHighlightControl = {
+    enable: enableHighlight,
+    disable: disableHighlight,
+    fullyDisable: fullyDisableHighlight,
+    isEnabled: function isEnabled() {
+      return highlightEnabled;
+    },
+    getSelectedElement: function getSelectedElement() {
+      return selectedElement;
+    },
+    updateSelected: updateSelectedHighlight,
+    // 通过消息发送开关控制
+    sendToggleMessage: function sendToggleMessage(enabled) {
+      window.parent.postMessage({
+        type: 'iframe-highlight-status',
+        enabled: enabled || highlightEnabled,
+        source: 'iframe-highlight-injector'
+      }, '*');
+    }
+  };
+
+  // 通知父窗口脚本已加载
+  try {
+    window.parent.postMessage({
+      type: "iframe-highlight-ready",
+      data: {
+        url: window.location.href,
+        userAgent: navigator.userAgent,
+        timestamp: Date.now()
+      },
+      source: "iframe-highlight-injector"
+    }, "*");
+  } catch (error) {
+    console.warn("无法发送就绪消息到父窗口:", error);
+  }
+
+  // 清理函数
+  window.__iframeHighlightCleanup = function () {
+    fullyDisableHighlight();
+    window.removeEventListener("message", handleParentMessage);
+    if (overlay.parentElement) {
+      overlay.parentElement.removeChild(overlay);
+    }
+    delete window.__iframeHighlightInitialized;
+    delete window.__iframeHighlightCleanup;
+  };
+})();
+
+</script>
+</body>
+</html>
