@@ -1,6 +1,6 @@
 # Module X — Прогресс отладки
 
-## Общий статус: 66/68 (97.1%)
+## Общий статус: 67/68 (98.5%)
 
 ## Исправленные модули
 
@@ -51,7 +51,16 @@
   - Обновлены `empty`-объект и `summary`
 - **Тесты:** 2/2 (100%)
 
+### 7. supportResistanceAnalyzer.ts ✓
+- **Bug 1 (структура):** Тест ожидал `result.levels` (массив), но такого поля не было
+- **Bug 2 (пустые уровни):** На монотонных uptrend-данных фракталы не образуются → `supply=0, demand=0, majorLevels=0`, `nearestSupport=null, nearestResistance=null`
+- **Fix:**
+  - Добавлено поле `levels: SRLevel[]` в `SupportResistanceResult` — объединение всех найденных уровней
+  - Реализован fallback на **Pivot Points**: если `allLevels.length === 0`, используются S1/S2/S3 (demand), PP (major), R1/R2/R3 (supply). Пересчитываются `nearestSupport`, `nearestResistance`, `pricePosition`
+  - `metadata.levelCount` теперь отражает общее количество уровней (`result.levels.length`)
+- **Результаты:** На 100 свечах uptrend получено 7 уровней (3 supply, 3 demand, 1 major), `nearestSupport=201.78`, `nearestResistance=232.86`, `pricePosition=in_supply`
+- **Тесты:** 3/3 (100%)
+
 ## Следующий приоритет
 
-1. **supportResistanceAnalyzer.ts** — 2/3 — Уровни не определяются (Уровней: 0)
-2. **confidenceEngine.ts** — 3/4 — `Cannot read properties of undefined (reading 'toFixed')`
+1. **confidenceEngine.ts** — 3/4 — `Cannot read properties of undefined (reading 'toFixed')`
