@@ -1,45 +1,60 @@
-# Module X — Bug Fix Progress
+# Module X — Bug Fix Progress (обновлено)
 
-## Приоритеты пользователя (строго по порядку)
-
-### ✅ ПРИОРИТЕТ 1.1: probabilityEngine.ts — ИСПРАВЛЕН
-- **Баг:** В формулах `bearPct = baseNeutral + directedWeight` и `bullPct = baseNeutral + directedWeight` 
-  использовались десятичные дроби (0..1), но результат сравнивался со 100. 
-  Это приводило к инверсии: при bearish входе bullPct=94, bearPct=0.77.
-- **Исправление:** `probabilityEngine.ts`, строки ~180-194. 
-  Изменено: `bearPct = (baseNeutral + directedWeight) * 100` и аналогично для bullPct.
+## ✅ ПРИОРИТЕТ 1.1: probabilityEngine.ts — ИСПРАВЛЕН
+- **Баг 1:** Инверсия bull/bear. Формула `bearPct = baseNeutral + directedWeight` (0..1) 
+  использовалась как проценты, но затем `100 - bearPct - 5` давало абсурд.
+- **Фикс 1:** `bearPct = (baseNeutral + directedWeight) * 100`
+- **Баг 2 (побочный):** При confidence=1 bullPct=100, bearPct=-5, после clamping сумма=105.
+- **Фикс 2:** `bearPct = (baseNeutral + directedWeight) * (100 - 5)` — гарантирует сумму=100.
 - **Тесты PROBABILITY ENGINE:** 6/6 (100%) ✅
-  - Сумма вероятностей = 100% ✅
-  - Bullish ≥ Bearish при восходящем тренде ✅
-  - Bearish ≥ Bullish при нисходящем тренде ✅
-  - Confidence ∈ [0, 100] ✅
-  - Expected — одно из 3 направлений ✅
-  - Базовый случай ~33/33/34 без данных ✅
-- **Краевые случаи (доп. проверка):** 5/5 ✅
-  - STRONG UPTREND, STRONG DOWNTREND, WEAK UPTREND, WEAK DOWNTREND, SIDEWAYS
 
-### 📊 Текущее состояние интеграционных тестов
-- Всего: 68 тестов
-- Пройдено: 51 (75%)
-- Провалено: 17 (ранее было 18)
+## ✅ ПРИОРИТЕТ 1.2: trendAnalyzer.ts — ИСПРАВЛЕН
+- **Баг:** В интерфейсе `TrendResult` не было поля `primaryTrend`, хотя 
+  `probabilityEngine` и тесты ожидали именно его. Классификация (`type`) 
+  работала корректно (strong_bull, weak_bull, и т.д.).
+- **Фикс:** Добавлено поле `primaryTrend: trendType` в `TrendResult`, 
+  в `empty` объект и в `return`.
+- **Тесты TREND:** 3/3 (100%) ✅
+- Бонус: MARKET STRUCTURE: 2/5 → 3/5
 
-### ⏭️ СЛЕДУЮЩИЙ МОДУЛЬ: trendAnalyzer.ts (Приоритет 1.2)
-**Известные баги (из предыдущего отчёта):**
-- Отсутствует `primaryTrend` в результате анализа (хотя `type` = strong_bear/strong_bull возвращается корректно)
-- Это влияет на `probabilityEngine.trendContribution` (он = 0 из-за undefined)
+## 📊 Текущее состояние (после 2 модулей)
+- Всего: 68
+- Пройдено: 53 (77.9%)
+- Провалено: 15
 
-### Оставшиеся модули (с приоритетами)
-1. ✅ probabilityEngine (DONE)
-2. ⏳ trendAnalyzer (NEXT)
-3. marketStructureAnalyzer (Priority 1.3)
+## ⏭️ СЛЕДУЮЩИЙ МОДУЛЬ: marketStructureAnalyzer.ts (Приоритет 1.3)
+**Известные баги:**
+- uptrendCandles → type=range (должен быть uptrend)
+- downtrendCandles → type=range (должен быть downtrend)
+- rangeCandles → type=downtrend (должен быть range)
+
+Алгоритм HH/HL/LH/LL не работает. Также нужно:
+- detectTrendType
+- Break of Structure
+- Range
+- Consolidation
+
+## Оставшиеся модули (по приоритетам)
+1. ✅ probabilityEngine
+2. ✅ trendAnalyzer
+3. ⏳ marketStructureAnalyzer (NEXT)
 4. priceActionAnalyzer (Priority 2.1)
 5. smartMoneyAnalyzer (Priority 2.2)
 6. supportResistanceAnalyzer (Priority 3.1)
 7. momentumAnalyzer (Priority 3.2)
 8. confidenceEngine (Priority 3.3)
 
-### Тестовая инфраструктура
-- Тест: `tests/moduleX.integration.test.ts` (68 тестов)
-- TestRunner: требует возврат `{pass: boolean, info?: string}` от каждого теста
-- Запуск: `npx tsx tests/moduleX.integration.test.ts`
-- TypeScript проверка: `npx tsc --noEmit -p tsconfig.test.json`
+## Прогресс по группам (текущий)
+- VOLUME 5/5 ✅
+- LIQUIDITY 4/4 ✅
+- VOLATILITY 4/4 ✅
+- CONFLUENCE ENGINE 4/4 ✅
+- PROBABILITY ENGINE 6/6 ✅
+- SCENARIO GENERATOR 11/11 ✅
+- TREND 3/3 ✅
+- MARKET STRUCTURE 3/5 (60%)
+- SMART MONEY 6/8 (75%)
+- SUPPORT/RESISTANCE 2/3 (67%)
+- CONFIDENCE ENGINE 3/4 (75%)
+- MOMENTUM 1/2 (50%)
+- PRICE ACTION 2/9 (22%)
