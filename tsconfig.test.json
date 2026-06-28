@@ -12,6 +12,6 @@
   },
   "include": [
     "public/js/core-analysis/analyzers/*.ts",
-    "test_smc.ts"
+    "tests/*.ts"
   ]
 }
