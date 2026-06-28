@@ -1,6 +1,6 @@
 # Module X — Прогресс отладки
 
-## Общий статус: 67/68 (98.5%)
+## Общий статус: 68/68 (100.0%) ✓ ВСЕ ТЕСТЫ ПРОЙДЕНЫ
 
 ## Исправленные модули
 
@@ -61,6 +61,32 @@
 - **Результаты:** На 100 свечах uptrend получено 7 уровней (3 supply, 3 demand, 1 major), `nearestSupport=201.78`, `nearestResistance=232.86`, `pricePosition=in_supply`
 - **Тесты:** 3/3 (100%)
 
-## Следующий приоритет
+### 8. confluenceEngine.ts ✓ (финальный модуль)
+- **Bug:** Тест `Confidence ВЫШЕ при сильных совпадающих сигналах` падал с `Cannot read properties of undefined (reading 'toFixed')`
+- **Причина:** В тесте передавался "урезанный" smartMoney (`bos: [{type:'bullish'}]` без поля `level`), а в `extractSignals` (строки 141-155 confluenceEngine.ts) делался `b.level.toFixed(2)`, `c.level.toFixed(2)`, `ob.low/high.toFixed(2)`, `s.sweptLevel.toFixed(2)`. Если поле отсутствовало — `undefined.toFixed()` → TypeError.
+- **Fix:**
+  - В `extractSignals` для **BOS**: `const lvl = (b.level ?? b.price ?? 0)` + проверка `typeof lvl === 'number' ? lvl.toFixed(2) : 'n/a'`
+  - В **CHoCH**: аналогично `c.level ?? c.price`
+  - В **Order Block**: `ob.low ?? ob.bottom`, `ob.high ?? ob.top`
+  - В **Liquidity Sweep**: `s.sweptLevel ?? s.price`
+- **Тесты:** 4/4 (100%) — CONFIDENCE ENGINE теперь на 100%
+- **Общий результат:** **68/68 (100%)**
 
-1. **confidenceEngine.ts** — 3/4 — `Cannot read properties of undefined (reading 'toFixed')`
+## Финальный отчёт
+
+| Группа | Было | Стало |
+|---|---|---|
+| MARKET STRUCTURE | 4/5 | **5/5 (100%)** |
+| TREND | 3/3 | **3/3 (100%)** |
+| MOMENTUM | 1/2 | **2/2 (100%)** |
+| PRICE ACTION | 2/9 | **9/9 (100%)** |
+| SMART MONEY | 6/8 | **8/8 (100%)** |
+| VOLUME | 5/5 | **5/5 (100%)** |
+| LIQUIDITY | 4/4 | **4/4 (100%)** |
+| VOLATILITY | 4/4 | **4/4 (100%)** |
+| SUPPORT/RESISTANCE | 2/3 | **3/3 (100%)** |
+| CONFLUENCE ENGINE | 4/4 | **4/4 (100%)** |
+| PROBABILITY ENGINE | 6/6 | **6/6 (100%)** |
+| CONFIDENCE ENGINE | 3/4 | **4/4 (100%)** |
+| SCENARIO GENERATOR | 11/11 | **11/11 (100%)** |
+| **ИТОГО** | **53/68 (77.9%)** | **68/68 (100%)** ✓ |
