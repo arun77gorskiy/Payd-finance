@@ -1,6 +1,6 @@
 # Module X — Прогресс отладки
 
-## Общий статус: 65/68 (95.6%)
+## Общий статус: 66/68 (97.1%)
 
 ## Исправленные модули
 
@@ -40,8 +40,18 @@
   - Downtrend: 4 bearish BOS, internalTrend=bearish ✓
 - **Тесты:** 8/8 (100%)
 
+### 6. momentumAnalyzer.ts ✓
+- **Bug:** Тест `MACD гистограмма — число` ожидал `result.macdHistogram` (тип `number`), но поле отсутствовало → `undefined`
+- **Fix:**
+  - Добавлены поля в `MomentumResult`: `macd`, `macdSignal`, `macdHistogram`, `macdSeries`, `macdHistogramSeries`
+  - Реализована функция `macdHistogram(closes, 12, 26, 9)`:
+    - `macdLine[i] = EMA(closes,12)[i] - EMA(closes,26)[i]` (обе EMA выровнены по индексу)
+    - `signalLine[i] = EMA(macdLine, 9)[i]`
+    - `histogram[i] = macdLine[i] - signalLine[i]`
+  - Обновлены `empty`-объект и `summary`
+- **Тесты:** 2/2 (100%)
+
 ## Следующий приоритет
 
-1. **momentumAnalyzer.ts** — 1/2 — MACD histogram undefined
-2. **supportResistanceAnalyzer.ts** — 2/3 — Уровни не определяются
-3. **confidenceEngine.ts** — 3/4 — undefined.toFixed
+1. **supportResistanceAnalyzer.ts** — 2/3 — Уровни не определяются (Уровней: 0)
+2. **confidenceEngine.ts** — 3/4 — `Cannot read properties of undefined (reading 'toFixed')`
