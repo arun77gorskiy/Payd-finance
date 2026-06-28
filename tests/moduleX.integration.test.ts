@@ -14,7 +14,7 @@ interface TestResult {
     duration: number;
 }
 
-class TestRunner {
+class ModuleXTestRunner {
     results: TestResult[] = [];
     currentSuite = '';
 
@@ -287,7 +287,7 @@ function eveningStarPattern(): Candle[] {
 // 3. ТЕСТЫ
 // ============================================================
 
-const runner = new TestRunner();
+const runner = new ModuleXTestRunner();
 
 // ───────────────────────────── MARKET STRUCTURE ─────────────────────────────
 runner.suite('MARKET STRUCTURE', () => {
