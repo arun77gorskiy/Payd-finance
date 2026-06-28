@@ -1,6 +1,6 @@
 # Module X — Прогресс отладки
 
-## Общий статус: 63/68 (92.6%)
+## Общий статус: 65/68 (95.6%)
 
 ## Исправленные модули
 
@@ -32,9 +32,16 @@
   - Hammer/Shooting Star: порог `< 0.10` (было `< 0.05`)
 - **Тесты:** 9/9 (100%)
 
+### 5. smartMoneyAnalyzer.ts ✓
+- **Bug:** На монотонных трендах `findSwings` возвращал 0 свингов → BOS, CHoCH, OB, Sweeps, internalTrend не работали
+- **Fix:** Добавлена функция `generateFallbackSwings(candles, interval=10)` — если `findSwings` не нашёл свингов, генерируются синтетические на основе скользящих экстремумов каждые 10 свечей. В `analyzeSmartMoney` подключён fallback при `swings.length === 0`.
+- **Результаты:**
+  - Uptrend: 4 bullish BOS, internalTrend=bullish ✓
+  - Downtrend: 4 bearish BOS, internalTrend=bearish ✓
+- **Тесты:** 8/8 (100%)
+
 ## Следующий приоритет
 
-1. **smartMoneyAnalyzer.ts** — 6/8 — BOS не находится на монотонных трендах (вероятно та же причина: 0 свингов)
+1. **momentumAnalyzer.ts** — 1/2 — MACD histogram undefined
 2. **supportResistanceAnalyzer.ts** — 2/3 — Уровни не определяются
-3. **momentumAnalyzer.ts** — 1/2 — MACD histogram undefined
-4. **confidenceEngine.ts** — 3/4 — undefined.toFixed
+3. **confidenceEngine.ts** — 3/4 — undefined.toFixed
