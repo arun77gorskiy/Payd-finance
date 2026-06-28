@@ -1,6 +1,6 @@
 # Module X — Прогресс отладки
 
-## Общий статус: 56/68 (82.4%)
+## Общий статус: 63/68 (92.6%)
 
 ## Исправленные модули
 
@@ -22,10 +22,19 @@
 - **Fix:** Добавлена fallback-логика в `detectTrendType` — если свингов < 4, сравниваются средние цены первой и второй половин свечей. Порог = 3% (для устойчивости к случайному walk).
 - **Тесты:** 5/5 (100%)
 
+### 4. priceActionAnalyzer.ts ✓
+- **Bug 1 (структура):** Выход не содержал `bullishPatterns[]`, `bearishPatterns[]`, `neutralPatterns[]`, `totalPatterns`
+- **Bug 2 (критерии):** Pin Bar / Hammer / Shooting Star с симметричными тенями (из тестового `makeCandle`) не обнаруживались
+- **Fix:**
+  - Добавлены поля `bullishPatterns`, `bearishPatterns`, `neutralPatterns`, `totalPatterns` (разбиение `patterns` по направлению)
+  - Ослаблены критерии Pin Bar: `lowerShadowRatio >= 0.45 && bodyRatio <= 0.35` (было 0.66/0.30) с условием `(upperShadowRatio <= 0.30 || lowerShadowRatio >= upperShadowRatio)`
+  - Аналогично для Bearish Pin Bar
+  - Hammer/Shooting Star: порог `< 0.10` (было `< 0.05`)
+- **Тесты:** 9/9 (100%)
+
 ## Следующий приоритет
 
-1. **priceActionAnalyzer.ts** — 2/9 (22%) — Pin Bar, Hammer, Shooting Star, Engulfing не обнаруживаются
+1. **smartMoneyAnalyzer.ts** — 6/8 — BOS не находится на монотонных трендах (вероятно та же причина: 0 свингов)
 2. **supportResistanceAnalyzer.ts** — 2/3 — Уровни не определяются
-3. **smartMoneyAnalyzer.ts** — 6/8 — BOS не находится (вероятно та же причина: 0 свингов на монотонных трендах)
-4. **momentumAnalyzer.ts** — 1/2 — MACD histogram undefined
-5. **confidenceEngine.ts** — 3/4 — undefined.toFixed
+3. **momentumAnalyzer.ts** — 1/2 — MACD histogram undefined
+4. **confidenceEngine.ts** — 3/4 — undefined.toFixed
