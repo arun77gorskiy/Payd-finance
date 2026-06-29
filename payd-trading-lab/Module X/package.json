@@ -12,10 +12,11 @@
     "./analyzers": "./analyzers/"
   },
   "scripts": {
-    "test": "tsx tests/moduleX.integration.test.ts && tsx tests/module1.integration.test.ts && tsx tests/module2.integration.test.ts",
+    "test": "tsx tests/moduleX.integration.test.ts && tsx tests/module1.integration.test.ts && tsx tests/module2.integration.test.ts && tsx tests/module3.integration.test.ts",
     "test:module-x": "tsx tests/moduleX.integration.test.ts",
     "test:module-1": "tsx tests/module1.integration.test.ts",
-    "test:module-2": "tsx tests/module2.integration.test.ts"
+    "test:module-2": "tsx tests/module2.integration.test.ts",
+    "test:module-3": "tsx tests/module3.integration.test.ts"
   },
   "keywords": [
     "trading",
