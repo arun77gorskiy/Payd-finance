@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "target": "es2017",
+    "module": "commonjs",
+    "strict": false,
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "allowJs": true,
+    "noEmitOnError": false,
+    "rootDir": ".",
+    "types": ["node"]
+  },
+  "include": [
+    "public/js/core-analysis/analyzers/*.ts",
+    "tests/*.ts"
+  ]
+}

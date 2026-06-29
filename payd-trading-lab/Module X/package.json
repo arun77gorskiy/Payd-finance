@@ -1,0 +1,38 @@
+{
+  "name": "module-x-core-analysis",
+  "version": "3.0.0",
+  "description": "PAYD Trading Lab — Module X: изолированная подсистема рыночной аналитики",
+  "main": "index.ts",
+  "types": "index.ts",
+  "exports": {
+    ".": {
+      "import": "./index.ts",
+      "require": "./bootstrap.js"
+    },
+    "./analyzers": "./analyzers/"
+  },
+  "scripts": {
+    "test": "tsx tests/moduleX.integration.test.ts && tsx tests/module1.integration.test.ts && tsx tests/module2.integration.test.ts",
+    "test:module-x": "tsx tests/moduleX.integration.test.ts",
+    "test:module-1": "tsx tests/module1.integration.test.ts",
+    "test:module-2": "tsx tests/module2.integration.test.ts"
+  },
+  "keywords": [
+    "trading",
+    "market-analysis",
+    "PAYD-Trading-Lab",
+    "module-x",
+    "core-engine"
+  ],
+  "author": "PAYD Trading Lab",
+  "license": "UNLICENSED",
+  "dependencies": {},
+  "devDependencies": {
+    "@types/node": "^26.0.1",
+    "tsx": "^4.0.0",
+    "typescript": "^6.0.3"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
