@@ -1,16 +1,20 @@
 // ============================================================
-// Module 2 — Интеграционные тесты после интеграции с Module X
+// Module 2 — Интеграционные тесты после полной интеграции с Module X v1.0.0
 // ============================================================
-// Цель: доказать, что DecisionEvaluationEngine (Module 2):
-//   1. НЕ содержит собственного анализа графика
-//   2. НЕ вызывает coreAnalysisEngine.analyzeMarket()
-//   3. Только принимает готовый AnalysisResult и оценивает решение
-//   4. Корректно выдаёт verdict на основе данных Module X
+// Цель тестов:
+//   1. Доказать, что DecisionEvaluationEngine.js НЕ содержит анализа графика.
+//   2. Доказать, что Module 2 принимает только готовый AnalysisResult
+//      и формирует вердикт на его основе.
+//   3. Покрыть все сценарии оценки (correct / risky / incorrect).
+//   4. Проверить формирование объяснений и edge cases.
+//   5. Подтвердить, что Module 2 можно тестировать только через моки.
 // ============================================================
 
 export {};
 
-// ----- Простой тест-фреймворк -----
+// ============================================================
+// 0. ТЕСТ-ФРЕЙМВОРК
+// ============================================================
 interface TestResult {
     suite: string;
     name: string;
@@ -51,10 +55,10 @@ class Module2TestRunner {
         const passed = this.results.filter(r => r.passed).length;
         const failed = total - passed;
         const failedTests = this.results.filter(r => !r.passed);
-        const totalDuration = this.results.reduce((s, r) => r.duration + s, 0);
+        const totalDuration = this.results.reduce((s, r) => s + r.duration, 0);
 
         console.log(`\n${'═'.repeat(70)}`);
-        console.log(`  ИТОГОВЫЙ ОТЧЁТ — MODULE 2`);
+        console.log(`  ИТОГОВЫЙ ОТЧЁТ — MODULE 2 (decision validator)`);
         console.log(`${'═'.repeat(70)}`);
         console.log(`  Всего тестов:    ${total}`);
         console.log(`  \x1b[32mПройдено:       ${passed}\x1b[0m`);
@@ -69,268 +73,198 @@ class Module2TestRunner {
                 console.log(`    → ${t.details}`);
             }
         }
+
+        // Покрытие по сьютам
+        console.log(`\n  ── Покрытие по группам ──`);
+        const suites = [...new Set(this.results.map(r => r.suite))];
+        for (const s of suites) {
+            const suiteTests = this.results.filter(r => r.suite === s);
+            const suitePassed = suiteTests.filter(r => r.passed).length;
+            const pct = suiteTests.length > 0 ? ((suitePassed / suiteTests.length) * 100).toFixed(0) : '0';
+            console.log(`  ${s.padEnd(45)} ${suitePassed}/${suiteTests.length} (${pct}%)`);
+        }
+
         console.log(`${'═'.repeat(70)}\n`);
     }
 }
 
 // ============================================================
-// 1. ЗАГРУЗКА МОДУЛЕЙ
+// 1. ЗАГРУЗКА MODULE 2 В VM-КОНТЕКСТ
 // ============================================================
 console.log('╔══════════════════════════════════════════════════════════════════════╗');
-console.log('║  MODULE 2 — ТЕСТЫ ИНТЕГРАЦИИ С MODULE X                          ║');
+console.log('║  MODULE 2 — ТЕСТЫ ИНТЕГРАЦИИ С MODULE X v1.0.0                    ║');
 console.log('╚══════════════════════════════════════════════════════════════════════╝\n');
 
-console.log('[Загрузка] Загрузка Module 2 (DecisionEvaluationEngine.js)...');
 const fs = require('fs');
+const vm = require('vm');
 
-// Загружаем Module 2 (он не требует Module X как глобальный объект —
-// только принимает готовый AnalysisResult через marketAnalysis)
+console.log('[Загрузка] Module 2 (DecisionEvaluationEngine.js)...');
 const module2Code = fs.readFileSync('/workspace/payd-trading-lab/Module 2/DecisionEvaluationEngine.js', 'utf8');
 
-// Mock DecisionOptionsCatalog для тестов evidence
+// Mock каталога решений
 const catalogMock: any = {
     getDecisionById: (id: string) => {
         const catalog: any = {
-            'breakout-entry': { id: 'breakout-entry', label: 'Breakout Entry', shortLabel: 'BREAK', direction: 'long', category: 'conditional', riskLevel: 'medium', entryStyle: 'on-breakout', requiredEvidence: ['breakout'], recommendedEvidence: ['high-volume', 'hold'], rrExpectation: '1:3' },
-            'long': { id: 'long', label: 'Long', shortLabel: 'LONG', direction: 'long', category: 'directional', riskLevel: 'medium', entryStyle: 'immediate', requiredEvidence: ['high-volume'], recommendedEvidence: ['impulse'], rrExpectation: '1:2' },
-            'short': { id: 'short', label: 'Short', shortLabel: 'SHORT', direction: 'short', category: 'directional', riskLevel: 'medium', entryStyle: 'immediate', requiredEvidence: ['high-volume'], recommendedEvidence: ['impulse'], rrExpectation: '1:2' },
-            'pullback-entry': { id: 'pullback-entry', label: 'Pullback Entry', shortLabel: 'PULLBCK', direction: 'long', category: 'conditional', riskLevel: 'medium', entryStyle: 'on-pullback', requiredEvidence: ['retest'], recommendedEvidence: ['hold'], rrExpectation: '1:3' },
-            'aggressive-long': { id: 'aggressive-long', label: 'Aggressive Long', shortLabel: 'AGG-L', direction: 'long', category: 'directional', riskLevel: 'high', entryStyle: 'immediate', requiredEvidence: ['impulse', 'high-volume'], recommendedEvidence: [], rrExpectation: '1:2' },
+            'breakout-entry':    { id: 'breakout-entry', label: 'Breakout Entry',    shortLabel: 'BREAK', direction: 'long',  category: 'conditional',   riskLevel: 'medium', entryStyle: 'on-breakout',  requiredEvidence: ['breakout'],                recommendedEvidence: ['high-volume', 'hold'], rrExpectation: '1:3' },
+            'long':              { id: 'long',           label: 'Long',              shortLabel: 'LONG',   direction: 'long',  category: 'directional',    riskLevel: 'medium', entryStyle: 'immediate',    requiredEvidence: ['high-volume'],              recommendedEvidence: ['impulse'],           rrExpectation: '1:2' },
+            'short':             { id: 'short',          label: 'Short',             shortLabel: 'SHORT',  direction: 'short', category: 'directional',    riskLevel: 'medium', entryStyle: 'immediate',    requiredEvidence: ['high-volume'],              recommendedEvidence: ['impulse'],           rrExpectation: '1:2' },
+            'pullback-entry':    { id: 'pullback-entry', label: 'Pullback Entry',    shortLabel: 'PULLBCK',direction: 'long',  category: 'conditional',   riskLevel: 'medium', entryStyle: 'on-pullback',  requiredEvidence: ['retest'],                  recommendedEvidence: ['hold'],              rrExpectation: '1:3' },
+            'aggressive-long':   { id: 'aggressive-long',label: 'Aggressive Long',   shortLabel: 'AGG-L',  direction: 'long',  category: 'directional',    riskLevel: 'high',   entryStyle: 'immediate',    requiredEvidence: ['impulse', 'high-volume'],  recommendedEvidence: [],                   rrExpectation: '1:2' },
             'conservative-long': { id: 'conservative-long', label: 'Conservative Long', shortLabel: 'CONSV-L', direction: 'long', category: 'directional', riskLevel: 'low', entryStyle: 'on-pullback', requiredEvidence: ['retest', 'hold'], recommendedEvidence: ['high-volume'], rrExpectation: '1:3' },
-            'partial-position': { id: 'partial-position', label: 'Partial Position', shortLabel: 'PARTIAL', direction: 'long', category: 'risk-managed', riskLevel: 'low', entryStyle: 'on-pullback', requiredEvidence: ['retest'], recommendedEvidence: [], rrExpectation: '1:2' },
-            'scale-in': { id: 'scale-in', label: 'Scale In', shortLabel: 'SCALE', direction: 'long', category: 'risk-managed', riskLevel: 'medium', entryStyle: 'on-pullback', requiredEvidence: [], recommendedEvidence: ['hold'], rrExpectation: '1:3' },
-            'counter-trend': { id: 'counter-trend', label: 'Counter Trend', shortLabel: 'CTR-TR', direction: 'long', category: 'counter-trend', riskLevel: 'high', entryStyle: 'immediate', requiredEvidence: ['rejection'], recommendedEvidence: [], rrExpectation: '1:4' },
-            'wait': { id: 'wait', label: 'Wait', shortLabel: 'WAIT', direction: 'neutral', category: 'neutral', riskLevel: 'low', entryStyle: 'wait', requiredEvidence: [], recommendedEvidence: [], rrExpectation: '0' },
-            'no-trade': { id: 'no-trade', label: 'No Trade', shortLabel: 'NO-TR', direction: 'neutral', category: 'neutral', riskLevel: 'low', entryStyle: 'wait', requiredEvidence: [], recommendedEvidence: [], rrExpectation: '0' }
+            'partial-position':  { id: 'partial-position',label: 'Partial Position',  shortLabel: 'PARTIAL',direction: 'long',  category: 'risk-managed',   riskLevel: 'low',    entryStyle: 'on-pullback',  requiredEvidence: ['retest'],                  recommendedEvidence: [],                   rrExpectation: '1:2' },
+            'scale-in':          { id: 'scale-in',       label: 'Scale In',          shortLabel: 'SCALE',  direction: 'long',  category: 'risk-managed',   riskLevel: 'medium', entryStyle: 'on-pullback',  requiredEvidence: [],                          recommendedEvidence: ['hold'],              rrExpectation: '1:3' },
+            'counter-trend':     { id: 'counter-trend',  label: 'Counter Trend',     shortLabel: 'CTR-TR', direction: 'long',  category: 'counter-trend', riskLevel: 'high',   entryStyle: 'immediate',    requiredEvidence: ['rejection'],               recommendedEvidence: [],                   rrExpectation: '1:4' },
+            'wait':              { id: 'wait',           label: 'Wait',              shortLabel: 'WAIT',   direction: 'neutral', category: 'neutral',     riskLevel: 'low',    entryStyle: 'wait',         requiredEvidence: [],                          recommendedEvidence: [],                   rrExpectation: '0'  },
+            'no-trade':          { id: 'no-trade',       label: 'No Trade',          shortLabel: 'NO-TR',  direction: 'neutral', category: 'neutral',     riskLevel: 'low',    entryStyle: 'wait',         requiredEvidence: [],                          recommendedEvidence: [],                   rrExpectation: '0'  }
         };
         return catalog[id];
     }
 };
 
-// Создаём общую "песочницу"
-const sharedGlobal: any = {
-    DecisionEvaluationEngine: undefined,
-    DecisionOptionsCatalog: catalogMock
-};
+// КРИТИЧЕСКОЕ: используем vm.createContext, чтобы IIFE в Module 2
+// подхватывал наш контекст как globalThis (а не реальный global Node.js).
+const ctx: any = vm.createContext({});
+ctx.window = ctx;
+ctx.global = ctx;
+ctx.globalThis = ctx;
+ctx.DecisionOptionsCatalog = catalogMock;
 
-const wrapper = `
-(function () {
-    var window = this;
-    var global = this;
-    var globalThis = this;
+try {
+    const script = new vm.Script(module2Code, { filename: 'DecisionEvaluationEngine.js' });
+    script.runInContext(ctx);
+} catch (err) {
+    console.error('[FATAL] Не удалось загрузить Module 2:', err);
+    process.exit(2);
+}
 
-    // Загружаем Module 2
-    ${module2Code}
-
-    this.DecisionEvaluationEngine = (typeof DecisionEvaluationEngine !== 'undefined') ? DecisionEvaluationEngine : this.DecisionEvaluationEngine;
-}).call(this);
-`;
-
-const wrapperFn = new Function(wrapper);
-wrapperFn.call(sharedGlobal);
-
-const Module2 = sharedGlobal.DecisionEvaluationEngine;
+const Module2 = ctx.DecisionEvaluationEngine;
 
 console.log('[Загрузка] Module 2 загружен ✓');
-console.log(`[Проверка] Module 2 имеет evaluate: ${typeof Module2?.evaluate === 'function'}`);
+console.log(`[Проверка] Module 2 имеет evaluate: ${typeof Module2?.evaluate === 'function'}\n`);
 
 // ============================================================
-// 2. ТЕСТОВЫЙ ANALYSISRESULT (готовый результат Module X)
+// 2. УТИЛИТЫ ДЛЯ ANALYSISRESULT (новая структура Module X v1.0.0)
 // ============================================================
 
-interface AnalysisResultMock {
-    summary: any;
-    structure: any;
-    smc: any;
-    priceAction: any;
-    trend: any;
-    momentum: any;
-    volume: any;
-    liquidity: any;
-    volatility: any;
-    levels: any;
-    probability: any;
-    scenarios: any;
-    interpretations: any;
-    [key: string]: any;
+interface Scenario {
+    id: string;
+    title?: string;
+    direction: 'long' | 'short' | 'neutral';
+    category?: string;
+    riskLevel?: string;
+    priority?: number;
+    probability?: number;
+    confirmations?: string[];
+    riskRewardRatio?: string;
+    description?: string;
 }
 
-function makeBullishAnalysisResult(): AnalysisResultMock {
+/** Стандартные bullish-scenarios: long, breakout-entry, aggressive-long, wait */
+function makeBullishScenarios(): Scenario[] {
+    return [
+        { id: 'long',              title: 'Long по тренду', direction: 'long', category: 'directional', priority: 1, probability: 0.7, confirmations: ['high-volume'], riskRewardRatio: '1:2' },
+        { id: 'breakout-entry',    title: 'Breakout Entry', direction: 'long', category: 'conditional', priority: 2, probability: 0.6, confirmations: ['breakout'], riskRewardRatio: '1:3' },
+        { id: 'aggressive-long',   title: 'Aggressive Long', direction: 'long', category: 'directional', priority: 3, probability: 0.5, confirmations: ['impulse'], riskRewardRatio: '1:2' },
+        { id: 'wait',              title: 'Wait', direction: 'neutral', category: 'neutral', priority: 99, probability: 0, confirmations: [], riskRewardRatio: '0' }
+    ];
+}
+
+function makeBearishScenarios(): Scenario[] {
+    return [
+        { id: 'short',   title: 'Short по тренду', direction: 'short', category: 'directional', priority: 1, probability: 0.7, confirmations: ['high-volume'], riskRewardRatio: '1:2' },
+        { id: 'wait',    title: 'Wait', direction: 'neutral', category: 'neutral', priority: 99, probability: 0, confirmations: [], riskRewardRatio: '0' }
+    ];
+}
+
+function makeNeutralScenarios(): Scenario[] {
+    return [
+        { id: 'partial-position', title: 'Partial Position', direction: 'long', category: 'risk-managed', priority: 1, probability: 0.5, confirmations: ['retest'], riskRewardRatio: '1:2' },
+        { id: 'wait', title: 'Wait', direction: 'neutral', category: 'neutral', priority: 99, probability: 0, confirmations: [], riskRewardRatio: '0' }
+    ];
+}
+
+/**
+ * Baseline AnalysisResult для бычьих рынков.
+ * Принимает overrides для кастомизации полей в каждом тесте.
+ */
+function makeBullishAnalysis(overrides: any = {}): any {
     return {
-        moduleXVersion: '1.0',
-        analyzedAt: new Date().toISOString(),
-        inputMeta: { candleCount: 50, level: 105 },
-        structure: { type: 'uptrend', hh: 4, hl: 3, lh: 0, ll: 0, structureShift: null, swings: [] },
-        smc: { bos: [], choch: [], orderBlocks: [], fairValueGaps: [], liquiditySweeps: [], displacement: [], buySideLiquidity: [], sellSideLiquidity: [], premiumZone: null, discountZone: null },
-        priceAction: { patterns: [] },
-        trend: { type: 'strong_bull', strength: 80 },
-        momentum: { strength: 75, description: 'Сильный моментум', rsi: 65, history: [], divergence: null, acceleration: null },
-        volume: { ratio: 1.2, current: 1200, average: 1000, description: 'Объём выше среднего' },
-        liquidity: {},
-        volatility: { atr: 1.5, atrPercent: 1.5, level: 'medium', description: 'Средняя волатильность' },
-        levels: { supports: [{ price: 95, strength: 0.8 }], resistances: [{ price: 110, strength: 0.7 }] },
-        probability: { bullish: 70, bearish: 30, confidence: 70 },
-        scenarios: [
-            {
-                id: 'long',
-                title: 'Long по тренду',
-                direction: 'long',
-                category: 'directional',
-                riskLevel: 'medium',
-                priority: 1,
-                probability: 0.7,
-                confirmations: ['breakout', 'high-volume'],
-                riskRewardRatio: '1:2',
-                description: 'Вход в лонг по восходящему тренду'
-            },
-            {
-                id: 'breakout-entry',
-                title: 'Breakout Entry',
-                direction: 'long',
-                category: 'conditional',
-                riskLevel: 'medium',
-                priority: 2,
-                probability: 0.6,
-                confirmations: ['breakout'],
-                riskRewardRatio: '1:3',
-                description: 'Вход на пробое уровня'
-            },
-            {
-                id: 'aggressive-long',
-                title: 'Aggressive Long',
-                direction: 'long',
-                category: 'directional',
-                riskLevel: 'high',
-                priority: 3,
-                probability: 0.5,
-                confirmations: ['impulse'],
-                riskRewardRatio: '1:2',
-                description: 'Агрессивный вход в лонг'
-            },
-            {
-                id: 'wait',
-                title: 'Wait',
-                direction: 'neutral',
-                category: 'neutral',
-                riskLevel: 'low',
-                priority: 99,
-                probability: 0,
-                confirmations: [],
-                riskRewardRatio: '0',
-                description: 'Ожидание'
-            }
-        ],
-        interpretations: {
-            structureLabel: 'uptrend',
-            momentumSignal: 'bullish',
-            volumeTrend: 'increasing',
-            volatilitySignal: 'stable',
-            position: { level: 100, distancePct: 5, position: 'above_level' }
+        trend: { primaryTrend: 'strong_bull', strength: 80, description: 'Bullish trend' },
+        marketStructure: {
+            type: 'uptrend',
+            higherHighs: [{}, {}],
+            higherLows: [{}],
+            lowerHighs: [],
+            lowerLows: [],
+            swings: [],
+            structureShift: null,
+            summary: 'Uptrend'
         },
-        summary: {
-            context: 'uptrend',
-            bias: 'bullish',
-            confidence: 75,
-            keySignals: ['uptrend_structure', 'strong_bullish_momentum'],
-            reasons: ['Test reason'],
-            probabilities: { continuation: 70, reversal: 30 }
-        }
+        confidence: { percent: 78, grade: 'B' },
+        marketPhase: { phase: 'trending' },
+        probabilities: { continuation: 0.7, reversal: 0.3 },
+        evidence: { keySignals: ['uptrend_structure', 'strong_bullish_momentum'] },
+        scenarios: makeBullishScenarios(),
+        ...overrides
     };
 }
 
-function makeBearishAnalysisResult(): AnalysisResultMock {
-    const r = makeBullishAnalysisResult();
-    r.structure.type = 'downtrend';
-    r.structure.hh = 0; r.structure.hl = 0; r.structure.lh = 4; r.structure.ll = 3;
-    r.trend.type = 'strong_bear';
-    r.trend.strength = 80;
-    r.momentum.strength = 75;
-    r.momentum.description = 'Сильный медвежий моментум';
-    r.probability = { bullish: 30, bearish: 70, confidence: 70 };
-    r.scenarios = [
-        {
-            id: 'short',
-            title: 'Short по тренду',
-            direction: 'short',
-            category: 'directional',
-            riskLevel: 'medium',
-            priority: 1,
-            probability: 0.7,
-            confirmations: ['breakout', 'high-volume'],
-            riskRewardRatio: '1:2',
-            description: 'Вход в шорт'
+function makeBearishAnalysis(overrides: any = {}): any {
+    return {
+        trend: { primaryTrend: 'strong_bear', strength: 80, description: 'Bearish trend' },
+        marketStructure: {
+            type: 'downtrend',
+            higherHighs: [],
+            higherLows: [],
+            lowerHighs: [{}, {}],
+            lowerLows: [{}],
+            swings: [],
+            structureShift: null,
+            summary: 'Downtrend'
         },
-        {
-            id: 'wait',
-            title: 'Wait',
-            direction: 'neutral',
-            category: 'neutral',
-            riskLevel: 'low',
-            priority: 99,
-            probability: 0,
-            confirmations: [],
-            riskRewardRatio: '0',
-            description: 'Ожидание'
-        }
-    ];
-    r.interpretations.structureLabel = 'downtrend';
-    r.interpretations.momentumSignal = 'bearish';
-    r.summary = {
-        context: 'downtrend',
-        bias: 'bearish',
-        confidence: 75,
-        keySignals: ['downtrend_structure', 'strong_bearish_momentum'],
-        reasons: ['Test reason'],
-        probabilities: { continuation: 70, reversal: 30 }
+        confidence: { percent: 78, grade: 'B' },
+        marketPhase: { phase: 'trending' },
+        probabilities: { continuation: 0.7, reversal: 0.3 },
+        evidence: { keySignals: ['downtrend_structure', 'strong_bearish_momentum'] },
+        scenarios: makeBearishScenarios(),
+        ...overrides
     };
-    return r;
 }
 
-function makeNeutralAnalysisResult(): AnalysisResultMock {
-    const r = makeBullishAnalysisResult();
-    r.structure.type = 'range';
-    r.trend.type = 'range';
-    r.trend.strength = 50;
-    r.momentum.strength = 50;
-    r.momentum.description = 'Нейтральный моментум';
-    r.probability = { bullish: 50, bearish: 50, confidence: 50 };
-    r.scenarios = [
-        {
-            id: 'wait',
-            title: 'Wait',
-            direction: 'neutral',
-            category: 'neutral',
-            riskLevel: 'low',
-            priority: 99,
-            probability: 0,
-            confirmations: [],
-            riskRewardRatio: '0',
-            description: 'Ожидание'
+function makeNeutralAnalysis(overrides: any = {}): any {
+    return {
+        trend: { primaryTrend: 'range', strength: 50, description: 'Range' },
+        marketStructure: {
+            type: 'range',
+            higherHighs: [],
+            higherLows: [],
+            lowerHighs: [],
+            lowerLows: [],
+            swings: [],
+            structureShift: null,
+            summary: 'Range'
         },
-        {
-            id: 'partial-position',
-            title: 'Partial Position',
-            direction: 'long',
-            category: 'risk-managed',
-            riskLevel: 'low',
-            priority: 1,
-            probability: 0.5,
-            confirmations: ['retest'],
-            riskRewardRatio: '1:2',
-            description: 'Частичная позиция'
-        }
-    ];
-    r.interpretations.structureLabel = 'range';
-    r.interpretations.momentumSignal = 'neutral';
-    r.summary = {
-        context: 'range',
-        bias: 'neutral',
-        confidence: 50,
-        keySignals: ['at_key_level'],
-        reasons: ['Test reason'],
-        probabilities: { continuation: 50, reversal: 50 }
+        confidence: { percent: 50, grade: 'C' },
+        marketPhase: { phase: 'consolidation' },
+        probabilities: { continuation: 0.5, reversal: 0.5 },
+        evidence: { keySignals: ['at_key_level'] },
+        scenarios: makeNeutralScenarios(),
+        ...overrides
     };
-    return r;
+}
+
+/**
+ * Подменяет DecisionOptionsCatalog в нашем ctx.
+ * Если не передавать — возвращает исходный mock.
+ */
+function installMockCatalog(customMock: any) {
+    const original = ctx.DecisionOptionsCatalog;
+    ctx.DecisionOptionsCatalog = customMock;
+    return original;
+}
+
+function uninstallMockCatalog(original: any) {
+    ctx.DecisionOptionsCatalog = original;
 }
 
 // ============================================================
@@ -339,59 +273,99 @@ function makeNeutralAnalysisResult(): AnalysisResultMock {
 
 const runner = new Module2TestRunner();
 
+// ------------------------------------------------------------
+// SUITE 1 — ARCHITECTURE
+// ------------------------------------------------------------
 runner.suite('ARCHITECTURE: Module 2 не выполняет собственный анализ', () => {
-    runner.test('В исходном коде Module 2 нет реального вызова analyzeMarket (вне комментариев)', () => {
+    runner.test('В исходном коде Module 2 нет вызовов analyzeMarket (вне комментариев)', () => {
         const src = fs.readFileSync('/workspace/payd-trading-lab/Module 2/DecisionEvaluationEngine.js', 'utf8');
-        // Убираем JSDoc /* ... */ и однострочные // ... комментарии перед проверкой
         const stripped = src
             .replace(/\/\*[\s\S]*?\*\//g, '')
             .replace(/(^|\s)\/\/[^\n]*/g, '');
         const hasCall = /\.analyzeMarket\s*\(/.test(stripped);
         return {
             pass: !hasCall,
-            info: !hasCall ? 'analyzeMarket() НЕ вызывается в коде ✓' : 'analyzeMarket() НАЙДЕН в коде — нарушение архитектуры!'
+            info: !hasCall
+                ? 'analyzeMarket() НЕ вызывается в коде ✓'
+                : 'analyzeMarket() НАЙДЕН в коде — нарушение архитектуры!'
         };
     });
 
-    runner.test('В исходном коде Module 2 нет собственных расчётов структуры', () => {
+    runner.test('В исходном коде Module 2 нет собственных аналитических функций', () => {
         const src = fs.readFileSync('/workspace/payd-trading-lab/Module 2/DecisionEvaluationEngine.js', 'utf8');
+        const stripped = src
+            .replace(/\/\*[\s\S]*?\*\//g, '')
+            .replace(/(^|\s)\/\/[^\n]*/g, '');
+
         const forbiddenPatterns = [
             /detectTrend\s*\(/,
             /detectBOS\s*\(/,
             /detectCHoCH\s*\(/,
             /detectPinBar\s*\(/,
             /calculateRSI\s*\(/,
+            /calculateMACD\s*\(/,
             /swingHigh\s*\(/,
             /swingLow\s*\(/,
-            /calculateATR\s*\(/
+            /calculateATR\s*\(/,
+            /findSwings\s*\(/,
+            /function\s+analyze[sA-Z]*/,
+            /require\s*\(\s*['"][^'"]*analyzer/i
         ];
-        const violations = forbiddenPatterns.filter(p => p.test(src));
+
+        const violations: string[] = [];
+        for (const p of forbiddenPatterns) {
+            const m = stripped.match(p);
+            if (m) violations.push(`${p.toString()}: ${m[0].substring(0, 50)}`);
+        }
+
         return {
             pass: violations.length === 0,
             info: violations.length === 0
                 ? 'Нет собственной аналитики ✓'
-                : `Найдены паттерны: ${violations.length}`
+                : `Найдены нарушения:\n${violations.join('\n')}`
         };
     });
 
-    runner.test('Module 2 принимает marketAnalysis как входной параметр', () => {
+    runner.test('В исходном коде Module 2 нет require/import анализаторов', () => {
         const src = fs.readFileSync('/workspace/payd-trading-lab/Module 2/DecisionEvaluationEngine.js', 'utf8');
-        const acceptsParam = /function\s+evaluate\s*\(\s*input\s*\)/.test(src)
-                          && /input\.marketAnalysis/.test(src);
+        const hasAnalyzerImport = /require\s*\(\s*['"][^'"]*analyz/i.test(src) ||
+                                   /from\s+['"][^'"]*analyz/i.test(src);
         return {
-            pass: acceptsParam,
-            info: acceptsParam
-                ? 'evaluate(input) принимает marketAnalysis ✓'
-                : 'evaluate() НЕ принимает marketAnalysis'
+            pass: !hasAnalyzerImport,
+            info: !hasAnalyzerImport
+                ? 'Нет импортов анализаторов ✓'
+                : 'Импорт анализатора найден!'
+        };
+    });
+
+    runner.test('Module 2 имеет evaluate() как публичную точку входа', () => {
+        const pass = typeof Module2?.evaluate === 'function';
+        const hasOnlyEvaluate = Object.keys(Module2).filter(k => !k.startsWith('_')).length === 1;
+        return {
+            pass: pass && hasOnlyEvaluate,
+            info: `Module2 keys = ${Object.keys(Module2).join(', ')}`
+        };
+    });
+
+    runner.test('evaluate принимает marketAnalysis как входной параметр', () => {
+        const src = fs.readFileSync('/workspace/payd-trading-lab/Module 2/DecisionEvaluationEngine.js', 'utf8');
+        const accepts = /function\s+evaluate\s*\(\s*input\s*\)/.test(src)
+                     && /input\.marketAnalysis/.test(src);
+        return {
+            pass: accepts,
+            info: accepts ? 'evaluate(input) принимает marketAnalysis ✓' : 'НЕ принимает marketAnalysis'
         };
     });
 });
 
+// ------------------------------------------------------------
+// SUITE 2 — DATA FLOW
+// ------------------------------------------------------------
 runner.suite('DATA FLOW: Module 2 принимает готовый AnalysisResult', () => {
-    runner.test('Module 2 бросает ошибку если marketAnalysis отсутствует', () => {
+    runner.test('Бросает ошибку если marketAnalysis отсутствует', () => {
         try {
             Module2.evaluate({ userDecision: 'long' });
-            return { pass: false, info: 'Ожидалась ошибка, но не было' };
+            return { pass: false, info: 'Ожидалась ошибка' };
         } catch (e: any) {
             return {
                 pass: e.message.includes('marketAnalysis is required'),
@@ -400,11 +374,10 @@ runner.suite('DATA FLOW: Module 2 принимает готовый AnalysisResu
         }
     });
 
-    runner.test('Module 2 бросает ошибку если userDecision отсутствует', () => {
-        const market = makeBullishAnalysisResult();
+    runner.test('Бросает ошибку если userDecision отсутствует', () => {
         try {
-            Module2.evaluate({ marketAnalysis: market });
-            return { pass: false, info: 'Ожидалась ошибка, но не было' };
+            Module2.evaluate({ marketAnalysis: makeBullishAnalysis() });
+            return { pass: false, info: 'Ожидалась ошибка' };
         } catch (e: any) {
             return {
                 pass: e.message.includes('userDecision is required'),
@@ -413,11 +386,24 @@ runner.suite('DATA FLOW: Module 2 принимает готовый AnalysisResu
         }
     });
 
-    runner.test('Module 2 принимает прямой Module X output (с полями structure/summary/scenarios)', () => {
-        const x = makeBullishAnalysisResult();
+    runner.test('Бросает ошибку если input = null', () => {
+        try {
+            (Module2.evaluate as any)(null);
+            return { pass: false, info: 'Ожидалась ошибка' };
+        } catch (e: any) {
+            return {
+                pass: e.message.includes('marketAnalysis is required'),
+                info: `Поймана ошибка: ${e.message}`
+            };
+        }
+    });
+
+    runner.test('Принимает прямой AnalysisResult и возвращает вердикт', () => {
+        const x = makeBullishAnalysis();
         const result = Module2.evaluate({
             marketAnalysis: x,
-            userDecision: 'long'
+            userDecision: 'long',
+            userEvidence: ['high-volume']
         });
         return {
             pass: !!result && typeof result.verdict === 'string',
@@ -425,70 +411,92 @@ runner.suite('DATA FLOW: Module 2 принимает готовый AnalysisResu
         };
     });
 
-    runner.test('Module 2 принимает Module 1 output (с вложенным moduleXOutput)', () => {
-        const x = makeBullishAnalysisResult();
-        const module1Output = {
-            context: x.summary.context,
-            bias: x.summary.bias,
-            moduleXOutput: x
-        };
-        const result = Module2.evaluate({
-            marketAnalysis: module1Output,
-            userDecision: 'long'
-        });
+    runner.test('meta.bias читается из trend.primaryTrend', () => {
+        const x = makeBullishAnalysis();
+        const result = Module2.evaluate({ marketAnalysis: x, userDecision: 'long' });
         return {
-            pass: !!result && typeof result.verdict === 'string',
-            info: `verdict=${result?.verdict}`
-        };
-    });
-
-    runner.test('Module 2 читает bias из AnalysisResult.summary.bias', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
-            marketAnalysis: x,
-            userDecision: 'long'
-        });
-        const biasInMeta = result?.meta?.bias === 'bullish';
-        return {
-            pass: biasInMeta,
+            pass: result?.meta?.bias === 'bullish',
             info: `meta.bias=${result?.meta?.bias}`
         };
     });
 
-    runner.test('Module 2 читает confidence из AnalysisResult', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
-            marketAnalysis: x,
-            userDecision: 'long'
-        });
-        const confInMeta = result?.meta?.confidence === 75;
+    runner.test('meta.confidence читается из confidence.percent', () => {
+        const x = makeBullishAnalysis();
+        const result = Module2.evaluate({ marketAnalysis: x, userDecision: 'long' });
         return {
-            pass: confInMeta,
+            pass: result?.meta?.confidence === 78,
             info: `meta.confidence=${result?.meta?.confidence}`
         };
     });
 
-    runner.test('Module 2 читает keySignals из AnalysisResult', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
-            marketAnalysis: x,
-            userDecision: 'long'
-        });
-        const signalsCount = result?.meta?.signalsCount;
+    runner.test('meta.marketContext читается из marketPhase.phase', () => {
+        const x = makeBullishAnalysis();
+        const result = Module2.evaluate({ marketAnalysis: x, userDecision: 'long' });
         return {
-            pass: signalsCount === 2,
-            info: `signalsCount=${signalsCount}`
+            pass: result?.meta?.marketContext === 'trending',
+            info: `meta.marketContext=${result?.meta?.marketContext}`
+        };
+    });
+
+    runner.test('meta.signalsCount считается из evidence.keySignals', () => {
+        const x = makeBullishAnalysis();
+        const result = Module2.evaluate({ marketAnalysis: x, userDecision: 'long' });
+        return {
+            pass: result?.meta?.signalsCount === 2,
+            info: `signalsCount=${result?.meta?.signalsCount}`
+        };
+    });
+
+    runner.test('context в explanation — тот же что marketContext', () => {
+        const x = makeBullishAnalysis();
+        const result = Module2.evaluate({ marketAnalysis: x, userDecision: 'long' });
+        return {
+            pass: result?.explanation?.contextSummary?.context === 'trending',
+            info: `contextSummary.context=${result?.explanation?.contextSummary?.context}`
         };
     });
 });
 
-runner.suite('SCORING: Module 2 корректно оценивает решения', () => {
-    runner.test('Long при bullish bias → correct или risky', () => {
-        const x = makeBullishAnalysisResult();
+// ------------------------------------------------------------
+// SUITE 3 — DECISION EVALUATION: Correct / Risky / Incorrect
+// ------------------------------------------------------------
+runner.suite('DECISION EVALUATION: оценка решений', () => {
+    runner.test('Correct Long: bullish + long + full evidence → correct', () => {
+        const x = makeBullishAnalysis();
         const result = Module2.evaluate({
             marketAnalysis: x,
-            userDecision: 'long'
+            userDecision: 'long',
+            userEvidence: ['high-volume', 'impulse']
         });
+        const pass = result.verdict === 'correct' && result.score >= 3;
+        return {
+            pass,
+            info: `verdict=${result.verdict}, score=${result.score}`
+        };
+    });
+
+    runner.test('Correct Short: bearish + short + full evidence → correct', () => {
+        const x = makeBearishAnalysis();
+        const result = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'short',
+            userEvidence: ['high-volume', 'impulse']
+        });
+        const pass = result.verdict === 'correct' && result.score >= 3;
+        return {
+            pass,
+            info: `verdict=${result.verdict}, score=${result.score}`
+        };
+    });
+
+    runner.test('Correct Wait: всегда risky или correct (нейтральное решение)', () => {
+        const x = makeBullishAnalysis();
+        const result = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'wait',
+            userEvidence: []
+        });
+        // Wait: baseRow=0 (neutral), confidenceRow=0, evidence=0 → score=0 → risky
         const pass = result.verdict === 'correct' || result.verdict === 'risky';
         return {
             pass,
@@ -496,11 +504,55 @@ runner.suite('SCORING: Module 2 корректно оценивает решен
         };
     });
 
-    runner.test('Short при bullish bias → risky или incorrect', () => {
-        const x = makeBullishAnalysisResult();
+    runner.test('Incorrect Long: bearish bias + long → incorrect', () => {
+        const x = makeBearishAnalysis();
         const result = Module2.evaluate({
             marketAnalysis: x,
-            userDecision: 'short'
+            userDecision: 'long',
+            userEvidence: ['high-volume']
+        });
+        const pass = result.verdict === 'incorrect' && result.score < 0;
+        return {
+            pass,
+            info: `verdict=${result.verdict}, score=${result.score}`
+        };
+    });
+
+    runner.test('Incorrect Short: bullish bias + short → incorrect', () => {
+        const x = makeBullishAnalysis();
+        const result = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'short',
+            userEvidence: ['high-volume']
+        });
+        const pass = result.verdict === 'incorrect' && result.score < 0;
+        return {
+            pass,
+            info: `verdict=${result.verdict}, score=${result.score}`
+        };
+    });
+
+    runner.test('Incorrect Wait: требует специальной интерпретации (wait всегда ≥ risky)', () => {
+        const x = makeBullishAnalysis();
+        const result = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'wait',
+            userEvidence: []
+        });
+        // wait + bullish → score = 0 (neutral choice) → risky
+        const pass = result.verdict !== 'incorrect';
+        return {
+            pass,
+            info: `verdict=${result.verdict}, score=${result.score}`
+        };
+    });
+
+    runner.test('Neutral: нейтральный bias + long → risky (premature directional)', () => {
+        const x = makeNeutralAnalysis();
+        const result = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: ['high-volume']
         });
         const pass = result.verdict === 'risky' || result.verdict === 'incorrect';
         return {
@@ -509,252 +561,842 @@ runner.suite('SCORING: Module 2 корректно оценивает решен
         };
     });
 
-    runner.test('Short при bearish bias → correct или risky', () => {
-        const x = makeBearishAnalysisResult();
+    runner.test('Mixed Signals: long+bullish, но без evidence → risky', () => {
+        const x = makeBullishAnalysis();
         const result = Module2.evaluate({
             marketAnalysis: x,
-            userDecision: 'short'
+            userDecision: 'aggressive-long', // требует 2 required evidence
+            userEvidence: []
         });
-        const pass = result.verdict === 'correct' || result.verdict === 'risky';
+        // baseRow: +3 (directional match)
+        // confidenceRow: 0 (78 < 80)
+        // evidence: 2 misses, delta=-4
+        // score = 3 - 4 = -1 → incorrect
+        const pass = result.verdict === 'risky' || result.verdict === 'incorrect';
         return {
             pass,
             info: `verdict=${result.verdict}, score=${result.score}`
-        };
-    });
-
-    runner.test('Wait в любых условиях → correct или risky (нейтральная позиция)', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
-            marketAnalysis: x,
-            userDecision: 'wait'
-        });
-        // Wait: category=neutral, score=0 → verdict='risky' по дизайну
-        return {
-            pass: result.verdict === 'correct' || result.verdict === 'risky',
-            info: `verdict=${result.verdict}, score=${result.score}`
-        };
-    });
-
-    runner.test('Score long при bullish должен быть >= 0', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
-            marketAnalysis: x,
-            userDecision: 'long'
-        });
-        return {
-            pass: result.score >= 0,
-            info: `score=${result.score}`
-        };
-    });
-
-    runner.test('Score short при bullish должен быть отрицательным', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
-            marketAnalysis: x,
-            userDecision: 'short'
-        });
-        return {
-            pass: result.score < 0,
-            info: `score=${result.score}`
         };
     });
 });
 
-runner.suite('EVIDENCE: Module 2 учитывает userEvidence', () => {
-    runner.test('Без evidence — score ниже, чем с полным evidence', () => {
-        const x = makeBullishAnalysisResult();
-        // Для breakout-entry требуется evidence ['breakout']
-        const withoutEvidence = Module2.evaluate({
+// ------------------------------------------------------------
+// SUITE 4 — EXPLANATION
+// ------------------------------------------------------------
+runner.suite('EXPLANATION: объяснение строится на AnalysisResult', () => {
+    function evaluateWithDefault(overrides: any = {}) {
+        const x = makeBullishAnalysis(overrides);
+        return Module2.evaluate({
             marketAnalysis: x,
-            userDecision: 'breakout-entry',
-            userEvidence: []
+            userDecision: 'long',
+            userEvidence: ['high-volume']
         });
-        const withEvidence = Module2.evaluate({
-            marketAnalysis: x,
-            userDecision: 'breakout-entry',
-            userEvidence: ['breakout', 'high-volume']
-        });
-        const pass = withEvidence.score > withoutEvidence.score;
+    }
+
+    runner.test('explanation.match содержит decision.label / shortLabel', () => {
+        const r = evaluateWithDefault();
+        const pass =
+            typeof r.explanation?.match === 'string' &&
+            r.explanation.match.length > 5;
         return {
             pass,
-            info: `withoutEvidence.score=${withoutEvidence.score}, withEvidence.score=${withEvidence.score}`
+            info: `match="${r.explanation?.match?.substring(0, 80)}..."`
         };
     });
 
-    runner.test('evidenceAnalysis.matches содержит подтверждённые', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
+    runner.test('explanation.risk — текстовое описание риска', () => {
+        const r = evaluateWithDefault();
+        const pass =
+            typeof r.explanation?.risk === 'string' &&
+            r.explanation.risk.length > 5;
+        return {
+            pass,
+            info: `risk="${r.explanation?.risk}"`
+        };
+    });
+
+    runner.test('explanation.contextSummary.bias = bias от Module X', () => {
+        const r = evaluateWithDefault();
+        return {
+            pass: r.explanation?.contextSummary?.bias === 'bullish',
+            info: `contextSummary.bias=${r.explanation?.contextSummary?.bias}`
+        };
+    });
+
+    runner.test('explanation.contextSummary.confidence отражает confidence.percent', () => {
+        const r = evaluateWithDefault({ confidence: { percent: 85, grade: 'A' } });
+        return {
+            pass: r.explanation?.contextSummary?.confidence === 85,
+            info: `contextSummary.confidence=${r.explanation?.contextSummary?.confidence}`
+        };
+    });
+
+    runner.test('explanation.contextSummary.continuationPct = вероятность продолжения', () => {
+        const r = evaluateWithDefault({ probabilities: { continuation: 0.75, reversal: 0.25 } });
+        return {
+            pass: r.explanation?.contextSummary?.continuationPct === 75,
+            info: `continuationPct=${r.explanation?.contextSummary?.continuationPct}`
+        };
+    });
+
+    runner.test('explanation.evidence — массив строк', () => {
+        const r = evaluateWithDefault();
+        const pass = Array.isArray(r.explanation?.evidence) &&
+                     r.explanation.evidence.every((e: any) => typeof e === 'string');
+        return {
+            pass,
+            info: `evidence.length=${r.explanation?.evidence?.length}`
+        };
+    });
+
+    runner.test('explanation.evidenceMisses содержит описания пропущенных required', () => {
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
+            userDecision: 'breakout-entry',
+            userEvidence: []
+        });
+        // breakout-entry требует ['breakout'] → должен быть miss
+        const misses = r.explanation?.evidenceMisses || [];
+        const pass = Array.isArray(misses) && misses.some((m: string) => m.includes('breakout'));
+        return {
+            pass,
+            info: `evidenceMisses=${JSON.stringify(misses)}`
+        };
+    });
+
+    runner.test('explanation.betterAlternative = null при verdict=correct', () => {
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
+            userDecision: 'long',
+            userEvidence: ['high-volume', 'impulse']
+        });
+        return {
+            pass: r.verdict === 'correct' && r.explanation?.betterAlternative === null,
+            info: `betterAlternative=${r.explanation?.betterAlternative}`
+        };
+    });
+
+    runner.test('explanation.betterAlternative присутствует при verdict=incorrect', () => {
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
+            userDecision: 'short',
+            userEvidence: []
+        });
+        const alt = r.explanation?.betterAlternative;
+        const pass = alt && alt.id === 'long';
+        return {
+            pass: Boolean(pass),
+            info: `betterAlternative.id=${alt?.id}`
+        };
+    });
+});
+
+// ------------------------------------------------------------
+// SUITE 5 — EVIDENCE
+// ------------------------------------------------------------
+runner.suite('EVIDENCE: Module 2 учитывает userEvidence', () => {
+    runner.test('Без evidence score ниже, чем с полным evidence', () => {
+        const x = makeBullishAnalysis();
+        const r1 = Module2.evaluate({
             marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: []
+        });
+        const r2 = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: ['high-volume', 'impulse']
+        });
+        return {
+            pass: r2.score > r1.score,
+            info: `without=${r1.score}, with=${r2.score}`
+        };
+    });
+
+    runner.test('evidenceAnalysis.matches содержит подтверждённые required', () => {
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
             userDecision: 'breakout-entry',
             userEvidence: ['breakout']
         });
-        const hasMatch = Array.isArray(result.evidenceAnalysis?.matches)
-                      && result.evidenceAnalysis.matches.includes('breakout');
+        const matches = r.evidenceAnalysis?.matches || [];
         return {
-            pass: hasMatch,
-            info: `matches=${JSON.stringify(result.evidenceAnalysis?.matches)}`
+            pass: matches.includes('breakout'),
+            info: `matches=${JSON.stringify(matches)}`
         };
     });
 
     runner.test('evidenceAnalysis.misses содержит недостающие required', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
-            marketAnalysis: x,
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
             userDecision: 'breakout-entry',
             userEvidence: []
         });
-        // Для breakout-entry из сценария: confirmations = ['breakout']
-        // decision.requiredEvidence = ['breakout'] — должен попасть в misses
-        const hasMiss = Array.isArray(result.evidenceAnalysis?.misses)
-                     && result.evidenceAnalysis.misses.includes('breakout');
+        const misses = r.evidenceAnalysis?.misses || [];
         return {
-            pass: hasMiss,
-            info: `misses=${JSON.stringify(result.evidenceAnalysis?.misses)}`
+            pass: misses.includes('breakout'),
+            info: `misses=${JSON.stringify(misses)}`
+        };
+    });
+
+    runner.test('aggressive-long без 2 evidence → низкий score', () => {
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
+            userDecision: 'aggressive-long',
+            userEvidence: []
+        });
+        // baseRow: +3, evidence: 2 misses, delta=-4 → score=-1
+        const pass = r.score < 0;
+        return {
+            pass,
+            info: `score=${r.score}`
+        };
+    });
+
+    runner.test('aggressive-long с полным evidence → correct', () => {
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
+            userDecision: 'aggressive-long',
+            userEvidence: ['impulse', 'high-volume']
+        });
+        // baseRow: +3, evidence: matches=2 → delta=0, recommended=[] → delta=0
+        // score = +3 → correct
+        return {
+            pass: r.verdict === 'correct',
+            info: `verdict=${r.verdict}, score=${r.score}`
+        };
+    });
+
+    runner.test('recommendedEvidence: попадания дают бонус', () => {
+        const x = makeBullishAnalysis();
+        const r1 = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: ['high-volume']
+        });
+        const r2 = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: ['high-volume', 'impulse']
+        });
+        // Для long recommended = ['impulse'], 1 попадание → +2
+        return {
+            pass: r2.score > r1.score,
+            info: `without_impulse=${r1.score}, with_impulse=${r2.score}`
         };
     });
 });
 
-runner.suite('BETTER ALTERNATIVE: Module 2 подбирает из scenarios Module X', () => {
-    runner.test('Short при bullish → betterAlternative есть из scenarios', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
-            marketAnalysis: x,
+// ------------------------------------------------------------
+// SUITE 6 — BETTER ALTERNATIVE
+// ------------------------------------------------------------
+runner.suite('BETTER ALTERNATIVE: подбор из scenarios Module X', () => {
+    runner.test('Short при bullish → betterAlternative есть', () => {
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
             userDecision: 'short',
             userEvidence: []
         });
-        const hasAlternative = result.explanation?.betterAlternative !== null
-                            && result.explanation?.betterAlternative !== undefined;
+        const pass = r.explanation?.betterAlternative != null;
         return {
-            pass: hasAlternative,
-            info: hasAlternative
-                ? `betterAlternative.id=${result.explanation.betterAlternative.id}`
-                : 'betterAlternative=отсутствует'
-        };
-    });
-
-    runner.test('betterAlternative берётся из AnalysisResult.scenarios', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
-            marketAnalysis: x,
-            userDecision: 'short',
-            userEvidence: []
-        });
-        const alt = result.explanation?.betterAlternative;
-        const fromScenarios = alt && (alt.id === 'long' || alt.id === 'breakout-entry' || alt.id === 'aggressive-long');
-        return {
-            pass: Boolean(fromScenarios),
-            info: `alt.id=${alt?.id}`
+            pass,
+            info: pass ? `id=${r.explanation.betterAlternative.id}` : 'отсутствует'
         };
     });
 
     runner.test('betterAlternative исключает wait/no-trade', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
-            marketAnalysis: x,
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
             userDecision: 'short',
             userEvidence: []
         });
-        const alt = result.explanation?.betterAlternative;
-        const isNotWait = alt && alt.id !== 'wait' && alt.id !== 'no-trade';
+        const alt = r.explanation?.betterAlternative;
+        const pass = alt && alt.id !== 'wait' && alt.id !== 'no-trade';
         return {
-            pass: Boolean(isNotWait),
+            pass,
             info: `alt.id=${alt?.id}`
         };
     });
 
     runner.test('betterAlternative при bullish → long direction', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
+            userDecision: 'short',
+            userEvidence: []
+        });
+        const alt = r.explanation?.betterAlternative;
+        return {
+            pass: alt?.direction === 'long',
+            info: `alt.direction=${alt?.direction}`
+        };
+    });
+
+    runner.test('betterAlternative при bearish → short direction', () => {
+        const r = Module2.evaluate({
+            marketAnalysis: makeBearishAnalysis(),
+            userDecision: 'long',
+            userEvidence: []
+        });
+        const alt = r.explanation?.betterAlternative;
+        return {
+            pass: alt?.direction === 'short',
+            info: `alt.direction=${alt?.direction}`
+        };
+    });
+
+    runner.test('betterAlternative исключает текущее решение', () => {
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
+            userDecision: 'short',
+            userEvidence: []
+        });
+        const alt = r.explanation?.betterAlternative;
+        return {
+            pass: alt && alt.id !== 'short',
+            info: `alt.id=${alt?.id}`
+        };
+    });
+
+    runner.test('betterAlternative: scenarios пустые → null', () => {
+        const x = makeBullishAnalysis({ scenarios: [] });
+        const r = Module2.evaluate({
             marketAnalysis: x,
             userDecision: 'short',
             userEvidence: []
         });
-        const alt = result.explanation?.betterAlternative;
-        const isLong = alt && alt.direction === 'long';
         return {
-            pass: Boolean(isLong),
-            info: `alt.direction=${alt?.direction}`
+            pass: r.explanation?.betterAlternative === null,
+            info: `betterAlternative=${r.explanation?.betterAlternative}`
         };
     });
 });
 
-runner.suite('SIGNALS: Module 2 реагирует на signals от Module X', () => {
-    runner.test('Signal uptrend_structure улучшает long', () => {
-        const xWithSignal = makeBullishAnalysisResult();
-        xWithSignal.summary.keySignals = ['uptrend_structure'];
-
-        const xWithoutSignal = makeBullishAnalysisResult();
-        xWithoutSignal.summary.keySignals = [];
-
-        const r1 = Module2.evaluate({ marketAnalysis: xWithSignal, userDecision: 'long' });
-        const r2 = Module2.evaluate({ marketAnalysis: xWithoutSignal, userDecision: 'long' });
-
-        const pass = r1.score > r2.score;
-        return {
-            pass,
-            info: `with_signal=${r1.score}, without_signal=${r2.score}`
-        };
-    });
-
-    runner.test('Signal strong_bullish_momentum улучшает long', () => {
-        const xWithSignal = makeBullishAnalysisResult();
-        xWithSignal.summary.keySignals = ['strong_bullish_momentum'];
-
-        const xWithoutSignal = makeBullishAnalysisResult();
-        xWithoutSignal.summary.keySignals = [];
-
-        const r1 = Module2.evaluate({ marketAnalysis: xWithSignal, userDecision: 'long' });
-        const r2 = Module2.evaluate({ marketAnalysis: xWithoutSignal, userDecision: 'long' });
-
-        const pass = r1.score > r2.score;
-        return {
-            pass,
-            info: `with_signal=${r1.score}, without_signal=${r2.score}`
-        };
-    });
-
-    runner.test('Signal low_volume ухудшает long', () => {
-        const xWithSignal = makeBullishAnalysisResult();
-        xWithSignal.summary.keySignals = ['low_volume'];
-
-        const xWithoutSignal = makeBullishAnalysisResult();
-        xWithoutSignal.summary.keySignals = [];
-
-        const r1 = Module2.evaluate({ marketAnalysis: xWithSignal, userDecision: 'long' });
-        const r2 = Module2.evaluate({ marketAnalysis: xWithoutSignal, userDecision: 'long' });
-
-        const pass = r1.score < r2.score;
-        return {
-            pass,
-            info: `with_signal=${r1.score}, without_signal=${r2.score}`
-        };
-    });
-});
-
-runner.suite('CONTEXT PROPAGATION: Module 2 пробрасывает контекст Module X', () => {
-    runner.test('explanation.contextSummary.bias = bias от Module X', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
+// ------------------------------------------------------------
+// SUITE 7 — CONFIDENCE & PROBABILITIES
+// ------------------------------------------------------------
+runner.suite('CONFIDENCE & PROBABILITIES: влияние на скоринг', () => {
+    runner.test('confidence >= 80 → модификатор +1', () => {
+        const x = makeBullishAnalysis({ confidence: { percent: 85, grade: 'A' } });
+        const r = Module2.evaluate({
             marketAnalysis: x,
-            userDecision: 'long'
+            userDecision: 'long',
+            userEvidence: ['high-volume', 'impulse']
+        });
+        // baseRow: +3, confidence: +1, evidence: 0 (matches) + 2 (rec hit) = +2
+        // score = 3 + 1 + 2 = 6 → correct
+        return {
+            pass: r.score >= 6 && r.verdict === 'correct',
+            info: `score=${r.score}, verdict=${r.verdict}`
+        };
+    });
+
+    runner.test('confidence < 50 → модификатор -1', () => {
+        const x = makeBullishAnalysis({ confidence: { percent: 30, grade: 'F' } });
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: ['high-volume', 'impulse']
+        });
+        // baseRow: +3, confidence: -1, evidence: +2 (rec hit)
+        // score = 3 - 1 + 2 = 4 → correct
+        return {
+            pass: r.score === 4 && r.verdict === 'correct',
+            info: `score=${r.score}, verdict=${r.verdict}`
+        };
+    });
+
+    runner.test('confidence = null → модификатор 0', () => {
+        const x = makeBullishAnalysis({ confidence: null });
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: ['high-volume', 'impulse']
+        });
+        // baseRow: +3, confidence: 0, evidence: +2
+        // score = 5 → correct
+        return {
+            pass: r.score === 5 && r.verdict === 'correct',
+            info: `score=${r.score}, verdict=${r.verdict}`
+        };
+    });
+
+    runner.test('probabilities.continuation попадает в contextSummary', () => {
+        const x = makeBullishAnalysis({ probabilities: { continuation: 0.85, reversal: 0.15 } });
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: ['high-volume']
         });
         return {
-            pass: result.explanation?.contextSummary?.bias === 'bullish',
-            info: `contextSummary.bias=${result.explanation?.contextSummary?.bias}`
+            pass: r.explanation?.contextSummary?.continuationPct === 85,
+            info: `continuationPct=${r.explanation?.contextSummary?.continuationPct}`
         };
     });
 
-    runner.test('explanation.contextSummary.continuationPct = probabilities.continuation', () => {
-        const x = makeBullishAnalysisResult();
-        const result = Module2.evaluate({
+    runner.test('probabilities.continuation как число > 1 → не пересчитывается', () => {
+        const x = makeBullishAnalysis({ probabilities: { continuation: 75, reversal: 25 } });
+        const r = Module2.evaluate({
             marketAnalysis: x,
-            userDecision: 'long'
+            userDecision: 'long',
+            userEvidence: ['high-volume']
         });
         return {
-            pass: result.explanation?.contextSummary?.continuationPct === 70,
-            info: `continuationPct=${result.explanation?.contextSummary?.continuationPct}`
+            pass: r.explanation?.contextSummary?.continuationPct === 75,
+            info: `continuationPct=${r.explanation?.contextSummary?.continuationPct}`
         };
     });
 });
+
+// ------------------------------------------------------------
+// SUITE 8 — EDGE CASES
+// ------------------------------------------------------------
+runner.suite('EDGE CASES: нестандартные входы', () => {
+    runner.test('marketAnalysis = {} (пустой объект) — работает с дефолтами', () => {
+        const result = Module2.evaluate({
+            marketAnalysis: {},
+            userDecision: 'wait',
+            userEvidence: []
+        });
+        // Все поля AnalysisResult опциональные, всё должно работать
+        // wait + neutral bias → score=0 → risky
+        const pass = result?.verdict === 'risky';
+        return {
+            pass,
+            info: `verdict=${result?.verdict}, bias=${result?.meta?.bias}`
+        };
+    });
+
+    runner.test('scenarios пустые → betterAlternative = null', () => {
+        const x = makeBullishAnalysis({ scenarios: [] });
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'short',
+            userEvidence: []
+        });
+        return {
+            pass: r.explanation?.betterAlternative === null,
+            info: `betterAlternative=${r.explanation?.betterAlternative}`
+        };
+    });
+
+    runner.test('scenarios undefined → betterAlternative = null', () => {
+        const x = makeBullishAnalysis({ scenarios: undefined });
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'short',
+            userEvidence: []
+        });
+        return {
+            pass: r.explanation?.betterAlternative === null,
+            info: `betterAlternative=${r.explanation?.betterAlternative}`
+        };
+    });
+
+    runner.test('confidence = 0 → модификатор -1 (low)', () => {
+        const x = makeBullishAnalysis({ confidence: { percent: 0, grade: 'F' } });
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'wait',
+            userEvidence: []
+        });
+        // _scoreByConfidence(0) → level='low', delta=-1
+        const internal = Module2._internal;
+        const scoreByConf = internal._scoreByConfidence(0);
+        return {
+            pass: scoreByConf.delta === -1 && scoreByConf.level === 'low',
+            info: `delta=${scoreByConf.delta}, level=${scoreByConf.level}`
+        };
+    });
+
+    runner.test('confidence = null → модификатор 0 (unknown)', () => {
+        const scoreByConf = Module2._internal._scoreByConfidence(null);
+        return {
+            pass: scoreByConf.delta === 0 && scoreByConf.level === 'unknown',
+            info: `delta=${scoreByConf.delta}, level=${scoreByConf.level}`
+        };
+    });
+
+    runner.test('некорректный userDecision (нет в каталоге) — fallback объект', () => {
+        const x = makeBullishAnalysis();
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'totally-unknown-decision',
+            userEvidence: []
+        });
+        // decision.id = 'totally-unknown-decision'
+        // category fallback = 'directional', direction = 'long'
+        // baseRow с bullish + directional + long → +3
+        const pass = r.decision?.id === 'totally-unknown-decision' &&
+                     r.verdict !== undefined;
+        return {
+            pass,
+            info: `decision.id=${r.decision?.id}, verdict=${r.verdict}`
+        };
+    });
+
+    runner.test('userEvidence = undefined — без падений (default [])', () => {
+        const x = makeBullishAnalysis();
+        try {
+            const r = Module2.evaluate({
+                marketAnalysis: x,
+                userDecision: 'long'
+                // userEvidence не передан
+            });
+            const pass = r && typeof r.verdict === 'string';
+            return {
+                pass,
+                info: `verdict=${r?.verdict}`
+            };
+        } catch (e: any) {
+            return { pass: false, info: `THROW: ${e.message}` };
+        }
+    });
+
+    runner.test('userEvidence = null — без падений', () => {
+        const x = makeBullishAnalysis();
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: null
+        });
+        return {
+            pass: typeof r.verdict === 'string',
+            info: `verdict=${r.verdict}`
+        };
+    });
+
+    runner.test('decisions с пустым requiredEvidence — без штрафа', () => {
+        const x = makeBullishAnalysis();
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'scale-in', // requiredEvidence: []
+            userEvidence: []
+        });
+        // scale-in: required=[], recommended=['hold'] (0 hits)
+        // baseRow: +1 (risk-managed with trend), confidence: 0, evidence: 0
+        // score = 1 → risky
+        return {
+            pass: r.verdict === 'risky' || r.verdict === 'correct',
+            info: `verdict=${r.verdict}, score=${r.score}`
+        };
+    });
+
+    runner.test('trend.primaryTrend=null → fallback на marketStructure.type', () => {
+        const x = makeBullishAnalysis({ trend: null, marketStructure: { type: 'downtrend', higherHighs: [], higherLows: [], lowerHighs: [{}], lowerLows: [{}], swings: [], structureShift: null, summary: '' } });
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: ['high-volume']
+        });
+        // bias = 'bearish' (from structure.type=downtrend)
+        // baseRow: -3, evidence: +2
+        // score = -1 → incorrect
+        return {
+            pass: r.meta.bias === 'bearish' && r.verdict === 'incorrect',
+            info: `bias=${r.meta.bias}, verdict=${r.verdict}`
+        };
+    });
+
+    runner.test('keySignals нестандартного формата (object вместо array) — без падений', () => {
+        const x = makeBullishAnalysis({ evidence: { keySignals: { a: 1 } } }); // не массив
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: ['high-volume']
+        });
+        return {
+            pass: typeof r.verdict === 'string' && r.meta.signalsCount === 0,
+            info: `verdict=${r.verdict}, signalsCount=${r.meta.signalsCount}`
+        };
+    });
+
+    runner.test('confidence как число (не объект) — работает', () => {
+        const x = makeBullishAnalysis({ confidence: 70 });
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'wait',
+            userEvidence: []
+        });
+        return {
+            pass: r.meta.confidence === 70,
+            info: `confidence=${r.meta.confidence}`
+        };
+    });
+});
+
+// ------------------------------------------------------------
+// SUITE 9 — АРХИТЕКТУРНЫЕ ГАРАНТИИ
+// ------------------------------------------------------------
+runner.suite('АРХИТЕКТУРНЫЕ ГАРАНТИИ: чистота архитектуры', () => {
+    runner.test('Module 2 не импортирует анализаторы (нет require/import analyzers)', () => {
+        const src = fs.readFileSync('/workspace/payd-trading-lab/Module 2/DecisionEvaluationEngine.js', 'utf8');
+        const violations = [
+            /require\s*\(\s*['"][^'"]*analyz/i,
+            /from\s+['"][^'"]*analyz/i,
+            /import\s+[^;]*analyz/i
+        ];
+        const found = violations.filter(p => p.test(src));
+        return {
+            pass: found.length === 0,
+            info: found.length === 0
+                ? 'Анализаторы не импортируются ✓'
+                : `Найдены импорты: ${found.length}`
+        };
+    });
+
+    runner.test('Module 2 использует только публичные поля AnalysisResult', () => {
+        const x = makeBullishAnalysis({
+            // Создаём "секретные" внутренние поля, которых не должно быть в публичном API
+            _internal_secret_data: { score: 999 },
+            __private_method_result: { hidden: true }
+        });
+        const r = Module2.evaluate({
+            marketAnalysis: x,
+            userDecision: 'long',
+            userEvidence: ['high-volume']
+        });
+        // Module 2 НЕ должен использовать _internal_secret_data
+        // Результат должен основываться на публичных полях
+        const pass = r.score < 1000;
+        return {
+            pass,
+            info: `score=${r.score} (не использует приватные поля)`
+        };
+    });
+
+    runner.test('Module 2 полностью тестируется через моки AnalysisResult', () => {
+        // Без реального coreAnalysisEngine — только через фабрику
+        const x = makeBullishAnalysis();
+        try {
+            const r = Module2.evaluate({
+                marketAnalysis: x,
+                userDecision: 'long',
+                userEvidence: ['high-volume']
+            });
+            const pass = Boolean(
+                r &&
+                typeof r.verdict === 'string' &&
+                typeof r.score === 'number' &&
+                r.decision &&
+                r.explanation
+            );
+            return {
+                pass,
+                info: `verdict=${r?.verdict}, score=${r?.score}, ready=${pass ? 'true' : 'false'}`
+            };
+        } catch (e: any) {
+            return { pass: false, info: `THROW: ${e.message}` };
+        }
+    });
+
+    runner.test('Module 2 не вызывает внешних API/Network/Time (кроме ISO-даты)', () => {
+        const src = fs.readFileSync('/workspace/payd-trading-lab/Module 2/DecisionEvaluationEngine.js', 'utf8');
+        const forbiddenAPIs = [
+            /fetch\s*\(/,
+            /XMLHttpRequest/,
+            /axios/,
+            /\.getJson\s*\(/,
+            /require\s*\(\s*['"]fs['"]/,
+            /require\s*\(\s*['"]http['"]/
+        ];
+        const violations = forbiddenAPIs.filter(p => p.test(src));
+        return {
+            pass: violations.length === 0,
+            info: violations.length === 0
+                ? 'Нет внешних вызовов ✓'
+                : `Найдено: ${violations.length}`
+        };
+    });
+
+    runner.test('explanation.decision ссылается на decision.label', () => {
+        const r = Module2.evaluate({
+            marketAnalysis: makeBullishAnalysis(),
+            userDecision: 'long',
+            userEvidence: ['high-volume']
+        });
+        return {
+            pass: r.explanation?.decision === r.decision?.label,
+            info: `exp.decision="${r.explanation?.decision}", decision.label="${r.decision?.label}"`
+        };
+    });
+
+    runner.test('Module 2 может работать без DecisionOptionsCatalog (fallback)', () => {
+        const original = ctx.DecisionOptionsCatalog;
+        ctx.DecisionOptionsCatalog = undefined;
+        try {
+            const r = Module2.evaluate({
+                marketAnalysis: makeBullishAnalysis(),
+                userDecision: 'long',
+                userEvidence: ['high-volume']
+            });
+            const pass = r && typeof r.verdict === 'string';
+            return {
+                pass,
+                info: pass ? `verdict=${r.verdict}` : 'не работает без каталога'
+            };
+        } finally {
+            ctx.DecisionOptionsCatalog = original;
+        }
+    });
+});
+
+// ------------------------------------------------------------
+// SUITE 10 — INTERNAL HELPERS
+// ------------------------------------------------------------
+runner.suite('INTERNAL HELPERS: прямое тестирование приватных функций', () => {
+    runner.test('_readBias: bullish trend → bullish', () => {
+        const bias = Module2._internal._readBias({ trend: { primaryTrend: 'strong_bull' } });
+        return { pass: bias === 'bullish', info: `bias=${bias}` };
+    });
+
+    runner.test('_readBias: bearish trend → bearish', () => {
+        const bias = Module2._internal._readBias({ trend: { primaryTrend: 'strong_bear' } });
+        return { pass: bias === 'bearish', info: `bias=${bias}` };
+    });
+
+    runner.test('_readBias: fallback на structure.type=uptrend', () => {
+        const bias = Module2._internal._readBias({
+            trend: null,
+            marketStructure: { type: 'uptrend' }
+        });
+        return { pass: bias === 'bullish', info: `bias=${bias}` };
+    });
+
+    runner.test('_readBias: всё null → neutral', () => {
+        const bias = Module2._internal._readBias({});
+        return { pass: bias === 'neutral', info: `bias=${bias}` };
+    });
+
+    runner.test('_readConfidence: confidence.percent = 78 → 78', () => {
+        const conf = Module2._internal._readConfidence({ confidence: { percent: 78 } });
+        return { pass: conf === 78, info: `confidence=${conf}` };
+    });
+
+    runner.test('_readConfidence: confidence = null → null', () => {
+        const conf = Module2._internal._readConfidence({ confidence: null });
+        return { pass: conf === null, info: `confidence=${conf}` };
+    });
+
+    runner.test('_readContinuationPct: continuation=0.7 → 70', () => {
+        const pct = Module2._internal._readContinuationPct({ probabilities: { continuation: 0.7 } });
+        return { pass: pct === 70, info: `continuationPct=${pct}` };
+    });
+
+    runner.test('_readContinuationPct: continuation уже 80 (>1) → 80', () => {
+        const pct = Module2._internal._readContinuationPct({ probabilities: { continuation: 80 } });
+        return { pass: pct === 80, info: `continuationPct=${pct}` };
+    });
+
+    runner.test('_readSignals: evidence.keySignals корректно извлекаются', () => {
+        const sigs = Module2._internal._readSignals({ evidence: { keySignals: ['a', 'b'] } });
+        const pass = Array.isArray(sigs) && sigs.length === 2 && sigs[0] === 'a';
+        return { pass, info: `signals=${JSON.stringify(sigs)}` };
+    });
+
+    runner.test('_readSignals: пусто если evidence нет', () => {
+        const sigs = Module2._internal._readSignals({});
+        return { pass: JSON.stringify(sigs) === '[]', info: `signals=${JSON.stringify(sigs)}` };
+    });
+
+    runner.test('_scoreByBiasMatch: directional+long+bias=bullish → +3 direction_match', () => {
+        const result = Module2._internal._scoreByBiasMatch(
+            { id: 'x', category: 'directional', direction: 'long' },
+            'bullish'
+        );
+        return { pass: result.score === 3 && result.base === 'direction_match', info: JSON.stringify(result) };
+    });
+
+    runner.test('_scoreByBiasMatch: directional+short+bias=bullish → -3 against_trend', () => {
+        const result = Module2._internal._scoreByBiasMatch(
+            { id: 'x', category: 'directional', direction: 'short' },
+            'bullish'
+        );
+        return { pass: result.score === -3 && result.base === 'against_trend', info: JSON.stringify(result) };
+    });
+
+    runner.test('_scoreByBiasMatch: neutral category → score=0', () => {
+        const result = Module2._internal._scoreByBiasMatch(
+            { id: 'wait', category: 'neutral', direction: 'neutral' },
+            'bullish'
+        );
+        return { pass: result.score === 0, info: JSON.stringify(result) };
+    });
+
+    runner.test('_scoreByConfidence: 80 → +1 high', () => {
+        const r = Module2._internal._scoreByConfidence(80);
+        return { pass: r.delta === 1 && r.level === 'high', info: JSON.stringify(r) };
+    });
+
+    runner.test('_scoreByConfidence: 49 → -1 low', () => {
+        const r = Module2._internal._scoreByConfidence(49);
+        return { pass: r.delta === -1 && r.level === 'low', info: JSON.stringify(r) };
+    });
+
+    runner.test('_scoreByEvidence: пусто evidence + required → delta=-2', () => {
+        const r = Module2._internal._scoreByEvidence(
+            { requiredEvidence: ['breakout'], recommendedEvidence: [] },
+            []
+        );
+        return {
+            pass: r.delta === -2 && r.misses.includes('breakout'),
+            info: JSON.stringify(r)
+        };
+    });
+
+    runner.test('_scoreByEvidence: full required → 0 misses', () => {
+        const r = Module2._internal._scoreByEvidence(
+            { requiredEvidence: ['breakout'], recommendedEvidence: [] },
+            ['breakout']
+        );
+        return {
+            pass: r.delta === 0 && r.matches.includes('breakout'),
+            info: JSON.stringify(r)
+        };
+    });
+
+    runner.test('_scoreByEvidence: recommended попадания → бонус', () => {
+        const r = Module2._internal._scoreByEvidence(
+            { requiredEvidence: [], recommendedEvidence: ['a', 'b'] },
+            ['a', 'b']
+        );
+        return {
+            pass: r.delta === 2,
+            info: `delta=${r.delta}, hits=${r.recommendedHits}`
+        };
+    });
+
+    runner.test('_findBetterAlternative: пустые scenarios → null', () => {
+        const alt = Module2._internal._findBetterAlternative('short', 'bullish', []);
+        return { pass: alt === null, info: `alt=${alt}` };
+    });
+
+    runner.test('_findBetterAlternative: только wait → null', () => {
+        const alt = Module2._internal._findBetterAlternative('short', 'bullish', [
+            { id: 'wait', direction: 'neutral' }
+        ]);
+        return { pass: alt === null, info: `alt=${alt}` };
+    });
+
+    runner.test('_findBetterAlternative: фильтрует по bias direction', () => {
+        const scenarios = [
+            { id: 'wrong-direction', direction: 'short', priority: 0, probability: 0.5 },
+            { id: 'right-direction', direction: 'long', priority: 5, probability: 0.7 }
+        ];
+        const alt = Module2._internal._findBetterAlternative('short', 'bullish', scenarios);
+        const pass = alt && alt.id === 'right-direction';
+        return {
+            pass,
+            info: `alt=${alt?.id} (отфильтрован по direction=long)`
+        };
+    });
+});
+
+// ============================================================
+// 4. ЗАПУСК
+// ============================================================
 
 runner.report();
+
+// Exit code для CI
+const failed = runner.results.filter(r => !r.passed).length;
+process.exit(failed === 0 ? 0 : 1);
