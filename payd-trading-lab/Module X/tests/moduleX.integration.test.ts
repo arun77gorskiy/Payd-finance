@@ -92,7 +92,7 @@ const fs = require('fs');
 
 const outDir = '/tmp/module_x_test_build';
 try { childProcess.execSync(`rm -rf ${outDir}`); } catch (e: any) { console.error(e.message); }
-childProcess.execSync(`npx tsc --outDir ${outDir} --project tsconfig.test.json`, { stdio: 'pipe' });
+childProcess.execSync(`npx tsc --outDir ${outDir} --project ../tsconfig.test.json`, { stdio: 'pipe' });
 
 const loadModule = (path: string): any => {
     const fullPath = `${outDir}/Module X/analyzers/${path}`;
