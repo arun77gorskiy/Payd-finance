@@ -152,13 +152,15 @@ interface MarketStructureResult {
     }
 
     // ---------- 3) trend type ----------
-    // Комбинированная логика: HH/HL/LH/LL + прямой анализ цен + ATR
+    // Комбинированная логика: HH/HL/LH/LL + прямой анализ цен + ATR-нормализация
+    // + линейная регрессия (наклон)
     function detectTrendType(
         swings: MSASwing[],
         currentAtr: number,
         avgAtr: number,
         candles: MSACandle[]
     ): MarketStructureResult['type'] {
+
         // 1) Пробуем определить по свингам (классический ICT/SMC подход)
         const lastFour: MSASwing[] = swings.slice(-4);
         if (lastFour.length >= 4) {
@@ -173,22 +175,40 @@ interface MarketStructureResult {
             if (lhCount >= 2 && llCount >= 2) return 'downtrend';
         }
 
-        // 2) FALLBACK: прямой анализ цен closes (для монотонных трендов без свингов).
-        //    В чистом аптренде не бывает локальных максимумов — все максимумы обновляются.
-        //    Сравниваем среднюю цену первой и второй половины.
-        if (candles && candles.length >= 10) {
+        // 2) Прямой анализ цен closes с ATR-нормализацией.
+        //    Если общий диапазон колебаний цен >> дрейф средней цены,
+        //    значит движение случайное, а не направленное → это range.
+        if (candles && candles.length >= 10 && avgAtr > 0) {
             const half = Math.floor(candles.length / 2);
             const firstHalf = candles.slice(0, half);
             const secondHalf = candles.slice(half);
             const avgFirst = firstHalf.reduce((s, c) => s + c.close, 0) / firstHalf.length;
             const avgSecond = secondHalf.reduce((s, c) => s + c.close, 0) / secondHalf.length;
-            const changePct = avgFirst > 0 ? ((avgSecond - avgFirst) / avgFirst) * 100 : 0;
+            const drift = avgSecond - avgFirst;
+            const avgPrice = (avgFirst + avgSecond) / 2;
+            const changePct = avgPrice > 0 ? (drift / avgPrice) * 100 : 0;
 
-            // Порог 3%: меньше 3% — это range/consolidation, не направленный тренд.
-            // (Случайный walk на 80 свечей легко даёт 1-2% дрейфа.)
-            const trendThreshold = 3.0;
-            if (changePct > trendThreshold) return 'uptrend';
-            if (changePct < -trendThreshold) return 'downtrend';
+            // Полный размах цен в % от средней цены
+            const highs = candles.map(c => c.high);
+            const lows = candles.map(c => c.low);
+            const maxH = Math.max(...highs);
+            const minL = Math.min(...lows);
+            const rangePct = avgPrice > 0 ? ((maxH - minL) / avgPrice) * 100 : 0;
+
+            // Дрейф, нормализованный к ATR: показывает, на сколько ATR
+            // среднее смещение превышает «шум».
+            // Если |drift| < 1.5 * avgAtr → дрейф соизмерим с шумом → range.
+            const driftInAtr = Math.abs(drift) / avgAtr;
+
+            // Решающее правило:
+            //   - Чёткий направленный тренд: дрейф значительно больше размаха колебаний
+            //     (>35% от размаха) И дрейф > 1.5 ATR И > 4% по средней.
+            //   - Во всех остальных случаях — range/consolidation.
+            const driftToRangeRatio = rangePct > 0 ? Math.abs(drift) / ((maxH - minL) || 1) : 0;
+            const trendThreshold = 4.0;
+
+            if (changePct > trendThreshold && driftInAtr > 1.5 && driftToRangeRatio > 0.35) return 'uptrend';
+            if (changePct < -trendThreshold && driftInAtr > 1.5 && driftToRangeRatio > 0.35) return 'downtrend';
         }
 
         // 3) Консолидация по ATR
@@ -313,7 +333,7 @@ interface MarketStructureResult {
     const marketStructureAnalyzer = {
         analyze: analyzeMarketStructure,
         analyzeMarketStructure: analyzeMarketStructure,
-        VERSION: '3.0.0'
+        VERSION: '3.0.1'
     };
 
     if (typeof global !== 'undefined') (global as any).marketStructureAnalyzer = marketStructureAnalyzer;

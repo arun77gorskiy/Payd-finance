@@ -7,11 +7,11 @@
     "skipLibCheck": true,
     "allowJs": true,
     "noEmitOnError": false,
-    "rootDir": ".",
+    "rootDir": "..",
     "types": ["node"]
   },
   "include": [
-    "public/js/core-analysis/analyzers/*.ts",
+    "analyzers/*.ts",
     "tests/*.ts"
   ]
 }

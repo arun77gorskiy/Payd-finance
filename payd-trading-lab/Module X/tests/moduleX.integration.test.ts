@@ -95,7 +95,7 @@ try { childProcess.execSync(`rm -rf ${outDir}`); } catch (e: any) { console.erro
 childProcess.execSync(`npx tsc --outDir ${outDir} --project tsconfig.test.json`, { stdio: 'pipe' });
 
 const loadModule = (path: string): any => {
-    const fullPath = `${outDir}/public/js/core-analysis/analyzers/${path}`;
+    const fullPath = `${outDir}/Module X/analyzers/${path}`;
     if (!fs.existsSync(fullPath)) throw new Error(`Файл не найден: ${fullPath}`);
     return require(fullPath);
 };

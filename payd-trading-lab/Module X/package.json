@@ -1,7 +1,7 @@
 {
   "name": "module-x-core-analysis",
-  "version": "3.0.0",
-  "description": "PAYD Trading Lab — Module X: изолированная подсистема рыночной аналитики",
+  "version": "1.0.0",
+  "description": "PAYD Trading Lab — Module X: изолированная подсистема рыночной аналитики. Production Ready.",
   "main": "index.ts",
   "types": "index.ts",
   "exports": {
