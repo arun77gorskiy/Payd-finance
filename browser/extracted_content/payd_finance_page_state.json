@@ -1,0 +1,31 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://6y4utih1dquf.space.minimax.io/?v=2
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://6y4utih1dquf.space.minimax.io/?v=2",
+    "summary": "Payd_Finance is an AI-powered SaaS platform that combines crypto trading analytics with educational tools. The page features real-time market data, AI-driven analysis, a Trading Lab with interactive learning modules, pricing plans, and various trading tools like Risk Calculator, Trade Journal, and Signal Generator.",
+    "key_points": [
+        "Current URL: https://6y4utih1dquf.space.minimax.io/?v=2 (no hash fragment present)",
+        "No elements with IDs starting with 'edu', 'trading-lab', or 'modules' were found on the page",
+        "The 'Modules' heading text appears in the page content describing 4 educational modules (Module 1-4)",
+        "An 'Education Modules' subsection exists under 'PAYD Trading Lab' section",
+        "window.scrollY cannot be determined from static page content (requires JavaScript execution)",
+        "Page features real-time crypto market data for BTC, ETH, SOL, DOGE, XRP",
+        "Trading Lab includes 200+ scenarios with Blind Chart, Risk Calculator, Trade Journal tools",
+        "Pricing: Basic ($29/mo) and Premium ($79/mo) plans available",
+        "Educational modules cover: Level significance, Entry confirmation, Market context, Risk management",
+        "AI Market Analysis shows confidence levels for BTC (78% BUY), ETH (62% HOLD), SOL (45% WAIT)"
+    ],
+    "relevant_links": [
+        "#features",
+        "#edu/trading-lab",
+        "#how-it-works",
+        "#benefits",
+        "#cta"
+    ],
+    "file_name": "payd_finance_page_state.json"
+}
+```

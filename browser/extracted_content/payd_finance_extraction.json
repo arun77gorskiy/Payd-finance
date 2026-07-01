@@ -1,0 +1,42 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://4ij5ha2h9y3o.space.minimax.io/index.html
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://4ij5ha2h9y3o.space.minimax.io/index.html",
+    "summary": "Payd_Finance is a SaaS platform that combines AI analytics, deep education, and trading logic for crypto trading. The page showcases features including AI Market Analysis (with real-time BTC, ETH, SOL data), PAYD Trading Lab (education modules, scenarios, courses), Smart Indicators (Market Structure, Volume Intelligence, Volatility Regime, Momentum Score, Signal Generator), and a Trading Dashboard for 500+ altcoins. Pricing tiers are Basic ($29/mo) and Premium ($79/mo). The page is in Russian and includes TradingView widget integration for BTC/USDT charts.",
+    "key_points": [
+        "The extraction goal asks for DOM element properties (classList and visibility state) for elements with IDs 'edu-content-trading-lab' and 'lab-cards-mode', which cannot be determined from static HTML content alone",
+        "Neither 'edu-content-trading-lab' nor 'lab-cards-mode' DOM element IDs are visible or referenced in the provided page content",
+        "Page offers AI-powered crypto trading analysis with 94.2% AI accuracy claim",
+        "PAYD Trading Lab includes 200+ trading scenarios, 5-step learning process, and tools like Blind Chart, Risk Calculator, Trade Journal, Market Replay, Decision Score",
+        "Four education modules covering levels, entry confirmation, market context, and risk management",
+        "Two pricing tiers: Basic ($29/month) and Premium ($79/month)",
+        "Integrates TradingView widget for live BTC/USDT perpetual chart",
+        "Content is primarily in Russian language"
+    ],
+    "relevant_links": [
+        "#features",
+        "#edu/trading-lab",
+        "#how-it-works",
+        "#benefits",
+        "#cta"
+    ],
+    "dom_elements_requested": {
+        "edu-content-trading-lab": {
+            "status": "Not found in page content",
+            "classList": "Cannot be determined - element not present in static HTML extraction",
+            "visibility": "Cannot be determined - requires runtime DOM inspection"
+        },
+        "lab-cards-mode": {
+            "status": "Not found in page content",
+            "classList": "Cannot be determined - element not present in static HTML extraction",
+            "visibility": "Cannot be determined - requires runtime DOM inspection"
+        },
+        "note": "Static page extraction cannot provide getElementById().classList.toString() values or runtime visibility states. These require JavaScript execution in a browser environment to access the live DOM."
+    },
+    "file_name": "payd_finance_extraction.json"
+}
+```

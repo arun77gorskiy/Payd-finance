@@ -1,0 +1,58 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://4ij5ha2h9y3o.space.minimax.io/index.html
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://4ij5ha2h9y3o.space.minimax.io/index.html",
+    "summary": "Payd_Finance is an AI-powered SaaS platform that combines cryptocurrency trading analytics, education, and trading logic into a unified ecosystem. The platform features real-time market data for Bitcoin, Ethereum, Solana, and other cryptocurrencies, AI-powered market regime analysis, and an educational component called 'PAYD Trading Lab'. The Trading Lab offers scenarios, courses, and tiered pricing plans, along with tools like Blind Chart, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The site targets novice traders, active traders, investors, and AI enthusiasts.",
+    "key_points": [
+        "The elements with IDs 'lab-cards-mode', 'lab-trainer-mode', and 'edu-content-trading-lab' were NOT FOUND in the rendered page content",
+        "No elements with class 'edu-content' were found in the rendered page content",
+        "Platform offers real-time market data for BTC, ETH, SOL, XRP, BNB, DOGE with AI analysis",
+        "PAYD Trading Lab features 5-stage learning process: Understand, Analyze, Decide, Launch Market, Get Review",
+        "Educational modules cover levels, entry confirmation, market context, and risk management",
+        "Pricing tiers: Basic ($29/month) and Premium ($79/month)",
+        "Core features include Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator",
+        "Target audience: Novices, active traders, investors, AI enthusiasts",
+        "Disclaimer states the platform is educational/analytical and does not provide financial advice",
+        "Includes TradingView widget integration for BTC/USDT perpetual contract chart"
+    ],
+    "relevant_links": [
+        "#features",
+        "#edu/trading-lab",
+        "#how-it-works",
+        "#benefits",
+        "#cta"
+    ],
+    "extraction_goal_results": {
+        "lab-cards-mode": {
+            "found": false,
+            "classes": null,
+            "visibility": null,
+            "note": "Element with ID 'lab-cards-mode' not found in page content"
+        },
+        "lab-trainer-mode": {
+            "found": false,
+            "classes": null,
+            "visibility": null,
+            "note": "Element with ID 'lab-trainer-mode' not found in page content"
+        },
+        "edu-content-trading-lab": {
+            "found": false,
+            "classes": null,
+            "visibility": null,
+            "note": "Element with ID 'edu-content-trading-lab' not found in page content"
+        },
+        "edu-content_elements": {
+            "found": false,
+            "count": 0,
+            "classes": null,
+            "visibility": null,
+            "note": "No elements with class 'edu-content' found in page content"
+        }
+    },
+    "file_name": "payd_finance_page_extraction.json"
+}
+```

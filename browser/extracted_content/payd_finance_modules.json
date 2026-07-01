@@ -1,0 +1,64 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://4ij5ha2h9y3o.space.minimax.io/index.html
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://4ij5ha2h9y3o.space.minimax.io/index.html",
+    "summary": "Payd_Finance is an AI-powered SaaS platform combining crypto trading analytics, education, and trading logic in one ecosystem. The page highlights institutional-grade market analysis, AI-driven signals, and the PAYD Trading Lab educational platform. The 'Обучение' (Education) navigation link points to '#edu/trading-lab' and scrolls to the modules section.",
+    "key_points": [
+        "The 'Обучение' (Education) link in the navigation menu directs to '#edu/trading-lab' anchor",
+        "Modules section title: 'Modules' with subtitle 'Практические сценарии на реальных графиках — отрабатывайте навыки без риска'",
+        "МОДУЛЬ 1 (Module 1): 'Почему уровень сам по себе ничего не значит' - About why levels alone mean nothing, learning to see false breakouts and real price reactions",
+        "МОДУЛЬ 2 (Module 2): 'Подтверждение входа' - Entry confirmation using BOS, CHOCH, and dislocation concepts",
+        "МОДУЛЬ 3 (Module 3): 'Рыночный контекст' - Market context including trend, momentum, and volume",
+        "МОДУЛЬ 4 (Module 4): 'Управление риском' - Risk management, including when NOT to enter trades, Liquidity Sweeps, Volume Climax",
+        "Each module has a '▶Начать сценарий' (Start scenario) button",
+        "Page also contains: 5-step learning process (Понять, Проанализировать, Принять решение, Запустить рынок, Получить разбор)",
+        "6 trading scenario levels (Уровень 1-6): Пробой уровня, Отскок от уровня, Тренд + ретест, Дивергенция, Волатильность, Мультитаймфрейм",
+        "4 courses: Market Awareness, Evidence, Execution, Risk Architecture",
+        "2 pricing tiers: Базовый ($29/мес) and Премиум ($79/мес)"
+    ],
+    "relevant_links": [
+        "#features",
+        "#edu/trading-lab",
+        "#how-it-works",
+        "#benefits",
+        "#cta",
+        "https://s.tradingview.com/widgetembed/?hideideas=1&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=ru"
+    ],
+    "modules_section": {
+        "section_id": "edu/trading-lab",
+        "section_title": "Modules",
+        "section_subtitle": "Практические сценарии на реальных графиках — отрабатывайте навыки без риска",
+        "modules": [
+            {
+                "number": "МОДУЛЬ 1",
+                "title": "Почему уровень сам по себе ничего не значит",
+                "description": "Уровень работает только вместе с подтверждением. Научитесь видеть ложные пробои и реальные реакции цены.",
+                "action": "▶Начать сценарий"
+            },
+            {
+                "number": "МОДУЛЬ 2",
+                "title": "Подтверждение входа",
+                "description": "BOS, CHOCH и дислокация — научитесь ждать подтверждения вместо входа «наугад».",
+                "action": "▶Начать сценарий"
+            },
+            {
+                "number": "МОДУЛЬ 3",
+                "title": "Рыночный контекст",
+                "description": "Тренд, моментум, объём. Как читать контекст рынка и принимать решения в правильную сторону.",
+                "action": "▶Начать сценарий"
+            },
+            {
+                "number": "МОДУЛЬ 4",
+                "title": "Управление риском",
+                "description": "Когда не входить в сделку. Liquidity Sweeps, Volume Climax и зоны дисквалификации входов.",
+                "action": "▶Начать сценарий"
+            }
+        ]
+    },
+    "file_name": "payd_finance_modules.json"
+}
+```
