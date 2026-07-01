@@ -3,29 +3,29 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Создать единый переиспользуемый компонент PaydTradingViewWidget.js на основе tv.js",
-        "details": "Использует тот же подход, что и index.html (new TradingView.widget через tv.js). Поддержка symbol, interval, theme, height, locale. Обрабатывает скрытые контейнеры через ResizeObserver/IntersectionObserver. Защита от двойной инициализации.",
+        "content": "Создать новый JS-файл public/js/trading-terminal-tab.js с Terminal-логикой",
+        "details": "Реализовать: TerminalState, загрузку OHLCV с Binance, запуск Module X, рендеринг TradingView-виджета, боковые панели анализа, кнопки решений (Long/Short/Wait/No Trade) с вызовом Module 2",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Обновить trading-lab.html: подключить tv.js и PaydTradingViewWidget.js, заменить renderChart() и initFreeChart()",
-        "details": "Удалить lightweight-charts script, TradingViewChart.js. Заменить вызовы TradingViewChart и PaydTradingChart (для free-chart) на PaydTradingViewWidget.",
+        "content": "Добавить новую вкладку Terminal в public/lab.html",
+        "details": "Добавить кнопку в nav, новую секцию #lab-pane-terminal с разметкой (toolbar, чарт, боковые панели, кнопки решений), подключить trading-terminal-tab.js",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "index.html оставлен без изменений (он уже работает)",
-        "details": "Добавить script для PaydTradingViewWidget, использовать его в tradingview_oi, tradingview_market, tradingview_dashboard.",
-        "status": "cancelled",
+        "content": "Добавить точку входа в Trading Terminal на главной странице index.html",
+        "details": "Добавить 5-ю карточку в lab-cards-mode или промо-баннер, ссылающийся на /lab.html#terminal. Не менять существующие модули",
+        "status": "completed",
         "priority": "medium"
       },
       "4": {
         "id": "4",
-        "content": "Задеплоить и протестировать",
-        "details": "Проверить что график работает на основной странице, в trainer-view и free-analysis-view Trading Lab.",
+        "content": "Деплой и финальное тестирование",
+        "details": "Задеплоить, проверить переключение таймфреймов, обновление панелей, работу кнопок Long/Short/Wait/No Trade, fullscreen",
         "status": "completed",
         "priority": "high"
       }
