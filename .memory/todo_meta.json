@@ -3,30 +3,23 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Создать новый JS-файл public/js/trading-terminal-tab.js с Terminal-логикой",
-        "details": "Реализовать: TerminalState, загрузку OHLCV с Binance, запуск Module X, рендеринг TradingView-виджета, боковые панели анализа, кнопки решений (Long/Short/Wait/No Trade) с вызовом Module 2",
+        "content": "Интегрировать Trading Terminal внутрь вкладки «Обучение» в index.html",
+        "details": "1) Скопировать CSS-стили Trading Terminal из lab.html в index.html\n2) Добавить HTML-разметку Trading Terminal (toolbar, chart, sidebar, decision panel) в edu-content-trading-lab\n3) Подключить скрипты Trading Terminal (trading-terminal.js, trading-terminal-tab.js, TV.js)\n4) Переделать баннер — ссылку на /lab.html#terminal заменить на внутреннюю кнопку\n5) Добавить функции openLabTerminal/backToLabTerminal и обновить switchLabTab\n6) Деплой и проверка",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Добавить новую вкладку Terminal в public/lab.html",
-        "details": "Добавить кнопку в nav, новую секцию #lab-pane-terminal с разметкой (toolbar, чарт, боковые панели, кнопки решений), подключить trading-terminal-tab.js",
-        "status": "completed",
+        "content": "Создать реалистичный генератор свечных сценариев",
+        "details": "1) Создать realisticCandleBuilder.js с конструкторами:\n   - buildTrendSequence (HH-HL-HH, LH-LL-LH, консолидация, импульс+коррекция)\n   - buildPriceActionPattern (Pin Bar, Engulfing, Harami, Doji, Morning/Evening Star, Inside Bar, Tweezer)\n   - buildSmartMoneyStructure (BOS, CHOCH, Order Block, FVG, Liquidity Sweep, Equal Highs/Lows)\n2) Переопределить generateCandles и applyPattern в ScenarioLibrary.js\n3) Обеспечить реалистичные пропорции тел/теней и естественную волатильность\n4) Деплой и проверка",
+        "status": "in_progress",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Добавить точку входа в Trading Terminal на главной странице index.html",
-        "details": "Добавить 5-ю карточку в lab-cards-mode или промо-баннер, ссылающийся на /lab.html#terminal. Не менять существующие модули",
-        "status": "completed",
-        "priority": "medium"
-      },
-      "4": {
-        "id": "4",
-        "content": "Деплой и финальное тестирование",
-        "details": "Задеплоить, проверить переключение таймфреймов, обновление панелей, работу кнопок Long/Short/Wait/No Trade, fullscreen",
-        "status": "completed",
+        "content": "Финальное тестирование и деплой",
+        "details": "1) Проверить вкладку «Обучение → PAYD Trading Lab»\n2) Проверить, что Trading Terminal открывается внутри\n3) Проверить, что свечные сценарии выглядят реалистично\n4) Деплой финальной версии",
+        "status": "pending",
         "priority": "high"
       }
     }
