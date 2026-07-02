@@ -3,30 +3,37 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Исправить overlay wrapper в trading-terminal.js — пропускать события к чарту в режиме курсора",
-        "details": "Сделать pointer-events:none по умолчанию, переключать на auto только при активном инструменте рисования (hline, trend, rect, entry, sl, tp)",
+        "content": "BUG 1: Увеличить visibleCount в ScenarioLibrary.js до 200-280 свечей",
+        "details": "В ScenarioLibrary.js строка 431: const visibleCount = 30 + (idx % 15) — нужно минимум 150-300, поставлю 200-280 для запаса",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Сохранять viewport пользователя при обновлении сценария",
-        "details": "При вызове setData не сбрасывать visibleLogicalRange пользователя, если он его менял",
+        "content": "BUG 2: Исправить this.scenarios в Trainer.js — сделать геттером",
+        "details": "В Trainer.js строка 80 — this.scenarios = global.TrainerScenarios.SCENARIOS сохраняет ссылку, но ScenarioLibrary переопределяет SCENARIOS после создания Trainer. Решение: getter или каждый раз читать global.TrainerScenarios.SCENARIOS",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Проверить chart loading overlay — не должен блокировать взаимодействие",
-        "details": "Убедиться, что loading overlay имеет pointer-events:none после скрытия",
+        "content": "BUG 2: Добавить fallback загрузку свечей в Trainer._loadCurrent",
+        "details": "Если у сценария пустые candles, попытаться загрузить через RealHistoricalData.getWindow() или resolveScenario",
         "status": "completed",
-        "priority": "medium"
+        "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Деплой и тестирование поведения графика",
-        "details": "Проверить Pan мышью, Zoom колесом, drag time/price scale, перемещение далеко влево",
+        "content": "Добавить диагностику жизненного цикла перехода",
+        "details": "После каждого перехода выводить в консоль: Scenario ID, количество свечей, Candles loaded, Series updated, Chart rendered, Module X started, Module X rendered",
         "status": "completed",
+        "priority": "medium"
+      },
+      "5": {
+        "id": "5",
+        "content": "Задеплоить и протестировать",
+        "details": "Загрузить обновленные файлы, открыть приложение, проверить 1, 2, 3, 5, 10 сценарии",
+        "status": "in_progress",
         "priority": "high"
       }
     }
