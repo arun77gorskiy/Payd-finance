@@ -1,0 +1,37 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://6lsol3eslc65.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://6lsol3eslc65.space.minimax.io/",
+    "summary": "Payd_Finance is an AI-powered crypto trading and education SaaS platform that combines AI analytics, deep learning, and trading logic. The platform offers institutional-grade market analysis, real-time data for top cryptocurrencies, AI-powered market regime detection, and educational trading modules. Key features include Blind Chart, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The Trading Lab offers practical scenarios on real charts for risk-free skill development.",
+    "key_points": [
+        "Main chart symbol in trading interface: BINANCE:BTCUSDT.P (Bitcoin / TetherUS PERPETUAL CONTRACT on Binance)",
+        "Trading pair options in symbol selector: BTC/USDT, ETH/USDT, SOL/USDT, BNB/USDT, XRP/USDT, ADA/USDT, DOGE/USDT, AVAX/USDT, LINK/USDT, MATIC/USDT",
+        "Module badge displays 'BINANCE:SOLUSDT' with '● LIVE' status and 'Future hidden (real market)' text",
+        "Current scenario displayed: 'Бычий Pin Bar' (Bullish Pin Bar) - Long lower tail testing demand on pullback",
+        "Module difficulty level: 'intermediate'",
+        "Trading Terminal symbol default: BTC/USDT with timeframes 1m, 5m, 15m, 1H, 4H, 1D, 1W",
+        "Market Overview pairs: BTC/USDT ($67,432, +2.34%), ETH/USDT ($3,457, +1.56%), SOL/USDT ($145, +5.67%)",
+        "AI Market Regime analysis parameters: ATR (14), RSI (14), Volume Z-Score, Market Structure, Recommended Action - updates every 30 seconds from Binance",
+        "Open Interest: $38.2B, Long: 52.3%, Short: 47.7%, Funding Rate: 0.0125% Positive, L/S Ratio: 1.09 Bullish, 24h Volume: $42.8B",
+        "AI Accuracy: 94.2%, AI System Online v2.4",
+        "Four training modules: Module 1 - Why level alone means nothing; Module 2 - Entry confirmation (BOS/CHOCH); Module 3 - Market context; Module 4 - Risk management",
+        "Pricing tiers: Basic $29/month (50 scenarios), Premium $79/month (200+ scenarios, personal mentor)",
+        "AI Scanner signals: BTC BUY (78%), ETH HOLD (62%), SOL WAIT (45%)",
+        "Risk/Opportunity Ranking: Risk 4.2/10 (Low), Opportunities 7.8/10 (High), AI Recommendation: Medium-term BUY with averaging on drawdowns",
+        "Dashboard stats: Modules completed 0/4, Scenarios completed 0, Trades in Terminal 0",
+        "Trading Lab tabs: Dashboard, Modules, Trading Terminal, Progress"
+    ],
+    "relevant_links": [
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#cta"
+    ],
+    "file_name": "payd_finance_trading_interface.json"
+}
+```

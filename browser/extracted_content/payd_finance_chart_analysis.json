@@ -1,0 +1,53 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://hkj8fmacm077.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://hkj8fmacm077.space.minimax.io/",
+    "summary": "Payd_Finance is an educational and analytical SaaS platform that combines AI-powered crypto market analysis with structured trading education. The page features a TradingView chart widget displaying the BTC/USDT perpetual futures pair (BINANCE:BTCUSDT.P) on the 1-hour timeframe, showing current price around $62,003.6 with minor positive movement (+0.15%). The chart includes a 'Future hidden (real market)' mode indicator and appears to be loading initial data. The platform offers modules for trading scenarios, risk management, decision scoring, mistake mapping, and skill passports, along with various subscription plans (Basic $29/mo, Premium $79/mo).",
+    "key_points": [
+        "Chart displays BTC/USDT perpetual futures pair (BINANCE:BTCUSDT.P) via TradingView widget",
+        "Chart is set to 1-hour timeframe with dark theme",
+        "'Future hidden' mode badge is visible indicating real market data mode",
+        "Chart shows loading state ('Загрузка…' / 'Загрузка сценария 1…') in multiple sections",
+        "Current visible price: $62,003.6 with +0.15% change",
+        "TradingView widget is embedded with Open Interest study enabled",
+        "Some crypto prices show 'Loading...' state (BTC, ETH, SOL, DOGE, XRP)",
+        "Static market overview shows Bitcoin at $67,432.00 (+2.34%) - appears to be mock/static data",
+        "Open Interest displayed at $38.2B with 52.3% Long / 47.7% Short",
+        "Funding Rate: 0.0125% (Positive), L/S Ratio: 1.09 (Bullish), 24h Volume: $42.8B",
+        "AI Market Regime analysis section shows 'Анализ...' (loading) state with no values",
+        "Module X analysis shows 'Failed to fetch' error",
+        "Error message displayed: 'Failed to fetch' indicating backend connectivity issues"
+    ],
+    "relevant_links": [
+        "https://s.tradingview.com/widgetembed/?hideideas=1&symbol=BINANCE:BTCUSDT.P",
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#cta"
+    ],
+    "chart_details": {
+        "symbol_pair": "BINANCE:BTCUSDT.P (Bitcoin / TetherUS Perpetual Contract)",
+        "exchange": "Binance",
+        "timeframe": "1H (1 hour)",
+        "theme": "Dark",
+        "current_price": "$62,003.6",
+        "price_change": "+90.1 (+0.15%)",
+        "high": "$62,180.0",
+        "low": "$61,821.0",
+        "open": "$61,913.6",
+        "close": "$62,003.6",
+        "volume": "6.17K (+3.35%)",
+        "future_hidden_badge": true,
+        "candles_visible": "Yes - real candles with real prices are visible",
+        "loading_state": "Partially loaded - chart shows real data but some sections still loading",
+        "error_detected": "Failed to fetch error present in some analysis modules",
+        "studies_enabled": "Open Interest (STD;Open_Interest)"
+    },
+    "file_name": "payd_finance_chart_analysis.json"
+}
+```

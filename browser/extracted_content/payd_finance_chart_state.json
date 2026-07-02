@@ -1,0 +1,36 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://hkj8fmacm077.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://hkj8fmacm077.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS platform combining AI-powered crypto trading analytics with educational modules. The page features an AI Crypto Trading platform with real-time market data, educational trading scenarios, and a Trading Terminal integrated with TradingView. Key sections include Market Overview (BTC/USDT, ETH/USDT, SOL/USDT), AI Market Regime analysis, Blind Chart functionality, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The platform offers pricing tiers (Basic $29/mo, Premium $79/mo) and targets novice traders, active traders, investors, and AI enthusiasts.",
+    "key_points": [
+        "Symbol/Pair displayed: BTC/USDT (Bitcoin / TetherUS PERPETUAL CONTRACT) on Binance",
+        "Future hidden badge present: Yes, 'Future hidden' label shown with LIVE indicator",
+        "Candles visible: Yes, OHLC data displayed (Open: 61,913.6, High: 62,180.0, Low: 61,821.0, Close: 62,003.6) with +90.1 (+0.15%) change",
+        "Chart state: Active with 1-hour timeframe, Volume 6.17K (+2,009.8 / +3.35%), timestamp 14:21:02 UTC",
+        "TradingView widget embedded with symbol BINANCE:BTCUSDT.P, interval 60 (1H)",
+        "Dashboard shows multiple cryptos (BTC, ETH, SOL, XRP, BNB, DOGE) with loading states",
+        "AI Scanner shows signals: BTC BUY (78%), ETH HOLD (62%), SOL WAIT (45%)",
+        "Four educational modules available covering levels, entry confirmation, market context, and risk management",
+        "Pricing tiers: Basic ($29/mo, 50 scenarios) and Premium ($79/mo, 200+ scenarios)",
+        "Available symbols in selector: BTC/USDT, ETH/USDT, SOL/USDT, BNB/USDT, XRP/USDT, ADA/USDT, DOGE/USDT, AVAX/USDT, LINK/USDT, MATIC/USDT",
+        "Available timeframes: 1m, 5m, 15m, 1H, 4H, 1D, 1W",
+        "AI analysis components: Market Structure, Smart Money, Price Action, Volume, Liquidity, Volatility, Momentum, Support/Resistance, Probability",
+        "Risk/Opportunity Ranking: Risk 4.2/10 (Low), Opportunity 7.8/10 (High), AI recommendation: Medium-term BUY with averaging on pullbacks",
+        "Current narrative: Institutional BTC demand growing amid ETF approval, market in accumulation phase",
+        "Platform is available in Russian language with 7-day free demo access"
+    ],
+    "relevant_links": [
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#cta"
+    ],
+    "file_name": "payd_finance_chart_state.json"
+}
+```
