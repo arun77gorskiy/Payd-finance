@@ -3,23 +3,30 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Модифицировать fetchBinanceCandles: добавить fallback на альтернативные эндпоинты Binance и генерацию синтетических свечей",
-        "details": "",
+        "content": "Update RealMarketData.js with multi-endpoint fallback and synthetic candle generation",
+        "details": "Add multi-endpoint retry, synthetic candle fallback when all fail, don't throw but return fallback result",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Добавить обработку ошибок в updateInstitutionalData / updateAIMarketRegime / calculateIndicators в index.html",
-        "details": "",
+        "content": "Update Trainer.js to use scenario template candles as fallback when RealMarketData fails",
+        "details": "When loadScenarioCandles fails, fall back to template's own generateCandles() result instead of throwing",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Развернуть и протестировать",
-        "details": "",
-        "status": "in_progress",
+        "content": "Update index.html info widgets to silently fail with N/A display",
+        "details": "Make updateInstitutionalData, updateAIMarketRegime, and ticker fetch resilient",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "4": {
+        "id": "4",
+        "content": "Verify the fix by deploying and testing",
+        "details": "Run end-to-end test to ensure Module X loads even when Binance is unavailable",
+        "status": "completed",
         "priority": "high"
       }
     }

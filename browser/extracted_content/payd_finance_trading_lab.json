@@ -1,28 +1,62 @@
 📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
-URL: https://8jm5q4qbmzfv.space.minimax.io/?v=10#edu/trading-lab
+URL: https://dxu5q3ygshbp.space.minimax.io/
 
 Extracted content:
 ```json
 {
     "title": "Payd_Finance | AI Crypto Trading & Education",
-    "url": "https://8jm5q4qbmzfv.space.minimax.io/?v=10#edu/trading-lab",
-    "summary": "Payd_Finance is a SaaS platform combining AI-powered crypto analytics, trading logic, and education into one ecosystem. The page features a hero section with real-time market data (BTC at $67,432, +2.34%), followed by sections on AI Market Regime Analysis, market challenges ('Рынок сложнее, чем кажется'), the platform's value proposition ('Payd_Finance меняет подход'), and the PAYD Trading Lab section. The Trading Lab includes a 5-step learning process (Understand, Analyze, Decide, Launch, Review), main features (Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport), an Education Modules section with 4 modules, 200+ trading scenarios across 6 difficulty levels, 4 structured courses, and pricing tiers (Basic $29/mo, Premium $79/mo). The page structure shows the URL #edu/trading-lab hash anchor, which navigates to the Trading Lab area showing the Modules section. Other sections include platform functionality ('Функционал платформы'), market data, how it works, target audience, and why choose Payd_Finance.",
+    "url": "https://dxu5q3ygshbp.space.minimax.io/",
+    "summary": "Payd_Finance is an AI-powered crypto trading and education SaaS platform combining institutional-grade market analysis, trading simulations, and structured learning modules. The platform features PAYD Trading Lab with interactive educational modules, real-time market data, AI Market Regime detection, Trading Terminal with TradingView charts, and personalized learning progress tracking. Key tools include Blind Chart, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport.",
     "key_points": [
-        "Page has section with heading 'Modules' (Практические сценарии на реальных графиках — отрабатывайте навыки без риска)",
-        "There is also 'Education Modules' heading in the PAYD Trading Lab section: 'Учись принимать решения прямо на графике. Интерактивные торговые модули, встроенные непосредственно в интерфейс PaydFinance'",
-        "URL #edu/trading-lab navigates to the Trading Lab section, not the hero — content after the hero begins with 'PAYD Trading Lab' tab navigation (Сценарии, Курсы, Тарифы)",
-        "Modules section contains 4 educational modules: Module 1 (Почему уровень сам по себе ничего не значит), Module 2 (Подтверждение входа), Module 3 (Рыночный контекст), Module 4 (Управление риском)",
-        "Each module has a 'Начать сценарий' (Start scenario) button",
-        "PAYD Trading Lab contains: 5-step learning process, 10 main features, 4 Modules, 6 trading scenarios by level, 4 Courses, 2 Pricing tiers",
-        "Current scroll position appears to be at/past the Modules section based on content rendered",
-        "Visible section headings include: Hero, Real-Time Market Data, Market Overview, AI-Powered Analysis/AI Market Regime, Рынок сложнее чем кажется, Payd_Finance меняет подход, PAYD Trading Lab, Как проходит обучение, Основные функции, Modules, Торговые сценарии, Курсы, Тарифы PAYD Trading Lab, Функционал платформы, Рыночные данные, Как это работает, Для кого этот продукт, Почему Payd_Finance, AI Market Analysis, Смарт-Индикаторы, Trading Dashboard"
+        "PAYD Trading Lab section features 4 educational modules (Модуль 1-4) each with 'Начать сценарий' (Start Scenario) buttons that launch trading simulations",
+        "Module 1: 'Почему уровень сам по себе ничего не значит' - teaches false breakouts and real price reactions",
+        "Module 2: 'Подтверждение входа' - BOS, CHOCH and dislocation - waiting for confirmation",
+        "Module 3: 'Рыночный контекст' - Trend, momentum, volume analysis",
+        "Module 4: 'Управление риском' - When not to enter trades, Liquidity Sweeps, Volume Climax",
+        "Lab Trainer structure follows 5-step process: Understand → Analyze → Make Decision → Launch Market (свечи) → Get Review",
+        "Trading Lab includes Dashboard, Modules, Trading Terminal, and Progress tabs",
+        "Trading Terminal features TradingView charts with sidebar analysis (Market Structure, SMC, Price Action, Volume, Liquidity, Volatility, Momentum)",
+        "Practice buttons in Terminal: Long (▲), Short (▼), Wait (⏸), No Trade (✕)",
+        "Represents a 5-step trading education approach (Понять, Проанализировать, Принять решение, Запустить рынок, Получить разбор)",
+        "Additional section 'Торговые сценарии' (Trading Scenarios) offers 200+ scenarios across 6 difficulty levels (Пробой уровня, Отскок от уровня, Тренд + ретест, Дивергенция, Волатильность, Мультитаймфрейм)",
+        "AI Market Regime detection: Current regime identified as 'Тренд восходящий (Низкая волатильность)' with 85% AI confidence",
+        "Pricing tiers: Basic ($29/month, 50 scenarios) and Premium ($79/month, 200+ scenarios, personal mentor)",
+        "Achievement system: First scenario, All 4 modules, 10 trades in Terminal, 100% accuracy"
     ],
     "relevant_links": [
         "#features",
-        "#edu/trading-lab",
+        "#education-how-it-works",
         "#how-it-works",
         "#benefits",
-        "#cta"
+        "#cta",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT.P",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT"
+    ],
+    "scenario_buttons": [
+        {
+            "module": "МОДУЛЬ 1",
+            "title": "Почему уровень сам по себе ничего не значит",
+            "button_text": "Начать сценарий",
+            "description": "Уровень работает только вместе с подтверждением. Научитесь видеть ложные пробои и реальные реакции цены."
+        },
+        {
+            "module": "МОДУЛЬ 2",
+            "title": "Подтверждение входа",
+            "button_text": "Начать сценарий",
+            "description": "BOS, CHOCH и дислокация — научитесь ждать подтверждения вместо входа 'наугад'"
+        },
+        {
+            "module": "МОДУЛЬ 3",
+            "title": "Рыночный контекст",
+            "button_text": "Начать сценарий",
+            "description": "Тренд, моментум, объём. Как читать контекст рынка и принимать решения в правильную сторону"
+        },
+        {
+            "module": "МОДУЛЬ 4",
+            "title": "Управление риском",
+            "button_text": "Начать сценарий",
+            "description": "Когда не входить в сделку. Liquidity Sweeps, Volume Climax и зоны дисквалификации входов"
+        }
     ],
     "file_name": "payd_finance_trading_lab.json"
 }
