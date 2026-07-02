@@ -3,29 +3,43 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Update RealMarketData.js with multi-endpoint fallback and synthetic candle generation",
-        "details": "Add multi-endpoint retry, synthetic candle fallback when all fail, don't throw but return fallback result",
+        "content": "Audit ScenarioLibrary to confirm it has pre-baked historical candles for all scenarios",
+        "details": "Check if every scenario in ScenarioLibrary has real OHLCV candles pre-generated, or if it relies on RealMarketData",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Update Trainer.js to use scenario template candles as fallback when RealMarketData fails",
-        "details": "When loadScenarioCandles fails, fall back to template's own generateCandles() result instead of throwing",
+        "content": "Refactor Trainer.js to use ONLY template candles (no API calls, no random walk)",
+        "details": "Remove all references to RealMarketData and synthetic candle generation in training flow. Use only scenario.candles from template. Show clean error if missing.",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Update index.html info widgets to silently fail with N/A display",
-        "details": "Make updateInstitutionalData, updateAIMarketRegime, and ticker fetch resilient",
+        "content": "Remove random walk generators from RealMarketData.js (Live Market only)",
+        "details": "RealMarketData stays for Live Market but remove generateFallbackCandles and synthetic generation entirely",
         "status": "completed",
-        "priority": "medium"
+        "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Verify the fix by deploying and testing",
-        "details": "Run end-to-end test to ensure Module X loads even when Binance is unavailable",
+        "content": "Verify Mode separation: Training uses only historical data, Live uses API",
+        "details": "Add explicit 'mode' concept. Training: ScenarioLibrary.candles only. Live: RealMarketData. Module X works on candles regardless of source.",
+        "status": "completed",
+        "priority": "high"
+      },
+      "5": {
+        "id": "5",
+        "content": "Show user-friendly error if historical data is missing in scenario",
+        "details": "Message: 'Исторические данные временно недоступны. Выберите другой сценарий.'",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "6": {
+        "id": "6",
+        "content": "Deploy and test the new architecture",
+        "details": "Verify training works completely offline; live market still uses API",
         "status": "completed",
         "priority": "high"
       }

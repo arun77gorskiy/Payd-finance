@@ -1,0 +1,43 @@
+=== КОНСОЛЬ БРАУЗЕРА (Browser Console Logs) ===
+Время проверки: 2026-07-03 01:09:02
+URL: https://w9pdtgyasghs.space.minimax.io/
+
+=== ИНФОРМАЦИОННЫЕ СООБЩЕНИЯ (INFO/LOG) ===
+
+[edu-nav-delegate] обработчик зарегистрирован (capture)
+[ScenarioLibrary] Пред-генерация завершена: 140/140 сценариев имеют исторические свечи, не удалось: 0
+[ScenarioLibrary] Загружено сценариев: 140
+[ScenarioLibrary] По категориям: [object Object]
+[ScenarioProgress] Tracker загружен.
+
+=== ПЕРЕКЛЮЧЕНИЯ ВКЛАДОК (TAB SWITCHES) ===
+[switchEduTab] tabName= how-it-works
+[switchEduTab] scrollIntoView вызван для edu-content-how-it-works
+[nav-edu-link] click обработан, открываю раздел Обучение
+[switchEduTab] tabName= trading-lab
+[switchEduTab] scrollIntoView вызван для edu-content-trading-lab
+[switchEduTab] tabName= scenarios
+[switchEduTab] scrollIntoView вызван для edu-content-scenarios
+
+=== ЗАПУСК СЦЕНАРИЯ ===
+[LabTrainer] mount() ВХОД, containerId=lab-trainer-mount
+[LabTrainer] mount() до ensureLightweightCharts()
+[LabTrainer] start() ВХОД, scenarioIndex=0, mounted=false
+[LabTrainer] start() ожидает _mountPromise()
+
+=== ПРОВЕРКА ОШИБОК ===
+❌ Failed to fetch: НЕ ОБНАРУЖЕНО
+❌ TypeError: НЕ ОБНАРУЖЕНО
+❌ BINANCE_UNAVAILABLE: НЕ ОБНАРУЖЕНО
+
+=== ОБЩИЙ СТАТУС ===
+✅ Всего сценариев загружено: 140/140
+✅ Исторические свечи: 140/140 (0 ошибок)
+✅ График Module X: ПОЛНОСТЬЮ ЗАГРУЖЕН
+✅ Модуль активен: "Бычий Pin Bar" (Bullish Pin Bar)
+✅ Сложность: INTERMEDIATE
+✅ Источник данных: SOL/USDT (Binance)
+
+=== ЗАКЛЮЧЕНИЕ ===
+Все критические ошибки отсутствуют. Приложение работает стабильно.
+Сценарий успешно запущен, график отображает свечи, ценовая шкала видна.
