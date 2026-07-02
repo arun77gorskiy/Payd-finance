@@ -3,37 +3,23 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Модифицировать ModuleXRenderer.js: добавить LIMITS, viewport-фильтрацию, поддержку Support/Resistance",
+        "content": "Модифицировать fetchBinanceCandles: добавить fallback на альтернативные эндпоинты Binance и генерацию синтетических свечей",
         "details": "",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Добавить фильтры по категориям (Market Structure, Smart Money, Price Action, Volume, Liquidity, Support/Resistance) в renderer",
+        "content": "Добавить обработку ошибок в updateInstitutionalData / updateAIMarketRegime / calculateIndicators в index.html",
         "details": "",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Создать панель фильтров в lab-trainer-component.js с тогглами и настройкой лимитов",
+        "content": "Развернуть и протестировать",
         "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "4": {
-        "id": "4",
-        "content": "Подключить live-обновление при появлении новых свечей (обновление viewport)",
-        "details": "",
-        "status": "completed",
-        "priority": "medium"
-      },
-      "5": {
-        "id": "5",
-        "content": "Развернуть и протестировать на реальном TradingView-графике",
-        "details": "",
-        "status": "completed",
+        "status": "in_progress",
         "priority": "high"
       }
     }
