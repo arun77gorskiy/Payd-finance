@@ -3,44 +3,23 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Audit ScenarioLibrary to confirm it has pre-baked historical candles for all scenarios",
-        "details": "Check if every scenario in ScenarioLibrary has real OHLCV candles pre-generated, or if it relies on RealMarketData",
+        "content": "Модифицировать ScenarioLibrary.js для использования RealHistoricalData",
+        "details": "1) Удалить generateCandles, generateFutureCandles, applyPattern, prebakeScenarioCandles (старые, через RealisticCandleBuilder). 2) Написать новую prebakeScenarioCandles через RealHistoricalData.getWindow. 3) Сделать маппинг символов и таймфреймов. 4) Использовать детерминированный seed по индексу сценария. 5) Удалить вызовы RealisticCandleBuilder.",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Refactor Trainer.js to use ONLY template candles (no API calls, no random walk)",
-        "details": "Remove all references to RealMarketData and synthetic candle generation in training flow. Use only scenario.candles from template. Show clean error if missing.",
+        "content": "Добавить RealHistoricalData.js в index.html и lab.html",
+        "details": "Скрипт должен загружаться ПЕРЕД ScenarioLibrary.js, чтобы глобальный модуль RealHistoricalData был доступен",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Remove random walk generators from RealMarketData.js (Live Market only)",
-        "details": "RealMarketData stays for Live Market but remove generateFallbackCandles and synthetic generation entirely",
-        "status": "completed",
-        "priority": "high"
-      },
-      "4": {
-        "id": "4",
-        "content": "Verify Mode separation: Training uses only historical data, Live uses API",
-        "details": "Add explicit 'mode' concept. Training: ScenarioLibrary.candles only. Live: RealMarketData. Module X works on candles regardless of source.",
-        "status": "completed",
-        "priority": "high"
-      },
-      "5": {
-        "id": "5",
-        "content": "Show user-friendly error if historical data is missing in scenario",
-        "details": "Message: 'Исторические данные временно недоступны. Выберите другой сценарий.'",
-        "status": "completed",
-        "priority": "medium"
-      },
-      "6": {
-        "id": "6",
-        "content": "Deploy and test the new architecture",
-        "details": "Verify training works completely offline; live market still uses API",
-        "status": "completed",
+        "content": "Проверить и задеплоить",
+        "details": "Запустить локальную проверку что все 140 сценариев получают реальные свечи",
+        "status": "in_progress",
         "priority": "high"
       }
     }
