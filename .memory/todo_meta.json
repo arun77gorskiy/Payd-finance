@@ -3,23 +3,30 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Модифицировать ScenarioLibrary.js для использования RealHistoricalData",
-        "details": "1) Удалить generateCandles, generateFutureCandles, applyPattern, prebakeScenarioCandles (старые, через RealisticCandleBuilder). 2) Написать новую prebakeScenarioCandles через RealHistoricalData.getWindow. 3) Сделать маппинг символов и таймфреймов. 4) Использовать детерминированный seed по индексу сценария. 5) Удалить вызовы RealisticCandleBuilder.",
+        "content": "Исправить overlay wrapper в trading-terminal.js — пропускать события к чарту в режиме курсора",
+        "details": "Сделать pointer-events:none по умолчанию, переключать на auto только при активном инструменте рисования (hline, trend, rect, entry, sl, tp)",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Добавить RealHistoricalData.js в index.html и lab.html",
-        "details": "Скрипт должен загружаться ПЕРЕД ScenarioLibrary.js, чтобы глобальный модуль RealHistoricalData был доступен",
+        "content": "Сохранять viewport пользователя при обновлении сценария",
+        "details": "При вызове setData не сбрасывать visibleLogicalRange пользователя, если он его менял",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Проверить и задеплоить",
-        "details": "Запустить локальную проверку что все 140 сценариев получают реальные свечи",
-        "status": "in_progress",
+        "content": "Проверить chart loading overlay — не должен блокировать взаимодействие",
+        "details": "Убедиться, что loading overlay имеет pointer-events:none после скрытия",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "4": {
+        "id": "4",
+        "content": "Деплой и тестирование поведения графика",
+        "details": "Проверить Pan мышью, Zoom колесом, drag time/price scale, перемещение далеко влево",
+        "status": "completed",
         "priority": "high"
       }
     }

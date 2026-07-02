@@ -1,0 +1,41 @@
+📄 Extracted from page: PAYD Trading Lab — Payd_Finance
+URL: https://yutnvfddkjqc.space.minimax.io/lab.html
+
+Extracted content:
+```json
+{
+    "title": "PAYD Trading Lab — Payd_Finance",
+    "url": "https://yutnvfddkjqc.space.minimax.io/lab.html",
+    "summary": "The PAYD Trading Lab is an educational trading platform by Payd_Finance that provides practical scenarios on real charts for risk-free skill development. It features 4 training modules covering price levels, entry confirmation (BOS/CHOCH), market context (trend/momentum/volume), and risk management (liquidity sweeps, volume climax). The interface includes a Live Dashboard for top altcoins with AI analysis via TradingView, a Progress tracking section, and a full Trading Terminal with TradingView widget embed showing BTC/USDT data. The platform supports trading practice with directional decisions (Long/Short/Wait/No Trade), Entry/Stop Loss/Take Profit placement, and keyboard shortcuts.",
+    "key_points": [
+        "Page is a trading education platform (PAYD Trading Lab) with 4 training modules",
+        "Uses TradingView iframe widget embed for chart display (no custom chart implementation)",
+        "Chart interaction handled entirely by TradingView's embedded widget - no custom JavaScript for mouse drag, pan, zoom, or wheel events on the chart was found in the page",
+        "No terms like 'mouseDown', 'mouseUp', 'mouseMove', 'wheel', 'subscribeCrosshairMove', 'timeScale().scrollTo', 'subscribeClick', 'handleScroll', or 'handleScale' appear in the page content",
+        "The chart interaction handlers are NOT disabled - they are simply not present in custom code; the TradingView widget handles all interactions natively",
+        "Module 1: Why a level alone means nothing - identifying false breakouts",
+        "Module 2: Entry confirmation - BOS, CHOCH, and dislocation",
+        "Module 3: Market context - trend, momentum, volume analysis",
+        "Module 4: Risk management - liquidity sweeps, volume climax, disqualification zones",
+        "Live Dashboard shows top altcoins by volume with AI analysis (trend, volume, interest, AI signal, confidence)",
+        "Trading Terminal supports multiple symbols (BTC, ETH, SOL, BNB, XRP, ADA, DOGE, AVAX, LINK, MATIC vs USDT)",
+        "Timeframes available: 1m, 5m, 15m, 1H, 4H, 1D, 1W",
+        "Current displayed data: BTC/USDT at $61725.88 with Module X analysis showing NEUTRAL bias, 24% confidence",
+        "Practice interface allows placing Entry/Stop Loss/Take Profit with click interactions",
+        "Keyboard shortcuts: L(Long), S(Short), W(Wait), N(No Trade), E(Entry), 1(Stop Loss), 2(Take Profit), Enter(Confirm), B(Collapse panel), H(Toggle toolbar), Esc(Cancel)",
+        "Progress tracking: 0/140 scenarios completed, 0% accuracy"
+    ],
+    "relevant_links": [
+        "https://yutnvfddkjqc.space.minimax.io/",
+        "https://s.tradingview.com/widgetembed/?hideideas=1&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=ru#%7B%22symbol%22%3A%22BINANCE%3ABTCUSDT%22%2C%22frameElementId%22%3A%22tradingview_2c4fa%22%2C%22interval%22%3A%2260%22%2C%22allow_symbol_change%22%3A%221%22%2C%22save_image%22%3A%220%22%2C%22backgroundColor%22%3A%22%230F0F11%22%2C%22gridColor%22%3A%22rgba(255%2C255%2C255%2C0.05)%22%2C%22studies%22%3A%22Volume%40tv-basicstudies%22%2C%22theme%22%3A%22dark%22%2C%22style%22%3A%221%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22withdateranges%22%3A%221%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22yutnvfddkjqc.space.minimax.io%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22BINANCE%3ABTCUSDT%22%2C%22page-uri%22%3A%22yutnvfddkjqc.space.minimax.io%2Flab.html%22%7D"
+    ],
+    "file_name": "payd_trading_lab_chart_interactions.json",
+    "chart_interaction_analysis": {
+        "custom_chart_implementation_found": false,
+        "interaction_handlers_found": [],
+        "chart_type": "TradingView iframe widget embed",
+        "interaction_handlers_disabled": "Not applicable - no custom handlers exist; TradingView widget handles all interactions natively with default enabled state",
+        "notes": "The page does not contain custom JavaScript code for chart interactions. The chart is rendered via a TradingView iframe embed URL (s.tradingview.com/widgetembed/) which handles all mouse drag, pan, zoom, and wheel events internally. No terms matching 'mouseDown', 'mouseUp', 'mouseMove', 'wheel', 'subscribeCrosshairMove', 'timeScale().scrollTo', 'subscribeClick', 'handleScroll', or 'handleScale' were found in the extracted page content."
+    }
+}
+```
