@@ -6,7 +6,7 @@
 
 const { chromium } = require('playwright');
 
-const URL = 'https://2sa10j1ugjik.space.minimax.io/lab.html';
+const URL = 'https://vy5bg8qu0pag.space.minimax.io/lab.html';
 
 // ID сценариев, которые нужно проверить
 const TARGET_SCENARIOS = [1, 2, 3, 5, 10];
