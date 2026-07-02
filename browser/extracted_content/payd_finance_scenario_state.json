@@ -1,0 +1,32 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://swmr97ocp5zv.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://swmr97ocp5zv.space.minimax.io/",
+    "summary": "Payd_Finance is an AI-powered SaaS crypto trading and education platform. The page combines AI market analysis, educational modules, and trading practice. The main feature is PAYD Trading Lab — an interactive simulator with 4 practical modules covering levels, entry confirmation (BOS/CHOCH), market context, and risk management. The platform also includes a Trading Terminal with TradingView charts, AI market analysis (regime detection, volatility, momentum), smart indicators, and a 200+ trading scenarios library. Features include Blind Chart, Risk Calculator, Trade Journal, Decision Score, Mistake Map, and Skill Passport. Subscription plans start at $29/month (Basic) and $79/month (Premium).",
+    "key_points": [
+        "Module/Scenario launched: МОДУЛЬ 1 — 'Почему уровень сам по себе ничего не значит' (Why a level alone means nothing); loading indicator shows 'Загрузка сценария 1…' (Loading scenario 1…)",
+        "Trading pair displayed: BTC/USDT (Binance perpetual — BINANCE:BTCUSDT.P) in the TradingView iframe widget",
+        "Real candles on chart: NOT yet visible — chart is in loading state. All price fields show 'Loading...' or '∅' (empty/zero). Volume, Open, High, Low, Close values are all empty. The trading terminal shows 'Анализ Module X…' (Module X analysis…) still loading.",
+        "Badge 'Future hidden (real market)': YES — visible. The badge shows '● LIVE' and 'Future hidden' indicator near the chart area",
+        "Errors/modals: YES — there are error messages visible: 'Ошибка: Failed to fetch' (Error: Failed to fetch) with 'Закрыть' (Close) and '→ Следующий сценарий' (Next scenario) buttons; also '~ Ошибка загрузки• Failed to fetch' in the Practice (Module 2) section. These indicate API fetch failures.",
+        "AI Market Regime analysis is still running: shows 'Анализ...' with '--%' confidence",
+        "All metric values (Trend, Volatility, Volume, ATR, RSI, etc.) show '-' indicating data not yet loaded",
+        "Trading Terminal offers multiple symbols: BTC/USDT, ETH/USDT, SOL/USDT, BNB/USDT, XRP/USDT, ADA/USDT, DOGE/USDT, AVAX/USDT, LINK/USDT, MATIC/USDT",
+        "Timeframes available: 1m, 5m, 15m, 1H, 4H, 1D, 1W",
+        "Market data widgets show Bitcoin at $67,432.00 (+2.34%), Open Interest $38.2B, Funding Rate 0.0125% (Positive), L/S Ratio 1.09 (Bullish), 24h Volume $42.8B"
+    ],
+    "relevant_links": [
+        "https://swmr97ocp5zv.space.minimax.io/#features",
+        "https://swmr97ocp5zv.space.minimax.io/#education-how-it-works",
+        "https://swmr97ocp5zv.space.minimax.io/#how-it-works",
+        "https://swmr97ocp5zv.space.minimax.io/#benefits",
+        "https://swmr97ocp5zv.space.minimax.io/#cta",
+        "https://s.tradingview.com/widgetembed/?hideideas=1&symbol=BINANCE:BTCUSDT.P&interval=60"
+    ],
+    "file_name": "payd_finance_scenario_state.json"
+}
+```

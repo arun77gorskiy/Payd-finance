@@ -3,23 +3,37 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Интегрировать Trading Terminal внутрь вкладки «Обучение» в index.html",
-        "details": "1) Скопировать CSS-стили Trading Terminal из lab.html в index.html\n2) Добавить HTML-разметку Trading Terminal (toolbar, chart, sidebar, decision panel) в edu-content-trading-lab\n3) Подключить скрипты Trading Terminal (trading-terminal.js, trading-terminal-tab.js, TV.js)\n4) Переделать баннер — ссылку на /lab.html#terminal заменить на внутреннюю кнопку\n5) Добавить функции openLabTerminal/backToLabTerminal и обновить switchLabTab\n6) Деплой и проверка",
+        "content": "Модифицировать ModuleXRenderer.js: добавить LIMITS, viewport-фильтрацию, поддержку Support/Resistance",
+        "details": "",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Создать реалистичный генератор свечных сценариев",
-        "details": "1) Создать realisticCandleBuilder.js с конструкторами:\n   - buildTrendSequence (HH-HL-HH, LH-LL-LH, консолидация, импульс+коррекция)\n   - buildPriceActionPattern (Pin Bar, Engulfing, Harami, Doji, Morning/Evening Star, Inside Bar, Tweezer)\n   - buildSmartMoneyStructure (BOS, CHOCH, Order Block, FVG, Liquidity Sweep, Equal Highs/Lows)\n2) Переопределить generateCandles и applyPattern в ScenarioLibrary.js\n3) Обеспечить реалистичные пропорции тел/теней и естественную волатильность\n4) Деплой и проверка",
-        "status": "in_progress",
+        "content": "Добавить фильтры по категориям (Market Structure, Smart Money, Price Action, Volume, Liquidity, Support/Resistance) в renderer",
+        "details": "",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Финальное тестирование и деплой",
-        "details": "1) Проверить вкладку «Обучение → PAYD Trading Lab»\n2) Проверить, что Trading Terminal открывается внутри\n3) Проверить, что свечные сценарии выглядят реалистично\n4) Деплой финальной версии",
-        "status": "pending",
+        "content": "Создать панель фильтров в lab-trainer-component.js с тогглами и настройкой лимитов",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "4": {
+        "id": "4",
+        "content": "Подключить live-обновление при появлении новых свечей (обновление viewport)",
+        "details": "",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "5": {
+        "id": "5",
+        "content": "Развернуть и протестировать на реальном TradingView-графике",
+        "details": "",
+        "status": "completed",
         "priority": "high"
       }
     }

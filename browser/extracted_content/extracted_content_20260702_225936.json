@@ -1,0 +1,31 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://swmr97ocp5zv.space.minimax.io/
+
+Extracted content:
+```json
+{
+  "title": "Payd_Finance | AI Crypto Trading & Education",
+  "url": "https://swmr97ocp5zv.space.minimax.io/",
+  "summary": "Payd_Finance is an AI-powered SaaS crypto trading and education platform combining institutional-grade market analysis, AI signals, and an interactive Trading Lab with practical scenarios. The site features real-time market data (BTC, ETH, SOL), AI Market Regime detection, smart indicators (Market Structure, Volume Intelligence, Volatility Regime, Momentum Score, Signal Generator), and an AI Scanner with confidence levels. The Trading Lab includes 4 educational modules (levels/BOS-CHOCH/risk management), Blind Chart exercises, Risk Calculator, Trade Journal, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The platform offers pricing tiers (Basic $29/mo, Premium $79/mo) and targets both beginners and active traders.",
+  "key_points": [
+    "Упоминание 'Фильтры Module X' найдено в DOM страницы",
+    "Расположение: внутри модальной/боковой панели модулей (Modules)",
+    "Контекст: блок '🎛️ Фильтры Module X ▾' с раскрывающимся заголовком",
+    "Внутри фильтров содержатся чекбоксы/переключатели для следующих категорий: Market Structure, Smart Money, Price Action, Volume, Liquidity, Support/Resistance, FVG",
+    "Рядом с фильтрами отображаются числовые счетчики найденных паттернов: Order Blocks (2), BOS (1), CHoCH (1), MSS (1), Displacement (2), Liquidity Sweep (2), Support (2), Resistance (2)",
+    "Присутствует кнопка 'Сбросить' для сброса фильтров",
+    "Module X также упоминается в других местах DOM: '🔍 Module X ⮜' (заголовок боковой панели), 'Автоматический анализ графика' (описание), 'Анализ Module X в реальном времени' (в секции Trading Terminal), 'Сводка Module X' с полями Bias/Confidence/Context/Signals",
+    'Связанные элементы интерфейса: вкладки "👁️Training", "📝Exam", "⚙️Custom" и секции "📐 Структура рынка", "💰 Smart Money", "💧 Ликвидность", "🎯 Price Action"',
+    "Сценарий работы: 'Загрузка сценария 1…' и панель '📐 Торговая позиция' с полями Entry/Stop Loss/Take Profit",
+    "В нижней части панели фильтров Module X присутствуют блоки '✓ Результат —' и '✕ Ошибка: Failed to fetch'"
+  ],
+  "relevant_links": [
+    "#features",
+    "#education-how-it-works",
+    "#how-it-works",
+    "#benefits",
+    "#cta"
+  ],
+  "file_name": "module_x_filters_extraction.json"
+}
+```
