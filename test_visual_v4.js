@@ -2,8 +2,8 @@
 const { chromium } = require('playwright');
 const fs = require('fs');
 
-const URL = 'https://zcskwb63t8il.space.minimax.io/lab.html';
-const TRANSITIONS = 20;
+const URL = 'https://pkczabpmnf37.space.minimax.io/lab.html';
+const TRANSITIONS = 10;
 
 (async () => {
     const browser = await chromium.launch({ headless: true });
