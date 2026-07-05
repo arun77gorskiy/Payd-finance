@@ -1,6 +1,7 @@
 // test_integrated_learning.js
-// Проверяет интегрированный режим обучения/практики внутри вкладки "Modules"
-// (в текущей реализации — переключатель "Сценарии"/"Модули")
+// Проверяет state machine внутри ОДНОГО контейнера #lab-education-host
+// Режимы: grid (6 уровней) → lesson (список уроков) → terminal (контент урока) → grid
+// Без отдельного блока "Модули" и без переключателя.
 
 const { chromium } = require('playwright');
 const path = require('path');
@@ -13,10 +14,11 @@ if (!fs.existsSync(SCREENSHOTS_DIR)) {
 
 const LAB_URL = 'file://' + path.resolve(__dirname, 'public/lab.html');
 
+let passed = 0, failed = 0;
 function log(step, ok, detail = '') {
     const icon = ok ? '✅' : '❌';
-    const msg = `${icon} ${step}${detail ? ' — ' + detail : ''}`;
-    console.log(msg);
+    console.log(`${icon} ${step}${detail ? ' — ' + detail : ''}`);
+    if (ok) passed++; else failed++;
     if (!ok) process.exitCode = 1;
     return ok;
 }
@@ -30,132 +32,169 @@ async function shot(page, name) {
     const context = await browser.newContext({ viewport: { width: 1440, height: 900 } });
     const page = await context.newPage();
 
-    // Сбор консольных сообщений
     const consoleErrors = [];
     page.on('console', (msg) => {
         if (msg.type() === 'error') {
             const text = msg.text();
-            // Игнорируем ожидаемые ошибки при работе с file://:
-            //  - CORS / сетевые ошибки от попыток фетча с Binance
-            //    (наш fetch-враппер перехватывает их и подменяет ответом,
-            //    но браузер всё равно логирует сам факт неудачной HTTP-загрузки)
             if (
                 text.includes('binance.com') ||
                 text.includes('ERR_FAILED') ||
                 text.includes('ERR_FILE_NOT_FOUND') ||
                 text.includes('CORS')
-            ) {
-                return;
-            }
+            ) return;
             consoleErrors.push(text);
         }
     });
     page.on('pageerror', (err) => consoleErrors.push('PAGE ERROR: ' + err.message));
 
     try {
-        // ===== ШАГ 1: открыть lab.html =====
-        console.log('\n[STEP 1] Открытие lab.html');
+        // ===== ШАГ 1: открыть lab.html и сразу перейти на вкладку "Сценарии" (modules) =====
+        console.log('\n[STEP 1] Открытие lab.html, вкладка "Сценарии"');
         await page.goto(LAB_URL, { waitUntil: 'domcontentloaded' });
         await page.waitForTimeout(800);
 
-        // ===== ШАГ 2: по умолчанию активен "Сценарии" (= "Обучение") и виден #lab-education-host =====
-        console.log('\n[STEP 2] Проверка режима по умолчанию');
-        const scenariosActive = await page.evaluate(() => {
-            const btn = document.getElementById('lab-mode-tab-scenarios');
-            return btn ? btn.className.includes('border-accent-500') : false;
-        });
-        log('Кнопка "Сценарии" активна по умолчанию', scenariosActive);
-
-        const educationVisible = await page.locator('#lab-education-host').isVisible();
-        log('Контейнер #lab-education-host виден', educationVisible);
-
-        const practiceHidden = !(await page.locator('#lab-cards-mode').isVisible());
-        log('Контейнер #lab-cards-mode скрыт', practiceHidden);
-
-        await shot(page, '01_default_scenarios_active');
-
-        // ===== ШАГ 3: в #lab-education-host отрендерились 6 карточек уровней =====
-        console.log('\n[STEP 3] Проверка 6 карточек уровней');
+        // Убедимся, что вкладка "Modules" (= "Сценарии") активна
+        await page.click('#lab-tab-modules');
         await page.waitForTimeout(500);
-        // Карточки уровней имеют текст "Уровень N"
+        await shot(page, '01_scenarios_tab_active');
+
+        // ===== ШАГ 2: проверка, что 6 карточек уровней в ОДНОМ контейнере =====
+        console.log('\n[STEP 2] Проверка 6 карточек уровней в #lab-education-host');
+
+        // Один контейнер — это и есть требование
+        const hostExists = await page.locator('#lab-education-host').count();
+        log('Контейнер #lab-education-host существует', hostExists === 1, `найдено: ${hostExists}`);
+
+        // Проверим, что НЕТ других контейнеров уровней/модулей
+        const oldHostCount = await page.locator('#lab-cards-mode, #lab-trainer-mode, #lab-mode-tab-scenarios, #lab-mode-tab-modules').count();
+        log('Старые контейнеры и переключатель удалены', oldHostCount === 0, `найдено: ${oldHostCount}`);
+
+        // Проверим, что в #lab-education-host 6 карточек
         const levelCount = await page.locator('#lab-education-host >> text=/Уровень \\d/').count();
-        log('Найдено 6 карточек уровней', levelCount === 6, `найдено: ${levelCount}`);
+        log('В #lab-education-host отрендерены 6 карточек уровней', levelCount === 6, `найдено: ${levelCount}`);
 
-        // Доп. проверка: заголовок "Learning Center" должен быть
+        // Заголовок Learning Center
         const hasHeader = await page.locator('#lab-education-host >> text=Learning Center').isVisible();
-        log('Заголовок Learning Center отображается', hasHeader);
+        log('Заголовок "Learning Center" отображается', hasHeader);
 
-        await shot(page, '02_levels_rendered');
+        await shot(page, '02_grid_state');
 
-        // ===== ШАГ 4: кликнуть на кнопку "Модули" (= "Практика") =====
-        console.log('\n[STEP 4] Клик по кнопке "Модули"');
-        await page.click('#lab-mode-tab-modules');
-        await page.waitForTimeout(400);
-        await shot(page, '03_modules_active');
+        // ===== ШАГ 3: кликнуть на "Уровень 1" → state = lessons =====
+        console.log('\n[STEP 3] Клик на "Уровень 1" — переход в state="lessons"');
+        await page.click('#lab-education-host >> text=Уровень 1');
+        await page.waitForTimeout(500);
+        await shot(page, '03_lessons_state');
 
-        // ===== ШАГ 5: #lab-education-host скрыт, #lab-cards-mode виден =====
-        console.log('\n[STEP 5] Проверка переключения областей');
-        const educationHidden = !(await page.locator('#lab-education-host').isVisible());
-        log('#lab-education-host скрыт', educationHidden);
+        // В списке уроков должна быть кнопка "← Назад к сценариям"
+        const backToScenariosBtn1 = await page.locator('#lab-education-host >> text=← Назад к сценариям').isVisible();
+        log('Кнопка "← Назад к сценариям" есть в списке уроков', backToScenariosBtn1);
 
-        const cardsVisible = await page.locator('#lab-cards-mode').isVisible();
-        log('#lab-cards-mode виден', cardsVisible);
+        // Проверим, что в #lab-education-host появились 6 уроков (карточки с разделами)
+        const lessonCardsCount = await page.locator('#lab-education-host >> text=/разделов/').count();
+        log('В списке 6 уроков', lessonCardsCount === 6, `найдено: ${lessonCardsCount}`);
 
-        // Проверим стиль кнопок
-        const modulesBtnActive = await page.evaluate(() => {
-            const btn = document.getElementById('lab-mode-tab-modules');
-            return btn ? btn.className.includes('border-accent-500') : false;
+        // ===== ШАГ 4: открыть урок 6 → state = terminal =====
+        console.log('\n[STEP 4] Открыть урок 6 — переход в state="lesson" (terminal)');
+        // Кликаем через API LearningCenterUI, чтобы не зависеть от DOM-селекторов
+        await page.evaluate(() => {
+            if (window.LearningCenterUI && typeof window.LearningCenterUI.openLesson === 'function') {
+                window.LearningCenterUI.openLesson(1, 6);
+            }
         });
-        log('Кнопка "Модули" стала активной (белая с акцентом)', modulesBtnActive);
+        await page.waitForTimeout(500);
+        await shot(page, '04_lesson_state');
 
-        // ===== ШАГ 6: внутри 4 карточки практических модулей =====
-        console.log('\n[STEP 6] Проверка 4 карточек практических модулей');
-        const moduleCount = await page.locator('#lab-cards-mode >> text=/МОДУЛЬ \\d/').count();
-        log('Найдено 4 карточки практических модулей', moduleCount === 4, `найдено: ${moduleCount}`);
+        const lesson6Visible = await page.locator('#lab-education-host >> text=Урок 6 из 6').isVisible();
+        log('Виден контент Урока 6', lesson6Visible);
 
-        // Проверим, что у каждой карточки есть кнопка "Начать сценарий"
-        const startButtonsCount = await page.locator('#lab-cards-mode >> text=Начать сценарий').count();
-        log('У всех модулей есть кнопка "Начать сценарий"', startButtonsCount === 4, `найдено: ${startButtonsCount}`);
+        // В уроке 6 должна быть кнопка "Перейти в Trading Terminal"
+        const goToTerminalBtn = await page.locator('#lab-education-host >> text=Перейти в Trading Terminal').isVisible();
+        log('Кнопка "▶ Перейти в Trading Terminal" есть', goToTerminalBtn);
 
-        await shot(page, '04_practice_modules_visible');
+        // В уроке 6 тоже должна быть кнопка "← Назад к сценариям"
+        const backToScenariosBtn2 = await page.locator('#lab-education-host >> text=← Назад к сценариям').isVisible();
+        log('Кнопка "← Назад к сценариям" есть в уроке 6', backToScenariosBtn2);
 
-        // ===== ШАГ 7: кликнуть обратно на "Сценарии" =====
-        console.log('\n[STEP 7] Возврат в режим "Сценарии"');
-        await page.click('#lab-mode-tab-scenarios');
-        await page.waitForTimeout(400);
-        await shot(page, '05_back_to_scenarios');
+        // ===== ШАГ 5: нажать "← Назад к сценариям" → state = grid =====
+        console.log('\n[STEP 5] Возврат по "← Назад к сценариям" в state="grid"');
+        await page.click('#lab-education-host >> text=← Назад к сценариям');
+        await page.waitForTimeout(500);
+        await shot(page, '05_back_to_grid');
 
-        // Финальные проверки
-        const educationVisibleAgain = await page.locator('#lab-education-host').isVisible();
-        log('#lab-education-host снова виден', educationVisibleAgain);
+        const levelCountAfter = await page.locator('#lab-education-host >> text=/Уровень \\d/').count();
+        log('Снова 6 карточек уровней', levelCountAfter === 6, `найдено: ${levelCountAfter}`);
 
-        const cardsHiddenAgain = !(await page.locator('#lab-cards-mode').isVisible());
-        log('#lab-cards-mode снова скрыт', cardsHiddenAgain);
+        const learningCenterHeader = await page.locator('#lab-education-host >> text=Learning Center').isVisible();
+        log('Заголовок "Learning Center" снова виден', learningCenterHeader);
 
-        const levelCountAgain = await page.locator('#lab-education-host >> text=/Уровень \\d/').count();
-        log('Снова 6 карточек уровней', levelCountAgain === 6, `найдено: ${levelCountAgain}`);
+        // Проверим, что всё в одном контейнере, других блоков уровней/модулей нет
+        const stillOneContainer = await page.locator('#lab-cards-mode, #lab-trainer-mode, [id*="mode-tab"]').count();
+        log('Всё ещё один контейнер, никаких дополнительных блоков', stillOneContainer === 0, `найдено: ${stillOneContainer}`);
 
-        const scenariosActiveAgain = await page.evaluate(() => {
-            const btn = document.getElementById('lab-mode-tab-scenarios');
-            return btn ? btn.className.includes('border-accent-500') : false;
+        // ===== ШАГ 6: проверка перехода в Trading Terminal =====
+        console.log('\n[STEP 6] Проверка перехода в Trading Terminal по кнопке');
+        // Снова откроем урок 6 уровня 1 через API
+        await page.evaluate(() => {
+            if (window.LearningCenterUI && typeof window.LearningCenterUI.openLesson === 'function') {
+                window.LearningCenterUI.openLesson(1, 6);
+            }
         });
-        log('Кнопка "Сценарии" снова активна', scenariosActiveAgain);
+        await page.waitForTimeout(300);
+        await page.click('#lab-education-host >> text=Перейти в Trading Terminal');
+        await page.waitForTimeout(800);
+        await shot(page, '06_terminal_active');
 
-        // ===== Проверка отсутствия критических ошибок =====
+        // Проверим, что вкладка Terminal активна
+        const terminalActive = await page.evaluate(() => {
+            const btn = document.getElementById('lab-tab-terminal');
+            return btn && btn.classList.contains('active');
+        });
+        log('Вкладка Trading Terminal стала активной', terminalActive);
+
+        const terminalPaneVisible = await page.locator('#lab-pane-terminal').isVisible();
+        log('Панель #lab-pane-terminal видна', terminalPaneVisible);
+
+        // ===== ШАГ 7: возврат в сценарии через вкладку =====
+        console.log('\n[STEP 7] Возврат на вкладку "Сценарии" — состояние восстановлено');
+        await page.click('#lab-tab-modules');
+        await page.waitForTimeout(800);
+        await shot(page, '07_back_to_scenarios_via_tab');
+
+        // После возврата пользователь должен попасть на тот же view, на котором был
+        // до перехода в Trading Terminal — на урок 6 уровня 1
+        const lesson6StillVisible = await page.locator('#lab-education-host >> text=Урок 6 из 6').isVisible();
+        log('Урок 6 сохранён (state machine восстановила состояние)', lesson6StillVisible);
+
+        // Кнопка "← Назад к сценариям" должна быть
+        const backBtnAfter = await page.locator('#lab-education-host >> text=← Назад к сценариям').isVisible();
+        log('Кнопка "← Назад к сценариям" видна после возврата', backBtnAfter);
+
+        // Кнопка "Перейти в Trading Terminal" должна быть (т.к. мы на уроке 6)
+        const terminalBtnAfter = await page.locator('#lab-education-host >> text=Перейти в Trading Terminal').isVisible();
+        log('Кнопка "▶ Перейти в Trading Terminal" видна после возврата', terminalBtnAfter);
+
+        // И наконец проверим, что "← Назад к сценариям" возвращает в grid
+        await page.click('#lab-education-host >> text=← Назад к сценариям');
+        await page.waitForTimeout(500);
+        const levelCountFinal = await page.locator('#lab-education-host >> text=/Уровень \\d/').count();
+        log('Финальный возврат к 6 карточкам уровней', levelCountFinal === 6, `найдено: ${levelCountFinal}`);
+
+        // ===== Проверка консоли =====
         console.log('\n[CONSOLE] Проверка отсутствия критических ошибок');
         log('Нет критических ошибок в консоли', consoleErrors.length === 0,
             consoleErrors.length ? consoleErrors.join(' | ') : '');
 
     } catch (err) {
         log('Необработанная ошибка теста', false, err.message);
-        await shot(page, '99_error_state');
+        try { await shot(page, '99_error_state'); } catch (e) {}
     } finally {
         await browser.close();
     }
 
-    if (process.exitCode === 1) {
-        console.log('\n❌ ТЕСТ ПРОВАЛЕН');
+    console.log(`\n=== ИТОГ: ${passed} ✅ / ${failed} ❌ ===`);
+    if (failed > 0) {
+        console.log('❌ ТЕСТ ПРОВАЛЕН');
     } else {
-        console.log('\n✅ ВСЕ ПРОВЕРКИ ПРОЙДЕНЫ');
+        console.log('✅ ВСЕ ПРОВЕРКИ ПРОЙДЕНЫ');
     }
 })();
