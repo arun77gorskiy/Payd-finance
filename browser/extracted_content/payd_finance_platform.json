@@ -1,39 +1,33 @@
-📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
-URL: https://dxu5q3ygshbp.space.minimax.io/
+📄 Extracted from page: lt-chart-hud EXISTS: <span class="lt-hud-pill" style="border-color:rgba(212,175,55,0.35);" title="Общее число свечей в сценарии"><span class="lt-hud-label">🕯 CANDLES</span> 175</span>
+URL: https://42ywf19x5nj4.space.minimax.io/
 
 Extracted content:
 ```json
 {
-    "title": "Payd_Finance | AI Crypto Trading & Education",
-    "url": "https://dxu5q3ygshbp.space.minimax.io/",
-    "summary": "Payd_Finance is a cryptocurrency trading and education platform that combines AI-powered analytics with structured learning. It is presented as a SaaS platform offering institutional-grade AI analysis, real-time market data for top cryptocurrencies (BTC, ETH, SOL, etc.), and an integrated educational environment called 'PAYD Trading Lab'. The platform includes features such as Blind Chart, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. It also features a Trading Terminal with TradingView charts, practice scenarios across 200+ situations, structured courses (Market Awareness, Evidence, Execution, Risk Architecture), and subscription tiers (Basic $29/mo, Premium $79/mo). The page emphasizes a data-driven approach without emotional trading.",
+    "title": "Payd_Finance - AI Crypto Trading Platform",
+    "url": "https://42ywf19x5nj4.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS crypto trading and education platform combining AI-driven market analysis, trading logic, and learning modules. The page presents the PAYD Trading Lab with features including Blind Chart, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The site displays real-time market data (BTC, ETH, SOL), AI Market Regime analysis (bullish trend, 85% confidence), and includes 4 educational modules with 200+ scenarios and 36 theory lessons. Pricing tiers are Basic ($29/month) and Premium ($79/month). A chart HUD element exists with id 'lt-chart-hud' containing a 'lt-hud-pill' child showing '🕯 CANDLES 175'. The platform uses TradingView widgets for BTC/USDT charts.",
     "key_points": [
-        "Platform Type: Cryptocurrency trading and education SaaS platform",
-        "BTC Price displayed: $61,650.24 (+2.45%) at top of page, $61,646 in market overview",
-        "BTC Price in dashboard: $61,646.01 with -0.08% change",
-        "DEMO indicator found: 'Начать с демо' (Start with demo) button/CTA, 'Начать с демо-доступа' (Start with demo access), 7 days free, no card required",
-        "Navigation to Trading Lab: 'PAYD Trading Lab' section accessible via navigation and #education-how-it-works anchor",
-        "Navigation links found: #features (Функционал), #education-how-it-works (Обучение), #how-it-works (Как это работает), #benefits (Преимущества)",
-        "Trading Lab Trainer section exists with 5 educational stages: Understand (Понять), Analyze (Проанализировать), Make a decision (Принять решение), Launch market (Запустить рынок), Get review (Получить разбор)",
-        "AI Accuracy claimed: 94.2%",
-        "Market data includes: Open Interest $38.2B, Funding Rate 0.0125%, L/S Ratio 1.09, 24h Volume $42.8B",
-        "Top cryptocurrencies tracked: BTC, ETH, SOL, XRP, BNB, DOGE, ADA, AVAX, LINK, MATIC",
-        "AI Market Regime indicator: Uptrend with low volatility, 85% AI confidence",
-        "Subscription pricing: Basic $29/month (50 scenarios), Premium $79/month (200+ scenarios, Mistake Map, Skill Passport, Personal mentor)",
-        "TradingView integration for charts with timeframes 1m to 1W",
-        "Disclaimer: Educational and analytical platform, no financial advice"
+        "lt-chart-hud element EXISTS with one child span of class 'lt-hud-pill'",
+        "The lt-hud-pill has inline style border-color:rgba(212,175,55,0.35) and title='Общее число свечей в сценарии'",
+        "Pill contains a nested span.lt-hud-label with text '🕯 CANDLES' followed by ' 175'",
+        "Estimated JS console output: TAG: SPAN, CHILDREN: 1, OUTER_HTML_LENGTH: ~199, FULL_HTML_START shows the lt-hud-pill span with nested label",
+        "Platform is an AI-powered crypto trading education SaaS product",
+        "Current market regime: Bullish trend with low volatility, 85% AI confidence",
+        "Four training modules covering levels, entry confirmation, market context, and risk management",
+        "Pricing: Basic $29/month, Premium $79/month with personal mentor",
+        "Includes TradingView chart widgets for BTCUSDT perpetual and spot pairs",
+        "Real-time BTC price displayed at $63,786.01 with -0.09% change",
+        "Features Blind Chart, Risk Calculator, Trade Journal, Decision Score, Mistake Map, Skill Passport"
     ],
     "relevant_links": [
-        "#features (Функционал - Functionality)",
-        "#education-how-it-works (Обучение - Education)",
-        "#how-it-works (Как это работает - How it works)",
-        "#benefits (Преимущества - Benefits)",
-        "#cta (Начать с демо - Start with demo)",
-        "Modules section (📚)",
-        "Trading Terminal section (💹)",
-        "Progress/Dashboard section (📊)",
-        "Courses: Market Awareness, Evidence, Execution, Risk Architecture",
-        "Pricing section: Basic $29/mo, Premium $79/mo"
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#cta",
+        "TradingView widget: https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT.P",
+        "TradingView widget: https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT"
     ],
     "file_name": "payd_finance_platform.json"
 }

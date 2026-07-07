@@ -1,0 +1,30 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://195nkg71csyp.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://195nkg71csyp.space.minimax.io/",
+    "summary": "Payd_Finance is an AI-powered crypto trading and education SaaS platform that combines market analysis, deep learning, and trading logic in one ecosystem. The page presents features including real-time market data (Bitcoin, Ethereum, Solana), AI Market Regime analysis, blind chart training, risk calculator, trade journal, market structure analysis, volume analysis, signal generator, market replay, and decision scoring. The flagship product is PAYD Trading Lab with educational modules covering levels, entry confirmation, market context, and risk management. It includes a Trading Terminal with TradingView charts and Module X analysis (Structure, Smart Money, Liquidity, Price Action). The goal of finding CANDLES, HUD, pill, lt-chart-hud, or candleCount yielded only one direct reference: '🕯 CANDLES 175 (видно: 175)' — a pill/badge displaying candle count near the chart in Module 1's scenario interface. The chart structure consists of: a TradingView iframe widget as the main chart, an overlay pill/badge showing total/visible candle count (e.g., 175/175 candles), a LEFT HUD panel for Module X analysis (auto chart analysis with Training/Exam/Custom modes, Market Structure, Smart Money, Liquidity, Price Action tabs, detected patterns like MSS/FVG), a trade entry panel with Entry/SL/TP inputs and Long/Short/Wait/No Trade direction selectors, progress panel (scenarios, accuracy, score, R/R), and keyboard shortcuts (L/S/W/N/E/1/2/Enter/B/H/Esc). Hotkey 'B' collapses the panel, 'H' toggles toolbar visibility.",
+    "key_points": [
+        "CANDLES pill: '🕯 CANDLES 175 (видно: 175)' — pill/badge element near chart showing candle count (175 total, 175 visible) in Module 1 scenario",
+        "Chart structure: TradingView iframe widget (embedded chart) with parameters symbol=BINANCE:BTCUSDT.P, interval=60 (1H), dark theme, Open Interest study",
+        "Left HUD sidebar: 'Module X' auto chart analysis with tabs 📐 Структура рынка, 💰 Smart Money, 💧 Ликвидность, 🎯 Price Action",
+        "Module X modes: 👁️Training / 📝Exam / ⚙️Custom",
+        "Pattern detection in HUD: MSS (Market Structure Shift), FVG (Fair Value Gaps) — bull and bear — with price levels",
+        "Trading Terminal chart: symbol selector (BTC/ETH/SOL/BNB/XRP/ADA/DOGE/AVAX/LINK/MATIC), timeframes 1m/5m/15m/1H/4H/1D/1W, price info, OHLC volume",
+        "Trade entry panel: Long (L) / Short (S) / Wait (W) / No Trade (N) direction selectors + Entry/Stop Loss/Take Profit clickable chart markers",
+        "Module X analysis components: Market Structure (HH/HL/LH/LL, BOS/CHoCH), Smart Money (Order Blocks, FVG, Liquidity Sweeps), Price Action (Shooting Star, Inside Bar, Outside Bar), Volume (Ratio, Buying/Selling Pressure), Liquidity (Grab, Stop Hunt), Volatility (ATR), Momentum (RSI), Support/Resistance, Probability",
+        "Keyboard shortcuts: L=Long, S=Short, W=Wait, N=No Trade, E=Entry click, 1=Stop Loss, 2=Take Profit, Enter=confirm, B=collapse panel, H=toggle toolbar, Esc=cancel",
+        "Secondary TradingView iframe widget embedded with BINANCE:BTCUSDT, interval=60, Volume study, allow_symbol_change=1",
+        "Real-time market widgets show BTC/USDT 1H: ОТКР 64164.6, МАКС 64168.8, МИН 63930.6, ЗАКР 64004.2 (−0.25%), Volume 3K BTC",
+        "Educational methodology: 5-step process — Understand, Analyze, Decide, Replay market, Get review"
+    ],
+    "relevant_links": [
+        "https://s.tradingview.com/widgetembed/?hideideas=1&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=ru#BINANCE:BTCUSDT.P (TradingView iframe — primary chart)",
+        "https://s.tradingview.com/widgetembed/?hideideas=1&overrides=%7B%7D&enabled_features=%5B%5D&disabled_features=%5B%5D&locale=ru#BINANCE:BTCUSDT (TradingView iframe — Terminal chart with Volume study)"
+    ],
+    "file_name": "payd_finance_chart_structure.json"
+}
+```

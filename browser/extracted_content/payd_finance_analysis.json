@@ -1,0 +1,33 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://195nkg71csyp.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://195nkg71csyp.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS platform combining AI-powered crypto analytics, structured trading education, and practical tools. The page presents features including AI Market Regime detection (85% confidence, uptrend), real-time market data for BTC/ETH/SOL, trading education modules (PAYD Trading Lab), and interactive scenarios. Key products: Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport. Pricing tiers: Basic ($29/mo) and Premium ($79/mo). The platform uses TradingView iframes for live charting.",
+    "key_points": [
+        "Element '🕯 CANDLES 175 (видно: 175)' is located in the Module 1 scenario section 'Почему уровень сам по себе ничего не значит' - it appears in the training area near 'Бычий Pin Bar' card, indicating candles available for the scenario (175 visible).",
+        "CANDLES element is visible to user as part of the interactive learning interface, showing candle count for the trading scenario.",
+        "First TradingView iframe: https://s.tradingview.com/widgetembed/ - symbol BINANCE:BTCUSDT.P (Perpetual Contract), interval 60 (1H), dark theme, includes Open_Interest study. Located in the 'AI Market Analysis' section showing BTC/USDT chart with statistics (High 64188.00, Low 63956.15, Volume 574).",
+        "Second TradingView iframe: https://s.tradingview.com/widgetembed/ - symbol BINANCE:BTCUSDT, interval 60 (1H), dark theme, includes Volume study. Currently active in 'Trading Terminal' module with selectable symbols (BTC/USDT, ETH/USDT, SOL/USDT, BNB/USDT, XRP/USDT, ADA/USDT, DOGE/USDT, AVAX/USDT, LINK/USDT, MATIC/USDT) and timeframes (1m, 5m, 15m, 1H, 4H, 1D, 1W).",
+        "AI Market Regime: Уровень тренда восходящий, низкая волатильность, AI Confidence 85%.",
+        "Live crypto prices: BTC $64,120.01 (+0.56%), ETH $1,805 (+0.63%), SOL $82.26 (+0.50%).",
+        "Open Interest $38.2B (Long 52.3%, Short 47.7%), Funding Rate 0.0125%, L/S Ratio 1.09, 24h Volume $42.8B.",
+        "AI Accuracy: 94.2%.",
+        "Four training modules: M1 (уровень и подтверждение), M2 (BOS/CHOCH), M3 (рыночный контекст), M4 (управление риском).",
+        "Pricing: Basic $29/mo (50 scenarios), Premium $79/mo (200+ scenarios + mentor)."
+    ],
+    "relevant_links": [
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#cta",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT.P&interval=60",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT&interval=60"
+    ],
+    "file_name": "payd_finance_analysis.json"
+}
+```

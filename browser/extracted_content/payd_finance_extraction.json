@@ -1,41 +1,39 @@
 📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
-URL: https://4ij5ha2h9y3o.space.minimax.io/index.html
+URL: https://6w9sup08l8v3.space.minimax.io/
 
 Extracted content:
 ```json
 {
     "title": "Payd_Finance | AI Crypto Trading & Education",
-    "url": "https://4ij5ha2h9y3o.space.minimax.io/index.html",
-    "summary": "Payd_Finance is a SaaS platform that combines AI analytics, deep education, and trading logic for crypto trading. The page showcases features including AI Market Analysis (with real-time BTC, ETH, SOL data), PAYD Trading Lab (education modules, scenarios, courses), Smart Indicators (Market Structure, Volume Intelligence, Volatility Regime, Momentum Score, Signal Generator), and a Trading Dashboard for 500+ altcoins. Pricing tiers are Basic ($29/mo) and Premium ($79/mo). The page is in Russian and includes TradingView widget integration for BTC/USDT charts.",
+    "url": "https://6w9sup08l8v3.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS platform combining AI-driven crypto market analytics with structured trading education (PAYD Trading Lab). It offers real-time market data, AI market regime detection, smart indicators (Market Structure, Volume Intelligence, Volatility Regime, Momentum Score, Signal Generator), and a Trading Dashboard for 500+ altcoins. The educational component includes 4 modules (Levels, Entry Confirmation, Market Context, Risk Management), 200+ trading scenarios across 6 difficulty levels, 36 theory lessons, and tools like Blind Chart, Risk Calculator, Trade Journal, Trade Autopsy, Mistake Map, and Skill Passport. Pricing tiers: Basic ($29/mo, 50 scenarios) and Premium ($79/mo, 200+ scenarios, mentorship). TradingView widgets are embedded for live BTC/USDT charts.",
     "key_points": [
-        "The extraction goal asks for DOM element properties (classList and visibility state) for elements with IDs 'edu-content-trading-lab' and 'lab-cards-mode', which cannot be determined from static HTML content alone",
-        "Neither 'edu-content-trading-lab' nor 'lab-cards-mode' DOM element IDs are visible or referenced in the provided page content",
-        "Page offers AI-powered crypto trading analysis with 94.2% AI accuracy claim",
-        "PAYD Trading Lab includes 200+ trading scenarios, 5-step learning process, and tools like Blind Chart, Risk Calculator, Trade Journal, Market Replay, Decision Score",
-        "Four education modules covering levels, entry confirmation, market context, and risk management",
-        "Two pricing tiers: Basic ($29/month) and Premium ($79/month)",
-        "Integrates TradingView widget for live BTC/USDT perpetual chart",
-        "Content is primarily in Russian language"
+        "No element with id 'lt-chart-hud' was found in the page content",
+        "Platform combines AI crypto analytics with structured trading education",
+        "Real-time market data: BTC, ETH, SOL, XRP, BNB, DOGE with Open Interest, Funding Rate, L/S Ratio, 24h Volume",
+        "AI Market Regime detection (currently: Uptrend, Low Volatility, 85% confidence)",
+        "PAYD Trading Lab includes 4 modules with 200+ scenarios across 6 levels",
+        "Tools: Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport",
+        "Two pricing plans: Basic ($29/mo) and Premium ($79/mo with mentor)",
+        "AI-powered features include Narrative Engine, Risk/Opportunity Ranking, AI Scanner",
+        "Smart Indicators: Market Structure, Volume Intelligence, Volatility Regime, Momentum Score, Signal Generator",
+        "TradingView iframe widgets embedded for live BTC/USDT chart visualization"
     ],
     "relevant_links": [
-        "#features",
-        "#edu/trading-lab",
-        "#how-it-works",
-        "#benefits",
-        "#cta"
+        "https://6w9sup08l8v3.space.minimax.io/#features",
+        "https://6w9sup08l8v3.space.minimax.io/#education-how-it-works",
+        "https://6w9sup08l8v3.space.minimax.io/#how-it-works",
+        "https://6w9sup08l8v3.space.minimax.io/#benefits",
+        "https://6w9sup08l8v3.space.minimax.io/#cta",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT.P",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT",
+        "https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC.svg"
     ],
-    "dom_elements_requested": {
-        "edu-content-trading-lab": {
-            "status": "Not found in page content",
-            "classList": "Cannot be determined - element not present in static HTML extraction",
-            "visibility": "Cannot be determined - requires runtime DOM inspection"
-        },
-        "lab-cards-mode": {
-            "status": "Not found in page content",
-            "classList": "Cannot be determined - element not present in static HTML extraction",
-            "visibility": "Cannot be determined - requires runtime DOM inspection"
-        },
-        "note": "Static page extraction cannot provide getElementById().classList.toString() values or runtime visibility states. These require JavaScript execution in a browser environment to access the live DOM."
+    "lt_chart_hud_check": {
+        "exists": false,
+        "innerHTML_length": null,
+        "children_count": null,
+        "outerHTML": null
     },
     "file_name": "payd_finance_extraction.json"
 }

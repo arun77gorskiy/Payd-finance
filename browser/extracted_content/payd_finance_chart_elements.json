@@ -1,0 +1,77 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://195nkg71csyp.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://195nkg71csyp.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS platform combining AI-powered crypto market analysis with structured trading education. The site offers real-time market data (Bitcoin, Ethereum, Solana), AI Market Regime detection, institutional-grade analytics, and the PAYD Trading Lab with 200+ scenarios, 6 difficulty levels, and 36 theory lessons. Key features include Blind Chart, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The platform uses TradingView embedded widgets (iframes) for charts and offers pricing plans starting at $29/month.",
+    "key_points": [
+        "AI-powered crypto trading platform with educational components",
+        "Real-time market data for BTC ($64,128.81), ETH ($1,804), SOL ($82.28)",
+        "AI Market Regime: Bullish trend with 85% confidence, low volatility",
+        "PAYD Trading Lab with 4 modules covering levels, BOS/CHOCH, market context, risk management",
+        "Module 1 scenario features '🕯 CANDLES 175 (видно: 175)' indicator",
+        "200+ trading scenarios across 6 difficulty levels",
+        "Trading Terminal with full TradingView integration",
+        "Two pricing tiers: Basic ($29/mo) and Premium ($79/mo)",
+        "AI Accuracy reported at 94.2%",
+        "Embedding TradingView widgets via iframes from s.tradingview.com/widgetembed/",
+        "Chart symbols: BINANCE:BTCUSDT.P and BINANCE:BTCUSDT with 1H interval",
+        "Dark theme charts with custom background colors (#0F0F11 / rgba(15,15,17,1))",
+        "Disclaimer states platform is educational, not financial advice"
+    ],
+    "relevant_links": [
+        "https://195nkg71csyp.space.minimax.io/#features",
+        "https://195nkg71csyp.space.minimax.io/#education-how-it-works",
+        "https://195nkg71csyp.space.minimax.io/#how-it-works",
+        "https://195nkg71csyp.space.minimax.io/#benefits",
+        "https://195nkg71csyp.space.minimax.io/#cta",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT.P",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT",
+        "https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC.svg"
+    ],
+    "chart_elements": {
+        "found_text_matches": [
+            {
+                "text": "🕯 CANDLES 175 (видно: 175)",
+                "context": "Module 1 scenario header showing candle count and visible candles indicator",
+                "location": "Module 1 scenario section"
+            }
+        ],
+        "tradingview_iframes": [
+            {
+                "frameElementId": "tradingview_4b934",
+                "symbol": "BINANCE:BTCUSDT.P",
+                "interval": "60",
+                "theme": "dark",
+                "backgroundColor": "rgba(15, 15, 17, 1)",
+                "gridColor": "rgba(42, 46, 57, 0.2)",
+                "studies": "STD;Open_Interest",
+                "description": "TradingView chart widget for perpetual futures"
+            },
+            {
+                "frameElementId": "tradingview_017c6",
+                "symbol": "BINANCE:BTCUSDT",
+                "interval": "60",
+                "theme": "dark",
+                "backgroundColor": "#0F0F11",
+                "gridColor": "rgba(255,255,255,0.05)",
+                "studies": "Volume@tv-basicstudies",
+                "allow_symbol_change": "1",
+                "description": "TradingView chart widget for spot BTC/USDT"
+            }
+        ],
+        "chart_containers": [
+            "AI Market Analysis section with BTC/USDT chart container",
+            "Trading Terminal section with TradingView embed",
+            "Module 1 scenario chart area (loading state shown)",
+            "Real-Time Market Data section (Market Overview)"
+        ],
+        "note": "No elements with exact class 'lt-chart-hud' were found in the static page content. The TradingView widgets use iframe embeds with custom configuration parameters rather than lt-chart-hud class names. The '🕯 CANDLES 175 (видно: 175)' text is a UI indicator showing the number of candles loaded/visible in the Module 1 scenario.",
+        "computed_styles_note": "Computed styles (display, visibility, opacity) are not available in static HTML extraction. Dynamic styles would require JavaScript execution in a browser environment."
+    },
+    "file_name": "payd_finance_chart_elements.json"
+}
+```

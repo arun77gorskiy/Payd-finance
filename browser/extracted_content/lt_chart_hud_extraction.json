@@ -1,0 +1,29 @@
+📄 Extracted from page: lt-chart-hud EXISTS: <span class="lt-hud-pill" style="border-color:rgba(212,175,55,0.35);" title="Общее число свечей в сценарии"><span class="lt-hud-label">🕯 CANDLES</span> 175</span>
+URL: https://42ywf19x5nj4.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "lt-chart-hud EXISTS: CANDLES 175",
+    "url": "https://42ywf19x5nj4.space.minimax.io/",
+    "summary": "The page is from Payd_Finance, an AI-powered crypto trading and education platform. The extraction goal focuses on the chart HUD element with id 'lt-chart-hud' located at the top of the trading chart. The HUD EXISTS and contains a pill with a '🕯 CANDLES' label showing the value 175 (representing the total number of candles in the scenario), styled with a gold/amber border (rgba(212,175,55,0.35)). The title attribute on the pill reads 'Общее число свечей в сценарии' (Total number of candles in the scenario). Within the Module 1 scenario area, additional chart header elements include the BINANCE:BTCUSDT label, a green LIVE indicator with text '● LIVE', the subtitle 'Future hidden (real market)', the scenario description 'Бычий Pin Bar / Длинный нижний хвост — тест спроса на откате' (Bullish Pin Bar / Long lower wick — demand test on pullback), and a difficulty badge showing 'intermediate'.",
+    "key_points": [
+        "Element id 'lt-chart-hud' EXISTS on the page",
+        "HUD contains a styled pill element with class 'lt-hud-pill' and gold border (rgba(212,175,55,0.35))",
+        "The pill displays label '🕯 CANDLES' with value 175",
+        "Tooltip on the pill: 'Общее число свечей в сценарии' (Total number of candles in scenario)",
+        "Chart area shows BINANCE:BTCUSDT label as the trading symbol",
+        "LIVE indicator present with green dot (●) followed by 'LIVE' text",
+        "Subtitle text: 'Future hidden (real market)'",
+        "Scenario description: 'Бычий Pin Bar' (Bullish Pin Bar) — 'Длинный нижний хвост — тест спроса на откате' (Long lower wick — demand test on pullback)",
+        "Difficulty badge displays 'intermediate' level",
+        "Belongs to Module 1: 'Почему уровень сам по себе ничего не значит' (Why the level alone means nothing)"
+    ],
+    "relevant_links": [
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT.P",
+        "https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC.svg"
+    ],
+    "file_name": "lt_chart_hud_extraction.json"
+}
+```

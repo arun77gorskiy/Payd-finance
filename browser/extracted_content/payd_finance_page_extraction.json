@@ -1,58 +1,40 @@
 📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
-URL: https://4ij5ha2h9y3o.space.minimax.io/index.html
+URL: https://195nkg71csyp.space.minimax.io/#cta
 
 Extracted content:
 ```json
 {
     "title": "Payd_Finance | AI Crypto Trading & Education",
-    "url": "https://4ij5ha2h9y3o.space.minimax.io/index.html",
-    "summary": "Payd_Finance is an AI-powered SaaS platform that combines cryptocurrency trading analytics, education, and trading logic into a unified ecosystem. The platform features real-time market data for Bitcoin, Ethereum, Solana, and other cryptocurrencies, AI-powered market regime analysis, and an educational component called 'PAYD Trading Lab'. The Trading Lab offers scenarios, courses, and tiered pricing plans, along with tools like Blind Chart, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The site targets novice traders, active traders, investors, and AI enthusiasts.",
+    "url": "https://195nkg71csyp.space.minimax.io/#cta",
+    "summary": "Payd_Finance is a SaaS platform that combines AI-driven crypto analytics, trading logic, and structured education into a single ecosystem. The platform offers real-time market data for top cryptocurrencies (BTC, ETH, SOL, XRP, BNB, DOGE), AI-powered market regime analysis (currently bullish trend with low volatility, 85% confidence), and institutional-grade indicators including Market Structure, Volume Intelligence, Volatility Regime (ATR), Momentum Score (RSI), and Signal Generator. The PAYD Trading Lab includes educational modules with practical scenarios, features such as Blind Chart, Risk Calculator, Trade Journal, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. It offers 200+ trading scenarios across 6 difficulty levels, 36 theory lessons, and structured courses (Market Awareness, Evidence, Execution, Risk Architecture). Pricing tiers include Basic ($29/mo) and Premium ($79/mo). The platform integrates TradingView widgets for live BTC/USDT charts.",
     "key_points": [
-        "The elements with IDs 'lab-cards-mode', 'lab-trainer-mode', and 'edu-content-trading-lab' were NOT FOUND in the rendered page content",
-        "No elements with class 'edu-content' were found in the rendered page content",
-        "Platform offers real-time market data for BTC, ETH, SOL, XRP, BNB, DOGE with AI analysis",
-        "PAYD Trading Lab features 5-stage learning process: Understand, Analyze, Decide, Launch Market, Get Review",
-        "Educational modules cover levels, entry confirmation, market context, and risk management",
-        "Pricing tiers: Basic ($29/month) and Premium ($79/month)",
-        "Core features include Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator",
-        "Target audience: Novices, active traders, investors, AI enthusiasts",
-        "Disclaimer states the platform is educational/analytical and does not provide financial advice",
-        "Includes TradingView widget integration for BTC/USDT perpetual contract chart"
+        "Element with id 'lt-chart-hud' was NOT found in the page content",
+        "Elements with class 'lt-hud-pill' were NOT found in the page content",
+        "AI System is Online v2.4 with 94.2% AI Accuracy",
+        "Current market regime: Bullish trend with low volatility, AI confidence 85%",
+        "BTC price: $63,486.30 (-0.42%), Open Interest $38.2B, Funding Rate 0.0125%",
+        "Long/Short ratio: 52.3% / 47.7% (Bullish, ratio 1.09)",
+        "24h Volume: $42.8B (+12.5% vs avg)",
+        "Risk/Opportunity Ranking: Risk 4.2/10, Opportunity 7.8/10",
+        "PAYD Trading Lab offers 200+ scenarios, 6 levels, 36 theory lessons",
+        "4 Educational modules: Levels & Confirmation, Entry Confirmation (BOS/CHOCH), Market Context, Risk Management",
+        "Courses: Market Awareness, Evidence, Execution, Risk Architecture",
+        "Pricing: Basic $29/month, Premium $79/month",
+        "TradingView widgets embedded for live BTC/USDT charts",
+        "Core features: Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport",
+        "Key indicators: ATR (14) 0.68%, RSI (14) 56.11, Volume Z-Score -0.81",
+        "Mistake patterns tracked: early entry, FOMO, stop relocation, entry without confirmation, trading against timeframe, exceeding risk",
+        "Narrative Engine current narrative: Institutional BTC demand growing on ETF approval, accumulation phase"
     ],
     "relevant_links": [
         "#features",
-        "#edu/trading-lab",
+        "#education-how-it-works",
         "#how-it-works",
         "#benefits",
-        "#cta"
+        "#cta",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT.P",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT"
     ],
-    "extraction_goal_results": {
-        "lab-cards-mode": {
-            "found": false,
-            "classes": null,
-            "visibility": null,
-            "note": "Element with ID 'lab-cards-mode' not found in page content"
-        },
-        "lab-trainer-mode": {
-            "found": false,
-            "classes": null,
-            "visibility": null,
-            "note": "Element with ID 'lab-trainer-mode' not found in page content"
-        },
-        "edu-content-trading-lab": {
-            "found": false,
-            "classes": null,
-            "visibility": null,
-            "note": "Element with ID 'edu-content-trading-lab' not found in page content"
-        },
-        "edu-content_elements": {
-            "found": false,
-            "count": 0,
-            "classes": null,
-            "visibility": null,
-            "note": "No elements with class 'edu-content' found in page content"
-        }
-    },
     "file_name": "payd_finance_page_extraction.json"
 }
 ```

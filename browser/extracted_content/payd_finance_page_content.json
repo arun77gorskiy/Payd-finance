@@ -1,0 +1,74 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://wm1vmc06vba7.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://wm1vmc06vba7.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS educational and analytical platform combining AI-powered crypto market analysis with structured trading education. The page contains an extensive trading education system with modules, scenarios, courses, and pricing tiers. Features include AI Market Analysis, Blind Chart training, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport, and a full Trading Terminal with TradingView charts.",
+    "key_points": [
+        "AI System Online v2.4 — AI-based crypto trading and education platform",
+        "Target: 94.2% AI Accuracy for market analysis",
+        "Real-Time Market Data: BTC $63,851.51 (+0.07%), Open Interest $38.2B, L/S Ratio 1.09 (Bullish), 24h Volume $42.8B",
+        "Market Overview tracks BTC, ETH, SOL with prices, highs, lows, and volumes",
+        "AI Market Regime: Bullish trend, Low volatility, AI Confidence 85%, recommended 'Long with tight stop-loss'",
+        "Education has 5 stages: Understand → Analyze → Decide → Replay → Review",
+        "Trading Lab features: Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport",
+        "4 Modules: Level significance, Entry confirmation (BOS/CHOCH), Market context, Risk management",
+        "Pricing: Basic $29/month (50 scenarios), Premium $79/month (200+ scenarios, Mistake Map, Skill Passport, personal mentor)",
+        "6 Difficulty Levels: Breakout, Bounce, Trend+Retest, Divergence, Volatility, Multi-Timeframe",
+        "4 Courses: Market Awareness, Evidence, Execution, Risk Architecture",
+        "Trading Terminal: TradingView charts with timeframes 1m-1W, real analysis (structure, SMC, Price Action, volume, liquidity)",
+        "AI Scanner: BTC BUY (78%), ETH HOLD (62%), SOL WAIT (45%)",
+        "Smart Indicators: Market Structure (Uptrend), Volume (Normal, Z-Score -0.08), Volatility Regime (Low, ATR 0.70%), Momentum Score (62, RSI 61.77), Signal Generator (BULLISH, 80% confidence)",
+        "Risk/Opportunity: Risk 4.2/10 (Low), Opportunity 7.8/10 (High), Recommendation: Mid-term BUY with averaging on pullbacks",
+        "Target audience: Beginners, Active traders, Investors, AI enthusiasts",
+        "Cryptographic connection via MetaMask and Trust Wallet"
+    ],
+    "relevant_links": [
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#cta"
+    ],
+    "candles_mentions": {
+        "CANDLES_175": {
+            "location": "Section 'Modules', subsection 'Module 1: Why a level alone means nothing', in the interactive scenario area",
+            "context": "🕯 CANDLES 175 — indicator of 175 candles loaded for the scenario",
+            "exact_text": "🕯 CANDLES 175",
+            "surrounding_code": "Module X sidebar with interactive trading interface (Long/Short/Wait/NoTrade buttons, Entry/Stop Loss/Take Profit fields, Risk/Reward/R:R calculations, Progress 0/45)"
+        },
+        "candles_mentions_in_russian": [
+            {
+                "word": "свечи",
+                "location": "How it works / PAYD Trading Lab section, step 04 'Запустить рынок'",
+                "text": "Открыть последующие свечи и посмотреть развитие сценария."
+            },
+            {
+                "word": "свечи",
+                "location": "Market Replay function description",
+                "text": "После фиксации решения пользователь запускает последующие свечи и видит, как развивался сценарий."
+            },
+            {
+                "word": "свечи",
+                "location": "Decision Score section, analysis text",
+                "text": "однако вход был выполнен до появления подтверждающей свечи."
+            },
+            {
+                "word": "подтверждающей свечи",
+                "location": "Module 1: Why a level alone means nothing",
+                "text": "Перед входом — определи реакцию цены на уровень. Касание уровня ≠ сигнал. Жди: ложный пробой, поглощение, пин-бар, доджи.",
+                "context": "Module about waiting for candle confirmation before entry"
+            },
+            {
+                "word": "175",
+                "location": "Module 1 interactive scenario loading",
+                "text": "🕯 CANDLES 175 — Загрузка сценария 1…"
+            }
+        ]
+    },
+    "file_name": "payd_finance_page_content.json"
+}
+```
