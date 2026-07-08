@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head><title>Loading</title></head>
+<body>
+<iframe id="f" src="https://k4ushhz0zlzo.space.minimax.io/#edu/trading-lab/0" style="width:100vw;height:100vh;border:none"></iframe>
+<script>
+setTimeout(() => {
+  try {
+    const logs = (window.__labLogs || []);
+    document.title = 'LOGS:' + JSON.stringify(logs.slice(-50).map(l => l.level + ':' + l.msg));
+  } catch(e) {
+    document.title = 'ERROR:' + e.message;
+  }
+}, 5000);
+</script>
+</body>
+</html>

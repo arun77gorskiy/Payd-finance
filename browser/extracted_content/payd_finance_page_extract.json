@@ -1,0 +1,35 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://eg5osmpbyegf.space.minimax.io/#eval=document.title='LOGS:'+JSON.stringify((window.__labLogs||[]).slice(-50).map(l=%3El.level+':'+l.msg))
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://eg5osmpbyegf.space.minimax.io/",
+    "summary": "Payd_Finance is a Russian-language SaaS platform offering AI-powered crypto trading analytics and structured education. The page combines real-time market data (BTC, ETH, SOL prices, Open Interest, Funding Rate, L/S Ratio, 24h Volume), AI Market Regime analysis (currently indicating 'Low Volatility / Consolidation' with 80% AI confidence), and a 'PAYD Trading Lab' with four training modules, 200+ trading scenarios across 6 levels, courses (Market Awareness, Evidence, Execution, Risk Architecture), pricing tiers (Basic $29/mo, Premium $79/mo), and tools like Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. It embeds TradingView widgets and showcases an 'AI System Online v2.4' status. The page is hosted on a minimax.io preview domain.",
+    "key_points": [
+        "Document title: 'Payd_Finance | AI Crypto Trading & Education'",
+        "Page URL contains a fragment that suggests an evaluator: '#eval=document.title=\"LOGS:\"+JSON.stringify((window.__labLogs||[]).slice(-50).map(l=>l.level+':'+l.msg))'",
+        "No actual content from window.__labLogs is present in the static HTML — this is client-side JavaScript that would only execute at runtime",
+        "Meta tags are not visible in the extracted page content",
+        "AI System status displayed: 'AI System Online v2.4'",
+        "Current market regime: Low Volatility (Consolidation) with 80% AI confidence, sideway trend, ATR 0.77%, RSI 55.81, Volume Z-Score -0.87",
+        "Live crypto prices: BTC $63,659.54 (-0.60%), ETH $1,782 (-0.99%), SOL $80.68 (-1.87%)",
+        "Open Interest: $38.2B, Long/Short: 52.3% / 47.7%, Funding Rate 0.0125% (Positive), L/S Ratio 1.09 (Bullish), 24h Volume $42.8B",
+        "AI Accuracy advertised: 94.2%",
+        "Pricing: Basic $29/month (50 scenarios, Decision Score, Trade Journal), Premium $79/month (200+ scenarios, Mistake Map, Skill Passport, Personal mentor)",
+        "Disclaimer: Educational/analytical platform only, not financial advice",
+        "Page is in Russian language with English branding",
+        "Created by 'MiniMax Agent' (visible in footer)",
+        "Uses TradingView embedded widgets for charts"
+    ],
+    "relevant_links": [
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#cta"
+    ],
+    "file_name": "payd_finance_page_extract.json"
+}
+```

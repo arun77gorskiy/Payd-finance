@@ -3008,6 +3008,9 @@
                 result: (result) => {
                     this.isAnalyzing = false;
                     this.lastResult = result;
+                    // Скрываем loading overlay ("Анализируем решение...") — раньше он оставался видимым
+                    // и перекрывал Result Screen, из-за чего пользователь видел только спиннер.
+                    this._hideChartLoading();
                     // Получаем Module X анализ (он в result.moduleX)
                     if (result.moduleX) {
                         this.lastAnalysisResult = result.moduleX;
@@ -3444,11 +3447,335 @@
             // Сохраняем полный результат для переключения табов
             this._lastResult = result;
 
-            // По умолчанию открываем Module 2 (самое важное после решения)
-            this._switchResultTab('2');
+            // Скрываем табы — пользователь видит один детальный inline-блок,
+            // а не набор табов с разной информацией. Так исправляется баг
+            // одновременного отображения "Решение верное!" и "Решение ошибочно".
+            if (E.resultTabsContainer) {
+                E.resultTabsContainer.style.display = 'none';
+            }
 
-            if (E.resultScreen) E.resultScreen.style.display = 'flex';
+            // Сразу рендерим полный детальный inline-контент
+            this._renderInlineResult(result);
+
+            // Показываем Result Screen как inline-блок (НЕ модальное окно)
+            if (E.resultScreen) E.resultScreen.style.display = 'block';
             if (E.btnNext) E.btnNext.disabled = false;
+        }
+
+        /**
+         * Построить полный inline-контент Result Screen.
+         * Содержит все блоки, которые просил пользователь:
+         * Verdict, Score, Market Bias, Confidence, Probability, "Что правильно",
+         * "Что пропустил", Risk Analysis, кнопки навигации.
+         */
+        _renderInlineResult(result) {
+            const E = this._elements;
+            if (!E.resultBody) return;
+
+            const m2 = result.module2 || {};
+            const mX = result.moduleX || {};
+            const exp = m2.explanation || {};
+            const isCorrect = m2.isCorrect;
+            const verdict = m2.verdict || (isCorrect ? 'CORRECT' : 'INCORRECT');
+
+            // Скоринг: 0..100
+            const scoreRaw = m2.score || 0;
+            const score100 = (() => {
+                // Если score в диапазоне -4..+4, нормализуем к 0..100
+                if (scoreRaw >= 0 && scoreRaw <= 100) return Math.round(scoreRaw);
+                return Math.max(0, Math.min(100, Math.round(50 + (scoreRaw * 12.5))));
+            })();
+
+            // Bias, Confidence, Probability
+            const ctx = exp.contextSummary || {};
+            const bias = ctx.bias || mX.bias || '—';
+            const biasClass = bias === 'bullish' ? 'bull' : bias === 'bearish' ? 'bear' : 'neutral';
+            const biasLabel = bias === 'bullish' ? 'Бычий' : bias === 'bearish' ? 'Медвежий' : 'Нейтральный';
+            const confidenceRaw = ctx.confidence || (mX.confidence && (mX.confidence.percent || mX.confidence)) || 0;
+            const confidence = typeof confidenceRaw === 'number' ? Math.round(confidenceRaw) : parseInt(confidenceRaw, 10) || 0;
+            const probability = ctx.continuationPct !== undefined ? Math.round(ctx.continuationPct) : confidence;
+
+            // Данные для блоков "Что правильно" и "Что пропустил"
+            const evidenceList = Array.isArray(exp.evidence) ? exp.evidence : [];
+            const missesList = Array.isArray(exp.evidenceMisses) ? exp.evidenceMisses : [];
+
+            // Risk Analysis
+            const riskText = exp.risk || (mX.riskAssessment && mX.riskAssessment.description) || 'Оценка риска не предоставлена движком.';
+
+            // Сборка HTML
+            let html = '';
+
+            // 1. Большой вердикт
+            html += `<div style="
+                background:${isCorrect ? 'rgba(38,166,154,0.08)' : 'rgba(239,83,80,0.08)'};
+                border:1px solid ${isCorrect ? 'rgba(38,166,154,0.3)' : 'rgba(239,83,80,0.3)'};
+                border-radius:12px;
+                padding:18px 20px;
+                margin-bottom:18px;
+                display:flex;
+                align-items:center;
+                gap:16px;
+            ">
+                <div style="
+                    width:54px;height:54px;border-radius:14px;
+                    display:grid;place-items:center;
+                    font-size:26px;font-weight:700;color:#0a0a0c;
+                    background:${isCorrect ? '#26a69a' : '#ef5350'};
+                    flex-shrink:0;
+                ">${isCorrect ? '✓' : '✗'}</div>
+                <div>
+                    <div style="font-size:18px;font-weight:700;margin-bottom:2px;">${isCorrect ? 'Решение верное' : 'Решение ошибочно'}</div>
+                    <div style="font-size:12px;color:#8b8b96;">${escapeHtml(String(verdict))} · ваш выбор: <strong>${escapeHtml(String(result.userDecision || '—').toUpperCase())}</strong></div>
+                </div>
+            </div>`;
+
+            // 2. Блок метрик: Score / Bias / Confidence / Probability
+            html += `<div style="
+                display:grid;
+                grid-template-columns:repeat(4,1fr);
+                gap:10px;
+                margin-bottom:18px;
+            ">
+                <div style="background:#1a1a20;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;">
+                    <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:#8b8b96;margin-bottom:6px;font-weight:600;">Decision Score</div>
+                    <div style="font-size:24px;font-weight:700;color:#d4af37;font-family:'JetBrains Mono',monospace;">${score100}<span style="font-size:14px;color:#8b8b96;font-weight:500;"> / 100</span></div>
+                </div>
+                <div style="background:#1a1a20;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;">
+                    <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:#8b8b96;margin-bottom:6px;font-weight:600;">Market Bias</div>
+                    <div style="font-size:20px;font-weight:700;color:${biasClass === 'bull' ? '#26a69a' : biasClass === 'bear' ? '#ef5350' : '#9e9e9e'};">${escapeHtml(biasLabel)}</div>
+                </div>
+                <div style="background:#1a1a20;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;">
+                    <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:#8b8b96;margin-bottom:6px;font-weight:600;">Confidence</div>
+                    <div style="font-size:24px;font-weight:700;color:#c8c8d0;font-family:'JetBrains Mono',monospace;">${confidence}<span style="font-size:14px;color:#8b8b96;font-weight:500;">%</span></div>
+                </div>
+                <div style="background:#1a1a20;border:1px solid rgba(255,255,255,0.08);border-radius:10px;padding:14px;">
+                    <div style="font-size:10px;text-transform:uppercase;letter-spacing:0.08em;color:#8b8b96;margin-bottom:6px;font-weight:600;">Probability</div>
+                    <div style="font-size:24px;font-weight:700;color:#26a69a;font-family:'JetBrains Mono',monospace;">${probability}<span style="font-size:14px;color:#8b8b96;font-weight:500;">%</span></div>
+                </div>
+            </div>`;
+
+            // 3. Подробное объяснение решения
+            html += `<div style="
+                background:#1a1a20;
+                border:1px solid rgba(255,255,255,0.08);
+                border-radius:12px;
+                padding:16px 18px;
+                margin-bottom:14px;
+            ">
+                <h3 style="font-size:14px;font-weight:700;margin:0 0 10px 0;color:#d4af37;">📋 Почему система приняла такое решение</h3>
+                <div style="font-size:13px;color:#c8c8d0;line-height:1.6;">${escapeHtml(exp.match || (isCorrect ? 'Ваше решение соответствует направлению рынка.' : 'Ваше решение не соответствует направлению рынка.'))}</div>
+                ${exp.betterAlternative ? `<div style="margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.06);font-size:12px;color:#8b8b96;"><strong style="color:#c8c8d0;">Лучшая альтернатива:</strong> ${escapeHtml(exp.betterAlternative)}</div>` : ''}
+            </div>`;
+
+            // 4. Что пользователь сделал правильно (evidence)
+            html += `<div style="
+                background:rgba(38,166,154,0.05);
+                border:1px solid rgba(38,166,154,0.2);
+                border-radius:12px;
+                padding:16px 18px;
+                margin-bottom:14px;
+            ">
+                <h3 style="font-size:14px;font-weight:700;margin:0 0 10px 0;color:#26a69a;">✓ Что вы сделали правильно (${evidenceList.length})</h3>
+                ${evidenceList.length > 0
+                    ? `<ul style="margin:0;padding-left:20px;color:#c8c8d0;font-size:13px;line-height:1.7;">${evidenceList.map(e => `<li>${escapeHtml(typeof e === 'string' ? e : (e.text || JSON.stringify(e)))}</li>`).join('')}</ul>`
+                    : '<div style="font-size:12px;color:#8b8b96;font-style:italic;">Сигналы не зафиксированы</div>'}
+            </div>`;
+
+            // 5. Что пользователь пропустил
+            html += `<div style="
+                background:rgba(239,83,80,0.05);
+                border:1px solid rgba(239,83,80,0.2);
+                border-radius:12px;
+                padding:16px 18px;
+                margin-bottom:14px;
+            ">
+                <h3 style="font-size:14px;font-weight:700;margin:0 0 10px 0;color:#ef5350;">✗ Что вы пропустили (${missesList.length})</h3>
+                ${missesList.length > 0
+                    ? `<ul style="margin:0;padding-left:20px;color:#c8c8d0;font-size:13px;line-height:1.7;">${missesList.map(e => `<li>${escapeHtml(typeof e === 'string' ? e : (e.text || JSON.stringify(e)))}</li>`).join('')}</ul>`
+                    : '<div style="font-size:12px;color:#8b8b96;font-style:italic;">Всё учтено — пропусков нет ✓</div>'}
+            </div>`;
+
+            // 6. Risk Analysis
+            html += `<div style="
+                background:rgba(255,193,7,0.05);
+                border-left:3px solid #ffc107;
+                border-radius:8px;
+                padding:16px 18px;
+                margin-bottom:14px;
+            ">
+                <h3 style="font-size:14px;font-weight:700;margin:0 0 10px 0;color:#ffc107;">⚠ Risk Analysis</h3>
+                <div style="font-size:13px;color:#c8c8d0;line-height:1.6;">${escapeHtml(riskText)}</div>
+            </div>`;
+
+            // 7. Кнопки навигации
+            html += `<div id="lt-result-actions-initial" style="
+                display:flex;
+                gap:10px;
+                margin-top:20px;
+                padding-top:18px;
+                border-top:1px solid rgba(255,255,255,0.08);
+            ">
+                <button id="lt-btn-show-future" style="
+                    background:linear-gradient(135deg,#d4af37 0%,#c5a028 100%);
+                    color:#0a0a0c;
+                    border:none;
+                    padding:12px 22px;
+                    border-radius:10px;
+                    font-size:14px;font-weight:700;
+                    cursor:pointer;
+                    font-family:inherit;
+                    flex:1;
+                ">▶ Показать продолжение рынка</button>
+            </div>`;
+
+            // 8. Контейнер для кнопок после просмотра продолжения (изначально скрыт)
+            html += `<div id="lt-result-actions-after" style="display:none;margin-top:20px;padding-top:18px;border-top:1px solid rgba(255,255,255,0.08);">
+                <div style="font-size:13px;color:#8b8b96;margin-bottom:12px;text-align:center;">📊 Продолжение рынка показано. Что дальше?</div>
+                <div style="display:flex;gap:10px;">
+                    <button id="lt-btn-next-scenario" style="
+                        background:linear-gradient(135deg,#d4af37 0%,#c5a028 100%);
+                        color:#0a0a0c;
+                        border:none;
+                        padding:12px 18px;
+                        border-radius:10px;
+                        font-size:13px;font-weight:700;
+                        cursor:pointer;
+                        font-family:inherit;
+                        flex:1;
+                    ">→ Следующий сценарий</button>
+                    <button id="lt-btn-retry-scenario" style="
+                        background:#232329;
+                        color:#c8c8d0;
+                        border:1px solid rgba(255,255,255,0.08);
+                        padding:12px 18px;
+                        border-radius:10px;
+                        font-size:13px;font-weight:600;
+                        cursor:pointer;
+                        font-family:inherit;
+                        flex:1;
+                    ">↻ Повторить сценарий</button>
+                    <button id="lt-btn-back-to-modules" style="
+                        background:#232329;
+                        color:#c8c8d0;
+                        border:1px solid rgba(255,255,255,0.08);
+                        padding:12px 18px;
+                        border-radius:10px;
+                        font-size:13px;font-weight:600;
+                        cursor:pointer;
+                        font-family:inherit;
+                        flex:1;
+                    ">← Назад к модулям</button>
+                </div>
+            </div>`;
+
+            E.resultBody.innerHTML = html;
+
+            // Привязываем обработчики кнопок
+            this._bindInlineResultActions();
+        }
+
+        /**
+         * Привязка обработчиков кнопок inline Result Screen.
+         */
+        _bindInlineResultActions() {
+            const btnShowFuture = document.getElementById('lt-btn-show-future');
+            if (btnShowFuture) {
+                btnShowFuture.addEventListener('click', () => this._showFutureContinuation());
+            }
+            const btnNext = document.getElementById('lt-btn-next-scenario');
+            if (btnNext) {
+                btnNext.addEventListener('click', async () => {
+                    this._hideResultScreen();
+                    if (this.trainer) await this.next();
+                });
+            }
+            const btnRetry = document.getElementById('lt-btn-retry-scenario');
+            if (btnRetry) {
+                btnRetry.addEventListener('click', async () => {
+                    this._hideResultScreen();
+                    // Перезагружаем текущий сценарий
+                    if (this.trainer && this.trainer._loadCurrent) {
+                        try {
+                            this.trainer.scenarioIndex = Math.max(0, this.trainer.scenarioIndex);
+                            await this.trainer._loadCurrent();
+                        } catch (e) {
+                            console.error('[LabTrainer] retry error:', e && e.message);
+                        }
+                    }
+                });
+            }
+            const btnBack = document.getElementById('lt-btn-back-to-modules');
+            if (btnBack) {
+                btnBack.addEventListener('click', () => {
+                    // Возврат к списку модулей через глобальный метод, если есть
+                    this._hideResultScreen();
+                    try {
+                        if (global.LabTrainer && typeof global.LabTrainer.exitToMenu === 'function') {
+                            global.LabTrainer.exitToMenu();
+                        } else if (global.labTrainerExit) {
+                            global.labTrainerExit();
+                        } else if (typeof window !== 'undefined') {
+                            // Попытка найти кнопку возврата
+                            const backBtn = document.querySelector('[data-action="back-to-modules"], .lt-back-to-modules, #lt-btn-back');
+                            if (backBtn) backBtn.click();
+                        }
+                    } catch (e) {
+                        console.warn('[LabTrainer] back-to-modules handler not found');
+                    }
+                });
+            }
+        }
+
+        /**
+         * Показать future candles (продолжение рынка) на графике.
+         * Объединяет visible + future и обновляет series.setData().
+         */
+        _showFutureContinuation() {
+            try {
+                const scenario = (this._lastResult && this._lastResult.scenario) || this.currentScenario;
+                if (!scenario) {
+                    console.warn('[LabTrainer] _showFutureContinuation: no scenario');
+                    return;
+                }
+                const future = scenario.futureCandles || [];
+                if (!future.length) {
+                    console.warn('[LabTrainer] _showFutureContinuation: no future candles');
+                    return;
+                }
+                if (!this.candleSeries) {
+                    console.warn('[LabTrainer] _showFutureContinuation: no candleSeries');
+                    return;
+                }
+
+                // Объединяем visible + future
+                const allCandles = (scenario.candles || []).concat(future);
+                const candleData = allCandles.map(c => ({
+                    time: c.time, open: c.open, high: c.high, low: c.low, close: c.close
+                }));
+                const volumeData = allCandles.map(c => ({
+                    time: c.time, value: c.volume || 0, color: c.close >= c.open ? '#26a69a55' : '#ef535055'
+                }));
+
+                this.candleSeries.setData(candleData);
+                if (this.volumeSeries) this.volumeSeries.setData(volumeData);
+
+                // fitContent чтобы пользователь увидел всё
+                setTimeout(() => {
+                    try { if (this.chart) this.chart.timeScale().fitContent(); } catch (e) {}
+                }, 50);
+
+                // Скрываем кнопку "Показать продолжение", показываем 3 кнопки навигации
+                const initialActions = document.getElementById('lt-result-actions-initial');
+                const afterActions = document.getElementById('lt-result-actions-after');
+                if (initialActions) initialActions.style.display = 'none';
+                if (afterActions) afterActions.style.display = 'block';
+
+                // Обновляем счётчик свечей в HUD
+                this.currentScenario = Object.assign({}, scenario, { candles: allCandles });
+                this._updateHud();
+            } catch (err) {
+                console.error('[LabTrainer] _showFutureContinuation error:', err && err.message);
+            }
         }
 
         /**

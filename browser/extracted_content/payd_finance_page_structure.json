@@ -1,0 +1,27 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://edbbcrjqt5pu.space.minimax.io/#features
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://edbbcrjqt5pu.space.minimax.io/#features",
+    "summary": "Payd_Finance is a SaaS platform that combines AI-driven crypto market analysis, education, and trading logic into a unified ecosystem. The page presents the PAYD Trading Lab, which includes interactive modules, a Trading Terminal with TradingView charts, and decision-making practice tools. Key features include Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The platform offers tiered pricing (Basic $29/mo, Premium $79/mo) and targets novice traders, active traders, investors, and AI enthusiasts.",
+    "key_points": [
+        "Page structure includes: Hero section, Real-Time Market Data, AI Market Regime analysis, problem/solution framing, PAYD Trading Lab (5-step learning process), main features grid, Modules section with Dashboard/Modules/Trading Terminal/Progress tabs, Courses section, Pricing tiers, Platform functionality, Market data tracking, How it works (4 steps), Target audience, and Footer",
+        "Trading Terminal section is located in the 'Modules' section under the tab labeled '💹 Trading Terminal', featuring a TradingView chart with symbol selector (BTC/USDT, ETH/USDT, SOL/USDT, etc.), timeframe selector (1m, 5m, 15m, 1H, 4H, 1D, 1W), and price information",
+        "The Trading Terminal panel includes Module X analysis with sections: Market Structure, Trend, Smart Money (BOS, Order Blocks, Fair Value Gaps, Liquidity Sweeps), Price Action patterns, Volume analysis, Liquidity, Volatility (ATR), Momentum (RSI), Support/Resistance, and Probability",
+        "The '▲ Long' button is located in the 'Практика (Module 2)' section within the Trading Terminal tab, alongside other action buttons: ▼ Short, ⏸ Wait, ✕ No Trade",
+        "A separate standalone 'Trading Terminal' promotional section appears later in the page with a '▶ Открыть Terminal' button",
+        "Two embedded TradingView widgets appear at the bottom of the page showing BTC/USDT perpetual contract chart and BTCUSDT spot chart"
+    ],
+    "relevant_links": [
+        "#features (Функционал)",
+        "#education-how-it-works (Обучение)",
+        "#how-it-works (Как это работает)",
+        "#benefits (Преимущества)",
+        "#cta (Начать с демо)"
+    ],
+    "file_name": "payd_finance_page_structure.json"
+}
+```

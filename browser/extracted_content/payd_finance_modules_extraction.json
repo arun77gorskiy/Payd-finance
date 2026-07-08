@@ -1,52 +1,84 @@
 📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
-URL: https://whkkoonlt7wl.space.minimax.io/?v=7#edu/trading-lab
+URL: https://edbbcrjqt5pu.space.minimax.io/
 
 Extracted content:
 ```json
 {
     "title": "Payd_Finance | AI Crypto Trading & Education",
-    "url": "https://whkkoonlt7wl.space.minimax.io/?v=7#edu/trading-lab",
-    "summary": "Payd_Finance is a SaaS crypto trading and education platform that combines AI analytics, deep learning, and trading logic. The page features real-time market data for major cryptocurrencies (BTC, ETH, SOL), AI-powered market regime analysis, institutional-grade tools, and an educational component called PAYD Trading Lab. The Trading Lab includes practical modules, trading scenarios (200+), structured courses, and tiered pricing plans ($29/month Basic, $79/month Premium). The platform targets beginners, active traders, investors, and AI enthusiasts.",
+    "url": "https://edbbcrjqt5pu.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS platform that combines AI-powered crypto market analysis with interactive trading education (PAYD Trading Lab). The site is in Russian and features real-time market data, AI market regime detection, smart indicators, a trading dashboard, and educational modules/scenarios for practicing trading decisions. Key features include Blind Chart, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. Pricing tiers range from $29/month (Basic) to $79/month (Premium).",
+    "extracted_text_with_modules_and_open": {
+        "navigation_tab": {
+            "text": "📚 Modules",
+            "location": "In the Trading Lab tab switcher (alongside Dashboard, Trading Terminal, Progress)"
+        },
+        "modules_section_heading": {
+            "text": "Modules",
+            "location": "Section heading 'Modules' — main heading in the PAYD Trading Lab section, followed by subtitle: 'Практические сценарии на реальных графиках — отрабатывайте навыки без риска' (Practical scenarios on real charts — practice skills without risk)"
+        },
+        "modules_cta_card": {
+            "text": "📚 Начать с Modules — 4 практических сценария с пошаговым обучением",
+            "location": "Inside the Dashboard panel — clickable card prompting to start with Modules (4 practical scenarios with step-by-step learning)"
+        },
+        "education_modules_card": {
+            "text": "Education Modules — Учись принимать решения прямо на графике. Интерактивные торговые модули, встроенные непосредственно в интерфейс PaydFinance. Открыть Modules | Как это работает",
+            "location": "In the 'Функционал платформы' (Platform functionality) section, the PAYD Trading Lab card lists 'Education Modules' with a button 'Открыть Modules' (Open Modules)"
+        },
+        "modules_progress_text": {
+            "text": "Пройдено модулей 0 / 4 — Прогресс по модулям (Модуль 1: Не начат 'Почему уровень сам по себе ничего не значит'; Модуль 2: Не начат 'Подтверждение входа (BOS / CHOCH)'; Модуль 3: Не начат 'Рыночный контекст'; Модуль 4: Не начат 'Управление риском')",
+            "location": "Dashboard counter and Progress panel — tracks completed modules out of 4"
+        },
+        "module_titles": {
+            "text": "МОДУЛЬ 1: Почему уровень сам по себе ничего не значит; МОДУЛЬ 2: Подтверждение входа (BOS, CHOCH и дислокация); МОДУЛЬ 3: Рыночный контекст (Тренд, моментум, объём); МОДУЛЬ 4: Управление риском (Liquidity Sweeps, Volume Climax)",
+            "location": "Four module cards inside the Trading Lab, each with a '▶ Начать сценарий' (Start scenario) button"
+        },
+        "open_terminal_button": {
+            "text": "💹 Открыть Trading Terminal — Реальный график TradingView с анализом Module X",
+            "location": "Inside the Dashboard panel — card button to open the Trading Terminal featuring real TradingView chart with Module X analysis"
+        },
+        "open_terminal_section_cta": {
+            "text": "▶ Открыть Terminal",
+            "location": "Call-to-action button at the end of the 'НОВОЕ • TRADING TERMINAL' section promoting the new full trading terminal"
+        },
+        "open_lesson_buttons": {
+            "text": "Открыть урок →",
+            "location": "Six lesson buttons in the 'Торговые сценарии' (Trading scenarios) section — Уровень 1 through Уровень 6 (Breakout, Bounce, Trend+Retest, Divergence, Volatility, Multi-Timeframe)"
+        },
+        "module_x_references": {
+            "text": "Анализ Module X…; Сводка Module X; Module X в реальном времени; решения через Module 2",
+            "location": "Trading Terminal section — reference to the AI analysis module (Module X) and practice module (Module 2) integrated into the live terminal"
+        }
+    },
     "key_points": [
-        "AI System Online v2.4 with 94.2% AI Accuracy",
-        "Two headings found containing 'Modules' related text",
-        "Heading 1: 'Modules' - subheading 'Практические сценарии на реальных графиках — отрабатывайте навыки без риска', lists 4 modules (Mодуль 1-4) covering levels, entry confirmation, market context, and risk management",
-        "Heading 2: 'Education Modules' under PAYD Trading Lab section with description 'Учись принимать решения прямо на графике. Интерактивные торговые модули, встроенные непосредственно в интерфейс PaydFinance.'",
-        "'Modules' heading appears in the Trading Lab section, after 'Основные функции' (Main Functions) and before 'Торговые сценарии' (Trading Scenarios)",
-        "'Education Modules' heading appears in the 'Функционал платформы' (Platform Functionality) section, alongside Risk Management and Signals features",
-        "5-step learning process: Understand, Analyze, Decide, Launch market, Get review",
-        "Key tools: Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport",
-        "Real-time market data: BTC at $67,432 (+2.34%), Open Interest $38.2B, Funding Rate 0.0125%, L/S Ratio 1.09 (Bullish)",
-        "Disclaimer: Educational platform, not financial advice, crypto trading carries high risk"
+        "Platform combines AI crypto analytics with interactive trading education (PAYD Trading Lab)",
+        "Four educational modules focus on levels, entry confirmation, market context, and risk management",
+        "Real-time market data for BTC, ETH, SOL with institutional-grade indicators (Open Interest, Funding Rate, L/S Ratio)",
+        "AI Market Regime detector identifies trend, volatility, and recommends actions (e.g., short with tight stop-loss, 85% confidence)",
+        "Decision Score and Mistake Map systems track the quality of trading decisions rather than just P&L",
+        "Premium tier ($79/month) includes 200+ scenarios, Mistake Map, Skill Passport, and personal mentor",
+        "Trading Terminal integrates TradingView charts with side-panel AI analysis (Module X) and practice decisions (Module 2)",
+        "Disclaimer notes the platform is educational/analytical only and does not provide financial advice"
     ],
     "relevant_links": [
-        "#features",
-        "#edu/trading-lab",
-        "#how-it-works",
-        "#benefits",
-        "#cta"
+        {"text": "Функционал", "url": "#features"},
+        {"text": "Обучение", "url": "#education-how-it-works"},
+        {"text": "Как это работает", "url": "#how-it-works"},
+        {"text": "Преимущества", "url": "#benefits"},
+        {"text": "Начать с демо", "url": "#cta"},
+        {"text": "MetaMask", "url": "(wallet connection)"},
+        {"text": "Trust Wallet", "url": "(wallet connection)"}
     ],
-    "modules_extraction": {
-        "heading_1": {
-            "text": "Modules",
-            "subheading": "Практические сценарии на реальных графиках — отрабатывайте навыки без риска",
-            "section": "PAYD Trading Lab",
-            "location_on_page": "After 'Основные функции' (Main Functions) section listing tools like Blind Chart, Risk Calculator, etc., and before 'Торговые сценарии' (Trading Scenarios) section",
-            "modules_listed": [
-                "МОДУЛЬ 1: Почему уровень сам по себе ничего не значит",
-                "МОДУЛЬ 2: Подтверждение входа",
-                "МОДУЛЬ 3: Рыночный контекст",
-                "МОДУЛЬ 4: Управление риском"
-            ]
-        },
-        "heading_2": {
-            "text": "Education Modules",
-            "full_text": "PAYD Trading Lab - Education Modules",
-            "description": "Учись принимать решения прямо на графике. Интерактивные торговые модули, встроенные непосредственно в интерфейс PaydFinance.",
-            "section": "Функционал платформы (Platform Functionality)",
-            "location_on_page": "In the Platform Functionality section, appears alongside other features like AI Market Analysis, Risk Management, Signals",
-            "cta_buttons": ["Открыть Modules", "Как это работает"]
-        }
+    "navigation_sections": [
+        "Функционал (Features)",
+        "Обучение / Education Modules",
+        "Как это работает (How it works — 4 steps: Регистрация, Доступ, Анализ, Решения)",
+        "Преимущества (Benefits — Для кого этот продукт)",
+        "Тарифы (Pricing — Базовый $29, Премиум $79)",
+        "PAYD Trading Lab (Modules, Trading Terminal, Progress)"
+    ],
+    "pricing": {
+        "Базовый": "$29/мес — 50 сценариев, Decision Score, Trade Journal",
+        "Премиум (Популярный)": "$79/мес — 200+ сценариев, Mistake Map, Skill Passport, Персональный ментор"
     },
     "file_name": "payd_finance_modules_extraction.json"
 }

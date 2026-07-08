@@ -1,0 +1,29 @@
+📄 Extracted from page: 
+URL: https://edbbcrjqt5pu.space.minimax.io/#edu/trading-lab/0
+
+Extracted content:
+```json
+{
+    "title": "Trading Lab - LabTrainer Scenario",
+    "url": "https://edbbcrjqt5pu.space.minimax.io/#edu/trading-lab/0",
+    "summary": "This page appears to be a Trading Lab educational/training application. The content consists entirely of console logs showing the interaction flow of a 'LabTrainer' module. The logs document a user clicking a 'Long' button, then confirming a 'Long Enter' decision via a confirmation button (✓ Подтвердить Long Enter). After confirmation, the trainer processes the decision through multiple modules (Module X, Module 1, Module 2, Module 3, Module 4) performing analysis including chart patterns (17 patterns detected, 9 rendered), context, bias, confidence, structure, momentum, volume, volatility, levels, probabilities, and key signals. The scenario loaded is 'pr-001' named 'Бычий Pin Bar' (Bullish Pin Bar) — described as a long lower wick testing demand. The result callback was triggered, indicating the analysis completed successfully.",
+    "key_points": [
+        "Page is a Trading Lab educational scenario page",
+        "A 'Long' button (SPAN element) was present and clicked",
+        "A confirmation button '✓ Подтвердить Long Enter' (Confirm Long Enter) was also present and clicked",
+        "Decision selected: 'long'",
+        "Scenario loaded: 'pr-001' named 'Бычий Pin Bar' (Bullish Pin Bar) — long lower wick testing demand",
+        "Chart analysis was performed — 17 patterns detected in input, 9 patterns rendered from 175 candles",
+        "Multiple analysis modules executed: Module X (chart patterns), Module 1 (market analysis), Module 2 (evaluation), Module 3 (educational feedback), Module 4 (recording)",
+        "Analysis covered: context, bias, confidence, trend, structure, liquidity, volume, scenarios, momentum, volatility, levels, levelPosition, probabilities, keySignals",
+        "Trainer state: ready, no analyzing flag at time of click",
+        "Result callback completed successfully — 'submitDecision: result callback done, END'",
+        "No explicit chart rendering logs beyond Module X pattern rendering (9 patterns from 175 candles)",
+        "Page content is entirely technical logs — no other visible UI text captured"
+    ],
+    "relevant_links": [
+        "https://edbbcrjqt5pu.space.minimax.io/#edu/trading-lab/0"
+    ],
+    "file_name": "trading_lab_logs.json"
+}
+```

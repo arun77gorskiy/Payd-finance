@@ -1,0 +1,46 @@
+📄 Extracted from page: 
+URL: https://eg5osmpbyegf.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://eg5osmpbyegf.space.minimax.io/",
+    "summary": "Payd_Finance is an AI-powered cryptocurrency trading and education platform built with Tailwind CSS. The site features a navigation bar with wallet connection buttons (MetaMask, Trust Wallet), a hero section with live BTC price card, Open Interest metrics, Funding Rate, L/S Ratio, and 24h Volume indicators. It includes Market Overview for BTC/ETH/SOL, AI Market Regime analysis (volatility, momentum, structure), market data with TradingView widgets, and detailed features including Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The PAYD Trading Lab is a core feature with 4 educational modules (levels meaning, entry confirmation, market context, risk management), scenarios system with state machine (grid/lesson/terminal), progress tracking, and achievement system. The page contains extensive JavaScript for live price updates via Binance API, technical indicator calculations (RSI, ATR, Standard Deviation), TradingView integration, AI signal generation, Web3 wallet connections via Ethers.js, and educational scenario state management. Notably, the page contains many repeated iframe-highlight injection scripts (the same script appears to be injected dozens of times), suggesting either a development artifact or aggressive highlighter tool behavior.",
+    "key_points": [
+        "AI-powered crypto trading and education platform called Payd_Finance (built 2024)",
+        "Live market data integration via Binance API with fallback endpoints (api.binance.com, api1-3.binance.com, data-api.binance.vision)",
+        "AI Market Regime analysis using calculated RSI (14-period), ATR, and Volume Z-Score",
+        "PAYD Trading Lab with 4 educational modules: Levels meaning, Entry confirmation (BOS/CHOCH), Market context, Risk management",
+        "Trading Terminal with TradingView integration, multi-timeframe support, decision panel (Long/Short/Wait/No Trade buttons)",
+        "Web3 wallet integration supporting MetaMask and Trust Wallet via Ethers.js 5.7.2",
+        "Market data coins supported: BTC, ETH, SOL, XRP, BNB, DOGE on Binance pairs",
+        "Page uses Tailwind CSS, custom color scheme (primary #D4AF37 gold, accent #7B61FF purple)",
+        "Polygon.io API integration (key: eXAMKGZ8qfzzHORfwVNkXaB1jKZ_4WEk) for detailed market metrics",
+        "CoinGecko API used for top 500 coins by market cap in Trading Dashboard",
+        "Pricing tiers: Basic $29/month, Premium $79/month with personal mentor",
+        "Educational features include Decision Score, Trade Autopsy, Mistake Map, Skill Passport with skill percentage bars"
+    ],
+    "relevant_links": [
+        "https://fonts.googleapis.com",
+        "https://fonts.gstatic.com",
+        "https://cdn.tailwindcss.com",
+        "https://s3.tradingview.com/tv.js",
+        "https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js",
+        "https://api.binance.com/api/v3/",
+        "https://api1.binance.com/api/v3/",
+        "https://api2.binance.com/api/v3/",
+        "https://api3.binance.com/api/v3/",
+        "https://data-api.binance.vision/api/v3/",
+        "https://api.coingecko.com/api/v3/coins/markets",
+        "https://api.polygon.io/v2/aggs/ticker/",
+        "https://metamask.io/download/",
+        "https://trustwallet.com/",
+        "/images/logo.png",
+        "/images/hero-bg.jpg",
+        "https://eg5osmpbyegf.space.minimax.io/images/logo.png",
+        "https://eg5osmpbyegf.space.minimax.io/images/hero-bg.jpg"
+    ],
+    "file_name": "payd_finance_extracted.json"
+}
+```

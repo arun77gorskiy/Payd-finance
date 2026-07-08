@@ -1,39 +1,44 @@
 📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
-URL: https://6w9sup08l8v3.space.minimax.io/
+URL: https://4uigpgui2r1g.space.minimax.io/
 
 Extracted content:
 ```json
 {
     "title": "Payd_Finance | AI Crypto Trading & Education",
-    "url": "https://6w9sup08l8v3.space.minimax.io/",
-    "summary": "Payd_Finance is a SaaS platform that combines AI-powered crypto market analytics with a structured trading education lab (PAYD Trading Lab). The site promotes an AI-driven, data-driven approach to crypto trading without emotional bias, offering institutional-grade market analysis, smart indicators, real-time market data, and interactive learning modules. Key sections include: real-time market overview (BTC, ETH, SOL), AI Market Regime detection, PAYD Trading Lab with 4 educational modules (levels/confirmations/market context/risk management), tools such as Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. A full Trading Terminal with TradingView charts is embedded. Pricing tiers include Basic ($29/mo) and Premium ($79/mo). The page also features trading scenarios (6 levels, 200+ situations), structured courses (Market Awareness, Evidence, Execution, Risk Architecture), and 'how it works' steps. The content is primarily in Russian.",
+    "url": "https://4uigpgui2r1g.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS platform combining AI-driven crypto market analysis with structured trading education (PAYD Trading Lab). The platform offers institutional-grade market data, AI-powered analysis (94.2% accuracy), real-time market overview for top cryptocurrencies (BTC, ETH, SOL), and an interactive Trading Lab with modules covering market structure, entry confirmation, market context, and risk management. Key features include Blind Chart, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The educational program includes 200+ realistic trading scenarios across 6 levels and 36 theory lessons. Pricing tiers: Basic ($29/mo) and Premium ($79/mo). The platform supports MetaMask and Trust Wallet, targets beginners through AI enthusiasts, and emphasizes data-driven, emotion-free trading.",
     "key_points": [
-        "AI-powered crypto trading and education SaaS platform",
-        "Real-time market data for BTC, ETH, SOL and other cryptos",
-        "AI Market Regime detection with 85% confidence (uptrend, low volatility)",
-        "PAYD Trading Lab with 4 modules for practical trading education",
-        "Tools: Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport",
-        "Trading Terminal with TradingView widget (BTCUSDT charts)",
-        "Pricing: Basic $29/mo, Premium $79/mo",
-        "AI accuracy marketed at 94.2%",
-        "Targets beginners, active traders, investors, and AI enthusiasts",
-        "Disclaimer: educational and analytical platform, not financial advice"
+        "None of the searched element IDs (lt-result-screen, lt-btn-show-future, lt-btn-next-scenario, lt-btn-retry-scenario, lt-btn-back-to-modules) were found in the page content",
+        "AI-powered crypto trading platform with 94.2% claimed accuracy",
+        "PAYD Trading Lab offers 4 educational modules on level significance, entry confirmation (BOS/CHOCH), market context, and risk management",
+        "Each module includes scenarios with Long/Short/Wait/No Trade decisions and Decision Score evaluation",
+        "Real-time market data for Bitcoin, Ethereum, Solana, and other major cryptocurrencies",
+        "Smart-indicators: Market Structure, Volume Intelligence, Volatility Regime, Momentum Score, Signal Generator",
+        "Trading Lab progress tracking with module completion, achievements, and accuracy metrics",
+        "AI Scanner provides BUY/HOLD/WAIT signals with confidence levels for each asset",
+        "Risk calculator, Trade Journal, Mistake Map, and Skill Passport as personalization tools",
+        "Two pricing tiers: Basic ($29/month) and Premium ($79/month with personal mentor)",
+        "7-day free demo access with no card required",
+        "Module 1 interface visible with TradingView chart, pattern detection (MSS, Order Blocks, FVG, Liquidity Sweeps), and decision evaluation showing incorrect LONG decision with score 0",
+        "Module navigation visible: Module X (chart analysis), Module 1 (signal why), Module 2 (decision check), Module 3 (education), Module 4 (analytics)",
+        "Scenario interface includes: candle counter (175), Stop Loss/Take Profit fields, L/S/W/N direction buttons, progress tracking (0/45 scenarios, 0% accuracy)",
+        "Hotkeys available: L (Long), S (Short), W (Wait), N (No Trade), E (Entry), 1 (Stop Loss), 2 (Take Profit), Enter (confirm), B (collapse panel), H (toolbar toggle), Esc (cancel)"
     ],
     "relevant_links": [
         "#features",
         "#education-how-it-works",
         "#how-it-works",
         "#benefits",
-        "#cta"
+        "#cta",
+        "# (Политика конфиденциальности)",
+        "# (Условия использования)"
     ],
-    "labtrainer_check": {
-        "lt-chart-hud": "not_found_in_dom",
-        "lt-floating-toolbar": "not_found_in_dom",
-        "lt-sidebar": "not_found_in_dom",
-        "lt-result-screen": "not_found_in_dom",
-        "all_lt_elements": "No elements with id starting with 'lt-' were found in the rendered DOM based on the provided page content.",
-        "hud_elements": "No elements containing 'hud' in their id were identified in the rendered DOM.",
-        "loading_status": "Cannot definitively confirm LabTrainer finished loading from static page content alone. The page shows visible UI sections (Modules Dashboard, Market Overview, AI Market Regime, Market Data panels with 'Loading...' placeholders for prices), a visible Trading Terminal section, and an embedded TradingView iframe (BTCUSDT.P and BTCUSDT widgets are present). Price values in some asset panels still show 'Loading...' / '--' placeholders, suggesting some data-loading widgets may not be fully resolved."
+    "searched_elements": {
+        "lt-result-screen": "NOT FOUND",
+        "lt-btn-show-future": "NOT FOUND",
+        "lt-btn-next-scenario": "NOT FOUND",
+        "lt-btn-retry-scenario": "NOT FOUND",
+        "lt-btn-back-to-modules": "NOT FOUND"
     },
     "file_name": "payd_finance_page.json"
 }

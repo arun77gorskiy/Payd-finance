@@ -1,0 +1,54 @@
+📄 Extracted from page: 
+URL: https://edbbcrjqt5pu.space.minimax.io/#edu/trading-lab/0
+
+Extracted content:
+```json
+{
+    "title": "Trading Lab - Scenario pr-001 (Бычий Pin Bar)",
+    "url": "https://edbbcrjqt5pu.space.minimax.io/#edu/trading-lab/0",
+    "summary": "This is a trading lab/training interface where a scenario has been loaded (scenario id: pr-001, name: 'Бычий Pin Bar' / Bullish Pin Bar) and a Long decision workflow has been executed. The page logs show a complete user interaction sequence: clicking the 'Long' button (SPAN element), confirming the decision via 'lt-btn-confirm' button ('✓ Подтвердить Long Enter'), and triggering a multi-step trainer analysis pipeline. The trainer runs through Module X (pattern detection: 17 patterns input, 175 candles, 9 patterns rendered), Module 1, Module 2 (scoring), Module 3 (explanations/cognitive biases), and Module 4 (recording), ultimately producing a result payload with market analysis data including context, bias, confidence, trend, structure, liquidity, volume, scenarios, momentum, volatility, levels, probabilities, and key signals.",
+    "key_points": [
+        "Page is a Trading Lab training simulator at path /edu/trading-lab/0",
+        "Scenario loaded: id=pr-001, name='Бычий Pin Bar' (Bullish Pin Bar with long lower wick indicating demand test)",
+        "Long button identified as a SPAN element (not a traditional button)",
+        "Confirm button has id='lt-btn-confirm' with text '✓ Подтвердить Long Enter'",
+        "Decision flow: Long → Confirm → Trainer analyzes decision=long",
+        "UI events logged: POINTERDOWN, MOUSEDOWN, CLICK on both Long SPAN and lt-btn-confirm",
+        "Trainer pipeline executes 6 steps: Module X (patterns), Module 1 (market analysis), Module 2 (scoring with isCorrect=undefined, score=0), Module 3 (explanations), Module 4 (record)",
+        "Module X processed 17 patterns from 175 candles, rendered 9 patterns",
+        "Module 1 output keys: context, bias, confidence, reasons, structure, momentum, volume, volatility, levels, levelPosition, probabilities, keySignals, extended, moduleXOutput, meta",
+        "Module X output keys: context, bias, confidence, trend, structure, liquidity, volume, scenarios",
+        "Module 3 output keys: timestamp, moduleVersion, stub, note, whyExplanation, missedSignals, cognitiveBiases, learningTips, difficulty, lesson",
+        "UI callbacks triggered: event='analyzing' and event='result' with full scenario payload",
+        "State was 'ready' before click, trainer status OK",
+        "isAnalyzing=false at time of confirm click"
+    ],
+    "relevant_links": [
+        "https://edbbcrjqt5pu.space.minimax.io/#edu/trading-lab/0"
+    ],
+    "ui_elements_identified": {
+        "chart_container": "Referenced implicitly via Module X pattern rendering (175 candles, 17 patterns in, 9 rendered) — no explicit chart container id in logs",
+        "long_button": {
+            "type": "SPAN",
+            "id": "SPAN",
+            "text": "Long",
+            "events": ["pointerdown", "mousedown", "click"]
+        },
+        "confirm_button": {
+            "type": "BUTTON (inferred)",
+            "id": "lt-btn-confirm",
+            "text": "✓ Подтвердить Long Enter",
+            "events": ["pointerdown", "mousedown", "click"],
+            "class_hint": "lt-btn-confirm (prefix 'lt-' suggests LabTrainer namespace)"
+        },
+        "hidden_panels": [
+            "LabTrainer component (manages scenario state)",
+            "Trainer component (handles submitDecision and module pipeline)",
+            "Module X renderer (pattern detection panel)",
+            "Analyzing callback UI panel",
+            "Result callback UI panel"
+        ]
+    },
+    "file_name": "trading_lab_long_decision_logs.json"
+}
+```
