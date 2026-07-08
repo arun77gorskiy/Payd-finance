@@ -1,40 +1,31 @@
 📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
-URL: https://6w9sup08l8v3.space.minimax.io/
+URL: https://kfil2jz4y2p6.space.minimax.io/
 
 Extracted content:
 ```json
 {
     "title": "Payd_Finance | AI Crypto Trading & Education",
-    "url": "https://6w9sup08l8v3.space.minimax.io/",
-    "summary": "Payd_Finance is a SaaS platform combining AI-driven crypto market analytics with structured trading education (PAYD Trading Lab). It offers real-time market data, AI market regime detection, smart indicators (Market Structure, Volume Intelligence, Volatility Regime, Momentum Score, Signal Generator), and a Trading Dashboard for 500+ altcoins. The educational component includes 4 modules (Levels, Entry Confirmation, Market Context, Risk Management), 200+ trading scenarios across 6 difficulty levels, 36 theory lessons, and tools like Blind Chart, Risk Calculator, Trade Journal, Trade Autopsy, Mistake Map, and Skill Passport. Pricing tiers: Basic ($29/mo, 50 scenarios) and Premium ($79/mo, 200+ scenarios, mentorship). TradingView widgets are embedded for live BTC/USDT charts.",
+    "url": "https://kfil2jz4y2p6.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS platform combining AI-powered crypto analytics, trading education, and trading logic in one ecosystem. The site features sections on real-time market data (Bitcoin, Ethereum, Solana), AI market regime analysis, educational trading modules (PAYD Trading Lab), trading scenarios at multiple levels, courses (Market Awareness, Evidence, Execution, Risk Architecture), pricing plans (Basic $29/mo, Premium $79/mo), and tools like Blind Chart, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The site is in Russian and targets crypto traders, beginners, active traders, investors, and AI enthusiasts.",
     "key_points": [
-        "No element with id 'lt-chart-hud' was found in the page content",
-        "Platform combines AI crypto analytics with structured trading education",
-        "Real-time market data: BTC, ETH, SOL, XRP, BNB, DOGE with Open Interest, Funding Rate, L/S Ratio, 24h Volume",
-        "AI Market Regime detection (currently: Uptrend, Low Volatility, 85% confidence)",
-        "PAYD Trading Lab includes 4 modules with 200+ scenarios across 6 levels",
-        "Tools: Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport",
-        "Two pricing plans: Basic ($29/mo) and Premium ($79/mo with mentor)",
-        "AI-powered features include Narrative Engine, Risk/Opportunity Ranking, AI Scanner",
-        "Smart Indicators: Market Structure, Volume Intelligence, Volatility Regime, Momentum Score, Signal Generator",
-        "TradingView iframe widgets embedded for live BTC/USDT chart visualization"
+        "Section 'Payd_Finance меняет подход' found - describes the platform as a SaaS combining AI analytics, deep learning, and trading logic",
+        "Key value proposition in 'меняет подход' section: Institutional algorithms accessible to everyone, no human factor in analysis, learning through real market situations",
+        "No 3D animations or 'PAYD FINANCE' text in 3D format detected in the page content",
+        "AI-powered crypto trading and education platform with 94.2% claimed AI accuracy",
+        "PAYD Trading Lab offers 5-stage learning process: Understand → Analyze → Decide → Launch market → Get review",
+        "200+ realistic trading scenarios across 6 difficulty levels with 36 theory lessons",
+        "Two pricing tiers: Basic ($29/month) and Premium ($79/month, marked as popular)",
+        "Real-time market data integration with TradingView widgets for BTC, ETH, SOL and other cryptocurrencies",
+        "AI Scanner provides BUY/HOLD/WAIT signals with confidence percentages",
+        "Narrative Engine feature analyzes current market narratives (e.g., BTC ETF institutional demand)"
     ],
     "relevant_links": [
-        "https://6w9sup08l8v3.space.minimax.io/#features",
-        "https://6w9sup08l8v3.space.minimax.io/#education-how-it-works",
-        "https://6w9sup08l8v3.space.minimax.io/#how-it-works",
-        "https://6w9sup08l8v3.space.minimax.io/#benefits",
-        "https://6w9sup08l8v3.space.minimax.io/#cta",
-        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT.P",
-        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT",
-        "https://s3-symbol-logo.tradingview.com/crypto/XTVCBTC.svg"
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#cta"
     ],
-    "lt_chart_hud_check": {
-        "exists": false,
-        "innerHTML_length": null,
-        "children_count": null,
-        "outerHTML": null
-    },
     "file_name": "payd_finance_extraction.json"
 }
 ```
