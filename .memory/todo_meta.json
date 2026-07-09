@@ -3,72 +3,44 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Изучить текущее состояние lab.html и JS-файлов",
-        "details": "Прочитать lab.html (особенно верхнее меню и #lab-pane-modules), Trainer.js, TrainerScenarios.js, lab-trainer-component.js. Понять, что именно было изменено и что нужно откатить.",
+        "content": "Создать hero-chart.js с реалистичным свечным графиком",
+        "details": "Three.js свечи: тела (Box) + тени (Line), восходящий тренд, пик со вспышкой, коррекция",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Откатить изменения в lab.html (восстановить Module X/1/2)",
-        "details": "Восстановить исходный #lab-pane-modules с 4 модулями. Восстановить старую функцию startModuleScenario. Убрать скрипт EducationContent.js.",
-        "status": "in_progress",
+        "content": "Сгенерировать OHLC-данные с восходящим трендом + коррекция",
+        "details": "Программно: 60 свечей, ~40 бычьих, пик, 20 медвежьих, реалистичные тени/тела",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Откатить изменения в TrainerScenarios.js",
-        "details": "Восстановить исходный список сценариев без level-привязки и без getForLevel().",
-        "status": "pending",
+        "content": "Создать анимационный таймлайн (5 фаз)",
+        "details": "Фаза 1: появление слева направо. Фаза 2: пик + bloom-вспышка. Фаза 3: коррекция. Фаза 4: появление PAYD FINANCE. Фаза 5: цикл.",
+        "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Откатить изменения в Trainer.js",
-        "details": "Убрать setScenarios/clearScenarios, оставить только базовую функциональность.",
-        "status": "pending",
+        "content": "Реализовать надпись PAYD FINANCE (PBR-материалы)",
+        "details": "TextGeometry с Black Chrome + Gold Edges + Purple Glow, выезд справа",
+        "status": "completed",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Откатить изменения в lab-trainer-component.js",
-        "details": "Убрать поддержку levelIndex, восстановить исходный start(scenarioIndex).",
-        "status": "pending",
-        "priority": "high"
+        "content": "Обновить index.html — подключить hero-chart.js",
+        "details": "Заменить ссылку на hero-3d.js → hero-chart.js",
+        "status": "completed",
+        "priority": "medium"
       },
       "6": {
         "id": "6",
-        "content": "Проверить восстановление — тест Module X/1/2/Terminal",
-        "details": "Запустить E2E тест, проверить, что модули работают как раньше.",
-        "status": "pending",
-        "priority": "high"
-      },
-      "7": {
-        "id": "7",
-        "content": "Добавить новую вкладку Learning Center в верхнее меню",
-        "details": "Между Scenarios и Courses. Создать новую #lab-pane-learning с тремя режимами (уровни/курс/практика).",
-        "status": "pending",
-        "priority": "high"
-      },
-      "8": {
-        "id": "8",
-        "content": "Перенести EducationContent.js в новую вкладку",
-        "details": "Обновить скрипты, обновить селекторы (#lab-levels-grid, #lab-course-mode и т.д. с префиксом learning-).",
-        "status": "pending",
-        "priority": "high"
-      },
-      "9": {
-        "id": "9",
-        "content": "Добавить контент с иллюстрациями/схемами/чеклистами",
-        "details": "Для каждого урока подготовить визуальный материал: схемы, чек-листы, типичные ошибки, примеры графиков.",
-        "status": "pending",
-        "priority": "medium"
-      },
-      "10": {
-        "id": "10",
-        "content": "Финальный тест: модули работают, Learning Center работает",
-        "details": "E2E проверка: Module X → ok, Module 1 → ok, Module 2 → ok, Terminal → ok, Learning Center → 6 уровней → уроки → кнопка практики → запускает трейнер.",
-        "status": "pending",
+        "content": "Развернуть и протестировать",
+        "details": "deploy + test_website: визуальная проверка, консоль",
+        "status": "in_progress",
         "priority": "high"
       }
     }

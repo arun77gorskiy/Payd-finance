@@ -1,0 +1,48 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://4tgkd0fqcp66.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://4tgkd0fqcp66.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS platform combining AI-powered crypto market analysis with structured trading education. The hero section introduces the platform's value proposition: 'AI-подход к криптотрейдингу и обучению' (AI approach to crypto trading and education) with the tagline emphasizing emotionless, data-driven analysis. The hero features a status indicator 'AI System Online v2.4', live market data widgets (Bitcoin price at $62,221.25, AI Accuracy 94.2%, Open Interest $38.2B, Funding Rate 0.0125%, L/S Ratio 1.09, 24h Volume $42.8B), and two primary CTAs: 'Начать с демо-доступа' (Start with demo access) and 'Как это работает' (How it works). The page is in Russian and supports MetaMask and Trust Wallet connections.",
+    "key_points": [
+        "Hero headline: 'AI-подход к криптотрейдингу и обучению' (AI approach to crypto trading and education)",
+        "Subheading: 'Анализ рынка, обучение и торговая логика в одной системе. Без эмоций. Без шума. Только данные и структура.' (Market analysis, education and trading logic in one system. No emotions. No noise. Only data and structure.)",
+        "System status indicator: 'AI System Online v2.4'",
+        "Two CTA buttons: 'Начать с демо-доступа' (Start demo access) and 'Как это работает' (How it works)",
+        "Live market data displays: Bitcoin $62,221.25 (-2.03%), AI Accuracy 94.2%, Open Interest $38.2B (+5.2% 24h), Long/Short ratio 52.3%/47.7%, Funding Rate 0.0125%, L/S Ratio 1.09 (Bullish), 24h Volume $42.8B (+12.5% vs avg)",
+        "Wallet integrations: MetaMask and Trust Wallet",
+        "3D animation element: A visual element/gif present in the hero (referenced as image in the page structure)",
+        "Navigation menu links: Функционал (Features), Обучение (Education), Как это работает (How it works), Преимущества (Benefits)",
+        "The platform emphasizes institutional-grade AI analysis accessible to retail traders with no human factor in analysis"
+    ],
+    "relevant_links": [
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#cta"
+    ],
+    "hero_section_details": {
+        "main_heading": "AI-подход к криптотрейдингу и обучению",
+        "subheading": "Анализ рынка, обучение и торговая логика в одной системе. Без эмоций. Без шума. Только данные и структура.",
+        "status_indicator": "AI System Online v2.4",
+        "primary_cta": "Начать с демо-доступа",
+        "secondary_cta": "Как это работает",
+        "market_widgets": {
+            "bitcoin_price": "$62,221.25",
+            "bitcoin_change": "-2.03%",
+            "ai_accuracy": "94.2%",
+            "open_interest": "$38.2B",
+            "long_short_ratio": {"long": "52.3%", "short": "47.7%"},
+            "funding_rate": "0.0125%",
+            "volume_24h": "$42.8B"
+        },
+        "wallet_support": ["MetaMask", "Trust Wallet"],
+        "3d_animation": "Visual 3D animated element present in hero (appears as image/gif component)"
+    },
+    "file_name": "payd_finance_hero_section.json"
+}
+```
