@@ -1,45 +1,24 @@
 {
   "todos": {
     "Coordinator": {
-      "1": {
-        "id": "1",
-        "content": "Создать hero-chart.js с реалистичным свечным графиком",
-        "details": "Three.js свечи: тела (Box) + тени (Line), восходящий тренд, пик со вспышкой, коррекция",
+      "task-1": {
+        "id": "task-1",
+        "content": "Создать 3D-сцена золотой монеты с парящими свечами",
+        "details": "Создать public/js/hero-3d-coin.js с Three.js: PBR-материалы (gold/chrome), вращающаяся монета, орбитальные свечи, bloom, частицы",
         "status": "completed",
         "priority": "high"
       },
-      "2": {
-        "id": "2",
-        "content": "Сгенерировать OHLC-данные с восходящим трендом + коррекция",
-        "details": "Программно: 60 свечей, ~40 бычьих, пик, 20 медвежьих, реалистичные тени/тела",
+      "task-2": {
+        "id": "task-2",
+        "content": "Добавить HTML-контейнер для новой 3D-сцены",
+        "details": "Добавить контейнер #payd-hero-3d-coin в секцию",
         "status": "completed",
         "priority": "high"
       },
-      "3": {
-        "id": "3",
-        "content": "Создать анимационный таймлайн (5 фаз)",
-        "details": "Фаза 1: появление слева направо. Фаза 2: пик + bloom-вспышка. Фаза 3: коррекция. Фаза 4: появление PAYD FINANCE. Фаза 5: цикл.",
-        "status": "completed",
-        "priority": "high"
-      },
-      "4": {
-        "id": "4",
-        "content": "Реализовать надпись PAYD FINANCE (PBR-материалы)",
-        "details": "TextGeometry с Black Chrome + Gold Edges + Purple Glow, выезд справа",
-        "status": "completed",
-        "priority": "high"
-      },
-      "5": {
-        "id": "5",
-        "content": "Обновить index.html — подключить hero-chart.js",
-        "details": "Заменить ссылку на hero-3d.js → hero-chart.js",
-        "status": "completed",
-        "priority": "medium"
-      },
-      "6": {
-        "id": "6",
-        "content": "Развернуть и протестировать",
-        "details": "deploy + test_website: визуальная проверка, консоль",
+      "task-3": {
+        "id": "task-3",
+        "content": "Деплой и тестирование",
+        "details": "Деплой проекта, проверка",
         "status": "in_progress",
         "priority": "high"
       }
