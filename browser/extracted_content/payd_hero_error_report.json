@@ -1,0 +1,21 @@
+📄 Extracted from page: file:///workspace/screenshots/payd-hero/view1.png
+URL: chrome-error://chromewebdata/
+
+Extracted content:
+```json
+{
+    "title": "file:///workspace/screenshots/payd-hero/view1.png",
+    "url": "chrome-error://chromewebdata/",
+    "summary": "The page failed to load and displays a Chrome error screen. The requested local file (file:///workspace/screenshots/payd-hero/view1.png) could not be accessed, returning an ERR_FILE_NOT_FOUND error. No actual content from the intended payd-hero view1 image or its #payd-hero-3d element is available for analysis. The hero canvas, 3D objects, bars, text labels, and animation state cannot be described because the source file is inaccessible.",
+    "key_points": [
+        "Page is a Chrome error screen (chrome-error://chromewebdata/)",
+        "Target file file:///workspace/screenshots/payd-hero/view1.png returned ERR_FILE_NOT_FOUND",
+        "The file may have been moved, edited, or deleted",
+        "No #payd-hero-3d element content is accessible",
+        "No visual information about bars, 3D objects, text labels, or animation state can be extracted",
+        "Extraction goal cannot be fulfilled due to inaccessible source file"
+    ],
+    "relevant_links": [],
+    "file_name": "payd_hero_error_report.json"
+}
+```
