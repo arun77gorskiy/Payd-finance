@@ -1,48 +1,38 @@
 📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
-URL: https://4tgkd0fqcp66.space.minimax.io/
+URL: https://mqaapybinv3i.space.minimax.io/
 
 Extracted content:
 ```json
 {
     "title": "Payd_Finance | AI Crypto Trading & Education",
-    "url": "https://4tgkd0fqcp66.space.minimax.io/",
-    "summary": "Payd_Finance is a SaaS platform combining AI-powered crypto market analysis with structured trading education. The hero section introduces the platform's value proposition: 'AI-подход к криптотрейдингу и обучению' (AI approach to crypto trading and education) with the tagline emphasizing emotionless, data-driven analysis. The hero features a status indicator 'AI System Online v2.4', live market data widgets (Bitcoin price at $62,221.25, AI Accuracy 94.2%, Open Interest $38.2B, Funding Rate 0.0125%, L/S Ratio 1.09, 24h Volume $42.8B), and two primary CTAs: 'Начать с демо-доступа' (Start with demo access) and 'Как это работает' (How it works). The page is in Russian and supports MetaMask and Trust Wallet connections.",
+    "url": "https://mqaapybinv3i.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS platform that combines AI-driven crypto market analysis, structured trading education, and practical trading tools in a unified ecosystem. The hero section features a 3D scene (rendered/visual element) with glass-like translucent columns rising from a platform, an 'AI System Online v2.4' status indicator, and the main headline 'AI-подход к криптотрейдингу и обучению' (AI approach to crypto trading and education). Subtext reads 'Анализ рынка, обучение и торговая логика в одной системе. Без эмоций. Без шума. Только данные и структура.' Two CTAs are present: 'Начать с демо-доступа' (Start with demo access) and 'Как это работает' (How it works). Floating around the 3D scene are live-style data widgets displaying AI Accuracy (94.2%), Bitcoin price ($64,309.99, +0.74%), Open Interest ($38.2B with 52.3% Long / 47.7% Short), Funding Rate (0.0125% Positive), L/S Ratio (1.09 Bullish), and 24h Volume ($42.8B, +12.5% vs avg). The page also includes sections for Real-Time Market Data, AI Market Regime analysis, problem/solution framing, PAYD Trading Lab educational modules (Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport), a Trading Terminal with TradingView charts, pricing tiers (Basic $29/mo, Premium $79/mo), and target audience descriptions.",
     "key_points": [
-        "Hero headline: 'AI-подход к криптотрейдингу и обучению' (AI approach to crypto trading and education)",
-        "Subheading: 'Анализ рынка, обучение и торговая логика в одной системе. Без эмоций. Без шума. Только данные и структура.' (Market analysis, education and trading logic in one system. No emotions. No noise. Only data and structure.)",
-        "System status indicator: 'AI System Online v2.4'",
-        "Two CTA buttons: 'Начать с демо-доступа' (Start demo access) and 'Как это работает' (How it works)",
-        "Live market data displays: Bitcoin $62,221.25 (-2.03%), AI Accuracy 94.2%, Open Interest $38.2B (+5.2% 24h), Long/Short ratio 52.3%/47.7%, Funding Rate 0.0125%, L/S Ratio 1.09 (Bullish), 24h Volume $42.8B (+12.5% vs avg)",
-        "Wallet integrations: MetaMask and Trust Wallet",
-        "3D animation element: A visual element/gif present in the hero (referenced as image in the page structure)",
-        "Navigation menu links: Функционал (Features), Обучение (Education), Как это работает (How it works), Преимущества (Benefits)",
-        "The platform emphasizes institutional-grade AI analysis accessible to retail traders with no human factor in analysis"
+        "Hero section contains a 3D scene with glass/translucent columns rising from a platform",
+        "Hero displays 'AI System Online v2.4' status badge",
+        "Main headline: 'AI-подход к криптотрейдингу и обучению' (AI approach to crypto trading and education)",
+        "Subheadline: 'Анализ рынка, обучение и торговая логика в одной системе. Без эмоций. Без шума. Только данные и структура.'",
+        "Two primary CTAs: 'Начать с демо-доступа' and 'Как это работает'",
+        "Top navigation: Функционал, Обучение, Как это работает, Преимущества",
+        "Wallet connect buttons for MetaMask and Trust Wallet",
+        "Live data widgets floating around 3D scene: AI Accuracy 94.2%, BTC $64,309.99 (+0.74%), Open Interest $38.2B (Long 52.3% / Short 47.7%), Funding Rate 0.0125% Positive, L/S Ratio 1.09 Bullish, 24h Volume $42.8B (+12.5% vs avg)",
+        "Platform is marketed as a SaaS combining AI analytics, deep learning, and trading logic",
+        "PAYD Trading Lab includes 5 educational stages: Understand, Analyze, Decide, Launch Market, Get Review",
+        "10 core features: Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport",
+        "200+ trading scenarios across 6 levels and 36 theory lessons",
+        "4 educational modules: levels/confirmations, market context, risk management",
+        "Pricing: Basic $29/month, Premium $79/month (with personal mentor)",
+        "Free 7-day demo access, no card required"
     ],
     "relevant_links": [
         "#features",
         "#education-how-it-works",
         "#how-it-works",
         "#benefits",
-        "#cta"
+        "#cta",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT.P&interval=60",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT&interval=60"
     ],
-    "hero_section_details": {
-        "main_heading": "AI-подход к криптотрейдингу и обучению",
-        "subheading": "Анализ рынка, обучение и торговая логика в одной системе. Без эмоций. Без шума. Только данные и структура.",
-        "status_indicator": "AI System Online v2.4",
-        "primary_cta": "Начать с демо-доступа",
-        "secondary_cta": "Как это работает",
-        "market_widgets": {
-            "bitcoin_price": "$62,221.25",
-            "bitcoin_change": "-2.03%",
-            "ai_accuracy": "94.2%",
-            "open_interest": "$38.2B",
-            "long_short_ratio": {"long": "52.3%", "short": "47.7%"},
-            "funding_rate": "0.0125%",
-            "volume_24h": "$42.8B"
-        },
-        "wallet_support": ["MetaMask", "Trust Wallet"],
-        "3d_animation": "Visual 3D animated element present in hero (appears as image/gif component)"
-    },
     "file_name": "payd_finance_hero_section.json"
 }
 ```
