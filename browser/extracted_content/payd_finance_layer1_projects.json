@@ -1,0 +1,34 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://2xfncaeiz56b.space.minimax.io/#/l1
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://2xfncaeiz56b.space.minimax.io/#/l1",
+    "summary": "Payd_Finance is a SaaS platform combining AI-driven crypto market analysis with structured trading education. The page features the PAYD Intelligence Layer (Agent v3.2.1) which provides institutional-grade crypto research. The Layer 1 section displays 5 curated Layer 1 blockchain projects with AI-computed scores, risk metrics, market cap, TVL, and investment ratings. The platform also offers trading education modules, a trading terminal with TradingView integration, and subscription plans (Basic $29/mo, Premium $79/mo).",
+    "key_points": [
+        "Layer 1 table shows 5 projects (NOT 0 projects)",
+        "Section header: 'Layer 1 · 5 projects'",
+        "Subtitle: 'AI-curated institutional research for the Layer 1 sector.'",
+        "Project 1: Aptos (APT) - Move-based - AI Score 92, Risk 37, Mkt Cap $1.24B, TVL $1.84B, Rating: Strong Buy",
+        "Project 2: Sui (SUI) - Move-based - AI Score 78, Risk 45, Mkt Cap $2.84B, TVL $1.84B, Rating: Buy",
+        "Project 3: Solana (SOL) - Smart Contracts - AI Score 74, Risk 22, Mkt Cap $1.24B, TVL $412.0M, Rating: Buy",
+        "Project 4: Sei (SEI) - Trading-optimized - AI Score 68, Risk 36, Mkt Cap $1.24B, TVL $84.0M, Rating: Hold",
+        "Project 5: Ethereum (ETH) - Smart Contracts - AI Score 65, Risk 21, Mkt Cap $18.4B, TVL $184.0M, Rating: Hold",
+        "Each project has an 'Open Research' action button",
+        "Other AI categories available: Layer 2, DeFi, RWA, Gaming, DeSci",
+        "Platform offers 200+ trading scenarios across 6 levels and 36 theory lessons",
+        "4 education modules covering levels, entry confirmation, market context, and risk management"
+    ],
+    "relevant_links": [
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#intelligence",
+        "#cta"
+    ],
+    "file_name": "payd_finance_layer1_projects.json"
+}
+```

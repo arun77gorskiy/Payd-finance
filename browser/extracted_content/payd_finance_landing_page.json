@@ -1,37 +1,40 @@
 📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
-URL: https://6w9sup08l8v3.space.minimax.io/
+URL: https://qiev26j08sp3.space.minimax.io/#depin-intelligence
 
 Extracted content:
 ```json
 {
     "title": "Payd_Finance | AI Crypto Trading & Education",
-    "url": "https://6w9sup08l8v3.space.minimax.io/",
-    "summary": "Payd_Finance is a SaaS platform that combines AI-powered crypto trading analytics with educational tools for traders. The page displays a comprehensive landing page for the platform, featuring real-time market data, AI-powered market analysis, and the PAYD Trading Lab - an interactive learning system. Key sections include: Real-Time Market Data (BTC, ETH, SOL with prices and metrics), AI Market Regime analysis (currently showing bullish trend with 85% AI confidence), Market Overview with institutional-grade cryptocurrency data, AI-Powered Analysis section, and the PAYD Trading Lab with educational modules. The platform offers features like Blind Chart practice, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. Pricing includes Basic ($29/month) and Premium ($79/month) tiers. The current displayed module appears to be Module 1 'Why a level by itself means nothing' which teaches users about waiting for confirmation before entering trades, showing a Bullish Pin Bar scenario on BTC/USDT chart.",
+    "url": "https://qiev26j08sp3.space.minimax.io/#depin-intelligence",
+    "summary": "The page is a landing page for Payd_Finance, an AI-powered crypto trading and education SaaS platform. It is presented in Russian and features multiple sections: a hero section promoting AI crypto trading with a 94.2% AI accuracy claim, real-time market data overview (Bitcoin at $64,177, Open Interest $38.2B, etc.), AI market regime analysis showing an uptrend with 85% confidence, and a detailed educational trading lab (PAYD Trading Lab) with features like Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport. The page also includes a Trading Terminal with TradingView charts, educational modules (4 modules covering levels, entry confirmation, market context, and risk management), 6 levels of trading scenarios, structured courses, pricing tiers (Basic $29/mo, Premium $79/mo), and a PAYD Intelligence Layer section providing institutional crypto research with market snapshots, top opportunities (REN, AKT, TAO, FIL, IO), risk alerts, upcoming token unlocks, and latest research updates. The URL anchor #depin-intelligence suggests navigation to the DePIN Intelligence section of the PAYD Intelligence platform, which is part of the broader market intelligence offering.",
     "key_points": [
-        "AI System Online v2.4 with 94.2% AI Accuracy",
-        "Bitcoin current price: $63,611.55 (-0.36%), Ethereum: $1,784, Solana: $81.16",
-        "AI Market Regime: Uptrend with low volatility, 85% confidence",
-        "Open Interest: $38.2B, Long/Short ratio: 52.3%/47.7%",
-        "PAYD Trading Lab offers 5-stage learning: Understand, Analyze, Decide, Launch Market, Get Review",
-        "Module 1 currently displayed: 'Why a level by itself means nothing' - Bullish Pin Bar scenario",
-        "200+ trading scenarios across 6 difficulty levels and 36 theory lessons",
-        "4 educational modules: Levels, Entry Confirmation, Market Context, Risk Management",
-        "Pricing: Basic $29/month (50 scenarios), Premium $79/month (200+ scenarios with mentor)",
-        "Platform features: Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport",
-        "Supports MetaMask and Trust Wallet integration",
-        "AI Scanner shows signals: BTC BUY (78%), ETH HOLD (62%), SOL WAIT (45%)",
-        "Risk/Opportunity: Risk 4.2/10, Opportunity 7.8/10 - Medium-term BUY recommendation",
-        "Target audience: Novices, Active Traders, Investors, AI Enthusiasts"
+        "AI-powered crypto trading and education SaaS platform (Payd_Finance)",
+        "AI System v2.4 online with 94.2% accuracy claim",
+        "Real-time market data: BTC at $64,177.71, Open Interest $38.2B, 24h Volume $42.8B",
+        "AI Market Regime: Uptrend with low volatility, 85% confidence, recommended long with tight stop-loss",
+        "PAYD Trading Lab with 10 main features including Blind Chart, Risk Calculator, Trade Journal, Decision Score, Mistake Map, and Skill Passport",
+        "4 educational modules covering levels, entry confirmation (BOS/CHOCH), market context, and risk management",
+        "200+ trading scenarios across 6 levels and 36 theory lessons",
+        "Pricing: Basic $29/month, Premium $79/month (most popular) with personal mentor",
+        "Trading Terminal with TradingView integration, multiple symbols (BTC, ETH, SOL, BNB, XRP, ADA, DOGE, AVAX, LINK, MATIC) and timeframes (1m to 1W)",
+        "PAYD Intelligence Layer v3.2.1 providing institutional crypto research",
+        "Market Overview: $2410.0B total, 487 projects tracked, AI Score Average 67.4/100",
+        "Top Opportunities: TAO (89), REN (87), AKT (84), IO (82), FIL (79)",
+        "Risk Alerts: Arbitrum and Sui token unlocks, Aptos developer activity decline, Optimism sequencer revenue drop",
+        "Upcoming token unlocks: ARB ($87.4M), SUI ($112M), APT ($148M), OP ($24.6M), TIA ($38.2M)",
+        "AI Scanner signals: BTC BUY (78%), ETH HOLD (62%), SOL WAIT (45%)",
+        "Current narrative: Institutional BTC demand growing amid ETF approval, accumulation phase",
+        "Risk/Opportunity ranking: 4.2/10 risk (low), 7.8/10 opportunity (high) with medium-term BUY recommendation",
+        "Footer includes disclaimer that Payd_Finance is educational/analytical, not financial advice"
     ],
     "relevant_links": [
         "#features",
         "#education-how-it-works",
         "#how-it-works",
         "#benefits",
+        "#intelligence",
         "#cta",
-        "Trading Terminal section",
-        "PAYD Trading Lab modules",
-        "Pricing tiers (Basic and Premium)"
+        "#depin-intelligence"
     ],
     "file_name": "payd_finance_landing_page.json"
 }

@@ -1,0 +1,111 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://qiev26j08sp3.space.minimax.io/
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://qiev26j08sp3.space.minimax.io/",
+    "summary": "Payd_Finance is a SaaS platform combining AI-powered crypto market analysis, trading education, and practice tools. The site features a landing page (in Russian) describing the product, a PAYD Trading Lab with educational modules and scenarios, a Trading Terminal with real-time data, and a separate PAYD Intelligence Layer for institutional-grade crypto research. The platform emphasizes data-driven decision-making, AI signal generation, risk management, and structured learning paths for traders of all levels.",
+    "kpi_cards": {
+        "note": "The page does not contain a traditional 9-card dashboard. However, there are KPI/metric cards visible in multiple sections:",
+        "hero_kpi_cards": [
+            "AI Accuracy - 94.2%",
+            "Bitcoin - $64,112.00 (-0.07%)"
+        ],
+        "market_overview_cards": [
+            "Open Interest - $38.2B (24h: +5.2%)",
+            "Funding Rate - 0.0125% (Positive)",
+            "L/S Ratio - 1.09 (Bullish)",
+            "24h Volume - $42.8B (+12.5% vs avg)"
+        ],
+        "repeating_market_cards_section": [
+            "AI Accuracy - 94.2%",
+            "Bitcoin - $95,234 (+2.34%)",
+            "Open Interest - $38.2B (24h: +5.2%)",
+            "Funding Rate - 0.0125% (Positive)",
+            "L/S Ratio - 1.09 (Bullish)",
+            "24h Volume - $42.8B (+12.5% vs avg)"
+        ],
+        "payd_intelligence_dashboard_kpis": [
+            "Market Overview - $2410.0B (+1.8% 24h)",
+            "Projects Tracked - 487 (+4 7d)",
+            "AI Score Average - 67.4/100 (+0.8% 7d)",
+            "Weekly Reports - 24 (Published Mon · Thu)",
+            "Top Opportunities - 23 (Top: AI Infrastructure)",
+            "Risk Alerts - 4 (64 · Greed)",
+            "Upcoming Unlocks - 5 (Next 30 days)",
+            "Latest Research - 4 (New this week)",
+            "Latest Updates - 4 (Last: Jul 11, 2026)"
+        ]
+    },
+    "sidebar_items": {
+        "payd_intelligence_sidebar": {
+            "PAYD Intel": [],
+            "Overview": ["Dashboard"],
+            "Sectors": ["DePIN Intelligence", "AI Infrastructure"],
+            "AI Categories": ["Layer 1", "Layer 2", "DeFi", "RWA", "Gaming", "DeSci"],
+            "Tools": ["Opportunity Scanner", "Watchlist", "Weekly Intelligence", "Research Library"]
+        },
+        "trading_lab_sidebar": {
+            "PAYD Trading Lab": [],
+            "Main Nav": ["Сценарии", "Курсы", "Тарифы"]
+        },
+        "dashboard_module_navigation": [
+            "📊 Dashboard",
+            "📚 Modules",
+            "💹 Trading Terminal",
+            "🏆 Progress"
+        ]
+    },
+    "javascript_errors": {
+        "status": "No JavaScript errors visible in the extracted page content",
+        "notes": "Multiple TradingView iframe widgets are present and successfully loaded. Some data fields show 'Loading...' which may indicate async data fetching but no explicit errors are reported."
+    },
+    "key_points": [
+        "AI-driven crypto trading and education SaaS platform with 94.2% claimed AI accuracy",
+        "PAYD Trading Lab offers 4 educational modules, 200+ trading scenarios, and 6 difficulty levels",
+        "Real-time Trading Terminal with TradingView charts, multi-timeframe analysis, and AI signal generation",
+        "PAYD Intelligence Layer (v3.2.1) provides institutional-grade market research updated twice weekly",
+        "Trading Lab Dashboard tracks: modules completed (0/4), scenarios finished, terminal trades, and decision accuracy",
+        "Two subscription tiers: Basic ($29/mo) and Premium ($79/mo) with 7-day free demo",
+        "Features include Blind Chart, Risk Calculator, Trade Journal, Market Structure analysis, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, and Skill Passport",
+        "Monitors 500+ altcoins with AI analysis",
+        "Page is in Russian language, target audience includes novices, active traders, investors, and AI enthusiasts",
+        "Disclaimers clearly state no financial advice is provided - educational and analytical platform only"
+    ],
+    "relevant_links": [
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#intelligence",
+        "#cta",
+        "TradingView widget: https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT.P",
+        "TradingView widget: https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT"
+    ],
+    "platform_sections": [
+        "Hero - AI Crypto Trading & Education",
+        "Real-Time Market Data / Market Overview",
+        "AI Market Regime Analysis",
+        "PAYD Trading Lab - Education modules (4 modules)",
+        "Main Features (10 tools: Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport)",
+        "Dashboard with progress tracking",
+        "Trading Terminal with full TradingView integration",
+        "Progress page with achievements",
+        "Trading Scenarios (6 levels)",
+        "Courses (Market Awareness, Evidence, Execution, Risk Architecture)",
+        "Pricing (Basic $29, Premium $79)",
+        "How it works (4 steps)",
+        "Target audience (4 segments)",
+        "Why Payd_Finance benefits",
+        "PAYD Intelligence Layer (institutional research platform)",
+        "AI Market Analysis section",
+        "Smart Indicators section",
+        "Trading Dashboard (500+ altcoins)",
+        "Footer with platform/company links and disclaimers"
+    ],
+    "console_errors": "No JavaScript errors detected in the page content provided",
+    "file_name": "payd_finance_dashboard.json"
+}
+```
