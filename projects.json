@@ -1,0 +1,511 @@
+{
+  "last_updated": "2026-07-11T08:00:00Z",
+
+  "projects": {
+    "RENDER": {
+      "ticker": "RENDER",
+      "name": "Render Network",
+      "logo": "🎬",
+      "sector": "DePIN",
+      "subsector": "GPU Compute",
+      "founded": 2017,
+      "headquarters": "Los Angeles, USA",
+      "ai_score": 87,
+      "ai_score_change_7d": 2.3,
+      "risk_score": 32,
+      "risk_label": "Low",
+      "investment_rating": "Strong Buy",
+      "rating_score": 4.6,
+
+      "ai_score_history": [
+        { "date": "2026-01-12", "score": 79 },
+        { "date": "2026-02-12", "score": 80 },
+        { "date": "2026-03-12", "score": 82 },
+        { "date": "2026-04-12", "score": 81 },
+        { "date": "2026-05-12", "score": 83 },
+        { "date": "2026-06-12", "score": 85 },
+        { "date": "2026-07-12", "score": 87 }
+      ],
+
+      "description": "Render is a decentralized GPU rendering network that connects artists and studios needing compute with operators offering idle GPU capacity. The protocol has evolved from a simple render farm to the largest decentralized GPU network, with growing demand from AI/ML inference and 3D content creation pipelines.",
+      "thesis": "Render is the cleanest expression of the AI compute theme in DePIN. Real revenue, real customers, defensible moat. The Apple Vision Pro partnership expands TAM significantly and positions Render as the default rendering layer for next-generation 3D content.",
+
+      "team": [
+        { "name": "Jules Urbach", "role": "Founder & CEO", "background": "Founder of OTOY — one of the most respected cloud rendering companies, serving Disney, Netflix, and Apple for over a decade." },
+        { "name": "Trevor Harries-Jones", "role": "Co-Founder", "background": "Architect of Render's protocol design." },
+        { "name": "Anydrone Looper", "role": "Head of Engineering", "background": "Former lead at OTOY, distributed systems specialist." }
+      ],
+
+      "investors": [
+        { "name": "Paradigm", "tier": "Lead", "rounds": ["2026 Ecosystem $50M"] },
+        { "name": "Multicoin Capital", "tier": "Strategic", "rounds": ["2025 Series A"] },
+        { "name": "Coinbase Ventures", "tier": "Strategic", "rounds": ["2024 Strategic"] },
+        { "name": "Solana Ventures", "tier": "Strategic", "rounds": ["2024 Base Migration"] }
+      ],
+
+      "partnerships": [
+        { "partner": "Apple Vision Pro Studios", "summary": "Expanded 3D content rendering pipeline for spatial computing.", "date": "2026-05" },
+        { "partner": "Universal Studios", "summary": "Enterprise SLA tier customer.", "date": "2026-06" },
+        { "partner": "Solana", "summary": "Base migration layer reduces fees 38%.", "date": "2025-11" },
+        { "partner": "OTOY", "summary": "Foundational technology partnership.", "date": "2017" }
+      ],
+
+      "roadmap": [
+        { "quarter": "Q3 2026", "milestone": "Enterprise SLA tier — full rollout", "status": "on-track" },
+        { "quarter": "Q4 2026", "milestone": "AI inference marketplace launch", "status": "in-progress" },
+        { "quarter": "Q1 2027", "milestone": "Cross-chain GPU routing", "status": "planned" },
+        { "quarter": "Q2 2027", "milestone": "Real-time ray-tracing endpoints", "status": "planned" }
+      ],
+
+      "github": {
+        "repo": "rendernetwork/render-node",
+        "stars": 4_124,
+        "forks": 612,
+        "commits_30d": 487,
+        "active_devs_30d": 32,
+        "contributors_total": 184,
+        "last_commit": "2026-07-10",
+        "primary_languages": ["Rust", "TypeScript", "Solidity"]
+      },
+
+      "metrics": {
+        "monthly_revenue_usd": 1_840_000,
+        "monthly_active_users": 184_200,
+        "tvl_usd": 412_000_000,
+        "nodes_count": 12_400,
+        "market_cap_usd": 3_810_000_000,
+        "fdv_usd": 4_120_000_000,
+        "circulating_supply": 412_800_000,
+        "total_supply": 530_000_000,
+        "next_unlock_date": "2026-09-15",
+        "next_unlock_pct": 1.8,
+        "next_unlock_usd_value": "$68.6M"
+      },
+
+      "tokenomics": {
+        "initial_supply": 530_000_000,
+        "circulating_pct": 77.9,
+        "vesting": "4-year linear, with 1-year cliff for team and investors. 12% reserved for ecosystem incentives.",
+        "utility": "Payment for GPU compute, staking for node operators, governance.",
+        "buyback_burn": "20% of network revenue is used to buy back and burn RNDR on a quarterly basis."
+      },
+
+      "unlock_schedule": [
+        { "date": "2026-09-15", "pct": 1.8, "usd_value": "$68.6M", "type": "Team" },
+        { "date": "2026-12-15", "pct": 1.4, "usd_value": "$53.3M", "type": "Ecosystem" },
+        { "date": "2027-03-15", "pct": 1.2, "usd_value": "$45.7M", "type": "Investors" }
+      ],
+
+      "advantages": [
+        "First-mover in decentralized GPU rendering — 7+ year track record",
+        "Real revenue (>$1.8M/month) with growing customer base",
+        "Defensible moat through OTOY's technology integration",
+        "Largest active node count among GPU compute DePINs",
+        "Strong institutional backing (Paradigm, Multicoin)"
+      ],
+
+      "disadvantages": [
+        "Customer concentration risk — large studios make up significant revenue",
+        "Token inflation from ongoing unlocks (~3-4% annual)",
+        "Competition from Akash, io.net for AI compute workloads",
+        "GPU price volatility impacts node operator economics"
+      ],
+
+      "competitors": [
+        { "name": "Akash Network", "comparison": "More cloud-compute focus, less rendering-specific tooling." },
+        { "name": "io.net", "comparison": "Larger raw cluster but less enterprise customer base." },
+        { "name": "Golem", "comparison": "Pioneer but with significantly smaller network effects." }
+      ],
+
+      "ai_investment_opinion": "Render is the highest-quality DePIN exposure in the AI compute theme. Real revenue, growing customer base, defensible moat, and clear institutional adoption path. Pullback to 50-day MA is the highest-quality re-entry in the space. Target allocation: 4-6% of a diversified crypto portfolio.",
+
+      "ai_score_components": {
+        "github_activity": 92,
+        "developer_activity": 88,
+        "revenue": 84,
+        "users": 79,
+        "tvl": 81,
+        "community": 86,
+        "partnerships": 90,
+        "liquidity": 78,
+        "tokenomics": 71,
+        "unlock_risk": 64,
+        "market_momentum": 91
+      }
+    },
+
+    "TAO": {
+      "ticker": "TAO",
+      "name": "Bittensor",
+      "logo": "🧠",
+      "sector": "AI Infrastructure",
+      "subsector": "AI Compute",
+      "founded": 2021,
+      "headquarters": "Decentralized",
+      "ai_score": 89,
+      "ai_score_change_7d": 4.1,
+      "risk_score": 38,
+      "risk_label": "Medium",
+      "investment_rating": "Strong Buy",
+      "rating_score": 4.7,
+
+      "ai_score_history": [
+        { "date": "2026-01-12", "score": 76 },
+        { "date": "2026-02-12", "score": 78 },
+        { "date": "2026-03-12", "score": 81 },
+        { "date": "2026-04-12", "score": 84 },
+        { "date": "2026-05-12", "score": 85 },
+        { "date": "2026-06-12", "score": 86 },
+        { "date": "2026-07-12", "score": 89 }
+      ],
+
+      "description": "Bittensor is a decentralized machine learning network where AI models are ranked and rewarded based on their utility to the network. The protocol uses a novel consensus mechanism where miners produce model outputs and validators rank them, creating an open marketplace for AI intelligence.",
+      "thesis": "Bittensor is the most ambitious and now most credible attempt to build decentralized AI at the protocol level. The subnet architecture, combined with dTAO emissions rebalancing, has moved from theory to demonstrably working. Network revenue and developer activity are both inflecting upward.",
+
+      "team": [
+        { "name": "Ala Shaabana", "role": "Co-Founder", "background": "Machine learning researcher, previously at the University of Toronto." },
+        { "name": "Jacob Robert Steeves", "role": "Co-Founder", "background": "AI researcher with deep expertise in distributed systems." }
+      ],
+
+      "investors": [
+        { "name": "Polychain Capital", "tier": "Lead", "rounds": ["2021 Seed", "2026 Ecosystem"] },
+        { "name": "DCG", "tier": "Strategic", "rounds": ["2022 Strategic"] },
+        { "name": "Multicoin Capital", "tier": "Strategic", "rounds": ["2024 Strategic"] }
+      ],
+
+      "partnerships": [
+        { "partner": "Google Cloud", "summary": "Joint go-to-market for enterprise AI compute customers.", "date": "2026-07" },
+        { "partner": "NVIDIA", "summary": "Compute infrastructure partnership.", "date": "2026-06" },
+        { "partner": "Macrocosmos", "summary": "Subnet operator.", "date": "2024" }
+      ],
+
+      "roadmap": [
+        { "quarter": "Q3 2026", "milestone": "Subnet 50 expansion", "status": "on-track" },
+        { "quarter": "Q4 2026", "milestone": "Dynamic TAO 2.0", "status": "in-progress" },
+        { "quarter": "Q1 2027", "milestone": "Enterprise subnet program", "status": "planned" }
+      ],
+
+      "github": {
+        "repo": "opentensor/bittensor",
+        "stars": 8_240,
+        "forks": 1_412,
+        "commits_30d": 612,
+        "active_devs_30d": 84,
+        "contributors_total": 412,
+        "last_commit": "2026-07-11",
+        "primary_languages": ["Python", "Rust", "TypeScript"]
+      },
+
+      "metrics": {
+        "monthly_revenue_usd": 1_240_000,
+        "monthly_active_users": 84_200,
+        "tvl_usd": 412_000_000,
+        "subnets_active": 47,
+        "market_cap_usd": 4_120_000_000,
+        "fdv_usd": 5_120_000_000,
+        "circulating_supply": 8_400_000,
+        "total_supply": 21_000_000,
+        "next_unlock_date": "2026-09-22",
+        "next_unlock_pct": 0.6,
+        "next_unlock_usd_value": "$24.7M"
+      },
+
+      "tokenomics": {
+        "initial_supply": 21_000_000,
+        "circulating_pct": 40.0,
+        "vesting": "1 TAO created per block forever, with emission halving every 4 years. ~7,200 TAO emitted daily.",
+        "utility": "Subnet registration, validator staking, governance.",
+        "buyback_burn": "None. New emissions flow to subnets based on performance."
+      },
+
+      "unlock_schedule": [
+        { "date": "2026-09-22", "pct": 0.6, "usd_value": "$24.7M", "type": "Emission" },
+        { "date": "2026-12-22", "pct": 0.5, "usd_value": "$20.6M", "type": "Emission" }
+      ],
+
+      "advantages": [
+        "First-mover in decentralized AI compute coordination",
+        "Real network revenue (>$1.2M/month) growing 40%+ MoM",
+        "Subnet architecture is the most innovative AI L1 design",
+        "Strong developer mindshare (84 active devs)",
+        "dTAO emissions rebalancing is a structural improvement"
+      ],
+
+      "disadvantages": [
+        "Subnet concentration risk — top 5 hold 62% of emissions",
+        "Emission rate is high — could pressure price in early years",
+        "Regulatory uncertainty around AI-related tokens",
+        "Subnet quality varies widely"
+      ],
+
+      "competitors": [
+        { "name": "Fetch.ai", "comparison": "More agent-focused, less compute-coordination." },
+        { "name": "NEAR", "comparison": "AI L1 but with broader scope." },
+        { "name": "Render", "comparison": "GPU compute but not AI-specific coordination." }
+      ],
+
+      "ai_investment_opinion": "Bittensor enters a confirmed structural uptrend. Subnet expansion combined with dTAO emissions rebalancing creates a positive feedback loop for both developer activity and network revenue. This is the highest-conviction AI infrastructure position. Target allocation: 5-7% of a diversified crypto portfolio.",
+
+      "ai_score_components": {
+        "github_activity": 94,
+        "developer_activity": 92,
+        "revenue": 81,
+        "users": 84,
+        "tvl": 78,
+        "community": 91,
+        "partnerships": 88,
+        "liquidity": 84,
+        "tokenomics": 76,
+        "unlock_risk": 68,
+        "market_momentum": 96
+      }
+    },
+
+    "INJ": {
+      "ticker": "INJ",
+      "name": "Injective",
+      "logo": "🧪",
+      "sector": "DeFi",
+      "subsector": "Layer 1",
+      "founded": 2018,
+      "headquarters": "New York, USA",
+      "ai_score": 81,
+      "ai_score_change_7d": 3.2,
+      "risk_score": 36,
+      "risk_label": "Low",
+      "investment_rating": "Strong Buy",
+      "rating_score": 4.4,
+
+      "ai_score_history": [
+        { "date": "2026-01-12", "score": 72 },
+        { "date": "2026-02-12", "score": 74 },
+        { "date": "2026-03-12", "score": 76 },
+        { "date": "2026-04-12", "score": 78 },
+        { "date": "2026-05-12", "score": 79 },
+        { "date": "2026-06-12", "score": 80 },
+        { "date": "2026-07-12", "score": 81 }
+      ],
+
+      "description": "Injective is a purpose-built layer 1 blockchain for decentralized finance. The protocol features a fully on-chain order book, cross-chain bridging via Cosmos IBC, and EVM compatibility. Recent expansion includes the iAgent framework for AI-powered financial agents.",
+      "thesis": "Injective is the most credible L1 for institutional DeFi. The EVM mainnet launch is a major catalyst — it opens the door for the entire EVM-native developer and capital ecosystem. The on-chain order book remains a structural advantage for derivatives and complex DeFi.",
+
+      "team": [
+        { "name": "Eric Chen", "role": "Co-Founder & CEO", "background": "Former Binance Labs, Wharton MBA." },
+        { "name": "Albert Chon", "role": "Co-Founder", "background": "Distributed systems engineer, Princeton CS." }
+      ],
+
+      "investors": [
+        { "name": "Binance Labs", "tier": "Lead", "rounds": ["2020 Seed"] },
+        { "name": "Pantera Capital", "tier": "Strategic", "rounds": ["2021 Series A"] },
+        { "name": "Mark Cuban", "tier": "Strategic", "rounds": ["2021 Strategic"] }
+      ],
+
+      "partnerships": [
+        { "partner": "Google Cloud", "summary": "Institutional DeFi distribution channel.", "date": "2026-07" },
+        { "partner": "Pyth Network", "summary": "Oracle infrastructure for derivatives.", "date": "2024" }
+      ],
+
+      "roadmap": [
+        { "quarter": "Q3 2026", "milestone": "EVM mainnet full rollout", "status": "in-progress" },
+        { "quarter": "Q4 2026", "milestone": "iAgent framework GA", "status": "on-track" },
+        { "quarter": "Q1 2027", "milestone": "Institutional prime brokerage integration", "status": "planned" }
+      ],
+
+      "github": {
+        "repo": "InjectiveLabs/injective-chain",
+        "stars": 2_140,
+        "forks": 612,
+        "commits_30d": 384,
+        "active_devs_30d": 48,
+        "contributors_total": 184,
+        "last_commit": "2026-07-10",
+        "primary_languages": ["Go", "TypeScript", "Solidity"]
+      },
+
+      "metrics": {
+        "monthly_revenue_usd": 612_000,
+        "monthly_active_users": 124_200,
+        "tvl_usd": 412_000_000,
+        "market_cap_usd": 2_840_000_000,
+        "fdv_usd": 3_120_000_000,
+        "circulating_supply": 97_400_000,
+        "total_supply": 100_000_000,
+        "next_unlock_date": "2026-09-08",
+        "next_unlock_pct": 0.6,
+        "next_unlock_usd_value": "$17.0M"
+      },
+
+      "tokenomics": {
+        "initial_supply": 100_000_000,
+        "circulating_pct": 97.4,
+        "vesting": "Highly diluted, with most unlocks already complete. Small monthly distribution for ecosystem.",
+        "utility": "Staking, governance, fee burn mechanism (60% of fees burned).",
+        "buyback_burn": "60% of all network fees are burned via the weekly auction."
+      },
+
+      "unlock_schedule": [
+        { "date": "2026-09-08", "pct": 0.6, "usd_value": "$17.0M", "type": "Ecosystem" }
+      ],
+
+      "advantages": [
+        "Fully on-chain order book — unique among L1s",
+        "EVM compatibility now live on mainnet",
+        "Deflationary tokenomics with 60% fee burn",
+        "Strong institutional partnerships (Binance, Google Cloud)",
+        "iAgent framework opens AI agent economics"
+      ],
+
+      "disadvantages": [
+        "L1 competition is intense — Base, Arbitrum, Solana all have larger wallet share",
+        "EVM launch may not be sufficient to attract EVM-native capital",
+        "TVL growth below expectations for an institutional L1"
+      ],
+
+      "competitors": [
+        { "name": "Arbitrum", "comparison": "Larger TVL and user base, but no native order book." },
+        { "name": "Solana", "comparison": "Faster, but more consumer-focused." },
+        { "name": "Aptos", "comparison": "Move-based, more institutional focus on traditional assets." }
+      ],
+
+      "ai_investment_opinion": "Injective is a credible institutional DeFi L1. The EVM launch is a meaningful catalyst but the real test is whether institutional capital migrates. Watch TVL growth through Q3 2026 as the lead indicator. Target allocation: 3-4% of a diversified crypto portfolio.",
+
+      "ai_score_components": {
+        "github_activity": 84,
+        "developer_activity": 82,
+        "revenue": 78,
+        "users": 79,
+        "tvl": 81,
+        "community": 84,
+        "partnerships": 86,
+        "liquidity": 84,
+        "tokenomics": 76,
+        "unlock_risk": 78,
+        "market_momentum": 89
+      }
+    },
+
+    "FIL": {
+      "ticker": "FIL",
+      "name": "Filecoin",
+      "logo": "📦",
+      "sector": "DePIN",
+      "subsector": "Storage",
+      "founded": 2017,
+      "headquarters": "Boston, USA",
+      "ai_score": 82,
+      "ai_score_change_7d": 1.4,
+      "risk_score": 28,
+      "risk_label": "Low",
+      "investment_rating": "Buy",
+      "rating_score": 4.3,
+
+      "ai_score_history": [
+        { "date": "2026-01-12", "score": 75 },
+        { "date": "2026-02-12", "score": 76 },
+        { "date": "2026-03-12", "score": 78 },
+        { "date": "2026-04-12", "score": 79 },
+        { "date": "2026-05-12", "score": 80 },
+        { "date": "2026-06-12", "score": 81 },
+        { "date": "2026-07-12", "score": 82 }
+      ],
+
+      "description": "Filecoin is a decentralized storage network that allows anyone to rent out their unused disk space. The protocol uses cryptographic proofs to ensure data is stored reliably over time, and the recent Filecoin Plus data-cap mechanism rewards storage providers for useful storage.",
+      "thesis": "Filecoin is the slow-burn re-rating story of the storage sector. Network utilization crossed 28% — a multi-year high. The Filecoin Plus mechanism is now demonstrably working. Defensible market position in the long-term data archival market.",
+
+      "team": [
+        { "name": "Juan Benet", "role": "Founder & CEO", "background": "Founder of Protocol Labs. Stanford CS." },
+        { "name": "Marta Belcher", "role": "President & General Counsel", "background": "Cryptocurrency legal pioneer." }
+      ],
+
+      "investors": [
+        { "name": "Sequoia Capital", "tier": "Lead", "rounds": ["2017 ICO"] },
+        { "name": "Andreessen Horowitz", "tier": "Strategic", "rounds": ["2017 ICO"] },
+        { "name": "Union Square Ventures", "tier": "Strategic", "rounds": ["2017 ICO"] }
+      ],
+
+      "partnerships": [
+        { "partner": "Lockheed Martin", "summary": "Enterprise storage customer.", "date": "2024" },
+        { "partner": "Imperial College London", "summary": "Research data storage.", "date": "2023" }
+      ],
+
+      "roadmap": [
+        { "quarter": "Q3 2026", "milestone": "Filecoin Plus 2.0", "status": "on-track" },
+        { "quarter": "Q4 2026", "milestone": "Cross-chain storage deals", "status": "in-progress" }
+      ],
+
+      "github": {
+        "repo": "filecoin-project/lotus",
+        "stars": 3_240,
+        "forks": 1_124,
+        "commits_30d": 312,
+        "active_devs_30d": 48,
+        "contributors_total": 312,
+        "last_commit": "2026-07-10",
+        "primary_languages": ["Go", "Rust", "TypeScript"]
+      },
+
+      "metrics": {
+        "monthly_revenue_usd": 2_140_000,
+        "monthly_active_users": 92_400,
+        "tvl_usd": 318_000_000,
+        "nodes_count": 4_120,
+        "market_cap_usd": 3_120_000_000,
+        "fdv_usd": 4_200_000_000,
+        "circulating_supply": 612_400_000,
+        "total_supply": 2_000_000_000,
+        "next_unlock_date": "2026-08-22",
+        "next_unlock_pct": 0.6,
+        "next_unlock_usd_value": "$18.7M"
+      },
+
+      "tokenomics": {
+        "initial_supply": 2_000_000_000,
+        "circulating_pct": 30.6,
+        "vesting": "Long vesting schedule. 330M baseline minting per year, with significant burned amount. Net inflation ~5%.",
+        "utility": "Storage deal collateral, payment for storage, governance.",
+        "buyback_burn": "No direct buyback. Storage fees and penalties burn FIL."
+      },
+
+      "unlock_schedule": [
+        { "date": "2026-08-22", "pct": 0.6, "usd_value": "$18.7M", "type": "Vested" },
+        { "date": "2026-11-22", "pct": 0.5, "usd_value": "$15.6M", "type": "Vested" }
+      ],
+
+      "advantages": [
+        "First-mover in decentralized storage — 7+ year track record",
+        "Real network revenue (>$2.1M/month)",
+        "Filecoin Plus mechanism is working — utilization up 28%",
+        "Institutional backing (Sequoia, a16z)",
+        "Defensible position in long-term data archival"
+      ],
+
+      "disadvantages": [
+        "Storage demand concentrated in a small number of large clients",
+        "Token inflation is structurally higher than ideal",
+        "User-facing adoption slow — most demand is B2B",
+        "Competition from centralized cloud storage (AWS, Azure) for general use cases"
+      ],
+
+      "competitors": [
+        { "name": "Arweave", "comparison": "Permanent storage vs. Filecoin's deal-based model." },
+        { "name": "Storj", "comparison": "Smaller network, less institutional adoption." }
+      ],
+
+      "ai_investment_opinion": "Filecoin is a slow-burn re-rating story, not a momentum trade. The fundamentals are quietly inflecting with Filecoin Plus working. Position sized accordingly and use consolidation phases to accumulate. Target allocation: 3-4% of a diversified crypto portfolio.",
+
+      "ai_score_components": {
+        "github_activity": 78,
+        "developer_activity": 84,
+        "revenue": 88,
+        "users": 76,
+        "tvl": 85,
+        "community": 81,
+        "partnerships": 79,
+        "liquidity": 86,
+        "tokenomics": 73,
+        "unlock_risk": 81,
+        "market_momentum": 77
+      }
+    }
+  }
+}

@@ -1,0 +1,229 @@
+{
+  "schedule": "Monday 08:00 UTC, Thursday 08:00 UTC",
+  "last_run_at": "2026-07-11T08:00:00Z",
+  "total_reports_archived": 38,
+
+  "reports": [
+    {
+      "id": "wir-2026-07-11-thu",
+      "date": "2026-07-11",
+      "type": "thursday",
+      "title": "Bittensor Subnet Inflection, Filecoin Re-rating, Injective EVM Catalyst",
+      "summary": "Three structural themes are converging: AI compute demand continues to exceed supply, on-chain RWA distribution is entering the institutional phase, and modular L2s with credible DA economics are winning wallet share.",
+
+      "market_overview": {
+        "total_market_cap": "2.41T",
+        "market_cap_change_7d": 3.4,
+        "btc_dominance": 53.7,
+        "eth_dominance": 17.2,
+        "fear_greed": 64,
+        "fear_greed_label": "Greed",
+        "key_macro": "Strong US jobs data + cooling inflation prints — risk-on regime extending into Q3. Crypto has decoupled from NASDAQ correlation this week; idiosyncratic narrative is back in control."
+      },
+
+      "top_opportunities": [
+        { "ticker": "TAO", "thesis": "Subnet expansion is now demonstrably working. dTAO emissions rebalancing increased network efficiency 18%. Buy pullbacks to 30-day MA." },
+        { "ticker": "RENDER", "thesis": "Apple Vision Pro partnership expanded node utilization +24%. Real revenue, real customers. Pullback to 50-day MA is the highest-quality re-entry in DePIN." },
+        { "ticker": "ONDO", "thesis": "BlackRock BUIDL integration completed. USDY APY exceeded 5.0% — a multi-year high. Institutional RWA distribution at an inflection." }
+      ],
+
+      "most_active_developers": [
+        { "ticker": "TAO", "active_devs_30d": 84, "delta_pct": 35.5, "comment": "Subnet tooling maturity is now the main driver of new dev inflow." },
+        { "ticker": "INJ", "active_devs_30d": 48, "delta_pct": 14.3, "comment": "EVM compatibility opened the door for EVM-native dev teams." },
+        { "ticker": "FIL", "active_devs_30d": 48, "delta_pct": 9.1, "comment": "Steady core team activity; new Filecoin Plus SDKs released." },
+        { "ticker": "RENDER", "active_devs_30d": 32, "delta_pct": 33.3, "comment": "Base migration layer added new contributor teams." }
+      ],
+
+      "github_leaders": [
+        { "ticker": "TAO", "commits_30d": 612, "comment": "Subnet SDK + dTAO emissions module." },
+        { "ticker": "RENDER", "commits_30d": 487, "comment": "Base migration + new compute primitives." },
+        { "ticker": "NEAR", "commits_30d": 484, "comment": "Account abstraction + sharding." },
+        { "ticker": "INJ", "commits_30d": 384, "comment": "EVM mainnet + iAgent framework." }
+      ],
+
+      "biggest_ecosystem_growth": [
+        { "ticker": "TAO", "metric": "Active subnets", "value": 47, "delta_pct": 23.7, "comment": "Subnets continue to be the dominant growth axis." },
+        { "ticker": "RENDER", "metric": "Active nodes", "value": 12400, "delta_pct": 8.2, "comment": "Quality of nodes increasing as professional studios onboard." },
+        { "ticker": "AKT", "metric": "AI compute volume", "value": "$412K/mo", "delta_pct": 38.3, "comment": "H100 launch was a real demand catalyst." },
+        { "ticker": "ONDO", "metric": "TVL", "value": "$1.41B", "delta_pct": 19.3, "comment": "BlackRock integration is the most cited reason for new inflows." }
+      ],
+
+      "new_partnerships": [
+        { "ticker": "TAO", "partner": "Google Cloud", "summary": "Joint go-to-market for enterprise AI compute customers." },
+        { "ticker": "INJ", "partner": "Google Cloud", "summary": "Institutional DeFi distribution channel." },
+        { "ticker": "IO", "partner": "Solana", "summary": "Inference workload co-marketing." },
+        { "ticker": "RENDER", "partner": "Apple Vision Pro Studios", "summary": "Expanded pipeline for 3D content rendering." }
+      ],
+
+      "investment_rounds": [
+        { "company": "io.net", "round": "Strategic", "amount": "$30M", "lead": "Multicoin Capital", "date": "2026-07-08", "comment": "Pre-product-market-fit phase 2 funding." },
+        { "company": "Render Network", "round": "Strategic", "amount": "$50M", "lead": "Paradigm", "date": "2026-07-04", "comment": "Ecosystem fund to accelerate enterprise onboarding." },
+        { "company": "Bittensor Ecosystem Fund", "round": "Allocation", "amount": "$100M", "lead": "DCG + Polychain", "date": "2026-07-01", "comment": "Subnet funding pool." }
+      ],
+
+      "upcoming_unlocks": [
+        { "ticker": "ARB", "date": "2026-07-28", "pct_supply": 1.13, "usd_value": "$214M", "comment": "12-month linear release softens impact but supply pressure remains." },
+        { "ticker": "TIA", "date": "2026-08-12", "pct_supply": 0.94, "usd_value": "$84M", "comment": "Routine monthly distribution." },
+        { "ticker": "MANTA", "date": "2026-08-04", "pct_supply": 2.8, "usd_value": "$17M", "comment": "Largest unlock of the quarter — watch for short-term pressure." },
+        { "ticker": "SUI", "date": "2026-09-04", "pct_supply": 1.4, "usd_value": "$84M", "comment": "Standard cliff, well-flagged by market." }
+      ],
+
+      "risk_alerts": [
+        { "ticker": "ARB", "severity": "high", "alert": "Token unlock in 18 days — 1.13% of supply. Watch for distribution-to-exchange ratio in T-7 days." },
+        { "ticker": "APT", "severity": "medium", "alert": "Developer activity down 14% MoM. If trend continues into Q3, AI Score will drop below 70." },
+        { "ticker": "OP", "severity": "medium", "alert": "Sequencer revenue -22% vs 30d average. May indicate transaction migration to Base." },
+        { "ticker": "SUI", "severity": "high", "alert": "Q4 2026 unlock cliff — 7.2% of total supply. Long-term holder distribution risk." }
+      ],
+
+      "ai_conclusions": "Three structural themes remain intact: (1) AI compute demand continues to exceed supply — TAO, RENDER, AKT, IO are all evidence; (2) on-chain RWA distribution is entering the institutional phase, led by ONDO and Maple; (3) modular L2s with credible DA economics (TIA, MANTA) are winning wallet share. Risk to monitor: token unlock velocity in Q3 2026 for ARB, MANTA, SUI. Sector rotation likely continues — AI infrastructure stays primary overweight.",
+
+      "metadata": {
+        "tokens_analyzed": 487,
+        "data_points_processed": 2_314_009,
+        "apis_called": ["GitHub", "CoinGecko", "DefiLlama", "CryptoRank", "TokenUnlocks", "X-Twitter-Official"],
+        "agent_version": "intelligence-agent v3.2.1",
+        "compute_time_seconds": 184
+      }
+    },
+
+    {
+      "id": "wir-2026-07-08-mon",
+      "date": "2026-07-08",
+      "type": "monday",
+      "title": "Q3 Outlook: AI Compute Re-rating, RWA Inflection, and the Coming Unlock Cycle",
+      "summary": "We are upgrading our base case for AI infrastructure through Q3 2026. DePIN remains the highest-quality real-yield exposure. Token unlock velocity is the main risk to monitor.",
+
+      "market_overview": {
+        "total_market_cap": "2.37T",
+        "market_cap_change_7d": 2.1,
+        "btc_dominance": 54.1,
+        "eth_dominance": 17.4,
+        "fear_greed": 58,
+        "fear_greed_label": "Greed",
+        "key_macro": "Risk-on regime reasserting itself. Crypto market cap crossed $2.3T with relatively low retail engagement — institutional accumulation is the dominant signal."
+      },
+
+      "top_opportunities": [
+        { "ticker": "TAO", "thesis": "Subnet inflection is the cleanest narrative in AI infrastructure. Network revenue and dev activity both inflecting." },
+        { "ticker": "RENDER", "thesis": "Real revenue, real customers, defensible moat. Highest-quality DePIN exposure." },
+        { "ticker": "ONDO", "thesis": "Institutional RWA distribution. BlackRock integration is the most credible TradFi bridge." }
+      ],
+
+      "most_active_developers": [
+        { "ticker": "TAO", "active_devs_30d": 84, "delta_pct": 35.5, "comment": "Subnets continue to attract dev inflow." },
+        { "ticker": "INJ", "active_devs_30d": 48, "delta_pct": 14.3, "comment": "EVM compatibility opened EVM-native dev teams." },
+        { "ticker": "RENDER", "active_devs_30d": 32, "delta_pct": 33.3, "comment": "Base migration layer added new contributor teams." },
+        { "ticker": "FET", "active_devs_30d": 42, "delta_pct": 16.7, "comment": "Agent launchpad is creating new dev teams." }
+      ],
+
+      "github_leaders": [
+        { "ticker": "TAO", "commits_30d": 612, "comment": "Subnet SDK + dTAO emissions module." },
+        { "ticker": "RENDER", "commits_30d": 487, "comment": "Base migration + new compute primitives." },
+        { "ticker": "NEAR", "commits_30d": 484, "comment": "Account abstraction + sharding." },
+        { "ticker": "INJ", "commits_30d": 384, "comment": "EVM mainnet + iAgent framework." }
+      ],
+
+      "biggest_ecosystem_growth": [
+        { "ticker": "TAO", "metric": "Active subnets", "value": 47, "delta_pct": 23.7, "comment": "Subnets continue to be the dominant growth axis." },
+        { "ticker": "RENDER", "metric": "Active nodes", "value": 12400, "delta_pct": 8.2, "comment": "Quality of nodes increasing." },
+        { "ticker": "AKT", "metric": "AI compute volume", "value": "$412K/mo", "delta_pct": 38.3, "comment": "H100 launch catalyst." },
+        { "ticker": "ONDO", "metric": "TVL", "value": "$1.41B", "delta_pct": 19.3, "comment": "BlackRock integration drove inflows." }
+      ],
+
+      "new_partnerships": [
+        { "ticker": "TAO", "partner": "NVIDIA", "summary": "Joint compute infrastructure partnership." },
+        { "ticker": "RENDER", "partner": "Apple Vision Pro Studios", "summary": "3D content rendering pipeline expansion." }
+      ],
+
+      "investment_rounds": [
+        { "company": "Manta Network", "round": "Series A", "amount": "$25M", "lead": "Polychain", "date": "2026-07-02", "comment": "AI L2 expansion." },
+        { "company": "Akash Network", "round": "Strategic", "amount": "$15M", "lead": "Coinbase Ventures", "date": "2026-07-01", "comment": "AI compute infrastructure expansion." }
+      ],
+
+      "upcoming_unlocks": [
+        { "ticker": "ARB", "date": "2026-07-28", "pct_supply": 1.13, "usd_value": "$214M", "comment": "Largest single unlock of the quarter." },
+        { "ticker": "MANTA", "date": "2026-08-04", "pct_supply": 2.8, "usd_value": "$17M", "comment": "Watch exchange inflow." }
+      ],
+
+      "risk_alerts": [
+        { "ticker": "ARB", "severity": "high", "alert": "Token unlock in 21 days." },
+        { "ticker": "SUI", "severity": "high", "alert": "Q4 2026 unlock cliff — 7.2% of supply." }
+      ],
+
+      "ai_conclusions": "Q3 2026 thesis: AI infrastructure overweight, DePIN overweight, RWA overweight, L2s neutral, GameFi underweight. Main risk: ARB and SUI unlock cycles. Watch for entry points in TAO, RENDER, ONDO on any meaningful pullback.",
+
+      "metadata": {
+        "tokens_analyzed": 484,
+        "data_points_processed": 2_241_180,
+        "apis_called": ["GitHub", "CoinGecko", "DefiLlama", "CryptoRank", "TokenUnlocks", "X-Twitter-Official"],
+        "agent_version": "intelligence-agent v3.2.0",
+        "compute_time_seconds": 178
+      }
+    },
+
+    {
+      "id": "wir-2026-07-04-thu",
+      "date": "2026-07-04",
+      "type": "thursday",
+      "title": "Render Enterprise Tier, Celestia Modular DA, and the Quiet RWA Acceleration",
+      "summary": "Three underappreciated themes: Render's enterprise SLA tier is winning institutional customers, Celestia's DA revenue is the most under-modeled line item, and RWA TVL crossed $24B for the first time.",
+
+      "market_overview": {
+        "total_market_cap": "2.32T",
+        "market_cap_change_7d": -1.2,
+        "btc_dominance": 54.8,
+        "eth_dominance": 17.6,
+        "fear_greed": 52,
+        "fear_greed_label": "Neutral",
+        "key_macro": "Consolidation phase. Low retail engagement, institutional accumulation continuing. Vol compressing — typical pre-breakout structure."
+      },
+
+      "top_opportunities": [
+        { "ticker": "RENDER", "thesis": "Enterprise SLA tier winning institutional customers. Real revenue inflection." },
+        { "ticker": "TIA", "thesis": "DA revenue is the most under-modeled line item in the modular thesis." },
+        { "ticker": "ONDO", "thesis": "RWA TVL crossed $24B. ONDO remains highest-quality RWA exposure." }
+      ],
+
+      "most_active_developers": [
+        { "ticker": "TAO", "active_devs_30d": 78, "delta_pct": 28.4, "comment": "Steady growth." },
+        { "ticker": "RENDER", "active_devs_30d": 30, "delta_pct": 22.1, "comment": "Enterprise tier brought new B2B dev teams." }
+      ],
+
+      "github_leaders": [
+        { "ticker": "TAO", "commits_30d": 568, "comment": "Subnet SDK + dTAO emissions module." },
+        { "ticker": "RENDER", "commits_30d": 462, "comment": "Base migration + enterprise SLA." }
+      ],
+
+      "biggest_ecosystem_growth": [
+        { "ticker": "RENDER", "metric": "Enterprise customers", "value": 18, "delta_pct": 50.0, "comment": "SLA tier traction." },
+        { "ticker": "TIA", "metric": "DA revenue", "value": "$184K/mo", "delta_pct": 38.4, "comment": "Blob fees starting to be meaningful." }
+      ],
+
+      "new_partnerships": [
+        { "ticker": "RENDER", "partner": "Universal Studios", "summary": "Enterprise SLA tier customer." }
+      ],
+
+      "investment_rounds": [
+        { "company": "Render Network", "round": "Ecosystem", "amount": "$50M", "lead": "Paradigm", "date": "2026-07-04", "comment": "Enterprise onboarding fund." }
+      ],
+
+      "upcoming_unlocks": [
+        { "ticker": "ARB", "date": "2026-07-28", "pct_supply": 1.13, "usd_value": "$214M", "comment": "Largest single unlock of the quarter." }
+      ],
+
+      "risk_alerts": [
+        { "ticker": "ARB", "severity": "high", "alert": "Token unlock in 24 days." }
+      ],
+
+      "ai_conclusions": "Quiet market — but institutional RWA and AI compute are still inflecting. Stay overweight AI infrastructure and DePIN. Use the consolidation to accumulate high-conviction positions.",
+
+      "metadata": {
+        "tokens_analyzed": 482,
+        "data_points_processed": 2_198_412,
+        "apis_called": ["GitHub", "CoinGecko", "DefiLlama", "CryptoRank", "TokenUnlocks"],
+        "agent_version": "intelligence-agent v3.2.0",
+        "compute_time_seconds": 168
+      }
+    }
+  ]
+}

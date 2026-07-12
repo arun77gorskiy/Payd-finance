@@ -1,0 +1,99 @@
+{
+  "last_updated": "2026-07-11T08:00:00Z",
+  "agent_run_id": "run-2026-07-11-mon-0800",
+  "next_run_at": "2026-07-13T08:00:00Z",
+
+  "market_overview": {
+    "total_market_cap_usd": 2_410_000_000_000,
+    "market_cap_change_24h": 1.84,
+    "total_volume_24h_usd": 92_400_000_000,
+    "btc_dominance": 53.7,
+    "eth_dominance": 17.2,
+    "fear_greed_index": 64,
+    "fear_greed_label": "Greed",
+    "active_cryptocurrencies": 13_482,
+    "market_sentiment": "Cautiously Bullish",
+    "sentiment_score": 62,
+    "volatility_index": 38.4
+  },
+
+  "ai_score_average": {
+    "global": 67.4,
+    "change_7d": 0.8,
+    "top_quartile": 82.1,
+    "bottom_quartile": 41.6,
+    "median": 67.4,
+    "std_dev": 14.2
+  },
+
+  "totals": {
+    "projects_tracked": 487,
+    "tracked_change_7d": 4,
+    "sectors_covered": 12,
+    "data_points_collected": 2_314_009
+  },
+
+  "weekly_opportunities": {
+    "count": 23,
+    "top_sector": "AI Infrastructure",
+    "avg_momentum_score": 78.3,
+    "highlighted": [
+      { "ticker": "RENDER", "name": "Render Network", "score": 87, "delta": 9.2 },
+      { "ticker": "AKT", "name": "Akash Network", "score": 84, "delta": 7.4 },
+      { "ticker": "TAO", "name": "Bittensor", "score": 89, "delta": 6.1 },
+      { "ticker": "FIL", "name": "Filecoin", "score": 79, "delta": 5.8 },
+      { "ticker": "IO", "name": "io.net", "score": 82, "delta": 5.2 }
+    ]
+  },
+
+  "biggest_movers_7d": [
+    { "ticker": "TAO", "name": "Bittensor", "change": 18.4, "ai_score": 89, "reason": "Subnet activity up 41%" },
+    { "ticker": "RENDER", "name": "Render Network", "change": 14.7, "ai_score": 87, "reason": "GPU demand surge" },
+    { "ticker": "INJ", "name": "Injective", "change": 12.1, "ai_score": 81, "reason": "EVM mainnet launch" },
+    { "ticker": "AKT", "name": "Akash Network", "change": 10.9, "ai_score": 84, "reason": "AI compute marketplace volume +38%" },
+    { "ticker": "FET", "name": "Fetch.ai", "change": 9.4, "ai_score": 78, "reason": "Agent launchpad traction" }
+  ],
+
+  "biggest_risks_7d": [
+    { "ticker": "ARB", "name": "Arbitrum", "risk": "Token unlock in 18 days — 1.13% of supply", "severity": "high" },
+    { "ticker": "APT", "name": "Aptos", "risk": "Developer activity down 14% MoM", "severity": "medium" },
+    { "ticker": "OP", "name": "Optimism", "risk": "Sequencer revenue -22% vs 30d avg", "severity": "medium" },
+    { "ticker": "SUI", "name": "Sui", "risk": "Unlock cliff in Q4 2026 — 7.2% supply", "severity": "high" },
+    { "ticker": "TIA", "name": "Celestia", "risk": "Daily active addresses down 19% QoQ", "severity": "medium" }
+  ],
+
+  "weekly_updates": [
+    {
+      "id": "upd-2026-w27-04",
+      "date": "2026-07-10",
+      "title": "Bittensor subnet expansion drives 18% weekly rally",
+      "category": "AI",
+      "summary": "Subnet registration reached a new all-time high this week. Active subnets grew from 38 to 47 with dTAO emissions rebalancing toward higher-performing subnets.",
+      "impact": "positive"
+    },
+    {
+      "id": "upd-2026-w27-03",
+      "date": "2026-07-09",
+      "title": "Arbitrum announces major token unlock schedule",
+      "category": "L2",
+      "summary": "1.13% of total supply will unlock on July 28. The team introduced a 12-month linear release to soften market impact.",
+      "impact": "neutral"
+    },
+    {
+      "id": "upd-2026-w27-02",
+      "date": "2026-07-08",
+      "title": "io.net expands GPU cluster to 250,000 units",
+      "category": "DePIN",
+      "summary": "io.net integrated a new batch of consumer-grade GPUs from Asia and Eastern Europe, pushing total cluster capacity to 250k units.",
+      "impact": "positive"
+    },
+    {
+      "id": "upd-2026-w27-01",
+      "date": "2026-07-07",
+      "title": "Filecoin introduces storage deals on Filecoin Plus",
+      "category": "DePIN",
+      "summary": "Storage providers saw a 24% increase in deal flow after the new data-cap mechanism. Average deal size grew 18%.",
+      "impact": "positive"
+    }
+  ]
+}
