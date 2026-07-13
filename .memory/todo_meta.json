@@ -3,59 +3,31 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Расширить FallbackManager до 3-уровневой цепочки с confidence scoring",
-        "details": "1. Расширить FALLBACK_CHAINS до 3 уровней: CoinGecko -> CoinMarketCap -> DefiLlama/Docs\n2. Добавить confidence scoring (high/medium/low) для каждого значения\n3. Добавить логирование discrepancies между провайдерами\n4. Добавить метод ретрая с другим токен-идентификатором при отсутствии данных\n5. Token identification system: хранение coinId/symbol/contractAddress в проекте",
-        "status": "in_progress",
+        "content": "Добавить script-tag для intelligence-alpha-render.js в index.html",
+        "details": "Сейчас intelligence-alpha-render.js существует, но не подключён в index.html — нужно добавить в правильном порядке загрузки",
+        "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Создать Database слой для хранения historical данных",
-        "details": "1. Создать IntelligenceDatabase.js с таблицами: projects, snapshots, market_history, github_history, defi_history, unlocks_history, raw_responses\n2. Каждое значение: value, source, timestamp, confidence, provider_used\n3. Никогда не перезаписывать historical данные — только добавлять новые snapshots\n4. Метод getHistorical(projectId, field, days) для анализа трендов\n5. Метод getLatestSnapshot(projectId)",
-        "status": "pending",
+        "content": "Добавить CSS-стили для alpha-блока (3 score cards, auto-labels, summary, history chart, timeline)",
+        "details": "Стили в intelligence.css — карточки, бары, классификация, timeline, chart, labels, summary block",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Улучшить GitHubService: расширенные метрики разработки",
-        "details": "1. Commits, Contributors, Releases, Pull Requests, Stars, Forks, Issues\n2. Development Frequency (вычисление commits/week, releases/month)\n3. Repository Health Score (композитная метрика: stars/forks ratio, active contributors, commit frequency)\n4. Activity Trend (увеличение/уменьшение)\n5. Confidence level на основе rate limit API",
-        "status": "pending",
+        "content": "Модифицировать renderProjectDetail в intelligence-render.js",
+        "details": "Добавить placeholder #payd-alpha-scores, вызвать renderScoresBlock с проектом, обогащённым _scores из IntelligenceDatabase",
+        "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Создать TokenomicsEngine для полной модели токеномики",
-        "details": "1. FDV, Market Cap, Circulating Supply, Max Supply (verified only)\n2. Inflation rate (вычисление из supply history)\n3. Unlock Schedule: investor, team, treasury, foundation allocations\n4. Vesting periods и cliffs\n5. FDV/Market Cap ratio для dilution assessment\n6. Каждое значение с source + confidence",
-        "status": "pending",
-        "priority": "high"
-      },
-      "5": {
-        "id": "5",
-        "content": "Создать Scheduler для запуска обновлений Пн/Ср/Пт",
-        "details": "1. IntelligenceScheduler.js с расписанием Пн/Ср/Пт в фиксированное время (например, 09:00 UTC)\n2. Каждое обновление: refresh projects -> recalculate Payd Score -> generate Intelligence Snapshot -> store in DB\n3. Background execution с детальным логированием\n4. Manual trigger для тестирования\n5. Graceful handling при ошибках отдельных проектов",
-        "status": "pending",
-        "priority": "high"
-      },
-      "6": {
-        "id": "6",
-        "content": "Обновить ResearchEngine: Payd Score только после полного сбора данных",
-        "details": "1. Метод waitForAllData() — ожидание завершения всех fallback chains\n2. Payd Score вычисляется ТОЛЬКО когда все провайдеры проверены\n3. Если критические поля отсутствуют — score остается null, не генерируется\n4. Generation of Intelligence Snapshot с полным набором verified данных\n5. Discrepancy logging между провайдерами",
-        "status": "pending",
-        "priority": "high"
-      },
-      "7": {
-        "id": "7",
-        "content": "Добавить IntelligenceScheduler (Пн/Ср/Пт)",
-        "details": "1. Бейджи confidence level: High/Medium/Low\n2. Source + Last Updated + Confidence в каждом значении\n3. \"Data unavailable\" вместо guessed/incorrect values\n4. Discrepancy warnings когда значения различаются между провайдерами\n5. Previous Update column для сравнения с текущим\n6. Confidence-aware rendering (Low confidence = другой стиль)",
-        "status": "completed",
-        "priority": "high"
-      },
-      "8": {
-        "id": "8",
-        "content": "Деплой и финальное тестирование обновлённой архитектуры",
-        "details": "1. Деплой фронтенда\n2. Тест 3-уровневого fallback (симулировать отсутствие данных в одном провайдере)\n3. Тест confidence scoring\n4. Тест scheduler: проверить что он срабатывает\n5. Тест \"Data unavailable\" отображения\n6. Тест historical tracking (создать 2 snapshots, проверить что оба сохранены)",
-        "status": "pending",
-        "priority": "high"
+        "content": "Smoke-test: рендеринг project detail с реальными данными из БД",
+        "details": "Проверить что новый блок появляется при переходе на проект, что 3 score cards рендерятся с правильными значениями и history",
+        "status": "in_progress",
+        "priority": "medium"
       }
     }
   }
