@@ -3,51 +3,51 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Подготовить инфраструктуру Supabase: получить доступ и спроектировать схему БД",
-        "details": "1. Получить Supabase auth через ask_for_supabase_auth\n2. Спроектировать таблицы: projects, market_data, defi_metrics, unlocks, github_metrics, news, raw_cache\n3. Создать SQL-миграции с правильными индексами и связями\n4. Развернуть схему в Supabase",
-        "status": "in_progress",
+        "content": "Создать структуру клиентских сервисов данных в public/js/intelligence/services/",
+        "details": "1. Создать base/ServiceBase.js с общей логикой HTTP, кеша, retry\n2. Создать директории: services/, models/, validators/, cache/\n3. Реализовать единую модель данных PaydFinanceDataModel.js\n4. Настроить CORS-совместимые endpoints для всех 6 провайдеров",
+        "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Реализовать сервисный слой: 6 независимых провайдеров данных",
-        "details": "CoinGeckoService: primary market data (цена, market cap, FDV, supply, volume, изменения за 24ч/7д/30д, rank, ATH/ATL, timestamp)\nCoinMarketCapService: fallback для отсутствующих полей\nDefiLlamaService: TVL, revenue, fees, protocol income, DEX volume, chains, category\nTokenUnlockService: календарь анлоков, типы (investor/team/treasury), risk level\nGitHubService: commits, PR, releases, contributors, stars, forks, last commit\nNewsService: агрегация официальных блогов/Medium/X + CoinDesk/Cointelegraph/The Block/Decrypt с дедупликацией\nКаждый сервис возвращает нормализованные данные в единой модели PaydFinanceDataModel",
-        "status": "pending",
+        "content": "Реализовать 6 сервисов-провайдеров данных",
+        "details": "CoinGeckoService: публичный API + demo ключ в URL\nCoinMarketCapService: fallback для отсутствующих полей\nDefiLlamaService: открытый CORS API (https://api.llama.fi)\nTokenUnlockService: tokenunlocks.app API\nGitHubService: REST API с conditional rate limiting\nNewsService: RSS парсинг через rss2json.com прокси + дедупликация\nВсе сервисы используют единый базовый класс для кеширования и retry",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Создать слой валидации и нормализации данных",
-        "details": "Каждое числовое значение помечается: source, timestamp, last_updated\nFallback логика: если CoinGecko не вернул поле -> запрос CoinMarketCap\nЗапрет на генерацию числовых значений через AI\nВалидация диапазонов, типов и логических связей (например, circulating_supply <= total_supply)",
-        "status": "pending",
+        "content": "Создать локальный слой кеширования (localStorage + IndexedDB)",
+        "details": "CacheManager с TTL для каждого типа данных\nСтратегия: raw_response + normalized_data + cache_expiration\nGraceful degradation: при ошибке API возвращать последний валидный кеш\nBackground sync через setInterval с разными интервалами:\n  - market data: 5 мин\n  - news: 15 мин\n  - defi metrics: 1 час\n  - github: 1 час\n  - unlocks: 1 день",
+        "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Развернуть Supabase Edge Functions для сбора данных",
-        "details": "sync-coingecko: cron каждые 5 минут, кеширует ответы\nsync-coinmarketcap: fallback синхронизация\nsync-defillama: каждый час для TVL/revenue\nsync-unlocks: раз в день для календаря\nsync-github: раз в час для метрик разработки\nsync-news: каждые 15 минут с дедупликацией по URL+hash\nКаждая функция пишет raw_response + normalized_data + cache_expiration",
-        "status": "pending",
+        "content": "Реализовать слой валидации и нормализации",
+        "details": "DataValidator: проверка типов, диапазонов, логических связей\nFallbackManager: если CoinGecko не вернул поле -> запрос CoinMarketCap\nКаждое числовое значение помечается: source, timestamp, last_updated\nЗапрет на использование AI-генерируемых чисел в UI\nUnifiedDataStore: единая точка доступа ко всем данным",
+        "status": "completed",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Построить AI Research Layer (Layer 2) на Edge Functions",
-        "details": "ai-research: читает ТОЛЬКО верифицированные данные из Supabase\nВычисляет Payd Score на основе verified metrics\nГенерирует Weekly Intelligence (без новых числовых значений)\nГенерирует Investment Research\nГенерирует Opportunity Scanner\nAI объясняет данные, но не генерирует финансовые числа",
-        "status": "pending",
+        "content": "Построить AI Research Engine (клиентский Layer 2)",
+        "details": "ResearchEngine: читает только верифицированные данные\nВычисляет Payd Score на основе verified metrics (без генерации новых чисел)\nГенерирует Weekly Intelligence: шаблоны объяснений на основе verified facts\nГенерирует Investment Research: текстовый анализ проверенных метрик\nГенерирует Opportunity Scanner: ранжирование по score (вычисляемому, не генерируемому)\nAI только интерпретирует данные, никогда не создает новые числовые значения",
+        "status": "completed",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Интегрировать Intelligence Module с Supabase",
-        "details": "Заменить чтение из public/data/intelligence/*.json на Supabase client\nСоздать API слой для фронтенда, скрывающий детали провайдеров\nКеширование на клиенте для снижения нагрузки\nGraceful degradation если Supabase недоступен\nВсе пользователи видят одинаковые верифицированные данные",
-        "status": "pending",
+        "content": "Интегрировать сервисы с Intelligence Module",
+        "details": "Заменить чтение из public/data/intelligence/*.json на UnifiedDataStore\nОбновить intelligence-render.js для работы с верифицированными данными\nДобавить индикаторы source/timestamp/last_updated в UI\nGraceful fallback на mock-данные при недоступности API\nProgress indicator для синхронизации данных",
+        "status": "completed",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "Деплой и финальное тестирование архитектуры",
-        "details": "Деплой фронтенда\nПроверка cron jobs и Edge Functions через get_logs\nТест полного цикла: API -> Edge Function -> Supabase -> Frontend\nВерификация что AI не генерирует числа, а только объясняет\nТест fallback логики CoinGecko -> CoinMarketCap",
-        "status": "pending",
+        "content": "Деплой и финальное тестирование",
+        "details": "Деплой фронтенда\nПроверка работы всех 6 сервисов с реальными API\nТест fallback логики CoinGecko -> CoinMarketCap\nТест кеширования и graceful degradation\nВерификация что AI не генерирует числа, а только объясняет",
+        "status": "completed",
         "priority": "high"
       }
     }
