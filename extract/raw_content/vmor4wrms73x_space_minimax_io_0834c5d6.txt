@@ -1,0 +1,935 @@
+# Source URL: https://vmor4wrms73x.space.minimax.io/js/intelligence/intelligence-render.js
+# Content Length: 26395 characters
+# Extracted at: 2026-07-14 10:15:21
+#============================================================
+
+/\* =================================================================
+PAYD Finance — Intelligence Render Module
+Рендеринг всех секций модуля Intelligence.
+Использует только предрассчитанные данные (никакого AI на клиенте).
+================================================================= \*/
+const U = window.PAYD\_INTEL\_UTILS;
+const D = window.PAYD\_INTEL.data;
+const INTEL\_RENDER = {
+/\* === Generic helpers === \*/
+$: (sel, root = document) => root.querySelector(sel),
+/\* === Render: Dashboard (Main "Intelligence" page) === \*/
+renderDashboard(container) {
+const o = D.overview;
+if (!o) return this.renderLoading(container);
+const lastUpdate = U.fmtDate(o.last\_updated);
+const riskAlerts = (o.biggest\_risks\_7d || []).slice(0, 4);
+const unlocks = (o.upcoming\_unlocks\_7d || []);
+const research = (o.latest\_research || []);
+const latestUpdates = (o.weekly\_updates || []).slice(0, 4);
+container.innerHTML = `
+
+Market Snapshot
+---------------
+
+Last sync: ${lastUpdate} · Next agent run: ${U.fmtDate(o.next\_run\_at)}
+
+
+AI Agent Online
+
+
+Market Overview
+${U.fmtUSD(o.market\_overview.total\_market\_cap\_usd)}
+${U.deltaArrow(o.market\_overview.market\_cap\_change\_24h)} ${U.fmtPct(o.market\_overview.market\_cap\_change\_24h)} 24h
+
+
+Projects Tracked
+${U.fmtNum(o.totals.projects\_tracked)}
+${U.deltaArrow(o.totals.tracked\_change\_7d)} +${o.totals.tracked\_change\_7d} 7d
+
+
+AI Score Average
+${o.ai\_score\_average.global.toFixed(1)}/100
+${U.deltaArrow(o.ai\_score\_average.change\_7d)} ${U.fmtPct(o.ai\_score\_average.change\_7d, false)} 7d
+
+
+Weekly Reports
+${o.weekly\_reports\_count || 24}
+Published Mon · Thu
+
+Top Opportunities
+${o.weekly\_opportunities.count}
+Top: ${U.esc(o.weekly\_opportunities.top\_sector)}
+
+Risk Alerts
+${riskAlerts.length}
+${o.market\_overview.fear\_greed\_index} · ${U.esc(o.market\_overview.fear\_greed\_label)}
+
+Upcoming Unlocks
+${unlocks.length}
+Next 30 days
+
+Latest Research
+${research.length}
+New this week
+
+Latest Updates
+${latestUpdates.length}
+Last: ${lastUpdate}
+
+
+#### Top Opportunities · 7d
+
+${(o.weekly\_opportunities.highlighted || []).slice(0, 5).map(m => `
+${U.esc(m.ticker.slice(0, 3))}
+${U.esc(m.name)}
+AI Score: **${m.score}** · Momentum +${U.fmtPct(m.delta, false)}
+
+${U.fmtPct(m.delta)}
+
+`).join('')}
+
+#### Risk Alerts
+
+${riskAlerts.map(r => `
+!
+${U.esc(r.name)}
+${U.esc(r.risk)}
+
+${U.esc(r.severity)}
+
+`).join('')}
+
+
+#### Upcoming Unlocks · 30d
+
+${unlocks.length === 0 ? 'No major unlocks in the next 30 days.' : unlocks.map(u => `
+${U.esc(u.ticker.slice(0, 3))}
+${U.esc(u.name)}
+${U.fmtDate(u.date)} · ${u.pct\_supply.toFixed(2)}% supply
+
+${U.esc(u.usd\_value)}
+
+`).join('')}
+
+#### Latest Research
+
+${research.length === 0 ? 'No research published this week.' : research.map(r => `
+${U.esc((r.ticker || 'DOC').slice(0, 3))}
+${U.esc(r.title)}
+${U.esc(r.type)} · ${U.fmtDate(r.date)}
+
+Open ›
+
+`).join('')}
+
+### Latest Updates
+
+${latestUpdates.map(upd => `
+${U.esc(upd.title)}
+${U.fmtDate(upd.date)} · ${U.esc(upd.category)}
+
+${U.esc(upd.impact)}
+
+${U.esc(upd.summary)}
+
+
+`).join('')}
+
+`;
+U.observeReveal(container);
+// Attach research click → project detail
+container.querySelectorAll('[data-ticker]').forEach(el => {
+const t = el.dataset.ticker;
+if (t && D.projects && D.projects.projects[t]) {
+el.addEventListener('click', () => window.PAYD\_INTEL\_ROUTER.go('project', { ticker: t }));
+}
+});
+},
+/\* === Render: DePIN Intelligence — Professional Table === \*/
+renderDePIN(container) {
+const d = D.depin;
+if (!d) return this.renderLoading(container);
+const sorted = [...d.projects].sort((a, b) => b.ai\_score - a.ai\_score);
+container.innerHTML = `
+### DePIN Intelligence · ${d.total\_projects} tracked projects
+
+Last sync: ${U.fmtDate(d.last\_updated)} · Sorted by AI Score
+
+Export CSV
+
+
+| Logo | Project | Ticker | AI Score | Risk | Dev Activity | GitHub | Users | Revenue | TVL | Nodes | Market Cap | FDV | Unlock | Investment Rating | Action |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
+${sorted.map(p => this.depinRow(p)).join('')}
+
+`;
+// Row click → project detail
+container.querySelectorAll('.intel-depin-row').forEach(row => {
+row.addEventListener('click', (e) => {
+// Don't navigate if clicking the action button (it has its own handler)
+if (e.target.closest('.intel-btn')) return;
+window.PAYD\_INTEL\_ROUTER.go('project', { ticker: row.dataset.ticker });
+});
+});
+container.querySelectorAll('.intel-btn-open-research').forEach(btn => {
+btn.addEventListener('click', (e) => {
+e.stopPropagation();
+window.PAYD\_INTEL\_ROUTER.go('project', { ticker: btn.dataset.ticker });
+});
+});
+// Export CSV
+const exportBtn = container.querySelector('#intel-depin-export');
+if (exportBtn) {
+exportBtn.addEventListener('click', () => this.exportDePINCSV(sorted));
+}
+U.observeReveal(container);
+},
+depinRow(p) {
+const m = p.metrics || {};
+const aiDelta = p.ai\_score\_change\_7d || 0;
+const aiClass = aiDelta >= 0 ? 'is-up' : 'is-down';
+const riskClass = U.riskClass(p.risk\_label);
+return `| ${U.esc(p.logo || '◇')} | ${U.esc(p.name)} ${U.esc(p.subsector || '')} | ${U.esc(p.ticker)} | **${p.ai\_score}** ${U.deltaArrow(aiDelta)} ${U.fmtPct(aiDelta, false)} | ${p.risk\_score}${U.esc(p.risk\_label)} | ${p.developer\_activity || 0} | ${p.github\_activity || 0} | ${U.fmtCompact(m.monthly\_active\_users || 0)} | ${U.fmtUSD(m.monthly\_revenue\_usd || 0, true)} | ${U.fmtUSD(m.tvl\_usd || 0, true)} | ${U.fmtNum(m.nodes\_count || 0)} | ${U.fmtUSD(m.market\_cap\_usd || 0, true)} | ${U.fmtUSD(m.fdv\_usd || 0, true)} | ${U.fmtDate(m.next\_unlock)} ${(m.next\_unlock\_pct || 0).toFixed(2)}% | ${U.esc(p.investment\_rating)} | Open Research |
+`;
+},
+exportDePINCSV(projects) {
+const cols = ['Ticker', 'Name', 'Subsector', 'AI Score', 'Risk Score', 'Risk Label',
+'Developer Activity', 'GitHub Activity', 'Users', 'Revenue (USD)',
+'TVL (USD)', 'Nodes', 'Market Cap (USD)', 'FDV (USD)',
+'Next Unlock', 'Unlock %', 'Investment Rating'];
+const rows = projects.map(p => [
+p.ticker, p.name, p.subsector || '', p.ai\_score, p.risk\_score, p.risk\_label,
+p.developer\_activity, p.github\_activity,
+(p.metrics && p.metrics.monthly\_active\_users) || 0,
+(p.metrics && p.metrics.monthly\_revenue\_usd) || 0,
+(p.metrics && p.metrics.tvl\_usd) || 0,
+(p.metrics && p.metrics.nodes\_count) || 0,
+(p.metrics && p.metrics.market\_cap\_usd) || 0,
+(p.metrics && p.metrics.fdv\_usd) || 0,
+(p.metrics && p.metrics.next\_unlock) || '',
+(p.metrics && p.metrics.next\_unlock\_pct) || 0,
+p.investment\_rating,
+]);
+const csv = [cols, ...rows].map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
+const blob = new Blob([csv], { type: 'text/csv;charset=utf-8;' });
+const url = URL.createObjectURL(blob);
+const a = document.createElement('a');
+a.href = url;
+a.download = 'payd-depin-' + new Date().toISOString().slice(0, 10) + '.csv';
+document.body.appendChild(a);
+a.click();
+document.body.removeChild(a);
+URL.revokeObjectURL(url);
+},
+/\* === Render: AI Infrastructure === \*/
+renderAIInfra(container) {
+const d = D.aiInfra;
+if (!d) return this.renderLoading(container);
+const cats = d.categories;
+const catKeys = Object.keys(cats);
+container.innerHTML = `
+${catKeys.map((k, i) => `
+${U.esc(cats[k].label)} · ${cats[k].projects.length}
+
+`).join('')}
+
+${this.renderAICategory(cats[catKeys[0]], true)}
+
+`;
+const subtabs = container.querySelectorAll('.intel-subtab');
+const subcontent = container.querySelector('#intel-ai-subcontent');
+subtabs.forEach(t => {
+t.addEventListener('click', () => {
+subtabs.forEach(s => s.classList.remove('is-active'));
+t.classList.add('is-active');
+subcontent.innerHTML = this.renderAICategory(cats[t.dataset.cat]);
+this.attachCardHandlers(subcontent);
+U.observeReveal(subcontent);
+});
+});
+this.attachCardHandlers(subcontent);
+U.observeReveal(container);
+},
+renderAICategory(cat, isFirst = false) {
+if (!cat) return '';
+return `
+#### ${U.esc(cat.label)}
+
+${U.esc(cat.description)}
+
+${[...cat.projects].sort((a, b) => b.ai\_score - a.ai\_score).map(p => this.projectCard(p)).join('')}
+
+`;
+},
+/\* === Render: Watchlist (admin-curated) === \*/
+renderWatchlist(container) {
+const d = D.watchlist;
+if (!d) return this.renderLoading(container);
+container.innerHTML = `
+#### ${U.esc(d.description)}
+
+**${d.count} projects** · Curated by ${U.esc(d.curated\_by)} · Updated ${d.update\_frequency.toLowerCase()}
+
+
+${d.watchlist.map(p => `
+${this.projectCardBody(p)}
+**Thesis:** ${U.esc(p.thesis)}
+
+In watchlist since ${U.fmtDate(p.added\_at)}
+
+
+`).join('')}
+
+`;
+this.attachCardHandlers(container);
+U.observeReveal(container);
+},
+/\* === Render: Opportunity Scanner === \*/
+renderOpportunities(container) {
+const d = D.opportunities;
+if (!d) return this.renderLoading(container);
+container.innerHTML = `
+#### Opportunity Scanner · ${d.total\_flagged} flagged
+
+**Scan logic:** ${U.esc(d.scan\_logic)}  
+
+**Window:** ${d.scan\_window\_days}d momentum vs ${d.baseline\_window\_days}d baseline
+
+
+${d.opportunities.map(opp => `
+${U.esc(opp.logo)}
+${U.esc(opp.name)}
+${U.esc(opp.ticker)} · ${U.esc(opp.sector)} · ${U.esc(opp.subsector)}
+
+Conviction
+${U.esc(opp.conviction)}
+
+
+AI Score
+
+${opp.ai\_score}
+
+${U.deltaArrow(opp.ai\_score\_change\_7d)} ${U.fmtPct(opp.ai\_score\_change\_7d, false)} 7d
+
+
+Momentum
+
+${opp.momentum\_score}
+
+${U.deltaArrow(opp.momentum\_change\_7d)} ${U.fmtPct(opp.momentum\_change\_7d, false)} 7d
+
+
+#### Fundamental Deltas
+
+| Metric | Current | 90d Avg | Δ |
+| --- | --- | --- | --- |
+${Object.entries(opp.fundamental\_delta).map(([k, v]) => `| ${U.esc(k.replace(/\_/g, ' '))} | ${typeof v.current === 'number' && v.current > 1000 ? U.fmtCompact(v.current) : U.fmtNum(v.current)} | ${typeof v.previous\_avg === 'number' && v.previous\_avg > 1000 ? U.fmtCompact(v.previous\_avg) : U.fmtNum(v.previous\_avg)} | ${U.fmtPct(v.delta\_pct, false)} |
+`).join('')}
+#### Signal Triggers
+
+${opp.signal\_triggers.map(s => `* ${U.esc(s)}
+`).join('')}
+#### AI Investment Opinion
+
+${U.esc(opp.ai\_investment\_opinion)}
+
+${opp.risk\_factors && opp.risk\_factors.length ? `
+#### Risk Factors
+
+${opp.risk\_factors.map(r => `* ${U.esc(r)}
+`).join('')}
+` : ''}
+
+`).join('')}
+`;
+U.observeReveal(container);
+},
+/\* === Render: Weekly Intelligence === \*/
+renderWeeklyReports(container) {
+const d = D.weeklyReports;
+if (!d) return this.renderLoading(container);
+const reports = d.reports;
+const archived = d.total\_reports\_archived;
+container.innerHTML = `
+#### Weekly Intelligence Schedule
+
+**Published:** ${U.esc(d.schedule)}  
+
+**Archived reports:** ${archived} · **Last run:** ${U.fmtDate(d.last\_run\_at)}
+
+
+${reports.map((r, i) => `
+${U.esc(r.type)} · ${U.fmtDate(r.date)} · ${U.esc(r.id)}
+### ${U.esc(r.title)}
+
+
+${U.esc(r.summary)}
+
+#### Market Overview
+
+Market Cap${U.esc(r.market\_overview.total\_market\_cap)}
+7d Change${U.fmtPct(r.market\_overview.market\_cap\_change\_7d)}
+BTC Dom${r.market\_overview.btc\_dominance}%
+Fear & Greed${r.market\_overview.fear\_greed}
+
+**Macro:** ${U.esc(r.market\_overview.key\_macro)}
+
+#### Top Opportunities
+
+${r.top\_opportunities.map(o => `
+**${U.esc(o.ticker)}:**
+ ${U.esc(o.thesis)}
+
+`).join('')}
+${r.biggest\_ecosystem\_growth ? `
+#### Biggest Ecosystem Growth
+
+${r.biggest\_ecosystem\_growth.map(g => `
+**${U.esc(g.ticker)}**
+${U.esc(g.metric)}: ${U.esc(g.value)}
+${U.esc(g.comment)}
+
+${U.fmtPct(g.delta\_pct, false)}
+
+`).join('')}
+` : ''}
+${r.most\_active\_developers ? `
+#### Most Active Developers
+
+| Project | Active Devs (30d) | Δ | Comment |
+| --- | --- | --- | --- |
+${r.most\_active\_developers.map(d => `| **${U.esc(d.ticker)}** | ${d.active\_devs\_30d} | ${U.fmtPct(d.delta\_pct, false)} | ${U.esc(d.comment)} |
+`).join('')}
+` : ''}
+${r.github\_leaders ? `
+#### GitHub Leaders
+
+| Project | Commits (30d) | Comment |
+| --- | --- | --- |
+${r.github\_leaders.map(g => `| **${U.esc(g.ticker)}** | ${g.commits\_30d} | ${U.esc(g.comment)} |
+`).join('')}
+` : ''}
+${r.new\_partnerships ? `
+#### New Partnerships
+
+${r.new\_partnerships.map(p => `
+**${U.esc(p.ticker)} × ${U.esc(p.partner)}**
+${U.esc(p.summary)}
+
+`).join('')}
+` : ''}
+${r.investment\_rounds ? `
+#### Investment Rounds
+
+| Company | Round | Amount | Lead | Date |
+| --- | --- | --- | --- | --- |
+${r.investment\_rounds.map(ir => `| **${U.esc(ir.company)}** | ${U.esc(ir.round)} | ${U.esc(ir.amount)} | ${U.esc(ir.lead)} | ${U.fmtDate(ir.date)} |
+`).join('')}
+` : ''}
+${r.upcoming\_unlocks ? `
+#### Upcoming Unlocks
+
+| Project | Date | % Supply | USD Value | Note |
+| --- | --- | --- | --- | --- |
+${r.upcoming\_unlocks.map(u => `| **${U.esc(u.ticker)}** | ${U.fmtDate(u.date)} | ${u.pct\_supply.toFixed(2)}% | ${U.esc(u.usd\_value)} | ${U.esc(u.comment)} |
+`).join('')}
+` : ''}
+${r.risk\_alerts ? `
+#### Risk Alerts
+
+${r.risk\_alerts.map(ra => `
+${U.esc(ra.severity)}
+**${U.esc(ra.ticker)}**
+ — ${U.esc(ra.alert)}
+
+
+`).join('')}
+` : ''}
+#### AI Conclusions
+
+${U.esc(r.ai\_conclusions)}
+
+${r.metadata ? `
+**Agent metadata:**
+${U.fmtNum(r.metadata.tokens\_analyzed)} tokens analyzed ·
+${U.fmtCompact(r.metadata.data\_points\_processed)} data points ·
+${r.metadata.apis\_called.join(', ')} ·
+${U.esc(r.metadata.agent\_version)} ·
+${r.metadata.compute\_time\_seconds}s compute
+
+` : ''}
+
+`).join('')}
+**${archived - reports.length} earlier reports** archived in the system. Use navigation menu to access historical reports.
+
+`;
+U.observeReveal(container);
+},
+/\* === Render: Project Detail (Project Research) === \*/
+renderProjectDetail(container, ticker) {
+const d = D.projects;
+if (!d) return this.renderLoading(container);
+const p = d.projects[ticker];
+if (!p) {
+container.innerHTML = `
+← Back to Intelligence
+Project "${U.esc(ticker)}" not found in current dataset.
+`;
+container.querySelector('#intel-back-btn').addEventListener('click', () => window.PAYD\_INTEL\_ROUTER.go('dashboard'));
+return;
+}
+const scoreChange = p.ai\_score\_change\_7d;
+// ── PAYD ALPHA ENGINE ─────────────────────────────────────────────
+// Данные из IntelligenceDatabase подгружаются асинхронно внутри
+// \_renderAlphaScores (см. ниже). Это нужно для совместимости с
+// IntelligenceDatabaseSupabase, у которого read-методы возвращают Promise.
+// ─────────────────────────────────────────────────────────────────
+container.innerHTML = `
+← Back to Intelligence
+${U.esc(p.logo)}
+
+${U.esc(p.name)}
+================
+
+**${U.esc(p.ticker)}**
+·
+${U.esc(p.sector)}
+·
+${U.esc(p.subsector)}
+·
+${U.esc(p.headquarters)}
+·
+Founded ${p.founded}
+
+
+AI Score
+${p.ai\_score}
+${U.deltaArrow(scoreChange)} ${U.fmtPct(scoreChange, false)} 7d
+
+
+
+PAYD Alpha Engine
+Quality · Confidence · Opportunity
+
+Loading 3-score analysis…
+
+### Rating & Risk
+
+${U.esc(p.investment\_rating)}
+Score: ${p.rating\_score.toFixed(1)} / 5.0
+
+**Risk Score:**
+${p.risk\_score} · ${U.esc(p.risk\_label)}
+
+
+### Quick Stats
+
+**Market Cap:**
+${U.fmtUSD(p.metrics.market\_cap\_usd)}
+ · 
+**FDV:**
+${U.fmtUSD(p.metrics.fdv\_usd)}
+
+**TVL:** ${U.fmtUSD(p.metrics.tvl\_usd)}
+ · 
+**Monthly Revenue:** ${U.fmtUSD(p.metrics.monthly\_revenue\_usd)}
+
+**Next unlock:**
+${U.fmtDate(p.metrics.next\_unlock\_date)} · ${p.metrics.next\_unlock\_pct.toFixed(2)}% · ${U.esc(p.metrics.next\_unlock\_usd\_value)}
+
+
+
+### Description
+
+${U.esc(p.description)}
+
+
+### Investment Thesis
+
+${U.esc(p.thesis)}
+
+
+### AI Investment Opinion
+
+${U.esc(p.ai\_investment\_opinion)}
+
+
+### AI Score · Components
+
+Weighted composite of 11 fundamental factors. Total weights sum to 100%.
+
+${Object.entries({
+'GitHub Activity': ['github\_activity', 20],
+'Developer Activity':['developer\_activity', 15],
+'Revenue': ['revenue', 15],
+'Users': ['users', 10],
+'TVL': ['tvl', 10],
+'Community': ['community', 10],
+'Partnerships': ['partnerships', 10],
+'Liquidity': ['liquidity', 5],
+'Tokenomics': ['tokenomics', 5],
+'Unlock Risk': ['unlock\_risk', 5],
+'Market Momentum': ['market\_momentum', 5],
+}).map(([label, [key, weight]]) => `
+${U.esc(label)}
+${weight}%
+
+${p.ai\_score\_components[key]}
+
+
+`).join('')}
+
+
+### AI Score History (6 months)
+
+${U.sparkline(p.ai\_score\_history.map(h => h.score))}
+
+${U.fmtDate(p.ai\_score\_history[0].date)}: **${p.ai\_score\_history[0].score}**
+→ ${U.fmtDate(p.ai\_score\_history[p.ai\_score\_history.length - 1].date)}: **${p.ai\_score\_history[p.ai\_score\_history.length - 1].score}**
+
+
+### Team
+
+${p.team.map(m => `
+**${U.esc(m.name)}**
+${U.esc(m.role)}
+${U.esc(m.background)}
+
+`).join('')}
+
+### Investors
+
+${p.investors.map(i => `
+**${U.esc(i.name)}**
+${U.esc(i.tier)}
+
+${i.rounds.map(U.esc).join('  
+')}
+
+`).join('')}
+
+
+### Roadmap
+
+| Quarter | Milestone | Status |
+| --- | --- | --- |
+${p.roadmap.map(r => `| **${U.esc(r.quarter)}** | ${U.esc(r.milestone)} | ${U.esc(r.status)} |
+`).join('')}
+
+### GitHub Activity
+
+Stars${U.fmtNum(p.github.stars)}
+Forks${U.fmtNum(p.github.forks)}
+Commits 30d${p.github.commits\_30d}
+Active Devs 30d${p.github.active\_devs\_30d}
+Contributors${U.fmtNum(p.github.contributors\_total)}
+Last commit${U.fmtDate(p.github.last\_commit)}
+
+**Repository:** `${U.esc(p.github.repo)}`
+· **Languages:** ${p.github.primary\_languages.join(', ')}
+
+
+### Tokenomics
+
+**Initial Supply:** ${U.fmtNum(p.tokenomics.initial\_supply)} · **Circulating:** ${p.tokenomics.circulating\_pct.toFixed(1)}%
+
+**Vesting:** ${U.esc(p.tokenomics.vesting)}
+
+**Utility:** ${U.esc(p.tokenomics.utility)}
+
+**Buyback/Burn:** ${U.esc(p.tokenomics.buyback\_burn)}
+
+
+### Unlock Schedule
+
+| Date | % Supply | USD Value | Type |
+| --- | --- | --- | --- |
+${p.unlock\_schedule.map(u => `| ${U.fmtDate(u.date)} | ${u.pct.toFixed(2)}% | ${U.esc(u.usd\_value)} | ${U.esc(u.type)} |
+`).join('')}
+
+### Partnerships
+
+${p.partnerships.map(pp => `
+**${U.esc(pp.partner)}**
+${U.fmtDate(pp.date)}
+
+${U.esc(pp.summary)}
+
+`).join('')}
+
+### Advantages
+
+${p.advantages.map(a => `* ${U.esc(a)}
+`).join('')}
+### Disadvantages
+
+${p.disadvantages.map(d => `* ${U.esc(d)}
+`).join('')}
+
+### Competitors
+
+${p.competitors.map(c => `
+**${U.esc(c.name)}:**
+ ${U.esc(c.comparison)}
+
+`).join('')}
+
+← Back to Intelligence
+`;
+container.querySelectorAll('#intel-back-btn, #intel-back-btn-2').forEach(btn => {
+btn.addEventListener('click', () => window.PAYD\_INTEL\_ROUTER.go('dashboard'));
+});
+// ── PAYD ALPHA ENGINE — инициализация блока 3 scores ──────────────
+// \_renderAlphaScores теперь async — загружает данные из БД и затем рендерит.
+// Не блокирует основной рендер страницы.
+this.\_renderAlphaScores(container, ticker, p).catch(err => {
+console.error('[renderProjectDetail] \_renderAlphaScores failed:', err);
+});
+U.observeReveal(container);
+},
+/\*\*
+\* Нормализует формат scores из IntelligenceDatabase в формат,
+\* который ждёт intelligence-alpha-render.js (значение в `.value`).
+\* В БД поле называется `value`, в некоторых записях — `score`.
+\* @param {Object} scoresFromDb — { payd, conviction, alpha, discovery }
+\* @returns {Object} — нормализованный объект
+\*/
+\_normalizeScoresForAlpha(scoresFromDb) {
+const out = { payd: null, conviction: null, alpha: null, discovery: null };
+if (!scoresFromDb) return out;
+for (const key of Object.keys(out)) {
+const rec = scoresFromDb[key];
+if (!rec) continue;
+const value = rec.value != null ? rec.value : (rec.score != null ? rec.score : null);
+out[key] = {
+engine: key,
+value,
+breakdown: rec.breakdown || {},
+classification: rec.classification || null,
+explanation: rec.explanation || '',
+confidence: rec.confidence || 'unknown',
+confidenceScore: rec.confidenceScore || 0,
+sources: rec.sources || [],
+labels: rec.labels || null,
+events: rec.events || null,
+opportunityScore: rec.opportunityScore || null,
+timestamp: rec.timestamp || null,
+};
+}
+return out;
+},
+/\*\*
+\* Рендерит блок PAYD Alpha Engine (3 score cards + AI summary + history + timeline + labels)
+\* внутри контейнера проекта. Вызывается из renderProjectDetail.
+\* Async: загружает данные из IntelligenceDatabase (может быть Supabase или localStorage).
+\* @param {HTMLElement} container
+\* @param {string} ticker
+\* @param {Object} project — базовый проект (без \_scores)
+\*/
+async \_renderAlphaScores(container, ticker, project) {
+const placeholder = container.querySelector('#payd-alpha-scores-' + ticker);
+if (!placeholder) return;
+// Если intelligence-alpha-render.js не загрузился — graceful fallback
+const alphaRender = (window.PAYD\_ALPHA\_RENDER && window.PAYD\_ALPHA\_RENDER.renderScoresBlock)
+? window.PAYD\_ALPHA\_RENDER
+: (window.PAYD\_INTEL\_RENDER && window.PAYD\_INTEL\_RENDER.renderScoresBlock
+? window.PAYD\_INTEL\_RENDER
+: null);
+if (!alphaRender) {
+placeholder.innerHTML = `
+⚠️ intelligence-alpha-render.js не загружен. Проверьте порядок подключения скриптов.
+
+`;
+return;
+}
+// Загружаем данные из БД асинхронно
+const arch = window.PAYD\_INTEL && window.PAYD\_INTEL.architecture;
+let scoresFromDb = {};
+try {
+if (arch && arch.database && typeof arch.database.getLatestScores === 'function') {
+const result = arch.database.getLatestScores(ticker);
+// Поддержка и sync, и async API
+if (result && typeof result.then === 'function') {
+scoresFromDb = await result;
+} else {
+scoresFromDb = result || {};
+}
+}
+} catch (e) {
+console.warn('[\_renderAlphaScores] getLatestScores failed:', e);
+}
+// Нормализуем и обогащаем проект
+const normalizedScores = this.\_normalizeScoresForAlpha(scoresFromDb);
+const alphaProject = Object.assign({}, project, {
+id: ticker,
+coinId: ticker,
+name: project.name,
+\_scores: normalizedScores,
+paidScore: normalizedScores.payd && normalizedScores.payd.value != null
+? { value: normalizedScores.payd.value }
+: null,
+});
+try {
+alphaRender.renderScoresBlock(placeholder, alphaProject);
+} catch (e) {
+console.error('[PAYD Alpha] renderScoresBlock failed for', ticker, e);
+placeholder.innerHTML = `
+Failed to render PAYD Alpha: ${U.esc(e && e.message ? e.message : String(e))}
+
+`;
+}
+},
+/\* === Project card (reused across sections) === \*/
+projectCard(p) {
+return `
+${this.projectCardBody(p)}
+
+${U.esc(p.summary || p.thesis || '')}
+
+
+`;
+},
+projectCardBody(p) {
+const scoreClass = U.scoreClass(p.ai\_score);
+return `
+${U.esc(p.logo)}
+${U.esc(p.name)}
+${U.esc(p.ticker)} · ${U.esc(p.sector)}
+
+${U.esc(p.investment\_rating)}
+
+AI Score
+${p.ai\_score}/100
+
+
+
+Risk Score
+${p.risk\_score} ${U.esc(p.risk\_label)}
+
+
+
+Mkt Cap
+${U.fmtUSD(p.metrics ? p.metrics.market\_cap\_usd : (p.metric ? null : null))}
+
+TVL
+${U.fmtUSD(p.metrics ? p.metrics.tvl\_usd : null)}
+
+Revenue/mo
+${U.fmtUSD(p.metrics ? p.metrics.monthly\_revenue\_usd : null)}
+
+
+`;
+},
+/\* === Attach click handlers for project cards === \*/
+attachCardHandlers(container) {
+const cards = container.querySelectorAll('.intel-project-card[data-ticker]');
+cards.forEach(card => {
+const ticker = card.dataset.ticker;
+const handler = () => window.PAYD\_INTEL\_ROUTER.go('project', { ticker });
+card.addEventListener('click', handler);
+card.addEventListener('keydown', e => {
+if (e.key === 'Enter' || e.key === ' ') {
+e.preventDefault();
+handler();
+}
+});
+});
+},
+/\* === Loading state === \*/
+renderLoading(container) {
+container.innerHTML = `Loading intelligence data…`;
+},
+/\* === Error state === \*/
+renderError(container, err) {
+container.innerHTML = `
+
+Failed to load intelligence data
+
+${U.esc(err && err.message ? err.message : String(err))}
+
+
+`;
+},
+/\* === Research Library === \*/
+renderResearch(container) {
+const d = D.projects;
+if (!d) return this.renderLoading(container);
+const allProjects = Object.values(d.projects);
+const sorted = allProjects.sort((a, b) => b.ai\_score - a.ai\_score);
+container.innerHTML = `
+### Research Library · ${allProjects.length} deep-dive reports
+
+Pre-computed institutional research. Updated by AI agent each cycle.
+
+
+| Logo | Project | Ticker | Sector | AI Score | Risk | Investment Rating | Action |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+${sorted.map(p => `| ${U.esc(p.logo || '◇')} | ${U.esc(p.name)} ${U.esc(p.subsector || '')} | ${U.esc(p.ticker)} | ${U.esc(p.sector)} | **${p.ai\_score}** | ${p.risk\_score} | ${U.esc(p.investment\_rating)} | Open Research |
+`).join('')}
+
+`;
+container.querySelectorAll('.intel-depin-row').forEach(row => {
+row.addEventListener('click', (e) => {
+if (e.target.closest('.intel-btn')) return;
+window.PAYD\_INTEL\_ROUTER.go('project', { ticker: row.dataset.ticker });
+});
+});
+container.querySelectorAll('.intel-btn-open-research').forEach(btn => {
+btn.addEventListener('click', (e) => {
+e.stopPropagation();
+window.PAYD\_INTEL\_ROUTER.go('project', { ticker: btn.dataset.ticker });
+});
+});
+U.observeReveal(container);
+},
+/\* === AI Category View (Layer 1, Layer 2, DeFi, RWA, Gaming, DeSci) === \*/
+renderAICategoryView(container, cat) {
+const d = D.projects;
+if (!d) return this.renderLoading(container);
+const allProjects = Object.values(d.projects);
+const catMap = {
+l1: { label: 'Layer 1', sectors: ['Layer 1', 'L1'] },
+l2: { label: 'Layer 2', sectors: ['Layer 2', 'L2'] },
+defi: { label: 'DeFi', sectors: ['DeFi'] },
+rwa: { label: 'RWA', sectors: ['RWA', 'Real World Assets'] },
+gaming: { label: 'Gaming', sectors: ['Gaming'] },
+desci: { label: 'DeSci', sectors: ['DeSci'] },
+};
+const meta = catMap[cat] || catMap.l1;
+const filtered = allProjects.filter(p => {
+const sec = (p.sector || '').toLowerCase();
+return meta.sectors.some(s => sec === s.toLowerCase() || sec.includes(s.toLowerCase()));
+});
+const sorted = filtered.sort((a, b) => b.ai\_score - a.ai\_score);
+container.innerHTML = `
+### ${U.esc(meta.label)} · ${sorted.length} projects
+
+AI-curated institutional research for the ${U.esc(meta.label)} sector.
+
+
+${sorted.length === 0 ? `
+
+No ${U.esc(meta.label)} projects in the current dataset. The AI Agent will populate this section during the next weekly run.
+
+
+` : `
+
+| Logo | Project | Ticker | AI Score | Risk | Mkt Cap | TVL | Investment Rating | Action |
+| --- | --- | --- | --- | --- | --- | --- | --- | --- |
+${sorted.map(p => `| ${U.esc(p.logo || '◇')} | ${U.esc(p.name)} ${U.esc(p.subsector || '')} | ${U.esc(p.ticker)} | **${p.ai\_score}** | ${p.risk\_score} | ${U.fmtUSD((p.metrics && p.metrics.market\_cap\_usd) || 0, true)} | ${U.fmtUSD((p.metrics && p.metrics.tvl\_usd) || 0, true)} | ${U.esc(p.investment\_rating)} | Open Research |
+`).join('')}
+
+`}
+`;
+container.querySelectorAll('.intel-depin-row').forEach(row => {
+row.addEventListener('click', (e) => {
+if (e.target.closest('.intel-btn')) return;
+window.PAYD\_INTEL\_ROUTER.go('project', { ticker: row.dataset.ticker });
+});
+});
+container.querySelectorAll('.intel-btn-open-research').forEach(btn => {
+btn.addEventListener('click', (e) => {
+e.stopPropagation();
+window.PAYD\_INTEL\_ROUTER.go('project', { ticker: btn.dataset.ticker });
+});
+});
+U.observeReveal(container);
+},
+};
+window.PAYD\_INTEL\_RENDER = INTEL\_RENDER;

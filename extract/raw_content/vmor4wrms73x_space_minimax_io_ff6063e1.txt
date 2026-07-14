@@ -1,0 +1,285 @@
+# Source URL: https://vmor4wrms73x.space.minimax.io/js/intelligence/intelligence-alpha-render.js
+# Content Length: 8457 characters
+# Extracted at: 2026-07-14 10:15:21
+#============================================================
+
+/\* =================================================================
+PAYD Finance — Intelligence Alpha Render
+UI для Payd Score / Payd Conviction Score / Payd Alpha Score.
+• 3 score cards
+• AI summary
+• Auto-labels (🔥🚀⭐💎)
+• History chart (SVG sparkline)
+• Promotion/Demotion timeline
+• Top opportunities feed
+================================================================= \*/
+(function (global) {
+'use strict';
+const PAYD = global.PAYD\_INTEL || {};
+function getArchitecture() {
+return PAYD.architecture || global.PAYD\_INTEL\_RAW;
+}
+/\*\*
+\* Отрендерить блок трёх scores для проекта.
+\* @param {HTMLElement} container
+\* @param {Object} project — ProjectModel с \_scores
+\* @param {Object} [options]
+\*/
+async function renderScoresBlock(container, project, options = {}) {
+if (!container) return;
+const scores = project.\_scores || {};
+const payd = scores.payd || {};
+const conviction = scores.conviction || {};
+const alpha = scores.alpha || {};
+const discovery = scores.discovery || {};
+const projectId = project.id || project.coinId || project.symbol;
+const arch = getArchitecture();
+// Асинхронная загрузка history & events (Supabase или localStorage)
+let history = [];
+let events = [];
+if (arch && arch.database) {
+try {
+const historyResult = arch.database.getScoreHistory(projectId);
+if (historyResult && typeof historyResult.then === 'function') {
+history = await historyResult;
+} else {
+history = historyResult || [];
+}
+} catch (e) {
+console.warn('[Alpha] getScoreHistory failed:', e);
+}
+try {
+const eventsResult = arch.database.getLabelEvents(projectId, 20);
+if (eventsResult && typeof eventsResult.then === 'function') {
+events = await eventsResult;
+} else {
+events = eventsResult || [];
+}
+} catch (e) {
+console.warn('[Alpha] getLabelEvents failed:', e);
+}
+}
+container.innerHTML = `
+${renderThreeScoreCards(payd, conviction, alpha)}
+${renderAutoLabels(discovery.labels || [])}
+${renderAiSummary(payd, conviction, alpha, project)}
+${renderScoreHistoryChart(history)}
+${renderTimelineFromEvents(events)}
+`;
+}
+function renderThreeScoreCards(payd, conviction, alpha) {
+return `
+${scoreCard('Payd Score', payd, '#D4AF37', 'Quality')}
+${scoreCard('Payd Conviction', conviction, '#7B61FF', 'Confidence in analysis')}
+${scoreCard('Payd Alpha', alpha, '#22c55e', 'Opportunity')}
+
+`;
+}
+function scoreCard(title, scoreObj, accentColor, subtitle) {
+const value = scoreObj && scoreObj.value != null ? Math.round(scoreObj.value) : '—';
+const classification = (scoreObj && scoreObj.classification) || {};
+const label = classification.label || '';
+const tier = classification.tier || 'unknown';
+const color = classification.color || accentColor;
+const confidence = (scoreObj && scoreObj.confidence) || 'unknown';
+const confidenceScore = (scoreObj && scoreObj.confidenceScore) || 0;
+return `
+${title}
+${subtitle}
+
+${confidence}
+
+
+${value}
+${label || '—'}
+
+
+
+`;
+}
+function renderAutoLabels(labels) {
+if (!labels || labels.length === 0) {
+return `No active discovery labels`;
+}
+return `
+${labels.map(l => `
+${l.icon}
+${l.label}
+${l.reason || ''}
+
+`).join('')}
+
+`;
+}
+function renderAiSummary(payd, conviction, alpha, project) {
+const p = payd && payd.value != null ? Math.round(payd.value) : 0;
+const c = conviction && conviction.value != null ? Math.round(conviction.value) : 0;
+const a = alpha && alpha.value != null ? Math.round(alpha.value) : 0;
+const name = (project && (project.name || project.ticker)) || 'This project';
+let summary = '';
+if (p >= 80 && a >= 80) {
+summary = `${name} демонстрирует одновременно высокое качество (Payd ${p}) и сильный opportunity-сигнал (Alpha ${a}). Рынок, возможно, ещё не полностью отразил фундаментал.`;
+} else if (p >= 80 && a < 60) {
+summary = `${name} имеет сильный фундаментал (Payd ${p}), но opportunity-сигнал слабый (Alpha ${a}): рынок уже мог учесть основные драйверы.`;
+} else if (p < 60 && a >= 80) {
+summary = `${name} пока не имеет сильного фундаментала (Payd ${p}), но opportunity-сигнал высокий (Alpha ${a}): возможен разворот, но требуется осторожность.`;
+} else if (p >= 60 && a >= 60) {
+summary = `${name} находится в здоровом балансе: фундаментал на уровне ${p}, opportunity ${a}. Проект-кандидат для дальнейшего наблюдения.`;
+} else {
+summary = `${name} не показывает ярко выраженного opportunity-сигнала (Alpha ${a}). Качество (Payd ${p}) и уверенность анализа (${c}) указывают на нейтральный профиль.`;
+}
+if (c < 50) {
+summary += ' ⚠️ Уверенность анализа низкая: данных недостаточно для уверенной оценки.';
+}
+return `
+✨
+AI Summary
+
+${summary}
+Quality (Payd ${p}) • Confidence (${c}) • Opportunity (${a})
+
+
+`;
+}
+function renderScoreHistoryChart(history) {
+if (!history || history.length === 0) {
+return `Нет исторических данных. Запустите IntelligenceScheduler для сбора snapshots.`;
+}
+// Группируем по timestamp
+const grouped = {};
+for (const r of history) {
+const t = r.timestamp;
+if (!grouped[t]) grouped[t] = { timestamp: t, values: {} };
+grouped[t].values[r.engine] = r.value;
+}
+const series = Object.values(grouped).sort((a, b) => a.timestamp - b.timestamp);
+if (series.length === 0) {
+return `Нет данных для графика`;
+}
+const engines = [
+{ key: 'payd', label: 'Payd', color: '#D4AF37' },
+{ key: 'conviction', label: 'Conviction', color: '#7B61FF' },
+{ key: 'alpha', label: 'Alpha', color: '#22c55e' },
+];
+const w = 600;
+const h = 160;
+const padL = 30, padR = 10, padT = 10, padB = 25;
+const minX = series[0].timestamp;
+const maxX = series[series.length - 1].timestamp;
+const spanX = Math.max(1, maxX - minX);
+const spanY = 100; // 0..100
+function x(t) {
+if (series.length === 1) return padL + (w - padL - padR) / 2;
+return padL + ((t - minX) / spanX) \* (w - padL - padR);
+}
+function y(v) {
+return padT + (1 - v / spanY) \* (h - padT - padB);
+}
+const lines = engines.map(e => {
+const points = series
+.filter(s => s.values[e.key] != null)
+.map(s => `${x(s.timestamp).toFixed(1)},${y(s.values[e.key]).toFixed(1)}`)
+.join(' ');
+if (!points) return '';
+return `
+
+${series.filter(s => s.values[e.key] != null).map(s => `
+${e.label}: ${Math.round(s.values[e.key])} (${new Date(s.timestamp).toLocaleDateString()})
+
+`).join('')}
+`;
+}).join('');
+// Оси
+const yAxis = [0, 25, 50, 75, 100].map(v => `
+
+${v}
+`).join('');
+// Легенда
+const legend = engines.map(e => `
+
+${e.label}
+
+`).join('');
+return `
+Score History
+${legend}
+
+${yAxis}
+${lines}
+
+${series.length} snapshot(s) — ${series.length > 0 ? new Date(minX).toLocaleDateString() : ''} → ${series.length > 0 ? new Date(maxX).toLocaleDateString() : ''}
+
+
+`;
+}
+function renderTimelineFromEvents(events) {
+if (!events || events.length === 0) return '';
+return `
+📈 Promotion / Demotion Timeline
+${events.map(e => `
+${e.type === 'promotion' ? '⬆️' : e.type === 'demotion' ? '⬇️' : '🎯'}
+
+**${e.type === 'promotion' ? 'Promotion' : e.type === 'demotion' ? 'Demotion' : 'Milestone'}**
+${e.from && e.to ? `: ${e.from} → ${e.to}` : ''}
+${e.threshold ? `: crossed ${e.threshold}` : ''}
+${e.delta != null ? ` (${e.delta > 0 ? '+' : ''}${e.delta})` : ''}
+
+${new Date(e.timestamp).toLocaleDateString()}
+
+`).join('')}
+
+
+`;
+}
+// Legacy sync wrapper для обратной совместимости
+function renderTimeline(arch, projectId) {
+if (!arch || !arch.database) return '';
+const events = arch.database.getLabelEvents(projectId, 20);
+if (events && typeof events.then === 'function') {
+// Async API — caller должен использовать async renderScoresBlock
+return '';
+}
+return renderTimelineFromEvents(events || []);
+}
+/\*\*
+\* Top opportunities feed — список проектов с самым высоким opportunityScore.
+\*/
+function renderTopOpportunities(container, projects) {
+if (!container) return;
+const arch = getArchitecture();
+if (!arch || !arch.scoring) {
+container.innerHTML = 'Scoring engine не загружен';
+return;
+}
+const discovery = arch.scoring.get('discovery');
+if (!discovery) {
+container.innerHTML = 'Discovery engine не зарегистрирован';
+return;
+}
+const top = discovery.getTopOpportunities(projects, 10);
+container.innerHTML = `
+🔥 Top Opportunities
+${top.length === 0 ? 'Нет данных' : ''}
+${top.map((p, i) => `
+#${i + 1}
+${p.name || p.ticker || p.projectId}
+${(p.labels || []).map(l => `${l.icon} ${l.label}`).join(' ')}
+
+
+α ${p.alphaValue || '—'}
+P ${p.paydValue || '—'}
+
+
+`).join('')}
+
+
+`;
+}
+global.PAYD\_INTEL\_RENDER = global.PAYD\_INTEL\_RENDER || {};
+global.PAYD\_INTEL\_RENDER.renderScoresBlock = renderScoresBlock;
+global.PAYD\_INTEL\_RENDER.renderTopOpportunities = renderTopOpportunities;
+global.PAYD\_ALPHA\_RENDER = {
+renderScoresBlock,
+renderTopOpportunities,
+};
+})(window);

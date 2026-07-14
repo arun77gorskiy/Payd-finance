@@ -3,29 +3,36 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Добавить script-tag для intelligence-alpha-render.js в index.html",
-        "details": "Сейчас intelligence-alpha-render.js существует, но не подключён в index.html — нужно добавить в правильном порядке загрузки",
+        "content": "Создать Supabase-схему для IntelligenceDatabase (таблицы: projects, snapshots, score_history, label_events)",
+        "details": "Использовать create_tables для создания SQL-схемы. Каждая таблица должна иметь RLS policies для безопасного доступа.",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Добавить CSS-стили для alpha-блока (3 score cards, auto-labels, summary, history chart, timeline)",
-        "details": "Стили в intelligence.css — карточки, бары, классификация, timeline, chart, labels, summary block",
+        "content": "Создать Supabase-клиент обёртку с graceful fallback на localStorage",
+        "details": "IntelligenceDatabaseSupabase.js — обёртка с тем же API что и IntelligenceDatabase, но данные хранятся в Supabase. Если Supabase недоступен — fallback на localStorage.",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Модифицировать renderProjectDetail в intelligence-render.js",
-        "details": "Добавить placeholder #payd-alpha-scores, вызвать renderScoresBlock с проектом, обогащённым _scores из IntelligenceDatabase",
+        "content": "Интегрировать Supabase-обёртку в архитектуру Intelligence Platform",
+        "details": "Изменить intelligence-services-init.js и intelligence-main.js так, чтобы IntelligenceDatabase использовал Supabase-бэкенд.",
         "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Smoke-test: рендеринг project detail с реальными данными из БД",
-        "details": "Проверить что новый блок появляется при переходе на проект, что 3 score cards рендерятся с правильными значениями и history",
+        "content": "Запустить IntelligenceScheduler для сбора первых snapshot'ов",
+        "details": "Загрузить demo-проекты (Render, Akash, Bittensor, Filecoin), запустить scheduler, сохранить snapshots и scores в БД.",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "5": {
+        "id": "5",
+        "content": "Деплой + smoke-тест: проверить что score'ы отображаются с реальными данными из Supabase",
+        "details": "Задеплоить обновлённую версию, открыть детальную страницу проекта, убедиться что 3 score cards отображают реальные значения.",
         "status": "completed",
         "priority": "medium"
       }

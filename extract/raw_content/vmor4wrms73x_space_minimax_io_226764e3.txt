@@ -1,0 +1,609 @@
+# Source URL: https://vmor4wrms73x.space.minimax.io/js/intelligence/database/IntelligenceDatabaseSupabase.js
+# Content Length: 17812 characters
+# Extracted at: 2026-07-14 09:03:01
+#============================================================
+
+/\* =================================================================
+PAYD Finance — IntelligenceDatabaseSupabase
+Расширение IntelligenceDatabase с Supabase-бэкендом.
+• Тот же публичный API, что и IntelligenceDatabase
+• Двунаправленная синхронизация с Supabase (read + write)
+• Graceful fallback на localStorage, если Supabase недоступен
+• In-memory кеш для уменьшения количества запросов
+================================================================= \*/
+(function (global) {
+'use strict';
+const SUPABASE\_URL = 'https://fugfylbifzgqupayxzyr.supabase.co';
+const SUPABASE\_ANON\_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImZ1Z2Z5bGJpZnpncXVwYXl4enlyIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NzkwMjc3MjcsImV4cCI6MjA5NDYwMzcyN30.Hhi8EE2Ka4VYAbSLof-BpXp3HIT\_snujzHGHzMgZKKU';
+const TABLES = {
+projects: 'projects',
+snapshots: 'snapshots',
+score\_history: 'score\_history',
+label\_events: 'label\_events',
+market\_history: 'market\_history',
+defi\_history: 'defi\_history',
+unlocks\_history: 'unlocks\_history',
+github\_history: 'github\_history',
+raw\_responses: 'raw\_responses',
+discrepancies: 'discrepancies',
+};
+const MAX\_SCORE\_HISTORY\_PER\_PROJECT = 200;
+const MAX\_SNAPSHOTS\_PER\_PROJECT = 100;
+const SYNC\_TIMEOUT\_MS = 5000;
+// ====== HTTP helpers ======
+async function supabaseRequest(table, method, options = {}) {
+const url = `${SUPABASE\_URL}/rest/v1/${table}`;
+const headers = {
+'apikey': SUPABASE\_ANON\_KEY,
+'Authorization': `Bearer ${SUPABASE\_ANON\_KEY}`,
+'Content-Type': 'application/json',
+'Prefer': options.prefer || 'return=representation',
+};
+let queryParams = '';
+if (options.select) queryParams += `?select=${encodeURIComponent(options.select)}`;
+if (options.eq) {
+for (const [col, val] of Object.entries(options.eq)) {
+queryParams += `${queryParams ? '&' : '?'}${col}=eq.${encodeURIComponent(val)}`;
+}
+}
+if (options.order) queryParams += `${queryParams ? '&' : '?'}order=${encodeURIComponent(options.order)}`;
+if (options.limit != null) queryParams += `${queryParams ? '&' : '?'}limit=${options.limit}`;
+const controller = new AbortController();
+const timeout = setTimeout(() => controller.abort(), SYNC\_TIMEOUT\_MS);
+try {
+const res = await fetch(url + queryParams, {
+method,
+headers,
+body: options.body ? JSON.stringify(options.body) : undefined,
+signal: controller.signal,
+});
+clearTimeout(timeout);
+if (!res.ok) {
+const errText = await res.text();
+throw new Error(`Supabase ${method} ${table} failed: ${res.status} ${errText}`);
+}
+const ct = res.headers.get('content-type') || '';
+if (ct.includes('json')) return await res.json();
+return null;
+} catch (e) {
+clearTimeout(timeout);
+throw e;
+}
+}
+async function supabaseInsert(table, records) {
+const arr = Array.isArray(records) ? records : [records];
+return supabaseRequest(table, 'POST', { body: arr });
+}
+async function supabaseSelect(table, options = {}) {
+return supabaseRequest(table, 'GET', options);
+}
+async function supabaseDelete(table, options = {}) {
+return supabaseRequest(table, 'DELETE', { prefer: 'return=minimal', ...options });
+}
+// ====== Main class ======
+class IntelligenceDatabaseSupabase {
+constructor(options = {}) {
+this.\_local = new global.PAYD\_INTEL.IntelligenceDatabase();
+this.\_online = false;
+this.\_cache = new Map(); // table -> array
+this.\_pendingWrites = [];
+this.\_syncInProgress = false;
+this.\_stats = {
+readsFromSupabase: 0,
+writesToSupabase: 0,
+writesToSupabaseFailed: 0,
+cacheHits: 0,
+localFallbacks: 0,
+};
+this.\_initOnline();
+}
+async \_initOnline() {
+try {
+const res = await supabaseSelect(TABLES.projects, { select: 'id', limit: 1 });
+this.\_online = Array.isArray(res);
+console.log('[IntelligenceDatabaseSupabase] Online:', this.\_online);
+if (this.\_online) {
+// Prefetch critical tables
+await this.\_prefetch();
+}
+} catch (e) {
+this.\_online = false;
+console.warn('[IntelligenceDatabaseSupabase] Supabase unavailable, using localStorage:', e.message);
+}
+}
+async \_prefetch() {
+try {
+const tables = Object.values(TABLES);
+await Promise.all(tables.map(async (t) => {
+try {
+const data = await supabaseSelect(t, { select: '\*', limit: 500 });
+if (Array.isArray(data)) this.\_cache.set(t, data);
+} catch (e) { /\* ignore \*/ }
+}));
+console.log('[IntelligenceDatabaseSupabase] Prefetched tables:', Array.from(this.\_cache.keys()));
+} catch (e) {
+console.warn('[IntelligenceDatabaseSupabase] Prefetch failed:', e.message);
+}
+}
+\_isReady() {
+return this.\_online;
+}
+\_getCachedTable(table) {
+if (this.\_cache.has(table)) {
+this.\_stats.cacheHits++;
+return this.\_cache.get(table);
+}
+return null;
+}
+\_setCachedTable(table, data) {
+this.\_cache.set(table, Array.isArray(data) ? data : []);
+}
+\_addToCache(table, record) {
+if (!this.\_cache.has(table)) this.\_cache.set(table, []);
+const arr = this.\_cache.get(table);
+const idx = arr.findIndex(r => r.id === record.id);
+if (idx >= 0) arr[idx] = record; else arr.push(record);
+}
+async \_syncWrite(table, record) {
+if (!this.\_online) {
+this.\_stats.localFallbacks++;
+return false;
+}
+try {
+await supabaseInsert(table, record);
+this.\_stats.writesToSupabase++;
+this.\_addToCache(table, record);
+return true;
+} catch (e) {
+this.\_stats.writesToSupabaseFailed++;
+console.warn(`[IntelligenceDatabaseSupabase] Failed to sync ${table}:`, e.message);
+return false;
+}
+}
+// ===== Projects =====
+async saveProject(projectMeta) {
+const id = projectMeta.id || projectMeta.coinId || projectMeta.symbol;
+if (!id) return false;
+const record = {
+id,
+ticker: projectMeta.ticker || id,
+name: projectMeta.name || id,
+sector: projectMeta.sector || null,
+subsector: projectMeta.subsector || null,
+headquarters: projectMeta.headquarters || null,
+founded: projectMeta.founded || null,
+logo: projectMeta.logo || null,
+website: projectMeta.website || null,
+description: projectMeta.description || null,
+metadata: projectMeta.metadata || {},
+created\_at: new Date().toISOString(),
+updated\_at: new Date().toISOString(),
+};
+// localStorage first (synchronous guarantee)
+this.\_local.saveProject(projectMeta);
+// Supabase async
+return this.\_syncWrite(TABLES.projects, record);
+}
+async getProject(id) {
+if (this.\_online) {
+const cached = this.\_getCachedTable(TABLES.projects);
+if (cached) {
+const found = cached.find(p => p.id === id);
+if (found) return found;
+}
+try {
+const res = await supabaseSelect(TABLES.projects, { select: '\*', eq: { id } });
+this.\_stats.readsFromSupabase++;
+if (Array.isArray(res) && res.length > 0) return res[0];
+} catch (e) { /\* fallback \*/ }
+}
+return this.\_local.getProject(id);
+}
+async getAllProjects() {
+if (this.\_online) {
+const cached = this.\_getCachedTable(TABLES.projects);
+if (cached && cached.length > 0) return cached;
+try {
+const res = await supabaseSelect(TABLES.projects, { select: '\*', limit: 500 });
+this.\_stats.readsFromSupabase++;
+if (Array.isArray(res)) {
+this.\_setCachedTable(TABLES.projects, res);
+return res;
+}
+} catch (e) { /\* fallback \*/ }
+}
+return this.\_local.getAllProjects();
+}
+// ===== Snapshots =====
+async saveSnapshot(projectId, snapshot) {
+const timestamp = Date.now();
+const dateStr = new Date(timestamp).toISOString().slice(0, 10);
+const snapshotId = `${projectId}\_${timestamp}`;
+const record = {
+id: snapshotId,
+project\_id: projectId,
+timestamp,
+date: dateStr,
+run\_id: snapshot.runId || null,
+scheduler\_run: snapshot.schedulerRun || null,
+data: snapshot,
+paid\_score: snapshot.paidScore || null,
+confidence: this.\_local.\_computeOverallConfidence(snapshot),
+sources: this.\_local.\_collectSources(snapshot),
+};
+this.\_local.saveSnapshot(projectId, snapshot);
+return (await this.\_syncWrite(TABLES.snapshots, record)) ? snapshotId : null;
+}
+async getLatestSnapshot(projectId) {
+if (this.\_online) {
+const cached = this.\_getCachedTable(TABLES.snapshots);
+if (cached) {
+const filtered = cached
+.filter(s => s.project\_id === projectId)
+.sort((a, b) => b.timestamp - a.timestamp);
+if (filtered.length > 0) return filtered[0];
+}
+try {
+const res = await supabaseSelect(TABLES.snapshots, {
+select: '\*',
+eq: { project\_id: projectId },
+order: 'timestamp.desc',
+limit: 1,
+});
+this.\_stats.readsFromSupabase++;
+if (Array.isArray(res) && res.length > 0) {
+return {
+id: res[0].id,
+projectId: res[0].project\_id,
+timestamp: res[0].timestamp,
+date: res[0].date,
+runId: res[0].run\_id,
+schedulerRun: res[0].scheduler\_run,
+data: res[0].data,
+paidScore: res[0].paid\_score,
+confidence: res[0].confidence,
+sources: res[0].sources,
+};
+}
+} catch (e) { /\* fallback \*/ }
+}
+return this.\_local.getLatestSnapshot(projectId);
+}
+async getPreviousSnapshot(projectId) {
+if (this.\_online) {
+try {
+const res = await supabaseSelect(TABLES.snapshots, {
+select: '\*',
+eq: { project\_id: projectId },
+order: 'timestamp.desc',
+limit: 2,
+});
+this.\_stats.readsFromSupabase++;
+if (Array.isArray(res) && res.length > 1) {
+return {
+id: res[1].id,
+projectId: res[1].project\_id,
+timestamp: res[1].timestamp,
+date: res[1].date,
+data: res[1].data,
+paidScore: res[1].paid\_score,
+};
+}
+} catch (e) { /\* fallback \*/ }
+}
+return this.\_local.getPreviousSnapshot(projectId);
+}
+async getHistoricalSnapshots(projectId, limit = 20) {
+if (this.\_online) {
+try {
+const res = await supabaseSelect(TABLES.snapshots, {
+select: '\*',
+eq: { project\_id: projectId },
+order: 'timestamp.desc',
+limit,
+});
+this.\_stats.readsFromSupabase++;
+if (Array.isArray(res)) {
+return res.map(r => ({
+id: r.id,
+projectId: r.project\_id,
+timestamp: r.timestamp,
+date: r.date,
+data: r.data,
+paidScore: r.paid\_score,
+}));
+}
+} catch (e) { /\* fallback \*/ }
+}
+return this.\_local.getHistoricalSnapshots(projectId, limit);
+}
+// ===== Historical tracking per field =====
+async recordHistorical(category, projectId, fieldName, verifiedValue) {
+const historyTable = TABLES[category + '\_history'];
+if (!historyTable) return false;
+const recordId = `${projectId}\_${fieldName}\_${Date.now()}`;
+const record = {
+id: recordId,
+project\_id: projectId,
+field: fieldName,
+category,
+value: verifiedValue.value,
+source: verifiedValue.source,
+confidence: verifiedValue.confidence,
+timestamp: verifiedValue.timestamp || Date.now(),
+date: new Date(verifiedValue.timestamp || Date.now()).toISOString(),
+};
+this.\_local.recordHistorical(category, projectId, fieldName, verifiedValue);
+return this.\_syncWrite(historyTable, record);
+}
+async getHistorical(category, projectId, fieldName, days = 30) {
+const historyTable = TABLES[category + '\_history'];
+if (!historyTable) return [];
+if (this.\_online) {
+try {
+const cutoff = Date.now() - days \* 24 \* 60 \* 60 \* 1000;
+const res = await supabaseSelect(historyTable, {
+select: '\*',
+eq: { project\_id: projectId, field: fieldName },
+order: 'timestamp.asc',
+});
+this.\_stats.readsFromSupabase++;
+if (Array.isArray(res)) {
+return res
+.filter(r => r.timestamp >= cutoff)
+.map(r => ({
+id: r.id,
+projectId: r.project\_id,
+field: r.field,
+category: r.category,
+value: r.value,
+source: r.source,
+confidence: r.confidence,
+timestamp: r.timestamp,
+date: r.date,
+}));
+}
+} catch (e) { /\* fallback \*/ }
+}
+return this.\_local.getHistorical(category, projectId, fieldName, days);
+}
+// ===== Raw API responses =====
+async saveRawResponse(provider, endpoint, params, rawData) {
+const recordId = `${provider}\_${Date.now()}\_${Math.random().toString(36).slice(2, 8)}`;
+const record = {
+id: recordId,
+provider,
+endpoint,
+params,
+data: rawData,
+timestamp: Date.now(),
+date: new Date().toISOString(),
+};
+this.\_local.saveRawResponse(provider, endpoint, params, rawData);
+return this.\_syncWrite(TABLES.raw\_responses, record);
+}
+async getRawResponses(provider, limit = 20) {
+if (this.\_online) {
+try {
+const options = { select: '\*', order: 'timestamp.desc', limit };
+if (provider) options.eq = { provider };
+const res = await supabaseSelect(TABLES.raw\_responses, options);
+this.\_stats.readsFromSupabase++;
+if (Array.isArray(res)) return res;
+} catch (e) { /\* fallback \*/ }
+}
+return this.\_local.getRawResponses(provider, limit);
+}
+// ===== Discrepancies =====
+async saveDiscrepancy(discrepancy) {
+const recordId = `disc\_${Date.now()}\_${Math.random().toString(36).slice(2, 6)}`;
+const record = {
+id: recordId,
+project\_id: discrepancy.projectId || null,
+field: discrepancy.field || null,
+sources: discrepancy.sources || null,
+description: discrepancy.description || null,
+severity: discrepancy.severity || null,
+timestamp: Date.now(),
+};
+this.\_local.saveDiscrepancy(discrepancy);
+return this.\_syncWrite(TABLES.discrepancies, record);
+}
+async getDiscrepancies(limit = 50) {
+if (this.\_online) {
+try {
+const res = await supabaseSelect(TABLES.discrepancies, {
+select: '\*',
+order: 'timestamp.desc',
+limit,
+});
+this.\_stats.readsFromSupabase++;
+if (Array.isArray(res)) return res;
+} catch (e) { /\* fallback \*/ }
+}
+return this.\_local.getDiscrepancies(limit);
+}
+// ===== Score History =====
+async addScoreSnapshot(projectId, engineName, scoreResult, meta = {}) {
+if (!projectId || !engineName || !scoreResult) return null;
+const recordId = `${projectId}\_${engineName}\_${Date.now()}`;
+const record = {
+id: recordId,
+project\_id: projectId,
+engine: engineName,
+value: scoreResult.value,
+breakdown: scoreResult.breakdown || {},
+classification: scoreResult.classification || null,
+explanation: scoreResult.explanation || '',
+confidence: scoreResult.confidence || 'medium',
+confidence\_score: scoreResult.confidenceScore || 50,
+sources: scoreResult.sources || [],
+labels: scoreResult.labels || null,
+events: scoreResult.events || null,
+opportunity\_score: scoreResult.opportunityScore || null,
+run\_id: meta.runId || null,
+trigger: meta.trigger || null,
+timestamp: Date.now(),
+date: new Date().toISOString(),
+};
+// Write local first (sync)
+this.\_local.addScoreSnapshot(projectId, engineName, scoreResult, meta);
+// Sync to Supabase
+const synced = await this.\_syncWrite(TABLES.score\_history, record);
+return synced ? recordId : null;
+}
+async addScoreSnapshots(projectId, scores, meta = {}) {
+const ids = {};
+for (const engine in scores) {
+if (!scores[engine]) continue;
+const id = await this.addScoreSnapshot(projectId, engine, scores[engine], meta);
+if (id) ids[engine] = id;
+if (scores[engine].events && Array.isArray(scores[engine].events)) {
+for (const evt of scores[engine].events) {
+await this.\_recordLabelEvent(projectId, engine, evt);
+}
+}
+}
+return ids;
+}
+async \_recordLabelEvent(projectId, engine, event) {
+const recordId = `evt\_${projectId}\_${Date.now()}\_${Math.random().toString(36).slice(2, 6)}`;
+const record = {
+id: recordId,
+project\_id: projectId,
+engine,
+type: event.type,
+from\_val: event.from || null,
+to\_val: event.to || null,
+threshold: event.threshold || null,
+delta: event.delta || null,
+timestamp: event.timestamp || Date.now(),
+};
+return this.\_syncWrite(TABLES.label\_events, record);
+}
+async getScoreHistory(projectId, engineName = null, limit = 50) {
+if (this.\_online) {
+try {
+const options = {
+select: '\*',
+eq: { project\_id: projectId },
+order: 'timestamp.asc',
+};
+if (engineName) {
+options.eq = { project\_id: projectId, engine: engineName };
+}
+const res = await supabaseSelect(TABLES.score\_history, options);
+this.\_stats.readsFromSupabase++;
+if (Array.isArray(res)) {
+const mapped = res.map(r => ({
+id: r.id,
+projectId: r.project\_id,
+engine: r.engine,
+value: r.value,
+breakdown: r.breakdown || {},
+classification: r.classification || null,
+explanation: r.explanation || '',
+confidence: r.confidence,
+confidenceScore: r.confidence\_score,
+sources: r.sources || [],
+labels: r.labels || null,
+events: r.events || null,
+opportunityScore: r.opportunity\_score,
+runId: r.run\_id,
+trigger: r.trigger,
+timestamp: r.timestamp,
+date: r.date,
+}));
+return mapped.slice(-limit);
+}
+} catch (e) { /\* fallback \*/ }
+}
+return this.\_local.getScoreHistory(projectId, engineName, limit);
+}
+async getLatestScore(projectId, engineName) {
+const history = await this.getScoreHistory(projectId, engineName, 1);
+return history.length > 0 ? history[history.length - 1] : null;
+}
+async getLatestScores(projectId) {
+const engines = ['payd', 'conviction', 'alpha', 'discovery'];
+const out = {};
+for (const e of engines) {
+const latest = await this.getLatestScore(projectId, e);
+if (latest) out[e] = latest;
+}
+return out;
+}
+async compareLatestSnapshots(projectId) {
+if (this.\_online) {
+try {
+const res = await supabaseSelect(TABLES.score\_history, {
+select: '\*',
+eq: { project\_id: projectId },
+order: 'timestamp.desc',
+limit: 2,
+});
+this.\_stats.readsFromSupabase++;
+if (Array.isArray(res) && res.length >= 2) {
+const current = res[0];
+const previous = res[1];
+const delta = (current.value || 0) - (previous.value || 0);
+return {
+hasComparison: true,
+current,
+previous,
+delta,
+deltaPct: previous.value !== 0 ? (delta / previous.value) \* 100 : 0,
+timeDeltaMs: current.timestamp - previous.timestamp,
+};
+}
+return { hasComparison: false };
+} catch (e) { /\* fallback \*/ }
+}
+return this.\_local.compareLatestSnapshots(projectId);
+}
+async getLabelEvents(projectId = null, limit = 50) {
+if (this.\_online) {
+try {
+const options = {
+select: '\*',
+order: 'timestamp.desc',
+limit,
+};
+if (projectId) options.eq = { project\_id: projectId };
+const res = await supabaseSelect(TABLES.label\_events, options);
+this.\_stats.readsFromSupabase++;
+if (Array.isArray(res)) {
+return res.map(r => ({
+id: r.id,
+projectId: r.project\_id,
+engine: r.engine,
+type: r.type,
+from: r.from\_val,
+to: r.to\_val,
+threshold: r.threshold,
+delta: r.delta,
+timestamp: r.timestamp,
+}));
+}
+} catch (e) { /\* fallback \*/ }
+}
+return this.\_local.getLabelEvents(projectId, limit);
+}
+// ===== Stats / housekeeping =====
+getStats() {
+return {
+...this.\_local.getStats(),
+online: this.\_online,
+supabase: this.\_stats,
+cacheSize: this.\_cache.size,
+};
+}
+async clearAll() {
+this.\_local.clearAll();
+this.\_cache.clear();
+// For Supabase — would need delete all, skip for now (data is append-only)
+}
+}
+global.PAYD\_INTEL = global.PAYD\_INTEL || {};
+global.PAYD\_INTEL.IntelligenceDatabaseSupabase = IntelligenceDatabaseSupabase;
+})(window);
