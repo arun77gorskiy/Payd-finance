@@ -12,63 +12,63 @@
         "id": "2",
         "content": "Спроектировать схему метаданных верификации для projects.json",
         "details": "Добавить поля: coingecko_id, cmc_id, contract_address, verified_status (verified/pending/data_unavailable), last_verified_at, verification_source. Обновить Python-генератор.",
-        "status": "in_progress",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
         "content": "Реализовать MarketDataValidationService на Application Layer V2",
         "details": "Сервис проверяет: Market Cap, FDV, Price, GitHub Activity, last_updated timestamp. Возвращает {isValid, data, errors}. Кеш-управление.",
-        "status": "pending",
+        "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
         "content": "Реализовать IMarketDataProvider + CoinGeckoMarketDataProvider",
         "details": "Интерфейс для сбора проверенных рыночных данных. CoinGecko — primary, CoinMarketCap — secondary. Graceful degradation при недоступности.",
-        "status": "pending",
+        "status": "completed",
         "priority": "high"
       },
       "5": {
         "id": "5",
         "content": "Обновить QualityFilter для строгой отсечки невалидированных",
         "details": "QualityFilter должен требовать verified_status === 'verified' И verified_market_cap И verified_price И verified_fdv. Иначе — автоматическое исключение.",
-        "status": "pending",
+        "status": "completed",
         "priority": "high"
       },
       "6": {
         "id": "6",
         "content": "Реализовать ProjectReplacementService для автозамены",
         "details": "При исключении проекта искать следующего кандидата в том же секторе, удовлетворяющего quality bar. Поддерживать минимальный размер сектора.",
-        "status": "pending",
+        "status": "completed",
         "priority": "high"
       },
       "7": {
         "id": "7",
         "content": "Добавить 'data_unavailable' во внутренние статусы ProjectLifecycleManager",
         "details": "Внутренний статус (не показывается пользователю). Используется для отметки в БД/сторе, но исключается из публичных rankings.",
-        "status": "pending",
+        "status": "completed",
         "priority": "medium"
       },
       "8": {
         "id": "8",
         "content": "Обновить UI: запретить плейсхолдеры ошибок, рендерить только верифицированные",
         "details": "Render layer должен фильтровать на входе. Никаких \"Project not found\", \"Missing dataset\" и т.п. Только проверенные карточки.",
-        "status": "pending",
+        "status": "completed",
         "priority": "high"
       },
       "9": {
         "id": "9",
         "content": "Обновить generate_v2_projects.py — добавить coingecko_id для всех 112 проектов",
         "details": "Каждый проект должен иметь верифицированный coingecko_id. Без него проект не попадает в активные сектора.",
-        "status": "pending",
+        "status": "completed",
         "priority": "high"
       },
       "10": {
         "id": "10",
         "content": "Деплой и end-to-end проверка",
         "details": "Развернуть, проверить рендеринг V2, убедиться что только валидные проекты отображаются.",
-        "status": "pending",
+        "status": "completed",
         "priority": "medium"
       }
     }
