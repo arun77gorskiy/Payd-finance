@@ -3,78 +3,71 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Фаза 0: Подготовка инфраструктуры БД для V2",
-        "details": "1. Создать новую таблицу `lifecycle_events` (id, project_id, from_status, to_status, reason, metrics_snapshot, timestamp).\n2. Создать таблицу `discovery_candidates` (id, source, external_id, ticker, name, sector_hint, raw_metadata, fetched_at, status: pending/qualified/rejected).\n3. Создать таблицу `sector_config` (id, sector, min_projects, max_projects, weight, updated_at).\n4. Добавить в таблицу `projects` поля: status (text, default 'emerging'), discovered_at (bigint), promoted_at (bigint), archived_at (bigint), consecutive_deltas (jsonb), quality_score (numeric).\n5. Создать индексы на (status), (sector, status), (discovered_at), (quality_score DESC).\n6. Засидить sector_config дефолтными значениями (Layer1, DeFi, DePIN, AI, RWA, Gaming и т.д.).",
-        "status": "pending",
+        "content": "Фаза 0A: Создание IDataProvider интерфейса и конфигурации",
+        "details": "1. Создать public/js/intelligence/data/IDataProvider.js — универсальный интерфейс с методами: getProjects, getProject, saveProject, getReports, saveReport, getWeeklyReports, getDashboard, saveDashboard, getResearch, saveResearch, getMarketData, saveMarketData, getScores, saveScores, searchProjects, archiveProject, restoreProject, и V2-методами (lifecycle_events, discovery_candidates, sector_config).\n2. Создать public/js/intelligence/config/data-provider.config.js — единая точка выбора провайдера (default: LocalJsonDataProvider).\n3. Создать public/js/intelligence/data/DataProviderFactory.js — фабрика, инстанцирующая нужный провайдер по конфигу.",
+        "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Фаза 1: Создание DiscoveryService (поиск новых токенов)",
-        "details": "1. Создать `public/js/intelligence/discovery/DiscoveryService.js` (класс-обёртка).\n2. Реализовать метод `fetchFromCoinGecko()` — вызов публичного API `/coins/markets` с пагинацией (по 250 на странице, до 50 страниц).\n3. Реализовать метод `parseAndNormalize(raw)` — приведение полей (id, symbol, name, categories, market_cap, total_volume, developer_score и т.д.) к единому формату DiscoveryCandidate.\n4. Реализовать метод `deduplicate(candidates)` — отсев по external_id (сохранение в `discovery_candidates`).\n5. Реализовать метод `classifyBySector(candidate)` — определение сектора/подсектора на основе categories от CoinGecko + keyword-matching по name/description.\n6. Реализовать rate-limiting (CoinGecko free: 10-30 req/min) с очередью и задержками.\n7. Сохранение raw-ответа через `database.saveRawResponse('coingecko', '/coins/markets', params, rawData)`.\n8. Метод `getDiscoveryStats()` — счётчики: total fetched, new today, by sector.\n9. В `IntelligenceDatabaseSupabase` добавить методы: `saveDiscoveryCandidate`, `getDiscoveryCandidates(status)`, `updateCandidateStatus`.",
+        "content": "Фаза 0B: Создание трёх провайдеров (LocalJsonDataProvider реализован, остальные — архитектурные заглушки)",
+        "details": "1. Создать public/js/intelligence/data/providers/LocalJsonDataProvider.js — полная реализация: read/write JSON файлов в public/data/, in-memory cache, query interface.\n2. Создать public/js/intelligence/data/providers/ApiDataProvider.js — заглушка с JSDoc и NotImplementedException (для будущих CoinGecko/CMC/GitHub/DefiLlama интеграций).\n3. Создать public/js/intelligence/data/providers/DatabaseProvider.js — заглушка с JSDoc и NotImplementedException (для будущих PostgreSQL/Supabase/Firebase/MongoDB/Neon/PlanetScale).\n4. Создать public/data/ директорию с JSON-файлами-сидами: projects.json, score_history.json, snapshots.json, lifecycle_events.json (пустой), discovery_candidates.json (пустой), sector_config.json, market_data.json, reports.json, dashboards.json, research.json.",
         "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Фаза 2: QualityFilter (мульти-факторная фильтрация кандидатов)",
-        "details": "1. Создать `public/js/intelligence/discovery/QualityFilter.js` (stateless-модуль с чистыми функциями).\n2. Определить структуру `QualitySignals { mcap, volume24h, fdv, devActivity, communityScore, ageInDays, hasGithub, hasTwitter, listingExchangesCount }`.\n3. Реализовать `computeQualityScore(candidate)` — взвешенная сумма: mcap(0.2) + volume/mcap_ratio(0.2) + dev_activity(0.2) + age(0.1, min 90d) + listing_count(0.15) + community(0.15). Возврат { score: 0-100, breakdown, missingData[] }.\n4. Реализовать `meetsThreshold(candidate, threshold=60)` — bool с детализацией причин.\n5. Реализовать `getMinimumSignals(candidate)` — список обязательных полей, при отсутствии которых кандидат сразу rejected (например, нет mcap ИЛИ нет github ИЛИ age<30d).\n6. Реализовать fallback: если данных не хватает, score понижается, а недостающие поля логируются в `discovery_candidates.missing_fields`.",
+        "content": "Фаза 0C: Создание Repository Layer (7 репозиториев)",
+        "details": "1. ProjectRepository — CRUD над проектами, searchProjects, archive/restore.\n2. ScoreRepository — saveScores, getScores, getScoreHistory.\n3. DashboardRepository — getDashboard, saveDashboard.\n4. ResearchRepository — getResearch, saveResearch.\n5. MarketRepository — getMarketData, saveMarketData.\n6. ReportRepository — getReports, saveReport, getWeeklyReports.\n7. DiscoveryRepository (NEW для V2) — getCandidates, saveCandidate, updateCandidateStatus, getLifecycleEvents, saveLifecycleEvent, getSectorConfig, saveSectorConfig.\nКаждый репозиторий получает IDataProvider в конструкторе и делегирует ему все операции. Никакой бизнес-логики.",
         "status": "pending",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Фаза 3: ProjectLifecycleManager (жизненный цикл проекта)",
-        "details": "1. Создать `public/js/intelligence/discovery/ProjectLifecycleManager.js`.\n2. Определить константы статусов: EMERGING, WATCHLIST, CORE, ARCHIVE.\n3. Реализовать `evaluateTransition(project, history, sectorSizeInfo)` — возвращает новое состояние и reason.\n4. Правила перехода (по 3-5 последовательным тикам, не по одному):\n   - emerging → watchlist: qualityScore >= 60 sustained for 3+ runs AND hasGitHub AND volume>0.\n   - emerging → archive: qualityScore < 25 sustained for 2+ runs OR 0 volume for 30+ days.\n   - watchlist → core: Alpha >= 70 sustained for 4+ runs AND Payd >= 60 AND qualityScore >= 70.\n   - watchlist → archive: Alpha < 50 for 3+ runs OR hasMajorDelisting.\n   - core → archive: Alpha < 50 for 5+ runs OR projectDead (no github commits 90+ days).\n5. Использовать `consecutive_deltas` поле в БД для трекинга устойчивости (хранить {metric: count} объект).\n6. Логирование каждого перехода в `lifecycle_events` с metrics snapshot.\n7. Метод `getProjectsByStatus(status)` для batch-обработки.\n8. Метод `getSaturatedSectors()` — сектора, где count(projects.status IN ('emerging','watchlist','core')) >= sector_config.max_projects.",
+        "content": "Фаза 0D: Создание Application Layer (use-cases)",
+        "details": "1. ProjectService — оркестрация ProjectRepository + ScoreRepository (для проекта сразу подтягивает scores).\n2. ScoreService — расчёт всех scores через engine, сохранение через ScoreRepository.\n3. DiscoveryService — high-level оркестрация discoveryService + qualityFilter + sectorSizeManager + lifecycleManager (для V2).\n4. ReportService — формирование weekly reports из score history.\n5. DashboardService — сборка dashboard данных из разных репозиториев.\nКаждый сервис принимает репозитории в конструкторе, не знает о БД.",
         "status": "pending",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Фаза 4: SectorSizeManager (динамическое управление размером секторов)",
-        "details": "1. Создать `public/js/intelligence/discovery/SectorSizeManager.js`.\n2. Загрузить конфиг `sector_config` из БД при инициализации.\n3. Метод `canAddToSector(sector, candidate)` — проверка лимита (min/max). Возвращает { allowed, reason, currentCount, max, min }.\n4. Правило: max=softLimit, но если qualityScore >= 85 — bypass max (топ-кандидаты принимаются даже в переполненный сектор).\n5. Метод `getExpansionOpportunities()` — сектора, где count < min_projects — список приоритетов для discovery.\n6. Метод `getContractionTargets()` — сектора, где есть ARCHIVE-кандидаты с qualityScore < 30, чтобы освободить слот.\n7. Метод `recomputeSectorStats()` — обновление счётчиков в sector_config после каждого lifecycle-перехода.\n8. Логирование решений в `lifecycle_events` (тип: sector_size_decision).",
+        "content": "Фаза 0E: Миграция данных localStorage → JSON-файлы",
+        "details": "1. Создать scripts/migrate-localStorage-to-json.js — однократный скрипт миграции.\n2. Создать сид-данные: демо-проекты (RENDER, AKT, TAO, FIL), sector_config (Layer1, DeFi, DePIN, AI, RWA, Gaming), пустые lifecycle_events и discovery_candidates.\n3. Запуск миграции и проверка, что JSON-файлы содержат все данные из localStorage.",
         "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Фаза 5: Переработка PaydDiscoveryEngine → DiscoveryEngine V2",
-        "details": "1. Переименовать/создать `public/js/intelligence/scoring/DiscoveryEngineV2.js` (наследует BaseEngine).\n2. Конструктор принимает зависимости: { qualityFilter, lifecycleManager, sectorSizeManager, discoveryService }.\n3. Метод `discoverAndIngest()` — главная точка входа:\n   a. Запросить новых кандидатов у DiscoveryService.\n   b. Применить QualityFilter.\n   c. Проверить SectorSizeManager.canAddToSector.\n   d. Записать qualified в projects (status='emerging').\n   e. Вернуть { added: [...], rejected: [{...reason}] }.\n4. Метод `evaluateLifecycles()` — вызвать LifecycleManager.evaluateTransition для всех активных проектов.\n5. Сохранить V1-функциональность (генерация лейблов), но как подсистему внутри V2 (computeLabelsForProject).\n6. Метод `getTopOpportunitiesV2(limit)` — сортировка по composite score с учётом lifecycle status.\n7. Полная обратная совместимость со старым API (если dependencies не переданы — fallback на V1-поведение).",
+        "content": "Фаза 0F: Рефакторинг render-кода и bootstrap.js",
+        "details": "1. Создать public/js/intelligence/intelligence-render-v2.js — вызывает ТОЛЬКО Application Layer (ProjectService и др.). Никогда не читает JSON напрямую.\n2. Обновить public/index.html — подключить новые скрипты в правильном порядке: config → IDataProvider → providers → factory → repositories → application → engines → render.\n3. Обновить public/js/intelligence/services/bootstrap.js — инициализация через DataProviderFactory.\n4. Обновить public/js/intelligence/services/IntelligenceScheduler.js — работает через Application Layer, не знает о провайдере.",
         "status": "pending",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "Фаза 6: Интеграция DiscoveryEngineV2 в IntelligenceScheduler",
-        "details": "1. Модифицировать `public/js/intelligence/services/IntelligenceScheduler.js`:\n   a. Добавить конструктор параметр `discoveryEngine`.\n   b. Новый метод `runDiscoveryCycle()` — вызывается в начале каждого scheduled-обновления (Пн/Ср/Пт).\n   c. Новый метод `runLifecycleEvaluation()` — после обновления scores.\n   d. Изменить порядок в _runUpdate: discovery → score update → lifecycle eval → label generation.\n2. Добавить в `updateTypes` новый тип 'discovery' (для ручного запуска).\n3. Логирование результатов discovery в _history (поле discoveryResult: { added, promoted, demoted, archived }).\n4. Метод `getDiscoveryReport()` — статистика за период.\n5. Подписка `on('discoveryComplete', cb)` — для UI-уведомлений.",
+        "content": "Фаза 1: Создание DiscoveryService (V2) через репозитории",
+        "details": "1. Создать public/js/intelligence/discovery/DiscoveryService.js — НЕ знает о БД, возвращает DTO.\n2. Создать public/js/intelligence/discovery/QualityFilter.js — stateless.\n3. Создать public/js/intelligence/discovery/SectorSizeManager.js — использует DiscoveryRepository.\n4. Создать public/js/intelligence/discovery/ProjectLifecycleManager.js — использует ProjectRepository, ScoreRepository, DiscoveryRepository.\n5. Создать public/js/intelligence/scoring/DiscoveryEngineV2.js — DI: { discoveryService, qualityFilter, lifecycleManager, sectorSizeManager, api }.",
         "status": "pending",
-        "priority": "high"
+        "priority": "medium"
       },
       "8": {
         "id": "8",
-        "content": "Фаза 7: Обновление bootstrap.js для инициализации V2-стека",
-        "details": "1. В `public/js/intelligence/services/bootstrap.js`:\n   a. Подключить новые модули в правильном порядке: discoveryService → qualityFilter → sectorSizeManager → lifecycleManager → discoveryEngineV2.\n   b. Передать зависимости в конструктор IntelligenceScheduler.\n   c. Сохранить ссылки на V2-объекты в `arch` для доступа из UI.\n2. Добавить feature-flag `PAYD_V2_ENABLED` (default true), чтобы можно было откатиться на V1.\n3. Миграция: при первом запуске V2 — установить всем существующим проектам status='core' (если был полный набор scores) или 'watchlist' (если был partial).",
+        "content": "Фаза 2: UI — отображение lifecycle-статусов (через Application Layer)",
+        "details": "1. В render-коде добавить бейджи статусов (🌱/👁/⭐/📦) через ProjectService.getProjectWithLifecycle.\n2. Иконки lifecycle-событий в timeline через DiscoveryService.getLifecycleEvents.\n3. Новый компонент DiscoveryFeed через ProjectService.getRecentlyChanged.\n4. Фильтр по статусу через ProjectService.searchProjects({status}).\n5. Карточка Discovery Stats на dashboard через DashboardService.",
         "status": "pending",
         "priority": "medium"
       },
       "9": {
         "id": "9",
-        "content": "Фаза 8: UI — отображение статусов lifecycle",
-        "details": "1. В `intelligence-render.js`:\n   a. В `_renderAlphaScores` добавить секцию \"Lifecycle Status\" с бейджем (🌱 Emerging / 👁 Watchlist / ⭐ Core / 📦 Archive).\n   b. Цвета бейджей: emerging=#9CA3AF, watchlist=#3B82F6, core=#10B981, archive=#6B7280.\n2. В `intelligence-alpha-render.js` (renderTimeline):\n   a. Добавить иконки и подписи для lifecycle-событий (transition, discovered, promoted, demoted, archived).\n   b. Показывать reason перехода при клике на событие.\n3. Создать новый компонент `DiscoveryFeed` — лента последних добавленных/архивированных проектов.\n4. Фильтр на странице списка проектов: 'All / 🌱 Emerging / 👁 Watchlist / ⭐ Core / 📦 Archive'.\n5. На dashboard добавить карточку \"Discovery Stats\" (new this week, promoted, archived, total tracked).",
-        "status": "pending",
-        "priority": "medium"
-      },
-      "10": {
-        "id": "10",
-        "content": "Фаза 9: Тестирование и валидация V2",
-        "details": "1. Юнит-тесты (Node.js + node:test):\n   a. QualityFilter — на 20+ синтетических кандидатах проверить пороги.\n   b. LifecycleManager — смоделировать 5-10 тиков для каждого типа перехода.\n   c. SectorSizeManager — edge-кейсы (min, max, overflow с bypass).\n   d. DiscoveryEngineV2 — mock-режим без реальных API.\n2. Интеграционный тест: mock DiscoveryService → DiscoveryEngineV2 → проверка БД.\n3. Смоук-тест на dev-сервере: запустить forceUpdate с типом 'discovery', убедиться что:\n   a. Не падает с ошибками.\n   b. Создаются записи в discovery_candidates.\n   c. Quality-rejected кандидаты НЕ попадают в projects.\n4. Проверить rate-limiting (если CoinGecko вернёт 429 — должно быть корректное ожидание).\n5. Логирование: убедиться что lifecycle_events пишутся с правильным timestamp и reason.",
+        "content": "Фаза 3: Тестирование (in-memory, без сети)",
+        "details": "1. Юнит-тесты QualityFilter/LifecycleManager/SectorSizeManager (без БД).\n2. Интеграционные тесты с LocalJsonDataProvider (быстро, без сети).\n3. Тест переключения провайдера: убедиться, что смена DataProvider в конфиге не ломает остальной код.\n4. Смоук-тест: forceUpdate через Application Layer, проверка что данные пишутся в JSON-файлы.",
         "status": "pending",
         "priority": "high"
       },
-      "11": {
-        "id": "11",
-        "content": "Фаза 10: Развёртывание и мониторинг V2",
-        "details": "1. Применить миграцию БД (`apply_migration` для каждой таблицы из Фазы 0).\n2. Засидить sector_config и базовые данные.\n3. Деплой новой версии фронтенда.\n4. Проверить deploy URL через test_website:\n   a. Главная страница загружается без JS-ошибок.\n   b. Карточка проекта показывает lifecycle status.\n   c. Timeline содержит новые типы событий.\n5. В Supabase Dashboard проверить наполнение lifecycle_events (должны появиться записи при первом scheduled-обновлении).\n6. Обновить документацию в `docs/` (если есть) с описанием V2.\n7. Создать memory-файл с финальным состоянием V2 для будущих сессий.",
+      "10": {
+        "id": "10",
+        "content": "Фаза 4: Развёртывание с LocalJsonDataProvider",
+        "details": "1. Деплой через deploy tool.\n2. Проверить через test_website, что UI работает без ошибок.\n3. Документация: как в будущем переключиться на ApiDataProvider/DatabaseProvider одной строкой конфига.\n4. Создать memory-файл с финальным состоянием архитектуры.",
         "status": "pending",
         "priority": "medium"
       }
