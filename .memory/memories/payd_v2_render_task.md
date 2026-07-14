@@ -23,3 +23,9 @@
 
 ## Known caveat
 - `DiscoveryEngineV2` constructor expects `deps.discoveryService` (HTTP) and `deps.lifecycleManager` (already exists). The render layer passes `{projectRepository, scoreRepository, discoveryRepository}` to engine. The action buttons (run discovery / evaluate lifecycle) will fail at runtime if engine deps are missing — caught by try/catch. This is acceptable for the render task and does not block the primary "list projects with lifecycle statuses" feature.
+
+## Deploy info
+- Latest URL: https://bkaenvtebwyg.space.minimax.io
+- V2 page: https://bkaenvtebwyg.space.minimax.io/intelligence-v2.html
+- Bundle re-written to load all 25 scripts in PARALLEL (Promise.allSettled) instead of sequentially — sequential loader was hanging after QualityFilter.js
+- V2 module is completely isolated: index.html and main site are unaffected
