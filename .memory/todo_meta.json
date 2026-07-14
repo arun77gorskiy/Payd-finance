@@ -54,7 +54,7 @@
         "id": "8",
         "content": "Фаза 6: Тестирование (без Supabase, без сети к внешним API в тестах)",
         "details": "1. Юнит-тесты QualityFilter (20+ синтетических кандидатов).\n2. Юнит-тесты SectorSizeManager (NO MAX сценарии).\n3. Юнит-тесты ProjectLifecycleManager (sustained transitions).\n4. Смоук-тест: запустить intelligence-v2.html, проверить через test_website.",
-        "status": "pending",
+        "status": "in_progress",
         "priority": "high"
       },
       "9": {
