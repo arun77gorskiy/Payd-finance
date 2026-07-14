@@ -3,71 +3,64 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Фаза 0A: Создание IDataProvider интерфейса и конфигурации",
-        "details": "1. Создать public/js/intelligence/data/IDataProvider.js — универсальный интерфейс с методами: getProjects, getProject, saveProject, getReports, saveReport, getWeeklyReports, getDashboard, saveDashboard, getResearch, saveResearch, getMarketData, saveMarketData, getScores, saveScores, searchProjects, archiveProject, restoreProject, и V2-методами (lifecycle_events, discovery_candidates, sector_config).\n2. Создать public/js/intelligence/config/data-provider.config.js — единая точка выбора провайдера (default: LocalJsonDataProvider).\n3. Создать public/js/intelligence/data/DataProviderFactory.js — фабрика, инстанцирующая нужный провайдер по конфигу.",
-        "status": "in_progress",
+        "content": "V2 Core — IDataProvider, 3 провайдера, Repository Layer, Application Layer (✅ ВЫПОЛНЕНО)",
+        "details": "IDataProvider.js, LocalJsonDataProvider.js, ApiDataProvider.js (stub), DatabaseProvider.js (stub), 7 репозиториев, 5 application-сервисов, data-provider.config.js, DataProviderFactory.js. Сидовые JSON-файлы в public/data/.",
+        "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Фаза 0B: Создание трёх провайдеров (LocalJsonDataProvider реализован, остальные — архитектурные заглушки)",
-        "details": "1. Создать public/js/intelligence/data/providers/LocalJsonDataProvider.js — полная реализация: read/write JSON файлов в public/data/, in-memory cache, query interface.\n2. Создать public/js/intelligence/data/providers/ApiDataProvider.js — заглушка с JSDoc и NotImplementedException (для будущих CoinGecko/CMC/GitHub/DefiLlama интеграций).\n3. Создать public/js/intelligence/data/providers/DatabaseProvider.js — заглушка с JSDoc и NotImplementedException (для будущих PostgreSQL/Supabase/Firebase/MongoDB/Neon/PlanetScale).\n4. Создать public/data/ директорию с JSON-файлами-сидами: projects.json, score_history.json, snapshots.json, lifecycle_events.json (пустой), discovery_candidates.json (пустой), sector_config.json, market_data.json, reports.json, dashboards.json, research.json.",
-        "status": "pending",
+        "content": "V2 Discovery — QualityFilter, SectorSizeManager, ProjectLifecycleManager, DiscoveryEngineV2 (✅ ВЫПОЛНЕНО)",
+        "details": "QualityFilter с мульти-факторной оценкой, SectorSizeManager с NO MAX LIMIT и bypass для топ-кандидатов, ProjectLifecycleManager с 4 статусами и sustained transitions, DiscoveryEngineV2 как оркестратор.",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Фаза 0C: Создание Repository Layer (7 репозиториев)",
-        "details": "1. ProjectRepository — CRUD над проектами, searchProjects, archive/restore.\n2. ScoreRepository — saveScores, getScores, getScoreHistory.\n3. DashboardRepository — getDashboard, saveDashboard.\n4. ResearchRepository — getResearch, saveResearch.\n5. MarketRepository — getMarketData, saveMarketData.\n6. ReportRepository — getReports, saveReport, getWeeklyReports.\n7. DiscoveryRepository (NEW для V2) — getCandidates, saveCandidate, updateCandidateStatus, getLifecycleEvents, saveLifecycleEvent, getSectorConfig, saveSectorConfig.\nКаждый репозиторий получает IDataProvider в конструкторе и делегирует ему все операции. Никакой бизнес-логики.",
-        "status": "pending",
+        "content": "Фаза 1: Создание intelligence-v2.html (полностью изолированная страница)",
+        "details": "1. Создать /workspace/public/intelligence-v2.html — полностью автономная HTML-страница.\n2. Не редактировать index.html.\n3. Страница содержит минимальный HTML + ссылку на intelligence-v2-bundle.js.\n4. Стили inline или через intelligence-v2-styles.css.",
+        "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Фаза 0D: Создание Application Layer (use-cases)",
-        "details": "1. ProjectService — оркестрация ProjectRepository + ScoreRepository (для проекта сразу подтягивает scores).\n2. ScoreService — расчёт всех scores через engine, сохранение через ScoreRepository.\n3. DiscoveryService — high-level оркестрация discoveryService + qualityFilter + sectorSizeManager + lifecycleManager (для V2).\n4. ReportService — формирование weekly reports из score history.\n5. DashboardService — сборка dashboard данных из разных репозиториев.\nКаждый сервис принимает репозитории в конструкторе, не знает о БД.",
-        "status": "pending",
+        "content": "Фаза 2: Создание intelligence-v2-bundle.js (self-registered orchestrator)",
+        "details": "1. Создать /workspace/public/js/intelligence/intelligence-v2-bundle.js — сам регистрируется через document.currentScript.\n2. Динамически загружает все V2-скрипты через loadScript() helper (НЕ модифицирует index.html).\n3. Инициализирует V2-стек только если DOMContentLoaded на странице intelligence-v2.html.\n4. Создаёт V2 API в window.PAYD_INTEL_V2.",
+        "status": "completed",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Фаза 0E: Миграция данных localStorage → JSON-файлы",
-        "details": "1. Создать scripts/migrate-localStorage-to-json.js — однократный скрипт миграции.\n2. Создать сид-данные: демо-проекты (RENDER, AKT, TAO, FIL), sector_config (Layer1, DeFi, DePIN, AI, RWA, Gaming), пустые lifecycle_events и discovery_candidates.\n3. Запуск миграции и проверка, что JSON-файлы содержат все данные из localStorage.",
-        "status": "pending",
+        "content": "Фаза 3: Создание V2 Render (intelligence-v2-render.js)",
+        "details": "1. Создать /workspace/public/js/intelligence/intelligence-v2-render.js.\n2. Использует ТОЛЬКО Application Layer (ProjectService, ScoreService, DiscoveryService и т.д.).\n3. Никогда не читает JSON напрямую, не вызывает fetch к внешним API напрямую.\n4. Рендерит: список проектов, lifecycle-бейджи, timeline событий, Discovery Feed, фильтры по статусу.",
+        "status": "completed",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Фаза 0F: Рефакторинг render-кода и bootstrap.js",
-        "details": "1. Создать public/js/intelligence/intelligence-render-v2.js — вызывает ТОЛЬКО Application Layer (ProjectService и др.). Никогда не читает JSON напрямую.\n2. Обновить public/index.html — подключить новые скрипты в правильном порядке: config → IDataProvider → providers → factory → repositories → application → engines → render.\n3. Обновить public/js/intelligence/services/bootstrap.js — инициализация через DataProviderFactory.\n4. Обновить public/js/intelligence/services/IntelligenceScheduler.js — работает через Application Layer, не знает о провайдере.",
-        "status": "pending",
-        "priority": "high"
+        "content": "Фаза 4: Стили V2 UI (intelligence-v2-styles.css)",
+        "details": "1. Создать /workspace/public/css/intelligence-v2-styles.css.\n2. Стили для: бейджей статусов (🌱/👁/⭐/📦), timeline, Discovery Feed, фильтров.\n3. Изолированы через префикс .payd-v2- (не конфликтует с существующими стилями).",
+        "status": "completed",
+        "priority": "medium"
       },
       "7": {
         "id": "7",
-        "content": "Фаза 1: Создание DiscoveryService (V2) через репозитории",
-        "details": "1. Создать public/js/intelligence/discovery/DiscoveryService.js — НЕ знает о БД, возвращает DTO.\n2. Создать public/js/intelligence/discovery/QualityFilter.js — stateless.\n3. Создать public/js/intelligence/discovery/SectorSizeManager.js — использует DiscoveryRepository.\n4. Создать public/js/intelligence/discovery/ProjectLifecycleManager.js — использует ProjectRepository, ScoreRepository, DiscoveryRepository.\n5. Создать public/js/intelligence/scoring/DiscoveryEngineV2.js — DI: { discoveryService, qualityFilter, lifecycleManager, sectorSizeManager, api }.",
-        "status": "pending",
-        "priority": "medium"
+        "content": "Фаза 5: Обновить sector_config.json (NO MAX LIMIT)",
+        "details": "1. Обновить public/data/sector_config.json — установить max_projects = null (без max) или высокое значение (например, 9999) для всех секторов.\n2. Добавить новые сектора: Layer2, DeSci, Infrastructure.\n3. Установить минимумы: Layer1=30, Layer2=30, DePIN=30, AI=30, DeFi=30, RWA=25, Gaming=25, DeSci=20, Infrastructure=25.",
+        "status": "completed",
+        "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "Фаза 2: UI — отображение lifecycle-статусов (через Application Layer)",
-        "details": "1. В render-коде добавить бейджи статусов (🌱/👁/⭐/📦) через ProjectService.getProjectWithLifecycle.\n2. Иконки lifecycle-событий в timeline через DiscoveryService.getLifecycleEvents.\n3. Новый компонент DiscoveryFeed через ProjectService.getRecentlyChanged.\n4. Фильтр по статусу через ProjectService.searchProjects({status}).\n5. Карточка Discovery Stats на dashboard через DashboardService.",
-        "status": "pending",
-        "priority": "medium"
-      },
-      "9": {
-        "id": "9",
-        "content": "Фаза 3: Тестирование (in-memory, без сети)",
-        "details": "1. Юнит-тесты QualityFilter/LifecycleManager/SectorSizeManager (без БД).\n2. Интеграционные тесты с LocalJsonDataProvider (быстро, без сети).\n3. Тест переключения провайдера: убедиться, что смена DataProvider в конфиге не ломает остальной код.\n4. Смоук-тест: forceUpdate через Application Layer, проверка что данные пишутся в JSON-файлы.",
+        "content": "Фаза 6: Тестирование (без Supabase, без сети к внешним API в тестах)",
+        "details": "1. Юнит-тесты QualityFilter (20+ синтетических кандидатов).\n2. Юнит-тесты SectorSizeManager (NO MAX сценарии).\n3. Юнит-тесты ProjectLifecycleManager (sustained transitions).\n4. Смоук-тест: запустить intelligence-v2.html, проверить через test_website.",
         "status": "pending",
         "priority": "high"
       },
-      "10": {
-        "id": "10",
-        "content": "Фаза 4: Развёртывание с LocalJsonDataProvider",
-        "details": "1. Деплой через deploy tool.\n2. Проверить через test_website, что UI работает без ошибок.\n3. Документация: как в будущем переключиться на ApiDataProvider/DatabaseProvider одной строкой конфига.\n4. Создать memory-файл с финальным состоянием архитектуры.",
+      "9": {
+        "id": "9",
+        "content": "Фаза 7: Деплой intelligence-v2.html и финальная документация",
+        "details": "1. Деплой через deploy tool.\n2. Проверка через test_website: главная страница (index.html) не сломана, intelligence-v2.html работает.\n3. Создать memory-файл с описанием V2 архитектуры и инструкциями по расширению.",
         "status": "pending",
         "priority": "medium"
       }
