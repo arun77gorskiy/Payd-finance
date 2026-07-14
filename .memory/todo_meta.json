@@ -26,7 +26,7 @@
         "id": "4",
         "content": "Smoke-test: рендеринг project detail с реальными данными из БД",
         "details": "Проверить что новый блок появляется при переходе на проект, что 3 score cards рендерятся с правильными значениями и history",
-        "status": "in_progress",
+        "status": "completed",
         "priority": "medium"
       }
     }
