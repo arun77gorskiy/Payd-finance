@@ -5,14 +5,14 @@
         "id": "1",
         "content": "Аудит текущего V2 пайплайна и существующих сервисов валидации",
         "details": "Понять, какие из требуемых компонентов уже есть: CoinGeckoService, DataValidator, QualityFilter, SectorSizeManager. Определить gap-ы.",
-        "status": "in_progress",
+        "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
         "content": "Спроектировать схему метаданных верификации для projects.json",
         "details": "Добавить поля: coingecko_id, cmc_id, contract_address, verified_status (verified/pending/data_unavailable), last_verified_at, verification_source. Обновить Python-генератор.",
-        "status": "pending",
+        "status": "in_progress",
         "priority": "high"
       },
       "3": {
