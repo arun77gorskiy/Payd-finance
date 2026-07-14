@@ -1,0 +1,531 @@
+# PAYDFINANCE V2 SAFE INTEGRATION PLAN
+
+IMPORTANT
+
+This is NOT a refactoring of the existing application.
+
+This is NOT a migration of the existing architecture.
+
+This is NOT a redesign.
+
+This is an isolated expansion of the current PaydFinance platform.
+
+The highest priority is:
+
+ZERO REGRESSION
+
+The existing website must continue working exactly as it does today.
+
+Do not modify existing business logic.
+
+Do not rewrite existing components.
+
+Do not replace existing services.
+
+Do not migrate existing modules.
+
+Do not change current routing.
+
+Do not redesign UI.
+
+Do not touch Dashboard.
+
+Do not touch Trading Lab.
+
+Do not touch Education.
+
+Do not touch Signals.
+
+Do not touch existing Landing pages.
+
+Everything currently working must remain untouched.
+
+---
+
+CREATE A NEW ISOLATED MODULE
+
+Name:
+
+PAYD Intelligence
+
+This module will become the first module using the new V2 architecture.
+
+ONLY Intelligence should use V2.
+
+Everything else continues using the current implementation.
+
+---
+
+CREATE V2 ARCHITECTURE
+
+Build V2 completely isolated.
+
+Do NOT integrate V2 into existing modules.
+
+Create:
+
+Application Layer
+
+Repository Layer
+
+Service Layer
+
+Engine Layer
+
+Data Layer
+
+The architecture must be modular.
+
+---
+
+CREATE IDataProvider
+
+Create a universal interface.
+
+All future data providers must implement it.
+
+---
+
+CREATE LocalJsonDataProvider
+
+Purpose:
+
+MiniMax Development
+
+Testing
+
+Preview
+
+Mock Data
+
+No Supabase.
+
+No Authentication.
+
+No External Database.
+
+Everything works locally.
+
+---
+
+CREATE ApiDataProvider
+
+Architecture only.
+
+Do NOT implement.
+
+Prepare for future APIs.
+
+CoinGecko
+
+CoinMarketCap
+
+GitHub
+
+DefiLlama
+
+Token Unlocks
+
+RSS
+
+OpenAI
+
+---
+
+CREATE DatabaseProvider
+
+Architecture only.
+
+Future support:
+
+PostgreSQL
+
+Supabase
+
+Firebase
+
+MongoDB
+
+Neon
+
+PlanetScale
+
+Any future database.
+
+---
+
+VERY IMPORTANT
+
+Only Intelligence uses V2.
+
+Dashboard continues using current code.
+
+Trading Lab continues using current code.
+
+Signals continue using current code.
+
+Education continues using current code.
+
+Landing continues using current code.
+
+Nothing else should be migrated.
+
+---
+
+PAYD DISCOVERY ENGINE
+
+Create the Discovery Engine.
+
+It must automatically maintain the tracked crypto universe.
+
+Every
+
+Monday
+
+Wednesday
+
+Friday
+
+Discovery Engine scans all supported providers.
+
+Automatically discovers:
+
+Layer 1
+
+Layer 2
+
+DePIN
+
+AI
+
+DeFi
+
+RWA
+
+Gaming
+
+DeSci
+
+Infrastructure
+
+Automatically classify projects.
+
+---
+
+DO NOT USE FIXED TOKEN LISTS
+
+Every sector is dynamic.
+
+Define only minimum coverage.
+
+Examples:
+
+Layer1
+
+minimum 30
+
+Layer2
+
+minimum 30
+
+DePIN
+
+minimum 30
+
+AI
+
+minimum 30
+
+DeFi
+
+minimum 30
+
+RWA
+
+minimum 25
+
+Gaming
+
+minimum 25
+
+DeSci
+
+minimum 20
+
+Infrastructure
+
+minimum 25
+
+NO MAXIMUM LIMIT.
+
+If 48 Layer2 projects satisfy quality requirements
+
+track all 48.
+
+If 63 DePIN projects satisfy quality requirements
+
+track all 63.
+
+Discovery Engine decides automatically.
+
+---
+
+QUALITY FILTER
+
+Projects are NOT selected by Market Cap only.
+
+Evaluate:
+
+GitHub
+
+Developer Activity
+
+Revenue
+
+TVL
+
+Users
+
+Nodes
+
+Market Cap
+
+FDV
+
+Liquidity
+
+Trading Volume
+
+Exchange Listings
+
+Community
+
+Partnerships
+
+Investment Rounds
+
+Unlock Risk
+
+Historical Stability
+
+Growth Momentum
+
+Payd Score
+
+Conviction Score
+
+Alpha Score
+
+---
+
+MULTI SOURCE DATA
+
+Never rely on one provider.
+
+Primary
+
+CoinGecko
+
+Secondary
+
+CoinMarketCap
+
+DeFi metrics
+
+DefiLlama
+
+Development
+
+GitHub
+
+Unlocks
+
+Token Unlocks
+
+News
+
+Official RSS
+
+Official Blogs
+
+Official X Accounts
+
+AI never generates numbers.
+
+AI analyzes verified data only.
+
+---
+
+FDV AND MARKET CAP
+
+Never estimate.
+
+Never calculate manually.
+
+Never confuse FDV with Market Cap.
+
+Always retrieve verified values from APIs.
+
+If CoinGecko misses a value
+
+automatically check CoinMarketCap.
+
+If unavailable
+
+display
+
+Unavailable
+
+Never invent values.
+
+---
+
+UPDATE SCHEDULE
+
+Every
+
+Monday
+
+Wednesday
+
+Friday
+
+Update:
+
+Projects
+
+GitHub
+
+Developers
+
+Revenue
+
+TVL
+
+FDV
+
+Market Cap
+
+Users
+
+Nodes
+
+Unlocks
+
+Scores
+
+Weekly Intelligence
+
+---
+
+THREE SCORES
+
+Payd Score
+
+Project Quality
+
+Payd Conviction Score
+
+Confidence Level
+
+Payd Alpha Score
+
+Market Opportunity
+
+All scores calculated independently.
+
+---
+
+PROMOTION SYSTEM
+
+Projects automatically move
+
+Emerging
+
+↓
+
+Watchlist
+
+↓
+
+Core
+
+Only after consistent improvement.
+
+---
+
+DEMOTION SYSTEM
+
+Projects move
+
+Core
+
+↓
+
+Watchlist
+
+↓
+
+Archive
+
+Never after one bad week.
+
+Use historical trends.
+
+---
+
+HISTORY
+
+Never delete projects.
+
+Archive everything.
+
+Track:
+
+Score History
+
+Alpha History
+
+Conviction History
+
+Rank Changes
+
+Sector Changes
+
+Promotions
+
+Demotions
+
+Historical Reports
+
+---
+
+IMPORTANT
+
+V2 must be connected ONLY to Intelligence.
+
+Do NOT connect V2 to Dashboard.
+
+Do NOT connect V2 to Trading Lab.
+
+Do NOT connect V2 to Signals.
+
+Do NOT connect V2 to Education.
+
+Do NOT connect V2 anywhere else.
+
+This guarantees zero risk for the existing application.
+
+---
+
+FINAL OBJECTIVE
+
+Build a completely isolated institutional-grade Intelligence platform inside PaydFinance.
+
+The existing application remains untouched.
+
+Only the new Intelligence module uses the new architecture.
+
+Future migrations of other modules will happen individually after testing.
+
+The result must be a stable, scalable and future-ready platform without risking the existing PaydFinance application.
