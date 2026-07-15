@@ -165,25 +165,39 @@ async function runTest() {
     }
     console.log('✓ All key classes registered\n');
 
-    // Создаём минимальный список проектов
-    const projects = [];
-    const sectors = ['layer1', 'layer2', 'depin', 'ai'];
-    for (let i = 0; i < 30; i++) {
-        for (const sector of sectors) {
-            projects.push({
-                id: `${sector}_${i}`,
-                name: `${sector.toUpperCase()} Project ${i}`,
-                symbol: `${sector[0]}${i}`,
-                sector,
-                coingecko_id: `${sector}-${i}`,
-                verified_status: 'verified',
-            });
+    // Разрешаем проекты: data/projects.json (source of truth),
+    // либо fallback на моковый набор если файл недоступен.
+    let projects = [];
+    try {
+        const projectsPath = path.join(__dirname, '..', 'data', 'projects.json');
+        if (fs.existsSync(projectsPath)) {
+            projects = JSON.parse(fs.readFileSync(projectsPath, 'utf-8'));
+            console.log(`Loaded ${projects.length} real projects from data/projects.json\n`);
         }
+    } catch (e) {
+        console.warn('Failed to load data/projects.json:', e.message);
     }
-    console.log(`Created ${projects.length} mock projects\n`);
+    if (projects.length === 0) {
+        // Fallback — синтетические проекты (только если JSON отсутствует)
+        const sectors = ['layer1', 'layer2', 'depin', 'ai'];
+        for (let i = 0; i < 30; i++) {
+            for (const sector of sectors) {
+                projects.push({
+                    id: `${sector}_${i}`,
+                    name: `${sector.toUpperCase()} Project ${i}`,
+                    symbol: `${sector[0]}${i}`,
+                    sector,
+                    coingecko_id: `${sector}-${i}`,
+                    verified_status: 'verified',
+                });
+            }
+        }
+        console.log(`Fallback: created ${projects.length} synthetic projects\n`);
+    }
 
-    // Создаём кандидатов для замены
+    // Кандидаты для замены (синтетические, для теста discovery flow)
     const candidates = [];
+    const sectors = ['layer1', 'layer2', 'depin', 'ai'];
     for (let i = 0; i < 10; i++) {
         candidates.push({
             id: `candidate_${i}`,
