@@ -694,8 +694,8 @@ const INTEL_RENDER = {
 
         // ── PAYD ALPHA ENGINE ─────────────────────────────────────────────
         // Данные из IntelligenceDatabase подгружаются асинхронно внутри
-        // _renderAlphaScores (см. ниже). Это нужно для совместимости с
-        // IntelligenceDatabaseSupabase, у которого read-методы возвращают Promise.
+        // _renderAlphaScores (см. ниже). Async-сигнатура совместима с
+        // локальной реализацией IntelligenceDatabase (localStorage).
         // ─────────────────────────────────────────────────────────────────
 
         container.innerHTML = `
@@ -996,7 +996,7 @@ const INTEL_RENDER = {
     /**
      * Рендерит блок PAYD Alpha Engine (3 score cards + AI summary + history + timeline + labels)
      * внутри контейнера проекта. Вызывается из renderProjectDetail.
-     * Async: загружает данные из IntelligenceDatabase (может быть Supabase или localStorage).
+     * Async: загружает данные из локальной IntelligenceDatabase (localStorage).
      * @param {HTMLElement} container
      * @param {string} ticker
      * @param {Object} project — базовый проект (без _scores)

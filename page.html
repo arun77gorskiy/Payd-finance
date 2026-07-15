@@ -137096,7 +137096,7 @@ document.addEventListener('DOMContentLoaded', initFloatingBall);
      PAYD Finance — Intelligence Module
      Self-contained, isolated from existing code. No LLM calls on page load.
      Data: pre-calculated by the server-side AI Agent (simulated here as
-     static JSON, representing what would be stored in Supabase).
+     static JSON, served from the local /data/intelligence/ directory).
      ================================================================= -->
 <link rel="stylesheet" href="css/intelligence/intelligence.css">
 
@@ -137119,7 +137119,6 @@ document.addEventListener('DOMContentLoaded', initFloatingBall);
 <script src="js/intelligence/services/UnifiedDataStore.js"></script>
 <script src="js/intelligence/research/ResearchEngine.js"></script>
 <script src="js/intelligence/database/IntelligenceDatabase.js"></script>
-<script src="js/intelligence/database/IntelligenceDatabaseSupabase.js"></script>
 <!-- Payd Alpha Engine — 4 независимых scoring engines -->
 <script src="js/intelligence/scoring/BaseEngine.js"></script>
 <script src="js/intelligence/scoring/ScoringEngineRegistry.js"></script>
