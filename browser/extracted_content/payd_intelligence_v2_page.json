@@ -1,0 +1,31 @@
+📄 Extracted from page: PAYD Intelligence V2 — Autonomous Discovery
+URL: https://fc982wviybn9.space.minimax.io/intelligence-v2.html
+
+Extracted content:
+```json
+{
+    "title": "PAYD Intelligence V2 — Autonomous Discovery",
+    "url": "https://fc982wviybn9.space.minimax.io/intelligence-v2.html",
+    "summary": "PAYD Intelligence V2 is an Autonomous Discovery platform featuring a multi-source quality lifecycle engine. The page displays an architecture overview with a LocalJsonDataProvider (Active, OK), payd-v2-render.js (Isolated), ProjectService + DiscoveryService (OK), 7 repositories (OK), and an IDataProvider interface (Stable). The Discovery section shows all counters at 0: Tracked, Emerging, Watchlist, Core, and Archive. The Discovery Engine provides controls to run a discovery cycle, evaluate lifecycle, and refresh. A note states there is NO MAX LIMIT — if 63 DePIN projects pass the quality filter, all 63 are tracked. The Tracked Projects section has filters for All, Emerging, Watchlist, Core, and Archive. Lifecycle Events shows 'No lifecycle events yet. Run \"Evaluate lifecycle\" to generate transitions.' The Automated Intelligence Update Engine updates 3 times a week (Mon, Wed, Fri at 09:00 UTC) running 6 steps: refresh → validate → AI analysis → update rankings → generate intelligence → save history. It shows 'Initializing pipeline…' loading state. Latest Intelligence shows 'Loading intelligence…' state. Footer notes the platform is database-agnostic with LocalJsonDataProvider active, and switching provider requires only editing public/js/intelligence/config/data-provider.config.js.",
+    "key_points": [
+        "Discovery counters all show 0: Tracked (0), Emerging (0), Watchlist (0), Core (0), Archive (0)",
+        "Architecture: LocalJsonDataProvider Active/OK, payd-v2-render.js Isolated, ProjectService + DiscoveryService OK, 7 repositories OK, IDataProvider interface Stable",
+        "Provider is LocalJsonDataProvider; frontend is payd-v2-render.js",
+        "Discovery Engine controls: Запустить discovery cycle, Оценить lifecycle, Обновить",
+        "NO MAX LIMIT policy — all 63 DePIN projects tracked if they pass quality filter",
+        "Tracked Projects filter tabs: All, 🌱 Emerging, 👁 Watchlist, ⭐ Core, 📦 Archive",
+        "Lifecycle Events: 'No lifecycle events yet. Run \"Evaluate lifecycle\" to generate transitions.'",
+        "Automated Intelligence Update Engine runs 3x weekly (Пн · Ср · Пт at 09:00 UTC) with 6 steps: refresh → validate → AI analysis → update rankings → generate intelligence → save history",
+        "Automated Intelligence engine shows 'Initializing pipeline…' loading status",
+        "Latest Intelligence shows 'Loading intelligence…' loading status",
+        "No [PAYD-V2-Render] rendering status text or error messages visible on the page",
+        "No boot errors detected",
+        "Footer: 'PAYD Intelligence V2 · Database-agnostic · LocalJsonDataProvider active'",
+        "To switch provider, edit public/js/intelligence/config/data-provider.config.js"
+    ],
+    "relevant_links": [
+        "/index.html"
+    ],
+    "file_name": "payd_intelligence_v2_page.json"
+}
+```
