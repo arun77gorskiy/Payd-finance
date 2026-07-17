@@ -1,0 +1,36 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://gw6obwjoxiv7.space.minimax.io/index.html
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://gw6obwjoxiv7.space.minimax.io/index.html",
+    "summary": "Payd_Finance is an educational and analytical SaaS platform that combines AI-powered crypto market analysis with structured trading education. The page features a PAYD Intelligence Layer (AI Agent v3.2.1) with a Market Snapshot, risk alerts, upcoming token unlocks, top opportunities, latest research, and latest updates. It also showcases real-time market data for top cryptocurrencies, an AI Market Regime analysis, a Trading Terminal with a symbol selector supporting 10 trading pairs, a Trading Dashboard covering 500+ altcoins, and the PAYD Trading Lab with 4 education modules, 6 trading scenario levels, 4 courses, and 2 pricing tiers ($29/mo Basic, $79/mo Premium).",
+    "key_points": [
+        "Market Snapshot section: $2410.0B market cap (+1.8% 24h), 487 projects tracked (+4 in 7d), AI Score Average 67.4/100, 24 weekly reports, 23 top opportunities (top: AI Infrastructure), 4 risk alerts, 5 upcoming unlocks, 4 latest research, last sync Jul 11, 2026",
+        "No search input found within the Market Snapshot — it is a static, server-side pre-computed snapshot, not a live search/watchlist",
+        "Top Opportunities (7d momentum): REN (Render Network, AI Score 87, +9.2%), AKT (Akash Network, AI Score 84, +7.4%), TAO (Bittensor, AI Score 89, +6.1%), FIL (Filecoin, AI Score 79, +5.8%), IO/io.net (AI Score 82, +5.2%)",
+        "Risk Alerts: Arbitrum (token unlock in 18 days, 1.13% supply, high), Aptos (dev activity -14% MoM, medium), Optimism (sequencer revenue -22% vs 30d avg, medium), Sui (Q4 2026 unlock cliff, 7.2% supply, high)",
+        "Upcoming Unlocks (30d): ARB/Arbitrum (Jul 28, 2026, 1.13% supply, $87.4M), SUI/Sui (Jul 22, 2026, 1.84% supply, $112.0M), APT/Aptos (Aug 4, 2026, 2.41% supply, $148M), OP/Optimism (Aug 9, 2026, 0.92% supply, $24.6M), TIA/Celestia (Aug 15, 2026, 1.36% supply, $38.2M)",
+        "Latest Research: REN (GPU compute & Apple Vision Pro thesis, Jul 10), TAO (Subnet expansion & dTAO rebalancing, Jul 9), FIL (Filecoin Plus data-cap mechanism, Jul 8), IO (io.net 250k GPU cluster, Jul 7)",
+        "Market Overview coins with full data: BTC/USDT $64,905 (+0.40%, High $65,600, Low $64,485, Vol $1.28B), ETH/USDT $1,923 (+2.37%, High $1,946.52, Low $1,864.38, Vol $649.31M), SOL/USDT $77.39 (+0.07%, High $79.04, Low $76.94, Vol $144.96M)",
+        "Trading Terminal symbol dropdown supports: BTC/USDT, ETH/USDT, SOL/USDT, BNB/USDT, XRP/USDT, ADA/USDT, DOGE/USDT, AVAX/USDT, LINK/USDT, MATIC/USDT — timeframes 1m/5m/15m/1H/4H/1D/1W; default symbol BTC/USDT at $64,989.99",
+        "AI Scanner signals: BTC BUY (78% confidence), ETH HOLD (62%), SOL WAIT (45%)",
+        "Trading Dashboard lists '500+ altcoins with AI analysis' with 'Top by volume' filter; sidebar shows BTC, ETH, SOL, XRP, BNB, DOGE",
+        "Pricing: Basic $29/mo (50 scenarios, Decision Score, Trade Journal), Premium $79/mo (200+ scenarios, Mistake Map, Skill Passport, personal mentor)",
+        "Footer navigation indicates routes/links for #features, #education-how-it-works, #how-it-works, #benefits, #intelligence, #cta sections"
+    ],
+    "relevant_links": [
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#intelligence",
+        "#cta",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT.P",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT"
+    ],
+    "file_name": "payd_finance_market_snapshot.json"
+}
+```

@@ -1,0 +1,39 @@
+📄 Extracted from page: PAYD Intelligence V2 — Autonomous Discovery
+URL: https://gw6obwjoxiv7.space.minimax.io/intelligence-v2.html
+
+Extracted content:
+```json
+{
+    "title": "PAYD Intelligence V2 — Autonomous Discovery",
+    "url": "https://gw6obwjoxiv7.space.minimax.io/intelligence-v2.html",
+    "summary": "PAYD Intelligence V2 is an autonomous discovery platform featuring multi-source quality and a lifecycle engine for tracking crypto/DePIN projects. The page is largely in a loading state with most data sections displaying 'Loading…' placeholders. The page architecture includes Discovery sections, Sector Coverage, Tracked Projects, Lifecycle Events, Automated Intelligence Update Engine, and Latest Intelligence reports.",
+    "key_points": [
+        "Page is mostly in loading state with 'Loading…' placeholders throughout most sections",
+        "Discovery section displays em-dashes '—' for all four categories: Tracked, Emerging, Watchlist, Core, and Archive (5 em-dashes total, one per category)",
+        "Architecture section shows 'Loading architecture…'",
+        "Sector Coverage explains 'NO MAX LIMIT — если 63 DePIN проекта проходят quality filter, отслеживаются все 63' but data is loading",
+        "Tracked Projects section has filters: All, 🌱 Emerging, 👁 Watchlist, ⭐ Core, 📦 Archive — all showing 'Loading projects…'",
+        "Lifecycle Events shows 'Loading events…'",
+        "Automated Intelligence Update Engine states the platform auto-updates 3 times a week (Mon, Wed, Fri at 09:00 UTC) with 6 steps: refresh → validate → AI analysis → update rankings → generate intelligence → save history. Currently shows 'Initializing pipeline…'",
+        "Latest Intelligence section is loading with no reports visible yet",
+        "Footer notes the platform is 'Database-agnostic · LocalJsonDataProvider active'",
+        "Data provider can be switched via editing public/js/intelligence/config/data-provider.config.js",
+        "Page created by MiniMax Agent"
+    ],
+    "sections_with_numbers_or_dashes": {
+        "Tracked": "Displays em-dash '—' (no numerical value)",
+        "Emerging": "Displays em-dash '—' (no numerical value)",
+        "Watchlist": "Displays em-dash '—' (no numerical value)",
+        "Core": "Displays em-dash '—' (no numerical value)",
+        "Archive": "Displays em-dash '—' (no numerical value)",
+        "Architecture": "Shows 'Loading architecture…' (no number/dash content yet)",
+        "Sector Coverage": "Mentions number '63' DePIN projects in descriptive text; data still loading",
+        "Automated Intelligence Update Engine": "States '3' times a week update frequency, 6 steps in cycle",
+        "Latest Intelligence": "Loading state, no content shown"
+    },
+    "relevant_links": [
+        "https://gw6obwjoxiv7.space.minimax.io/index.html (← На главную / Home link)"
+    ],
+    "file_name": "payd_intelligence_v2.json"
+}
+```
