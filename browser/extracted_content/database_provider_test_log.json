@@ -1,0 +1,54 @@
+📄 Extracted from page: DatabaseProvider Test
+URL: https://w3qbpaugijs2.space.minimax.io/test-database-provider.html
+
+Extracted content:
+```json
+{
+    "title": "DatabaseProvider Test",
+    "url": "https://w3qbpaugijs2.space.minimax.io/test-database-provider.html",
+    "summary": "A test page that validates the loading of DatabaseProvider.js and related scripts. The page runs three tests: (1) appending a script tag to the head with crossOrigin=anonymous, (2) appending a script tag to the head without crossOrigin, and (3) sequentially loading 6 scripts (data-provider.config.js, IDataProvider.js, IMarketDataProvider.js, LocalJsonDataProvider.js, ApiDataProvider.js, DatabaseProvider.js). All tests completed successfully with all scripts loaded.",
+    "key_points": [
+        "Test 1: appendChild to head with crossOrigin=anonymous - Loaded successfully in 86ms",
+        "Test 2: appendChild to head without crossOrigin - Loaded successfully in 94ms",
+        "Test 3: Sequential loading of 6 scripts - All completed successfully",
+        "Test 3 [1/6] data-provider.config.js: Loaded at +98ms",
+        "Test 3 [2/6] IDataProvider.js: Loaded at +101ms",
+        "Test 3 [3/6] IMarketDataProvider.js: Loaded at +105ms",
+        "Test 3 [4/6] LocalJsonDataProvider.js: Loaded at +108ms",
+        "Test 3 [5/6] ApiDataProvider.js: Loaded at +188ms",
+        "Test 3 [6/6] DatabaseProvider.js: Loaded at +192ms",
+        "All 6 scripts in Test 3 loaded successfully by +192ms",
+        "All tests passed - DatabaseProvider.js loads correctly via appendChild method"
+    ],
+    "relevant_links": [
+        "https://w3qbpaugijs2.space.minimax.io/test-database-provider.html"
+    ],
+    "log_content": {
+        "element_id": "log",
+        "full_text": "===== TEST 1: appendChild to head (with crossOrigin=anonymous) =====\nTest 1: script tag appended\nTest 1 result: Loaded\n===== TEST 2: appendChild to head (NO crossOrigin) =====\nTest 2: script tag appended\nTest 2 result: Loaded\n===== TEST 3: Load all 6 first scripts sequentially =====\nTest 3 [1/6] data-provider.config.js: Loaded\nTest 3 [2/6] IDataProvider.js: Loaded\nTest 3 [3/6] IMarketDataProvider.js: Loaded\nTest 3 [4/6] LocalJsonDataProvider.js: Loaded\nTest 3 [5/6] ApiDataProvider.js: Loaded\nTest 3 [6/6] DatabaseProvider.js: Loaded\nTest 3: all done",
+        "log_lines": [
+            "[+0ms] ===== TEST 1: appendChild to head (with crossOrigin=anonymous) =====",
+            "[+0ms] Test 1: script tag appended",
+            "[+86ms] Test 1 result: Loaded",
+            "[+86ms] ===== TEST 2: appendChild to head (NO crossOrigin) =====",
+            "[+86ms] Test 2: script tag appended",
+            "[+94ms] Test 2 result: Loaded",
+            "[+95ms] ===== TEST 3: Load all 6 first scripts sequentially =====",
+            "[+98ms] Test 3 [1/6] data-provider.config.js: Loaded",
+            "[+101ms] Test 3 [2/6] IDataProvider.js: Loaded",
+            "[+105ms] Test 3 [3/6] IMarketDataProvider.js: Loaded",
+            "[+108ms] Test 3 [4/6] LocalJsonDataProvider.js: Loaded",
+            "[+188ms] Test 3 [5/6] ApiDataProvider.js: Loaded",
+            "[+192ms] Test 3 [6/6] DatabaseProvider.js: Loaded",
+            "[+192ms] Test 3: all done"
+        ]
+    },
+    "status_indicators": {
+        "test_1_status": "Loaded",
+        "test_2_status": "Loaded",
+        "test_3_status": "all done (all 6 scripts loaded successfully)",
+        "overall_status": "All tests passed successfully"
+    },
+    "file_name": "database_provider_test_log.json"
+}
+```
