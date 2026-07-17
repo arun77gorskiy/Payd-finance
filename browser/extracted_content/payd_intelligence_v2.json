@@ -1,24 +1,31 @@
 📄 Extracted from page: PAYD Intelligence V2 — Autonomous Discovery
-URL: https://dg8dhpxqqxyn.space.minimax.io/intelligence-v2.html
+URL: https://7elfv1zodvzl.space.minimax.io/intelligence-v2.html
 
 Extracted content:
 ```json
 {
     "title": "PAYD Intelligence V2 — Autonomous Discovery",
-    "url": "https://dg8dhpxqqxyn.space.minimax.io/intelligence-v2.html",
-    "summary": "PAYD Intelligence V2 is an autonomous discovery platform with a multi-source quality engine and lifecycle management. The page displays a database-agnostic architecture using LocalJsonDataProvider, featuring a Discovery Engine for tracking projects (DePIN), lifecycle event evaluation, and automated intelligence updates (3 times per week on Mon/Wed/Fri at 09:00 UTC). The layout consists of several sections: Architecture status, Discovery counters, Discovery Engine controls, Sector Coverage note, Tracked Projects with category filters, Lifecycle Events panel, Automated Intelligence Update Engine status, and Latest Intelligence feed. All statistics currently show 0 values as the system appears to be initializing.",
+    "url": "https://7elfv1zodvzl.space.minimax.io/intelligence-v2.html",
+    "summary": "PAYD Intelligence V2 page for autonomous discovery with multi-source quality and lifecycle engine. The page is in a loading state with most dynamic content sections showing 'Loading…' or 'Initializing pipeline…' placeholders. The page architecture includes sections for Architecture, Discovery (with status indicators), Discovery Engine controls, Sector Coverage (noting no max limit for DePIN projects), Tracked Projects (with filter tabs), Lifecycle Events, an Automated Intelligence Update Engine (3 times per week on Mon/Wed/Fri at 09:00 UTC), and Latest Intelligence reports. The page uses a LocalJsonDataProvider which can be switched via config file. The 'Tracked' statistics value is not yet rendered (showing '—' as a placeholder), indicating the page has not finished loading dynamic data.",
     "key_points": [
-        "Architecture: LocalJsonDataProvider (Active), Provider Type (OK), Frontend payd-v2-render.js (Isolated), Application ProjectService + DiscoveryService (OK), Repository 7 repositories (OK), IDataProvider interface (Stable)",
-        "Discovery statistics: 0 Tracked, 0 🌱 Emerging, 0 👁 Watchlist, 0 ⭐ Core, 0 📦 Archive",
-        "Discovery Engine controls: 'Run discovery cycle' (Запустить discovery cycle), 'Evaluate lifecycle' (Оценить lifecycle), 'Refresh' (Обновить)",
-        "Sector Coverage: NO MAX LIMIT — all 63 DePIN projects that pass quality filter are tracked",
-        "Tracked Projects filters: All, 🌱 Emerging, 👁 Watchlist, ⭐ Core, 📦 Archive",
-        "Lifecycle Events: No lifecycle events yet, requires 'Evaluate lifecycle' to generate transitions",
-        "Automated Intelligence Update: Platform auto-updates 3x/week (Mon/Wed/Fri at 09:00 UTC), each cycle runs 6 steps: refresh → validate → AI analysis → update rankings → generate intelligence → save history",
-        "Pipeline status: 'Initializing pipeline…'",
-        "Latest Intelligence: 'Loading intelligence…' (most recent reports from last update cycle)",
-        "Footer: PAYD Intelligence V2 · Database-agnostic · LocalJsonDataProvider active. To switch provider, edit public/js/intelligence/config/data-provider.config.js",
-        "Navigation: Link back to home page (← На главную)"
+        "Page title: PAYD Intelligence V2 — Autonomous Discovery",
+        "Subtitle: Autonomous Discovery · Multi-Source Quality · Lifecycle Engine",
+        "Navigation link back to main page: '← На главную' (Back to main)",
+        "Architecture section status: 'Loading architecture…'",
+        "Discovery section shows 4 status indicators with placeholder '—' values: Tracked, 🌱 Emerging, 👁 Watchlist, ⭐ Core, 📦 Archive",
+        "Tracked statistics value: '—' (not yet loaded/rendered)",
+        "Discovery Engine has 3 action buttons in Russian: 'Запустить discovery cycle' (Run discovery cycle), 'Оценить lifecycle' (Evaluate lifecycle), 'Обновить' (Refresh)",
+        "Sector Coverage note: 'NO MAX LIMIT — если 63 DePIN проекта проходят quality filter, отслеживаются все 63' (If 63 DePIN projects pass quality filter, all 63 are tracked)",
+        "Sector Coverage status: 'Loading sectors…'",
+        "Tracked Projects section has filter tabs: All, 🌱 Emerging, 👁 Watchlist, ⭐ Core, 📦 Archive",
+        "Tracked Projects status: 'Loading projects…'",
+        "Lifecycle Events status: 'Loading events…'",
+        "Automated Intelligence Update Engine: updates 3 times per week (Mon, Wed, Fri at 09:00 UTC), 6-step cycle: refresh → validate → AI analysis → update rankings → generate intelligence → save history",
+        "Update Engine status: 'Initializing pipeline…'",
+        "Latest Intelligence section: 'Loading intelligence…'",
+        "Footer indicates: 'PAYD Intelligence V2 · Database-agnostic · LocalJsonDataProvider active'",
+        "Config note: To switch provider, edit 'public/js/intelligence/config/data-provider.config.js' — no other code changes required",
+        "Page state: Partially loaded — architecture, sectors, projects, events, and intelligence data still loading; statistics not yet populated"
     ],
     "relevant_links": [
         "/index.html"
