@@ -1,0 +1,72 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://i8od54k15j4i.space.minimax.io/#/l1
+
+Extracted content:
+```json
+{
+    "title": "PAYD Intelligence Layer · Layer 1",
+    "url": "https://i8od54k15j4i.space.minimax.io/#/l1",
+    "table_summary": {
+        "table_title": "Layer 1 · 44 projects",
+        "section": "PAYD Intelligence - AI Categories - Layer 1",
+        "total_rows": 44,
+        "columns": ["Logo", "Project", "Ticker", "AI Score", "Risk", "Mkt Cap", "TVL", "Investment Rating", "Action"]
+    },
+    "projects_in_table": [
+        {"name": "Bitcoin", "ticker": "BTC", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Ethereum", "ticker": "ETH", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Solana", "ticker": "SOL", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Binancecoin", "ticker": "BNB", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Avalanche-2", "ticker": "AVAX", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Polkadot", "ticker": "DOT", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Cosmos", "ticker": "ATOM", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Near", "ticker": "NEAR", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Aptos", "ticker": "APT", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Sui", "ticker": "SUI", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Sei-network", "ticker": "SEI", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Tezos", "ticker": "XTZ", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Algorand", "ticker": "ALGO", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Hedera-hashgraph", "ticker": "HBAR", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Stellar", "ticker": "XLM", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Tron", "ticker": "TRX", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Cardano", "ticker": "ADA", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Injective-protocol", "ticker": "INJ", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Celestia", "ticker": "TIA", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "The-open-network", "ticker": "TON", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Kaspa", "ticker": "KAS", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Ripple", "ticker": "XRP", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Flow", "ticker": "FLOW", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Vechain", "ticker": "VET", "ai_score": 82, "risk": 28, "rating": "Buy"},
+        {"name": "Monad", "ticker": "MON", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Berachain", "ticker": "BERA", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Sonic-3", "ticker": "S", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Fantom", "ticker": "FTM", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Crypto-com-chain", "ticker": "CRO", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Kava", "ticker": "KAVA", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Oasis-network", "ticker": "ROSE", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Eos", "ticker": "EOS", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Neo", "ticker": "NEO", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Conflux-token", "ticker": "CFX", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Dogecoin", "ticker": "DOGE", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Litecoin", "ticker": "LTC", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Iota", "ticker": "MIOTA", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Zilliqa", "ticker": "ZIL", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Kadena", "ticker": "KDA", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Multiversx", "ticker": "EGLD", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Chia", "ticker": "XCH", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Flare", "ticker": "FLR", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Kujira", "ticker": "KUJI", "ai_score": 68, "risk": 48, "rating": "Hold"},
+        {"name": "Casper-network", "ticker": "CSPR", "ai_score": 68, "risk": 48, "rating": "Hold"}
+    ],
+    "key_points": [
+        "The table contains 44 Layer 1 cryptocurrency projects",
+        "24 projects have 'Buy' rating with AI Score 82 and Risk 28",
+        "20 projects have 'Hold' rating with AI Score 68 and Risk 48",
+        "All Mkt Cap and TVL values show $0 (likely placeholder/unloaded data)",
+        "Each row includes an 'Open Research' action link"
+    ],
+    "data_source": "PAYD Intelligence Layer · AI Agent v3.2.1",
+    "verified_sources": ["CoinGecko", "CoinMarketCap", "DefiLlama", "Token Unlocks", "GitHub", "News"],
+    "file_name": "payd_layer1_projects.json"
+}
+```

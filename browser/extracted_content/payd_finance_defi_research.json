@@ -1,0 +1,31 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://i8od54k15j4i.space.minimax.io/#/defi
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://i8od54k15j4i.space.minimax.io/#/defi",
+    "summary": "Payd_Finance is a SaaS platform that combines AI analytics, deep learning, and trading logic for crypto trading and education. The page features real-time market data (BTC, ETH, SOL), AI-powered market regime analysis, trading lab with scenarios, courses, and pricing plans. The specific section on DeFi Research Library shows 46 projects in the DeFi sector with AI-curated institutional research. The table includes columns: Logo, Project, Ticker, AI Score, Risk, Mkt Cap, TVL, Investment Rating, and Action. Most projects show identical data (AI Score: 82, Risk: 28, Mkt Cap: $0, TVL: $0, Rating: Buy), with the last 3 projects showing AI Score: 68, Risk: 48, Rating: Hold. There is no header mentioning '326 deep-dive reports' on this page.",
+    "key_points": [
+        "No '326 deep-dive reports' header found on the page",
+        "The DeFi Research Library table contains 46 project rows",
+        "Table columns: Logo, Project, Ticker, AI Score, Risk, Mkt Cap, TVL, Investment Rating, Action",
+        "42 projects have AI Score: 82, Risk: 28, Rating: Buy",
+        "3 projects (Lyra, Mango, Frax-finance) have AI Score: 68, Risk: 48, Rating: Hold",
+        "All projects show Market Cap: $0 and TVL: $0 (placeholder/loading values)",
+        "Section title: 'DeFi · 46 projects'",
+        "Subtitle: 'AI-curated institutional research for the DeFi sector'",
+        "Top projects include: Uniswap (UNI), Aave (AAVE), Maker (MKR), Lido (LDO), Curve (CRV)"
+    ],
+    "relevant_links": [
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#intelligence",
+        "#cta"
+    ],
+    "file_name": "payd_finance_defi_research.json"
+}
+```

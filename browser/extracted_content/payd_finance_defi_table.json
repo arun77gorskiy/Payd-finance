@@ -1,0 +1,96 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://i8od54k15j4i.space.minimax.io/#/defi
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://i8od54k15j4i.space.minimax.io/#/defi",
+    "summary": "Payd_Finance is an AI-powered crypto trading and education SaaS platform that combines market analysis, learning modules, and trading logic. The page features a DeFi Intelligence section with a curated table of 46 DeFi projects displaying AI Scores, Risk ratings, Market Cap, TVL, and Investment Ratings. The platform also offers PAYD Trading Lab with educational modules, trading scenarios, smart indicators, and subscription plans ($29/mo Basic, $79/mo Premium).",
+    "key_points": [
+        "The DeFi Intelligence table contains 46 projects total",
+        "All visible projects have an AI Score of 82 (Buy rating) or 68 (Hold rating)",
+        "Risk scores are either 28 (for Buy-rated projects) or 48 (for Hold-rated projects)",
+        "Market Cap and TVL values show as $0 in the data",
+        "43 projects rated as 'Buy' with AI Score 82 and Risk 28",
+        "3 projects rated as 'Hold' with AI Score 68 and Risk 48: Lyra-finance (LYRA), Mango (MNGO), and Frax-finance (FRAX)",
+        "Verified data sources include CoinGecko, CoinMarketCap, DefiLlama, Token Unlocks, and GitHub",
+        "Platform includes AI Market Analysis, Trading Dashboard, Risk Management, and Signals features",
+        "Educational content includes 4 modules, 6 levels of trading scenarios, and 200+ realistic situations",
+        "Subscription plans: Basic at $29/month and Premium at $79/month"
+    ],
+    "relevant_links": [
+        "https://i8od54k15j4i.space.minimax.io/#/defi",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT.P",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT"
+    ],
+    "table_data": {
+        "section": "DeFi · 46 projects",
+        "total_rows": 46,
+        "columns": ["Logo", "Project", "Ticker", "AI Score", "Risk", "Mkt Cap", "TVL", "Investment Rating", "Action"],
+        "projects_buy_rating": [
+            {"project": "Uniswap", "ticker": "UNI", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Aave", "ticker": "AAVE", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Maker", "ticker": "MKR", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Lido-dao", "ticker": "LDO", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Curve-dao-token", "ticker": "CRV", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Compound-governance-token", "ticker": "COMP", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Rocket-pool-eth", "ticker": "RPL", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Frax", "ticker": "FXS", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Pendle", "ticker": "PENDLE", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Convex-finance", "ticker": "CVX", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Synthetix", "ticker": "SNX", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "1inch", "ticker": "1INCH", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Dydx", "ticker": "DYDX", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Gmx", "ticker": "GMX", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Balancer", "ticker": "BAL", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Yearn-finance", "ticker": "YFI", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Instadapp", "ticker": "INST", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Sushi", "ticker": "SUSHI", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Pancakeswap-token", "ticker": "CAKE", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Jupiter-exchange-solana", "ticker": "JUP", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Raydium", "ticker": "RAY", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Orca", "ticker": "ORCA", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Morpho", "ticker": "MORPHO", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Spark", "ticker": "SPK", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Ondo-finance", "ticker": "ONDO", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Ethena", "ticker": "ENA", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Kamino", "ticker": "KMNO", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Euler", "ticker": "EUL", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Drift-protocol", "ticker": "DRIFT", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Hyperliquid", "ticker": "HYPE", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Venus", "ticker": "XVS", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Beefy", "ticker": "BIFI", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Stargate", "ticker": "STG", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Wormhole", "ticker": "W", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Thorchain", "ticker": "RUNE", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Synapse", "ticker": "SYN", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Origin-dollar", "ticker": "OUSD", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Maple", "ticker": "MPL", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Centrifuge", "ticker": "CFG", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Ribbon-finance", "ticker": "RBN", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Dopex", "ticker": "DPX", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Quickswap", "ticker": "QUICK", "ai_score": 82, "risk": 28, "rating": "Buy"},
+            {"project": "Credix", "ticker": "CRED", "ai_score": 82, "risk": 28, "rating": "Buy"}
+        ],
+        "projects_hold_rating": [
+            {"project": "Lyra-finance", "ticker": "LYRA", "ai_score": 68, "risk": 48, "rating": "Hold"},
+            {"project": "Mango", "ticker": "MNGO", "ai_score": 68, "risk": 48, "rating": "Hold"},
+            {"project": "Frax-finance", "ticker": "FRAX", "ai_score": 68, "risk": 48, "rating": "Hold"}
+        ],
+        "all_projects_list": [
+            "Uniswap (UNI)", "Aave (AAVE)", "Maker (MKR)", "Lido-dao (LDO)", "Curve-dao-token (CRV)",
+            "Compound-governance-token (COMP)", "Rocket-pool-eth (RPL)", "Frax (FXS)", "Pendle (PENDLE)",
+            "Convex-finance (CVX)", "Synthetix (SNX)", "1inch (1INCH)", "Dydx (DYDX)", "Gmx (GMX)",
+            "Balancer (BAL)", "Yearn-finance (YFI)", "Instadapp (INST)", "Sushi (SUSHI)",
+            "Pancakeswap-token (CAKE)", "Jupiter-exchange-solana (JUP)", "Raydium (RAY)", "Orca (ORCA)",
+            "Morpho (MORPHO)", "Spark (SPK)", "Ondo-finance (ONDO)", "Ethena (ENA)", "Kamino (KMNO)",
+            "Euler (EUL)", "Drift-protocol (DRIFT)", "Hyperliquid (HYPE)", "Venus (XVS)", "Beefy (BIFI)",
+            "Stargate (STG)", "Wormhole (W)", "Thorchain (RUNE)", "Synapse (SYN)", "Origin-dollar (OUSD)",
+            "Maple (MPL)", "Centrifuge (CFG)", "Ribbon-finance (RBN)", "Dopex (DPX)", "Quickswap (QUICK)",
+            "Credix (CRED)", "Lyra-finance (LYRA)", "Mango (MNGO)", "Frax-finance (FRAX)"
+        ]
+    },
+    "file_name": "payd_finance_defi_table.json"
+}
+```

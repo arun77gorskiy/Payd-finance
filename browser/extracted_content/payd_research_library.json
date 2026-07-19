@@ -1,0 +1,43 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://i8od54k15j4i.space.minimax.io/#/research
+
+Extracted content:
+```json
+{
+    "title": "Payd_Finance | AI Crypto Trading & Education - Research Library",
+    "url": "https://i8od54k15j4i.space.minimax.io/#/research",
+    "summary": "Extraction of the Research Library table from Payd_Finance's PAYD Intelligence section. The page contains a comprehensive Research Library with 326 deep-dive reports of cryptocurrency projects, organized by sectors including Layer 1, Layer 2, DeFi, DePIN, DeSci, Gaming, RWA, AI Infrastructure, and Infrastructure. Each entry includes a project name, ticker symbol, sector, AI Score, Risk score, Investment Rating (Buy/Hold), and an 'Open Research' action link.",
+    "key_points": [
+        "Section header: 'Research Library · 326 deep-dive reports' with subtitle 'Pre-computed institutional research. Updated by AI agent each cycle.'",
+        "Total rows in table: 326 deep-dive reports (note: the extracted page content shows 320 visible rows; header states 326 total)",
+        "Table columns: Logo, Project, Ticker, Sector, AI Score, Risk, Investment Rating, Action",
+        "First 5 tickers: BTC, ETH, SOL, BNB, AVAX (all Layer 1, AI Score 82, Risk 28, Buy rating)",
+        "Last 5 tickers: GAMEFI? (GFI), JUNCA-CASH (JCA), MATRIXPORT-RWA (MTA), DIGIX-GOLD-TOKEN (DGX), XANA (XETA) — last visible row shows Redbelly-network (RBNT)",
+        "Two main rating tiers visible: 'Buy' (AI Score 82, Risk 28) and 'Hold' (AI Score 68, Risk 48)",
+        "Buy-rated projects include major Layer 1s (BTC, ETH, SOL, BNB, AVAX, DOT, ATOM, NEAR, APT, SUI, SEI, etc.), Layer 2s (ARB, OP, POL, ZK, STRK, MNT, IMX), DeFi (UNI, AAVE, MKR, LDO, CRV, COMP), DePIN (RENDER, HNT, AR, LPT, IOTX), AI Infrastructure (AKT, GRT, FET, AGIX, OCEAN), and RWA projects",
+        "Hold-rated projects include Layer 1s (MON, BERA, S, FTM, CRO, KAVA, ROSE, EOS, NEO, CFX, DOGE, LTC, etc.), Layer 2s (BLAST, MANTA, LRC, METIS, BOBA, AURORA), additional DePIN tokens, DeSci projects, and many more",
+        "AI Score values observed: 82 (Buy tier) and 68 (Hold tier)",
+        "Risk values observed: 28 (Buy tier) and 48 (Hold tier)",
+        "Verified sources listed: CoinGecko, CoinMarketCap, DefiLlama, Token Unlocks, GitHub, News (5 of 6 providers active)",
+        "All action links display 'Open Research' button"
+    ],
+    "relevant_links": [
+        "#overview",
+        "#dashboard",
+        "#sectors",
+        "#depin-intelligence",
+        "#ai-infrastructure",
+        "#opportunity-scanner",
+        "#watchlist",
+        "#weekly-intelligence",
+        "#research-library",
+        "#layer-1",
+        "#layer-2",
+        "#defi",
+        "#rwa",
+        "#gaming",
+        "#desci"
+    ],
+    "file_name": "payd_research_library.json"
+}
+```
