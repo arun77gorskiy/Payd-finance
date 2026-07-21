@@ -1,0 +1,15 @@
+const p = require('./public/data/projects.json');
+console.log('Total:', p.length);
+console.log('RWA count:', p.filter(x => x.sector === 'rwa').length);
+console.log('USTB exists:', !!p.find(x => x.symbol === 'USTB'));
+console.log('STBT exists:', !!p.find(x => x.symbol === 'STBT'));
+console.log('TNGBL exists:', !!p.find(x => x.symbol === 'TNGBL'));
+console.log('TRADE exists:', !!p.find(x => x.symbol === 'TRADE'));
+console.log('OM exists:', !!p.find(x => x.symbol === 'OM'));
+console.log('RIO exists:', !!p.find(x => x.symbol === 'RIO'));
+console.log('BKN exists:', !!p.find(x => x.symbol === 'BKN'));
+console.log('TOKEN exists:', !!p.find(x => x.symbol === 'TOKEN'));
+console.log('LNDX exists:', !!p.find(x => x.symbol === 'LNDX'));
+console.log('BENJI exists:', !!p.find(x => x.symbol === 'BENJI'));
+console.log('ONDO sector:', (p.find(x => x.symbol === 'ONDO') || {}).sector);
+console.log('MKR sector:', (p.find(x => x.symbol === 'MKR') || {}).sector);
