@@ -3,43 +3,43 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Wait for current enrichment process (PID 4676) to complete - currently ~85/349",
-        "details": "Monitor background process. Do NOT interrupt. Check progress periodically via /tmp/enrich_full.log and _enrich_progress.json",
+        "content": "Wait for current enrichment process (PID 4676) to complete - currently ~115/349",
+        "details": "Main process at 115/349, ~36 min elapsed. ETA ~70 min. Orchestrator v3 (PID 5299) is monitoring it correctly.",
         "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
         "content": "Run validation pass on completed enrichment",
-        "details": "Count total projects and missing data fields (Market Cap, FDV, Price, GitHub, TVL, Developer Activity, Payd Score, Risk Score). Identify reasons for missing data. Save report.",
+        "details": "Scripts ready: /workspace/code/validate_enrichment.js, second_pass.js, final_summary.js, orchestrator_v3.sh",
         "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
         "content": "Auto-retry projects that failed due to temporary errors",
-        "details": "Retry only projects with 429/rate-limit errors. Do NOT overwrite valid existing data with null.",
+        "details": "Handled in validate_enrichment.js - filters by reason 'rate_limit_or_api_error'",
         "status": "pending",
         "priority": "medium"
       },
       "4": {
         "id": "4",
         "content": "Recalculate Payd Score, Alpha Score, Conviction Score and Risk Score",
-        "details": "Only after enrichment is fully complete. Use existing data, no overwriting valid values.",
+        "details": "Handled in second_pass.js - only after new data is added, doesn't overwrite valid existing data",
         "status": "pending",
         "priority": "medium"
       },
       "5": {
         "id": "5",
         "content": "Start second enrichment pass for incomplete projects with FULL GitHub enrichment",
-        "details": "Enable GitHub calls. Retrieve repo stats, commits, contributors, stars, forks, last commit. Update developer activity.",
+        "details": "Handled in second_pass.js - only processes IDs in _second_pass_ids.json, enables full GitHub",
         "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
         "content": "Generate final summary report",
-        "details": "Total processed, successfully enriched, partially enriched, failed, missing CoinGecko IDs, missing GitHub repos, manual review list.",
+        "details": "Handled in final_summary.js - generates /workspace/docs/final_summary.md",
         "status": "pending",
         "priority": "high"
       }
