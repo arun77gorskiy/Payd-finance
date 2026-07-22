@@ -3,71 +3,50 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Аудит V2 архитектуры и идентификация существующих компонентов",
-        "details": "Проанализировать существующие провайдеры, scoring engines, валидационные сервисы, scheduler. Определить, что переиспользовать и где требуется расширение.",
-        "status": "completed",
+        "content": "Build Node.js enrichment pipeline that fetches live data from CoinGecko, DefiLlama, GitHub, TokenUnlocks APIs and persists to projects_enriched.json",
+        "details": "1. Read existing projects.json (349 entries)\n2. Build async fetcher with rate limiting (CoinGecko 10-30 req/min, GitHub 60/hr, DefiLlama 60/min)\n3. For each project: fetch CoinGecko market data, GitHub repo stats, DefiLlama TVL (if DeFi), Token Unlocks\n4. Save enriched data to /workspace/public/data/projects_enriched.json\n5. Estimated runtime: 30-60 minutes for 336 projects",
+        "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Создать абстрактный IScheduler и UpdateOrchestrator",
-        "details": "Создать чистый интерфейс IScheduler, который может быть подключён к server cron, Linux cron, Node.js scheduler, cloud scheduler. Реализовать LocalBrowserScheduler (для текущей версии) и подготовить адаптеры для будущих scheduler'ов. UpdateOrchestrator управляет последовательностью STEP 1-6 с retry-логикой.",
-        "status": "completed",
+        "content": "Update data adapter to read enriched data and populate all V1 fields",
+        "details": "1. Modify intelligence-data.js to load projects_enriched.json\n2. Map enriched fields: market_cap, tvl, github stars/commits, next unlock, etc.\n3. Ensure all V1 renderer fields are populated when data exists",
+        "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Расширить Data Aggregation Layer (mock-провайдеры + чистые интерфейсы)",
-        "details": "Расширить IMarketDataProvider. Создать mock-провайдеры с реалистичными данными: MockCoinGeckoProvider, MockCoinMarketCapProvider, MockDefiLlamaProvider, MockGitHubProvider, MockTokenUnlocksProvider, MockRSSProvider, MockSocialMediaProvider. Каждый провайдер имеет стандартный интерфейс для будущей замены на REST API клиент.",
-        "status": "completed",
+        "content": "Compute AI scores (PAYD, Conviction, Alpha, Risk) from enriched data",
+        "details": "1. Use existing PaydScoreEngine, PaydConvictionEngine, PaydAlphaEngine\n2. Compute scores algorithmically from market cap, TVL, GitHub activity, unlocks\n3. Save to projects_scores.json\n4. Update data adapter to load scores",
+        "status": "pending",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "MarketDataValidationService и автоматическая замена проектов",
-        "details": "Расширить MarketDataValidationService для проверки полноты/свежести данных. Интегрировать ProjectReplacementService + PaydDiscoveryEngine для замены невалидированных проектов. Логирование каждой замены.",
-        "status": "completed",
+        "content": "Generate fundamental research data (team, investors, partnerships, roadmap, etc.)",
+        "details": "1. Use research.json (existing) + web research\n2. Generate AI Investment Opinion, Bull/Bear cases algorithmically from data\n3. Add advantages/risks based on metrics\n4. Save to projects_research.json",
+        "status": "pending",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "AI Analysis Engine: набор аналитических модулей",
-        "details": "Обновить PaydScoreEngine, PaydAlphaEngine, PaydConvictionEngine. Создать RiskAssessmentEngine, FundamentalAnalysisEngine, InvestmentSummaryEngine, GrowthAnalysisEngine, OpportunityAnalysisEngine. Все engines работают ТОЛЬКО на verified data. Каждый engine пишет результат в score_history.",
-        "status": "completed",
+        "content": "Expand RWA sector with leading verified projects (Ondo, Maker, Centrifuge, Maple, Goldfinch, Clearpool, Plume, OpenEden, Backed, Hashnote, Securitize)",
+        "details": "1. Add ~15 new RWA projects to projects.json\n2. Include all required fields: coingeckoId, githubOrg, website, description\n3. These projects will be enriched by the same pipeline",
+        "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Ranking System: автоматический promotion/demotion",
-        "details": "Реализовать RankingEngine с логикой промоушена (Emerging → Watchlist → Core) и демишена на основе score thresholds и verified data. Логирование каждого перемещения.",
-        "status": "completed",
+        "content": "Verify 20+ projects end-to-end after enrichment",
+        "details": "1. Run test-render-all.js to verify no crashes\n2. Spot-check 20 random projects: market metrics, protocol metrics, GitHub, tokenomics, AI scores, research\n3. Confirm Unavailable fields only when data truly doesn't exist",
+        "status": "pending",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "Intelligence Generation: генераторы отчётов",
-        "details": "Создать генераторы: WeeklyIntelligenceGenerator, OpportunityScanner, TopGainersByFundamentals, DeveloperGrowthReport, RevenueGrowthReport, GitHubGrowthReport, NewEmergingReport, CorePromotionsReport, DemotionsReport, SectorLeadersReport. Все работают на verified data + новых scores.",
-        "status": "completed",
-        "priority": "high"
-      },
-      "8": {
-        "id": "8",
-        "content": "Локальное хранилище истории (JSON, append-only)",
-        "details": "Создать структуру /public/data/history/ с подпапками по датам. Append-only логика, версионирование записей. Файлы: score_history, market_history, snapshots, label_events, reports, lifecycle_events.",
-        "status": "completed",
-        "priority": "high"
-      },
-      "9": {
-        "id": "9",
-        "content": "Интеграция обновлённой intelligence в V2 UI",
-        "details": "Обновить intelligence-v2-render.js для отображения timestamp последнего обновления, истории ranking changes, weekly intelligence, opportunity scanner, top gainers, sector leaders. Индикаторы свежести данных.",
-        "status": "in_progress",
-        "priority": "high"
-      },
-      "10": {
-        "id": "10",
-        "content": "Финальное тестирование и развёртывание",
-        "details": "Запустить полный pipeline вручную для первого цикла, верифицировать каждый STEP, проверить корректность generated intelligence, развернуть обновлённую V2 платформу.",
+        "content": "Deploy and verify on production",
+        "details": "1. Deploy with all enriched data\n2. Visit site and verify metrics display correctly\n3. Hard refresh may be required",
         "status": "pending",
         "priority": "high"
       }
