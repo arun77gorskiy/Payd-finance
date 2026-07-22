@@ -3,43 +3,57 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Wait for current enrichment process (PID 4676) to complete - currently ~115/349",
-        "details": "Main process at 115/349, ~36 min elapsed. ETA ~70 min. Orchestrator v3 (PID 5299) is monitoring it correctly.",
+        "content": "Wait for current enrichment process (PID 4676) to complete - currently ~140/349",
+        "details": "Main process at 41:53 elapsed, currently ~140/349. ETA ~50 min. New orchestrator (PID 5467) monitoring.",
         "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Run validation pass on completed enrichment",
-        "details": "Scripts ready: /workspace/code/validate_enrichment.js, second_pass.js, final_summary.js, orchestrator_v3.sh",
-        "status": "pending",
+        "content": "Design AI Research Engine architecture",
+        "details": "Deterministic, data-driven analysis engine. No LLM dependency. Uses only real enriched data. 10+ analysis types: Thesis, Bull/Bear Case, SWOT, Competitive, Tokenomics, Ecosystem, Risk Analysis, Scores (with explanations), Opportunity Detection, Summary.",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Auto-retry projects that failed due to temporary errors",
-        "details": "Handled in validate_enrichment.js - filters by reason 'rate_limit_or_api_error'",
-        "status": "pending",
-        "priority": "medium"
+        "content": "Build AI Research Engine core (ai_research_engine.js)",
+        "details": "Created /workspace/code/ai_research_engine.js (1083 lines). Tested on 100 projects successfully.",
+        "status": "completed",
+        "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Recalculate Payd Score, Alpha Score, Conviction Score and Risk Score",
-        "details": "Handled in second_pass.js - only after new data is added, doesn't overwrite valid existing data",
-        "status": "pending",
-        "priority": "medium"
+        "content": "Build orchestrator that integrates AI engine into pipeline",
+        "details": "Updated orchestrator_v3.sh to include AI analysis as step 3/4. New orchestrator (PID 5467) running.",
+        "status": "completed",
+        "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Start second enrichment pass for incomplete projects with FULL GitHub enrichment",
-        "details": "Handled in second_pass.js - only processes IDs in _second_pass_ids.json, enables full GitHub",
-        "status": "pending",
+        "content": "Implement Confidence Score with explicit missing-data handling",
+        "details": "Confidence Score implemented. Score = data_completeness * 100, with bonuses/penalties. Tested: project with 0% data gets Confidence=0, project with 76% data gets Confidence=88.",
+        "status": "completed",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Generate final summary report",
-        "details": "Handled in final_summary.js - generates /workspace/docs/final_summary.md",
+        "content": "Generate Opportunity Detection module",
+        "details": "10 opportunity types implemented: undervalued, fast_growing, dev_acceleration, revenue_acceleration (with note about missing data), tvl_growth, institutional_adoption, improving_fundamentals, unlock_risks, weakening_fundamentals, emerging_narratives.",
+        "status": "completed",
+        "priority": "medium"
+      },
+      "7": {
+        "id": "7",
+        "content": "Test AI engine on current data sample (100 projects)",
+        "details": "Successfully tested on 100 projects. Output: 717KB file. 31 high Payd, 82 high risk, 11 high confidence, 141 opportunities. Verified no facts are invented - all data comes from real enriched sources with explicit references.",
+        "status": "completed",
+        "priority": "high"
+      },
+      "8": {
+        "id": "8",
+        "content": "Run full AI analysis on all 349 projects after enrichment completes",
+        "details": "Will be triggered automatically by orchestrator (PID 5467) after main enrichment completes. Will produce projects_ai_analyzed.json.",
         "status": "pending",
         "priority": "high"
       }

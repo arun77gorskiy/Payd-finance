@@ -71,19 +71,29 @@ FILE_SIZE=$(stat -c %s "$ENRICHED_FILE" 2>/dev/null || echo 0)
 log "Enriched file size: ${FILE_SIZE} bytes"
 
 # 1. Validation
-log "=== STEP 1/3: Validation ==="
+log "=== STEP 1/4: Validation ==="
 node /workspace/code/validate_enrichment.js 2>&1 | tee -a "$LOG"
-log "=== STEP 1/3: Validation done ==="
+log "=== STEP 1/4: Validation done ==="
 
-# 2. Second pass
-log "=== STEP 2/3: Second pass with GitHub ==="
+# 2. Second pass with full GitHub
+log "=== STEP 2/4: Second pass with GitHub ==="
 node /workspace/code/second_pass.js 2>&1 | tee -a "$LOG"
-log "=== STEP 2/3: Second pass done ==="
+log "=== STEP 2/4: Second pass done ==="
 
-# 3. Final summary
-log "=== STEP 3/3: Final summary ==="
+# 3. AI Research & Analysis Engine
+log "=== STEP 3/4: AI Research & Analysis Engine ==="
+node /workspace/code/ai_research_engine.js \
+    /workspace/public/data/projects_enriched.json \
+    /workspace/public/data/projects_ai_analyzed.json 2>&1 | tee -a "$LOG"
+log "=== STEP 3/4: AI Analysis done ==="
+
+# 4. Final summary
+log "=== STEP 4/4: Final summary ==="
 node /workspace/code/final_summary.js 2>&1 | tee -a "$LOG"
-log "=== STEP 3/3: Final summary done ==="
+log "=== STEP 4/4: Final summary done ==="
 
 log "=== ALL DONE ==="
-log "Reports: /workspace/docs/validation_report.md and /workspace/docs/final_summary.md"
+log "Reports:"
+log "  - /workspace/docs/validation_report.md"
+log "  - /workspace/docs/final_summary.md"
+log "  - /workspace/public/data/projects_ai_analyzed.json"
