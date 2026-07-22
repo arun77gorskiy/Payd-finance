@@ -3,50 +3,43 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Build Node.js enrichment pipeline that fetches live data from CoinGecko, DefiLlama, GitHub, TokenUnlocks APIs and persists to projects_enriched.json",
-        "details": "1. Read existing projects.json (349 entries)\n2. Build async fetcher with rate limiting (CoinGecko 10-30 req/min, GitHub 60/hr, DefiLlama 60/min)\n3. For each project: fetch CoinGecko market data, GitHub repo stats, DefiLlama TVL (if DeFi), Token Unlocks\n4. Save enriched data to /workspace/public/data/projects_enriched.json\n5. Estimated runtime: 30-60 minutes for 336 projects",
+        "content": "Wait for current enrichment process (PID 4676) to complete - currently ~85/349",
+        "details": "Monitor background process. Do NOT interrupt. Check progress periodically via /tmp/enrich_full.log and _enrich_progress.json",
         "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Update data adapter to read enriched data and populate all V1 fields",
-        "details": "1. Modify intelligence-data.js to load projects_enriched.json\n2. Map enriched fields: market_cap, tvl, github stars/commits, next unlock, etc.\n3. Ensure all V1 renderer fields are populated when data exists",
+        "content": "Run validation pass on completed enrichment",
+        "details": "Count total projects and missing data fields (Market Cap, FDV, Price, GitHub, TVL, Developer Activity, Payd Score, Risk Score). Identify reasons for missing data. Save report.",
         "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Compute AI scores (PAYD, Conviction, Alpha, Risk) from enriched data",
-        "details": "1. Use existing PaydScoreEngine, PaydConvictionEngine, PaydAlphaEngine\n2. Compute scores algorithmically from market cap, TVL, GitHub activity, unlocks\n3. Save to projects_scores.json\n4. Update data adapter to load scores",
+        "content": "Auto-retry projects that failed due to temporary errors",
+        "details": "Retry only projects with 429/rate-limit errors. Do NOT overwrite valid existing data with null.",
         "status": "pending",
-        "priority": "high"
+        "priority": "medium"
       },
       "4": {
         "id": "4",
-        "content": "Generate fundamental research data (team, investors, partnerships, roadmap, etc.)",
-        "details": "1. Use research.json (existing) + web research\n2. Generate AI Investment Opinion, Bull/Bear cases algorithmically from data\n3. Add advantages/risks based on metrics\n4. Save to projects_research.json",
+        "content": "Recalculate Payd Score, Alpha Score, Conviction Score and Risk Score",
+        "details": "Only after enrichment is fully complete. Use existing data, no overwriting valid values.",
         "status": "pending",
-        "priority": "high"
+        "priority": "medium"
       },
       "5": {
         "id": "5",
-        "content": "Expand RWA sector with leading verified projects (Ondo, Maker, Centrifuge, Maple, Goldfinch, Clearpool, Plume, OpenEden, Backed, Hashnote, Securitize)",
-        "details": "1. Add ~15 new RWA projects to projects.json\n2. Include all required fields: coingeckoId, githubOrg, website, description\n3. These projects will be enriched by the same pipeline",
+        "content": "Start second enrichment pass for incomplete projects with FULL GitHub enrichment",
+        "details": "Enable GitHub calls. Retrieve repo stats, commits, contributors, stars, forks, last commit. Update developer activity.",
         "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Verify 20+ projects end-to-end after enrichment",
-        "details": "1. Run test-render-all.js to verify no crashes\n2. Spot-check 20 random projects: market metrics, protocol metrics, GitHub, tokenomics, AI scores, research\n3. Confirm Unavailable fields only when data truly doesn't exist",
-        "status": "pending",
-        "priority": "high"
-      },
-      "7": {
-        "id": "7",
-        "content": "Deploy and verify on production",
-        "details": "1. Deploy with all enriched data\n2. Visit site and verify metrics display correctly\n3. Hard refresh may be required",
+        "content": "Generate final summary report",
+        "details": "Total processed, successfully enriched, partially enriched, failed, missing CoinGecko IDs, missing GitHub repos, manual review list.",
         "status": "pending",
         "priority": "high"
       }
