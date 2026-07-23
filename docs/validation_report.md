@@ -1,38 +1,44 @@
 # PAYD Intelligence V2 — Validation Report
 
-**Дата:** 2026-07-22T01:57:00.455Z
+**Дата:** 2026-07-22T03:18:44.256Z
 
 ## Общая статистика
 
 | Метрика | Значение |
 |---------|----------|
 | Всего проектов | 349 |
-| Обогащено (хотя бы частично) | 100 (28.7%) |
+| Обогащено (хотя бы частично) | 349 (100.0%) |
 | Полностью обогащено (8/8 полей) | 0 (0.0%) |
-| Частично обогащено | 100 |
-| Не обогащено / провал | 249 |
+| Частично обогащено | 349 |
+| Не обогащено / провал | 0 |
 | Без CoinGecko ID | 0 |
 
 ## Полнота по полям
 
 | Поле | Заполнено | % |
 |------|-----------|---|
-| Market Cap | 90 | 25.8% |
-| FDV | 90 | 25.8% |
-| Price | 90 | 25.8% |
+| Market Cap | 256 | 73.4% |
+| FDV | 255 | 73.1% |
+| Price | 256 | 73.4% |
 | GitHub data | 0 | 0.0% |
-| TVL | 18 | 5.2% |
-| Developer Activity | 90 | 25.8% |
-| Payd Score | 92 | 26.4% |
-| Risk Score | 100 | 28.7% |
+| TVL | 51 | 14.6% |
+| Developer Activity | 258 | 73.9% |
+| Payd Score | 266 | 76.2% |
+| Risk Score | 349 | 100.0% |
 
 ## Распределение по секторам
 
 | Сектор | Всего | Обогащено | С TVL |
 |--------|-------|-----------|-------|
+| layer1 | 48 | 48 | 1 |
+| rwa | 48 | 48 | 20 |
 | defi | 41 | 41 | 15 |
+| layer2 | 39 | 39 | 4 |
 | ai | 38 | 38 | 0 |
-| depin | 21 | 21 | 3 |
+| gaming | 36 | 36 | 0 |
+| depin | 34 | 34 | 4 |
+| infrastructure | 33 | 33 | 7 |
+| desci | 32 | 32 | 0 |
 
 ## Проекты без CoinGecko ID
 
@@ -44,7 +50,7 @@ _Нет_
 
 ## Частично обогащённые проекты (требуют второго прохода)
 
-Всего: **100**
+Всего: **349**
 
 | ID | Name | Sector | Filled | Reason | Missing fields |
 |----|------|--------|--------|--------|----------------|
@@ -148,264 +154,263 @@ _Нет_
 | livepeer | livepeer | depin | 6/8 | no_defillama_data | github, tvl |
 | mxc | mxc | depin | 6/8 | no_defillama_data | github, tvl |
 | mysterium | mysterium | depin | 6/8 | no_defillama_data | github, tvl |
+| nodle-network | nodle-network | depin | 6/8 | no_defillama_data | github, tvl |
+| nubila | nubila | depin | 6/8 | no_defillama_data | github, tvl |
+| pollen-mobile | pollen-mobile | depin | 6/8 | no_defillama_data | github, tvl |
+| peaq | peaq | depin | 6/8 | no_defillama_data | github, tvl |
+| phala | phala | depin | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| powerpod | powerpod | depin | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| render | render | depin | 6/8 | no_defillama_data | github, tvl |
+| siacoin | siacoin | depin | 6/8 | no_defillama_data | github, tvl |
+| storj | storj | depin | 6/8 | no_defillama_data | github, tvl |
+| thingsix | thingsix | depin | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| wayru | wayru | depin | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| world-mobile-token | world-mobile-token | depin | 7/8 | partial_data | github |
+| weatherxm | weatherxm | depin | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| aether | aether | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| agora-health | agora-health | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| aleo | aleo | desci | 6/8 | partial_data | github, tvl |
+| antidote | antidote | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| biomapper | biomapper | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| biopset | biopset | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| biodao | biodao | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| ceramic | ceramic | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| cere-network | cere-network | desci | 6/8 | partial_data | github, tvl |
+| cryogenseed | cryogenseed | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| corusdao | corusdao | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| covalent | covalent | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| cryoDAO | cryoDAO | desci | 6/8 | partial_data | github, tvl |
+| data-union | data-union | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| ipfs | ipfs | desci | 6/8 | partial_data | github, tvl |
+| genomesdao | genomesdao | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| genobank | genobank | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| genomesio | genomesio | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| valleyDAO | valleyDAO | desci | 6/8 | partial_data | github, tvl |
+| hairdao | hairdao | desci | 6/8 | partial_data | github, tvl |
+| idena | idena | desci | 6/8 | partial_data | github, tvl |
+| labdao | labdao | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| molecule | molecule | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| cerebrumdao | cerebrumdao | desci | 6/8 | partial_data | github, tvl |
+| nucleation | nucleation | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| openlab | openlab | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| psilocin | psilocin | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| researchhub | researchhub | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| rxbio | rxbio | desci | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| spheron | spheron | desci | 6/8 | partial_data | github, tvl |
+| tao | tao | desci | 6/8 | partial_data | github, tvl |
+| vita-dao | vita-dao | desci | 6/8 | partial_data | github, tvl |
+| my-neighbor-alice | my-neighbor-alice | gaming | 6/8 | partial_data | github, tvl |
+| alienswap | alienswap | gaming | 2/8 | no_coingecko_data | market, fdv, price, github, tvl, payd |
+| apecoin | apecoin | gaming | 6/8 | partial_data | github, tvl |
+| otherside | otherside | gaming | 6/8 | partial_data | github, tvl |
+| star-atlas | star-atlas | gaming | 6/8 | partial_data | github, tvl |
+| axie-infinity | axie-infinity | gaming | 6/8 | partial_data | github, tvl |
+| beam | beam | gaming | 6/8 | partial_data | github, tvl |
+| big-time | big-time | gaming | 6/8 | partial_data | github, tvl |
+| bullieverse | bullieverse | gaming | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| chromia | chromia | gaming | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| enjincoin | enjincoin | gaming | 6/8 | partial_data | github, tvl |
+| gala | gala | gaming | 6/8 | partial_data | github, tvl |
+| gamefi | gamefi | gaming | 6/8 | partial_data | github, tvl |
+| off-the-grid | off-the-grid | gaming | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| illuvium | illuvium | gaming | 6/8 | partial_data | github, tvl |
+| immutable-x | immutable-x | gaming | 6/8 | partial_data | github, tvl |
+| defi-kingdoms | defi-kingdoms | gaming | 6/8 | partial_data | github, tvl |
+| magic | magic | gaming | 6/8 | partial_data | github, tvl |
+| decentraland | decentraland | gaming | 6/8 | partial_data | github, tvl |
+| mobox | mobox | gaming | 6/8 | partial_data | github, tvl |
+| mintchain | mintchain | gaming | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| match-quest | match-quest | gaming | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| myria | myria | gaming | 6/8 | partial_data | github, tvl |
+| oasys | oasys | gaming | 6/8 | partial_data | github, tvl |
+| playdapp | playdapp | gaming | 6/8 | partial_data | github, tvl |
+| pixels | pixels | gaming | 6/8 | partial_data | github, tvl |
+| portal | portal | gaming | 6/8 | partial_data | github, tvl |
+| rom | rom | gaming | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| ronin | ronin | gaming | 6/8 | partial_data | github, tvl |
+| the-sandbox | the-sandbox | gaming | 6/8 | partial_data | github, tvl |
+| seed-photo | seed-photo | gaming | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| shrapnel | shrapnel | gaming | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| smooth-love-potion | smooth-love-potion | gaming | 6/8 | partial_data | github, tvl |
+| smart-coin | smart-coin | gaming | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| wax | wax | gaming | 6/8 | partial_data | github, tvl |
+| yield-guild-games | yield-guild-games | gaming | 6/8 | partial_data | github, tvl |
+| alchemy | alchemy | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| api3 | api3 | infrastructure | 7/8 | partial_data | github |
+| arkham | arkham | infrastructure | 6/8 | no_defillama_data | github, tvl |
+| axelar | axelar | infrastructure | 7/8 | partial_data | github |
+| band-protocol | band-protocol | infrastructure | 6/8 | no_defillama_data | github, tvl |
+| bloxroute | bloxroute | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| blockscout | blockscout | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| chainbase | chainbase | infrastructure | 6/8 | no_defillama_data | github, tvl |
+| everclear | everclear | infrastructure | 7/8 | partial_data | github |
+| chainstack | chainstack | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| fireblocks | fireblocks | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| goldsky | goldsky | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| icp | icp | infrastructure | 6/8 | no_defillama_data | github, tvl |
+| infura | infura | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| koinly | koinly | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| chainlink | chainlink | infrastructure | 6/8 | no_defillama_data | github, tvl |
+| mina | mina | infrastructure | 6/8 | no_defillama_data | github, tvl |
+| moralis | moralis | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| connext | connext | infrastructure | 3/8 | no_coingecko_data | market, fdv, price, github, developer |
+| nxyz | nxyz | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| pokt-network | pokt-network | infrastructure | 6/8 | no_defillama_data | github, tvl |
+| chainport | chainport | infrastructure | 7/8 | partial_data | github |
+| pyth-network | pyth-network | infrastructure | 7/8 | partial_data | github |
+| quicknode | quicknode | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| redbelly-network | redbelly-network | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| redstone-finance | redstone-finance | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| safe | safe | infrastructure | 7/8 | partial_data | github |
+| subsquid | subsquid | infrastructure | 6/8 | no_defillama_data | github, tvl |
+| thirdweb | thirdweb | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| tenderly | tenderly | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| uma | uma | infrastructure | 6/8 | no_defillama_data | github, tvl |
+| walletconnect | walletconnect | infrastructure | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| layerzero | layerzero | infrastructure | 6/8 | no_defillama_data | github, tvl |
+| cardano | cardano | layer1 | 6/8 | no_defillama_data | github, tvl |
+| algorand | algorand | layer1 | 6/8 | no_defillama_data | github, tvl |
+| aptos | aptos | layer1 | 6/8 | no_defillama_data | github, tvl |
+| cosmos | cosmos | layer1 | 6/8 | no_defillama_data | github, tvl |
+| avalanche-2 | avalanche-2 | layer1 | 6/8 | no_defillama_data | github, tvl |
+| berachain | berachain | layer1 | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| binancecoin | binancecoin | layer1 | 6/8 | no_defillama_data | github, tvl |
+| bitcoin | bitcoin | layer1 | 6/8 | no_defillama_data | github, tvl |
+| conflux-token | conflux-token | layer1 | 6/8 | no_defillama_data | github, tvl |
+| crypto-com-chain | crypto-com-chain | layer1 | 6/8 | no_defillama_data | github, tvl |
+| casper-network | casper-network | layer1 | 6/8 | no_defillama_data | github, tvl |
+| dogecoin | dogecoin | layer1 | 6/8 | no_defillama_data | github, tvl |
+| polkadot | polkadot | layer1 | 6/8 | no_defillama_data | github, tvl |
+| multiversx | multiversx | layer1 | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| eos | eos | layer1 | 6/8 | no_defillama_data | github, tvl |
+| ethereum | ethereum | layer1 | 6/8 | no_defillama_data | github, tvl |
+| filecoin | filecoin | layer1 | 6/8 | no_defillama_data | github, tvl |
+| flow | flow | layer1 | 6/8 | no_defillama_data | github, tvl |
+| flare | flare | layer1 | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| fantom | fantom | layer1 | 6/8 | no_defillama_data | github, tvl |
+| hedera-hashgraph | hedera-hashgraph | layer1 | 6/8 | no_defillama_data | github, tvl |
+| internet-computer | internet-computer | layer1 | 6/8 | no_defillama_data | github, tvl |
+| injective-protocol | injective-protocol | layer1 | 6/8 | no_defillama_data | github, tvl |
+| kaspa | kaspa | layer1 | 6/8 | no_defillama_data | github, tvl |
+| kava | kava | layer1 | 6/8 | no_defillama_data | github, tvl |
+| kadena | kadena | layer1 | 6/8 | no_defillama_data | github, tvl |
+| kujira | kujira | layer1 | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| litecoin | litecoin | layer1 | 6/8 | no_defillama_data | github, tvl |
+| mina-protocol | mina-protocol | layer1 | 6/8 | no_defillama_data | github, tvl |
+| iota | iota | layer1 | 6/8 | no_defillama_data | github, tvl |
+| monad | monad | layer1 | 6/8 | no_defillama_data | github, tvl |
+| near | near | layer1 | 6/8 | no_defillama_data | github, tvl |
+| neo | neo | layer1 | 6/8 | no_defillama_data | github, tvl |
+| oasis-network | oasis-network | layer1 | 7/8 | partial_data | github |
+| sonic-3 | sonic-3 | layer1 | 6/8 | no_defillama_data | github, tvl |
+| sei-network | sei-network | layer1 | 6/8 | no_defillama_data | github, tvl |
+| solana | solana | layer1 | 6/8 | no_defillama_data | github, tvl |
+| sui | sui | layer1 | 6/8 | no_defillama_data | github, tvl |
+| bittensor | bittensor | layer1 | 6/8 | no_defillama_data | github, tvl |
+| celestia | celestia | layer1 | 6/8 | no_defillama_data | github, tvl |
+| the-open-network | the-open-network | layer1 | 6/8 | no_defillama_data | github, tvl |
+| tron | tron | layer1 | 6/8 | no_defillama_data | github, tvl |
+| vechain | vechain | layer1 | 6/8 | no_defillama_data | github, tvl |
+| chia | chia | layer1 | 6/8 | no_defillama_data | github, tvl |
+| stellar | stellar | layer1 | 6/8 | no_defillama_data | github, tvl |
+| ripple | ripple | layer1 | 6/8 | no_defillama_data | github, tvl |
+| tezos | tezos | layer1 | 6/8 | no_defillama_data | github, tvl |
+| zilliqa | zilliqa | layer1 | 6/8 | no_defillama_data | github, tvl |
+| aevo | aevo | layer2 | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| arbitrum | arbitrum | layer2 | 6/8 | no_defillama_data | github, tvl |
+| astar | astar | layer2 | 6/8 | no_defillama_data | github, tvl |
+| aurora | aurora | layer2 | 6/8 | no_defillama_data | github, tvl |
+| blast | blast | layer2 | 6/8 | no_defillama_data | github, tvl |
+| bob | bob | layer2 | 6/8 | no_defillama_data | github, tvl |
+| boba | boba | layer2 | 6/8 | no_defillama_data | github, tvl |
+| celo | celo | layer2 | 6/8 | no_defillama_data | github, tvl |
+| cyber | cyber | layer2 | 7/8 | partial_data | github |
+| eclipse | eclipse | layer2 | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| gravity | gravity | layer2 | 3/8 | no_coingecko_data | market, fdv, price, github, developer |
+| moonbeam | moonbeam | layer2 | 6/8 | no_defillama_data | github, tvl |
+| gnosis | gnosis | layer2 | 6/8 | no_defillama_data | github, tvl |
+| huddle01 | huddle01 | layer2 | 2/8 | no_coingecko_data | market, fdv, price, github, tvl, payd |
+| immutable | immutable | layer2 | 6/8 | no_defillama_data | github, tvl |
+| kakarot | kakarot | layer2 | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| karura | karura | layer2 | 6/8 | no_defillama_data | github, tvl |
+| linea | linea | layer2 | 6/8 | no_defillama_data | github, tvl |
+| loopring | loopring | layer2 | 7/8 | partial_data | github |
+| lisk | lisk | layer2 | 6/8 | no_defillama_data | github, tvl |
+| lyra | lyra | layer2 | 6/8 | no_defillama_data | github, tvl |
+| manta | manta | layer2 | 6/8 | no_defillama_data | github, tvl |
+| metis | metis | layer2 | 6/8 | no_defillama_data | github, tvl |
+| mint | mint | layer2 | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| mantle | mantle | layer2 | 6/8 | no_defillama_data | github, tvl |
+| mode | mode | layer2 | 6/8 | no_defillama_data | github, tvl |
+| optimism | optimism | layer2 | 6/8 | no_defillama_data | github, tvl |
+| orderly | orderly | layer2 | 6/8 | no_defillama_data | github, tvl |
+| polygon | polygon | layer2 | 6/8 | no_defillama_data | github, tvl |
+| polynomial | polynomial | layer2 | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| rari | rari | layer2 | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| scroll | scroll | layer2 | 6/8 | no_defillama_data | github, tvl |
+| skale | skale | layer2 | 6/8 | no_defillama_data | github, tvl |
+| sophon | sophon | layer2 | 6/8 | no_defillama_data | github, tvl |
+| starknet | starknet | layer2 | 6/8 | no_defillama_data | github, tvl |
+| xai | xai | layer2 | 6/8 | no_defillama_data | github, tvl |
+| zetachain | zetachain | layer2 | 6/8 | no_defillama_data | github, tvl |
+| zksync | zksync | layer2 | 6/8 | no_defillama_data | github, tvl |
+| zircuit | zircuit | layer2 | 7/8 | partial_data | github |
+| toucan-protocol | toucan-protocol | rwa | 7/8 | partial_data | github |
+| franklin-templeton | benji | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| brickken | brickken | rwa | 7/8 | partial_data | github |
+| swissborg | swissborg | rwa | 7/8 | partial_data | github |
+| backed-finance | backed-finance | rwa | 7/8 | partial_data | github |
+| centrifuge | centrifuge | rwa | 6/8 | no_defillama_data | github, tvl |
+| clearpool | clearpool | rwa | 6/8 | no_defillama_data | github, tvl |
+| creditum | creditum | rwa | 3/8 | no_coingecko_data | market, fdv, price, github, developer |
+| digix-gold-token | digix-gold-token | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| dusk-network | dusk-network | rwa | 6/8 | no_defillama_data | github, tvl |
+| elysia | elysia | rwa | 6/8 | no_defillama_data | github, tvl |
+| ethena | ethena | rwa | 6/8 | no_defillama_data | github, tvl |
+| fasset | fasset | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| goldfinch | goldfinch | rwa | 7/8 | partial_data | github |
+| junca-cash | junca-cash | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| klima-dao | klima-dao | rwa | 6/8 | no_defillama_data | github, tvl |
+| landx-finance | landx | rwa | 3/8 | no_coingecko_data | market, fdv, price, github, developer |
+| lofty | lofty | rwa | 3/8 | no_coingecko_data | market, fdv, price, github, developer |
+| moss-carbon-credit | moss-carbon-credit | rwa | 6/8 | no_defillama_data | github, tvl |
+| maker | maker | rwa | 7/8 | partial_data | github |
+| maple | maple | rwa | 3/8 | no_coingecko_data | market, fdv, price, github, developer |
+| matrixport-rwa | matrixport-rwa | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| mantra-dao | mantra | rwa | 3/8 | no_coingecko_data | market, fdv, price, github, developer |
+| ondo-finance | ondo-finance | rwa | 7/8 | partial_data | github |
+| pax-gold | pax-gold | rwa | 6/8 | no_defillama_data | github, tvl |
+| plume-network | plume-network | rwa | 6/8 | no_defillama_data | github, tvl |
+| polymath | polymath | rwa | 6/8 | no_defillama_data | github, tvl |
+| propy | propy | rwa | 6/8 | no_defillama_data | github, tvl |
+| realt-coin | realt-coin | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| realio-network | realio | rwa | 6/8 | no_defillama_data | github, tvl |
+| rwa-x | rwa-x | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| singularitydao | singularitydao | rwa | 7/8 | partial_data | github |
+| securitize | securitize | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| sp-global | sp-global | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| matrixdock | matrixdock | rwa | 3/8 | no_coingecko_data | market, fdv, price, github, developer |
+| openeden | openeden | rwa | 6/8 | partial_data | fdv, github |
+| tangible | tangible | rwa | 6/8 | no_defillama_data | github, tvl |
+| tokenfi | tokenfi | rwa | 7/8 | partial_data | github |
+| polytrade | polytrade | rwa | 7/8 | partial_data | github |
+| trademate | trademate | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| traditional-finance | traditional-finance | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| truefi | truefi | rwa | 7/8 | partial_data | github |
+| mountain-protocol | mountain-protocol | rwa | 7/8 | partial_data | github |
+| superstate | superstate | rwa | 1/8 | no_coingecko_data | market, fdv, price, github, tvl, developer, payd |
+| hashnote | hashnote | rwa | 6/8 | no_defillama_data | github, tvl |
+| wrapped-stx | wrapped-stx | rwa | 6/8 | no_defillama_data | github, tvl |
+| tether-gold | tether-gold | rwa | 7/8 | partial_data | github |
+| xana | xana | rwa | 6/8 | no_defillama_data | github, tvl |
 
 ## Провалившиеся проекты (не обогащены)
 
-| ID | Name | Reason |
-|----|------|--------|
-| nodle-network | nodle-network | not_in_enriched |
-| nubila | nubila | not_in_enriched |
-| pollen-mobile | pollen-mobile | not_in_enriched |
-| peaq | peaq | not_in_enriched |
-| phala | phala | not_in_enriched |
-| powerpod | powerpod | not_in_enriched |
-| render | render | not_in_enriched |
-| siacoin | siacoin | not_in_enriched |
-| storj | storj | not_in_enriched |
-| thingsix | thingsix | not_in_enriched |
-| wayru | wayru | not_in_enriched |
-| world-mobile-token | world-mobile-token | not_in_enriched |
-| weatherxm | weatherxm | not_in_enriched |
-| aether | aether | not_in_enriched |
-| agora-health | agora-health | not_in_enriched |
-| aleo | aleo | not_in_enriched |
-| antidote | antidote | not_in_enriched |
-| biomapper | biomapper | not_in_enriched |
-| biopset | biopset | not_in_enriched |
-| biodao | biodao | not_in_enriched |
-| ceramic | ceramic | not_in_enriched |
-| cere-network | cere-network | not_in_enriched |
-| cryogenseed | cryogenseed | not_in_enriched |
-| corusdao | corusdao | not_in_enriched |
-| covalent | covalent | not_in_enriched |
-| cryoDAO | cryoDAO | not_in_enriched |
-| data-union | data-union | not_in_enriched |
-| ipfs | ipfs | not_in_enriched |
-| genomesdao | genomesdao | not_in_enriched |
-| genobank | genobank | not_in_enriched |
-| genomesio | genomesio | not_in_enriched |
-| valleyDAO | valleyDAO | not_in_enriched |
-| hairdao | hairdao | not_in_enriched |
-| idena | idena | not_in_enriched |
-| labdao | labdao | not_in_enriched |
-| molecule | molecule | not_in_enriched |
-| cerebrumdao | cerebrumdao | not_in_enriched |
-| nucleation | nucleation | not_in_enriched |
-| openlab | openlab | not_in_enriched |
-| psilocin | psilocin | not_in_enriched |
-| researchhub | researchhub | not_in_enriched |
-| rxbio | rxbio | not_in_enriched |
-| spheron | spheron | not_in_enriched |
-| tao | tao | not_in_enriched |
-| vita-dao | vita-dao | not_in_enriched |
-| my-neighbor-alice | my-neighbor-alice | not_in_enriched |
-| alienswap | alienswap | not_in_enriched |
-| apecoin | apecoin | not_in_enriched |
-| otherside | otherside | not_in_enriched |
-| star-atlas | star-atlas | not_in_enriched |
-| axie-infinity | axie-infinity | not_in_enriched |
-| beam | beam | not_in_enriched |
-| big-time | big-time | not_in_enriched |
-| bullieverse | bullieverse | not_in_enriched |
-| chromia | chromia | not_in_enriched |
-| enjincoin | enjincoin | not_in_enriched |
-| gala | gala | not_in_enriched |
-| gamefi | gamefi | not_in_enriched |
-| off-the-grid | off-the-grid | not_in_enriched |
-| illuvium | illuvium | not_in_enriched |
-| immutable-x | immutable-x | not_in_enriched |
-| defi-kingdoms | defi-kingdoms | not_in_enriched |
-| magic | magic | not_in_enriched |
-| decentraland | decentraland | not_in_enriched |
-| mobox | mobox | not_in_enriched |
-| mintchain | mintchain | not_in_enriched |
-| match-quest | match-quest | not_in_enriched |
-| myria | myria | not_in_enriched |
-| oasys | oasys | not_in_enriched |
-| playdapp | playdapp | not_in_enriched |
-| pixels | pixels | not_in_enriched |
-| portal | portal | not_in_enriched |
-| rom | rom | not_in_enriched |
-| ronin | ronin | not_in_enriched |
-| the-sandbox | the-sandbox | not_in_enriched |
-| seed-photo | seed-photo | not_in_enriched |
-| shrapnel | shrapnel | not_in_enriched |
-| smooth-love-potion | smooth-love-potion | not_in_enriched |
-| smart-coin | smart-coin | not_in_enriched |
-| wax | wax | not_in_enriched |
-| yield-guild-games | yield-guild-games | not_in_enriched |
-| alchemy | alchemy | not_in_enriched |
-| api3 | api3 | not_in_enriched |
-| arkham | arkham | not_in_enriched |
-| axelar | axelar | not_in_enriched |
-| band-protocol | band-protocol | not_in_enriched |
-| bloxroute | bloxroute | not_in_enriched |
-| blockscout | blockscout | not_in_enriched |
-| chainbase | chainbase | not_in_enriched |
-| everclear | everclear | not_in_enriched |
-| chainstack | chainstack | not_in_enriched |
-| fireblocks | fireblocks | not_in_enriched |
-| goldsky | goldsky | not_in_enriched |
-| icp | icp | not_in_enriched |
-| infura | infura | not_in_enriched |
-| koinly | koinly | not_in_enriched |
-| chainlink | chainlink | not_in_enriched |
-| mina | mina | not_in_enriched |
-| moralis | moralis | not_in_enriched |
-| connext | connext | not_in_enriched |
-| nxyz | nxyz | not_in_enriched |
-| pokt-network | pokt-network | not_in_enriched |
-| chainport | chainport | not_in_enriched |
-| pyth-network | pyth-network | not_in_enriched |
-| quicknode | quicknode | not_in_enriched |
-| redbelly-network | redbelly-network | not_in_enriched |
-| redstone-finance | redstone-finance | not_in_enriched |
-| safe | safe | not_in_enriched |
-| subsquid | subsquid | not_in_enriched |
-| thirdweb | thirdweb | not_in_enriched |
-| tenderly | tenderly | not_in_enriched |
-| uma | uma | not_in_enriched |
-| walletconnect | walletconnect | not_in_enriched |
-| layerzero | layerzero | not_in_enriched |
-| cardano | cardano | not_in_enriched |
-| algorand | algorand | not_in_enriched |
-| aptos | aptos | not_in_enriched |
-| cosmos | cosmos | not_in_enriched |
-| avalanche-2 | avalanche-2 | not_in_enriched |
-| berachain | berachain | not_in_enriched |
-| binancecoin | binancecoin | not_in_enriched |
-| bitcoin | bitcoin | not_in_enriched |
-| conflux-token | conflux-token | not_in_enriched |
-| crypto-com-chain | crypto-com-chain | not_in_enriched |
-| casper-network | casper-network | not_in_enriched |
-| dogecoin | dogecoin | not_in_enriched |
-| polkadot | polkadot | not_in_enriched |
-| multiversx | multiversx | not_in_enriched |
-| eos | eos | not_in_enriched |
-| ethereum | ethereum | not_in_enriched |
-| filecoin | filecoin | not_in_enriched |
-| flow | flow | not_in_enriched |
-| flare | flare | not_in_enriched |
-| fantom | fantom | not_in_enriched |
-| hedera-hashgraph | hedera-hashgraph | not_in_enriched |
-| internet-computer | internet-computer | not_in_enriched |
-| injective-protocol | injective-protocol | not_in_enriched |
-| kaspa | kaspa | not_in_enriched |
-| kava | kava | not_in_enriched |
-| kadena | kadena | not_in_enriched |
-| kujira | kujira | not_in_enriched |
-| litecoin | litecoin | not_in_enriched |
-| mina-protocol | mina-protocol | not_in_enriched |
-| iota | iota | not_in_enriched |
-| monad | monad | not_in_enriched |
-| near | near | not_in_enriched |
-| neo | neo | not_in_enriched |
-| oasis-network | oasis-network | not_in_enriched |
-| sonic-3 | sonic-3 | not_in_enriched |
-| sei-network | sei-network | not_in_enriched |
-| solana | solana | not_in_enriched |
-| sui | sui | not_in_enriched |
-| bittensor | bittensor | not_in_enriched |
-| celestia | celestia | not_in_enriched |
-| the-open-network | the-open-network | not_in_enriched |
-| tron | tron | not_in_enriched |
-| vechain | vechain | not_in_enriched |
-| chia | chia | not_in_enriched |
-| stellar | stellar | not_in_enriched |
-| ripple | ripple | not_in_enriched |
-| tezos | tezos | not_in_enriched |
-| zilliqa | zilliqa | not_in_enriched |
-| aevo | aevo | not_in_enriched |
-| arbitrum | arbitrum | not_in_enriched |
-| astar | astar | not_in_enriched |
-| aurora | aurora | not_in_enriched |
-| blast | blast | not_in_enriched |
-| bob | bob | not_in_enriched |
-| boba | boba | not_in_enriched |
-| celo | celo | not_in_enriched |
-| cyber | cyber | not_in_enriched |
-| eclipse | eclipse | not_in_enriched |
-| gravity | gravity | not_in_enriched |
-| moonbeam | moonbeam | not_in_enriched |
-| gnosis | gnosis | not_in_enriched |
-| huddle01 | huddle01 | not_in_enriched |
-| immutable | immutable | not_in_enriched |
-| kakarot | kakarot | not_in_enriched |
-| karura | karura | not_in_enriched |
-| linea | linea | not_in_enriched |
-| loopring | loopring | not_in_enriched |
-| lisk | lisk | not_in_enriched |
-| lyra | lyra | not_in_enriched |
-| manta | manta | not_in_enriched |
-| metis | metis | not_in_enriched |
-| mint | mint | not_in_enriched |
-| mantle | mantle | not_in_enriched |
-| mode | mode | not_in_enriched |
-| optimism | optimism | not_in_enriched |
-| orderly | orderly | not_in_enriched |
-| polygon | polygon | not_in_enriched |
-| polynomial | polynomial | not_in_enriched |
-| rari | rari | not_in_enriched |
-| scroll | scroll | not_in_enriched |
-| skale | skale | not_in_enriched |
-| sophon | sophon | not_in_enriched |
-| starknet | starknet | not_in_enriched |
-| xai | xai | not_in_enriched |
-| zetachain | zetachain | not_in_enriched |
-| zksync | zksync | not_in_enriched |
-| zircuit | zircuit | not_in_enriched |
-| toucan-protocol | toucan-protocol | not_in_enriched |
-| franklin-templeton | benji | not_in_enriched |
-| brickken | brickken | not_in_enriched |
-| swissborg | swissborg | not_in_enriched |
-| backed-finance | backed-finance | not_in_enriched |
-| centrifuge | centrifuge | not_in_enriched |
-| clearpool | clearpool | not_in_enriched |
-| creditum | creditum | not_in_enriched |
-| digix-gold-token | digix-gold-token | not_in_enriched |
-| dusk-network | dusk-network | not_in_enriched |
-| elysia | elysia | not_in_enriched |
-| ethena | ethena | not_in_enriched |
-| fasset | fasset | not_in_enriched |
-| goldfinch | goldfinch | not_in_enriched |
-| junca-cash | junca-cash | not_in_enriched |
-| klima-dao | klima-dao | not_in_enriched |
-| landx-finance | landx | not_in_enriched |
-| lofty | lofty | not_in_enriched |
-| moss-carbon-credit | moss-carbon-credit | not_in_enriched |
-| maker | maker | not_in_enriched |
-| maple | maple | not_in_enriched |
-| matrixport-rwa | matrixport-rwa | not_in_enriched |
-| mantra-dao | mantra | not_in_enriched |
-| ondo-finance | ondo-finance | not_in_enriched |
-| pax-gold | pax-gold | not_in_enriched |
-| plume-network | plume-network | not_in_enriched |
-| polymath | polymath | not_in_enriched |
-| propy | propy | not_in_enriched |
-| realt-coin | realt-coin | not_in_enriched |
-| realio-network | realio | not_in_enriched |
-| rwa-x | rwa-x | not_in_enriched |
-| singularitydao | singularitydao | not_in_enriched |
-| securitize | securitize | not_in_enriched |
-| sp-global | sp-global | not_in_enriched |
-| matrixdock | matrixdock | not_in_enriched |
-| openeden | openeden | not_in_enriched |
-| tangible | tangible | not_in_enriched |
-| tokenfi | tokenfi | not_in_enriched |
-| polytrade | polytrade | not_in_enriched |
-| trademate | trademate | not_in_enriched |
-| traditional-finance | traditional-finance | not_in_enriched |
-| truefi | truefi | not_in_enriched |
-| mountain-protocol | mountain-protocol | not_in_enriched |
-| superstate | superstate | not_in_enriched |
-| hashnote | hashnote | not_in_enriched |
-| wrapped-stx | wrapped-stx | not_in_enriched |
-| tether-gold | tether-gold | not_in_enriched |
-| xana | xana | not_in_enriched |
+_Нет_
 
 ## Список для второго прохода
 
-Всего ID для повторной обработки: **62**
+Всего ID для повторной обработки: **207**
 
 Сохранено в: `/workspace/public/data/_second_pass_ids.json`
 

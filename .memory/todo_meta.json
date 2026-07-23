@@ -1,59 +1,80 @@
 {
   "todos": {
     "Coordinator": {
-      "1": {
-        "id": "1",
-        "content": "Wait for current enrichment process (PID 4676) to complete - currently ~140/349",
-        "details": "Main process at 41:53 elapsed, currently ~140/349. ETA ~50 min. New orchestrator (PID 5467) monitoring.",
+      "t1": {
+        "id": "t1",
+        "content": "Wait for current enrichment process (PID 4676) to complete - currently ~145/349",
+        "details": "Main process running ~45 min, orchestrator (PID 5467) monitoring.",
         "status": "in_progress",
         "priority": "high"
       },
-      "2": {
-        "id": "2",
-        "content": "Design AI Research Engine architecture",
-        "details": "Deterministic, data-driven analysis engine. No LLM dependency. Uses only real enriched data. 10+ analysis types: Thesis, Bull/Bear Case, SWOT, Competitive, Tokenomics, Ecosystem, Risk Analysis, Scores (with explanations), Opportunity Detection, Summary.",
-        "status": "completed",
+      "t2": {
+        "id": "t2",
+        "content": "Design Reasoning Engine architecture",
+        "details": "Modules: snapshot_manager, change_detector, reasoning_engine, catalyst_tracker, run_reasoning.js",
+        "status": "in_progress",
         "priority": "high"
       },
-      "3": {
-        "id": "3",
-        "content": "Build AI Research Engine core (ai_research_engine.js)",
-        "details": "Created /workspace/code/ai_research_engine.js (1083 lines). Tested on 100 projects successfully.",
-        "status": "completed",
+      "t3": {
+        "id": "t3",
+        "content": "Build Snapshot Manager - persist snapshots",
+        "details": "Stores snapshots in /workspace/public/data/history/. Maintains index. Creates snapshot from enriched file.",
+        "status": "pending",
         "priority": "high"
       },
-      "4": {
-        "id": "4",
-        "content": "Build orchestrator that integrates AI engine into pipeline",
-        "details": "Updated orchestrator_v3.sh to include AI analysis as step 3/4. New orchestrator (PID 5467) running.",
-        "status": "completed",
+      "t4": {
+        "id": "t4",
+        "content": "Build Change Detector - compare snapshots",
+        "details": "",
+        "status": "pending",
         "priority": "high"
       },
-      "5": {
-        "id": "5",
-        "content": "Implement Confidence Score with explicit missing-data handling",
-        "details": "Confidence Score implemented. Score = data_completeness * 100, with bonuses/penalties. Tested: project with 0% data gets Confidence=0, project with 76% data gets Confidence=88.",
-        "status": "completed",
+      "t5": {
+        "id": "t5",
+        "content": "Build Score Delta Analyzer - explain score changes",
+        "details": "",
+        "status": "pending",
         "priority": "high"
       },
-      "6": {
-        "id": "6",
-        "content": "Generate Opportunity Detection module",
-        "details": "10 opportunity types implemented: undervalued, fast_growing, dev_acceleration, revenue_acceleration (with note about missing data), tvl_growth, institutional_adoption, improving_fundamentals, unlock_risks, weakening_fundamentals, emerging_narratives.",
-        "status": "completed",
-        "priority": "medium"
-      },
-      "7": {
-        "id": "7",
-        "content": "Test AI engine on current data sample (100 projects)",
-        "details": "Successfully tested on 100 projects. Output: 717KB file. 31 high Payd, 82 high risk, 11 high confidence, 141 opportunities. Verified no facts are invented - all data comes from real enriched sources with explicit references.",
-        "status": "completed",
+      "t6": {
+        "id": "t6",
+        "content": "Build Recommendation Logic - AI rating changes",
+        "details": "",
+        "status": "pending",
         "priority": "high"
       },
-      "8": {
-        "id": "8",
-        "content": "Run full AI analysis on all 349 projects after enrichment completes",
-        "details": "Will be triggered automatically by orchestrator (PID 5467) after main enrichment completes. Will produce projects_ai_analyzed.json.",
+      "t7": {
+        "id": "t7",
+        "content": "Build Catalyst Tracker - future events",
+        "details": "",
+        "status": "pending",
+        "priority": "high"
+      },
+      "t8": {
+        "id": "t8",
+        "content": "Build Timeline Aggregator - per-project history",
+        "details": "",
+        "status": "pending",
+        "priority": "high"
+      },
+      "t9": {
+        "id": "t9",
+        "content": "Build Confidence Explainer - why confidence changed",
+        "details": "",
+        "status": "pending",
+        "priority": "high"
+      },
+      "t10": {
+        "id": "t10",
+        "content": "Integrate Reasoning Engine into orchestrator",
+        "details": "",
+        "status": "pending",
+        "priority": "high"
+      },
+      "t11": {
+        "id": "t11",
+        "content": "Run reasoning engine on current data",
+        "details": "",
         "status": "pending",
         "priority": "high"
       }
