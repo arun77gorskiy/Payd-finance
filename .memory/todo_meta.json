@@ -1,80 +1,66 @@
 {
   "todos": {
     "Coordinator": {
-      "t1": {
-        "id": "t1",
-        "content": "Wait for current enrichment process (PID 4676) to complete - currently ~145/349",
-        "details": "Main process running ~45 min, orchestrator (PID 5467) monitoring.",
+      "1": {
+        "id": "1",
+        "content": "Изучить существующую архитектуру discovery/classification/инфраструктуру",
+        "details": "Прочитать DiscoveryService, SectorSizeManager, CoinGeckoService, sector_config, projects.json",
+        "status": "completed",
+        "priority": "high"
+      },
+      "2": {
+        "id": "2",
+        "content": "Создать SectorIntegrityChecker — модуль проверки пустых секторов",
+        "details": "Проверяет все сектора из sector_config.json, считает проекты, определяет gaps",
+        "status": "completed",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "Создать расширенный AutoDiscoveryService с поддержкой 7 источников",
+        "details": "CoinGecko, DefiLlama, GitHub, Token Terminal, CryptoRank, CoinMarketCap, official repos",
+        "status": "completed",
+        "priority": "high"
+      },
+      "4": {
+        "id": "4",
+        "content": "Создать SectorClassifier с AI-классификацией по описанию",
+        "details": "Rule-based + keyword + pattern matching с оценкой confidence",
+        "status": "completed",
+        "priority": "high"
+      },
+      "5": {
+        "id": "5",
+        "content": "Создать AutoEnrichmentService для обогащения новых проектов",
+        "details": "Market data, GitHub metrics, AI scores через существующие сервисы",
+        "status": "completed",
+        "priority": "high"
+      },
+      "6": {
+        "id": "6",
+        "content": "Создать главный SelfHealingEngine — оркестратор процесса",
+        "details": "Координирует проверку → discovery → classification → enrichment → storage",
+        "status": "completed",
+        "priority": "high"
+      },
+      "7": {
+        "id": "7",
+        "content": "Интегрировать Self-Healing в intelligence-data.js",
+        "details": "Запускать при каждой загрузке, если есть пустые сектора",
         "status": "in_progress",
         "priority": "high"
       },
-      "t2": {
-        "id": "t2",
-        "content": "Design Reasoning Engine architecture",
-        "details": "Modules: snapshot_manager, change_detector, reasoning_engine, catalyst_tracker, run_reasoning.js",
-        "status": "in_progress",
-        "priority": "high"
-      },
-      "t3": {
-        "id": "t3",
-        "content": "Build Snapshot Manager - persist snapshots",
-        "details": "Stores snapshots in /workspace/public/data/history/. Maintains index. Creates snapshot from enriched file.",
+      "8": {
+        "id": "8",
+        "content": "Создать server-side скрипт для Node.js запуска",
+        "details": "Позволяет запускать self-healing вручную или по cron",
         "status": "pending",
-        "priority": "high"
+        "priority": "medium"
       },
-      "t4": {
-        "id": "t4",
-        "content": "Build Change Detector - compare snapshots",
-        "details": "",
-        "status": "pending",
-        "priority": "high"
-      },
-      "t5": {
-        "id": "t5",
-        "content": "Build Score Delta Analyzer - explain score changes",
-        "details": "",
-        "status": "pending",
-        "priority": "high"
-      },
-      "t6": {
-        "id": "t6",
-        "content": "Build Recommendation Logic - AI rating changes",
-        "details": "",
-        "status": "pending",
-        "priority": "high"
-      },
-      "t7": {
-        "id": "t7",
-        "content": "Build Catalyst Tracker - future events",
-        "details": "",
-        "status": "pending",
-        "priority": "high"
-      },
-      "t8": {
-        "id": "t8",
-        "content": "Build Timeline Aggregator - per-project history",
-        "details": "",
-        "status": "pending",
-        "priority": "high"
-      },
-      "t9": {
-        "id": "t9",
-        "content": "Build Confidence Explainer - why confidence changed",
-        "details": "",
-        "status": "pending",
-        "priority": "high"
-      },
-      "t10": {
-        "id": "t10",
-        "content": "Integrate Reasoning Engine into orchestrator",
-        "details": "",
-        "status": "pending",
-        "priority": "high"
-      },
-      "t11": {
-        "id": "t11",
-        "content": "Run reasoning engine on current data",
-        "details": "",
+      "9": {
+        "id": "9",
+        "content": "Деплой и проверка работы self-healing на проде",
+        "details": "Убедиться, что все сектора заполнены, нет сообщений \"No projects available\"",
         "status": "pending",
         "priority": "high"
       }
