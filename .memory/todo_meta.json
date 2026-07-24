@@ -47,21 +47,21 @@
         "id": "7",
         "content": "Интегрировать Self-Healing в intelligence-data.js",
         "details": "Запускать при каждой загрузке, если есть пустые сектора",
-        "status": "in_progress",
+        "status": "completed",
         "priority": "high"
       },
       "8": {
         "id": "8",
         "content": "Создать server-side скрипт для Node.js запуска",
         "details": "Позволяет запускать self-healing вручную или по cron",
-        "status": "pending",
+        "status": "completed",
         "priority": "medium"
       },
       "9": {
         "id": "9",
         "content": "Деплой и проверка работы self-healing на проде",
         "details": "Убедиться, что все сектора заполнены, нет сообщений \"No projects available\"",
-        "status": "pending",
+        "status": "completed",
         "priority": "high"
       }
     }
