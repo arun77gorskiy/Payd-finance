@@ -3,65 +3,44 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Изучить существующую архитектуру discovery/classification/инфраструктуру",
-        "details": "Прочитать DiscoveryService, SectorSizeManager, CoinGeckoService, sector_config, projects.json",
+        "content": "Fix bundle loading deadlock — switch to parallel loading with aggressive timeouts",
+        "details": "1. Replace sequential for-await with Promise.allSettled\n2. Reduce per-script timeout from 15s to 5s\n3. Add overall bundle timeout (10s max)\n4. Ensure dispatch happens even if some scripts fail\n5. Show rendering as soon as critical scripts load",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Создать SectorIntegrityChecker — модуль проверки пустых секторов",
-        "details": "Проверяет все сектора из sector_config.json, считает проекты, определяет gaps",
+        "content": "Fix null-dereference bug in intelligence-render.js:104",
+        "details": "Replace `o.weekly_opportunities.highlighted` with safe access pattern `(o.weekly_opportunities || {}).highlighted` to prevent TypeError",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Создать расширенный AutoDiscoveryService с поддержкой 7 источников",
-        "details": "CoinGecko, DefiLlama, GitHub, Token Terminal, CryptoRank, CoinMarketCap, official repos",
+        "content": "Fix data layer fallback structure to match expected schema",
+        "details": "Ensure fallback overview/projects objects have all required fields (weekly_opportunities, market_overview, totals, etc.) so render never crashes",
         "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Создать SectorClassifier с AI-классификацией по описанию",
-        "details": "Rule-based + keyword + pattern matching с оценкой confidence",
+        "content": "Add immediate render with embedded cached data",
+        "details": "Pre-load projects.json via inline script and render the page immediately, before bundle finishes. Heavy operations continue in background.",
         "status": "completed",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Создать AutoEnrichmentService для обогащения новых проектов",
-        "details": "Market data, GitHub metrics, AI scores через существующие сервисы",
-        "status": "completed",
-        "priority": "high"
-      },
-      "6": {
-        "id": "6",
-        "content": "Создать главный SelfHealingEngine — оркестратор процесса",
-        "details": "Координирует проверку → discovery → classification → enrichment → storage",
-        "status": "completed",
-        "priority": "high"
-      },
-      "7": {
-        "id": "7",
-        "content": "Интегрировать Self-Healing в intelligence-data.js",
-        "details": "Запускать при каждой загрузке, если есть пустые сектора",
-        "status": "completed",
-        "priority": "high"
-      },
-      "8": {
-        "id": "8",
-        "content": "Создать server-side скрипт для Node.js запуска",
-        "details": "Позволяет запускать self-healing вручную или по cron",
+        "content": "Add comprehensive null-safety in all renderers (V1 + V2)",
+        "details": "Audit all places where `D.overview.X.Y` pattern is used, ensure optional chaining everywhere",
         "status": "completed",
         "priority": "medium"
       },
-      "9": {
-        "id": "9",
-        "content": "Деплой и проверка работы self-healing на проде",
-        "details": "Убедиться, что все сектора заполнены, нет сообщений \"No projects available\"",
-        "status": "completed",
+      "6": {
+        "id": "6",
+        "content": "Test the fix on live site",
+        "details": "Deploy and verify page loads within 3 seconds with actual data",
+        "status": "in_progress",
         "priority": "high"
       }
     }
