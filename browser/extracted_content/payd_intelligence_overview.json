@@ -1,0 +1,44 @@
+📄 Extracted from page: Latest Updates
+URL: https://govv4u0tyydt.space.mcode.io/index.html
+
+Extracted content:
+```json
+{
+    "title": "PAYD Intelligence - Institutional Crypto Research Platform",
+    "url": "https://govv4u0tyydt.space.mcode.io/index.html",
+    "summary": "PAYD Intelligence is an institutional-grade crypto research platform with a server-side AI agent (v3.2.1) that pre-computes all metrics, scores, and insights twice weekly. The main panel with id='intel-tab-content' is currently displaying the 'Overview/Dashboard' tab. The active sidebar navigation button appears to be 'Dashboard' (under the Overview section). The panel shows several h3 sections: 'Top Opportunities · 7d', 'Risk Alerts', 'Upcoming Unlocks · 30d', 'Latest Research', and 'Latest Updates'. However, many data fields show 'No data', 'Unavailable', '0', or em-dashes, suggesting the panel is either loading or has no populated data. The page also contains a separate main landing page (Payd_Finance) with information about an AI-powered crypto trading and education platform, including sections on market data, AI analysis, trading lab, modules, courses, pricing, and features.",
+    "key_points": [
+        "PAYD Intelligence Layer features an AI Agent v3.2.1 that auto-updates twice weekly with pre-computed metrics",
+        "Main panel #intel-tab-content is showing the Overview/Dashboard tab with these h3 sections visible: 'Top Opportunities · 7d', 'Risk Alerts', 'Upcoming Unlocks · 30d', 'Latest Research', 'Latest Updates'",
+        "Active sidebar navigation: 'Dashboard' button (under Overview section) appears to have is-active class",
+        "Data sources: CoinGecko, CoinMarketCap, DefiLlama, Token Unlocks, GitHub, News (5 of 6 providers active)",
+        "Last sync: Aug 30, 2026 · Next agent run: Aug 30, 2026",
+        "Market Overview shows: Unavailable 24h, 0 Projects Tracked, 0/100 AI Score Average, 24 Weekly Reports, 0 Top Opportunities, 0 Risk Alerts, 0 Upcoming Unlocks, 0 Latest Research, 0 Latest Updates",
+        "No major unlocks in the next 30 days",
+        "No research published this week",
+        "The page also includes the main Payd_Finance landing with features: Blind Chart, Risk Calculator, Trade Journal, Market Structure, Volume Analysis, Signal Generator, Market Replay, Decision Score, Trade Autopsy, Mistake Map, Skill Passport",
+        "PAYD Trading Lab includes 4 modules and 6 levels with 200+ trading scenarios",
+        "Pricing: Basic $29/month, Premium $79/month",
+        "AI Market Analysis shows BTC at $78,803, ETH at $2,479, SOL at $106 with bullish signals",
+        "AI Scanner signals: BTC BUY (78% confidence), ETH HOLD (62%), SOL WAIT (45%)",
+        "AI Market Regime: Ascending trend, Low volatility, AI Confidence 85%, Recommended Action: Long with tight stop-loss"
+    ],
+    "relevant_links": [
+        "#features",
+        "#education-how-it-works",
+        "#how-it-works",
+        "#benefits",
+        "#intelligence",
+        "#cta"
+    ],
+    "intel_panel_h3_headings": [
+        "Top Opportunities · 7d",
+        "Risk Alerts",
+        "Upcoming Unlocks · 30d",
+        "Latest Research",
+        "Latest Updates"
+    ],
+    "active_sidebar_button": "Dashboard (under Overview section)",
+    "file_name": "payd_intelligence_overview.json"
+}
+```

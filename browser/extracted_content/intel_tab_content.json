@@ -1,0 +1,27 @@
+📄 Extracted from page: Latest Updates
+URL: https://govv4u0tyydt.space.mcode.io/index.html#/l1
+
+Extracted content:
+```json
+{
+    "title": "Latest Updates",
+    "url": "https://govv4u0tyydt.space.mcode.io/index.html#/l1",
+    "summary": "Панель с id='intel-tab-content' на странице не найдена в предоставленном контенте. Активная боковая кнопка соответствует разделу 'PAYD Intel' с подразделом 'Layer 1'. На странице представлена платформа Payd_Finance — образовательная и аналитическая SaaS-платформа для криптотрейдинга с AI-аналитикой, торговой лабораторией (PAYD Trading Lab), торговым терминалом, сценариями, курсами и тарифами. Видны h3 заголовки в секции 'Layer 1': 'AI-curated institutional research for the Layer 1 sector.' Также в секции PAYD Intelligence присутствуют подразделы: Overview/Dashboard, Sectors (DePIN Intelligence, AI Infrastructure), AI Categories (Layer 1, Layer 2, DeFi, RWA, Gaming, DeSci), Tools (Opportunity Scanner, Watchlist, Weekly Intelligence, Research Library). В Layer 1 указано '0 projects' и сообщение 'No Layer 1 projects in the current dataset. The AI Agent will populate this section during the next weekly run.'",
+    "key_points": [
+        "Панель с id='intel-tab-content' не обнаружена в извлечённом содержимом страницы",
+        "URL страницы: https://govv4u0tyydt.space.mcode.io/index.html, хеш: #/l1 (указывает на раздел Layer 1)",
+        "Активная боковая кнопка: 'Layer 1' в секции 'AI Categories'",
+        "Раздел PAYD Intelligence — Institutional Crypto Research Platform, обновляется автоматически дважды в неделю",
+        "AI Agent v3.2.1, Verified Sources: CoinGecko, CoinMarketCap, DefiLlama, Token Unlocks, GitHub, News (5 of 6 providers active)",
+        "h3 заголовки в intel-секции: 'AI-curated institutional research for the Layer 1 sector.'",
+        "В Layer 1: 0 projects, агент заполнит секцию при следующем еженедельном запуске",
+        "Боковая навигация intel-панели: Overview (Dashboard), Sectors (DePIN Intelligence, AI Infrastructure), AI Categories (Layer 1, Layer 2, DeFi, RWA, Gaming, DeSci), Tools (Opportunity Scanner, Watchlist, Weekly Intelligence, Research Library)"
+    ],
+    "relevant_links": [
+        "https://govv4u0tyydt.space.mcode.io/index.html#/l1",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT.P",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE%3ABTCUSDT"
+    ],
+    "file_name": "intel_tab_content.json"
+}
+```

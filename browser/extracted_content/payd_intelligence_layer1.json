@@ -1,0 +1,31 @@
+📄 Extracted from page: Latest Updates
+URL: https://govv4u0tyydt.space.mcode.io/index.html
+
+Extracted content:
+```json
+{
+    "title": "PAYD Intelligence - Latest Updates",
+    "url": "https://govv4u0tyydt.space.mcode.io/index.html",
+    "summary": "Страница PAYD Intelligence представляет институциональную крипто-исследовательскую платформу с AI-агентом v3.2.1. Платформа предоставляет market intelligence, обновляемое автоматически дважды в неделю. Основные разделы: PAYD Intel (боковая панель навигации) с категориями Overview, Sectors (DePIN Intelligence, AI Infrastructure), AI Categories (Layer 1, Layer 2, DeFi, RWA, Gaming, DeSci), Tools (Opportunity Scanner, Watchlist, Weekly Intelligence, Research Library). Market Snapshot показывает: Last sync Aug 30, 2026, AI Agent Online, Market Overview Unavailable, Projects Tracked 0, AI Score Average —/100, Weekly Reports 24 (Published Mon · Thu), Top Opportunities 0, Risk Alerts 0, Upcoming Unlocks 0, Latest Research 0, Latest Updates 0. Verified Sources: CoinGecko, CoinMarketCap, DefiLlama, Token Unlocks, GitHub, News (Live · 5 of 6 providers active). Элемент с id='intel-tab-content' является основной панелью контента PAYD Intelligence, в которой отображается Market Snapshot, Top Opportunities, Risk Alerts, Upcoming Unlocks, Latest Research, Latest Updates.",
+    "key_points": [
+        "Заголовок h3 'Layer 1' виден после клика в секции PAYD Intelligence → AI Categories → Layer 1",
+        "Селектор основной панели контента: #intel-tab-content",
+        "PAYD Intel использует AI Agent v3.2.1 с real-time обновлениями",
+        "Last sync: Aug 30, 2026 · Next agent run: Aug 30, 2026",
+        "Verified Sources: CoinGecko, CoinMarketCap, DefiLlama, Token Unlocks, GitHub, News (5 of 6 active)",
+        "Weekly Reports публикуются по понедельникам и четвергам",
+        "Категории AI: Layer 1, Layer 2, DeFi, RWA, Gaming, DeSci",
+        "Sectors: DePIN Intelligence, AI Infrastructure",
+        "Tools: Opportunity Scanner, Watchlist, Weekly Intelligence, Research Library",
+        "Upcoming Unlocks: No major unlocks in the next 30 days",
+        "Latest Research: No research published this week",
+        "Top Opportunities · 7d, Risk Alerts, Upcoming Unlocks · 30d, Latest Research, Latest Updates - все секции пустые"
+    ],
+    "relevant_links": [
+        "https://govv4u0tyydt.space.mcode.io/index.html",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT.P",
+        "https://s.tradingview.com/widgetembed/?symbol=BINANCE:BTCUSDT"
+    ],
+    "file_name": "payd_intelligence_layer1.json"
+}
+```
