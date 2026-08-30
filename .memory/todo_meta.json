@@ -3,44 +3,58 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Fix bundle loading deadlock — switch to parallel loading with aggressive timeouts",
-        "details": "1. Replace sequential for-await with Promise.allSettled\n2. Reduce per-script timeout from 15s to 5s\n3. Add overall bundle timeout (10s max)\n4. Ensure dispatch happens even if some scripts fail\n5. Show rendering as soon as critical scripts load",
-        "status": "completed",
+        "content": "Фаза 1: Аудит существующего кода и исследование недостающих API",
+        "details": "1. Аудит текущих провайдеров (CoinGecko, DefiLlama, GitHub, TokenUnlock, CMC, News): что реально возвращают, какие поля покрыты\n2. Аудит DataModel: текущая схема полей и формат verified/missing\n3. Аудит PaydScoreEngine/PaydAlphaEngine: как считаются scores и где возникают \"Unavailable\"\n4. Аудит UnifiedDataStore / IntelligenceScheduler: оркестрация и кэш\n5. Исследование недостающих провайдеров: Token Terminal, Artemis, CryptoRank, RootData, DeFiLlama fees/revenue endpoints, GitHub API v3\n6. Составление project registry: маппинг 10 тестовых проектов на (coingecko_id, defillama_slug, github_repos, contract_addresses, chain)\n7. Документ 'gap-analysis.md' с полным описанием пробелов",
+        "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Fix null-dereference bug in intelligence-render.js:104",
-        "details": "Replace `o.weekly_opportunities.highlighted` with safe access pattern `(o.weekly_opportunities || {}).highlighted` to prevent TypeError",
-        "status": "completed",
+        "content": "Фаза 2: Реализация недостающих провайдеров и расширение существующих",
+        "details": "1. Расширить CoinGeckoService: добавить community_data, developer_data, change_90d, circulating_supply, total_supply, max_supply, категории\n2. Расширить DefiLlamaService: добавить /summary/fees/, /summary/revenue/, chain-level TVL, исторические данные для TVL_change_7d/30d/90d, market_share\n3. Создать ArtemisService: DAU/MAU, new_addresses, transactions, user_growth (с провайдером как fallback на on-chain RPC)\n4. Создать TokenTerminalService (если есть публичный API) или использовать DefiLlama revenue как proxy\n5. Создать CryptoRankService: token unlocks, funding rounds, investors, vesting, team allocation (с fallback на ручной JSON)\n6. Создать RootDataService: investors, funding_rounds (или использовать CryptoRank)\n7. Создать OnChainMetricsService: ERC-20 transfers, holder count, contract interactions через публичные RPC (Ankr/Cloudflare)\n8. Расширить GitHubService: реальные GitHub API вызовы с агрегацией по нескольким репо, commits_7d/30d/90d, contributors, release_frequency\n9. Создать LiquidityService: DEX liquidity через DefiLlama /yields? + CEX venue count (CoinGecko tickers)\n10. Создать CommunityService: X followers (без API — признать как unavailable), Telegram, Discord (признать как unavailable для non-keyed access)\n11. Создать TokenomicsService: структурированный сбор tokenomics из CryptoRank + ручной JSON для 10 проектов",
+        "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Fix data layer fallback structure to match expected schema",
-        "details": "Ensure fallback overview/projects objects have all required fields (weekly_opportunities, market_overview, totals, etc.) so render never crashes",
-        "status": "completed",
+        "content": "Фаза 3: Создание Project Registry и Fundamental Data Aggregator",
+        "details": "1. Создать project-registry.js: для каждого из 10 проектов (Uniswap, Aave, Ondo, Arbitrum, Solana, Render, Filecoin, Chainlink, Pendle, Celestia) задать coingecko_id, defillama_slug, github_repos, contract_addresses, chain\n2. Создать FundamentalAggregator: orchestrator, который для каждого проекта вызывает все провайдеры в правильном порядке с fallback chain\n3. Реализовать fallback chain по приоритетам из спецификации:\n   - Revenue: Token Terminal → DefiLlama → Official API → unavailable\n   - TVL: DefiLlama → Official API → unavailable\n   - Unlocks: CryptoRank → Official → unavailable\n   - GitHub: GitHub API → CoinGecko developer_data → unavailable\n4. Возвращать structured profile: { project_id, market_data, defi_data, github_data, onchain_data, tokenomics, unlocks, community, liquidity, momentum, sources, freshness, confidence }",
+        "status": "pending",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Add immediate render with embedded cached data",
-        "details": "Pre-load projects.json via inline script and render the page immediately, before bundle finishes. Heavy operations continue in background.",
-        "status": "completed",
+        "content": "Фаза 4: Quality Layer — Freshness, Confidence, Attribution",
+        "details": "1. Создать FreshnessClassifier: для каждой метрики классифицировать FRESH/STALE/VERY_STALE на основе:\n   - Market: fresh < 24h\n   - TVL/revenue: fresh < 48h\n   - GitHub: fresh < 7d\n   - Tokenomics/investors: longer windows\n2. Создать ConfidenceCalculator: на основе source quality + freshness + completeness\n3. Создать SourceAttributor: каждое поле хранит value, source, source_url, retrieved_at, freshness, confidence\n4. Расширить DataModel: гарантировать, что каждое поле имеет всю эту метаинформацию\n5. Создать DataCoverageAnalyzer: считает % доступных компонентов проекта, missing components list",
+        "status": "pending",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Add comprehensive null-safety in all renderers (V1 + V2)",
-        "details": "Audit all places where `D.overview.X.Y` pattern is used, ensure optional chaining everywhere",
-        "status": "completed",
-        "priority": "medium"
+        "content": "Фаза 5: Fundamental Ratios Calculator и AI Integration",
+        "details": "1. Создать FundamentalRatiosCalculator: Mcap/TVL, FDV/TVL, Mcap/AnnualizedRevenue, FDV/AnnualizedRevenue, Fees/Mcap, Revenue Growth, TVL Growth, User Growth, Developer Growth\n2. Обновить PaydScoreEngine: каждое вычисление скора использует normalized score с учётом confidence\n3. Обновить PaydAlphaEngine: то же самое + учёт data_coverage\n4. Создать AIProfileBuilder: формирует структурированный профиль для AI: { facts[], sources[], confidence_overall, missing[] }\n5. Обновить ResearchEngine: AI получает профиль и ОБЯЗАН цитировать источник для каждого утверждения; при low confidence AI Score показывать 'LOW CONFIDENCE' и не использовать как ranking\n6. Реализовать правила: < 50% inputs → LOW CONFIDENCE; < 30% inputs → не надёжный ranking",
+        "status": "pending",
+        "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Test the fix on live site",
-        "details": "Deploy and verify page loads within 3 seconds with actual data",
-        "status": "in_progress",
+        "content": "Фаза 6: Валидация на 10 тестовых проектах",
+        "details": "1. Запустить FundamentalAggregator на 10 проектах: Uniswap, Aave, Ondo, Arbitrum, Solana, Render, Filecoin, Chainlink, Pendle, Celestia\n2. Для каждого проекта сгенерировать таблицу: Metric | Value | Source | Freshness | Normalized Score\n3. Зафиксировать: какие метрики получены, какие 'Unavailable', какие источники подключились\n4. Собрать provider failures, average completeness, average confidence\n5. Сохранить результаты в data/intelligence-test-results.json",
+        "status": "pending",
+        "priority": "high"
+      },
+      "7": {
+        "id": "7",
+        "content": "Фаза 7: Обновление UI для отображения источников, freshness, confidence",
+        "details": "1. Обновить intelligence-render.js: для каждой метрики показывать source, freshness badge, confidence\n2. Добавить Data Coverage panel для каждого проекта: % completeness, available/missing components\n3. Добавить 'LOW CONFIDENCE' badge когда data coverage < 50%\n4. В AI Score card: показывать 'reliable' / 'low confidence' / 'unreliable' based on data coverage\n5. Добавить tooltip со ссылкой на источник для каждой цифры\n6. Деплой и финальный визуальный тест на нескольких страницах",
+        "status": "pending",
+        "priority": "high"
+      },
+      "8": {
+        "id": "8",
+        "content": "Фаза 8: Финальный отчёт с метриками качества данных",
+        "details": "1. Сгенерировать intelligence-v2-report.md с разделами:\n   - DATA SOURCES CONNECTED (полный список с статусом)\n   - PROVIDER FAILURES (какие запросы упали, причины)\n   - AVERAGE DATA COMPLETENESS (%)\n   - AVERAGE CONFIDENCE\n   - PROJECTS ABOVE 80% COMPLETENESS (список)\n   - PROJECTS BELOW 50% COMPLETENESS (список)\n2. Конвертировать в PDF и DOCX\n3. Обновить cache-busters в index.html и деплоить",
+        "status": "pending",
         "priority": "high"
       }
     }
