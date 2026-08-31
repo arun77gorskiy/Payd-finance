@@ -1,0 +1,253 @@
+{
+  "generated_at": "2026-08-31T18:12:28.929Z",
+  "total_depin": 34,
+  "with_market_cap": 26,
+  "with_fdv": 26,
+  "with_volume": 26,
+  "with_github_stars": 1,
+  "with_github_repos": 1,
+  "projects": [
+    {
+      "id": "render",
+      "symbol": "RENDER",
+      "market_cap": 736903815,
+      "fdv": 757870301,
+      "volume_24h": 36767180,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "grass",
+      "symbol": "GRASS",
+      "market_cap": 240127148,
+      "fdv": 354681162,
+      "volume_24h": 20037648,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "akash-network",
+      "symbol": "AKT",
+      "market_cap": 152199896,
+      "fdv": 152203867,
+      "volume_24h": 3541173,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "arweave",
+      "symbol": "AR",
+      "market_cap": 136282569,
+      "fdv": 136282569,
+      "volume_24h": 7848834,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "helium",
+      "symbol": "HNT",
+      "market_cap": 124586236,
+      "fdv": 124586236,
+      "volume_24h": 116024270,
+      "github_stars": 215,
+      "github_repos": 1,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "geodnet",
+      "symbol": "GEOD",
+      "market_cap": 105186460,
+      "fdv": 218938582,
+      "volume_24h": 1736120,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "livepeer",
+      "symbol": "LPT",
+      "market_cap": 66578346,
+      "fdv": 66578346,
+      "volume_24h": 16093774,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "peaq",
+      "symbol": "PEAQ",
+      "market_cap": 56082873,
+      "fdv": 101322519,
+      "volume_24h": 1245154,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "siacoin",
+      "symbol": "SC",
+      "market_cap": 30201531,
+      "fdv": 30201531,
+      "volume_24h": 1634397,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "world-mobile-token",
+      "symbol": "WMTX",
+      "market_cap": 28420713,
+      "fdv": 66725095,
+      "volume_24h": 774672,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "iotex",
+      "symbol": "IOTX",
+      "market_cap": 26997719,
+      "fdv": 26997719,
+      "volume_24h": 9166920,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "storj",
+      "symbol": "STORJ",
+      "market_cap": 14356105,
+      "fdv": 14356105,
+      "volume_24h": 8968031,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "iagon",
+      "symbol": "IAG",
+      "market_cap": 10240296,
+      "fdv": 21016193,
+      "volume_24h": 106594,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "hivemapper",
+      "symbol": "HONEY",
+      "market_cap": 8722127,
+      "fdv": 8722127,
+      "volume_24h": 630315,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "cess",
+      "symbol": "CESS",
+      "market_cap": 3858977,
+      "fdv": 14562177,
+      "volume_24h": 223694,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "dimo",
+      "symbol": "DIMO",
+      "market_cap": 3831546,
+      "fdv": 7579119,
+      "volume_24h": 115072,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "mysterium",
+      "symbol": "MYST",
+      "market_cap": 3311729,
+      "fdv": 3311729,
+      "volume_24h": 26652,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "sentinel",
+      "symbol": "DVPN",
+      "market_cap": 1603786,
+      "fdv": 1608143,
+      "volume_24h": 21088,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "nodle-network",
+      "symbol": "NODL",
+      "market_cap": 1482615,
+      "fdv": 1869482,
+      "volume_24h": 7189.13,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "mxc",
+      "symbol": "MXC",
+      "market_cap": 975030,
+      "fdv": 975030,
+      "volume_24h": 0.000009,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "streamr",
+      "symbol": "DATA",
+      "market_cap": 289143,
+      "fdv": 289143,
+      "volume_24h": 4481.53,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "crust-network",
+      "symbol": "CRU",
+      "market_cap": 274271,
+      "fdv": 359572,
+      "volume_24h": 8742.62,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "flux",
+      "symbol": "FLUX",
+      "market_cap": 148784,
+      "fdv": 148784,
+      "volume_24h": 58.3,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "nubila",
+      "symbol": "NUB",
+      "market_cap": 144311,
+      "fdv": 784300,
+      "volume_24h": 23741,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "pollen-mobile",
+      "symbol": "PCN",
+      "market_cap": 119999,
+      "fdv": 207156,
+      "volume_24h": 152.06,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "aleph-im",
+      "symbol": "ALEPH"
+    },
+    {
+      "id": "ankr-network",
+      "symbol": "ANKR"
+    },
+    {
+      "id": "swarm",
+      "symbol": "BZZ"
+    },
+    {
+      "id": "deeper-network",
+      "symbol": "DPR",
+      "market_cap": 0,
+      "fdv": 1215137,
+      "volume_24h": 1644.18,
+      "last_enriched_cg": "2026-08-31T18:09:49.826Z"
+    },
+    {
+      "id": "phala",
+      "symbol": "PHA"
+    },
+    {
+      "id": "powerpod",
+      "symbol": "POD"
+    },
+    {
+      "id": "thingsix",
+      "symbol": "THIX"
+    },
+    {
+      "id": "wayru",
+      "symbol": "WAYRU"
+    },
+    {
+      "id": "weatherxm",
+      "symbol": "WXM"
+    }
+  ]
+}
