@@ -3,44 +3,51 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Inspect project dataset and fetch DefiLlama protocol registry",
-        "details": "1.1 Load projects.json; 1.2 Fetch https://api.llama.fi/protocols; 1.3 Cache locally for reproducibility",
-        "status": "in_progress",
+        "content": "Создать entity_type resolver и обогащённый data_mappings_v2.js",
+        "details": "1. Создать code/entity_resolver.js с определением TOKEN/CHAIN/PROTOCOL/APPLICATION/INFRASTRUCTURE\n2. Создать code/data_mappings_v2.js с раздельными полями defillama_protocol, defillama_chain, coingecko, cmc, github, defillama\n3. Содержать маппинг для всех L1/L2 chains (Arbitrum, Optimism, Polygon, Mantle, Starknet, Linea, ZKsync, Celo, Metis, Gnosis, Base, Scroll) и крупных протоколов (Uniswap, Aave, Lido, Pendle...)",
+        "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Build DefiLlama mapping engine with confidence scoring",
-        "details": "2.1 Multi-signal matching (name/symbol/website/coingecko/github/category/chains); 2.2 Confidence thresholds (≥0.95 auto, 0.80-0.94 needs_review, <0.80 reject); 2.3 Status: MAPPED / NOT_APPLICABLE / NOT_FOUND / AMBIGUOUS",
-        "status": "pending",
+        "content": "Построить DefiLlama Chain Fetcher + Protocol Fetcher",
+        "details": "1. Создать code/providers/defillama_chain.js - работает с /v2/chains/{name} эндпоинтом\n2. Создать code/providers/defillama_protocol.js - /protocol/{slug}, /summary/fees/{slug}, /summary/dexs/{slug}\n3. Возвращать null при отсутствии данных, никогда не 0\n4. Возвращать machine-readable reason для каждой метрики: { value: null, reason: 'PROVIDER_NO_DATA' }",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Validate DefiLlama data availability per protocol",
-        "details": "3.1 Probe TVL, TVL history, chains, fees, revenue, volume endpoints; 3.2 Set per-protocol availability flags: has_tvl, has_fees, has_revenue, has_volume",
-        "status": "pending",
+        "content": "Построить CoinGecko Fetcher и GitHub Fetcher с правильными приоритетами",
+        "details": "1. Создать code/providers/coingecko.js - markets batch + detail\n2. Создать code/providers/github.js - repo stats + commits\n3. GitHub API как primary, CoinGecko developer_data как fallback\n4. Не использовать Number(x) || 0 - возвращать null",
+        "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Investigate and recover 15 ZK-sector projects",
-        "details": "4.1 Cross-reference with CoinGecko/CMC; 4.2 Detect duplicates/aliases; 4.3 Recover coingeckoId, cmcId, githubOrg, xHandle, website, defillama_slug, sector; 4.4 Migration log for merges",
-        "status": "pending",
+        "content": "Реализовать MetricSourceRouter",
+        "details": "1. Создать code/router/metric_source_router.js\n2. TVL router: CHAIN → chain.TVL, PROTOCOL → protocol.TVL, оба → оба\n3. Fees/Revenue router: только DefiLlama protocol\n4. Market cap router: CoinGecko → CMC → null\n5. GitHub activity router: GitHub API → CoinGecko developer_data → null\n6. Каждый metric возвращает: { value, source, http_status, reason }",
+        "status": "completed",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Build centralized identifier registry",
-        "details": "5.1 Add identifiers object to each project; 5.2 Maintain backward compatibility with existing fields",
+        "content": "Исправить все `|| 0` паттерны в кодовой базе",
+        "details": "1. Аудит: enrich_projects.js, intelligence-render.js, reasoning/*.js\n2. Заменить: tvl_usd || 0 → tvl_usd ?? null\n3. Заменить: stars || 0 → stars ?? null\n4. Сохранять null для UI отображения \"Unavailable\"",
         "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Generate identifier-recovery-report.md and per-sector DefiLlama coverage",
-        "details": "6.1 All required sections: total, coverage by source, defillama status, ZK recovery, duplicates, manual-review queue; 6.2 Per-sector DefiLlama applicability; 6.3 Recommended next action for Phase 2",
-        "status": "pending",
+        "content": "Провести диагностический тест на 10 целевых проектах",
+        "details": "1. Создать code/phase2_diagnostic_test.js\n2. Тест на: Arbitrum, Optimism, Polygon, Starknet, Mantle, Linea, ZKsync, Celo, Metis, Gnosis\n3. Для каждого вывести: entity_types, coingecko_id, defillama_chain, defillama_protocol, market_cap, chain_tvl, protocol_tvl, dex_volume, chain_fees, app_revenue, active_addresses, github_activity\n4. Показать raw responses для Arbitrum и Optimism\n5. Создать docs/provider-diagnostic-report.md",
+        "status": "completed",
+        "priority": "high"
+      },
+      "7": {
+        "id": "7",
+        "content": "Сгенерировать data quality test с недостающими причинами",
+        "details": "1. Для каждого из 10 проектов: PROJECT, ENTITY TYPE, MARKET CAP, TVL, FEES, REVENUE, ACTIVE ADDRESSES, GITHUB, DATA COMPLETENESS, MISSING REASONS\n2. Сырые provider responses для Arbitrum и Optimism\n3. Создать docs/data-quality-test-report.md",
+        "status": "completed",
         "priority": "high"
       }
     }
