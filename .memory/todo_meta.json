@@ -3,50 +3,127 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Создать entity_type resolver и обогащённый data_mappings_v2.js",
-        "details": "1. Создать code/entity_resolver.js с определением TOKEN/CHAIN/PROTOCOL/APPLICATION/INFRASTRUCTURE\n2. Создать code/data_mappings_v2.js с раздельными полями defillama_protocol, defillama_chain, coingecko, cmc, github, defillama\n3. Содержать маппинг для всех L1/L2 chains (Arbitrum, Optimism, Polygon, Mantle, Starknet, Linea, ZKsync, Celo, Metis, Gnosis, Base, Scroll) и крупных протоколов (Uniswap, Aave, Lido, Pendle...)",
+        "content": "Аудит текущей архитектуры research/enrichment и поиск источников данных для Helium",
+        "details": "",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Построить DefiLlama Chain Fetcher + Protocol Fetcher",
-        "details": "1. Создать code/providers/defillama_chain.js - работает с /v2/chains/{name} эндпоинтом\n2. Создать code/providers/defillama_protocol.js - /protocol/{slug}, /summary/fees/{slug}, /summary/dexs/{slug}\n3. Возвращать null при отсутствии данных, никогда не 0\n4. Возвращать machine-readable reason для каждой метрики: { value: null, reason: 'PROVIDER_NO_DATA' }",
+        "content": "Resolve and verify Helium canonical identity (CoinGecko, CMC, DefiLlama, GitHub, X, official sources)",
+        "details": "",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Построить CoinGecko Fetcher и GitHub Fetcher с правильными приоритетами",
-        "details": "1. Создать code/providers/coingecko.js - markets batch + detail\n2. Создать code/providers/github.js - repo stats + commits\n3. GitHub API как primary, CoinGecko developer_data как fallback\n4. Не использовать Number(x) || 0 - возвращать null",
+        "content": "Создать DePIN-специфичный entity classifier с sector strategy",
+        "details": "",
         "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Реализовать MetricSourceRouter",
-        "details": "1. Создать code/router/metric_source_router.js\n2. TVL router: CHAIN → chain.TVL, PROTOCOL → protocol.TVL, оба → оба\n3. Fees/Revenue router: только DefiLlama protocol\n4. Market cap router: CoinGecko → CMC → null\n5. GitHub activity router: GitHub API → CoinGecko developer_data → null\n6. Каждый metric возвращает: { value, source, http_status, reason }",
+        "content": "Построить Helium market data provider (CoinGecko primary + CMC fallback)",
+        "details": "",
         "status": "completed",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Исправить все `|| 0` паттерны в кодовой базе",
-        "details": "1. Аудит: enrich_projects.js, intelligence-render.js, reasoning/*.js\n2. Заменить: tvl_usd || 0 → tvl_usd ?? null\n3. Заменить: stars || 0 → stars ?? null\n4. Сохранять null для UI отображения \"Unavailable\"",
-        "status": "pending",
+        "content": "Построить DefiLlama Helium protocol fetcher (fees, revenue, holders, etc.)",
+        "details": "",
+        "status": "completed",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Провести диагностический тест на 10 целевых проектах",
-        "details": "1. Создать code/phase2_diagnostic_test.js\n2. Тест на: Arbitrum, Optimism, Polygon, Starknet, Mantle, Linea, ZKsync, Celo, Metis, Gnosis\n3. Для каждого вывести: entity_types, coingecko_id, defillama_chain, defillama_protocol, market_cap, chain_tvl, protocol_tvl, dex_volume, chain_fees, app_revenue, active_addresses, github_activity\n4. Показать raw responses для Arbitrum и Optimism\n5. Создать docs/provider-diagnostic-report.md",
+        "content": "Построить GitHub deep enrichment (multiple Helium orgs)",
+        "details": "",
         "status": "completed",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "Сгенерировать data quality test с недостающими причинами",
-        "details": "1. Для каждого из 10 проектов: PROJECT, ENTITY TYPE, MARKET CAP, TVL, FEES, REVENUE, ACTIVE ADDRESSES, GITHUB, DATA COMPLETENESS, MISSING REASONS\n2. Сырые provider responses для Arbitrum и Optimism\n3. Создать docs/data-quality-test-report.md",
+        "content": "Создать Helium tokenomics data (supply, emissions, burn, data credits)",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "8": {
+        "id": "8",
+        "content": "Создать Helium funding/investors data (structurally, not text)",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "9": {
+        "id": "9",
+        "content": "Создать DePIN sector scoring (Network Adoption, Network Economics, Developer, Tokenomics, etc.)",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "10": {
+        "id": "10",
+        "content": "Создать Helium network metrics (hotspots, IoT, mobile, data credits, burn)",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "11": {
+        "id": "11",
+        "content": "Создать community/partnerships/team/roadmap/competitors (verified data only)",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "12": {
+        "id": "12",
+        "content": "Сгенерировать Investment Thesis (Base/Bull/Bear/Catalysts/Risks)",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "13": {
+        "id": "13",
+        "content": "Создать PAYD Quality/Conviction/Alpha с раздельными метриками",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "14": {
+        "id": "14",
+        "content": "Создать Risk Score breakdown (не default 85)",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "15": {
+        "id": "15",
+        "content": "Сгенерировать полный Helium enriched JSON profile и сохранить в public/data/intelligence/",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "16": {
+        "id": "16",
+        "content": "Сгенерировать Helium Data Audit (per metric: value/provider/status/freshness/confidence)",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "17": {
+        "id": "17",
+        "content": "Прогнать Helium Acceptance Test (86/86 passed)",
+        "details": "",
+        "status": "completed",
+        "priority": "high"
+      },
+      "18": {
+        "id": "18",
+        "content": "Обобщить архитектуру: создать sector strategies (L1, L2, DeFi, DePIN, RWA, AI, Gaming, DeSci)",
+        "details": "",
         "status": "completed",
         "priority": "high"
       }
