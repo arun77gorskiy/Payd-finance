@@ -1,0 +1,152 @@
+{
+  "generated_at": "2026-08-31T16:29:39.731Z",
+  "rows": [
+    {
+      "field": "name",
+      "v2_path": "name",
+      "v2_base_value": "helium",
+      "enriched_current": "-",
+      "v2_profile_value": "-"
+    },
+    {
+      "field": "ticker",
+      "v2_path": "symbol",
+      "v2_base_value": "HNT",
+      "enriched_current": "-",
+      "v2_profile_value": "-"
+    },
+    {
+      "field": "sector",
+      "v2_path": "sector",
+      "v2_base_value": "depin",
+      "enriched_current": "-",
+      "v2_profile_value": "-"
+    },
+    {
+      "field": "coingecko_id",
+      "v2_path": "coingeckoId",
+      "v2_base_value": "helium",
+      "enriched_current": "-",
+      "v2_profile_value": "-"
+    },
+    {
+      "field": "github_org",
+      "v2_path": "githubOrg",
+      "v2_base_value": "helium",
+      "enriched_current": "-",
+      "v2_profile_value": "-"
+    },
+    {
+      "field": "price_usd",
+      "v2_path": "enriched.market.price_usd",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "market_cap_usd",
+      "v2_path": "enriched.market.market_cap_usd",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "fdv_usd",
+      "v2_path": "enriched.market.fdv_usd",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "circulating_supply",
+      "v2_path": "enriched.market.circulating_supply",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "total_supply",
+      "v2_path": "enriched.market.total_supply",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "max_supply",
+      "v2_path": "enriched.market.max_supply",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "volume_24h_usd",
+      "v2_path": "enriched.market.volume_24h_usd",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "change_24h_pct",
+      "v2_path": "enriched.market.change_24h_pct",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "change_7d_pct",
+      "v2_path": "enriched.market.change_7d_pct",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "change_30d_pct",
+      "v2_path": "enriched.market.change_30d_pct",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "ath",
+      "v2_path": "enriched.market.ath",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "ath_change_pct",
+      "v2_path": "enriched.market.ath_change_pct",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "market_cap_rank",
+      "v2_path": "enriched.market.market_cap_rank",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "tvl_usd",
+      "v2_path": "enriched.protocol.tvl_usd",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "developer_activity",
+      "v2_path": "enriched.github.commits_30d",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    },
+    {
+      "field": "github_activity",
+      "v2_path": "enriched.github.commits_30d",
+      "v2_base_value": "-",
+      "enriched_current": "<absent>",
+      "v2_profile_value": "<absent>"
+    }
+  ]
+}

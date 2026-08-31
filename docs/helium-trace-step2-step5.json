@@ -1,0 +1,113 @@
+{
+  "generated_at": "2026-08-31T16:28:13.108Z",
+  "rows": [
+    {
+      "field": "Market Cap (USD)",
+      "raw_provider": 120098369,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "Fully Diluted Valuation",
+      "raw_provider": 120098364,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "Circulating Supply",
+      "raw_provider": 186414152.6561477,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "Total Supply",
+      "raw_provider": 186414144.882258,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "Max Supply",
+      "raw_provider": 223000000,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "24h Volume",
+      "raw_provider": 123621992,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "Market Cap Rank",
+      "raw_provider": 232,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "ATH",
+      "raw_provider": 54.88,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "ATH Change %",
+      "raw_provider": -98.82576,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "7d Change %",
+      "raw_provider": 239.42371,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "30d Change %",
+      "raw_provider": 252.72347,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "24h Change %",
+      "raw_provider": -30.0763,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "Current Price",
+      "raw_provider": 0.644389,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "GitHub stars (sum)",
+      "raw_provider": 742,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "GitHub forks (sum)",
+      "raw_provider": 343,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "GitHub repos (count)",
+      "raw_provider": 4,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "Open issues (sum)",
+      "raw_provider": 134,
+      "saved_canonical": null,
+      "saved_any": null
+    },
+    {
+      "field": "Last commit (recent)",
+      "raw_provider": "2026-08-28T09:47:32Z",
+      "saved_canonical": null,
+      "saved_any": null
+    }
+  ]
+}
