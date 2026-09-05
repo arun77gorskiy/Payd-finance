@@ -1,0 +1,188 @@
+{
+  "last_updated": "2026-07-11T08:00:00Z",
+  "scan_run_id": "opp-scan-2026-07-11",
+  "scan_logic": "Projects where the 7d fundamental momentum (composite of: developer activity Δ, GitHub commits Δ, revenue Δ, partnership announcements, TVL inflow) is ≥ 2.0 standard deviations above the 90-day baseline.",
+  "scan_window_days": 7,
+  "baseline_window_days": 90,
+  "total_flagged": 23,
+
+  "opportunities": [
+    {
+      "rank": 1,
+      "ticker": "TAO", "name": "Bittensor", "logo": "🧠",
+      "sector": "AI Infrastructure", "subsector": "AI Compute",
+      "ai_score": 89, "ai_score_change_7d": 4.1,
+      "momentum_score": 94, "momentum_change_7d": 18.4,
+      "fundamental_delta": {
+        "github_commits":   { "current": 612, "previous_avg": 412, "delta_pct": 48.5 },
+        "active_devs":      { "current":   84, "previous_avg":    62, "delta_pct": 35.5 },
+        "monthly_revenue":  { "current": 1240000, "previous_avg": 884000, "delta_pct": 40.3 },
+        "tvl":              { "current": 412000000, "previous_avg": 312000000, "delta_pct": 32.1 },
+        "partnerships_7d":  { "current": 4, "previous_avg_7d": 0.6, "delta_pct": 566.7 }
+      },
+      "signal_triggers": [
+        "Subnet count crossed 47 — new all-time high",
+        "Daily active wallets +41% WoW",
+        "Two major partnerships announced (NVIDIA, Google Cloud)",
+        "dTAO emissions rebalancing increased network efficiency +18%"
+      ],
+      "ai_investment_opinion": "Bittensor enters a confirmed structural uptrend. Subnet expansion combined with dTAO emissions rebalancing creates a positive feedback loop for both developer activity and network revenue. Pullbacks toward 30-day moving average are buyable.",
+      "risk_factors": ["Subnet concentration risk — top 5 subnets hold 62% of TAO emissions"],
+      "conviction": "High"
+    },
+    {
+      "rank": 2,
+      "ticker": "RENDER", "name": "Render Network", "logo": "🎬",
+      "sector": "DePIN", "subsector": "GPU Compute",
+      "ai_score": 87, "ai_score_change_7d": 2.3,
+      "momentum_score": 91, "momentum_change_7d": 14.7,
+      "fundamental_delta": {
+        "github_commits":   { "current": 487, "previous_avg": 364, "delta_pct": 33.8 },
+        "active_devs":      { "current":  32, "previous_avg":   24, "delta_pct": 33.3 },
+        "monthly_revenue":  { "current": 1840000, "previous_avg": 1240000, "delta_pct": 48.4 },
+        "tvl":              { "current": 412000000, "previous_avg": 318000000, "delta_pct": 29.6 },
+        "partnerships_7d":  { "current": 3, "previous_avg_7d": 0.8, "delta_pct": 275.0 }
+      },
+      "signal_triggers": [
+        "Apple Vision Pro studio partnership expanded node utilization +24%",
+        "Monthly revenue crossed $1.8M for the first time",
+        "New migration layer from Solana to Base reduced fees 38%"
+      ],
+      "ai_investment_opinion": "Render is the cleanest expression of the AI compute theme. Real revenue, growing node count, defensible positioning. Pullback to 50-day MA is the highest-quality re-entry in the DePIN space.",
+      "risk_factors": ["Sole reliance on a few large studios for demand concentration"],
+      "conviction": "High"
+    },
+    {
+      "rank": 3,
+      "ticker": "AKT", "name": "Akash Network", "logo": "☁️",
+      "sector": "DePIN", "subsector": "Cloud Compute",
+      "ai_score": 84, "ai_score_change_7d": 3.1,
+      "momentum_score": 88, "momentum_change_7d": 10.9,
+      "fundamental_delta": {
+        "github_commits":   { "current": 241, "previous_avg": 184, "delta_pct": 31.0 },
+        "active_devs":      { "current":  26, "previous_avg":   20, "delta_pct": 30.0 },
+        "monthly_revenue":  { "current": 412000, "previous_avg": 298000, "delta_pct": 38.3 },
+        "tvl":              { "current": 84000000, "previous_avg": 72400000, "delta_pct": 16.0 },
+        "partnerships_7d":  { "current": 2, "previous_avg_7d": 0.4, "delta_pct": 400.0 }
+      },
+      "signal_triggers": [
+        "AI compute marketplace volume +38% MoM",
+        "NVIDIA H100 inference tier launched",
+        "Two enterprise pilots announced"
+      ],
+      "ai_investment_opinion": "Akash is the most credible open-source alternative to AWS for AI workloads. H100 launch is a structural catalyst. Position sized to growth-stage DePIN risk.",
+      "risk_factors": ["Competition from Render and io.net for GPU capacity"],
+      "conviction": "Medium-High"
+    },
+    {
+      "rank": 4,
+      "ticker": "INJ", "name": "Injective", "logo": "🧪",
+      "sector": "DeFi", "subsector": "Layer 1",
+      "ai_score": 81, "ai_score_change_7d": 3.2,
+      "momentum_score": 86, "momentum_change_7d": 12.1,
+      "fundamental_delta": {
+        "github_commits":   { "current": 384, "previous_avg": 312, "delta_pct": 23.1 },
+        "active_devs":      { "current":  48, "previous_avg":   42, "delta_pct": 14.3 },
+        "monthly_revenue":  { "current": 612000, "previous_avg": 484000, "delta_pct": 26.4 },
+        "tvl":              { "current": 412000000, "previous_avg": 318000000, "delta_pct": 29.6 },
+        "partnerships_7d":  { "current": 2, "previous_avg_7d": 0.6, "delta_pct": 233.3 }
+      },
+      "signal_triggers": [
+        "EVM mainnet launch",
+        "iAgent crossed 100k installs",
+        "Strategic partnership with Google Cloud"
+      ],
+      "ai_investment_opinion": "EVM compatibility is a meaningful catalyst. The real test will be whether institutional DeFi apps build on Injective vs. staying on Base/Arbitrum. Watch TVL growth through Q3.",
+      "risk_factors": ["L1 competition is intense; EVM-launch may not be enough to win wallet share"],
+      "conviction": "Medium"
+    },
+    {
+      "rank": 5,
+      "ticker": "IO", "name": "io.net", "logo": "🖥️",
+      "sector": "DePIN", "subsector": "GPU Compute",
+      "ai_score": 82, "ai_score_change_7d": 4.6,
+      "momentum_score": 84, "momentum_change_7d": 9.8,
+      "fundamental_delta": {
+        "github_commits":   { "current": 198, "previous_avg": 142, "delta_pct": 39.4 },
+        "active_devs":      { "current":  24, "previous_avg":   18, "delta_pct": 33.3 },
+        "monthly_revenue":  { "current": 624000, "previous_avg": 412000, "delta_pct": 51.5 },
+        "tvl":              { "current": 142000000, "previous_avg": 98000000, "delta_pct": 44.9 },
+        "partnerships_7d":  { "current": 1, "previous_avg_7d": 0.2, "delta_pct": 400.0 }
+      },
+      "signal_triggers": [
+        "Cluster capacity scaled to 250k GPUs",
+        "Solana partnership for AI inference workloads",
+        "New enterprise tier with SLA guarantees"
+      ],
+      "ai_investment_opinion": "Largest distributed GPU cluster by raw count. Watch burn rate and customer concentration carefully. The cluster is the moat; execution is the variable.",
+      "risk_factors": ["Customer concentration — top 5 customers likely 40%+ of revenue", "Token unlock Q4 2026 — supply pressure building"],
+      "conviction": "Medium"
+    },
+    {
+      "rank": 6,
+      "ticker": "ONDO", "name": "Ondo Finance", "logo": "🏛️",
+      "sector": "RWA", "subsector": "Treasury",
+      "ai_score": 84, "ai_score_change_7d": 1.9,
+      "momentum_score": 82, "momentum_change_7d": 7.4,
+      "fundamental_delta": {
+        "github_commits":   { "current": 264, "previous_avg": 218, "delta_pct": 21.1 },
+        "active_devs":      { "current":  32, "previous_avg":   28, "delta_pct": 14.3 },
+        "monthly_revenue":  { "current": 1840000, "previous_avg": 1412000, "delta_pct": 30.3 },
+        "tvl":              { "current": 1412000000, "previous_avg": 1184000000, "delta_pct": 19.3 },
+        "partnerships_7d":  { "current": 2, "previous_avg_7d": 0.8, "delta_pct": 150.0 }
+      },
+      "signal_triggers": [
+        "USDY APY exceeded 5.0% for first time since 2024",
+        "BlackRock BUIDL integration completed",
+        "New institutional distribution agreement"
+      ],
+      "ai_investment_opinion": "Ondo remains the highest-quality RWA exposure. Revenue and TVL both inflecting upward. BlackRock partnership is a structural moat that compounds.",
+      "risk_factors": ["Regulatory risk in the US for yield-bearing products", "Concentration of assets under management"],
+      "conviction": "High"
+    },
+    {
+      "rank": 7,
+      "ticker": "FIL", "name": "Filecoin", "logo": "📦",
+      "sector": "DePIN", "subsector": "Storage",
+      "ai_score": 82, "ai_score_change_7d": 1.4,
+      "momentum_score": 79, "momentum_change_7d": 5.8,
+      "fundamental_delta": {
+        "github_commits":   { "current": 312, "previous_avg": 264, "delta_pct": 18.2 },
+        "active_devs":      { "current":  48, "previous_avg":   44, "delta_pct": 9.1 },
+        "monthly_revenue":  { "current": 2140000, "previous_avg": 1812000, "delta_pct": 18.1 },
+        "tvl":              { "current": 318000000, "previous_avg": 298000000, "delta_pct": 6.7 },
+        "partnerships_7d":  { "current": 1, "previous_avg_7d": 0.4, "delta_pct": 150.0 }
+      },
+      "signal_triggers": [
+        "Storage utilization crossed 28% — multi-year high",
+        "Filecoin Plus data-cap mechanism growing",
+        "New deal size up 18%"
+      ],
+      "ai_investment_opinion": "Network fundamentals are quietly inflecting. Filecoin Plus is working. This is a slow-burn re-rating story, not a momentum trade. Position sized accordingly.",
+      "risk_factors": ["Storage demand is concentrated in a small number of large clients"],
+      "conviction": "Medium"
+    },
+    {
+      "rank": 8,
+      "ticker": "FET", "name": "Fetch.ai", "logo": "🤖",
+      "sector": "AI Infrastructure", "subsector": "Agent Network",
+      "ai_score": 78, "ai_score_change_7d": 2.4,
+      "momentum_score": 78, "momentum_change_7d": 9.4,
+      "fundamental_delta": {
+        "github_commits":   { "current": 312, "previous_avg": 248, "delta_pct": 25.8 },
+        "active_devs":      { "current":  42, "previous_avg":   36, "delta_pct": 16.7 },
+        "monthly_revenue":  { "current": 412000, "previous_avg": 318000, "delta_pct": 29.6 },
+        "tvl":              { "current": 184000000, "previous_avg": 156000000, "delta_pct": 17.9 },
+        "partnerships_7d":  { "current": 1, "previous_avg_7d": 0.3, "delta_pct": 233.3 }
+      },
+      "signal_triggers": [
+        "Agent launchpad traction +28% WoW",
+        "ASI Alliance merger catalyst still pricing in",
+        "New autonomous agent framework released"
+      ],
+      "ai_investment_opinion": "The agent narrative is real but the bar to win is rising. Fetch's main risk is the ASI Alliance integration distracting from product velocity. Watch developer growth.",
+      "risk_factors": ["Token unlock velocity in Q4", "Competitive pressure from Virtuals, AIXBT"],
+      "conviction": "Medium"
+    }
+  ]
+}

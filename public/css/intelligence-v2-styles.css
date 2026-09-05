@@ -1,0 +1,844 @@
+/* =================================================================
+   PAYD Intelligence V2 — Styles
+   Все классы имеют префикс .payd-v2- для полной изоляции
+   от существующих стилей PaydFinance.
+   ================================================================= */
+
+.payd-v2-body {
+    margin: 0;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: #050505;
+    color: #FAFAFA;
+    line-height: 1.5;
+}
+
+.payd-v2-header {
+    background: linear-gradient(180deg, #0F0F11 0%, #050505 100%);
+    border-bottom: 1px solid #27272A;
+    padding: 24px 0;
+}
+
+.payd-v2-header-inner {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 24px;
+}
+
+.payd-v2-brand {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.payd-v2-logo {
+    font-size: 32px;
+    color: #D4AF37;
+    line-height: 1;
+}
+
+.payd-v2-brand h1 {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+.payd-v2-tagline {
+    margin: 2px 0 0;
+    font-size: 12px;
+    color: #A1A1AA;
+    letter-spacing: 0.04em;
+}
+
+.payd-v2-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.payd-v2-nav-link {
+    color: #A1A1AA;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.2s;
+}
+
+.payd-v2-nav-link:hover { color: #D4AF37; }
+
+.payd-v2-provider-badge {
+    padding: 4px 12px;
+    background: rgba(123, 97, 255, 0.15);
+    color: #7B61FF;
+    border: 1px solid rgba(123, 97, 255, 0.3);
+    border-radius: 6px;
+    font-size: 12px;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.payd-v2-main {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 32px 24px;
+}
+
+.payd-v2-section {
+    margin-bottom: 48px;
+}
+
+.payd-v2-section h2 {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    color: #FAFAFA;
+    margin: 0 0 16px;
+    letter-spacing: 0.02em;
+}
+
+.payd-v2-hint {
+    font-size: 13px;
+    color: #71717A;
+    margin: 0 0 16px;
+}
+
+.payd-v2-loading {
+    padding: 24px;
+    text-align: center;
+    color: #71717A;
+    font-size: 13px;
+}
+
+/* Architecture Status */
+.payd-v2-arch-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 12px;
+}
+
+.payd-v2-arch-card {
+    background: #0F0F11;
+    border: 1px solid #27272A;
+    border-radius: 8px;
+    padding: 16px;
+}
+
+.payd-v2-arch-card-title {
+    font-size: 11px;
+    text-transform: uppercase;
+    color: #A1A1AA;
+    letter-spacing: 0.08em;
+    margin: 0 0 8px;
+}
+
+.payd-v2-arch-card-value {
+    font-size: 16px;
+    font-weight: 600;
+    color: #FAFAFA;
+    font-family: 'JetBrains Mono', monospace;
+    word-break: break-all;
+}
+
+.payd-v2-arch-card-status {
+    display: inline-block;
+    margin-top: 6px;
+    padding: 2px 8px;
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+    border-radius: 4px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+/* Stats Grid */
+.payd-v2-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 12px;
+}
+
+.payd-v2-stat-card {
+    background: linear-gradient(180deg, rgba(24, 24, 27, 0.5) 0%, rgba(15, 15, 17, 0.5) 100%);
+    border: 1px solid #27272A;
+    border-radius: 12px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s, border-color 0.2s;
+}
+
+.payd-v2-stat-card:hover {
+    transform: translateY(-2px);
+    border-color: #3F3F46;
+}
+
+.payd-v2-stat-value {
+    font-size: 36px;
+    font-weight: 700;
+    color: #D4AF37;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    line-height: 1;
+}
+
+.payd-v2-stat-label {
+    margin-top: 6px;
+    font-size: 12px;
+    color: #A1A1AA;
+    letter-spacing: 0.04em;
+}
+
+/* Action buttons */
+.payd-v2-actions-row {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.payd-v2-btn {
+    padding: 10px 20px;
+    background: #18181B;
+    color: #FAFAFA;
+    border: 1px solid #27272A;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.payd-v2-btn:hover {
+    background: #27272A;
+    border-color: #3F3F46;
+}
+
+.payd-v2-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.payd-v2-btn-primary {
+    background: linear-gradient(180deg, #D4AF37 0%, #B8941F 100%);
+    color: #050505;
+    border-color: #D4AF37;
+    font-weight: 600;
+}
+
+.payd-v2-btn-primary:hover {
+    background: linear-gradient(180deg, #E5C047 0%, #C5A028 100%);
+    border-color: #E5C047;
+}
+
+.payd-v2-btn-ghost {
+    background: transparent;
+}
+
+.payd-v2-actions-result {
+    background: #0F0F11;
+    border: 1px solid #27272A;
+    border-radius: 8px;
+    padding: 16px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 12px;
+    color: #A1A1AA;
+    white-space: pre-wrap;
+    max-height: 320px;
+    overflow-y: auto;
+    display: none;
+}
+
+.payd-v2-actions-result.payd-v2-show { display: block; }
+
+/* Sectors */
+.payd-v2-sector-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 12px;
+}
+
+.payd-v2-sector-card {
+    background: #0F0F11;
+    border: 1px solid #27272A;
+    border-radius: 8px;
+    padding: 16px;
+    position: relative;
+}
+
+.payd-v2-sector-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: #FAFAFA;
+    margin: 0 0 4px;
+}
+
+.payd-v2-sector-counts {
+    font-size: 12px;
+    color: #A1A1AA;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.payd-v2-sector-bar {
+    margin-top: 12px;
+    height: 4px;
+    background: #18181B;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+.payd-v2-sector-bar-fill {
+    height: 100%;
+    background: linear-gradient(90deg, #7B61FF 0%, #D4AF37 100%);
+    transition: width 0.4s;
+}
+
+.payd-v2-sector-status {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 2px 6px;
+    border-radius: 3px;
+}
+
+.payd-v2-sector-status.payd-v2-status-good {
+    background: rgba(34, 197, 94, 0.15);
+    color: #22c55e;
+}
+
+.payd-v2-sector-status.payd-v2-status-warn {
+    background: rgba(234, 179, 8, 0.15);
+    color: #eab308;
+}
+
+.payd-v2-sector-status.payd-v2-status-bad {
+    background: rgba(239, 68, 68, 0.15);
+    color: #ef4444;
+}
+
+/* Filters */
+.payd-v2-filters {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 16px;
+}
+
+.payd-v2-filter {
+    padding: 6px 14px;
+    background: transparent;
+    color: #A1A1AA;
+    border: 1px solid #27272A;
+    border-radius: 6px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.payd-v2-filter:hover {
+    color: #FAFAFA;
+    border-color: #3F3F46;
+}
+
+.payd-v2-filter-active {
+    background: #7B61FF;
+    color: #FAFAFA;
+    border-color: #7B61FF;
+}
+
+/* Projects */
+.payd-v2-projects {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 12px;
+}
+
+.payd-v2-project-card {
+    background: #0F0F11;
+    border: 1px solid #27272A;
+    border-radius: 10px;
+    padding: 16px;
+    transition: all 0.2s;
+    position: relative;
+}
+
+.payd-v2-project-card:hover {
+    border-color: #3F3F46;
+    transform: translateY(-2px);
+}
+
+.payd-v2-project-header {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 8px;
+    margin-bottom: 8px;
+}
+
+.payd-v2-project-ticker {
+    font-size: 16px;
+    font-weight: 700;
+    color: #D4AF37;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+.payd-v2-project-name {
+    font-size: 13px;
+    color: #A1A1AA;
+    margin: 2px 0 0;
+}
+
+.payd-v2-project-description {
+    margin: 8px 0 0;
+    font-size: 12px;
+    line-height: 1.4;
+    color: #A1A1AA;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.payd-v2-project-sector {
+    font-size: 10px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    color: #7B61FF;
+    margin-top: 8px;
+    display: inline-block;
+    padding: 2px 8px;
+    background: rgba(123, 97, 255, 0.1);
+    border-radius: 3px;
+}
+
+.payd-v2-status-badge {
+    display: inline-block;
+    padding: 3px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    white-space: nowrap;
+}
+
+.payd-v2-status-emerging {
+    background: rgba(156, 163, 175, 0.2);
+    color: #9CA3AF;
+}
+
+.payd-v2-status-watchlist {
+    background: rgba(59, 130, 246, 0.2);
+    color: #3B82F6;
+}
+
+.payd-v2-status-core {
+    background: rgba(16, 185, 129, 0.2);
+    color: #10B981;
+}
+
+.payd-v2-status-archive {
+    background: rgba(107, 114, 128, 0.2);
+    color: #6B7280;
+}
+
+.payd-v2-project-scores {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    flex-wrap: wrap;
+}
+
+.payd-v2-score-chip {
+    padding: 3px 8px;
+    background: #18181B;
+    border-radius: 4px;
+    font-size: 11px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #A1A1AA;
+}
+
+.payd-v2-score-chip strong {
+    color: #D4AF37;
+}
+
+/* Timeline */
+.payd-v2-timeline {
+    border-left: 2px solid #27272A;
+    padding-left: 24px;
+}
+
+.payd-v2-timeline-empty {
+    color: #71717A;
+    font-size: 13px;
+    padding: 12px 0;
+}
+
+.payd-v2-timeline-item {
+    position: relative;
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(39, 39, 42, 0.5);
+}
+
+.payd-v2-timeline-item:last-child { border-bottom: none; }
+
+.payd-v2-timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -31px;
+    top: 18px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #7B61FF;
+    border: 2px solid #050505;
+}
+
+.payd-v2-timeline-from {
+    font-size: 11px;
+    color: #71717A;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin: 0 0 4px;
+}
+
+.payd-v2-timeline-arrow {
+    color: #D4AF37;
+    margin: 0 8px;
+}
+
+.payd-v2-timeline-to {
+    color: #22c55e;
+    font-weight: 600;
+}
+
+.payd-v2-timeline-to.payd-v2-to-archive { color: #ef4444; }
+.payd-v2-timeline-to.payd-v2-to-emerging { color: #9CA3AF; }
+
+.payd-v2-timeline-reason {
+    margin: 6px 0 0;
+    font-size: 13px;
+    color: #A1A1AA;
+}
+
+.payd-v2-timeline-time {
+    margin-top: 4px;
+    font-size: 11px;
+    color: #52525B;
+    font-family: 'JetBrains Mono', monospace;
+}
+
+/* Footer */
+.payd-v2-footer {
+    border-top: 1px solid #27272A;
+    padding: 24px;
+    text-align: center;
+    font-size: 12px;
+    color: #71717A;
+    margin-top: 48px;
+}
+
+.payd-v2-footer code {
+    background: #18181B;
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'JetBrains Mono', monospace;
+    color: #D4AF37;
+}
+
+.payd-v2-footer-hint {
+    margin-top: 4px;
+    color: #52525B;
+}
+
+@media (max-width: 640px) {
+    .payd-v2-header-inner { flex-direction: column; align-items: flex-start; }
+    .payd-v2-stat-value { font-size: 28px; }
+}
+
+/* =================================================================
+   AUTOMATED INTELLIGENCE UPDATE ENGINE — Pipeline UI Styles
+   ================================================================= */
+
+.payd-v2-pipeline-section {
+    background: linear-gradient(180deg, #0A0A0C 0%, #050505 100%);
+    border: 1px solid #1F2937;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 24px;
+}
+
+.payd-v2-pipeline-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 12px;
+    margin: 16px 0;
+}
+
+.payd-v2-pipeline-card {
+    background: rgba(17, 24, 39, 0.6);
+    border: 1px solid #1F2937;
+    border-radius: 8px;
+    padding: 16px;
+    transition: all 0.2s;
+}
+
+.payd-v2-pipeline-card:hover {
+    border-color: #3B82F6;
+    background: rgba(17, 24, 39, 0.9);
+}
+
+.payd-v2-pipeline-card-title {
+    font-size: 12px;
+    color: #9CA3AF;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    margin-bottom: 8px;
+}
+
+.payd-v2-pipeline-card-value {
+    font-size: 18px;
+    font-weight: 600;
+    color: #FAFAFA;
+    margin-bottom: 4px;
+}
+
+.payd-v2-pipeline-card-sub {
+    font-size: 12px;
+    color: #6B7280;
+}
+
+.payd-v2-pipeline-actions {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+}
+
+.payd-v2-btn {
+    background: #1F2937;
+    color: #FAFAFA;
+    border: 1px solid #374151;
+    border-radius: 6px;
+    padding: 10px 16px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.15s;
+}
+
+.payd-v2-btn:hover:not(:disabled) {
+    background: #374151;
+    border-color: #4B5563;
+}
+
+.payd-v2-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.payd-v2-btn-primary {
+    background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+    border-color: #2563EB;
+}
+
+.payd-v2-btn-primary:hover:not(:disabled) {
+    background: linear-gradient(135deg, #60A5FA 0%, #3B82F6 100%);
+}
+
+.payd-v2-btn-secondary {
+    background: #047857;
+    border-color: #065F46;
+}
+
+.payd-v2-btn-secondary:hover:not(:disabled) {
+    background: #059669;
+}
+
+.payd-v2-btn-ghost {
+    background: transparent;
+    border-color: #4B5563;
+}
+
+/* Latest Intelligence */
+.payd-v2-intel-section {
+    background: rgba(17, 24, 39, 0.4);
+    border: 1px solid #1F2937;
+    border-radius: 8px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.payd-v2-intel-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid #1F2937;
+}
+
+.payd-v2-intel-icon {
+    font-size: 20px;
+}
+
+.payd-v2-intel-title {
+    font-size: 15px;
+    font-weight: 600;
+    color: #FAFAFA;
+    flex: 1;
+}
+
+.payd-v2-intel-time {
+    font-size: 12px;
+    color: #6B7280;
+}
+
+.payd-v2-intel-summary {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-size: 13px;
+    color: #D1D5DB;
+}
+
+.payd-v2-intel-summary strong {
+    color: #FAFAFA;
+}
+
+.payd-v2-intel-list {
+    margin-top: 8px;
+}
+
+.payd-v2-intel-list-title {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #9CA3AF;
+    margin-bottom: 8px;
+    letter-spacing: 0.5px;
+}
+
+.payd-v2-intel-list-item {
+    padding: 8px 0;
+    border-bottom: 1px solid rgba(31, 41, 55, 0.5);
+    font-size: 14px;
+    color: #E5E7EB;
+}
+
+.payd-v2-intel-list-item:last-child {
+    border-bottom: none;
+}
+
+.payd-v2-intel-list-item strong {
+    color: #FAFAFA;
+    margin-right: 8px;
+}
+
+.payd-v2-tier-a {
+    display: inline-block;
+    background: #047857;
+    color: #D1FAE5;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.payd-v2-tier-b {
+    display: inline-block;
+    background: #1E40AF;
+    color: #DBEAFE;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.payd-v2-tier-c {
+    display: inline-block;
+    background: #6B7280;
+    color: #F3F4F6;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 11px;
+    font-weight: 700;
+    margin-right: 8px;
+}
+
+.payd-v2-sector-leader-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 6px 0;
+    border-bottom: 1px solid rgba(31, 41, 55, 0.5);
+    font-size: 13px;
+}
+
+.payd-v2-sector-leader-sector {
+    background: #1F2937;
+    color: #93C5FD;
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 12px;
+    text-transform: capitalize;
+    min-width: 100px;
+}
+
+.payd-v2-sector-leader-names {
+    color: #E5E7EB;
+    flex: 1;
+}
+
+.payd-v2-intel-count {
+    font-size: 14px;
+    color: #FAFAFA;
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+.payd-v2-project-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-top: 8px;
+}
+
+.payd-v2-project-chip {
+    background: #1F2937;
+    color: #D1D5DB;
+    padding: 4px 10px;
+    border-radius: 12px;
+    font-size: 12px;
+    border: 1px solid #374151;
+}
+
+.payd-v2-empty {
+    color: #6B7280;
+    font-size: 13px;
+    padding: 12px 0;
+    font-style: italic;
+}
+
+.payd-v2-loading {
+    color: #6B7280;
+    font-size: 14px;
+    padding: 12px 0;
+}
+
+@media (max-width: 768px) {
+    .payd-v2-pipeline-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .payd-v2-pipeline-actions {
+        flex-direction: column;
+    }
+    .payd-v2-pipeline-actions .payd-v2-btn {
+        width: 100%;
+    }
+}

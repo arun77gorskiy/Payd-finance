@@ -1,0 +1,5737 @@
+{
+  "zero-gravity": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "Insufficient data or low confidence to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "zero-gravity",
+      "name": "zero-gravity",
+      "symbol": "0G",
+      "sector": "ai"
+    }
+  },
+  "singularitynet": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 50 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.63x suggests 0.63x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "singularitynet",
+      "name": "singularitynet",
+      "symbol": "AGIX",
+      "sector": "ai"
+    }
+  },
+  "gensyn": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 84 justifies holding current position (risk: 73)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 7.66x suggests 6.66x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "gensyn",
+      "name": "gensyn",
+      "symbol": "AI",
+      "sector": "ai"
+    }
+  },
+  "aioz-network": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 61 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "aioz-network",
+      "name": "aioz-network",
+      "symbol": "AIOZ",
+      "sector": "ai"
+    }
+  },
+  "akash": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 59 justifies holding current position (risk: 82)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "akash",
+      "name": "akash",
+      "symbol": "AKT",
+      "sector": "ai"
+    }
+  },
+  "alethea-ai": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 51 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "alethea-ai",
+      "name": "alethea-ai",
+      "symbol": "ALI",
+      "sector": "ai"
+    }
+  },
+  "allora": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 85 justifies holding current position (risk: 70)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 3.28x suggests 2.28x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "allora",
+      "name": "allora",
+      "symbol": "ALLO",
+      "sector": "ai"
+    }
+  },
+  "aethir": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 74 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.09x suggests 1.09x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "aethir",
+      "name": "aethir",
+      "symbol": "ATH",
+      "sector": "ai"
+    }
+  },
+  "botto": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Watchlist",
+      "short": "WATCHLIST",
+      "color": "orange",
+      "reasoning": "Payd 47 warrants monitoring for improving fundamentals (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.04x suggests 1.04x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "botto",
+      "name": "botto",
+      "symbol": "BOTTO",
+      "sector": "ai"
+    }
+  },
+  "carv": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 84 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.64x suggests 0.64x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "carv",
+      "name": "carv",
+      "symbol": "CARV",
+      "sector": "ai"
+    }
+  },
+  "chaingpt": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 85 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "chaingpt",
+      "name": "chaingpt",
+      "symbol": "CGPT",
+      "sector": "ai"
+    }
+  },
+  "chainopera-ai": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 66 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 5.32x suggests 4.32x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "chainopera-ai",
+      "name": "chainopera-ai",
+      "symbol": "COAI",
+      "sector": "ai"
+    }
+  },
+  "cortex": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 53 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.26x suggests 0.26x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "cortex",
+      "name": "cortex",
+      "symbol": "CTXC",
+      "sector": "ai"
+    }
+  },
+  "eigenlayer": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 74 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.46x suggests 1.46x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "eigenlayer",
+      "name": "eigenlayer",
+      "symbol": "EIGEN",
+      "sector": "ai"
+    }
+  },
+  "fetch-ai": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 64 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.21x suggests 0.21x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "fetch-ai",
+      "name": "fetch-ai",
+      "symbol": "FET",
+      "sector": "ai"
+    }
+  },
+  "golem": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Watchlist",
+      "short": "WATCHLIST",
+      "color": "orange",
+      "reasoning": "Payd 48 warrants monitoring for improving fundamentals (risk: 81)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "golem",
+      "name": "golem",
+      "symbol": "GLM",
+      "sector": "ai"
+    }
+  },
+  "the-graph": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 68 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "the-graph",
+      "name": "the-graph",
+      "symbol": "GRT",
+      "sector": "ai"
+    }
+  },
+  "story-protocol": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 59 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.89x suggests 1.89x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "story-protocol",
+      "name": "story-protocol",
+      "symbol": "IP",
+      "sector": "ai"
+    }
+  },
+  "kaito": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 76 justifies holding current position (risk: 68)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 4.14x suggests 3.14x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "kaito",
+      "name": "kaito",
+      "symbol": "KAITO",
+      "sector": "ai"
+    }
+  },
+  "lagrange": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 80 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 5.18x suggests 4.18x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "whale_activity",
+        "sentiment": "unknown",
+        "magnitude": "high",
+        "evidence": "High turnover ratio (918%) suggests unusual trading activity.",
+        "timing": "recent",
+        "confidence": "low",
+        "source": "market.volume_24h_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "lagrange",
+      "name": "lagrange",
+      "symbol": "LA",
+      "sector": "ai"
+    }
+  },
+  "morpheusai": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 51 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "morpheusai",
+      "name": "morpheusai",
+      "symbol": "MOR",
+      "sector": "ai"
+    }
+  },
+  "nillion": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 82 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.05x suggests 1.05x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "nillion",
+      "name": "nillion",
+      "symbol": "NIL",
+      "sector": "ai"
+    }
+  },
+  "numerai": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 58 justifies holding current position (risk: 80)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.51x suggests 0.51x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "numerai",
+      "name": "numerai",
+      "symbol": "NMR",
+      "sector": "ai"
+    }
+  },
+  "netmind": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Watchlist",
+      "short": "WATCHLIST",
+      "color": "orange",
+      "reasoning": "Payd 48 warrants monitoring for improving fundamentals (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.32x suggests 1.32x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "netmind",
+      "name": "netmind",
+      "symbol": "NMT",
+      "sector": "ai"
+    }
+  },
+  "nosana": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 52 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "nosana",
+      "name": "nosana",
+      "symbol": "NOS",
+      "sector": "ai"
+    }
+  },
+  "ocean-protocol": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 51 justifies holding current position (risk: 82)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "ocean-protocol",
+      "name": "ocean-protocol",
+      "symbol": "OCEAN",
+      "sector": "ai"
+    }
+  },
+  "autonolas": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 52 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.75x suggests 0.75x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "autonolas",
+      "name": "autonolas",
+      "symbol": "OLAS",
+      "sector": "ai"
+    }
+  },
+  "paal-ai": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 81 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "whale_activity",
+        "sentiment": "unknown",
+        "magnitude": "medium",
+        "evidence": "High turnover ratio (62%) suggests unusual trading activity.",
+        "timing": "recent",
+        "confidence": "low",
+        "source": "market.volume_24h_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "paal-ai",
+      "name": "paal-ai",
+      "symbol": "PAAL",
+      "sector": "ai"
+    }
+  },
+  "iexec-rlc": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 62 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.20x suggests 0.20x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "iexec-rlc",
+      "name": "iexec-rlc",
+      "symbol": "RLC",
+      "sector": "ai"
+    }
+  },
+  "sahara-ai": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 85 justifies holding current position (risk: 82)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.86x suggests 1.86x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "sahara-ai",
+      "name": "sahara-ai",
+      "symbol": "SAHARA",
+      "sector": "ai"
+    }
+  },
+  "sapien": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 79 justifies holding current position (risk: 78)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 4.00x suggests 3.00x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "sapien",
+      "name": "sapien",
+      "symbol": "SAPIEN",
+      "sector": "ai"
+    }
+  },
+  "sentient": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 74 justifies holding current position (risk: 71)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 4.75x suggests 3.75x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "sentient",
+      "name": "sentient",
+      "symbol": "SENT",
+      "sector": "ai"
+    }
+  },
+  "synesis-one": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "Insufficient data or low confidence to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "synesis-one",
+      "name": "synesis-one",
+      "symbol": "SNS",
+      "sector": "ai"
+    }
+  },
+  "theta": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 57 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "theta",
+      "name": "theta",
+      "symbol": "THETA",
+      "sector": "ai"
+    }
+  },
+  "origintrail": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 66 justifies holding current position (risk: 81)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "origintrail",
+      "name": "origintrail",
+      "symbol": "TRAC",
+      "sector": "ai"
+    }
+  },
+  "vana": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 60 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 3.90x suggests 2.90x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "vana",
+      "name": "vana",
+      "symbol": "VANA",
+      "sector": "ai"
+    }
+  },
+  "virtuals-protocol": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 88 justifies holding current position (risk: 78)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.52x suggests 0.52x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "virtuals-protocol",
+      "name": "virtuals-protocol",
+      "symbol": "VIRTUAL",
+      "sector": "ai"
+    }
+  },
+  "venice-token": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Accumulation",
+      "short": "ACCUMULATION",
+      "color": "cyan",
+      "reasoning": "Payd 63 supports gradual accumulation within risk limits (57)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.70x suggests 0.70x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "AI sector narrative continues to drive capital flows.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "AI is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "venice-token",
+      "name": "venice-token",
+      "symbol": "VVV",
+      "sector": "ai"
+    }
+  },
+  "1inch": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 69 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "1inch",
+      "name": "1inch",
+      "symbol": "1INCH",
+      "sector": "defi"
+    }
+  },
+  "aave": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 80 justifies holding current position (risk: 78)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "ecosystem_expansion",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "Deployed across 22 networks — strong multi-chain presence.",
+        "timing": "ongoing",
+        "confidence": "high",
+        "source": "protocol.chains"
+      },
+      {
+        "type": "institutional_adoption",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "TVL of $13.80B suggests institutional participation.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "protocol.tvl_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "aave",
+      "name": "aave",
+      "symbol": "AAVE",
+      "sector": "defi"
+    }
+  },
+  "balancer": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 62 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "ecosystem_expansion",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "Deployed across 9 networks — strong multi-chain presence.",
+        "timing": "ongoing",
+        "confidence": "high",
+        "source": "protocol.chains"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "balancer",
+      "name": "balancer",
+      "symbol": "BAL",
+      "sector": "defi"
+    }
+  },
+  "beefy": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 55 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "ecosystem_expansion",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "Deployed across 40 networks — strong multi-chain presence.",
+        "timing": "ongoing",
+        "confidence": "high",
+        "source": "protocol.chains"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "beefy",
+      "name": "beefy",
+      "symbol": "BIFI",
+      "sector": "defi"
+    }
+  },
+  "pancakeswap-token": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 66 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "pancakeswap-token",
+      "name": "pancakeswap-token",
+      "symbol": "CAKE",
+      "sector": "defi"
+    }
+  },
+  "compound-governance-token": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 70 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "ecosystem_expansion",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "Deployed across 9 networks — strong multi-chain presence.",
+        "timing": "ongoing",
+        "confidence": "high",
+        "source": "protocol.chains"
+      },
+      {
+        "type": "institutional_adoption",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "TVL of $1.17B suggests institutional participation.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "protocol.tvl_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "compound-governance-token",
+      "name": "compound-governance-token",
+      "symbol": "COMP",
+      "sector": "defi"
+    }
+  },
+  "credix": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "Insufficient data or low confidence to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "credix",
+      "name": "credix",
+      "symbol": "CRED",
+      "sector": "defi"
+    }
+  },
+  "curve-dao-token": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 67 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.56x suggests 0.56x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "curve-dao-token",
+      "name": "curve-dao-token",
+      "symbol": "CRV",
+      "sector": "defi"
+    }
+  },
+  "convex-finance": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 63 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "convex-finance",
+      "name": "convex-finance",
+      "symbol": "CVX",
+      "sector": "defi"
+    }
+  },
+  "dopex": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "Insufficient data or low confidence to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "dopex",
+      "name": "dopex",
+      "symbol": "DPX",
+      "sector": "defi"
+    }
+  },
+  "drift-protocol": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 83 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.64x suggests 0.64x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "drift-protocol",
+      "name": "drift-protocol",
+      "symbol": "DRIFT",
+      "sector": "defi"
+    }
+  },
+  "dydx": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 82 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 26.98x suggests 25.98x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "whale_activity",
+        "sentiment": "unknown",
+        "magnitude": "high",
+        "evidence": "High turnover ratio (112%) suggests unusual trading activity.",
+        "timing": "recent",
+        "confidence": "low",
+        "source": "market.volume_24h_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "dydx",
+      "name": "dydx",
+      "symbol": "DYDX",
+      "sector": "defi"
+    }
+  },
+  "euler": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 67 justifies holding current position (risk: 82)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "euler",
+      "name": "euler",
+      "symbol": "EUL",
+      "sector": "defi"
+    }
+  },
+  "frax-finance": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Accumulation",
+      "short": "ACCUMULATION",
+      "color": "cyan",
+      "reasoning": "Payd 62 supports gradual accumulation within risk limits (50)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "frax-finance",
+      "name": "frax-finance",
+      "symbol": "FRAX",
+      "sector": "defi"
+    }
+  },
+  "frax": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Accumulation",
+      "short": "ACCUMULATION",
+      "color": "cyan",
+      "reasoning": "Payd 62 supports gradual accumulation within risk limits (50)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "frax",
+      "name": "frax",
+      "symbol": "FXS",
+      "sector": "defi"
+    }
+  },
+  "gmx": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 62 justifies holding current position (risk: 81)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "gmx",
+      "name": "gmx",
+      "symbol": "GMX",
+      "sector": "defi"
+    }
+  },
+  "hyperliquid": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Accumulation",
+      "short": "ACCUMULATION",
+      "color": "cyan",
+      "reasoning": "Payd 66 supports gradual accumulation within risk limits (38)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 4.29x suggests 3.29x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "hyperliquid",
+      "name": "hyperliquid",
+      "symbol": "HYPE",
+      "sector": "defi"
+    }
+  },
+  "instadapp": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 58 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.27x suggests 0.27x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "instadapp",
+      "name": "instadapp",
+      "symbol": "INST",
+      "sector": "defi"
+    }
+  },
+  "jupiter-exchange-solana": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 64 justifies holding current position (risk: 80)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.07x suggests 1.07x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "jupiter-exchange-solana",
+      "name": "jupiter-exchange-solana",
+      "symbol": "JUP",
+      "sector": "defi"
+    }
+  },
+  "kamino": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "Insufficient data or low confidence to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "kamino",
+      "name": "kamino",
+      "symbol": "KMNO",
+      "sector": "defi"
+    }
+  },
+  "lido-dao": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 78 justifies holding current position (risk: 82)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "ecosystem_expansion",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "Deployed across 5 networks — strong multi-chain presence.",
+        "timing": "ongoing",
+        "confidence": "high",
+        "source": "protocol.chains"
+      },
+      {
+        "type": "institutional_adoption",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "TVL of $17.77B suggests institutional participation.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "protocol.tvl_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "lido-dao",
+      "name": "lido-dao",
+      "symbol": "LDO",
+      "sector": "defi"
+    }
+  },
+  "lyra-finance": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "Insufficient data or low confidence to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "lyra-finance",
+      "name": "lyra-finance",
+      "symbol": "LYRA",
+      "sector": "defi"
+    }
+  },
+  "mango": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "Insufficient data or low confidence to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "mango",
+      "name": "mango",
+      "symbol": "MNGO",
+      "sector": "defi"
+    }
+  },
+  "morpho": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 59 justifies holding current position (risk: 61)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.53x suggests 0.53x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "morpho",
+      "name": "morpho",
+      "symbol": "MORPHO",
+      "sector": "defi"
+    }
+  },
+  "orca": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 76 justifies holding current position (risk: 82)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.23x suggests 0.23x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "orca",
+      "name": "orca",
+      "symbol": "ORCA",
+      "sector": "defi"
+    }
+  },
+  "origin-dollar": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 54 justifies holding current position (risk: 78)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "origin-dollar",
+      "name": "origin-dollar",
+      "symbol": "OUSD",
+      "sector": "defi"
+    }
+  },
+  "pendle": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 72 justifies holding current position (risk: 74)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.64x suggests 0.64x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "ecosystem_expansion",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "Deployed across 12 networks — strong multi-chain presence.",
+        "timing": "ongoing",
+        "confidence": "high",
+        "source": "protocol.chains"
+      },
+      {
+        "type": "institutional_adoption",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "TVL of $1.16B suggests institutional participation.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "protocol.tvl_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "pendle",
+      "name": "pendle",
+      "symbol": "PENDLE",
+      "sector": "defi"
+    }
+  },
+  "quickswap": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 51 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.35x suggests 0.35x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "quickswap",
+      "name": "quickswap",
+      "symbol": "QUICK",
+      "sector": "defi"
+    }
+  },
+  "raydium": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 64 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.06x suggests 1.06x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "raydium",
+      "name": "raydium",
+      "symbol": "RAY",
+      "sector": "defi"
+    }
+  },
+  "ribbon-finance": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Watchlist",
+      "short": "WATCHLIST",
+      "color": "orange",
+      "reasoning": "Payd 47 warrants monitoring for improving fundamentals (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 12.07x suggests 11.07x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "ribbon-finance",
+      "name": "ribbon-finance",
+      "symbol": "RBN",
+      "sector": "defi"
+    }
+  },
+  "rocket-pool-eth": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 66 justifies holding current position (risk: 65)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "institutional_adoption",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "TVL of $1.02B suggests institutional participation.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "protocol.tvl_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "rocket-pool-eth",
+      "name": "rocket-pool-eth",
+      "symbol": "RPL",
+      "sector": "defi"
+    }
+  },
+  "thorchain": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 76 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "thorchain",
+      "name": "thorchain",
+      "symbol": "RUNE",
+      "sector": "defi"
+    }
+  },
+  "synthetix": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 76 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "synthetix",
+      "name": "synthetix",
+      "symbol": "SNX",
+      "sector": "defi"
+    }
+  },
+  "spark": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 86 justifies holding current position (risk: 80)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 3.32x suggests 2.32x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "spark",
+      "name": "spark",
+      "symbol": "SPK",
+      "sector": "defi"
+    }
+  },
+  "stargate": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Avoid",
+      "short": "AVOID",
+      "color": "red",
+      "reasoning": "Elevated risk profile (85) outweighs opportunity."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "stargate",
+      "name": "stargate",
+      "symbol": "STG",
+      "sector": "defi"
+    }
+  },
+  "sushi": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 79 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "sushi",
+      "name": "sushi",
+      "symbol": "SUSHI",
+      "sector": "defi"
+    }
+  },
+  "synapse": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 80 justifies holding current position (risk: 83)."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "synapse",
+      "name": "synapse",
+      "symbol": "SYN",
+      "sector": "defi"
+    }
+  },
+  "uniswap": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 76 justifies holding current position (risk: 78)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.43x suggests 0.43x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "ecosystem_expansion",
+        "sentiment": "positive",
+        "magnitude": "high",
+        "evidence": "Deployed across 45 networks — strong multi-chain presence.",
+        "timing": "ongoing",
+        "confidence": "high",
+        "source": "protocol.chains"
+      },
+      {
+        "type": "institutional_adoption",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "TVL of $1.52B suggests institutional participation.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "protocol.tvl_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "uniswap",
+      "name": "uniswap",
+      "symbol": "UNI",
+      "sector": "defi"
+    }
+  },
+  "wormhole": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 70 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.62x suggests 0.62x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "wormhole",
+      "name": "wormhole",
+      "symbol": "W",
+      "sector": "defi"
+    }
+  },
+  "venus": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 55 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.76x suggests 0.76x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "venus",
+      "name": "venus",
+      "symbol": "XVS",
+      "sector": "defi"
+    }
+  },
+  "yearn-finance": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 62 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "ecosystem_expansion",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "Deployed across 7 networks — strong multi-chain presence.",
+        "timing": "ongoing",
+        "confidence": "high",
+        "source": "protocol.chains"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "yearn-finance",
+      "name": "yearn-finance",
+      "symbol": "YFI",
+      "sector": "defi"
+    }
+  },
+  "akash-network": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 59 justifies holding current position (risk: 82)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "akash-network",
+      "name": "akash-network",
+      "symbol": "AKT",
+      "sector": "depin"
+    }
+  },
+  "aleph-im": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "Insufficient data or low confidence to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "aleph-im",
+      "name": "aleph-im",
+      "symbol": "ALEPH",
+      "sector": "depin"
+    }
+  },
+  "ankr-network": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "Insufficient data or low confidence to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "ecosystem_expansion",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "Deployed across 8 networks — strong multi-chain presence.",
+        "timing": "ongoing",
+        "confidence": "high",
+        "source": "protocol.chains"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "ankr-network",
+      "name": "ankr-network",
+      "symbol": "ANKR",
+      "sector": "depin"
+    }
+  },
+  "arweave": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 67 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "arweave",
+      "name": "arweave",
+      "symbol": "AR",
+      "sector": "depin"
+    }
+  },
+  "swarm": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "Insufficient data or low confidence to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "swarm",
+      "name": "swarm",
+      "symbol": "BZZ",
+      "sector": "depin"
+    }
+  },
+  "cess": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 50 justifies holding current position (risk: 82)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 3.77x suggests 2.77x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "cess",
+      "name": "cess",
+      "symbol": "CESS",
+      "sector": "depin"
+    }
+  },
+  "crust-network": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Watchlist",
+      "short": "WATCHLIST",
+      "color": "orange",
+      "reasoning": "Payd 42 warrants monitoring for improving fundamentals (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.31x suggests 0.31x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "crust-network",
+      "name": "crust-network",
+      "symbol": "CRU",
+      "sector": "depin"
+    }
+  },
+  "streamr": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Watchlist",
+      "short": "WATCHLIST",
+      "color": "orange",
+      "reasoning": "Payd 46 warrants monitoring for improving fundamentals (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "streamr",
+      "name": "streamr",
+      "symbol": "DATA",
+      "sector": "depin"
+    }
+  },
+  "dimo": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Watchlist",
+      "short": "WATCHLIST",
+      "color": "orange",
+      "reasoning": "Payd 49 warrants monitoring for improving fundamentals (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.00x suggests 1.00x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "dimo",
+      "name": "dimo",
+      "symbol": "DIMO",
+      "sector": "depin"
+    }
+  },
+  "deeper-network": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Avoid",
+      "short": "AVOID",
+      "color": "red",
+      "reasoning": "Elevated risk profile (85) outweighs opportunity."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "deeper-network",
+      "name": "deeper-network",
+      "symbol": "DPR",
+      "sector": "depin"
+    }
+  },
+  "sentinel": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Watchlist",
+      "short": "WATCHLIST",
+      "color": "orange",
+      "reasoning": "Payd 49 warrants monitoring for improving fundamentals (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "sentinel",
+      "name": "sentinel",
+      "symbol": "DVPN",
+      "sector": "depin"
+    }
+  },
+  "flux": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Avoid",
+      "short": "AVOID",
+      "color": "red",
+      "reasoning": "Elevated risk profile (85) outweighs opportunity."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "flux",
+      "name": "flux",
+      "symbol": "FLUX",
+      "sector": "depin"
+    }
+  },
+  "geodnet": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 54 justifies holding current position (risk: 60)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.12x suggests 1.12x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "geodnet",
+      "name": "geodnet",
+      "symbol": "GEOD",
+      "sector": "depin"
+    }
+  },
+  "grass": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 74 justifies holding current position (risk: 80)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.58x suggests 0.58x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "grass",
+      "name": "grass",
+      "symbol": "GRASS",
+      "sector": "depin"
+    }
+  },
+  "helium": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 81 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "helium",
+      "name": "helium",
+      "symbol": "HNT",
+      "sector": "depin"
+    }
+  },
+  "hivemapper": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 54 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "hivemapper",
+      "name": "hivemapper",
+      "symbol": "HONEY",
+      "sector": "depin"
+    }
+  },
+  "iagon": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 55 justifies holding current position (risk: 82)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.66x suggests 1.66x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "iagon",
+      "name": "iagon",
+      "symbol": "IAG",
+      "sector": "depin"
+    }
+  },
+  "iotex": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 63 justifies holding current position (risk: 85)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "iotex",
+      "name": "iotex",
+      "symbol": "IOTX",
+      "sector": "depin"
+    }
+  },
+  "livepeer": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 57 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "livepeer",
+      "name": "livepeer",
+      "symbol": "LPT",
+      "sector": "depin"
+    }
+  },
+  "mxc": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Avoid",
+      "short": "AVOID",
+      "color": "red",
+      "reasoning": "Elevated risk profile (85) outweighs opportunity."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "mxc",
+      "name": "mxc",
+      "symbol": "MXC",
+      "sector": "depin"
+    }
+  },
+  "mysterium": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Hold",
+      "short": "HOLD",
+      "color": "yellow",
+      "reasoning": "Payd 53 justifies holding current position (risk: 84)."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "mysterium",
+      "name": "mysterium",
+      "symbol": "MYST",
+      "sector": "depin"
+    }
+  },
+  "nodle-network": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "nodle-network",
+      "name": "nodle-network",
+      "symbol": "NODL",
+      "sector": "depin"
+    }
+  },
+  "nubila": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 5.43x suggests 4.43x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "nubila",
+      "name": "nubila",
+      "symbol": "NUB",
+      "sector": "depin"
+    }
+  },
+  "pollen-mobile": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.77x suggests 0.77x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "pollen-mobile",
+      "name": "pollen-mobile",
+      "symbol": "PCN",
+      "sector": "depin"
+    }
+  },
+  "peaq": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.85x suggests 0.85x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "peaq",
+      "name": "peaq",
+      "symbol": "PEAQ",
+      "sector": "depin"
+    }
+  },
+  "phala": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "phala",
+      "name": "phala",
+      "symbol": "PHA",
+      "sector": "depin"
+    }
+  },
+  "powerpod": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "powerpod",
+      "name": "powerpod",
+      "symbol": "POD",
+      "sector": "depin"
+    }
+  },
+  "render": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "render",
+      "name": "render",
+      "symbol": "RENDER",
+      "sector": "depin"
+    }
+  },
+  "siacoin": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "siacoin",
+      "name": "siacoin",
+      "symbol": "SC",
+      "sector": "depin"
+    }
+  },
+  "storj": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.96x suggests 1.96x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      },
+      {
+        "type": "whale_activity",
+        "sentiment": "unknown",
+        "magnitude": "medium",
+        "evidence": "High turnover ratio (57%) suggests unusual trading activity.",
+        "timing": "recent",
+        "confidence": "low",
+        "source": "market.volume_24h_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "storj",
+      "name": "storj",
+      "symbol": "STORJ",
+      "sector": "depin"
+    }
+  },
+  "thingsix": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "thingsix",
+      "name": "thingsix",
+      "symbol": "THIX",
+      "sector": "depin"
+    }
+  },
+  "wayru": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "wayru",
+      "name": "wayru",
+      "symbol": "WAYRU",
+      "sector": "depin"
+    }
+  },
+  "world-mobile-token": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.35x suggests 1.35x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      },
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "world-mobile-token",
+      "name": "world-mobile-token",
+      "symbol": "WMTX",
+      "sector": "depin"
+    }
+  },
+  "weatherxm": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "narrative_momentum",
+        "sentiment": "positive",
+        "magnitude": "medium",
+        "evidence": "DEPIN is currently a hot narrative in the market.",
+        "timing": "current",
+        "confidence": "medium",
+        "source": "sector"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "weatherxm",
+      "name": "weatherxm",
+      "symbol": "WXM",
+      "sector": "depin"
+    }
+  },
+  "aether": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "aether",
+      "name": "aether",
+      "symbol": "AET",
+      "sector": "desci"
+    }
+  },
+  "agora-health": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "agora-health",
+      "name": "agora-health",
+      "symbol": "AGORA",
+      "sector": "desci"
+    }
+  },
+  "aleo": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.59x suggests 0.59x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "aleo",
+      "name": "aleo",
+      "symbol": "ALEO",
+      "sector": "desci"
+    }
+  },
+  "antidote": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "antidote",
+      "name": "antidote",
+      "symbol": "ANTIDOTE",
+      "sector": "desci"
+    }
+  },
+  "biomapper": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "biomapper",
+      "name": "biomapper",
+      "symbol": "BIO",
+      "sector": "desci"
+    }
+  },
+  "biopset": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "biopset",
+      "name": "biopset",
+      "symbol": "BIOPSET",
+      "sector": "desci"
+    }
+  },
+  "biodao": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "biodao",
+      "name": "biodao",
+      "symbol": "BIOT",
+      "sector": "desci"
+    }
+  },
+  "ceramic": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "ceramic",
+      "name": "ceramic",
+      "symbol": "CERA",
+      "sector": "desci"
+    }
+  },
+  "cere-network": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.51x suggests 0.51x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "cere-network",
+      "name": "cere-network",
+      "symbol": "CERE",
+      "sector": "desci"
+    }
+  },
+  "cryogenseed": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "cryogenseed",
+      "name": "cryogenseed",
+      "symbol": "CGS",
+      "sector": "desci"
+    }
+  },
+  "corusdao": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "corusdao",
+      "name": "corusdao",
+      "symbol": "COR",
+      "sector": "desci"
+    }
+  },
+  "covalent": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "covalent",
+      "name": "covalent",
+      "symbol": "CQT",
+      "sector": "desci"
+    }
+  },
+  "cryoDAO": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.65x suggests 0.65x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "cryoDAO",
+      "name": "cryoDAO",
+      "symbol": "CRYO",
+      "sector": "desci"
+    }
+  },
+  "data-union": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "data-union",
+      "name": "data-union",
+      "symbol": "DUCAT",
+      "sector": "desci"
+    }
+  },
+  "ipfs": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.44x suggests 1.44x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "ipfs",
+      "name": "ipfs",
+      "symbol": "FIL",
+      "sector": "desci"
+    }
+  },
+  "genomesdao": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "genomesdao",
+      "name": "genomesdao",
+      "symbol": "GENE",
+      "sector": "desci"
+    }
+  },
+  "genobank": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "genobank",
+      "name": "genobank",
+      "symbol": "GENE",
+      "sector": "desci"
+    }
+  },
+  "genomesio": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "genomesio",
+      "name": "genomesio",
+      "symbol": "GNOME",
+      "sector": "desci"
+    }
+  },
+  "valleyDAO": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.61x suggests 1.61x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "valleyDAO",
+      "name": "valleyDAO",
+      "symbol": "GROW",
+      "sector": "desci"
+    }
+  },
+  "hairdao": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.18x suggests 1.18x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "hairdao",
+      "name": "hairdao",
+      "symbol": "HAIR",
+      "sector": "desci"
+    }
+  },
+  "idena": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.60x suggests 0.60x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "idena",
+      "name": "idena",
+      "symbol": "IDNA",
+      "sector": "desci"
+    }
+  },
+  "labdao": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "labdao",
+      "name": "labdao",
+      "symbol": "LAB",
+      "sector": "desci"
+    }
+  },
+  "molecule": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "molecule",
+      "name": "molecule",
+      "symbol": "MOL",
+      "sector": "desci"
+    }
+  },
+  "cerebrumdao": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 3.03x suggests 2.03x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "cerebrumdao",
+      "name": "cerebrumdao",
+      "symbol": "NEURO",
+      "sector": "desci"
+    }
+  },
+  "nucleation": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "nucleation",
+      "name": "nucleation",
+      "symbol": "NUCT",
+      "sector": "desci"
+    }
+  },
+  "openlab": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "openlab",
+      "name": "openlab",
+      "symbol": "OPENLAB",
+      "sector": "desci"
+    }
+  },
+  "psilocin": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "psilocin",
+      "name": "psilocin",
+      "symbol": "PSIL",
+      "sector": "desci"
+    }
+  },
+  "researchhub": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "researchhub",
+      "name": "researchhub",
+      "symbol": "RSC",
+      "sector": "desci"
+    }
+  },
+  "rxbio": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "rxbio",
+      "name": "rxbio",
+      "symbol": "RXBIO",
+      "sector": "desci"
+    }
+  },
+  "spheron": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "high",
+        "evidence": "FDV/MCap ratio of 4.54x suggests 3.54x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "spheron",
+      "name": "spheron",
+      "symbol": "SPHN",
+      "sector": "desci"
+    }
+  },
+  "tao": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "medium",
+        "evidence": "FDV/MCap ratio of 2.19x suggests 1.19x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "tao",
+      "name": "tao",
+      "symbol": "TAO",
+      "sector": "desci"
+    }
+  },
+  "vita-dao": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "vita-dao",
+      "name": "vita-dao",
+      "symbol": "VITA",
+      "sector": "desci"
+    }
+  },
+  "my-neighbor-alice": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "whale_activity",
+        "sentiment": "unknown",
+        "magnitude": "high",
+        "evidence": "High turnover ratio (130%) suggests unusual trading activity.",
+        "timing": "recent",
+        "confidence": "low",
+        "source": "market.volume_24h_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "my-neighbor-alice",
+      "name": "my-neighbor-alice",
+      "symbol": "ALICE",
+      "sector": "gaming"
+    }
+  },
+  "alienswap": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "alienswap",
+      "name": "alienswap",
+      "symbol": "ALIEN",
+      "sector": "gaming"
+    }
+  },
+  "apecoin": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "apecoin",
+      "name": "apecoin",
+      "symbol": "APE",
+      "sector": "gaming"
+    }
+  },
+  "otherside": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "otherside",
+      "name": "otherside",
+      "symbol": "APE",
+      "sector": "gaming"
+    }
+  },
+  "star-atlas": {
+    "changes": [],
+    "events": [],
+    "score_deltas": {},
+    "recommendation": {
+      "tier": "Insufficient Data",
+      "short": "INSUFFICIENT",
+      "color": "gray",
+      "reasoning": "No AI analysis available to form recommendation."
+    },
+    "recommendation_change": null,
+    "catalysts": [
+      {
+        "type": "token_unlock",
+        "sentiment": "negative",
+        "magnitude": "low",
+        "evidence": "FDV/MCap ratio of 1.44x suggests 0.44x potential dilution from token unlocks.",
+        "timing": "unknown",
+        "confidence": "medium",
+        "source": "market.fdv_usd"
+      }
+    ],
+    "opinion_change": {
+      "changed": false,
+      "summary": "No significant changes detected.",
+      "details": []
+    },
+    "snapshot_id": "2026-07-22T02-14-55-657Z",
+    "previous_snapshot_id": "2026-07-22T02-11-07-957Z",
+    "_project_meta": {
+      "id": "star-atlas",
+      "name": "star-atlas",
+      "symbol": "ATLAS",
+      "sector": "gaming"
+    }
+  }
+}

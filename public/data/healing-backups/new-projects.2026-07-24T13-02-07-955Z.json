@@ -1,0 +1,2252 @@
+{
+  "timestamp": "2026-07-24T13:02:07.986Z",
+  "count": 20,
+  "projects": [
+    {
+      "id": "zcash",
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "zcash",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:00.737Z",
+      "lastEnrichedAt": "2026-07-24T13:02:00.737Z",
+      "market": {
+        "price_usd": 498.52,
+        "market_cap_usd": 8369743256,
+        "fdv_usd": 8373667032,
+        "circulating_supply": 16784704.8530448,
+        "total_supply": 16792623.6030448,
+        "max_supply": 21000000,
+        "volume_24h_usd": 236571600,
+        "change_24h_pct": -3.6,
+        "change_7d_pct": -7,
+        "change_30d_pct": 18.3,
+        "ath": 3191.93,
+        "ath_change_pct": -84.38173,
+        "atl": 16.08,
+        "market_cap_rank": 15,
+        "image": "https://coin-images.coingecko.com/coins/images/486/large/circle-zcash-color.png?1696501740",
+        "last_updated": "2026-07-24T12:59:20.000Z"
+      },
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": {
+        "tvl_usd": null,
+        "category": null,
+        "last_updated": "2026-07-24T13:02:00.737Z"
+      },
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 80,
+        "conviction_score": 85,
+        "alpha_score": 50,
+        "risk_score": 50,
+        "confidence": "high",
+        "bull_case": [
+          "Established market cap"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project. Established market position.",
+        "opinion": "Solid fundamentals with reasonable risk profile.",
+        "calculated_at": "2026-07-24T13:02:00.737Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0.6,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "polygon-ecosystem-token",
+      "symbol": "POL",
+      "name": "POL (ex-MATIC)",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "polygon-ecosystem-token",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:00.862Z",
+      "lastEnrichedAt": "2026-07-24T13:02:00.862Z",
+      "market": {
+        "price_usd": 0.077363,
+        "market_cap_usd": 826541039,
+        "fdv_usd": 826541039,
+        "circulating_supply": 10683920142.30041,
+        "total_supply": 10683920142.30041,
+        "max_supply": null,
+        "volume_24h_usd": 37248006,
+        "change_24h_pct": -1,
+        "change_7d_pct": -8.8,
+        "change_30d_pct": 0.9,
+        "ath": 1.29,
+        "ath_change_pct": -93.99151,
+        "atl": 0.067711,
+        "market_cap_rank": 77,
+        "image": "https://coin-images.coingecko.com/coins/images/32440/large/pol.png?1759114181",
+        "last_updated": "2026-07-24T12:59:20.000Z"
+      },
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": {
+        "tvl_usd": null,
+        "category": null,
+        "last_updated": "2026-07-24T13:02:00.862Z"
+      },
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 70,
+        "conviction_score": 70,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project. Mid-cap project with growth potential.",
+        "opinion": "Solid fundamentals with reasonable risk profile.",
+        "calculated_at": "2026-07-24T13:02:00.862Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "midnight-3",
+      "symbol": "NIGHT",
+      "name": "Midnight",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "midnight-3",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:00.904Z",
+      "lastEnrichedAt": "2026-07-24T13:02:00.904Z",
+      "market": {
+        "price_usd": 0.02115783,
+        "market_cap_usd": 351347753,
+        "fdv_usd": 507746328,
+        "circulating_supply": 16607399400.634954,
+        "total_supply": 24000000000,
+        "max_supply": 24000000000,
+        "volume_24h_usd": 17533167,
+        "change_24h_pct": -0.7,
+        "change_7d_pct": -26.1,
+        "change_30d_pct": -32.5,
+        "ath": 0.118529,
+        "ath_change_pct": -82.14967,
+        "atl": 0.0152398,
+        "market_cap_rank": 118,
+        "image": "https://coin-images.coingecko.com/coins/images/71015/large/midnight.png?1765193080",
+        "last_updated": "2026-07-24T12:59:20.000Z"
+      },
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": {
+        "tvl_usd": null,
+        "category": null,
+        "last_updated": "2026-07-24T13:02:00.904Z"
+      },
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 65,
+        "conviction_score": 65,
+        "alpha_score": 65,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project. Mid-cap project with growth potential.",
+        "opinion": "Solid fundamentals with reasonable risk profile.",
+        "calculated_at": "2026-07-24T13:02:00.904Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "immutable-x",
+      "symbol": "IMX",
+      "name": "Immutable",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "immutable-x",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:02.066Z",
+      "lastEnrichedAt": "2026-07-24T13:02:02.066Z",
+      "market": {
+        "price_usd": 0.127352,
+        "market_cap_usd": 254732550,
+        "fdv_usd": 254732550,
+        "circulating_supply": 2000000000,
+        "total_supply": 2000000000,
+        "max_supply": 2000000000,
+        "volume_24h_usd": 6317574,
+        "change_24h_pct": 0.3,
+        "change_7d_pct": -1.4,
+        "change_30d_pct": -7.4,
+        "ath": 9.52,
+        "ath_change_pct": -98.66226,
+        "atl": 0.112815,
+        "market_cap_rank": 253,
+        "image": "https://coin-images.coingecko.com/coins/images/17233/large/immutableX-symbol-BLK-RGB.png?1696516787",
+        "last_updated": "2026-07-24T12:59:20.000Z"
+      },
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": {
+        "tvl_usd": null,
+        "category": null,
+        "last_updated": "2026-07-24T13:02:02.066Z"
+      },
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 68,
+        "conviction_score": 68,
+        "alpha_score": 65,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Positive momentum"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project. Mid-cap project with growth potential.",
+        "opinion": "Solid fundamentals with reasonable risk profile.",
+        "calculated_at": "2026-07-24T13:02:02.066Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "starknet",
+      "symbol": "STRK",
+      "name": "Starknet",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "starknet",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:02.059Z",
+      "lastEnrichedAt": "2026-07-24T13:02:02.059Z",
+      "market": {
+        "price_usd": 0.02874691,
+        "market_cap_usd": 193957505,
+        "fdv_usd": 287474878,
+        "circulating_supply": 6746937561.348971,
+        "total_supply": 10000000000,
+        "max_supply": 10000000000,
+        "volume_24h_usd": 8998771,
+        "change_24h_pct": -2.3,
+        "change_7d_pct": 3.7,
+        "change_30d_pct": -9.4,
+        "ath": 4.41,
+        "ath_change_pct": -99.34868,
+        "atl": 0.02725245,
+        "market_cap_rank": 167,
+        "image": "https://coin-images.coingecko.com/coins/images/26433/large/starknet.png?1696525507",
+        "last_updated": "2026-07-24T12:59:20.000Z"
+      },
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": {
+        "tvl_usd": null,
+        "category": null,
+        "last_updated": "2026-07-24T13:02:02.059Z"
+      },
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 65,
+        "conviction_score": 65,
+        "alpha_score": 65,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project. Mid-cap project with growth potential.",
+        "opinion": "Solid fundamentals with reasonable risk profile.",
+        "calculated_at": "2026-07-24T13:02:02.059Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0.4,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2.6
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "pattern matched: \\b(zksync|starknet|aztec|mina|polygon\\s+zkevm|scroll|linea|risc\\s*zero|loopring|axiom)\\b"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "ozone-chain",
+      "symbol": "OZO",
+      "name": "Ozone Chain",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "ozone-chain",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:02.110Z",
+      "lastEnrichedAt": "2026-07-24T13:02:02.110Z",
+      "market": {
+        "price_usd": 0.130292,
+        "market_cap_usd": 125240592,
+        "fdv_usd": 130332240,
+        "circulating_supply": 960933314,
+        "total_supply": 1000000000,
+        "max_supply": 1000000000,
+        "volume_24h_usd": 264153,
+        "change_24h_pct": -0.2,
+        "change_7d_pct": 0,
+        "change_30d_pct": -0.1,
+        "ath": 0.485077,
+        "ath_change_pct": -73.14005,
+        "atl": 0.060046,
+        "market_cap_rank": 222,
+        "image": "https://coin-images.coingecko.com/coins/images/31385/large/ozonechain-momogram-200x200.png?1696530201",
+        "last_updated": "2026-07-24T12:59:20.000Z"
+      },
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": {
+        "tvl_usd": null,
+        "category": null,
+        "last_updated": "2026-07-24T13:02:02.110Z"
+      },
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 65,
+        "conviction_score": 65,
+        "alpha_score": 65,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project. Mid-cap project with growth potential.",
+        "opinion": "Solid fundamentals with reasonable risk profile.",
+        "calculated_at": "2026-07-24T13:02:02.110Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "humanity",
+      "symbol": "H",
+      "name": "Humanity",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "humanity",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:03.153Z",
+      "lastEnrichedAt": "2026-07-24T13:02:03.153Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:03.153Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "zerobase",
+      "symbol": "ZBT",
+      "name": "ZEROBASE",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "zerobase",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:03.150Z",
+      "lastEnrichedAt": "2026-07-24T13:02:03.150Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:03.150Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "railgun",
+      "symbol": "RAIL",
+      "name": "Railgun",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "railgun",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:03.149Z",
+      "lastEnrichedAt": "2026-07-24T13:02:03.149Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:03.149Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0.6,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "nexus-4",
+      "symbol": "NEX",
+      "name": "Nexus",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "nexus-4",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:04.351Z",
+      "lastEnrichedAt": "2026-07-24T13:02:04.351Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:04.351Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "zksync",
+      "symbol": "ZK",
+      "name": "ZKsync",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "zksync",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:04.350Z",
+      "lastEnrichedAt": "2026-07-24T13:02:04.350Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:04.350Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0.4,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2.6
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "pattern matched: \\b(zksync|starknet|aztec|mina|polygon\\s+zkevm|scroll|linea|risc\\s*zero|loopring|axiom)\\b"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "zencash",
+      "symbol": "ZEN",
+      "name": "Horizen",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "zencash",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:04.348Z",
+      "lastEnrichedAt": "2026-07-24T13:02:04.348Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:04.348Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0.6,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "linea",
+      "symbol": "LINEA",
+      "name": "Linea",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "linea",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:05.551Z",
+      "lastEnrichedAt": "2026-07-24T13:02:05.551Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:05.551Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2.6
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "pattern matched: \\b(zksync|starknet|aztec|mina|polygon\\s+zkevm|scroll|linea|risc\\s*zero|loopring|axiom)\\b"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "mina-protocol",
+      "symbol": "MINA",
+      "name": "Mina Protocol",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "mina-protocol",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:05.550Z",
+      "lastEnrichedAt": "2026-07-24T13:02:05.550Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:05.550Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2.6
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "pattern matched: \\b(zksync|starknet|aztec|mina|polygon\\s+zkevm|scroll|linea|risc\\s*zero|loopring|axiom)\\b"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "cysic",
+      "symbol": "CYS",
+      "name": "Cysic",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "cysic",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:05.549Z",
+      "lastEnrichedAt": "2026-07-24T13:02:05.549Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:05.549Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "concordium",
+      "symbol": "CCD",
+      "name": "Concordium",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "concordium",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:06.752Z",
+      "lastEnrichedAt": "2026-07-24T13:02:06.752Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:06.752Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "pirate-chain",
+      "symbol": "ARRR",
+      "name": "Pirate Chain",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "pirate-chain",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:06.751Z",
+      "lastEnrichedAt": "2026-07-24T13:02:06.751Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:06.751Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "movement",
+      "symbol": "MOVE",
+      "name": "Movement",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "movement",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:06.750Z",
+      "lastEnrichedAt": "2026-07-24T13:02:06.750Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:06.750Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "ronin",
+      "symbol": "RON",
+      "name": "Ronin",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "ronin",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:07.954Z",
+      "lastEnrichedAt": "2026-07-24T13:02:07.954Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:07.954Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    },
+    {
+      "id": "succinct",
+      "symbol": "PROVE",
+      "name": "Succinct",
+      "sector": "ZK",
+      "sectors": [
+        "ZK"
+      ],
+      "coingeckoId": "succinct",
+      "cmcId": null,
+      "cmcSlug": null,
+      "githubOrg": null,
+      "githubRepo": null,
+      "xHandle": null,
+      "website": null,
+      "description": "",
+      "tier": "tier2",
+      "verifiedStatus": "unverified",
+      "lastVerifiedAt": "2026-07-24T13:02:07.953Z",
+      "lastEnrichedAt": "2026-07-24T13:02:07.953Z",
+      "market": null,
+      "github": {
+        "stars": 0,
+        "forks": 0,
+        "watchers": 0,
+        "commits_30d": 0,
+        "active_devs_30d": 0,
+        "open_issues": 0,
+        "last_commit": null,
+        "language": null,
+        "repo": null,
+        "org": null,
+        "archived": false
+      },
+      "social": {
+        "twitter_handle": null,
+        "twitter_url": null,
+        "twitter_followers": 0,
+        "reddit_subscribers": 0,
+        "telegram_channel": null,
+        "discord": null,
+        "website": null
+      },
+      "protocol": null,
+      "developer": {
+        "stars": 0,
+        "forks": 0,
+        "subscribers": 0,
+        "total_issues": 0,
+        "closed_issues": 0,
+        "pull_requests_merged": 0,
+        "commit_count_4_weeks": 0,
+        "last_commit": null
+      },
+      "ai": {
+        "payd_score": 55,
+        "conviction_score": 55,
+        "alpha_score": 50,
+        "risk_score": 55,
+        "confidence": "high",
+        "bull_case": [
+          "Under evaluation"
+        ],
+        "bear_case": [
+          "No major red flags detected"
+        ],
+        "thesis": "ZK project.",
+        "opinion": "Neutral — warrants further analysis.",
+        "calculated_at": "2026-07-24T13:02:07.953Z"
+      },
+      "_classification": {
+        "sector": "ZK",
+        "confidence": 1,
+        "needsReview": false,
+        "scores": {
+          "Layer1": 0,
+          "Layer2": 0,
+          "DeFi": 0,
+          "RWA": 0,
+          "AI": 0,
+          "Gaming": 0,
+          "DePIN": 0,
+          "Infrastructure": 0,
+          "Oracles": 0,
+          "Privacy": 0,
+          "Stablecoins": 0,
+          "DEX": 0,
+          "Lending": 0,
+          "Derivatives": 0,
+          "Restaking": 0,
+          "Liquid Staking": 0,
+          "Payments": 0,
+          "Bitcoin Ecosystem": 0,
+          "Meme": 0,
+          "SocialFi": 0,
+          "DeSci": 0,
+          "ZK": 2
+        },
+        "reasons": [
+          "description contains \"zero-knowledge\"",
+          "pattern matched: (zero[\\s-]?knowledge|zk[\\s-]?(proof|snark|stark|rollup|evm|circuit|validity))",
+          "category tag matches: zero-knowledge-zk"
+        ]
+      },
+      "_source": "coingecko"
+    }
+  ]
+}

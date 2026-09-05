@@ -1,0 +1,186 @@
+[
+  {
+    "id": "akash",
+    "symbol": "AKT",
+    "sector": "ai",
+    "sectors": [
+      "ai",
+      "depin"
+    ],
+    "coingeckoId": "akash-network",
+    "cmcId": "3861",
+    "cmcSlug": "akash-network",
+    "githubOrg": "akash-network",
+    "githubRepo": "akash-network/node",
+    "xHandle": "akashnet",
+    "website": "https://akash.network",
+    "description": "Decentralized marketplace for cloud compute that serves AI inference and traditional workloads via reverse auction on Cosmos.",
+    "tier": "tier1",
+    "name": "akash",
+    "verifiedStatus": "verified",
+    "lastVerifiedAt": "2026-07-16"
+  },
+  {
+    "id": "fetch-ai",
+    "symbol": "FET",
+    "sector": "ai",
+    "coingeckoId": "fetch-ai",
+    "cmcId": "3773",
+    "cmcSlug": "fetch",
+    "githubOrg": "fetchai",
+    "githubRepo": "fetchai/fetchd",
+    "xHandle": "Fetch_ai",
+    "website": "https://fetch.ai",
+    "description": "AI agent platform for autonomous economic agents, now part of the Artificial Superintelligence (ASI) Alliance with SingularityNET and Ocean.",
+    "tier": "tier1",
+    "name": "fetch-ai",
+    "sectors": [
+      "ai"
+    ],
+    "verifiedStatus": "verified",
+    "lastVerifiedAt": "2026-07-16"
+  },
+  {
+    "id": "the-graph",
+    "symbol": "GRT",
+    "sector": "ai",
+    "sectors": [
+      "ai",
+      "infrastructure"
+    ],
+    "coingeckoId": "the-graph",
+    "cmcId": "6719",
+    "cmcSlug": "the-graph",
+    "githubOrg": "graphprotocol",
+    "githubRepo": "graphprotocol/graph-node",
+    "xHandle": "graphprotocol",
+    "website": "https://thegraph.com",
+    "description": "Indexing protocol for querying blockchain data via GraphQL, with subgraphs and a payments layer (GRT) consumed by AI agents.",
+    "tier": "tier1",
+    "name": "the-graph",
+    "verifiedStatus": "verified",
+    "lastVerifiedAt": "2026-07-16"
+  },
+  {
+    "id": "story-protocol",
+    "symbol": "IP",
+    "sector": "ai",
+    "coingeckoId": "story-2",
+    "cmcId": "29147",
+    "cmcSlug": "story-2",
+    "githubOrg": "storyprotocol",
+    "githubRepo": "storyprotocol/typescript-sdk",
+    "xHandle": "StoryProtocol",
+    "website": "https://www.story.foundation",
+    "description": "IP-focused L1 building a programmable IP layer so that AI-generated content and human creations can register and license rights onchain.",
+    "tier": "tier1",
+    "name": "story-protocol",
+    "sectors": [
+      "ai"
+    ],
+    "verifiedStatus": "verified",
+    "lastVerifiedAt": "2026-07-16"
+  },
+  {
+    "id": "uniswap",
+    "symbol": "UNI",
+    "sector": "defi",
+    "coingeckoId": "uniswap",
+    "cmcId": "7083",
+    "cmcSlug": "uniswap",
+    "githubOrg": "Uniswap",
+    "githubRepo": "Uniswap/v3-core",
+    "xHandle": "Uniswap",
+    "website": "https://uniswap.org",
+    "description": "Largest Ethereum DEX using constant-product and concentrated-liquidity AMM, with the UNI token governing the Uniswap DAO and protocol fees.",
+    "tier": "tier1",
+    "name": "uniswap",
+    "sectors": [
+      "defi"
+    ],
+    "verifiedStatus": "verified",
+    "lastVerifiedAt": "2026-07-16"
+  },
+  {
+    "id": "ethereum",
+    "symbol": "ETH",
+    "sector": "layer1",
+    "coingeckoId": "ethereum",
+    "cmcId": "1027",
+    "cmcSlug": "ethereum",
+    "githubOrg": "ethereum",
+    "githubRepo": "ethereum/go-ethereum",
+    "xHandle": "ethereum",
+    "website": "https://ethereum.org",
+    "description": "Programmable blockchain that introduced smart contracts and EVM-compatible decentralized applications (dapps), now the largest settlement layer for DeFi and NFTs.",
+    "tier": "tier1",
+    "name": "ethereum",
+    "sectors": [
+      "layer1"
+    ],
+    "verifiedStatus": "verified",
+    "lastVerifiedAt": "2026-07-16"
+  },
+  {
+    "id": "arbitrum",
+    "symbol": "ARB",
+    "sector": "layer2",
+    "coingeckoId": "arbitrum",
+    "cmcId": "11841",
+    "cmcSlug": "arbitrum",
+    "githubOrg": "OffchainLabs",
+    "githubRepo": "OffchainLabs/arbitrum",
+    "xHandle": "arbitrum",
+    "website": "https://arbitrum.io",
+    "description": "Optimistic rollup scaling Ethereum, hosting the largest DeFi liquidity and a developer-friendly Nitro stack with Stylus for Rust/C++ contracts.",
+    "tier": "tier1",
+    "name": "arbitrum",
+    "sectors": [
+      "layer2"
+    ],
+    "verifiedStatus": "verified",
+    "lastVerifiedAt": "2026-07-16"
+  },
+  {
+    "id": "maker",
+    "symbol": "MKR",
+    "sector": "rwa",
+    "coingeckoId": "maker",
+    "cmcId": "1518",
+    "cmcSlug": "maker",
+    "githubOrg": "makerdao",
+    "githubRepo": "makerdao/dss",
+    "xHandle": "MakerDAO",
+    "website": "https://makerdao.com",
+    "description": "Decentralized credit facility issuing the DAI stablecoin through collateralized debt positions (CDPs) and governed by MKR holders.",
+    "tier": "tier1",
+    "name": "maker",
+    "sectors": [
+      "defi",
+      "rwa"
+    ],
+    "verifiedStatus": "verified",
+    "lastVerifiedAt": "2026-07-16"
+  },
+  {
+    "id": "ondo-finance",
+    "symbol": "ONDO",
+    "sector": "rwa",
+    "sectors": [
+      "defi",
+      "rwa"
+    ],
+    "coingeckoId": "ondo-finance",
+    "cmcId": "21159",
+    "cmcSlug": "ondo-finance",
+    "githubOrg": "ondofinance",
+    "githubRepo": "ondofinance/ondo-protocol",
+    "xHandle": "OndoFinance",
+    "website": "https://ondo.finance",
+    "description": "Institutional-grade tokenized US Treasuries (OUSG, OMMF) and structured products that bring yield-bearing RWAs onchain for DeFi use.",
+    "tier": "tier1",
+    "name": "ondo-finance",
+    "verifiedStatus": "verified",
+    "lastVerifiedAt": "2026-07-16"
+  }
+]

@@ -1,0 +1,1335 @@
+{
+  "akash": {
+    "id": "akash",
+    "symbol": "AKT",
+    "name": "akash",
+    "sector": "ai",
+    "coingecko_id": "akash-network",
+    "last_enriched_at": "2026-07-22T01:14:42.756Z",
+    "market": {
+      "price_usd": 0.548365,
+      "market_cap_usd": 160016226,
+      "fdv_usd": 162168585,
+      "circulating_supply": 292078878.414427,
+      "total_supply": 296007595.465134,
+      "max_supply": 388539008,
+      "volume_24h_usd": 4386995,
+      "change_24h_pct": 2.006672534048657,
+      "change_7d_pct": -3.3796714029437056,
+      "change_30d_pct": -25.384352508732107,
+      "change_1h_pct": 0.09282893754926494,
+      "ath": 8.07,
+      "ath_change_pct": -93.2139,
+      "atl": 0.164994,
+      "atl_change_pct": 232.11856,
+      "market_cap_rank": 193,
+      "last_updated": "2026-07-22T01:14:34.652Z",
+      "image": "https://coin-images.coingecko.com/coins/images/12785/large/akash-logo.png?1696512580"
+    },
+    "social": {
+      "twitter_handle": "akashnet",
+      "twitter_url": "https://x.com/akashnet",
+      "twitter_followers": null,
+      "reddit_subscribers": 0,
+      "telegram_channel": "akashnw",
+      "discord": "https://discord.com/invite/akash",
+      "website": "https://akash.network"
+    },
+    "developer": {
+      "stars": 0,
+      "forks": 0,
+      "subscribers": 0,
+      "total_issues": 0,
+      "closed_issues": 0,
+      "pull_requests_merged": 0,
+      "commit_count_4_weeks": 0
+    },
+    "description": "What is Akash Network?\n\nAkash Network is spearheading a paradigm shift in cloud computing, disrupting conventional cloud services, and pioneering a revolution in access to essential cloud resources. Leveraging the power of blockchain technology, Akash Network has developed an open-source, decentralized, marketplace for cloud computing, offering an unprecedented level of speed, efficiency, and affordability. This innovation is set to transform the way users perceive and utilize cloud services.\nWhat are the key features of Akash Network?\n\n\n\nDecentralized Cloud Computing: Akash Network, built on a blockchain-based framework, eliminates dependence on centralized cloud providers, offering superior security, transparency for users' data and transactions, and enhanced scalability.\n\nPermissionless Marketplace: By offering an open marketplace, Akash Network allows anyone with computational resources to become a cloud provider. Users can lease out their unused computing capacities, fostering competition and driving down prices.\n\nFlexible and Secure: With Akash, developers can effortlessly deploy applications and workloads. Moreover, the platform offers high security by using the native AKT token to ensure the integrity and authenticity of transactions on the network.\n\nStaking and Incentive Mechanism: Holders of the AKT token can participate in the network by staking their tokens. This not only helps secure the network but also earns them rewards.\n\nInteroperable Ecosystem: Akash Network is designed to be blockchain agnostic and is built on the Cosmos SDK, allowing for easy integration with other blockchain networks and fostering cross-chain collaborations.\n\nEco-friendly: Compared to traditional cloud services, Akash Network is more energy-efficient. The network's consensus mechanism is based on Proof-of-Stake, which is considered to be more environmentally friendly than Proof-of-Work used by many other blockchain networks.\n\n\n\nHow does GPU Marketplace benefit AI Hosting?\n\nOne of the unique offerings of Akash Network is its GPU (Graphics Processing Unit) marketplace, which proves to be a game-changer for AI hosting. Leveraging its decentralized cloud, Akash Network provides a platform where individuals and businesses can rent out their idle GPU resources to those in need, particularly AI developers and researchers. Here’s why this is a groundbreaking feature:\n\nCost-Effectiveness: Traditional cloud services are expensive, especially when renting GPUs for AI processing. Akash Network's open marketplace fosters competition, driving down the costs of GPU rentals and making it more affordable for AI researchers and developers.\n\nScalability and Performance: With access to a decentralized pool of GPU resources, AI developers can easily scale their operations and computational power without the constraints of traditional cloud infrastructure. This translates to faster training and deployment of AI models.\n\nSecurity and Privacy: AI applications require processing sensitive data. Akash Network’s blockchain-based framework ensures that data is handled securely and transparently without the vulnerabilities of centralized systems.\n\nDemocratizing AI: By lowering the barriers to entry in terms of cost and accessibility to GPU resources, Akash Network empowers a wider range of individuals and organizations, even at the early stage, to participate in AI development and hosting, contributing to innovation and technological advancement.\n\nEco-Friendly Resource Utilization: By efficiently utilizing idle GPU resources through its marketplace, Akash Network dramatically minimizes environmental impact, in stark contrast to the significant ecological footprint associated with constructing and maintaining dedicated data centers. Akash Network's maximized resource efficiency enables it to play a pivotal role in promoting innovation, sustainability, and reducing carbon footprints.\n\nGlobal Accessibility: Akash Network’s global marketplace ensures that AI developers and researchers worldwide have equal access to GPU resources, irrespective of their geographical location.\n\nBy providing an efficient, secure, and cost-effective alternative for AI hosting through its GPU marketplace, Akash Network is not only revolutionizing cloud computing but also making a substantial impact on the rapidly growing field of artificial intelligence.\nWhat is AKT Token?\n\n\n\nAKT is the native cryptocurrency token of Akash Network. It is integral for securing the network, executing transactions and contracts, and incentivizing community participation through staking and rewards. As the ecosystem grows, AKT is anticipated to play an increasingly vital role in enabling and securing decentralized cloud services.\nThe AKT 2.0 proposal introduces Take Rate and Provider Incentives to kick-start growth. Join the discussion for updates.\n\nWhat are the prospects for Akash?\n\nAkash Network is at the forefront of a paradigm shift in cloud computing. With its decentralized nature, coupled with a growing demand for secure, open, and affordable cloud solutions, Akash Network is well-positioned to become a pivotal player in the cloud computing industry. The ongoing developments and partnerships are expected to contribute significantly to its adoption and utility in the near future.\n\nJoin Akash Network to be part of this groundbreaking venture in reshaping the cloud computing landscape!\n\nPlease note: This is not financial advice. It’s always recommended to conduct your own research before making any investments.",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Smart Contract Platform",
+      "DePIN",
+      "Osmosis Ecosystem",
+      "Proof of Stake (PoS)",
+      "Archway Ecosystem",
+      "Made in USA"
+    ],
+    "github": {
+      "owner": "akash-network",
+      "repo": "node",
+      "full_name": "akash-network/node",
+      "stars": 1102,
+      "forks": 271,
+      "open_issues": 4,
+      "watchers": 44,
+      "language": "Go",
+      "size_kb": 85013,
+      "default_branch": "main",
+      "created_at": "2017-09-15T22:55:19Z",
+      "updated_at": "2026-07-11T22:00:53Z",
+      "pushed_at": "2026-07-17T17:06:18Z",
+      "topics": [
+        "akash",
+        "blockchain",
+        "containers",
+        "exchange",
+        "golang",
+        "tendermint"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "disabled": false,
+      "has_issues": false,
+      "homepage": "https://akash.network",
+      "description": "Source code for Akash node, a secure, transparent, and peer-to-peer cloud computing network",
+      "source_repo": "akash-network/node",
+      "languages": [
+        {
+          "name": "Go",
+          "bytes": 1427032,
+          "pct": 84
+        },
+        {
+          "name": "Rust",
+          "bytes": 172959,
+          "pct": 10
+        },
+        {
+          "name": "Shell",
+          "bytes": 71517,
+          "pct": 4
+        },
+        {
+          "name": "Makefile",
+          "bytes": 32130,
+          "pct": 2
+        },
+        {
+          "name": "Dockerfile",
+          "bytes": 1355,
+          "pct": 0
+        }
+      ],
+      "commits_30d": 1,
+      "last_commit": "2026-07-07T14:27:37Z"
+    },
+    "ai": {
+      "payd_score": 59,
+      "risk_score": 82,
+      "conviction_score": 53,
+      "alpha_score": 59,
+      "thesis": [
+        "Mid-cap with growth potential",
+        "Strong developer interest (1,102 stars)",
+        "Active development (commits this week)"
+      ],
+      "bull_case": [
+        "Mature ecosystem with broad support"
+      ],
+      "bear_case": [
+        "Down 93% from ATH",
+        "Bearish 30-day trend"
+      ],
+      "opinion": "Average metrics, requires deeper due diligence",
+      "calculated_at": "2026-07-22T01:14:53.255Z"
+    }
+  },
+  "fetch-ai": {
+    "id": "fetch-ai",
+    "symbol": "FET",
+    "name": "fetch-ai",
+    "sector": "ai",
+    "coingecko_id": "fetch-ai",
+    "last_enriched_at": "2026-07-22T01:14:53.255Z",
+    "market": {
+      "price_usd": 0.157415,
+      "market_cap_usd": 352671742,
+      "fdv_usd": 427281304,
+      "circulating_supply": 2240413328.275316,
+      "total_supply": 2714384546.672,
+      "max_supply": 2714384546.672,
+      "volume_24h_usd": 37719107,
+      "change_24h_pct": 1.677227643869334,
+      "change_7d_pct": -3.0250570241560104,
+      "change_30d_pct": -12.100498188589555,
+      "change_1h_pct": -0.08992928773809755,
+      "ath": 3.45,
+      "ath_change_pct": -95.43382,
+      "atl": 0.00816959,
+      "atl_change_pct": 1830.6061,
+      "market_cap_rank": 120,
+      "last_updated": "2026-07-22T01:14:28.793Z",
+      "image": "https://coin-images.coingecko.com/coins/images/5681/large/ASI.png?1719827289"
+    },
+    "social": {
+      "twitter_handle": "ASI_Alliance",
+      "twitter_url": "https://x.com/ASI_Alliance",
+      "twitter_followers": null,
+      "reddit_subscribers": 0,
+      "telegram_channel": "ASI_Alliance",
+      "discord": null,
+      "website": "https://fetch.ai"
+    },
+    "developer": {
+      "stars": 128,
+      "forks": 44,
+      "subscribers": 21,
+      "total_issues": 0,
+      "closed_issues": 0,
+      "pull_requests_merged": 320,
+      "commit_count_4_weeks": 0
+    },
+    "description": "|The Artificial Superintelligence (ASI) Alliance is the world’s largest open-source initiative dedicated to decentralized Artificial General Intelligence (AGI). Formed in April 2024, the ASI Alliance unites SingularityNET, Fetch.ai, and Ocean Protocol, with CUDOS joining as a network member shortly after. The ASI Alliance was established through a community-approved tokenomic merger—combining $AGIX, $FET, and $OCEAN into a single token: $FET. This unified token underpins a collaborative framework designed to scale open-source AI and stand as the largest open-sourced, independent entity in AI research and development. The Alliance is committed to accelerating the advancement of decentralized Artificial General Intelligence (AGI) and, ultimately, Artificial Superintelligence (ASI). It provides a robust, open-source innovation stack, empowering developers, enterprises, and researchers globally to build ethical, scalable, and groundbreaking AI solutions. This ensures that advanced intelligence remains a shared, accessible resource, fostering innovation beyond centralized systems and promoting a future where AI benefits all.",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "NFT",
+      "BNB Chain Ecosystem",
+      "Cardano Ecosystem",
+      "Ethereum Ecosystem",
+      "Binance Launchpad",
+      "DWF Labs Portfolio",
+      "Osmosis Ecosystem",
+      "AI Agents",
+      "GMCI DePIN Index",
+      "GMCI Index",
+      "Outlier Ventures Portfolio",
+      "AI Agent Launchpad",
+      "Governance"
+    ],
+    "github": {
+      "owner": "fetchai",
+      "repo": "fetchd",
+      "full_name": "fetchai/fetchd",
+      "stars": 128,
+      "forks": 44,
+      "open_issues": 31,
+      "watchers": 21,
+      "language": "Go",
+      "size_kb": 10672,
+      "default_branch": "master",
+      "created_at": "2020-06-10T16:02:35Z",
+      "updated_at": "2026-06-27T08:08:44Z",
+      "pushed_at": "2026-05-27T12:35:19Z",
+      "topics": [],
+      "license": "NOASSERTION",
+      "archived": false,
+      "disabled": false,
+      "has_issues": true,
+      "homepage": null,
+      "description": "Source code for Fetch.ai blockchain nodes",
+      "source_repo": "fetchai/fetchd",
+      "languages": [
+        {
+          "name": "Go",
+          "bytes": 183821,
+          "pct": 76
+        },
+        {
+          "name": "Python",
+          "bytes": 33710,
+          "pct": 14
+        },
+        {
+          "name": "Shell",
+          "bytes": 13644,
+          "pct": 6
+        },
+        {
+          "name": "Makefile",
+          "bytes": 8861,
+          "pct": 4
+        },
+        {
+          "name": "Dockerfile",
+          "bytes": 1618,
+          "pct": 1
+        }
+      ],
+      "commits_30d": 0,
+      "last_commit": "2026-05-27T12:35:19Z"
+    },
+    "ai": {
+      "payd_score": 64,
+      "risk_score": 83,
+      "conviction_score": 44,
+      "alpha_score": 50,
+      "thesis": [
+        "Mid-cap with growth potential"
+      ],
+      "bull_case": [
+        "Mature ecosystem with broad support"
+      ],
+      "bear_case": [
+        "Down 95% from ATH"
+      ],
+      "opinion": "Average metrics, requires deeper due diligence",
+      "calculated_at": "2026-07-22T01:15:08.055Z"
+    }
+  },
+  "the-graph": {
+    "id": "the-graph",
+    "symbol": "GRT",
+    "name": "the-graph",
+    "sector": "ai",
+    "coingecko_id": "the-graph",
+    "last_enriched_at": "2026-07-22T01:15:08.055Z",
+    "market": {
+      "price_usd": 0.01675928,
+      "market_cap_usd": 180963413,
+      "fdv_usd": 180970035,
+      "circulating_supply": 10799867657.47347,
+      "total_supply": 10800262816.04821,
+      "max_supply": 10800262823.318213,
+      "volume_24h_usd": 13469954,
+      "change_24h_pct": 0.8142991190174902,
+      "change_7d_pct": -5.197143987951179,
+      "change_30d_pct": -14.665239980253874,
+      "change_1h_pct": -0.00907342604571886,
+      "ath": 2.84,
+      "ath_change_pct": -99.40993,
+      "atl": 0.01617376,
+      "atl_change_pct": 3.6668,
+      "market_cap_rank": 181,
+      "last_updated": "2026-07-22T01:14:35.904Z",
+      "image": "https://coin-images.coingecko.com/coins/images/13397/large/Graph_Token.png?1696513159"
+    },
+    "social": {
+      "twitter_handle": "graphprotocol",
+      "twitter_url": "https://x.com/graphprotocol",
+      "twitter_followers": null,
+      "reddit_subscribers": 0,
+      "telegram_channel": "graphprotocol",
+      "discord": "https://discord.gg/vtvv7FP",
+      "website": "https://thegraph.com"
+    },
+    "developer": {
+      "stars": 3148,
+      "forks": 1053,
+      "subscribers": 88,
+      "total_issues": 0,
+      "closed_issues": 0,
+      "pull_requests_merged": 3317,
+      "commit_count_4_weeks": 30
+    },
+    "description": "The Graph is an indexing protocol and global API for organizing blockchain data and making it easily accessible with GraphQL. Developers can use Graph Explorer to search, find, and publish all the public data they need to build decentralized applications. The Graph Network makes it possible to build serverless dApps that run entirely on public infrastructure.\n\nGRT is the native token of the network that’s used to coordinate work. GRT is an ERC20 token. Node operators, called Indexers, stake and earn GRT for processing queries. Anyone can delegate GRT to Indexers to secure the network and earn rewards. Curators organize data on The Graph by signaling GRT on useful APIs, called subgraphs. Indexers, Delegators, and Curators work together to organize the data for the crypto economy and maintain a useful global API for DeFi and Web3.\n",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Infrastructure",
+      "Analytics",
+      "Avalanche Ecosystem",
+      "Polygon Ecosystem",
+      "Near Protocol Ecosystem",
+      "Harmony Ecosystem",
+      "Arbitrum Ecosystem",
+      "Ethereum Ecosystem",
+      "DePIN",
+      "Coinbase Ventures Portfolio",
+      "Multicoin Capital Portfolio",
+      "Proof of Stake (PoS)",
+      "Energi Ecosystem",
+      "Sora Ecosystem",
+      "Made in USA",
+      "Coinbase 50 Index"
+    ],
+    "github": {
+      "owner": "graphprotocol",
+      "repo": "graph-node",
+      "full_name": "graphprotocol/graph-node",
+      "stars": 3148,
+      "forks": 1054,
+      "open_issues": 300,
+      "watchers": 88,
+      "language": "Rust",
+      "size_kb": 340215,
+      "default_branch": "master",
+      "created_at": "2018-04-19T07:13:50Z",
+      "updated_at": "2026-07-21T11:16:32Z",
+      "pushed_at": "2026-07-21T08:06:15Z",
+      "topics": [
+        "blockchain",
+        "developer-tools",
+        "ethereum",
+        "graphql",
+        "graphql-api",
+        "graphql-server",
+        "ipfs",
+        "protocol"
+      ],
+      "license": "Apache-2.0",
+      "archived": false,
+      "disabled": false,
+      "has_issues": true,
+      "homepage": "https://thegraph.com",
+      "description": "Graph Node indexes data from blockchains such as Ethereum and serves it over GraphQL",
+      "source_repo": "graphprotocol/graph-node",
+      "languages": [
+        {
+          "name": "Rust",
+          "bytes": 7557430,
+          "pct": 96
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 131800,
+          "pct": 2
+        },
+        {
+          "name": "PLpgSQL",
+          "bytes": 123000,
+          "pct": 2
+        },
+        {
+          "name": "CSS",
+          "bytes": 39596,
+          "pct": 1
+        },
+        {
+          "name": "Shell",
+          "bytes": 14706,
+          "pct": 0
+        },
+        {
+          "name": "Nix",
+          "bytes": 10722,
+          "pct": 0
+        },
+        {
+          "name": "HTML",
+          "bytes": 7182,
+          "pct": 0
+        },
+        {
+          "name": "Solidity",
+          "bytes": 6826,
+          "pct": 0
+        },
+        {
+          "name": "Dockerfile",
+          "bytes": 3856,
+          "pct": 0
+        },
+        {
+          "name": "Just",
+          "bytes": 3545,
+          "pct": 0
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 1478,
+          "pct": 0
+        }
+      ],
+      "commits_30d": 32,
+      "last_commit": "2026-07-16T19:22:16Z"
+    },
+    "ai": {
+      "payd_score": 68,
+      "risk_score": 85,
+      "conviction_score": 50,
+      "alpha_score": 62,
+      "thesis": [
+        "Mid-cap with growth potential",
+        "Strong developer interest (3,148 stars)",
+        "Active development (commits this week)"
+      ],
+      "bull_case": [
+        "Mature ecosystem with broad support"
+      ],
+      "bear_case": [
+        "Down 99% from ATH"
+      ],
+      "opinion": "Average metrics, requires deeper due diligence",
+      "calculated_at": "2026-07-22T01:15:23.257Z"
+    }
+  },
+  "story-protocol": {
+    "id": "story-protocol",
+    "symbol": "IP",
+    "name": "story-protocol",
+    "sector": "ai",
+    "coingecko_id": "story-2",
+    "last_enriched_at": "2026-07-22T01:15:23.257Z",
+    "market": {
+      "price_usd": 0.267387,
+      "market_cap_usd": 95483168,
+      "fdv_usd": 275538745,
+      "circulating_supply": 357169834,
+      "total_supply": 1030696087,
+      "max_supply": null,
+      "volume_24h_usd": 2873202,
+      "change_24h_pct": 0.03458093331887133,
+      "change_7d_pct": -10.609739192258195,
+      "change_30d_pct": -16.728985703889702,
+      "change_1h_pct": -0.16166249595528678,
+      "ath": 14.78,
+      "ath_change_pct": -98.19149,
+      "atl": 0.259976,
+      "atl_change_pct": 2.83477,
+      "market_cap_rank": 276,
+      "last_updated": "2026-07-22T01:14:38.234Z",
+      "image": "https://coin-images.coingecko.com/coins/images/54035/large/CMC_%281%29.png?1782401376"
+    },
+    "social": {
+      "twitter_handle": "datafdn",
+      "twitter_url": "https://x.com/datafdn",
+      "twitter_followers": null,
+      "reddit_subscribers": 0,
+      "telegram_channel": "DataFDN",
+      "discord": "https://discord.gg/datafdn",
+      "website": "https://www.story.foundation"
+    },
+    "developer": {
+      "stars": 0,
+      "forks": 0,
+      "subscribers": 0,
+      "total_issues": 0,
+      "closed_issues": 0,
+      "pull_requests_merged": 0,
+      "commit_count_4_weeks": 0
+    },
+    "description": "Data Network is a purpose-built layer 1 blockchain designed to facilitate registration of intellectual property (IP) of AI-related data to the blockchain and make it programmable.\n\nData Network tokenizes any type of IP; whether that’s an image, an AI model, a datapoint that trains a frontier model. By embedding usage terms, attribution, and royalty agreements directly into the blockchain, Story provides a transparent, decentralized solution for IP management for AI data. This enables AI data holders to protect their user's source contributions, collaborate with AI companies seamlessly, and unlock revenue opportunities in an AI-powered economy.",
+    "categories": [
+      "Artificial Intelligence (AI)",
+      "Smart Contract Platform",
+      "Layer 1 (L1)",
+      "Binance Alpha Spotlight",
+      "Made in USA",
+      "Story Ecosystem",
+      "IP"
+    ],
+    "github": {
+      "owner": "storyprotocol",
+      "repo": "protocol-core",
+      "full_name": "thedatafoundation/protocol-core",
+      "stars": 160,
+      "forks": 142,
+      "open_issues": 7,
+      "watchers": 2,
+      "language": "Solidity",
+      "size_kb": 10214,
+      "default_branch": "main",
+      "created_at": "2024-01-12T00:51:53Z",
+      "updated_at": "2025-02-23T08:36:40Z",
+      "pushed_at": "2024-04-30T00:37:39Z",
+      "topics": [],
+      "license": "NOASSERTION",
+      "archived": true,
+      "disabled": false,
+      "has_issues": true,
+      "homepage": null,
+      "description": "core protocol repo",
+      "source_repo": "storyprotocol/protocol-core",
+      "languages": [
+        {
+          "name": "Solidity",
+          "bytes": 851943,
+          "pct": 97
+        },
+        {
+          "name": "TypeScript",
+          "bytes": 18943,
+          "pct": 2
+        },
+        {
+          "name": "Makefile",
+          "bytes": 3134,
+          "pct": 0
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 1404,
+          "pct": 0
+        },
+        {
+          "name": "Shell",
+          "bytes": 93,
+          "pct": 0
+        }
+      ],
+      "commits_30d": 0,
+      "last_commit": "2024-04-30T00:37:39Z"
+    },
+    "ai": {
+      "payd_score": 55,
+      "risk_score": 100,
+      "conviction_score": 14,
+      "alpha_score": 50,
+      "thesis": [],
+      "bull_case": [
+        "Mature ecosystem with broad support"
+      ],
+      "bear_case": [
+        "Down 98% from ATH",
+        "GitHub repo archived",
+        "No recent development activity"
+      ],
+      "opinion": "Average metrics, requires deeper due diligence",
+      "calculated_at": "2026-07-22T01:15:43.181Z"
+    }
+  },
+  "uniswap": {
+    "id": "uniswap",
+    "symbol": "UNI",
+    "name": "uniswap",
+    "sector": "defi",
+    "coingecko_id": "uniswap",
+    "last_enriched_at": "2026-07-22T01:15:43.182Z",
+    "market": {
+      "price_usd": 3.72,
+      "market_cap_usd": 2328348784,
+      "fdv_usd": 3322975036,
+      "circulating_supply": 625343561.5538775,
+      "total_supply": 892478420.0329479,
+      "max_supply": 1000000000,
+      "volume_24h_usd": 151037995,
+      "change_24h_pct": 1.6223695467411754,
+      "change_7d_pct": 1.6275358762665764,
+      "change_30d_pct": 22.616389487196447,
+      "change_1h_pct": 0.0015463853940093433,
+      "ath": 44.92,
+      "ath_change_pct": -91.70401,
+      "atl": 1.03,
+      "atl_change_pct": 261.72609,
+      "market_cap_rank": 39,
+      "last_updated": "2026-07-22T01:14:32.786Z",
+      "image": "https://coin-images.coingecko.com/coins/images/12504/large/uniswap-logo.png?1720676669"
+    },
+    "social": {
+      "twitter_handle": "Uniswap",
+      "twitter_url": "https://x.com/Uniswap",
+      "twitter_followers": null,
+      "reddit_subscribers": 0,
+      "telegram_channel": null,
+      "discord": "https://discord.gg/FCfyBSbCU5",
+      "website": "https://uniswap.org"
+    },
+    "developer": {
+      "stars": 5016,
+      "forks": 3031,
+      "subscribers": 147,
+      "total_issues": 0,
+      "closed_issues": 0,
+      "pull_requests_merged": 215,
+      "commit_count_4_weeks": 0
+    },
+    "description": "UNI is the governance token for Uniswap, an Automated Market Marker DEX on the Ethereum blockchain. The UNI token allows token holders to participate in the governance of the protocol. Key decisions such as usage of the treasury or future upgrades can be decided through a governance vote.",
+    "categories": [
+      "Decentralized Exchange (DEX)",
+      "Exchange-based Tokens",
+      "Decentralized Finance (DeFi)",
+      "Yield Farming",
+      "Automated Market Maker (AMM)",
+      "BNB Chain Ecosystem",
+      "Avalanche Ecosystem",
+      "Polygon Ecosystem",
+      "Near Protocol Ecosystem",
+      "Gnosis Chain Ecosystem",
+      "Harmony Ecosystem",
+      "Arbitrum Ecosystem",
+      "Ethereum Ecosystem",
+      "Optimism Ecosystem",
+      "Paradigm Portfolio",
+      "Coinbase Ventures Portfolio",
+      "Index Coop Defi Index",
+      "Andreessen Horowitz (a16z) Portfolio",
+      "Energi Ecosystem",
+      "Sora Ecosystem",
+      "Huobi ECO Chain Ecosystem",
+      "GMCI DeFi Index",
+      "GMCI 30 Index",
+      "Blockchain Capital Portfolio",
+      "GMCI Index",
+      "Polychain Capital Portfolio",
+      "Made in USA",
+      "Unichain Ecosystem",
+      "Coinbase 50 Index",
+      "Governance"
+    ],
+    "protocol": {
+      "slug": "uniswap-v3",
+      "tvl_usd": 1515266000.242553,
+      "tvl_change_24h": 0.46261518569419025,
+      "tvl_change_7d": 0.14637404128521325,
+      "category": "Dexs",
+      "chains": [
+        "Ethereum",
+        "Base",
+        "Arbitrum",
+        "Binance",
+        "Robinhood Chain",
+        "Polygon",
+        "X Layer",
+        "Plasma",
+        "Optimism",
+        "xDai",
+        "Unichain",
+        "Avalanche",
+        "Celo",
+        "RSK",
+        "Monad",
+        "Nibiru",
+        "World Chain",
+        "XDC",
+        "0G",
+        "Boba",
+        "Filecoin",
+        "zkSync Era",
+        "Mantle",
+        "Etherlink",
+        "Goat",
+        "Sei",
+        "BOB",
+        "Telos",
+        "Lens",
+        "Sonic",
+        "Redbelly",
+        "Hemi",
+        "Scroll",
+        "Linea",
+        "Blast",
+        "Taiko",
+        "Lisk",
+        "MegaETH",
+        "Moonbeam",
+        "Tempo",
+        "Manta",
+        "LightLink",
+        "Polygon zkEVM",
+        "Corn",
+        "Saga"
+      ],
+      "mcap_to_tvl": null,
+      "methodology": "Counts the tokens locked on AMM pools, pulling the data from the 'ianlapham/uniswapv2' subgraph",
+      "fdv_to_tvl": null
+    },
+    "github": {
+      "owner": "Uniswap",
+      "repo": "v3-core",
+      "full_name": "Uniswap/v3-core",
+      "stars": 5016,
+      "forks": 3033,
+      "open_issues": 99,
+      "watchers": 147,
+      "language": "TypeScript",
+      "size_kb": 6515,
+      "default_branch": "main",
+      "created_at": "2020-04-29T20:27:00Z",
+      "updated_at": "2026-07-19T23:34:50Z",
+      "pushed_at": "2026-04-30T16:18:51Z",
+      "topics": [
+        "automated-market-maker",
+        "core",
+        "ethereum",
+        "smart-contracts"
+      ],
+      "license": "NOASSERTION",
+      "archived": false,
+      "disabled": false,
+      "has_issues": true,
+      "homepage": "https://uniswap.org",
+      "description": "🦄 🦄 🦄 Core smart contracts of Uniswap v3",
+      "source_repo": "Uniswap/v3-core",
+      "languages": [
+        {
+          "name": "TypeScript",
+          "bytes": 261859,
+          "pct": 52
+        },
+        {
+          "name": "Solidity",
+          "bytes": 244785,
+          "pct": 48
+        }
+      ],
+      "commits_30d": 0,
+      "last_commit": "2026-04-30T16:18:51Z"
+    },
+    "ai": {
+      "payd_score": 76,
+      "risk_score": 78,
+      "conviction_score": 38,
+      "alpha_score": 100,
+      "thesis": [
+        "Established market cap (>$1B)",
+        "Strong developer interest (5,016 stars)",
+        "Significant TVL ($1515M)",
+        "Multi-chain deployment"
+      ],
+      "bull_case": [
+        "Strong 30-day uptrend",
+        "Top 100 by market cap",
+        "Major open-source presence",
+        "Broad multi-chain reach"
+      ],
+      "bear_case": [
+        "Down 92% from ATH"
+      ],
+      "opinion": "High-scoring opportunity, monitor risk factors",
+      "calculated_at": "2026-07-22T01:15:58.056Z"
+    }
+  },
+  "ethereum": {
+    "id": "ethereum",
+    "symbol": "ETH",
+    "name": "ethereum",
+    "sector": "layer1",
+    "coingecko_id": "ethereum",
+    "last_enriched_at": "2026-07-22T01:15:58.056Z",
+    "market": {
+      "price_usd": 1934.69,
+      "market_cap_usd": 233495507414,
+      "fdv_usd": 233495507414,
+      "circulating_supply": 120682803.0755918,
+      "total_supply": 120682803.0755918,
+      "max_supply": null,
+      "volume_24h_usd": 10862869549,
+      "change_24h_pct": 1.10698733615759,
+      "change_7d_pct": 2.3926302174272607,
+      "change_30d_pct": 12.131311035364247,
+      "change_1h_pct": -0.01053103181077271,
+      "ath": 4946.05,
+      "ath_change_pct": -60.88412,
+      "atl": 0.432979,
+      "atl_change_pct": 446732.55697,
+      "market_cap_rank": 2,
+      "last_updated": "2026-07-22T01:14:37.632Z",
+      "image": "https://coin-images.coingecko.com/coins/images/279/large/ethereum.png?1696501628"
+    },
+    "social": {
+      "twitter_handle": "ethereum",
+      "twitter_url": "https://x.com/ethereum",
+      "twitter_followers": null,
+      "reddit_subscribers": 0,
+      "telegram_channel": null,
+      "discord": null,
+      "website": "https://ethereum.org"
+    },
+    "developer": {
+      "stars": 44422,
+      "forks": 19618,
+      "subscribers": 2195,
+      "total_issues": 7683,
+      "closed_issues": 7427,
+      "pull_requests_merged": 5779,
+      "commit_count_4_weeks": 41
+    },
+    "description": "Ethereum is a global, open-source platform for decentralized applications. In other words, it is a decentralized blockchain platform that enables developers to build and deploy smart contracts and applications without central authority control. Unlike Bitcoin, which primarily functions as digital currency, Ethereum operates as a programmable global computer where developers can create any type of decentralized service. \n\nThe platform hosts over $14 billion in DeFi applications with hundreds of thousands of active users across financial protocols, NFT marketplaces, and gaming platforms. Its transition to Proof of Stake in September 2022 reduced energy consumption by over 99%, addressing environmental concerns while strengthening network security.\n\nThe network operates through thousands of independent validator nodes that process transactions and execute smart contracts on the Ethereum Virtual Machine. Smart contracts are self-executing programs written in Solidity that automatically carry out agreements when conditions are met, eliminating intermediaries like banks or brokers. \n\nValidators stake ETH as collateral to propose and validate blocks, earning rewards for honest participation while facing penalties for malicious behavior. The EIP-1559 upgrade introduced a dynamic base fee mechanism that burns ETH with each transaction, creating deflationary pressure during high network activity when more ETH is burned than issued to validators.\n\nVitalik Buterin proposed Ethereum in 2013, but seven co-founders helped build it, including Gavin Wood who created Solidity and the EVM technical specification, and Joseph Lubin who founded ConsenSys. The project launched in July 2015 after raising over $18 million through crowdfunding, quickly becoming the largest blockchain developer community. Major milestones include the 2020 Beacon Chain launch, the 2021 London hard fork implementing fee burning, and the 2022 Merge to Proof of Stake. \n\nEther (ETH) serves multiple functions: paying transaction fees (gas), staking to secure the network and earn 3-5% annual yields, serving as collateral in DeFi protocols, and purchasing NFTs and digital assets. The asset is increasingly adopted by traditional institutions, with publicly traded companies adding ETH to corporate treasuries to generate staking yields while maintaining blockchain exposure, and in 2024, the SEC approved spot Ethereum ETFs, allowing traditional investors to gain exposure through conventional brokerage accounts.\n\nEthereum's roadmap focuses on dramatically increasing transaction capacity to over 100,000 per second, reducing confirmation times, and enhancing decentralization while maintaining security against future threats like quantum computing.",
+    "categories": [
+      "Smart Contract Platform",
+      "Layer 1 (L1)",
+      "Ethereum Ecosystem",
+      "FTX Holdings",
+      "Multicoin Capital Portfolio",
+      "Proof of Stake (PoS)",
+      "Alameda Research Portfolio",
+      "Andreessen Horowitz (a16z) Portfolio",
+      "GMCI Layer 1 Index",
+      "GMCI 30 Index",
+      "Delphi Ventures Portfolio",
+      "Galaxy Digital Portfolio",
+      "GMCI Index",
+      "World Liberty Financial Portfolio",
+      "Coinbase 50 Index"
+    ],
+    "protocol": {
+      "slug": "ethereum",
+      "tvl_usd": null,
+      "tvl_change_24h": null,
+      "tvl_change_7d": null,
+      "category": "Chain",
+      "chains": [],
+      "mcap_to_tvl": null,
+      "methodology": "",
+      "fdv_to_tvl": null
+    },
+    "github": {
+      "owner": "ethereum",
+      "repo": "go-ethereum",
+      "full_name": "ethereum/go-ethereum",
+      "stars": 51198,
+      "forks": 21993,
+      "open_issues": 388,
+      "watchers": 2214,
+      "language": "Go",
+      "size_kb": 238395,
+      "default_branch": "master",
+      "created_at": "2013-12-26T13:05:46Z",
+      "updated_at": "2026-07-21T21:33:52Z",
+      "pushed_at": "2026-07-21T09:05:46Z",
+      "topics": [
+        "blockchain",
+        "ethereum",
+        "geth",
+        "go",
+        "p2p"
+      ],
+      "license": "LGPL-3.0",
+      "archived": false,
+      "disabled": false,
+      "has_issues": true,
+      "homepage": "https://geth.ethereum.org",
+      "description": "Go implementation of the Ethereum protocol",
+      "source_repo": "ethereum/go-ethereum",
+      "languages": [
+        {
+          "name": "Go",
+          "bytes": 14806513,
+          "pct": 85
+        },
+        {
+          "name": "C",
+          "bytes": 1854486,
+          "pct": 11
+        },
+        {
+          "name": "JavaScript",
+          "bytes": 434297,
+          "pct": 2
+        },
+        {
+          "name": "Assembly",
+          "bytes": 145305,
+          "pct": 1
+        },
+        {
+          "name": "Sage",
+          "bytes": 42344,
+          "pct": 0
+        },
+        {
+          "name": "Shell",
+          "bytes": 37398,
+          "pct": 0
+        },
+        {
+          "name": "Go Template",
+          "bytes": 32767,
+          "pct": 0
+        },
+        {
+          "name": "CMake",
+          "bytes": 30065,
+          "pct": 0
+        },
+        {
+          "name": "M4",
+          "bytes": 23683,
+          "pct": 0
+        },
+        {
+          "name": "NSIS",
+          "bytes": 23197,
+          "pct": 0
+        },
+        {
+          "name": "Python",
+          "bytes": 21984,
+          "pct": 0
+        },
+        {
+          "name": "Solidity",
+          "bytes": 14815,
+          "pct": 0
+        },
+        {
+          "name": "Makefile",
+          "bytes": 13455,
+          "pct": 0
+        },
+        {
+          "name": "Yul",
+          "bytes": 5382,
+          "pct": 0
+        },
+        {
+          "name": "Dockerfile",
+          "bytes": 4988,
+          "pct": 0
+        },
+        {
+          "name": "HTML",
+          "bytes": 1121,
+          "pct": 0
+        }
+      ],
+      "commits_30d": 97,
+      "last_commit": "2026-07-21T03:02:02Z"
+    },
+    "ai": {
+      "payd_score": 80,
+      "risk_score": 51,
+      "conviction_score": 65,
+      "alpha_score": 58,
+      "thesis": [
+        "Established market cap (>$1B)",
+        "Strong developer interest (51,198 stars)",
+        "Active development (commits this week)"
+      ],
+      "bull_case": [
+        "Top 100 by market cap",
+        "Major open-source presence"
+      ],
+      "bear_case": [
+        "No major red flags detected"
+      ],
+      "opinion": "High-scoring opportunity, monitor risk factors",
+      "calculated_at": "2026-07-22T01:16:13.456Z"
+    }
+  },
+  "arbitrum": {
+    "id": "arbitrum",
+    "symbol": "ARB",
+    "name": "arbitrum",
+    "sector": "layer2",
+    "coingecko_id": "arbitrum",
+    "last_enriched_at": "2026-07-22T01:16:13.456Z",
+    "market": {
+      "price_usd": 0.090225,
+      "market_cap_usd": 596728637,
+      "fdv_usd": 902212806,
+      "circulating_supply": 6614056381,
+      "total_supply": 10000000000,
+      "max_supply": 10000000000,
+      "volume_24h_usd": 42074913,
+      "change_24h_pct": -0.782548014058133,
+      "change_7d_pct": -3.1347934693016133,
+      "change_30d_pct": 9.025447041905108,
+      "change_1h_pct": 1.0663702137843865,
+      "ath": 2.39,
+      "ath_change_pct": -96.22514,
+      "atl": 0.070738,
+      "atl_change_pct": 27.5554,
+      "market_cap_rank": 93,
+      "last_updated": "2026-07-22T01:14:37.672Z",
+      "image": "https://coin-images.coingecko.com/coins/images/16547/large/arb.jpg?1721358242"
+    },
+    "social": {
+      "twitter_handle": "arbitrum",
+      "twitter_url": "https://x.com/arbitrum",
+      "twitter_followers": null,
+      "reddit_subscribers": 0,
+      "telegram_channel": "arbitrum",
+      "discord": "https://discord.com/invite/Arbitrum",
+      "website": "https://arbitrum.io"
+    },
+    "developer": {
+      "stars": 101,
+      "forks": 129,
+      "subscribers": 18,
+      "total_issues": 0,
+      "closed_issues": 0,
+      "pull_requests_merged": 250,
+      "commit_count_4_weeks": 3
+    },
+    "description": "Arbitrum is one of the leading Ethereum scaling solutions bringing cheap transactions to tens of thousands of users in an environment that feels very similar to Ethereum. It is an optimistic rollup and the leading L2 in terms of TVL. Some of the largest dApps live on Arbitrum include GMX, Radiant, Uniswap V3, and Gains Network.",
+    "categories": [
+      "Smart Contract Platform",
+      "Arbitrum Ecosystem",
+      "Ethereum Ecosystem",
+      "Arbitrum Nova Ecosystem",
+      "Layer 2 (L2)",
+      "eGirl Capital Portfolio",
+      "Rollup",
+      "Alameda Research Portfolio",
+      "Pantera Capital Portfolio",
+      "GMCI Layer 2 Index",
+      "GMCI 30 Index",
+      "GMCI Index",
+      "Polychain Capital Portfolio",
+      "Made in USA",
+      "Governance"
+    ],
+    "github": {
+      "owner": "OffchainLabs",
+      "repo": "arbitrum",
+      "full_name": "OffchainLabs/arbitrum",
+      "stars": 77,
+      "forks": 37,
+      "open_issues": 0,
+      "watchers": 22,
+      "language": null,
+      "size_kb": 5,
+      "default_branch": "main",
+      "created_at": "2023-05-16T14:42:10Z",
+      "updated_at": "2026-06-18T09:59:39Z",
+      "pushed_at": "2025-07-02T11:28:14Z",
+      "topics": [],
+      "license": null,
+      "archived": false,
+      "disabled": false,
+      "has_issues": false,
+      "homepage": null,
+      "description": null,
+      "source_repo": "OffchainLabs/arbitrum",
+      "languages": [],
+      "commits_30d": 0,
+      "last_commit": "2025-07-02T11:28:14Z"
+    },
+    "ai": {
+      "payd_score": 59,
+      "risk_score": 83,
+      "conviction_score": 29,
+      "alpha_score": 50,
+      "thesis": [
+        "Mid-cap with growth potential"
+      ],
+      "bull_case": [
+        "Top 100 by market cap"
+      ],
+      "bear_case": [
+        "Down 96% from ATH",
+        "No recent development activity"
+      ],
+      "opinion": "Average metrics, requires deeper due diligence",
+      "calculated_at": "2026-07-22T01:16:28.274Z"
+    }
+  },
+  "maker": {
+    "id": "maker",
+    "symbol": "MKR",
+    "name": "maker",
+    "sector": "rwa",
+    "coingecko_id": "maker",
+    "last_enriched_at": "2026-07-22T01:16:28.274Z",
+    "market": {
+      "price_usd": 1455.37,
+      "market_cap_usd": 0,
+      "fdv_usd": 131016896,
+      "circulating_supply": 0,
+      "total_supply": 90022.84899240077,
+      "max_supply": 1005577,
+      "volume_24h_usd": 101585,
+      "change_24h_pct": 1.1164975596760667,
+      "change_7d_pct": 3.006408947560285,
+      "change_30d_pct": 6.478336116197907,
+      "change_1h_pct": -0.9980940547566388,
+      "ath": 6292.31,
+      "ath_change_pct": -76.78561,
+      "atl": 168.36,
+      "atl_change_pct": 767.63105,
+      "market_cap_rank": null,
+      "last_updated": "2026-07-22T01:13:40.403Z",
+      "image": "https://coin-images.coingecko.com/coins/images/1364/large/Mark_Maker.png?1696502423"
+    },
+    "social": {
+      "twitter_handle": "SkyEcosystem",
+      "twitter_url": "https://x.com/SkyEcosystem",
+      "twitter_followers": null,
+      "reddit_subscribers": 0,
+      "telegram_channel": null,
+      "discord": null,
+      "website": "https://makerdao.com"
+    },
+    "developer": {
+      "stars": 871,
+      "forks": 549,
+      "subscribers": 1,
+      "total_issues": 0,
+      "closed_issues": 0,
+      "pull_requests_merged": 231,
+      "commit_count_4_weeks": 0
+    },
+    "description": "MKR is a cryptocurrency depicted as a smart contract platform and works alongside the Dai coin and aims to act as a hedge currency that provides traders with a stable alternative to the majority of coins currently available on the market. Maker offers a transparent stablecoin system that is fully inspectable on the Ethereum blockchain. Founded almost three years ago, MakerDao is lead by Rune Christensen, its CEO and founder. Maker’s MKR coin is a recent entrant to the market and is not a well known project. However, after today it will be known by many more people after blowing up 40% and it is one of the coins to rise to prominence during the recent peaks and troughs.\n\nAfter being developed by the MakerDAO team, Maker Dai officially went live on December 18th, 2017. Dai is a price stable coin that is suitable for payments, savings, or collateral and provides cryptocurrency traders with increased options concerning opening and closing positions. Dai lives completely on the blockchain chain with its stability unmediated by the legal system or trusted counterparties and helps facilitate trading while staying entirely in the world of cryptocurrencies. The concept of a stablecoin is fairly straight forward – it’s a token that has its price or value pegged to a particular fiat currency. A stablecoin is a token (like Bitcoin and Ethereum) that exists on a blockchain, but unlike Bitcoin or Ethereum, Dai has no volatility.\n\nMKR is an ERC-20 token on the Ethereum blockchain and can not be mined. It’s instead created/destroyed in response to DAI price fluctuations in order to keep it hovering around $1 USD. MKR is used to pay transaction fees on the Maker system, and it collateralizes the system. Holding MKR comes with voting rights within Maker’s continuous approval voting system. Bad governance devalues MKR tokens, so MKR holders are incentivized to vote for the good of the entire system. It’s a fully decentralized and democratic structure, then, which is an underutilized USP of blockchain tech.\n\nValue volatility is a relative concept among both cryptos and fiat currencies. The US dollar, for example, was worth 110.748 yen on July 9, 2018. On July 4, 2011, $1 was worth 80.64 yen, and on March 18, 1985, $1 was worth 255.65 yen. These are major differences in exchange rates, and inflation within each country makes each currency worth different values even when compared to themselves. One USD in 1913 is worth the equivalent of $25.41 today, and even $1 in 1993 is worth the equivalent of $1.74 today. Stablecoins don’t negate these basic economic principles of value. Instead, both Tether and Dai have values pegged to the U.S. dollar. This is done to stabilize the price.",
+    "categories": [
+      "Decentralized Finance (DeFi)",
+      "Avalanche Ecosystem",
+      "Polygon Ecosystem",
+      "Ethereum Ecosystem",
+      "Real World Assets (RWA)",
+      "Paradigm Portfolio",
+      "Index Coop Defi Index",
+      "Stablecoin Issuer",
+      "DragonFly Capital Portfolio",
+      "Andreessen Horowitz (a16z) Portfolio",
+      "Energi Ecosystem",
+      "Sora Ecosystem",
+      "GMCI DeFi Index",
+      "RWA Protocol",
+      "GMCI Index",
+      "Polychain Capital Portfolio",
+      "Made in USA",
+      "Coinbase 50 Index",
+      "Governance"
+    ],
+    "protocol": {
+      "slug": "lido",
+      "tvl_usd": 17766851599.33301,
+      "tvl_change_24h": 1.1422900794460134,
+      "tvl_change_7d": 3.3463883460376422,
+      "category": "Liquid Staking",
+      "chains": [
+        "Ethereum",
+        "Solana",
+        "Moonbeam",
+        "Moonriver",
+        "Terra"
+      ],
+      "mcap_to_tvl": null,
+      "methodology": "Staked tokens are counted as TVL based on the chain that they are staked on and where the liquidity tokens are issued, stMATIC is counted as Ethereum TVL since MATIC is staked in Ethereum and the liqu",
+      "fdv_to_tvl": null
+    },
+    "github": {
+      "owner": "makerdao",
+      "repo": "dss",
+      "full_name": "sky-ecosystem/dss",
+      "stars": 841,
+      "forks": 452,
+      "open_issues": 34,
+      "watchers": 44,
+      "language": "Solidity",
+      "size_kb": 2266,
+      "default_branch": "master",
+      "created_at": "2018-05-28T14:05:57Z",
+      "updated_at": "2026-07-19T07:46:32Z",
+      "pushed_at": "2023-10-01T01:58:28Z",
+      "topics": [
+        "defi",
+        "ethereum",
+        "makerdao",
+        "solidity"
+      ],
+      "license": "AGPL-3.0",
+      "archived": false,
+      "disabled": false,
+      "has_issues": true,
+      "homepage": null,
+      "description": "Dai Stablecoin System",
+      "source_repo": "makerdao/dss",
+      "languages": [
+        {
+          "name": "Solidity",
+          "bytes": 346332,
+          "pct": 100
+        },
+        {
+          "name": "Makefile",
+          "bytes": 459,
+          "pct": 0
+        },
+        {
+          "name": "Nix",
+          "bytes": 372,
+          "pct": 0
+        }
+      ],
+      "commits_30d": 0,
+      "last_commit": "2023-10-01T01:58:28Z"
+    },
+    "ai": {
+      "payd_score": 59,
+      "risk_score": 73,
+      "conviction_score": 46,
+      "alpha_score": 66,
+      "thesis": [
+        "Significant TVL ($17767M)",
+        "Multi-chain deployment"
+      ],
+      "bull_case": [
+        "Broad multi-chain reach"
+      ],
+      "bear_case": [
+        "Down 77% from ATH",
+        "No recent development activity"
+      ],
+      "opinion": "Average metrics, requires deeper due diligence",
+      "calculated_at": "2026-07-22T01:16:43.451Z"
+    }
+  },
+  "ondo-finance": {
+    "id": "ondo-finance",
+    "symbol": "ONDO",
+    "name": "ondo-finance",
+    "sector": "rwa",
+    "coingecko_id": "ondo-finance",
+    "last_enriched_at": "2026-07-22T01:16:43.451Z",
+    "market": {
+      "price_usd": 0.404858,
+      "market_cap_usd": 1971663487,
+      "fdv_usd": 4049146855,
+      "circulating_supply": 4869330647,
+      "total_supply": 10000000000,
+      "max_supply": 10000000000,
+      "volume_24h_usd": 224105898,
+      "change_24h_pct": 12.547096457581503,
+      "change_7d_pct": 28.59585407623637,
+      "change_30d_pct": 20.57533876634767,
+      "change_1h_pct": 0.16832531444825163,
+      "ath": 2.14,
+      "ath_change_pct": -81.0828,
+      "atl": 0.082171,
+      "atl_change_pct": 392.70153,
+      "market_cap_rank": 41,
+      "last_updated": "2026-07-22T01:14:30.639Z",
+      "image": "https://coin-images.coingecko.com/coins/images/26580/large/ONDO.png?1696525656"
+    },
+    "social": {
+      "twitter_handle": "OndoFinance",
+      "twitter_url": "https://x.com/OndoFinance",
+      "twitter_followers": null,
+      "reddit_subscribers": 0,
+      "telegram_channel": "ondofinance",
+      "discord": null,
+      "website": "https://ondo.finance"
+    },
+    "developer": {
+      "stars": 37,
+      "forks": 29,
+      "subscribers": 7,
+      "total_issues": 0,
+      "closed_issues": 0,
+      "pull_requests_merged": 1,
+      "commit_count_4_weeks": 0
+    },
+    "description": "The Ondo Foundation was founded in 2022 as an independently governed and nonprofit Cayman Islands Foundation Company with no beneficial owners. The Ondo Foundation assisted in the launch of the Ondo DAO, which deployed and currently governs Flux Finance, the first lending protocol supporting tokenized securities as collateral.\n\nONDO token holders are entrusted with shaping the future of the Ondo DAO so that it continues to pursue its mission to democratize access to institutional-grade finance. The Ondo DAO gives ONDO holders specific rights pertaining to Flux Finance, which is currently governed by the Ondo DAO.",
+    "categories": [
+      "Decentralized Finance (DeFi)",
+      "Ethereum Ecosystem",
+      "Real World Assets (RWA)",
+      "Coinbase Ventures Portfolio",
+      "Pantera Capital Portfolio",
+      "GMCI DeFi Index",
+      "RWA Protocol",
+      "GMCI Index",
+      "World Liberty Financial Portfolio",
+      "Binance Alpha Spotlight",
+      "Made in USA",
+      "CoinList Launchpad"
+    ],
+    "protocol": {
+      "slug": "ondo-global-markets",
+      "tvl_usd": 983592832.8242642,
+      "tvl_change_24h": 2.7924236454094427,
+      "tvl_change_7d": 0.06308521060624628,
+      "category": "RWA",
+      "chains": [
+        "Ethereum",
+        "Binance",
+        "Solana"
+      ],
+      "mcap_to_tvl": null,
+      "methodology": "",
+      "fdv_to_tvl": null
+    },
+    "ai": {
+      "payd_score": 76,
+      "risk_score": 73,
+      "conviction_score": 100,
+      "alpha_score": 56,
+      "thesis": [
+        "Established market cap (>$1B)",
+        "Significant TVL ($984M)",
+        "Strong 24h momentum",
+        "Multi-chain deployment"
+      ],
+      "bull_case": [
+        "Strong 30-day uptrend",
+        "Top 100 by market cap"
+      ],
+      "bear_case": [
+        "Down 81% from ATH"
+      ],
+      "opinion": "High-scoring opportunity, monitor risk factors",
+      "calculated_at": "2026-07-22T01:17:08.160Z"
+    }
+  }
+}

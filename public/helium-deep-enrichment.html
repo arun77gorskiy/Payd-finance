@@ -1,0 +1,741 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Helium (HNT) — PAYD Intelligence V2 DePIN Benchmark</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: #0a0e1a;
+            color: #e4e7eb;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .container { max-width: 1400px; margin: 0 auto; }
+        .header {
+            background: linear-gradient(135deg, #1a1f2e 0%, #2d3548 100%);
+            border: 1px solid #2d3548;
+            border-radius: 16px;
+            padding: 32px;
+            margin-bottom: 24px;
+        }
+        .header-top { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 16px; }
+        .header h1 { font-size: 32px; color: #fff; margin-bottom: 8px; }
+        .header .symbol { color: #8b95a8; font-size: 18px; font-weight: 500; }
+        .sector-tag {
+            display: inline-block;
+            background: linear-gradient(135deg, #00d4aa 0%, #00a884 100%);
+            color: #0a0e1a;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-weight: 700;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .verified-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            background: rgba(0, 212, 170, 0.15);
+            color: #00d4aa;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 13px;
+            font-weight: 600;
+            border: 1px solid rgba(0, 212, 170, 0.3);
+        }
+        .verified-badge::before { content: '✓'; font-weight: 700; }
+
+        .score-hero {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+            margin-top: 24px;
+        }
+        .score-card {
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid #2d3548;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+        }
+        .score-value {
+            font-size: 36px;
+            font-weight: 800;
+            color: #fff;
+            line-height: 1;
+        }
+        .score-label {
+            font-size: 12px;
+            color: #8b95a8;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin-top: 8px;
+        }
+        .score-card.featured {
+            background: linear-gradient(135deg, #00d4aa20 0%, #00a88420 100%);
+            border-color: #00d4aa;
+        }
+        .score-card.featured .score-value { color: #00d4aa; }
+
+        .section {
+            background: #1a1f2e;
+            border: 1px solid #2d3548;
+            border-radius: 16px;
+            padding: 28px;
+            margin-bottom: 20px;
+        }
+        .section h2 {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #2d3548;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+        .section h2::before { content: '◆'; color: #00d4aa; }
+
+        .grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .grid-3 { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; }
+        @media (max-width: 768px) { .grid-2, .grid-3 { grid-template-columns: 1fr; } }
+
+        .metric {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            border: 1px solid #2d3548;
+            margin-bottom: 8px;
+        }
+        .metric-label { color: #8b95a8; font-size: 14px; }
+        .metric-value { color: #fff; font-weight: 600; font-size: 15px; }
+        .metric-value.muted { color: #5a6376; }
+        .metric-value.highlight { color: #00d4aa; }
+        .metric-value.warn { color: #ffb800; }
+        .metric-value.bad { color: #ff5577; }
+
+        .repo-list { display: flex; flex-direction: column; gap: 8px; }
+        .repo-item {
+            display: grid;
+            grid-template-columns: 1fr auto auto auto auto;
+            gap: 12px;
+            align-items: center;
+            padding: 12px 16px;
+            background: rgba(255, 255, 255, 0.02);
+            border-radius: 8px;
+            border: 1px solid #2d3548;
+            font-size: 14px;
+        }
+        .repo-name { color: #fff; font-weight: 600; }
+        .repo-name .repo-desc { display: block; color: #8b95a8; font-weight: 400; font-size: 12px; margin-top: 4px; }
+        .repo-stat { color: #8b95a8; }
+        .repo-stat strong { color: #fff; }
+        .repo-tag {
+            display: inline-block;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+        .repo-tag.core { background: #00d4aa20; color: #00d4aa; border: 1px solid #00d4aa40; }
+        .repo-tag.archived { background: #ff557720; color: #ff5577; border: 1px solid #ff557740; }
+        .repo-tag.rate-limited { background: #ffb80020; color: #ffb800; border: 1px solid #ffb80040; }
+
+        .risk-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 12px; }
+        .risk-card {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid #2d3548;
+            border-radius: 8px;
+            padding: 14px;
+        }
+        .risk-name { color: #fff; font-weight: 600; margin-bottom: 8px; font-size: 14px; }
+        .risk-bar {
+            height: 6px;
+            background: #2d3548;
+            border-radius: 3px;
+            overflow: hidden;
+            margin-bottom: 6px;
+        }
+        .risk-fill { height: 100%; border-radius: 3px; }
+        .risk-score-display { color: #fff; font-weight: 700; font-size: 18px; }
+        .risk-justification { color: #8b95a8; font-size: 12px; margin-top: 6px; line-height: 1.4; }
+
+        .list { list-style: none; }
+        .list li {
+            padding: 10px 0;
+            padding-left: 20px;
+            position: relative;
+            border-bottom: 1px solid #2d3548;
+        }
+        .list li:last-child { border-bottom: none; }
+        .list li::before {
+            content: '→';
+            position: absolute;
+            left: 0;
+            color: #00d4aa;
+            font-weight: 700;
+        }
+
+        .advantage { border-left: 3px solid #00d4aa; padding-left: 16px; margin-bottom: 12px; }
+        .disadvantage { border-left: 3px solid #ff5577; padding-left: 16px; margin-bottom: 12px; }
+        .claim { color: #fff; font-weight: 600; margin-bottom: 6px; }
+        .evidence { color: #8b95a8; font-size: 13px; }
+
+        .thesis-block {
+            background: rgba(0, 212, 170, 0.05);
+            border: 1px solid rgba(0, 212, 170, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 16px;
+        }
+        .thesis-block.bear { background: rgba(255, 85, 119, 0.05); border-color: rgba(255, 85, 119, 0.2); }
+        .thesis-block h4 { color: #00d4aa; margin-bottom: 10px; font-size: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .thesis-block.bear h4 { color: #ff5577; }
+        .thesis-block p { color: #e4e7eb; line-height: 1.7; }
+
+        .identity-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 8px;
+        }
+        .identity-item {
+            background: rgba(255, 255, 255, 0.02);
+            border: 1px solid #2d3548;
+            border-radius: 6px;
+            padding: 10px 14px;
+        }
+        .identity-key { color: #8b95a8; font-size: 11px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .identity-value { color: #fff; font-weight: 600; font-size: 13px; margin-top: 2px; word-break: break-all; }
+        .identity-value a { color: #00d4aa; text-decoration: none; }
+        .identity-value a:hover { text-decoration: underline; }
+
+        .progress-bar {
+            height: 24px;
+            background: #2d3548;
+            border-radius: 12px;
+            overflow: hidden;
+            position: relative;
+        }
+        .progress-fill {
+            height: 100%;
+            background: linear-gradient(90deg, #00d4aa 0%, #00a884 100%);
+            transition: width 0.5s;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            padding-right: 10px;
+            color: #0a0e1a;
+            font-weight: 700;
+            font-size: 12px;
+        }
+
+        .coverage-stat {
+            display: grid;
+            grid-template-columns: 200px 1fr 100px;
+            gap: 16px;
+            align-items: center;
+            margin-bottom: 10px;
+        }
+        .coverage-stat .cat-name { color: #8b95a8; font-size: 14px; }
+
+        .back-link {
+            display: inline-block;
+            color: #00d4aa;
+            text-decoration: none;
+            margin-bottom: 20px;
+            font-size: 14px;
+        }
+        .back-link:hover { text-decoration: underline; }
+
+        .test-pass { color: #00d4aa; }
+        .test-fail { color: #ff5577; }
+
+        footer {
+            text-align: center;
+            padding: 40px 0;
+            color: #5a6376;
+            font-size: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="/intelligence-v2.html" class="back-link">← PAYD Intelligence V2</a>
+
+        <div class="header">
+            <div class="header-top">
+                <div>
+                    <h1 id="project-name">Loading…</h1>
+                    <div class="symbol" id="project-symbol"></div>
+                </div>
+                <div style="display: flex; flex-direction: column; align-items: flex-end; gap: 8px;">
+                    <span class="sector-tag" id="sector-tag">—</span>
+                    <span class="verified-badge">IDENTITY VERIFIED · 12/12</span>
+                </div>
+            </div>
+
+            <div class="score-hero">
+                <div class="score-card featured">
+                    <div class="score-value" id="depin-score">—</div>
+                    <div class="score-label">DePIN Score</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-value" id="payd-quality">—</div>
+                    <div class="score-label">PAYD Quality</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-value" id="payd-conviction">—</div>
+                    <div class="score-label">PAYD Conviction</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-value" id="payd-alpha">—</div>
+                    <div class="score-label">PAYD Alpha</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-value" id="risk-score">—</div>
+                    <div class="score-label">Risk Score</div>
+                </div>
+                <div class="score-card">
+                    <div class="score-value" id="rating">—</div>
+                    <div class="score-label">Rating (<span id="confidence">—</span>)</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Identity -->
+        <div class="section">
+            <h2>Identity Resolution</h2>
+            <div class="identity-grid" id="identity-grid"></div>
+        </div>
+
+        <!-- Market Data -->
+        <div class="section">
+            <h2>Market Data (CoinGecko primary)</h2>
+            <div class="grid-2" id="market-grid"></div>
+        </div>
+
+        <!-- Tokenomics -->
+        <div class="section">
+            <h2>Tokenomics</h2>
+            <div class="grid-2" id="tokenomics-grid"></div>
+        </div>
+
+        <!-- GitHub Repositories -->
+        <div class="section">
+            <h2>GitHub Deep Enrichment — <span id="repo-count">0</span> Official Repositories</h2>
+            <div class="repo-list" id="repo-list"></div>
+        </div>
+
+        <!-- Funding -->
+        <div class="section">
+            <h2>Funding & Investors</h2>
+            <div id="funding-content"></div>
+        </div>
+
+        <!-- Team -->
+        <div class="section">
+            <h2>Team (Co-founders)</h2>
+            <ul class="list" id="team-list"></ul>
+        </div>
+
+        <!-- Partnerships -->
+        <div class="section">
+            <h2>Partnerships & Ecosystem</h2>
+            <ul class="list" id="partnerships-list"></ul>
+        </div>
+
+        <!-- Roadmap -->
+        <div class="section">
+            <h2>Roadmap & Catalysts</h2>
+            <div class="grid-2">
+                <div>
+                    <h3 style="color:#8b95a8;margin-bottom:12px;font-size:14px;text-transform:uppercase;">Historical Milestones</h3>
+                    <ul class="list" id="roadmap-historical"></ul>
+                </div>
+                <div>
+                    <h3 style="color:#8b95a8;margin-bottom:12px;font-size:14px;text-transform:uppercase;">Future Catalysts</h3>
+                    <ul class="list" id="roadmap-future"></ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Competitors -->
+        <div class="section">
+            <h2>DePIN Competitors</h2>
+            <div class="grid-3" id="competitors-grid"></div>
+        </div>
+
+        <!-- Risk Breakdown -->
+        <div class="section">
+            <h2>Risk Breakdown — 9 Dimensions</h2>
+            <div class="risk-grid" id="risk-grid"></div>
+        </div>
+
+        <!-- Score Breakdown -->
+        <div class="section">
+            <h2>DePIN Score Breakdown (9-dim weighted)</h2>
+            <div id="score-breakdown"></div>
+        </div>
+
+        <!-- Advantages / Disadvantages -->
+        <div class="section">
+            <h2>Advantages & Disadvantages</h2>
+            <div class="grid-2">
+                <div>
+                    <h3 style="color:#00d4aa;margin-bottom:16px;">✓ Advantages</h3>
+                    <div id="advantages-list"></div>
+                </div>
+                <div>
+                    <h3 style="color:#ff5577;margin-bottom:16px;">⚠ Disadvantages</h3>
+                    <div id="disadvantages-list"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Investment Thesis -->
+        <div class="section">
+            <h2>Investment Thesis</h2>
+            <div class="thesis-block">
+                <h4>Base Thesis</h4>
+                <p id="thesis-base"></p>
+            </div>
+            <div class="grid-2">
+                <div class="thesis-block">
+                    <h4>↑ Bull Case</h4>
+                    <ul class="list" id="thesis-bull"></ul>
+                </div>
+                <div class="thesis-block bear">
+                    <h4>↓ Bear Case</h4>
+                    <ul class="list" id="thesis-bear"></ul>
+                </div>
+            </div>
+            <div class="thesis-block">
+                <h4>Key Catalysts</h4>
+                <ul class="list" id="thesis-catalysts"></ul>
+            </div>
+            <div class="thesis-block">
+                <h4>Valuation Observations</h4>
+                <p id="thesis-valuation"></p>
+            </div>
+        </div>
+
+        <!-- Coverage -->
+        <div class="section">
+            <h2>Data Coverage by Category</h2>
+            <div id="coverage-stats"></div>
+            <div style="margin-top:24px;padding:16px;background:rgba(0,212,170,0.05);border-radius:8px;border:1px solid rgba(0,212,170,0.2);">
+                <div style="color:#8b95a8;font-size:12px;text-transform:uppercase;letter-spacing:0.5px;">Overall Data Coverage</div>
+                <div style="display:flex;align-items:center;gap:16px;margin-top:8px;">
+                    <div class="progress-bar" style="flex:1;height:32px;">
+                        <div class="progress-fill" id="coverage-fill" style="width:0%;">0%</div>
+                    </div>
+                    <div style="color:#fff;font-weight:700;font-size:24px;" id="coverage-pct">—</div>
+                </div>
+                <div style="color:#8b95a8;font-size:13px;margin-top:8px;" id="coverage-summary"></div>
+            </div>
+        </div>
+
+        <!-- Acceptance Test -->
+        <div class="section">
+            <h2>Acceptance Test Results</h2>
+            <div id="acceptance-results"></div>
+        </div>
+
+        <footer>
+            PAYD Intelligence V2 · Helium (HNT) DePIN Benchmark · 2026-09-01<br>
+            Generated by <code>code/helium_deep_enrichment.js</code> · Validated by <code>code/helium_acceptance_test.js</code>
+        </footer>
+    </div>
+
+    <script>
+    async function load() {
+        const [profile, acceptance] = await Promise.all([
+            fetch('/data/intelligence/projects/helium.json').then(r => r.json()),
+            fetch('/tmp/helium/acceptance_results.json').then(r => r.json()).catch(() => null)
+        ]);
+
+        // Header
+        document.getElementById('project-name').textContent = profile.canonical_name;
+        document.getElementById('project-symbol').textContent = profile.symbol + ' · ' + profile.subsector;
+        document.getElementById('sector-tag').textContent = profile.sector;
+
+        // Scores
+        document.getElementById('depin-score').textContent = profile.scores.depin_score_total + '/100';
+        document.getElementById('payd-quality').textContent = profile.scores.payd_quality;
+        document.getElementById('payd-conviction').textContent = profile.scores.payd_conviction;
+        document.getElementById('payd-alpha').textContent = profile.scores.payd_alpha;
+        document.getElementById('risk-score').textContent = profile.scores.risk_score;
+        document.getElementById('rating').textContent = profile.scores.investment_rating;
+        document.getElementById('confidence').textContent = profile.scores.rating_confidence;
+
+        // Identity
+        const idGrid = document.getElementById('identity-grid');
+        const idMap = {
+            'coingecko': 'CoinGecko',
+            'coinmarketcap': 'CoinMarketCap',
+            'defillama_protocol': 'DefiLlama',
+            'github_org': 'GitHub',
+            'x_handle': 'X (Twitter)',
+            'website': 'Website',
+            'documentation': 'Documentation',
+            'whitepaper': 'Whitepaper'
+        };
+        for (const [key, label] of Object.entries(idMap)) {
+            const v = profile.identity.identifiers[key];
+            if (v) {
+                const item = document.createElement('div');
+                item.className = 'identity-item';
+                item.innerHTML = `
+                    <div class="identity-key">${label}</div>
+                    <div class="identity-value"><a href="${v.url || v.id}" target="_blank">${v.id || v.url}</a></div>
+                `;
+                idGrid.appendChild(item);
+            }
+        }
+
+        // Market Data
+        const market = profile.metrics.market;
+        const m = market;
+        function addMetric(grid, label, value, suffix='', klass='') {
+            const div = document.createElement('div');
+            div.className = 'metric';
+            div.innerHTML = `<span class="metric-label">${label}</span><span class="metric-value ${klass}">${value}${suffix}</span>`;
+            grid.appendChild(div);
+        }
+        const marketGrid = document.getElementById('market-grid');
+        addMetric(marketGrid, 'Price (USD)', '$' + m.price_usd.value.toFixed(4));
+        addMetric(marketGrid, 'Market Cap', '$' + (m.market_cap_usd.value / 1e6).toFixed(2) + 'M');
+        addMetric(marketGrid, 'FDV', '$' + (m.fdv_usd.value / 1e6).toFixed(2) + 'M');
+        addMetric(marketGrid, 'Volume 24h', '$' + (m.volume_24h_usd.value / 1e6).toFixed(2) + 'M');
+        addMetric(marketGrid, 'Market Cap Rank', '#' + m.market_cap_rank.value);
+        addMetric(marketGrid, 'Circulating Supply', (m.circulating_supply.value / 1e6).toFixed(2) + 'M HNT');
+        addMetric(marketGrid, 'Total Supply', (m.total_supply.value / 1e6).toFixed(2) + 'M HNT');
+        addMetric(marketGrid, 'Max Supply', (m.max_supply.value / 1e6).toFixed(2) + 'M HNT');
+        addMetric(marketGrid, 'ATH', '$' + m.ath_usd.value.toFixed(2));
+        addMetric(marketGrid, 'ATH Change', m.ath_change_pct.value.toFixed(2) + '%', '', 'bad');
+        addMetric(marketGrid, 'ATL', '$' + m.atl_usd.value.toFixed(4));
+        addMetric(marketGrid, 'ATL Change', '+' + m.atl_change_pct.value.toFixed(2) + '%', '', 'highlight');
+        addMetric(marketGrid, 'High 24h', '$' + m.high_24h.value.toFixed(4));
+        addMetric(marketGrid, 'Low 24h', '$' + m.low_24h.value.toFixed(4));
+        const ch24 = m.price_change_24h.value;
+        addMetric(marketGrid, 'Change 24h', ch24.toFixed(2) + '%', '', ch24 >= 0 ? 'highlight' : 'bad');
+        const ch7d = m.price_change_7d.value;
+        addMetric(marketGrid, 'Change 7d', ch7d.toFixed(2) + '%', '', ch7d >= 0 ? 'highlight' : 'bad');
+        const ch30d = m.price_change_30d.value;
+        addMetric(marketGrid, 'Change 30d', ch30d.toFixed(2) + '%', '', ch30d >= 0 ? 'highlight' : 'bad');
+        const ch1y = m.price_change_1y.value;
+        addMetric(marketGrid, 'Change 1y', ch1y.toFixed(2) + '%', '', ch1y >= 0 ? 'highlight' : 'bad');
+
+        // Tokenomics
+        const t = profile.metrics.tokenomics;
+        const tokGrid = document.getElementById('tokenomics-grid');
+        addMetric(tokGrid, 'Token', t.token_name + ' (' + t.token_symbol + ')');
+        addMetric(tokGrid, 'Emission', t.emission_mechanism);
+        addMetric(tokGrid, 'Burn Mechanism', t.burn_mechanism);
+        addMetric(tokGrid, 'Halving', t.halving_schedule);
+        addMetric(tokGrid, 'Data Credits', t.data_credits_dc.description);
+        addMetric(tokGrid, 'Token Utility', t.token_utility.length + ' uses');
+
+        // GitHub Repos
+        const repoList = document.getElementById('repo-list');
+        document.getElementById('repo-count').textContent = profile.metrics.github.repos.length + ' verified';
+        for (const repo of profile.metrics.github.repos) {
+            const item = document.createElement('div');
+            item.className = 'repo-item';
+            const tagClass = repo.archived ? 'archived' : (repo.stars > 0 ? 'core' : 'rate-limited');
+            const tagText = repo.archived ? 'Archived' : (repo.stars > 0 ? 'Core' : 'Rate-limited');
+            item.innerHTML = `
+                <div class="repo-name">${repo.name}<span class="repo-desc">${repo.description}</span></div>
+                <span class="repo-tag ${tagClass}">${tagText}</span>
+                <div class="repo-stat"><strong>${repo.stars || '—'}</strong> ⭐</div>
+                <div class="repo-stat"><strong>${repo.forks || '—'}</strong> 🍴</div>
+                <div class="repo-stat">${repo.language || '?'}</div>
+            `;
+            repoList.appendChild(item);
+        }
+
+        // Funding
+        const fund = profile.metrics.funding;
+        let fundHtml = '<div class="metric"><span class="metric-label">Total Raised</span><span class="metric-value highlight">' + fund.total_raised + '</span></div>';
+        for (const r of fund.funding_rounds) {
+            fundHtml += `<div class="metric"><span class="metric-label">${r.date} · ${r.round}</span><span class="metric-value">${r.amount} — ${r.investors.join(', ')}</span></div>`;
+        }
+        document.getElementById('funding-content').innerHTML = fundHtml;
+
+        // Team
+        const teamList = document.getElementById('team-list');
+        for (const t of profile.team) {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${t.name}</strong> — ${t.role}`;
+            teamList.appendChild(li);
+        }
+
+        // Partnerships
+        const partList = document.getElementById('partnerships-list');
+        for (const p of profile.partnerships) {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong>${p.name}</strong> · <span style="color:#8b95a8;">${p.type}</span> · ${p.date}<br><span style="color:#8b95a8;font-size:13px;">${p.description}</span>`;
+            partList.appendChild(li);
+        }
+
+        // Roadmap
+        const histList = document.getElementById('roadmap-historical');
+        for (const m of profile.roadmap.historical_milestones) {
+            const li = document.createElement('li');
+            li.innerHTML = `<strong style="color:#00d4aa;">${m.date}</strong> — ${m.event}`;
+            histList.appendChild(li);
+        }
+        const futList = document.getElementById('roadmap-future');
+        for (const c of profile.roadmap.future_catalysts) {
+            const li = document.createElement('li');
+            li.textContent = c;
+            futList.appendChild(li);
+        }
+
+        // Competitors
+        const compGrid = document.getElementById('competitors-grid');
+        for (const c of profile.competitors) {
+            const card = document.createElement('div');
+            card.style.cssText = 'background:rgba(255,255,255,0.02);border:1px solid #2d3548;border-radius:8px;padding:14px;';
+            card.innerHTML = `
+                <div style="display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px;">
+                    <strong style="color:#fff;">${c.name}</strong>
+                    <span style="color:#00d4aa;font-weight:700;">${c.ticker}</span>
+                </div>
+                <div style="color:#8b95a8;font-size:12px;line-height:1.5;">${c.why_comparable}</div>
+            `;
+            compGrid.appendChild(card);
+        }
+
+        // Risk Breakdown
+        const riskGrid = document.getElementById('risk-grid');
+        for (const [k, v] of Object.entries(profile.risk_breakdown)) {
+            const card = document.createElement('div');
+            card.className = 'risk-card';
+            const color = v.score >= 70 ? '#ff5577' : (v.score >= 40 ? '#ffb800' : '#00d4aa');
+            card.innerHTML = `
+                <div class="risk-name">${k.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</div>
+                <div class="risk-bar"><div class="risk-fill" style="width:${v.score}%;background:${color};"></div></div>
+                <div class="risk-score-display" style="color:${color};">${v.score}/100</div>
+                <div class="risk-justification">${v.justification}</div>
+            `;
+            riskGrid.appendChild(card);
+        }
+
+        // Score Breakdown
+        const sb = document.getElementById('score-breakdown');
+        for (const [k, v] of Object.entries(profile.scores.depin_score_breakdown)) {
+            const div = document.createElement('div');
+            div.style.cssText = 'display:grid;grid-template-columns:1fr 2fr 80px;gap:16px;align-items:center;padding:10px 0;border-bottom:1px solid #2d3548;';
+            div.innerHTML = `
+                <div style="color:#fff;font-weight:600;">${k.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase())}</div>
+                <div class="progress-bar" style="height:8px;"><div class="progress-fill" style="width:${v.score}%;padding:0;">${v.score}/100</div></div>
+                <div style="color:#00d4aa;font-weight:700;text-align:right;">+${v.weighted_score.toFixed(2)}</div>
+            `;
+            sb.appendChild(div);
+        }
+        // Total
+        const totalDiv = document.createElement('div');
+        totalDiv.style.cssText = 'display:grid;grid-template-columns:1fr 2fr 80px;gap:16px;align-items:center;padding:16px 0 0;font-weight:700;font-size:18px;border-top:2px solid #00d4aa;margin-top:8px;';
+        totalDiv.innerHTML = `<div style="color:#00d4aa;">TOTAL DePIN SCORE</div><div></div><div style="color:#00d4aa;text-align:right;">${profile.scores.depin_score_total}/100</div>`;
+        sb.appendChild(totalDiv);
+
+        // Advantages
+        const advList = document.getElementById('advantages-list');
+        for (const a of profile.advantages) {
+            const div = document.createElement('div');
+            div.className = 'advantage';
+            div.innerHTML = `<div class="claim">${a.claim}</div><div class="evidence">${(a.verified_metrics || []).join(' · ')}</div>`;
+            advList.appendChild(div);
+        }
+
+        // Disadvantages
+        const disList = document.getElementById('disadvantages-list');
+        for (const a of profile.disadvantages) {
+            const div = document.createElement('div');
+            div.className = 'disadvantage';
+            div.innerHTML = `<div class="claim">${a.claim}</div><div class="evidence">${(a.verified_metrics || []).join(' · ')}</div>`;
+            disList.appendChild(div);
+        }
+
+        // Investment Thesis
+        document.getElementById('thesis-base').textContent = profile.investment_thesis.base_thesis;
+        for (const b of profile.investment_thesis.bull_case) {
+            const li = document.createElement('li');
+            li.textContent = b;
+            document.getElementById('thesis-bull').appendChild(li);
+        }
+        for (const b of profile.investment_thesis.bear_case) {
+            const li = document.createElement('li');
+            li.textContent = b;
+            document.getElementById('thesis-bear').appendChild(li);
+        }
+        for (const c of profile.investment_thesis.catalysts) {
+            const li = document.createElement('li');
+            li.textContent = c;
+            document.getElementById('thesis-catalysts').appendChild(li);
+        }
+        document.getElementById('thesis-valuation').textContent = profile.investment_thesis.valuation_observations;
+
+        // Coverage
+        const covStats = document.getElementById('coverage-stats');
+        const covData = [
+            { cat: 'Identity', attempted: 12, resolved: 12 },
+            { cat: 'Market Data', attempted: 19, resolved: 19 },
+            { cat: 'DefiLlama', attempted: 6, resolved: 3 },
+            { cat: 'GitHub (repos)', attempted: 6, resolved: 1 },
+            { cat: 'Tokenomics', attempted: 8, resolved: 8 },
+            { cat: 'Funding', attempted: 3, resolved: 3 },
+            { cat: 'Liquidity', attempted: 4, resolved: 4 },
+            { cat: 'Community', attempted: 6, resolved: 4 },
+            { cat: 'DePIN Network', attempted: 7, resolved: 0 },
+            { cat: 'Team', attempted: 4, resolved: 4 },
+            { cat: 'Partnerships', attempted: 6, resolved: 6 },
+            { cat: 'Risk', attempted: 9, resolved: 9 },
+        ];
+        for (const c of covData) {
+            const pct = Math.round((c.resolved / c.attempted) * 100);
+            const div = document.createElement('div');
+            div.className = 'coverage-stat';
+            div.innerHTML = `
+                <div class="cat-name">${c.cat}</div>
+                <div class="progress-bar"><div class="progress-fill" style="width:${pct}%;">${c.resolved}/${c.attempted}</div></div>
+                <div style="color:#fff;font-weight:700;text-align:right;">${pct}%</div>
+            `;
+            covStats.appendChild(div);
+        }
+        const coveragePct = profile.scores.data_coverage_pct;
+        document.getElementById('coverage-fill').style.width = coveragePct + '%';
+        document.getElementById('coverage-fill').textContent = coveragePct + '%';
+        document.getElementById('coverage-pct').textContent = coveragePct + '%';
+        document.getElementById('coverage-summary').textContent = `${covData.reduce((a, c) => a + c.resolved, 0)}/${covData.reduce((a, c) => a + c.attempted, 0)} metrics resolved across 12 categories`;
+
+        // Acceptance test
+        if (acceptance) {
+            const accDiv = document.getElementById('acceptance-results');
+            accDiv.innerHTML = `
+                <div style="display:grid;grid-template-columns:repeat(4, 1fr);gap:16px;margin-bottom:24px;">
+                    <div class="score-card"><div class="score-value test-pass">${acceptance.passed}</div><div class="score-label">Passed</div></div>
+                    <div class="score-card"><div class="score-value ${acceptance.failed > 0 ? 'test-fail' : 'test-pass'}">${acceptance.failed}</div><div class="score-label">Failed</div></div>
+                    <div class="score-card"><div class="score-value test-pass">${acceptance.pass_rate_pct}%</div><div class="score-label">Pass Rate</div></div>
+                    <div class="score-card featured"><div class="score-value test-pass">${acceptance.status}</div><div class="score-label">Verdict</div></div>
+                </div>
+                <div style="color:#8b95a8;font-size:14px;line-height:1.7;">
+                    Acceptance test validates all 30 requirements from the Helium Deep Enrichment task specification.
+                    Each test verifies a specific field exists and is properly populated, not just "available" with no value.
+                </div>
+            `;
+        }
+    }
+    load().catch(e => console.error(e));
+    </script>
+</body>
+</html>

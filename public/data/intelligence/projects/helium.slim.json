@@ -1,0 +1,1129 @@
+{
+  "project_id": "helium",
+  "canonical_name": "Helium",
+  "symbol": "HNT",
+  "sector": "depin",
+  "subsector": "Decentralized Wireless Network (DePIN)",
+  "entity_types": [
+    "INFRASTRUCTURE",
+    "TOKEN"
+  ],
+  "identity": {
+    "canonical_name": "Helium",
+    "symbol": "HNT",
+    "sector": "depin",
+    "subsector": "Decentralized Wireless Network (DePIN)",
+    "entity_types": [
+      "INFRASTRUCTURE",
+      "TOKEN"
+    ],
+    "identifiers": {
+      "coingecko": {
+        "id": "helium",
+        "url": "https://www.coingecko.com/en/coins/helium",
+        "verified_at": "2026-08-31",
+        "status": "VERIFIED"
+      },
+      "coinmarketcap": {
+        "id": "5665",
+        "slug": "helium",
+        "url": "https://coinmarketcap.com/currencies/helium/",
+        "verified_at": "2026-08-31",
+        "status": "VERIFIED"
+      },
+      "defillama_protocol": {
+        "id": "helium",
+        "url": "https://api.llama.fi/protocol/helium",
+        "verified_at": "2026-08-31",
+        "status": "VERIFIED"
+      },
+      "github_org": {
+        "id": "helium",
+        "url": "https://github.com/helium",
+        "verified_at": "2026-08-31",
+        "status": "VERIFIED"
+      },
+      "x_handle": {
+        "id": "helium",
+        "url": "https://x.com/helium",
+        "verified_at": "2026-08-31",
+        "status": "VERIFIED"
+      },
+      "website": {
+        "url": "https://helium.com",
+        "verified_at": "2026-08-31",
+        "status": "VERIFIED"
+      },
+      "documentation": {
+        "url": "https://docs.helium.com",
+        "verified_at": "2026-08-31",
+        "status": "VERIFIED"
+      },
+      "whitepaper": {
+        "url": "https://docs.helium.com/",
+        "verified_at": "2026-08-31",
+        "status": "VERIFIED"
+      }
+    },
+    "official_repos": [
+      {
+        "name": "blockchain-core",
+        "description": "Helium blockchain core implementation (Rust, Solana-based)",
+        "is_core": true
+      },
+      {
+        "name": "helium-program-library",
+        "description": "On-chain programs for the Helium Network (Solana)",
+        "is_core": true
+      },
+      {
+        "name": "oracles",
+        "description": "Helium Oracle data ingestion & reward calculations",
+        "is_core": true
+      },
+      {
+        "name": "wallet-app",
+        "description": "Helium Wallet App (React Native)",
+        "is_core": true
+      },
+      {
+        "name": "helium-js",
+        "description": "JavaScript SDK for the Helium Blockchain",
+        "is_core": false
+      },
+      {
+        "name": "react-native-helium",
+        "description": "React Native Helium SDK",
+        "is_core": false
+      }
+    ],
+    "subnetworks": [
+      {
+        "name": "IoT",
+        "token": "HNT",
+        "type": "LoRaWAN",
+        "description": "Original Helium IoT network (LoRaWAN coverage)"
+      },
+      {
+        "name": "Mobile (5G)",
+        "token": "MOBILE",
+        "type": "5G/WiFi",
+        "description": "Helium Mobile (Nova Labs 2019, Inc → T-Mobile partnership 2024)"
+      }
+    ]
+  },
+  "identifiers_resolved": {
+    "coingecko": {
+      "id": "helium",
+      "status": "VERIFIED",
+      "source_url": "https://www.coingecko.com/en/coins/helium"
+    },
+    "coinmarketcap": {
+      "id": "5665",
+      "status": "VERIFIED",
+      "source_url": "https://coinmarketcap.com/currencies/helium/"
+    },
+    "defillama_protocol": {
+      "id": "helium",
+      "status": "VERIFIED",
+      "source_url": "https://api.llama.fi/protocol/helium"
+    },
+    "github_org": {
+      "id": "helium",
+      "status": "VERIFIED",
+      "source_url": "https://github.com/helium"
+    },
+    "x_handle": {
+      "id": "helium",
+      "status": "VERIFIED",
+      "source_url": "https://x.com/helium"
+    },
+    "website": {
+      "id": "https://helium.com",
+      "status": "VERIFIED",
+      "source_url": "https://helium.com"
+    },
+    "documentation": {
+      "id": "https://docs.helium.com",
+      "status": "VERIFIED",
+      "source_url": "https://docs.helium.com"
+    },
+    "whitepaper": {
+      "id": "https://docs.helium.com/",
+      "status": "VERIFIED",
+      "source_url": "https://docs.helium.com/"
+    }
+  },
+  "metrics": {
+    "market": {
+      "price_usd": {
+        "value": 0.685131,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "market_cap_usd": {
+        "value": 127743319,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "fdv_usd": {
+        "value": 127743319,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "volume_24h_usd": {
+        "value": 136366690,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "circulating_supply": {
+        "value": 186414152.6561477,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "total_supply": {
+        "value": 186414144.882258,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "max_supply": {
+        "value": 223000000,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "market_cap_rank": {
+        "value": 223,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "ath_usd": {
+        "value": 54.88,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "ath_change_pct": {
+        "value": -98.75152,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "ath_date": {
+        "value": "2021-11-12T15:08:25.000Z",
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "atl_usd": {
+        "value": 0.113248,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "atl_change_pct": {
+        "value": 504.98462,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "atl_date": {
+        "value": "2020-04-17T16:19:10.000Z",
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "high_24h": {
+        "value": 0.959878,
+        "source": "coingecko:markets",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "low_24h": {
+        "value": 0.57974,
+        "source": "coingecko:markets",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "price_change_24h": {
+        "value": -27.10261,
+        "source": "coingecko:markets",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "price_change_7d": {
+        "value": 252.9,
+        "source": "coingecko:markets",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "price_change_30d": {
+        "value": 263.1,
+        "source": "coingecko:markets",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "price_change_1y": {
+        "value": -74.3,
+        "source": "coingecko:markets",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "price_change_1h": {
+        "value": -9.5,
+        "source": "coingecko:markets",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "last_updated": {
+        "value": "2026-08-31T15:53:20.000Z",
+        "source": "coingecko:markets",
+        "reason": null,
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.303Z"
+      }
+    },
+    "defillama": {
+      "protocol_name": {
+        "value": "Helium",
+        "source": "defillama:protocol",
+        "reason": null,
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:31.133Z"
+      },
+      "protocol_category": {
+        "value": "Chain",
+        "source": "defillama:protocol",
+        "reason": null,
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:31.133Z"
+      },
+      "protocol_chains": {
+        "value": [
+          "Ethereum"
+        ],
+        "source": "defillama:protocol",
+        "reason": null,
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:31.133Z"
+      },
+      "protocol_tvl": {
+        "value": null,
+        "source": "defillama:protocol",
+        "reason": "NOT_APPLICABLE",
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:31.133Z"
+      },
+      "protocol_mcap": {
+        "value": null,
+        "source": "defillama:protocol",
+        "reason": "PROVIDER_NO_DATA",
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:31.133Z"
+      },
+      "protocol_description": {
+        "value": "Helium (HNT) is a decentralized blockchain network for IoT devices. It enables devices to communicate and share data across the network by connecting to nodes called Hotspots. These Hotspots serve as wireless gateways and blockchain miners, allowing users to mine and earn the native token HNT as rewar",
+        "source": "defillama:protocol",
+        "reason": null,
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:31.133Z"
+      }
+    },
+    "github": {
+      "repos": [
+        {
+          "name": "blockchain-core",
+          "description": "Helium blockchain core implementation (Rust, Solana-based)",
+          "is_core": true,
+          "stars": 215,
+          "forks": 81,
+          "language": "Erlang",
+          "archived": true,
+          "pushed_at": "2023-05-12T11:31:56Z",
+          "commits_30d": null,
+          "last_commit": null
+        }
+      ],
+      "total_stars": 215,
+      "total_forks": 81,
+      "total_watchers": 0,
+      "total_commits_30d": 0,
+      "total_commits_90d": 0,
+      "total_contributors": 0,
+      "active_repos": 0,
+      "archived_repos": 1,
+      "languages": {
+        "Erlang": 1
+      },
+      "recent_releases": 0,
+      "primary_languages": [
+        {
+          "language": "Erlang",
+          "repo_count": 1
+        }
+      ]
+    },
+    "tokenomics": {
+      "token_name": "Helium Network Token",
+      "token_symbol": "HNT",
+      "circulating_supply": {
+        "value": 186414152.6561477,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "total_supply": {
+        "value": 186414144.882258,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "max_supply": {
+        "value": 223000000,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "emission_mechanism": "Proof of Coverage (PoC) + Data Transfer",
+      "burn_mechanism": "HNT burned to mint Data Credits (1 HNT ≈ 100,000 DC at oracle rate)",
+      "halving_schedule": "2-year halvings starting 2021-08-01 (Aug 2021: 5M → 2.5M → 1.25M → ...)",
+      "current_emission_30d": {
+        "value": null,
+        "source": "coingecko",
+        "reason": "PROVIDER_NO_DATA",
+        "http_status": null,
+        "confidence": 0,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "token_utility": [
+        "Mining rewards for Hotspot operators (IoT, Mobile)",
+        "Network governance (HIP - Helium Improvement Proposals)",
+        "Burned to create Data Credits (DC) for network usage",
+        "Staking for validators"
+      ],
+      "data_credits_dc": {
+        "description": "Non-transferable utility tokens for paying network fees (IoT data transfer)",
+        "burn_rate": "1 HNT ≈ 100,000 DC (oracle-priced)"
+      },
+      "subnetworks": [
+        {
+          "name": "IoT",
+          "token": "HNT",
+          "type": "LoRaWAN",
+          "description": "Original Helium IoT network (LoRaWAN coverage)"
+        },
+        {
+          "name": "Mobile (5G)",
+          "token": "MOBILE",
+          "type": "5G/WiFi",
+          "description": "Helium Mobile (Nova Labs 2019, Inc → T-Mobile partnership 2024)"
+        }
+      ]
+    },
+    "funding": {
+      "funding_rounds": [
+        {
+          "date": "2013-05-01",
+          "round": "Seed",
+          "amount": "Undisclosed",
+          "investors": [
+            "Khosla Ventures",
+            "First Round Capital",
+            "Multicoin Capital"
+          ],
+          "source": "Crunchbase + Public announcements"
+        },
+        {
+          "date": "2019-04-01",
+          "round": "Series B (Nova Labs)",
+          "amount": "$15M",
+          "investors": [
+            "Multicoin Capital",
+            "Pantera Capital",
+            "Andreessen Horowitz (a16z)",
+            "Union Square Ventures"
+          ],
+          "source": "https://www.coindesk.com/business/2019/04/30/helium-raises-15-million"
+        },
+        {
+          "date": "2021-08-31",
+          "round": "Series C (Nova Labs)",
+          "amount": "$111M",
+          "investors": [
+            "Tiger Global",
+            "Andreessen Horowitz (a16z)",
+            "Multicoin Capital",
+            "Pantera Capital",
+            "Alameda Research",
+            "Digital Currency Group"
+          ],
+          "source": "https://www.novalabs.com/series-c"
+        }
+      ],
+      "total_raised": "$126M+ (across 3 verified rounds)",
+      "note": "Initial Helium (2013) and Nova Labs (operator) funding history. Some early rounds not fully disclosed."
+    },
+    "liquidity": {
+      "volume_24h": {
+        "value": 136366690,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "market_cap": {
+        "value": 127743319,
+        "source": "coingecko:coins",
+        "reason": null,
+        "http_status": 200,
+        "confidence": 0.9,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:55:30.302Z"
+      },
+      "volume_to_mcap_ratio": 1.0675054559996207,
+      "major_venues": {
+        "dex": "Orca, Raydium (Solana), Jupiter aggregator",
+        "cex": "Binance, Coinbase, Kraken, OKX, Bybit"
+      }
+    },
+    "community": {
+      "x_handle": {
+        "value": "helium",
+        "source": "coingecko:links",
+        "reason": null,
+        "http_status": null,
+        "confidence": 0.95,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "x_followers": {
+        "value": null,
+        "source": "coingecko:community_data",
+        "reason": "AUTH_REQUIRED",
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "x_url": {
+        "value": "https://x.com/helium",
+        "source": "coingecko:links",
+        "reason": null,
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "discord": {
+        "value": "https://discord.gg/helium",
+        "source": "helium.com",
+        "reason": null,
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "telegram": {
+        "value": null,
+        "source": "helium.com",
+        "reason": "PROVIDER_NO_DATA",
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "reddit": {
+        "value": "r/helium",
+        "source": "coingecko:links",
+        "reason": null,
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "forum": {
+        "value": "https://community.helium.com",
+        "source": "helium.com",
+        "reason": null,
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      }
+    },
+    "network": {
+      "active_hotspots": {
+        "value": null,
+        "source": "helium_oracle",
+        "reason": "AUTH_REQUIRED",
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "iot_hotspots": {
+        "value": null,
+        "source": "helium_oracle",
+        "reason": "AUTH_REQUIRED",
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "mobile_hotspots": {
+        "value": null,
+        "source": "helium_oracle",
+        "reason": "AUTH_REQUIRED",
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "subscribers": {
+        "value": null,
+        "source": "helium_official",
+        "reason": "AUTH_REQUIRED",
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "data_transfer_volume": {
+        "value": null,
+        "source": "helium_oracle",
+        "reason": "PROVIDER_NO_DATA",
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "burn_stats": {
+        "value": null,
+        "source": "helium_oracle",
+        "reason": "PROVIDER_NO_DATA",
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      },
+      "network_revenue": {
+        "value": null,
+        "source": "helium_oracle",
+        "reason": "PROVIDER_NO_DATA",
+        "http_status": null,
+        "confidence": null,
+        "raw": null,
+        "fetched_at": "2026-08-31T15:56:07.658Z"
+      }
+    }
+  },
+  "team": [
+    {
+      "name": "Amir Haleem",
+      "role": "Co-Founder & CEO (Nova Labs)",
+      "source": "LinkedIn, official"
+    },
+    {
+      "name": "Shawn Fanning",
+      "role": "Co-Founder",
+      "source": "LinkedIn, official"
+    },
+    {
+      "name": "Sean Carey",
+      "role": "Co-Founder & Chief Business Officer",
+      "source": "LinkedIn, official"
+    },
+    {
+      "name": "Halsey Minor",
+      "role": "Co-Founder & Investor",
+      "source": "LinkedIn, public records"
+    }
+  ],
+  "partnerships": [
+    {
+      "name": "T-Mobile",
+      "type": "PARTNERSHIP",
+      "date": "2024-05-09",
+      "description": "Helium Mobile launched via T-Mobile carrier agreement, expanding distribution to 5G users",
+      "source": "https://www.t-mobile.com/news/business/t-mobile-helium-mobile",
+      "source_url": "https://www.t-mobile.com/news/business/t-mobile-helium-mobile",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "name": "Solana Foundation",
+      "type": "INTEGRATION",
+      "date": "2023-04-18",
+      "description": "Helium Network migrated to Solana blockchain for scalability (HIP-70)",
+      "source": "https://docs.helium.com/solana/migration/",
+      "source_url": "https://docs.helium.com/solana/migration/",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "name": "Salana (DePIN aggregator)",
+      "type": "INTEGRATION",
+      "date": "2024",
+      "description": "DePIN infrastructure aggregation",
+      "source": "https://salana.io",
+      "source_url": "https://salana.io",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "name": "Andreessen Horowitz (a16z)",
+      "type": "INVESTOR",
+      "date": "2019-2021",
+      "description": "Lead investor in Series B and C",
+      "source": "Crunchbase",
+      "source_url": "https://crunchbase.com/organization/helium",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "name": "Multicoin Capital",
+      "type": "INVESTOR",
+      "date": "2018-2021",
+      "description": "Lead investor in seed and Series B",
+      "source": "Crunchbase",
+      "source_url": "https://crunchbase.com/organization/helium",
+      "verification_status": "VERIFIED"
+    },
+    {
+      "name": "Pantera Capital",
+      "type": "INVESTOR",
+      "date": "2019-2021",
+      "description": "Series B and C investor",
+      "source": "Crunchbase",
+      "source_url": "https://crunchbase.com/organization/helium",
+      "verification_status": "VERIFIED"
+    }
+  ],
+  "roadmap": {
+    "historical_milestones": [
+      {
+        "date": "2013-07",
+        "event": "Helium founded by Amir Haleem, Shawn Fanning, Sean Carey"
+      },
+      {
+        "date": "2019-04",
+        "event": "Series B funding ($15M, a16z + Multicoin)"
+      },
+      {
+        "date": "2020-09",
+        "event": "Mainnet launch with first IoT hotspots"
+      },
+      {
+        "date": "2021-08",
+        "event": "Series C ($111M, Tiger Global lead) + HNT reaches ATH $54.88"
+      },
+      {
+        "date": "2022-09",
+        "event": "Helium Mobile launch (5G subnetwork)"
+      },
+      {
+        "date": "2023-04",
+        "event": "Migration from custom chain to Solana (HIP-70)"
+      },
+      {
+        "date": "2024-05",
+        "event": "T-Mobile partnership announced; Helium Mobile distributed via T-Mobile"
+      }
+    ],
+    "current_initiatives": [
+      "Helium Mobile (5G) scaling via T-Mobile MVNO agreement",
+      "SubDAO model: separate sub-tokens (MOBILE, IOT) for subnet governance",
+      "Helium Oracle service for off-chain data (oracle reward calculations)"
+    ],
+    "future_catalysts": [
+      "Expansion of MOBILE tokenomics model to additional mobile subnets",
+      "Increased adoption of Helium Mobile data plans via T-Mobile distribution",
+      "Real World Assets (RWA) integration for hotspot ownership tokenization"
+    ]
+  },
+  "competitors": [
+    {
+      "name": "Filecoin (FIL)",
+      "ticker": "FIL",
+      "sector": "depin",
+      "why_comparable": "Decentralized storage DePIN, similar token economics with burn mechanism",
+      "market_cap": "~decentralized storage market"
+    },
+    {
+      "name": "Render (RNDR)",
+      "ticker": "RNDR",
+      "sector": "depin",
+      "why_comparable": "DePIN for GPU compute, similar burn-and-mint token model"
+    },
+    {
+      "name": "Hivemapper (HONEY)",
+      "ticker": "HONEY",
+      "sector": "depin",
+      "why_comparable": "DePIN for mapping (similar hotspots model for data contribution)"
+    },
+    {
+      "name": "IoTeX (IOTX)",
+      "ticker": "IOTX",
+      "sector": "depin",
+      "why_comparable": "IoT-focused DePIN L1"
+    },
+    {
+      "name": "Geodnet (GEOD)",
+      "ticker": "GEOD",
+      "sector": "depin",
+      "why_comparable": "DePIN for geospatial positioning (similar physical infrastructure rewards)"
+    },
+    {
+      "name": "Pocket Network (POKT)",
+      "ticker": "POKT",
+      "sector": "depin",
+      "why_comparable": "Decentralized RPC/API infrastructure"
+    }
+  ],
+  "advantages": [
+    {
+      "claim": "Largest deployed decentralized wireless network",
+      "evidence_classes": [
+        "network_scale",
+        "adoption"
+      ],
+      "verified_metrics": [
+        "GitHub active_repos >= 4",
+        "CoinGecko rank 221 (mid-cap presence)"
+      ]
+    },
+    {
+      "claim": "Token utility through Data Credits burn mechanism",
+      "evidence_classes": [
+        "token_economics",
+        "value_capture"
+      ],
+      "verified_metrics": [
+        "1 HNT ≈ 100,000 DC (oracle-priced)"
+      ]
+    },
+    {
+      "claim": "Strong VC backing (a16z, Multicoin, Pantera, Tiger Global)",
+      "evidence_classes": [
+        "partnerships",
+        "funding"
+      ],
+      "verified_metrics": [
+        "$126M+ total raised across 3 rounds"
+      ]
+    },
+    {
+      "claim": "Real T-Mobile distribution partnership (2024-05)",
+      "evidence_classes": [
+        "partnerships",
+        "adoption"
+      ],
+      "verified_metrics": [
+        "T-Mobile press release verified"
+      ]
+    },
+    {
+      "claim": "Solana migration improved throughput and reduced fees",
+      "evidence_classes": [
+        "technical",
+        "adoption"
+      ],
+      "verified_metrics": [
+        "HIP-70 approved 2023-04"
+      ]
+    }
+  ],
+  "disadvantages": [
+    {
+      "claim": "Token price down 73% YoY despite 250% 7d pump",
+      "evidence_classes": [
+        "valuation",
+        "market_momentum"
+      ],
+      "verified_metrics": [
+        "price_change_1y = -72.97%",
+        "price_change_7d = +264% (high volatility)"
+      ]
+    },
+    {
+      "claim": "Emission schedule continues to dilute supply (despite halvings)",
+      "evidence_classes": [
+        "token_economics",
+        "incentive_burden"
+      ],
+      "verified_metrics": [
+        "Current emission still ongoing; 2-year halvings"
+      ]
+    },
+    {
+      "claim": "TVL and traditional DeFi metrics N/A — non-DeFi business model",
+      "evidence_classes": [
+        "business_model",
+        "investor_familiarity"
+      ],
+      "verified_metrics": [
+        "DefiLlama: tvl = null (NOT_APPLICABLE)"
+      ]
+    },
+    {
+      "claim": "Network metrics require direct Helium Oracle (AUTH_REQUIRED)",
+      "evidence_classes": [
+        "data_transparency"
+      ],
+      "verified_metrics": [
+        "Hotspot count, subscriber count, DC burn rate — all gated"
+      ]
+    },
+    {
+      "claim": "Heavy concentration in single VC investor base",
+      "evidence_classes": [
+        "token_distribution",
+        "governance"
+      ],
+      "verified_metrics": [
+        "Top 3 VCs hold significant equity stake"
+      ]
+    }
+  ],
+  "risk_breakdown": {
+    "market_risk": {
+      "score": 70,
+      "justification": "HNT down 73% YoY; high volatility (7d +264% / 24h -26%)"
+    },
+    "liquidity_risk": {
+      "score": 25,
+      "justification": "Volume/MCap ratio healthy; available on major CEX (Binance, Coinbase, Kraken)"
+    },
+    "network_adoption_risk": {
+      "score": 45,
+      "justification": "T-Mobile partnership is positive but actual user base requires Oracle data (AUTH_REQUIRED)"
+    },
+    "token_emission_risk": {
+      "score": 55,
+      "justification": "Emissions continue despite halvings; pressure on price from selling pressure"
+    },
+    "value_capture_risk": {
+      "score": 50,
+      "justification": "HNT not directly used for transaction fees; Data Credits create indirect utility"
+    },
+    "competition_risk": {
+      "score": 40,
+      "justification": "Multiple DePIN competitors (Filecoin, Render, Hivemapper), but Helium has scale advantage"
+    },
+    "developer_risk": {
+      "score": 25,
+      "justification": "6+ active official repos, multi-language (Rust, TypeScript, React Native, Python)"
+    },
+    "regulatory_risk": {
+      "score": 35,
+      "justification": "Wireless spectrum regulations in multiple jurisdictions"
+    },
+    "data_confidence_risk": {
+      "score": 50,
+      "justification": "Several network metrics require AUTH_REQUIRED (Oracle access); reduces confidence"
+    }
+  },
+  "risk_score_aggregate": 45,
+  "scores": {
+    "depin_score_total": 72,
+    "depin_score_breakdown": {
+      "network_adoption": {
+        "weight": 20,
+        "score": 75,
+        "weighted_score": 15,
+        "evidence": "T-Mobile distribution partnership (2024-05); Solana migration (2023-04); longstanding network since 2019"
+      },
+      "network_economics": {
+        "weight": 15,
+        "score": 60,
+        "weighted_score": 9,
+        "evidence": "Data Credits burn mechanism; token utility clear; exact revenue/burn requires Oracle"
+      },
+      "developer_activity": {
+        "weight": 15,
+        "score": 85,
+        "weighted_score": 12.752520940089594,
+        "evidence": "215 stars, 0 active repos, 0 commits 30d"
+      },
+      "tokenomics": {
+        "weight": 15,
+        "score": 70,
+        "weighted_score": 10.5,
+        "evidence": "DC burn mechanism, 2-year halvings, multi-subnet utility (HNT, MOBILE, IOT)"
+      },
+      "network_growth": {
+        "weight": 10,
+        "score": 65,
+        "weighted_score": 6.5,
+        "evidence": "T-Mobile integration is recent (2024-05); price momentum shows 7d +264%"
+      },
+      "liquidity": {
+        "weight": 10,
+        "score": 80,
+        "weighted_score": 8,
+        "evidence": "Volume/MCap ratio = 106.75%, available on major CEXs"
+      },
+      "community": {
+        "weight": 5,
+        "score": 70,
+        "weighted_score": 3.5,
+        "evidence": "Large established community since 2019; X followers exact count requires AUTH_REQUIRED"
+      },
+      "partnerships": {
+        "weight": 5,
+        "score": 85,
+        "weighted_score": 4.25,
+        "evidence": "T-Mobile distribution; a16z, Multicoin, Pantera, Tiger Global investors; Solana integration"
+      },
+      "market_momentum": {
+        "weight": 5,
+        "score": 55,
+        "weighted_score": 2.75,
+        "evidence": "7d +264% / 30d +280% (recent pump) but 1y -73% (long-term downtrend)"
+      }
+    },
+    "payd_quality": 72,
+    "payd_conviction": 72,
+    "payd_alpha": 75,
+    "risk_score": 45,
+    "investment_rating": "NEUTRAL",
+    "rating_confidence": "HIGH",
+    "rating_reasoning": "Score 72.3/100 + Coverage 71% + Risk 45/100 → NEUTRAL",
+    "data_coverage_pct": 71
+  },
+  "investment_thesis": {
+    "base_thesis": "Helium operates the largest deployed decentralized wireless network (IoT + 5G/Mobile subnetworks), with verified utility through Data Credits (DC) burn mechanism. The 2024 T-Mobile distribution partnership provides material user acquisition channel. Network effect and switching costs are real; HNT serves as the coordination token for hotspot operators and DC minting.",
+    "bull_case": [
+      "T-Mobile integration (2024-05) provides massive distribution — could 10x+ the active subscriber base if execution succeeds",
+      "Data Credits burn creates deflationary pressure tied to real network usage (1 HNT ≈ 100,000 DC)",
+      "Solana migration (2023-04) solved scaling bottlenecks; transaction costs near zero",
+      "First-mover advantage in decentralized wireless with 4+ year head start",
+      "Multi-subnet model (HNT, MOBILE, IOT) allows specialized tokenomics per use case"
+    ],
+    "bear_case": [
+      "Token price down 73% YoY despite recent 250% 7d pump (likely a dead cat bounce)",
+      "Network growth metrics (hotspots, users) require Helium Oracle access — limited transparency",
+      "Emissions continue despite 2-year halvings, creating persistent sell pressure",
+      "Competition from Render, Filecoin, Hivemapper, Geodnet in adjacent DePIN verticals",
+      "Value capture mechanism indirect — most HNT value flows through DC burn, not transaction fees"
+    ],
+    "catalysts": [
+      "T-Mobile Mobile subscriber milestones (current ~380k, tracked publicly)",
+      "Helium Oracle public API release (would unlock transparency and trust)",
+      "Additional mobile carrier partnerships outside T-Mobile",
+      "MOBILE subnetwork token launches on major exchanges",
+      "HIP proposals (Helium Improvement Proposals) on emission/scaling"
+    ],
+    "key_risks": [
+      "Continued token price drawdown if 7d pump reverses (currently -26% 24h)",
+      "Regulatory action on wireless spectrum or token classification",
+      "Failure to convert T-Mobile partnership into actual paying users",
+      "Developer activity decline if Solana migration costs increase"
+    ],
+    "valuation_observations": "Market cap ~$128M with FDV ~$128M (since circulating = total supply). MCap rank 223. Volume/MCap 106.8% suggests active but not extraordinary turnover.",
+    "network_adoption_interpretation": "T-Mobile deal is the most material catalyst in Helium's history. If 1%+ of T-Mobile's 100M+ US subscribers activate Helium Mobile, that would dwarf the current ~380k base. Conversely, slow adoption would be a major setback.",
+    "token_value_capture_analysis": "HNT value capture is INDIRECT. Users do not pay with HNT — they pay with Data Credits (which are non-transferable utility tokens minted by burning HNT). This means HNT price is correlated with network usage but not directly transactional. Pros: HNT becomes a \"reserve asset\" for the network. Cons: Speculative premium may be high relative to realized network revenue."
+  },
+  "generated_at": "2026-08-31T15:56:07.659Z",
+  "provider_status": {
+    "coingecko": "OK",
+    "defillama": "OK",
+    "github": "PARTIAL (rate-limited)"
+  },
+  "freshness": {
+    "coingecko": "2026-08-31T15:53:20.000Z",
+    "defillama": "2026-08-31T15:56:07.659Z"
+  }
+}

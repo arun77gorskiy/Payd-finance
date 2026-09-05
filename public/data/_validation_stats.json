@@ -1,0 +1,4319 @@
+{
+  "total": 349,
+  "enriched_total": 349,
+  "with": {
+    "market": 256,
+    "fdv": 255,
+    "price": 256,
+    "github": 0,
+    "tvl": 51,
+    "developer": 258,
+    "payd": 266,
+    "risk": 349
+  },
+  "missing": {
+    "coingecko_id": 0,
+    "market": 93,
+    "fdv": 94,
+    "price": 93,
+    "github": 349,
+    "tvl": 298,
+    "developer": 91,
+    "payd": 83,
+    "risk": 0
+  },
+  "no_coingecko_id": [],
+  "partially_enriched": [
+    {
+      "id": "zero-gravity",
+      "name": "zero-gravity",
+      "sector": "ai",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "singularitynet",
+      "name": "singularitynet",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "gensyn",
+      "name": "gensyn",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "aioz-network",
+      "name": "aioz-network",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "akash",
+      "name": "akash",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "alethea-ai",
+      "name": "alethea-ai",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "allora",
+      "name": "allora",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "aethir",
+      "name": "aethir",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "botto",
+      "name": "botto",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "carv",
+      "name": "carv",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "chaingpt",
+      "name": "chaingpt",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "chainopera-ai",
+      "name": "chainopera-ai",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "cortex",
+      "name": "cortex",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "eigenlayer",
+      "name": "eigenlayer",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "fetch-ai",
+      "name": "fetch-ai",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "golem",
+      "name": "golem",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "the-graph",
+      "name": "the-graph",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "story-protocol",
+      "name": "story-protocol",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "kaito",
+      "name": "kaito",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "lagrange",
+      "name": "lagrange",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "morpheusai",
+      "name": "morpheusai",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "nillion",
+      "name": "nillion",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "numerai",
+      "name": "numerai",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "netmind",
+      "name": "netmind",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "nosana",
+      "name": "nosana",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "ocean-protocol",
+      "name": "ocean-protocol",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "autonolas",
+      "name": "autonolas",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "paal-ai",
+      "name": "paal-ai",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "iexec-rlc",
+      "name": "iexec-rlc",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "sahara-ai",
+      "name": "sahara-ai",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "sapien",
+      "name": "sapien",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "sentient",
+      "name": "sentient",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "synesis-one",
+      "name": "synesis-one",
+      "sector": "ai",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "theta",
+      "name": "theta",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "origintrail",
+      "name": "origintrail",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "vana",
+      "name": "vana",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "virtuals-protocol",
+      "name": "virtuals-protocol",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "venice-token",
+      "name": "venice-token",
+      "sector": "ai",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "1inch",
+      "name": "1inch",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "aave",
+      "name": "aave",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "balancer",
+      "name": "balancer",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "beefy",
+      "name": "beefy",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "pancakeswap-token",
+      "name": "pancakeswap-token",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "compound-governance-token",
+      "name": "compound-governance-token",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "credix",
+      "name": "credix",
+      "sector": "defi",
+      "filled": 3,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "developer"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "curve-dao-token",
+      "name": "curve-dao-token",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "convex-finance",
+      "name": "convex-finance",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "dopex",
+      "name": "dopex",
+      "sector": "defi",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "drift-protocol",
+      "name": "drift-protocol",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "dydx",
+      "name": "dydx",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "euler",
+      "name": "euler",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "frax-finance",
+      "name": "frax-finance",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "frax",
+      "name": "frax",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "gmx",
+      "name": "gmx",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "hyperliquid",
+      "name": "hyperliquid",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "instadapp",
+      "name": "instadapp",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "jupiter-exchange-solana",
+      "name": "jupiter-exchange-solana",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "kamino",
+      "name": "kamino",
+      "sector": "defi",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "lido-dao",
+      "name": "lido-dao",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "lyra-finance",
+      "name": "lyra-finance",
+      "sector": "defi",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "mango",
+      "name": "mango",
+      "sector": "defi",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "morpho",
+      "name": "morpho",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "orca",
+      "name": "orca",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "origin-dollar",
+      "name": "origin-dollar",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "pendle",
+      "name": "pendle",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "quickswap",
+      "name": "quickswap",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "raydium",
+      "name": "raydium",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "ribbon-finance",
+      "name": "ribbon-finance",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "rocket-pool-eth",
+      "name": "rocket-pool-eth",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "thorchain",
+      "name": "thorchain",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "synthetix",
+      "name": "synthetix",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "spark",
+      "name": "spark",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "stargate",
+      "name": "stargate",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "sushi",
+      "name": "sushi",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "synapse",
+      "name": "synapse",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "uniswap",
+      "name": "uniswap",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "wormhole",
+      "name": "wormhole",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "venus",
+      "name": "venus",
+      "sector": "defi",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "yearn-finance",
+      "name": "yearn-finance",
+      "sector": "defi",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "akash-network",
+      "name": "akash-network",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "aleph-im",
+      "name": "aleph-im",
+      "sector": "depin",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "ankr-network",
+      "name": "ankr-network",
+      "sector": "depin",
+      "filled": 3,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "developer"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "arweave",
+      "name": "arweave",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "swarm",
+      "name": "swarm",
+      "sector": "depin",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "cess",
+      "name": "cess",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "crust-network",
+      "name": "crust-network",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "streamr",
+      "name": "streamr",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "dimo",
+      "name": "dimo",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "deeper-network",
+      "name": "deeper-network",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "sentinel",
+      "name": "sentinel",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "flux",
+      "name": "flux",
+      "sector": "depin",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "geodnet",
+      "name": "geodnet",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "grass",
+      "name": "grass",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "helium",
+      "name": "helium",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "hivemapper",
+      "name": "hivemapper",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "iagon",
+      "name": "iagon",
+      "sector": "depin",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "iotex",
+      "name": "iotex",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "livepeer",
+      "name": "livepeer",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "mxc",
+      "name": "mxc",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "mysterium",
+      "name": "mysterium",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "nodle-network",
+      "name": "nodle-network",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "nubila",
+      "name": "nubila",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "pollen-mobile",
+      "name": "pollen-mobile",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "peaq",
+      "name": "peaq",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "phala",
+      "name": "phala",
+      "sector": "depin",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "powerpod",
+      "name": "powerpod",
+      "sector": "depin",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "render",
+      "name": "render",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "siacoin",
+      "name": "siacoin",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "storj",
+      "name": "storj",
+      "sector": "depin",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "thingsix",
+      "name": "thingsix",
+      "sector": "depin",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "wayru",
+      "name": "wayru",
+      "sector": "depin",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "world-mobile-token",
+      "name": "world-mobile-token",
+      "sector": "depin",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "weatherxm",
+      "name": "weatherxm",
+      "sector": "depin",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "aether",
+      "name": "aether",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "agora-health",
+      "name": "agora-health",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "aleo",
+      "name": "aleo",
+      "sector": "desci",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "antidote",
+      "name": "antidote",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "biomapper",
+      "name": "biomapper",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "biopset",
+      "name": "biopset",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "biodao",
+      "name": "biodao",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "ceramic",
+      "name": "ceramic",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "cere-network",
+      "name": "cere-network",
+      "sector": "desci",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "cryogenseed",
+      "name": "cryogenseed",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "corusdao",
+      "name": "corusdao",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "covalent",
+      "name": "covalent",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "cryoDAO",
+      "name": "cryoDAO",
+      "sector": "desci",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "data-union",
+      "name": "data-union",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "ipfs",
+      "name": "ipfs",
+      "sector": "desci",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "genomesdao",
+      "name": "genomesdao",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "genobank",
+      "name": "genobank",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "genomesio",
+      "name": "genomesio",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "valleyDAO",
+      "name": "valleyDAO",
+      "sector": "desci",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "hairdao",
+      "name": "hairdao",
+      "sector": "desci",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "idena",
+      "name": "idena",
+      "sector": "desci",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "labdao",
+      "name": "labdao",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "molecule",
+      "name": "molecule",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "cerebrumdao",
+      "name": "cerebrumdao",
+      "sector": "desci",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "nucleation",
+      "name": "nucleation",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "openlab",
+      "name": "openlab",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "psilocin",
+      "name": "psilocin",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "researchhub",
+      "name": "researchhub",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "rxbio",
+      "name": "rxbio",
+      "sector": "desci",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "spheron",
+      "name": "spheron",
+      "sector": "desci",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "tao",
+      "name": "tao",
+      "sector": "desci",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "vita-dao",
+      "name": "vita-dao",
+      "sector": "desci",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "my-neighbor-alice",
+      "name": "my-neighbor-alice",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "alienswap",
+      "name": "alienswap",
+      "sector": "gaming",
+      "filled": 2,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "apecoin",
+      "name": "apecoin",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "otherside",
+      "name": "otherside",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "star-atlas",
+      "name": "star-atlas",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "axie-infinity",
+      "name": "axie-infinity",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "beam",
+      "name": "beam",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "big-time",
+      "name": "big-time",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "bullieverse",
+      "name": "bullieverse",
+      "sector": "gaming",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "chromia",
+      "name": "chromia",
+      "sector": "gaming",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "enjincoin",
+      "name": "enjincoin",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "gala",
+      "name": "gala",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "gamefi",
+      "name": "gamefi",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "off-the-grid",
+      "name": "off-the-grid",
+      "sector": "gaming",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "illuvium",
+      "name": "illuvium",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "immutable-x",
+      "name": "immutable-x",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "defi-kingdoms",
+      "name": "defi-kingdoms",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "magic",
+      "name": "magic",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "decentraland",
+      "name": "decentraland",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "mobox",
+      "name": "mobox",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "mintchain",
+      "name": "mintchain",
+      "sector": "gaming",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "match-quest",
+      "name": "match-quest",
+      "sector": "gaming",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "myria",
+      "name": "myria",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "oasys",
+      "name": "oasys",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "playdapp",
+      "name": "playdapp",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "pixels",
+      "name": "pixels",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "portal",
+      "name": "portal",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "rom",
+      "name": "rom",
+      "sector": "gaming",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "ronin",
+      "name": "ronin",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "the-sandbox",
+      "name": "the-sandbox",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "seed-photo",
+      "name": "seed-photo",
+      "sector": "gaming",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "shrapnel",
+      "name": "shrapnel",
+      "sector": "gaming",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "smooth-love-potion",
+      "name": "smooth-love-potion",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "smart-coin",
+      "name": "smart-coin",
+      "sector": "gaming",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "wax",
+      "name": "wax",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "yield-guild-games",
+      "name": "yield-guild-games",
+      "sector": "gaming",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "alchemy",
+      "name": "alchemy",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "api3",
+      "name": "api3",
+      "sector": "infrastructure",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "arkham",
+      "name": "arkham",
+      "sector": "infrastructure",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "axelar",
+      "name": "axelar",
+      "sector": "infrastructure",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "band-protocol",
+      "name": "band-protocol",
+      "sector": "infrastructure",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "bloxroute",
+      "name": "bloxroute",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "blockscout",
+      "name": "blockscout",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "chainbase",
+      "name": "chainbase",
+      "sector": "infrastructure",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "everclear",
+      "name": "everclear",
+      "sector": "infrastructure",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "chainstack",
+      "name": "chainstack",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "fireblocks",
+      "name": "fireblocks",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "goldsky",
+      "name": "goldsky",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "icp",
+      "name": "icp",
+      "sector": "infrastructure",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "infura",
+      "name": "infura",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "koinly",
+      "name": "koinly",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "chainlink",
+      "name": "chainlink",
+      "sector": "infrastructure",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "mina",
+      "name": "mina",
+      "sector": "infrastructure",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "moralis",
+      "name": "moralis",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "connext",
+      "name": "connext",
+      "sector": "infrastructure",
+      "filled": 3,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "developer"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "nxyz",
+      "name": "nxyz",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "pokt-network",
+      "name": "pokt-network",
+      "sector": "infrastructure",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "chainport",
+      "name": "chainport",
+      "sector": "infrastructure",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "pyth-network",
+      "name": "pyth-network",
+      "sector": "infrastructure",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "quicknode",
+      "name": "quicknode",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "redbelly-network",
+      "name": "redbelly-network",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "redstone-finance",
+      "name": "redstone-finance",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "safe",
+      "name": "safe",
+      "sector": "infrastructure",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "subsquid",
+      "name": "subsquid",
+      "sector": "infrastructure",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "thirdweb",
+      "name": "thirdweb",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "tenderly",
+      "name": "tenderly",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "uma",
+      "name": "uma",
+      "sector": "infrastructure",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "walletconnect",
+      "name": "walletconnect",
+      "sector": "infrastructure",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "layerzero",
+      "name": "layerzero",
+      "sector": "infrastructure",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "cardano",
+      "name": "cardano",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "algorand",
+      "name": "algorand",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "aptos",
+      "name": "aptos",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "cosmos",
+      "name": "cosmos",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "avalanche-2",
+      "name": "avalanche-2",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "berachain",
+      "name": "berachain",
+      "sector": "layer1",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "binancecoin",
+      "name": "binancecoin",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "bitcoin",
+      "name": "bitcoin",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "conflux-token",
+      "name": "conflux-token",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "crypto-com-chain",
+      "name": "crypto-com-chain",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "casper-network",
+      "name": "casper-network",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "dogecoin",
+      "name": "dogecoin",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "polkadot",
+      "name": "polkadot",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "multiversx",
+      "name": "multiversx",
+      "sector": "layer1",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "eos",
+      "name": "eos",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "ethereum",
+      "name": "ethereum",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "filecoin",
+      "name": "filecoin",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "flow",
+      "name": "flow",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "flare",
+      "name": "flare",
+      "sector": "layer1",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "fantom",
+      "name": "fantom",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "hedera-hashgraph",
+      "name": "hedera-hashgraph",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "internet-computer",
+      "name": "internet-computer",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "injective-protocol",
+      "name": "injective-protocol",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "kaspa",
+      "name": "kaspa",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "kava",
+      "name": "kava",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "kadena",
+      "name": "kadena",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "kujira",
+      "name": "kujira",
+      "sector": "layer1",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "litecoin",
+      "name": "litecoin",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "mina-protocol",
+      "name": "mina-protocol",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "iota",
+      "name": "iota",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "monad",
+      "name": "monad",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "near",
+      "name": "near",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "neo",
+      "name": "neo",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "oasis-network",
+      "name": "oasis-network",
+      "sector": "layer1",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "sonic-3",
+      "name": "sonic-3",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "sei-network",
+      "name": "sei-network",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "solana",
+      "name": "solana",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "sui",
+      "name": "sui",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "bittensor",
+      "name": "bittensor",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "celestia",
+      "name": "celestia",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "the-open-network",
+      "name": "the-open-network",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "tron",
+      "name": "tron",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "vechain",
+      "name": "vechain",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "chia",
+      "name": "chia",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "stellar",
+      "name": "stellar",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "ripple",
+      "name": "ripple",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "tezos",
+      "name": "tezos",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "zilliqa",
+      "name": "zilliqa",
+      "sector": "layer1",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "aevo",
+      "name": "aevo",
+      "sector": "layer2",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "arbitrum",
+      "name": "arbitrum",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "astar",
+      "name": "astar",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "aurora",
+      "name": "aurora",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "blast",
+      "name": "blast",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "bob",
+      "name": "bob",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "boba",
+      "name": "boba",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "celo",
+      "name": "celo",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "cyber",
+      "name": "cyber",
+      "sector": "layer2",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "eclipse",
+      "name": "eclipse",
+      "sector": "layer2",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "gravity",
+      "name": "gravity",
+      "sector": "layer2",
+      "filled": 3,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "developer"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "moonbeam",
+      "name": "moonbeam",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "gnosis",
+      "name": "gnosis",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "huddle01",
+      "name": "huddle01",
+      "sector": "layer2",
+      "filled": 2,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "immutable",
+      "name": "immutable",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "kakarot",
+      "name": "kakarot",
+      "sector": "layer2",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "karura",
+      "name": "karura",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "linea",
+      "name": "linea",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "loopring",
+      "name": "loopring",
+      "sector": "layer2",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "lisk",
+      "name": "lisk",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "lyra",
+      "name": "lyra",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "manta",
+      "name": "manta",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "metis",
+      "name": "metis",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "mint",
+      "name": "mint",
+      "sector": "layer2",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "mantle",
+      "name": "mantle",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "mode",
+      "name": "mode",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "optimism",
+      "name": "optimism",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "orderly",
+      "name": "orderly",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "polygon",
+      "name": "polygon",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "polynomial",
+      "name": "polynomial",
+      "sector": "layer2",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "rari",
+      "name": "rari",
+      "sector": "layer2",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "scroll",
+      "name": "scroll",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "skale",
+      "name": "skale",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "sophon",
+      "name": "sophon",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "starknet",
+      "name": "starknet",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "xai",
+      "name": "xai",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "zetachain",
+      "name": "zetachain",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "zksync",
+      "name": "zksync",
+      "sector": "layer2",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "zircuit",
+      "name": "zircuit",
+      "sector": "layer2",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "toucan-protocol",
+      "name": "toucan-protocol",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "franklin-templeton",
+      "name": "benji",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "brickken",
+      "name": "brickken",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "swissborg",
+      "name": "swissborg",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "backed-finance",
+      "name": "backed-finance",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "centrifuge",
+      "name": "centrifuge",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "clearpool",
+      "name": "clearpool",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "creditum",
+      "name": "creditum",
+      "sector": "rwa",
+      "filled": 3,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "developer"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "digix-gold-token",
+      "name": "digix-gold-token",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "dusk-network",
+      "name": "dusk-network",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "elysia",
+      "name": "elysia",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "ethena",
+      "name": "ethena",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "fasset",
+      "name": "fasset",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "goldfinch",
+      "name": "goldfinch",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "junca-cash",
+      "name": "junca-cash",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "klima-dao",
+      "name": "klima-dao",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "landx-finance",
+      "name": "landx",
+      "sector": "rwa",
+      "filled": 3,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "developer"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "lofty",
+      "name": "lofty",
+      "sector": "rwa",
+      "filled": 3,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "developer"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "moss-carbon-credit",
+      "name": "moss-carbon-credit",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "maker",
+      "name": "maker",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "maple",
+      "name": "maple",
+      "sector": "rwa",
+      "filled": 3,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "developer"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "matrixport-rwa",
+      "name": "matrixport-rwa",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "mantra-dao",
+      "name": "mantra",
+      "sector": "rwa",
+      "filled": 3,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "developer"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "ondo-finance",
+      "name": "ondo-finance",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "pax-gold",
+      "name": "pax-gold",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "plume-network",
+      "name": "plume-network",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "polymath",
+      "name": "polymath",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "propy",
+      "name": "propy",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "realt-coin",
+      "name": "realt-coin",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "realio-network",
+      "name": "realio",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "rwa-x",
+      "name": "rwa-x",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "singularitydao",
+      "name": "singularitydao",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "securitize",
+      "name": "securitize",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "sp-global",
+      "name": "sp-global",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "matrixdock",
+      "name": "matrixdock",
+      "sector": "rwa",
+      "filled": 3,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "developer"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "openeden",
+      "name": "openeden",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "fdv",
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "tangible",
+      "name": "tangible",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "tokenfi",
+      "name": "tokenfi",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "polytrade",
+      "name": "polytrade",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "trademate",
+      "name": "trademate",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "traditional-finance",
+      "name": "traditional-finance",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "truefi",
+      "name": "truefi",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "mountain-protocol",
+      "name": "mountain-protocol",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "superstate",
+      "name": "superstate",
+      "sector": "rwa",
+      "filled": 1,
+      "missing": [
+        "market",
+        "fdv",
+        "price",
+        "github",
+        "tvl",
+        "developer",
+        "payd"
+      ],
+      "reason": "no_coingecko_data"
+    },
+    {
+      "id": "hashnote",
+      "name": "hashnote",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "wrapped-stx",
+      "name": "wrapped-stx",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    },
+    {
+      "id": "tether-gold",
+      "name": "tether-gold",
+      "sector": "rwa",
+      "filled": 7,
+      "missing": [
+        "github"
+      ],
+      "reason": "partial_data"
+    },
+    {
+      "id": "xana",
+      "name": "xana",
+      "sector": "rwa",
+      "filled": 6,
+      "missing": [
+        "github",
+        "tvl"
+      ],
+      "reason": "no_defillama_data"
+    }
+  ],
+  "failed": [],
+  "full_pass": [],
+  "sectors": {
+    "ai": {
+      "total": 38,
+      "enriched": 38,
+      "with_tvl": 0
+    },
+    "defi": {
+      "total": 41,
+      "enriched": 41,
+      "with_tvl": 15
+    },
+    "depin": {
+      "total": 34,
+      "enriched": 34,
+      "with_tvl": 4
+    },
+    "desci": {
+      "total": 32,
+      "enriched": 32,
+      "with_tvl": 0
+    },
+    "gaming": {
+      "total": 36,
+      "enriched": 36,
+      "with_tvl": 0
+    },
+    "infrastructure": {
+      "total": 33,
+      "enriched": 33,
+      "with_tvl": 7
+    },
+    "layer1": {
+      "total": 48,
+      "enriched": 48,
+      "with_tvl": 1
+    },
+    "layer2": {
+      "total": 39,
+      "enriched": 39,
+      "with_tvl": 4
+    },
+    "rwa": {
+      "total": 48,
+      "enriched": 48,
+      "with_tvl": 20
+    }
+  }
+}

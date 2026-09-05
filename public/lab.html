@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PAYD Trading Lab — Payd_Finance</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Plus+Jakarta+Sans:wght@500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 500: '#D4AF37', hover: '#C5A028', 100: '#3E3418' },
+                        accent:  { 500: '#7B61FF', glow: 'rgba(123, 97, 255, 0.15)' },
+                        bg:      { 900: '#050505', 800: '#0F0F11', 700: '#18181B' },
+                        text:    { 900: '#FFFFFF', 500: '#A1A1AA' },
+                        border:  { 700: '#27272A', light: 'rgba(255, 255, 255, 0.08)' }
+                    },
+                    fontFamily: {
+                        sans:    ['"Inter"', 'sans-serif'],
+                        heading: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        mono:    ['"JetBrains Mono"', 'monospace'],
+                    },
+                    backgroundImage: {
+                        'hero-glow':     'radial-gradient(circle at center, rgba(123, 97, 255, 0.15) 0%, rgba(5, 5, 5, 0) 70%)',
+                        'card-gradient': 'linear-gradient(180deg, rgba(24, 24, 27, 0.5) 0%, rgba(15, 15, 17, 0.5) 100%)',
+                    },
+                    boxShadow: {
+                        'gold':  '0 4px 12px rgba(212, 175, 55, 0.2)',
+                        'glass': '0 8px 32px 0 rgba(0, 0, 0, 0.37)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .glass-panel {
+            background: rgba(15, 15, 17, 0.7);
+            backdrop-filter: blur(12px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        /* ============================================================
+           PAYD TRADING LAB — Trading Terminal
+           Глобальные стили full-screen торгового терминала
+           ============================================================ */
+        #lt-chart-hud > * { animation: lt-hud-in 0.35s cubic-bezier(0.16, 1, 0.3, 1) both; }
+        @keyframes lt-hud-in {
+            from { opacity: 0; transform: translateY(8px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+
+        .lt-direction-btn { transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); }
+        .lt-direction-btn:hover:not(:disabled) { transform: translateY(-1px); }
+        .lt-direction-btn:disabled { opacity: 0.35; cursor: not-allowed; }
+
+        #lt-floating-toolbar { animation: lt-toolbar-in 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+        @keyframes lt-toolbar-in {
+            from { opacity: 0; transform: translate(-50%, -10px); }
+            to   { opacity: 1; transform: translate(-50%, 0); }
+        }
+        #lt-floating-toolbar button { transition: all 0.18s ease; }
+        #lt-floating-toolbar button:hover { transform: translateY(-2px); }
+        #lt-floating-toolbar button.active { box-shadow: 0 0 0 2px #D4AF37, 0 4px 14px rgba(212, 175, 55, 0.35); }
+
+        .lt-pos-badge { animation: lt-badge-pulse 2.5s ease-in-out infinite; }
+        @keyframes lt-badge-pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(212, 175, 55, 0.4); }
+            50%      { box-shadow: 0 0 0 8px rgba(212, 175, 55, 0); }
+        }
+
+        #lt-result-screen { transition: backdrop-filter 0.3s ease, background 0.3s ease; }
+        .lt-hotkey-hint { opacity: 0.6; transition: opacity 0.2s ease; }
+        .lt-hotkey-hint:hover { opacity: 1; }
+
+        #lab-trainer-mount {
+            --lt-gold: #D4AF37;
+            --lt-gold-hover: #C5A028;
+            --lt-green: #22c55e;
+            --lt-red: #ef4444;
+            --lt-blue: #3b82f6;
+            --lt-purple: #7B61FF;
+            --lt-bg-1: #0a0a0c;
+            --lt-bg-2: #121216;
+            --lt-border: rgba(255, 255, 255, 0.08);
+        }
+        #lab-trainer-mount .lt-terminal-btn,
+        #lab-trainer-mount button[id^="lt-btn-"],
+        #lab-trainer-mount #lt-floating-toolbar button {
+            font-family: inherit;
+            letter-spacing: 0;
+        }
+        #lt-sidebar::-webkit-scrollbar { width: 6px; }
+        #lt-sidebar::-webkit-scrollbar-track { background: transparent; }
+        #lt-sidebar::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 3px; }
+        #lt-sidebar::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.18); }
+
+        /* Lab internal navigation */
+        .lab-tab-btn.active { background:#7B61FF;color:#fff; }
+        .lab-pane { display:none; }
+        .lab-pane.active { display:block; }
+
+        /* Scrollbars */
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: rgba(255, 255, 255, 0.1); border-radius: 4px; }
+        ::-webkit-scrollbar-thumb:hover { background: rgba(255, 255, 255, 0.2); }
+    </style>
+</head>
+<body class="bg-bg-900 text-text-500 font-sans antialiased">
+
+<!-- ========== NAVBAR (Lab only) ========== -->
+<nav class="fixed w-full z-50 top-0 left-0 border-b border-white/5 glass-panel">
+    <div class="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between h-20">
+            <div class="flex items-center gap-3">
+                <img src="/images/logo.png" alt="Payd_Finance" class="h-10 w-auto">
+                <span class="text-sm text-text-500">|</span>
+                <span class="text-base font-semibold text-white">PAYD Trading Lab</span>
+            </div>
+            <div class="flex items-center gap-2">
+                <button id="lab-tab-dashboard" onclick="switchLabTab('dashboard')"
+                    class="lab-tab-btn px-5 py-3 rounded-xl text-sm font-medium bg-bg-800 text-text-500 hover:text-white transition-colors">
+                    Dashboard
+                </button>
+                <button id="lab-tab-modules" onclick="switchLabTab('modules')"
+                    class="lab-tab-btn px-5 py-3 rounded-xl text-sm font-medium bg-bg-800 text-text-500 hover:text-white transition-colors active">
+                    Modules
+                </button>
+                <button id="lab-tab-progress" onclick="switchLabTab('progress')"
+                    class="lab-tab-btn px-5 py-3 rounded-xl text-sm font-medium bg-bg-800 text-text-500 hover:text-white transition-colors">
+                    Progress
+                </button>
+                <a href="/" class="ml-3 px-4 py-2 text-sm text-text-500 hover:text-white border border-white/10 rounded-lg transition-colors">
+                    ← На главную
+                </a>
+            </div>
+        </div>
+    </div>
+</nav>
+
+<main class="pt-24 pb-12 px-4 sm:px-6 lg:px-8 max-w-[1800px] mx-auto">
+
+<!-- ========== PANE: MODULES ========== -->
+<section id="lab-pane-modules" class="lab-pane active">
+    <!-- HEADER -->
+    <div class="flex items-center justify-between mb-6 flex-wrap gap-4">
+        <div>
+            <h2 class="text-3xl font-bold text-white mb-1">Modules</h2>
+            <p class="text-text-500 text-sm">Практические сценарии на реальных графиках — отрабатывайте навыки без риска</p>
+        </div>
+        <div id="lab-workspace-actions"></div>
+    </div>
+
+    <!-- РЕЖИМ 1: КАРТОЧКИ МОДУЛЕЙ -->
+    <div id="lab-cards-mode" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 xl:grid-cols-4 gap-6">
+        <!-- Module 1 -->
+        <div class="p-6 rounded-2xl bg-bg-800 border border-border-700 hover:border-accent-500 transition-all flex flex-col gap-4">
+            <span class="inline-block w-fit px-2 py-1 bg-accent-500/10 text-accent-500 rounded text-xs font-semibold">МОДУЛЬ 1</span>
+            <h3 class="text-xl font-semibold text-white">Почему уровень сам по себе ничего не значит</h3>
+            <p class="text-text-500 text-sm flex-1">Уровень работает только вместе с подтверждением. Научитесь видеть ложные пробои и реальные реакции цены.</p>
+            <button onclick="startModuleScenario(0)" class="w-full px-4 py-3 bg-accent-500 hover:bg-accent-600 text-black rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                <span>▶</span><span>Начать сценарий</span>
+            </button>
+        </div>
+
+        <!-- Module 2 -->
+        <div class="p-6 rounded-2xl bg-bg-800 border border-border-700 hover:border-accent-500 transition-all flex flex-col gap-4">
+            <span class="inline-block w-fit px-2 py-1 bg-accent-500/10 text-accent-500 rounded text-xs font-semibold">МОДУЛЬ 2</span>
+            <h3 class="text-xl font-semibold text-white">Подтверждение входа</h3>
+            <p class="text-text-500 text-sm flex-1">BOS, CHOCH и дислокация — научитесь ждать подтверждения вместо входа "наугад".</p>
+            <button onclick="startModuleScenario(1)" class="w-full px-4 py-3 bg-accent-500 hover:bg-accent-600 text-black rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                <span>▶</span><span>Начать сценарий</span>
+            </button>
+        </div>
+
+        <!-- Module 3 -->
+        <div class="p-6 rounded-2xl bg-bg-800 border border-border-700 hover:border-accent-500 transition-all flex flex-col gap-4">
+            <span class="inline-block w-fit px-2 py-1 bg-accent-500/10 text-accent-500 rounded text-xs font-semibold">МОДУЛЬ 3</span>
+            <h3 class="text-xl font-semibold text-white">Рыночный контекст</h3>
+            <p class="text-text-500 text-sm flex-1">Тренд, моментум, объём. Как читать контекст рынка и принимать решения в правильную сторону.</p>
+            <button onclick="startModuleScenario(2)" class="w-full px-4 py-3 bg-accent-500 hover:bg-accent-600 text-black rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                <span>▶</span><span>Начать сценарий</span>
+            </button>
+        </div>
+
+        <!-- Module 4 -->
+        <div class="p-6 rounded-2xl bg-bg-800 border border-border-700 hover:border-accent-500 transition-all flex flex-col gap-4">
+            <span class="inline-block w-fit px-2 py-1 bg-accent-500/10 text-accent-500 rounded text-xs font-semibold">МОДУЛЬ 4</span>
+            <h3 class="text-xl font-semibold text-white">Управление риском</h3>
+            <p class="text-text-500 text-sm flex-1">Когда не входить в сделку. Liquidity Sweeps, Volume Climax и зоны дисквалификации входов.</p>
+            <button onclick="startModuleScenario(3)" class="w-full px-4 py-3 bg-accent-500 hover:bg-accent-600 text-black rounded-lg font-semibold transition-colors flex items-center justify-center gap-2">
+                <span>▶</span><span>Начать сценарий</span>
+            </button>
+        </div>
+    </div>
+
+    <!-- РЕЖИМ 2: TRAINER COMPONENT -->
+    <div id="lab-trainer-mode" class="hidden w-full" style="height: calc(100vh - 220px); min-height: 600px;">
+        <div id="lab-trainer-mount" class="w-full h-full bg-bg-800 rounded-2xl border border-border-700 overflow-hidden"></div>
+    </div>
+</section>
+
+<!-- ========== PANE: DASHBOARD ========== -->
+<section id="lab-pane-dashboard" class="lab-pane">
+    <div class="flex items-center justify-between mb-6 flex-wrap gap-4">
+        <div>
+            <h2 class="text-3xl font-bold text-white mb-1">Live Dashboard</h2>
+            <p class="text-text-500 text-sm">500+ альткоинов с AI-анализом через TradingView</p>
+        </div>
+    </div>
+
+    <div class="bg-bg-800 border border-border-700 rounded-2xl overflow-hidden" style="height: calc(100vh - 240px); min-height: 600px;">
+        <div class="flex h-full">
+            <!-- Coin List -->
+            <div class="w-80 border-r border-border-700 overflow-y-auto">
+                <div class="p-3 border-b border-border-700">
+                    <input type="text" id="lab-coin-search" placeholder="Поиск монеты (BTC, ETH, SOL...)"
+                        class="w-full px-3 py-2 bg-bg-900 border border-border-700 rounded-lg text-white placeholder-text-500 focus:border-primary-500 focus:outline-none text-sm"
+                        oninput="filterCoins(this.value)">
+                </div>
+                <div class="p-2">
+                    <div class="text-xs text-text-500 px-2 py-1">Топ по объёму</div>
+                    <div id="lab-coin-list" class="space-y-1">
+                        <div class="px-2 py-4 text-center text-text-500 text-sm">Загрузка...</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Main Panel -->
+            <div class="flex-1 flex flex-col overflow-hidden">
+                <div class="h-1/2 border-b border-border-700">
+                    <div class="tradingview-widget-container h-full" style="height:100%;width:100%">
+                        <div id="lab-tradingview-widget" class="h-full w-full"></div>
+                    </div>
+                </div>
+                <div class="h-1/2 p-4 overflow-y-auto bg-bg-800">
+                    <div class="grid grid-cols-2 gap-4 h-full">
+                        <div class="space-y-3">
+                            <h3 class="text-lg font-bold text-white">Детали актива</h3>
+                            <div class="bg-bg-900/50 rounded-lg p-3 space-y-2 text-sm">
+                                <div class="flex justify-between"><span class="text-text-500">Цена</span><span class="text-white font-mono" id="lab-detail-price">--</span></div>
+                                <div class="flex justify-between"><span class="text-text-500">24h Change</span><span id="lab-detail-change">--</span></div>
+                                <div class="flex justify-between"><span class="text-text-500">High 24h</span><span class="text-green-400 font-mono" id="lab-detail-high">--</span></div>
+                                <div class="flex justify-between"><span class="text-text-500">Low 24h</span><span class="text-red-400 font-mono" id="lab-detail-low">--</span></div>
+                                <div class="flex justify-between"><span class="text-text-500">Volume 24h</span><span class="text-primary-500 font-semibold" id="lab-detail-volume">--</span></div>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <h3 class="text-lg font-bold text-white">AI Анализ</h3>
+                            <div class="bg-bg-900/50 rounded-lg p-3 space-y-2 text-sm">
+                                <div class="flex justify-between"><span class="text-text-500">Тренд</span><span id="lab-ai-trend" class="text-white font-semibold">--</span></div>
+                                <div class="flex justify-between"><span class="text-text-500">Объём</span><span id="lab-ai-volume" class="text-white font-semibold">--</span></div>
+                                <div class="flex justify-between"><span class="text-text-500">Интерес</span><span id="lab-ai-interest" class="text-white font-semibold">--</span></div>
+                                <div class="pt-2 border-t border-border-700">
+                                    <div class="flex justify-between items-center"><span class="text-text-500">AI Сигнал</span><span id="lab-ai-signal" class="text-xl font-bold">--</span></div>
+                                    <div class="flex justify-between items-center mt-1"><span class="text-text-500">Confidence</span><span id="lab-ai-confidence" class="text-primary-500 font-semibold">--</span></div>
+                                </div>
+                            </div>
+                            <div class="p-3 bg-accent-500/10 rounded-lg border border-accent-500/30">
+                                <p class="text-xs text-accent-500 mb-1">AI Рекомендация:</p>
+                                <p class="text-sm text-white font-medium" id="lab-ai-recommendation">Выберите монету из списка</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ========== PANE: PROGRESS ========== -->
+<section id="lab-pane-progress" class="lab-pane">
+    <div class="flex items-center justify-between mb-6 flex-wrap gap-4">
+        <div>
+            <h2 class="text-3xl font-bold text-white mb-1">Progress</h2>
+            <p class="text-text-500 text-sm">Ваш прогресс по модулям и реальные данные Performance Analytics Engine</p>
+        </div>
+        <button onclick="resetProgressData()" class="px-4 py-2 text-sm bg-bg-800 hover:bg-red-500/20 text-text-500 hover:text-red-400 border border-border-700 rounded-lg transition-colors">
+            Сбросить прогресс
+        </button>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
+        <!-- Stats Cards (filled by JS) -->
+        <div class="p-6 rounded-2xl bg-bg-800 border border-border-700">
+            <div class="text-sm text-text-500 mb-1">Всего сценариев</div>
+            <div class="text-3xl font-bold text-white" id="lab-stat-total">0</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-bg-800 border border-border-700">
+            <div class="text-sm text-text-500 mb-1">Завершено</div>
+            <div class="text-3xl font-bold text-green-400" id="lab-stat-completed">0</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-bg-800 border border-border-700">
+            <div class="text-sm text-text-500 mb-1">Win Rate</div>
+            <div class="text-3xl font-bold text-accent-500" id="lab-stat-winrate">0%</div>
+        </div>
+        <div class="p-6 rounded-2xl bg-bg-800 border border-border-700">
+            <div class="text-sm text-text-500 mb-1">Средний Score</div>
+            <div class="text-3xl font-bold text-primary-500" id="lab-stat-score">0</div>
+        </div>
+    </div>
+
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+        <!-- Module breakdown -->
+        <div class="p-6 rounded-2xl bg-bg-800 border border-border-700">
+            <h3 class="text-lg font-bold text-white mb-4">По модулям</h3>
+            <div id="lab-modules-breakdown" class="space-y-4"></div>
+        </div>
+        <!-- Recent decisions -->
+        <div class="p-6 rounded-2xl bg-bg-800 border border-border-700">
+            <h3 class="text-lg font-bold text-white mb-4">Последние решения</h3>
+            <div id="lab-recent-decisions" class="space-y-3 max-h-96 overflow-y-auto"></div>
+        </div>
+    </div>
+</section>
+
+</main>
+
+<!-- ========== JS: Production Engines (порядок важен) ========== -->
+<script src="js/TrainerScenarios.js"></script>
+<script src="js/coreAnalysisEngine.js"></script>
+<script src="js/MarketAnalysisEngine.js"></script>
+<script src="js/DecisionOptionsCatalog.js"></script>
+<script src="js/DecisionEvaluationEngine.js"></script>
+<script src="js/LearningFeedbackEngine.js"></script>
+<script src="js/PerformanceAnalyticsEngine.js"></script>
+<script src="js/Trainer.js"></script>
+<script src="js/lab-trainer-component.js"></script>
+<script src="js/trading-terminal.js"></script>
+<script src="js/ScenarioLibrary.js"></script>
+<script src="js/ScenarioProgressTracker.js"></script>
+
+<!-- ========== JS: Lab orchestration ========== -->
+<script>
+/* =============== Lab internal navigation =============== */
+function switchLabTab(tabName) {
+    document.querySelectorAll('.lab-tab-btn').forEach(btn => btn.classList.remove('active'));
+    document.querySelectorAll('.lab-pane').forEach(p => p.classList.remove('active'));
+
+    document.getElementById('lab-tab-' + tabName).classList.add('active');
+    document.getElementById('lab-pane-' + tabName).classList.add('active');
+
+    if (tabName === 'dashboard') {
+        if (!labCoinData || labCoinData.length === 0) loadCoinList();
+    }
+    if (tabName === 'progress') {
+        renderProgress();
+    }
+}
+
+/* =============== Trainer integration =============== */
+function backToLabCards() {
+    const cardsMode = document.getElementById('lab-cards-mode');
+    const trainerMode = document.getElementById('lab-trainer-mode');
+    if (cardsMode) cardsMode.classList.remove('hidden');
+    if (trainerMode) trainerMode.classList.add('hidden');
+    const workspaceActions = document.getElementById('lab-workspace-actions');
+    if (workspaceActions) workspaceActions.innerHTML = '';
+
+    if (window.LabTrainer) {
+        if (typeof window.LabTrainer.back === 'function') window.LabTrainer.back();
+        else if (typeof window.LabTrainer.reset === 'function') window.LabTrainer.reset();
+    }
+
+    if (cardsMode) cardsMode.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function startModuleScenario(moduleIndex) {
+    const cardsMode = document.getElementById('lab-cards-mode');
+    const trainerMode = document.getElementById('lab-trainer-mode');
+    if (!cardsMode || !trainerMode) return;
+
+    cardsMode.classList.add('hidden');
+    trainerMode.classList.remove('hidden');
+
+    const titles = [
+        'Modules • Уровень сам по себе ничего не значит',
+        'Modules • Подтверждение входа (BOS / CHOCH)',
+        'Modules • Рыночный контекст',
+        'Modules • Управление риском'
+    ];
+    const workspaceActions = document.getElementById('lab-workspace-actions');
+    if (workspaceActions) {
+        workspaceActions.innerHTML = `
+            <span class="text-sm text-text-500 mr-3">${escapeHtml(titles[moduleIndex] || '')}</span>
+            <button onclick="backToLabCards()" class="px-4 py-2 bg-bg-700 hover:bg-bg-600 text-white rounded-lg text-sm font-medium transition-colors flex items-center gap-1">
+                <span>←</span><span>Назад к модулям</span>
+            </button>
+        `;
+    }
+
+    const mountEl = document.getElementById('lab-trainer-mount');
+    if (mountEl) mountEl.innerHTML = '';
+    if (window.LabTrainer && typeof window.LabTrainer.mount === 'function') {
+        window.LabTrainer.mount('lab-trainer-mount');
+        if (typeof window.LabTrainer.start === 'function') {
+            window.LabTrainer.start(moduleIndex);
+        }
+    } else {
+        alert('LabTrainer component not loaded');
+    }
+
+    trainerMode.scrollIntoView({ behavior: 'smooth', block: 'start' });
+}
+
+function escapeHtml(s) {
+    return String(s == null ? '' : s)
+        .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+        .replace(/"/g, '&quot;').replace(/'/g, '&#39;');
+}
+
+/* =============== Dashboard (live data) =============== */
+let labDashboardWidget = null;
+let labCoinData = [];
+let labSelectedCoin = 'bitcoin';
+
+async function loadCoinList() {
+    const list = document.getElementById('lab-coin-list');
+    list.innerHTML = '<div class="px-2 py-4 text-center text-text-500 text-sm">Загрузка...</div>';
+
+    try {
+        const response = await fetch('https://api.coingecko.com/api/v3/coins/markets?vs_currency=usd&order=market_cap_desc&per_page=250&sparkline=false');
+        const data = await response.json();
+        if (Array.isArray(data) && data.length) { labCoinData = data; renderCoinList(labCoinData); return; }
+    } catch (e) { console.log('CoinGecko failed, fallback to Binance'); }
+
+    try {
+        const response = await fetch('https://api.binance.com/api/v3/ticker/24hr');
+        const data = await response.json();
+        labCoinData = data
+            .filter(c => parseFloat(c.quoteVolume) > 500000)
+            .sort((a, b) => parseFloat(b.quoteVolume) - parseFloat(a.quoteVolume))
+            .slice(0, 250)
+            .map(c => ({
+                id: c.symbol.toLowerCase(),
+                symbol: c.symbol.replace('USDT', '').toUpperCase(),
+                current_price: parseFloat(c.lastPrice),
+                price_change_percentage_24h: parseFloat(c.priceChangePercent),
+                high_24h: parseFloat(c.highPrice),
+                low_24h: parseFloat(c.lowPrice),
+                total_volume: parseFloat(c.quoteVolume),
+                market_cap: parseFloat(c.quoteVolume),
+                market_cap_rank: 0
+            }));
+        renderCoinList(labCoinData);
+    } catch (e) {
+        list.innerHTML = '<div class="px-2 py-4 text-center text-red-400 text-sm">Ошибка загрузки</div>';
+    }
+}
+
+function renderCoinList(coins) {
+    const list = document.getElementById('lab-coin-list');
+    const items = coins.slice(0, 200).map(coin => {
+        const sym = (coin.symbol || coin.id || '').toUpperCase();
+        const price = coin.current_price || 0;
+        const change = coin.price_change_percentage_24h || 0;
+        const chCls = change >= 0 ? 'text-green-400' : 'text-red-400';
+        return `
+            <div class="px-2 py-2 rounded hover:bg-bg-700 cursor-pointer flex items-center justify-between" onclick="selectCoin('${coin.id}')">
+                <div>
+                    <div class="text-sm font-semibold text-white">${sym}</div>
+                    <div class="text-xs text-text-500">$${price >= 1 ? price.toLocaleString() : price.toFixed(6)}</div>
+                </div>
+                <div class="text-right">
+                    <div class="text-sm ${chCls}">${change >= 0 ? '+' : ''}${change.toFixed(2)}%</div>
+                </div>
+            </div>`;
+    }).join('');
+    list.innerHTML = items;
+}
+
+function filterCoins(query) {
+    if (!query) { renderCoinList(labCoinData); return; }
+    const q = query.toLowerCase();
+    renderCoinList(labCoinData.filter(c =>
+        (c.symbol || '').toLowerCase().includes(q) || (c.id || '').toLowerCase().includes(q)
+    ));
+}
+
+function selectCoin(coinId) {
+    labSelectedCoin = coinId;
+    const coin = labCoinData.find(c => c.id === coinId);
+    if (!coin) return;
+
+    const sym = (coin.symbol || coin.id).toUpperCase();
+    const price = coin.current_price;
+    const change = coin.price_change_percentage_24h || 0;
+    const chCls = change >= 0 ? 'text-green-400' : 'text-red-400';
+
+    document.getElementById('lab-detail-price').textContent = '$' + (price >= 1 ? price.toLocaleString() : price.toFixed(6));
+    const ch1 = document.getElementById('lab-detail-change');
+    ch1.textContent = (change >= 0 ? '+' : '') + change.toFixed(2) + '%';
+    ch1.className = chCls;
+    document.getElementById('lab-detail-high').textContent = '$' + (coin.high_24h >= 1 ? coin.high_24h.toLocaleString() : coin.high_24h.toFixed(6));
+    document.getElementById('lab-detail-low').textContent  = '$' + (coin.low_24h  >= 1 ? coin.low_24h.toLocaleString()  : coin.low_24h.toFixed(6));
+    document.getElementById('lab-detail-volume').textContent = '$' + (coin.total_volume / 1e9).toFixed(2) + 'B';
+
+    const vol = coin.total_volume;
+    const volLvl = vol > 1e9 ? 'Высокий' : vol > 1e8 ? 'Средний' : 'Низкий';
+    document.getElementById('lab-ai-volume').textContent = volLvl;
+
+    let trend = 'Боковик';
+    if (change > 3) trend = 'Восходящий';
+    else if (change < -3) trend = 'Нисходящий';
+    document.getElementById('lab-ai-trend').textContent = trend;
+
+    const interest = coin.market_cap > 10e9 ? 'Растёт' : coin.market_cap > 1e9 ? 'Стабильный' : 'Падает';
+    document.getElementById('lab-ai-interest').textContent = interest;
+
+    let signal = 'HOLD', confidence = '50%', rec = 'Рекомендуется наблюдение';
+    if (change > 5 && vol > 1e9) { signal = 'BUY'; confidence = '78%'; rec = 'Сильный восходящий тренд с высоким объёмом'; }
+    else if (change < -5 && vol > 1e9) { signal = 'SELL'; confidence = '72%'; rec = 'Сильный нисходящий тренд - фиксируем убытки'; }
+    else if (change > 2 && vol > 5e8) { signal = 'BUY'; confidence = '65%'; rec = 'Умеренный восходящий импульс'; }
+    else if (change < -2 && vol > 5e8) { signal = 'SELL'; confidence = '62%'; rec = 'Умеренный нисходящий импульс'; }
+    else if (Math.abs(change) < 1) { signal = 'WAIT'; confidence = '55%'; rec = 'Низкая волатильность, ожидаем подтверждения'; }
+
+    document.getElementById('lab-ai-signal').textContent = signal;
+    document.getElementById('lab-ai-signal').className = 'text-xl font-bold ' + (signal === 'BUY' ? 'text-green-400' : signal === 'SELL' ? 'text-red-400' : signal === 'WAIT' ? 'text-yellow-400' : 'text-text-500');
+    document.getElementById('lab-ai-confidence').textContent = confidence;
+    document.getElementById('lab-ai-recommendation').textContent = rec;
+
+    updateDashboardChart(sym, coin);
+}
+
+function updateDashboardChart(sym, coin) {
+    const containerId = 'lab-tvw_' + Date.now();
+    const container = document.getElementById('lab-tradingview-widget');
+    container.innerHTML = '<div id="' + containerId + '" class="h-full w-full"></div>';
+
+    const tvSymbol = (sym || '').endsWith('USDT') ? sym : (sym + 'USDT');
+    try {
+        if (window.TradingView && window.TradingView.widget) {
+            labDashboardWidget = new window.TradingView.widget({
+                autosize: true,
+                symbol: 'BINANCE:' + tvSymbol,
+                interval: '60',
+                timezone: 'Etc/UTC',
+                theme: 'dark',
+                style: '1',
+                locale: 'ru',
+                toolbar_bg: '#0F0F11',
+                enable_publishing: false,
+                allow_symbol_change: true,
+                container_id: containerId,
+                backgroundColor: '#0F0F11',
+                gridColor: 'rgba(255,255,255,0.05)',
+                studies: ['Volume@tv-basicstudies']
+            });
+        } else {
+            container.innerHTML = '<div class="h-full flex items-center justify-center text-text-500 text-sm">TradingView загружается...</div>';
+            const s = document.createElement('script');
+            s.src = 'https://s3.tradingview.com/tv.js';
+            s.onload = () => selectCoin(labSelectedCoin);
+            document.head.appendChild(s);
+        }
+    } catch (e) {
+        console.error('TradingView error:', e);
+    }
+}
+
+/* =============== Progress (real data from engines) =============== */
+function renderProgress() {
+    const t = (typeof ScenarioProgressTracker !== 'undefined')
+        ? (ScenarioProgressTracker.load().attempts || [])
+        : [];
+
+    const total = t.length;
+    const completed = t.filter(x => x.lastResult === 'win' || x.lastResult === 'loss' || x.lastResult === 'tp' || x.lastResult === 'sl').length;
+    const wins = t.filter(x => x.lastResult === 'win' || x.lastResult === 'tp').length;
+    const winrate = completed ? Math.round((wins / completed) * 100) : 0;
+    const correct = t.filter(x => x.lastUserDecision === x.correctDecision).length;
+    const accuracy = total ? Math.round((correct / total) * 100) : 0;
+
+    document.getElementById('lab-stat-total').textContent = total;
+    document.getElementById('lab-stat-completed').textContent = completed;
+    document.getElementById('lab-stat-winrate').textContent = winrate + '%';
+    document.getElementById('lab-stat-score').textContent = accuracy + '%';
+
+    // По сценариям
+    const breakdown = document.getElementById('lab-modules-breakdown');
+    if (!t.length) {
+        breakdown.innerHTML = '<div class="text-text-500 text-sm">Нет данных. Пройдите сценарии в Modules.</div>';
+    } else {
+        breakdown.innerHTML = t.slice(0, 8).map(d => {
+            const isWin = d.lastResult === 'win' || d.lastResult === 'tp';
+            const isLoss = d.lastResult === 'loss' || d.lastResult === 'sl';
+            const decision = d.lastUserDecision || '—';
+            const correctDec = d.correctDecision || '—';
+            const color = isWin ? 'text-green-400' : isLoss ? 'text-red-400' : 'text-text-500';
+            return `
+                <div class="p-3 bg-bg-900/50 rounded-lg">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-white text-sm font-medium">${escapeHtml(d.scenarioId || 'Сценарий')}</span>
+                        <span class="text-xs ${color}">${(d.lastResult || '—').toUpperCase()}</span>
+                    </div>
+                    <div class="text-xs text-text-500">Ваш выбор: <span class="text-white">${escapeHtml(decision)}</span> • Верно: <span class="text-accent-500">${escapeHtml(correctDec)}</span></div>
+                    <div class="text-xs text-text-500">Время: ${d.lastTime || 0}с • Попыток: ${d.attemptsCount || 1}</div>
+                </div>`;
+        }).join('');
+    }
+
+    // Последние
+    const recent = document.getElementById('lab-recent-decisions');
+    if (!t.length) {
+        recent.innerHTML = '<div class="text-text-500 text-sm">Нет данных. Пройдите сценарии в Modules.</div>';
+    } else {
+        recent.innerHTML = t.slice().reverse().slice(0, 20).map(d => {
+            const isWin = d.lastResult === 'win' || d.lastResult === 'tp';
+            const isLoss = d.lastResult === 'loss' || d.lastResult === 'sl';
+            const resCls = isWin ? 'text-green-400' : isLoss ? 'text-red-400' : 'text-yellow-400';
+            return `
+                <div class="p-3 bg-bg-900/50 rounded-lg flex items-center justify-between">
+                    <div class="text-sm">
+                        <div class="text-white">${escapeHtml(d.scenarioId || 'Сценарий')}</div>
+                        <div class="text-xs text-text-500">${d.lastAttemptAt ? new Date(d.lastAttemptAt).toLocaleString('ru-RU') : '—'}</div>
+                    </div>
+                    <div class="text-right">
+                        <div class="text-sm font-bold ${resCls}">${(d.lastResult || '—').toUpperCase()}</div>
+                        <div class="text-xs text-text-500">${d.lastTime || 0}с • ${d.attemptsCount || 1}×</div>
+                    </div>
+                </div>`;
+        }).join('');
+    }
+}
+
+function resetProgressData() {
+    if (!confirm('Сбросить весь прогресс? Это действие нельзя отменить.')) return;
+    if (typeof ScenarioProgressTracker !== 'undefined') ScenarioProgressTracker.reset();
+    renderProgress();
+}
+
+/* =============== Init =============== */
+document.addEventListener('DOMContentLoaded', function() {
+    if (window.location.hash === '#terminal' || window.location.hash === '#lab/terminal') {
+        switchLabTab('terminal');
+    } else {
+        switchLabTab('modules');
+        // Сразу открыть Module 1 (Trading Terminal с графиками) при загрузке страницы
+        if (typeof startModuleScenario === 'function') {
+            setTimeout(function() { startModuleScenario(0); }, 50);
+        }
+    }
+});
+</script>
+
+<style>
+#minimax-floating-ball {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  padding: 10px 12px;
+  background: #222222;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  color: #F8F8F8;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  z-index: 9999;
+  transition: all 0.3s ease;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+#minimax-floating-ball:hover {
+  transform: translateY(-2px);
+  background: #383838;
+}
+.minimax-ball-content {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.minimax-logo-wave {
+  width: 20px;
+  height: 20px;
+  background-image: url("data:image/svg+xml,%3Csvg%20preserveAspectRatio%3D%27none%27%20width%3D%27100%25%27%20height%3D%27100%25%27%20overflow%3D%27visible%27%20style%3D%27display%3A%20block%3B%27%20viewBox%3D%270%200%20170.136%20138.225%27%20fill%3D%27none%27%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%3E%3Cg%20id%3D%27Frame%202116748449%27%3E%3Cpath%20id%3D%27Subtract%27%20d%3D%27M170%20101.783C170%20105.144%20168.49%20108.327%20165.886%20110.453L134.963%20135.702C132.964%20137.334%20130.463%20138.225%20127.883%20138.225H10.4938C4.69824%20138.225%200%20133.527%200%20127.732V39.2289C0%2035.8597%201.51758%2032.6698%204.13162%2030.5442L38.5402%202.56547C40.536%200.942662%2043.0298%200.0567377%2045.602%200.0567377H159.506C165.302%200.0567377%20170%204.75498%20170%2010.5506V101.783Z%27%20fill%3D%27black%27%20style%3D%27fill%3Ablack%3Bfill-opacity%3A1%3B%27/%3E%3Cpath%20id%3D%27Subtract_2%27%20d%3D%27M149.011%2094.4632C149.011%2096.1471%20148.253%2097.7415%20146.946%2098.8043L125.893%20115.936C124.895%20116.748%20123.648%20117.191%20122.361%20117.191H24.6479C22.716%20117.191%2021.15%20115.625%2021.15%20113.693V46.1166C21.15%2044.4267%2021.9135%2042.8274%2023.2274%2041.7648L47.367%2022.2437C48.3638%2021.4376%2049.607%2020.9982%2050.8888%2020.9988L145.514%2021.0427C147.446%2021.0436%20149.011%2022.6094%20149.011%2024.5406V94.4632Z%27%20fill%3D%27white%27%20style%3D%27fill%3Awhite%3Bfill-opacity%3A1%3B%27/%3E%3Cpath%20id%3D%27Rectangle%20111142564%27%20d%3D%27M42.111%2080.8025C42.111%2077.7115%2044.6167%2075.2057%2047.7077%2075.2057H60.9999C64.0908%2075.2057%2066.5966%2077.7115%2066.5966%2080.8025V121.029H42.111V80.8025Z%27%20fill%3D%27black%27%20style%3D%27fill%3Ablack%3Bfill-opacity%3A1%3B%27/%3E%3Cpath%20id%3D%27Rectangle%20111142567%27%20d%3D%27M79.1894%2080.8025C79.1894%2077.7115%2081.6952%2075.2057%2084.7861%2075.2057H98.0783C101.169%2075.2057%20103.675%2077.7115%20103.675%2080.8025V121.029H79.1894V80.8025Z%27%20fill%3D%27black%27%20style%3D%27fill%3Ablack%3Bfill-opacity%3A1%3B%27/%3E%3C/g%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 14px 11px;
+  background-color: #8FD1FF;
+  border-radius: 4px;
+}
+
+.minimax-ball-text {
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.minimax-close-icon {
+  margin-left: 8px;
+  font-size: 16px;
+  width: 18px;
+  height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  cursor: pointer;
+  opacity: 0.7;
+  transition: opacity 0.2s ease;
+}
+
+.minimax-close-icon:hover {
+  opacity: 1;
+}
+</style>
+<div id="minimax-floating-ball">
+  <div class="minimax-ball-content">
+    <div class="minimax-logo-wave"></div>
+    <span class="minimax-ball-text">Created by MiniMax Agent</span>
+  </div>
+  <div class="minimax-close-icon">×</div>
+</div>
+<script>
+// Initialize floating ball functionality
+function initFloatingBall() {
+  const ball = document.getElementById('minimax-floating-ball');
+  if (!ball) return;
+
+  // Initial animation
+  ball.style.opacity = '0';
+  ball.style.transform = 'translateY(20px)';
+
+  setTimeout(() => {
+    ball.style.opacity = '1';
+    ball.style.transform = 'translateY(0)';
+  }, 500);
+
+  // Handle logo click
+  const ballContent = ball.querySelector('.minimax-ball-content');
+  ballContent.addEventListener('click', function (e) {
+    e.stopPropagation();
+    window.open('https://agent.minimax.io/', '_blank');
+    ball.style.transform = 'scale(0.95)';
+    setTimeout(() => {
+      ball.style.transform = 'scale(1)';
+    }, 100);
+  });
+
+  // Handle close button click
+  const closeIcon = ball.querySelector('.minimax-close-icon');
+  closeIcon.addEventListener('click', function (e) {
+    e.stopPropagation();
+    ball.style.opacity = '0';
+    ball.style.transform = 'translateY(20px)';
+
+    setTimeout(() => {
+      ball.style.display = 'none';
+    }, 300);
+  });
+}
+
+// Initialize when DOM is ready
+document.addEventListener('DOMContentLoaded', initFloatingBall); 
+</script>
+</body>
+</html>

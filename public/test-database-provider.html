@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>DatabaseProvider Test</title>
+    <style>
+        body { font-family: monospace; padding: 20px; background: #1a1a1a; color: #0f0; }
+        #log { white-space: pre-wrap; font-size: 14px; line-height: 1.4; }
+        .err { color: #f55; }
+        .warn { color: #fa5; }
+    </style>
+</head>
+<body>
+<h1>DatabaseProvider.js Loading Test</h1>
+<div id="log"></div>
+
+<script>
+const logEl = document.getElementById('log');
+const start = Date.now();
+const log = (msg, cls='') => {
+    const t = '+' + (Date.now() - start) + 'ms';
+    const line = document.createElement('div');
+    line.className = cls;
+    line.textContent = `[${t}] ${msg}`;
+    logEl.appendChild(line);
+    console.log(`[DBTest] ${msg}`);
+};
+
+// Test 1: Load DatabaseProvider.js via document.createElement (same as bundle)
+log('===== TEST 1: appendChild to head (with crossOrigin=anonymous) =====');
+{
+    const s = document.createElement('script');
+    s.src = '/js/intelligence/data/providers/DatabaseProvider.js';
+    s.async = false;
+    s.crossOrigin = 'anonymous';
+    let resolved = false;
+    const onFinish = (status) => {
+        if (resolved) return;
+        resolved = true;
+        log(`Test 1 result: ${status}`, status === 'Loaded' ? '' : 'err');
+        runTest2();
+    };
+    s.onload = () => onFinish('Loaded');
+    s.onerror = () => onFinish('Failed');
+    setTimeout(() => onFinish('Timeout'), 10000);
+    document.head.appendChild(s);
+    log('Test 1: script tag appended');
+}
+
+function runTest2() {
+    log('===== TEST 2: appendChild to head (NO crossOrigin) =====');
+    {
+        const s = document.createElement('script');
+        s.src = '/js/intelligence/data/providers/DatabaseProvider.js';
+        // No crossOrigin, no async
+        let resolved = false;
+        const onFinish = (status) => {
+            if (resolved) return;
+            resolved = true;
+            log(`Test 2 result: ${status}`, status === 'Loaded' ? '' : 'err');
+            runTest3();
+        };
+        s.onload = () => onFinish('Loaded');
+        s.onerror = () => onFinish('Failed');
+        setTimeout(() => onFinish('Timeout'), 10000);
+        document.head.appendChild(s);
+        log('Test 2: script tag appended');
+    }
+}
+
+function runTest3() {
+    log('===== TEST 3: Load all 6 first scripts sequentially =====');
+    const SCRIPTS = [
+        '/js/intelligence/config/data-provider.config.js',
+        '/js/intelligence/data/IDataProvider.js',
+        '/js/intelligence/data/IMarketDataProvider.js',
+        '/js/intelligence/data/providers/LocalJsonDataProvider.js',
+        '/js/intelligence/data/providers/ApiDataProvider.js',
+        '/js/intelligence/data/providers/DatabaseProvider.js',
+    ];
+    let i = 0;
+    const next = () => {
+        if (i >= SCRIPTS.length) {
+            log('Test 3: all done', 'warn');
+            return;
+        }
+        const url = SCRIPTS[i++];
+        const s = document.createElement('script');
+        s.src = url;
+        s.async = false;
+        s.crossOrigin = 'anonymous';
+        let resolved = false;
+        const onFinish = (status) => {
+            if (resolved) return;
+            resolved = true;
+            const name = url.split('/').pop();
+            log(`Test 3 [${i}/${SCRIPTS.length}] ${name}: ${status}`, status === 'Loaded' ? '' : 'err');
+            next();
+        };
+        s.onload = () => onFinish('Loaded');
+        s.onerror = () => onFinish('Failed');
+        setTimeout(() => onFinish('Timeout'), 10000);
+        document.head.appendChild(s);
+    };
+    next();
+}
+</script>
+</body>
+</html>

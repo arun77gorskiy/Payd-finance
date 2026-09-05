@@ -228,9 +228,10 @@
 **/.nuxt
 **/dist
 
-# Gatsby files
+# Gatsby files (Gatsby public output only — does NOT exclude the project's public/ directory)
 **/.cache/
-**/public
+**/.gatsby-cache/
+**/public/gatsby-*
 
 # Vue.js
 **/dist/
@@ -908,3 +909,160 @@
 # This allows outer git to track inner repo files while preserving inner git history
 **/.git_backup_by_agent
 **/.git_backup_by_agent/
+
+
+# ==============================================================================
+# PAYD INTELLIGENCE - PROJECT SPECIFIC EXCLUDES
+# ==============================================================================
+# Browser automation artifacts
+/.browser_screenshots/
+/browser/
+
+# Watermarks and visual overlays
+/.watermark/
+
+# Backups
+/.backups/
+**/.backups/
+
+# Memory and agent state
+/.memory/
+/.memories/
+
+# Hero screenshots / debug PNGs (large)
+/hero_screenshots/
+/*.png
+/*/*.png
+/*/*/*.png
+/**/hero_*.png
+/**/screenshot_*.png
+/**/deployed_*.png
+/**/payd_intel_*.png
+/**/intelligence-v2-*.png
+/**/trading-lab-*.png
+/**/hero_v2.png
+/**/input_image.png
+/**/input_thumb.png
+/**/preview_*.png
+/**/final_*.png
+/**/visual_*.png
+/**/test_*.png
+/**/full_test_*.png
+/**/revert_test_*.png
+/**/ec_v2_*.png
+/**/state2_view.png
+/**/screenshot*.jpeg
+/**/analysis_hero.json
+/**/hero_*.json
+/**/page.html
+/**/page_source.html
+/**/tmp_lab_*.html
+/**/intelligence-v2-source.html
+/**/tmp_code_*.js
+
+# Large JSON history files (regeneratable)
+/.real_historical_*.json
+/.browser_screenshots/
+
+# Working data cache
+/code/__pycache__/
+/code/*.pyc
+/code/.progress.json
+/code/_progress.json
+/code/_check_enrich.js
+/code/_verify.js
+/code/capture_hero*.py
+/code/debug*.py
+/code/diag*.js
+/code/check_*.js
+/code/find_*.js
+/code/final_*.js
+/code/final_*.py
+/code/get_*.js
+/code/inspect_*.js
+/code/simple*.js
+/code/take_*.py
+/code/trace_*.js
+/code/test_*.js
+/code/list_*.js
+/code/extract_*.js
+/code/audit_*.py
+/code/verify_*.py
+/code/verify_*.js
+/code/run_*.js
+/code/run_*.py
+/code/screenshot_*.js
+/code/take_*.js
+/code/test_*.py
+/code/execute.js
+/code/execute.py
+/code/diagnose_apis.js
+/code/cdp_direct.js
+/code/orchestrator*.sh
+/code/capture_hero/
+/code/hero_screenshots/
+/code/test_hero/
+/code/.backups/
+
+# Local test files
+/test_*.js
+/test_*.py
+/test_*.ts
+/check_*.js
+/diag*.js
+/inspect_*.js
+/trace_*.js
+/debug*.py
+/debug*.js
+/get_*.js
+/find_*.js
+/simple*.js
+/final_*.js
+/final_*.py
+/list_*.js
+/screenshot_*.js
+/take_*.py
+/run_*.js
+/run_*.py
+/page.html
+/page_source.html
+/tmp_lab_*.html
+/intelligence-v2-source.html
+/tmp_code_*.js
+/visual_*.js
+/url_test.js
+/execute.js
+/execute.py
+/count_scripts.js
+/audit_project_identifiers.py
+/*.png
+/screenshot*.jpeg
+/ec_v2_*.png
+/state2_view.png
+/visual_*.png
+/test_*.png
+/far_left*.png
+/preview_*.png
+/full_test_*.png
+/revert_test_*.png
+/hero_*.png
+/deployed_*.png
+/payd_intel_*.png
+/intelligence-v2-*.png
+/trading-lab-*.png
+/input_image.png
+/input_thumb.png
+/final_*.png
+/chart_*.png
+/analysis_hero.json
+/hero_*.json
+
+# Vite/React build
+/dist/
+/build/
+
+# Backup / temp
+/*.bak
+/*.backup
+/*.tmp
+/*.zip
