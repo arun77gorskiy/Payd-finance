@@ -3,126 +3,70 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Аудит текущей архитектуры research/enrichment и поиск источников данных для Helium",
+        "content": "STEP 1: Создать резервную копию текущего рабочего пространства",
         "details": "",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Resolve and verify Helium canonical identity (CoinGecko, CMC, DefiLlama, GitHub, X, official sources)",
+        "content": "STEP 2: Извлечь Payd-finance-fixed.zip в /workspace",
         "details": "",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Создать DePIN-специфичный entity classifier с sector strategy",
+        "content": "STEP 3: Проверить наличие и содержимое критических файлов Intelligence V2",
         "details": "",
         "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Построить Helium market data provider (CoinGecko primary + CMC fallback)",
+        "content": "STEP 4: Сохранить валидные исторические данные (не превращать null в 0)",
         "details": "",
         "status": "completed",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Построить DefiLlama Helium protocol fetcher (fees, revenue, holders, etc.)",
+        "content": "STEP 5: Установить зависимости и запустить сборку",
         "details": "",
         "status": "completed",
-        "priority": "high"
+        "priority": "medium"
       },
       "6": {
         "id": "6",
-        "content": "Построить GitHub deep enrichment (multiple Helium orgs)",
+        "content": "STEP 6: Развернуть исправленный проект на существующем сайте",
         "details": "",
         "status": "completed",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "Создать Helium tokenomics data (supply, emissions, burn, data credits)",
+        "content": "STEP 7: Валидация живого сайта (BTC, HNT, RENDER, AKT)",
         "details": "",
         "status": "completed",
         "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "Создать Helium funding/investors data (structurally, not text)",
+        "content": "STEP 8: Проверка наборов данных и статистики",
         "details": "",
         "status": "completed",
         "priority": "high"
       },
       "9": {
         "id": "9",
-        "content": "Создать DePIN sector scoring (Network Adoption, Network Economics, Developer, Tokenomics, etc.)",
+        "content": "STEP 9: Проверка кэша версий ресурсов на production",
         "details": "",
         "status": "completed",
         "priority": "high"
       },
       "10": {
         "id": "10",
-        "content": "Создать Helium network metrics (hotspots, IoT, mobile, data credits, burn)",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "11": {
-        "id": "11",
-        "content": "Создать community/partnerships/team/roadmap/competitors (verified data only)",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "12": {
-        "id": "12",
-        "content": "Сгенерировать Investment Thesis (Base/Bull/Bear/Catalysts/Risks)",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "13": {
-        "id": "13",
-        "content": "Создать PAYD Quality/Conviction/Alpha с раздельными метриками",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "14": {
-        "id": "14",
-        "content": "Создать Risk Score breakdown (не default 85)",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "15": {
-        "id": "15",
-        "content": "Сгенерировать полный Helium enriched JSON profile и сохранить в public/data/intelligence/",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "16": {
-        "id": "16",
-        "content": "Сгенерировать Helium Data Audit (per metric: value/provider/status/freshness/confidence)",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "17": {
-        "id": "17",
-        "content": "Прогнать Helium Acceptance Test (86/86 passed)",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "18": {
-        "id": "18",
-        "content": "Обобщить архитектуру: создать sector strategies (L1, L2, DeFi, DePIN, RWA, AI, Gaming, DeSci)",
+        "content": "STEP 10: Сформировать финальный отчет и остановиться",
         "details": "",
         "status": "completed",
         "priority": "high"

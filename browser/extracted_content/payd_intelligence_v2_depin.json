@@ -1,0 +1,79 @@
+📄 Extracted from page: PAYD Intelligence V2 — Autonomous Discovery
+URL: https://gx1mk2t21jb2.space.mcode.io/intelligence-v2.html
+
+Extracted content:
+```json
+{
+    "title": "PAYD Intelligence V2 — Autonomous Discovery",
+    "url": "https://gx1mk2t21jb2.space.mcode.io/intelligence-v2.html",
+    "summary": "PAYD Intelligence V2 is an autonomous crypto discovery and intelligence platform powered by a LocalJsonDataProvider. It tracks 349 projects across 9 sectors (ai, defi, depin, desci, gaming, infrastructure, layer1, layer2, rwa), with 34 DePIN projects currently tracked (all marked as Core tier). The page displays project cards organized by sector with names, tickers, descriptions, and quality/discovered metadata. For the DePIN sector, 34 projects are listed including storage networks (Arweave, Filecoin-related, Siacoin, Storj, Swarm, Crust, CESS), wireless/connectivity networks (Helium, IoTeX, Pollen Mobile, Wayru, World Mobile Token, MXC, Mysterium, Nodle, Sentinel, Deeper Network), compute networks (Akash, Render, Aleph, Ankr, Flux, Livepeer, Phala, Spheron), maps/IoT data (Hivemapper, DIMO, Geodnet, Streamr, Nubila, WeatherXM, ThingsIX), and other infrastructure (Grass, Iagon, PowerPod, Peaq).",
+    "key_points": [
+        "DePIN sector contains 34 tracked projects, all marked as ⭐ Core tier",
+        "HNT (Helium) is present in DePIN section - described as 'Decentralized wireless network with hotspots providing LoRaWAN and 5G coverage, rewarded with HNT and MOBILE tokens'",
+        "RENDER is present in DePIN section - described as 'Decentralized GPU compute network that connects artists and developers needing rendering and AI inference with idle GPU providers worldwide'",
+        "AKT (Akash) is present in DePIN section - listed as $AKASH-NETWORK described as 'Open-source supercloud that lets users rent unused datacenter capacity using reverse auction and a Kubernetes-native deployment stack'",
+        "No Market Cap, FDV, or 24h Volume values are displayed for any projects including HNT, RENDER, and AKT - these fields show '—' (em dash, indicating Unavailable/N/A)",
+        "All projects show Quality: — and Discovered: — (data not populated)",
+        "The page uses LocalJsonDataProvider (database-agnostic), with 7 repositories and a DiscoveryService",
+        "Automated intelligence updates run 3 times a week (Mon/Wed/Fri at 09:00 UTC) with 6-step pipeline"
+    ],
+    "relevant_links": [
+        "https://gx1mk2t21jb2.space.mcode.io/index.html"
+    ],
+    "depin_projects_listed": [
+        "AKASH-NETWORK (AKT)",
+        "ALEPH-IM",
+        "ANKR-NETWORK",
+        "ARWEAVE",
+        "SWARM",
+        "CESS",
+        "CRUST-NETWORK",
+        "STREAMR",
+        "DIMO",
+        "DEEPER-NETWORK",
+        "SENTINEL",
+        "FLUX",
+        "GEODNET",
+        "GRASS",
+        "HELIUM (HNT)",
+        "HIVEMAPPER",
+        "IAGON",
+        "IOTEX",
+        "LIVEPEER",
+        "MXC",
+        "MYSTERIUM",
+        "NODLE-NETWORK",
+        "NUBILA",
+        "POLLEN-MOBILE",
+        "PEAQ",
+        "PHALA",
+        "POWERPOD",
+        "RENDER",
+        "SIACOIN",
+        "STORJ",
+        "THINGSIX",
+        "WAYRU",
+        "WORLD-MOBILE-TOKEN",
+        "WEATHERXM"
+    ],
+    "targeted_projects_data": {
+        "HNT (Helium)": {
+            "Market Cap": "Unavailable (shown as —)",
+            "FDV": "Unavailable (shown as —)",
+            "24h Volume": "Unavailable (shown as —)"
+        },
+        "RENDER": {
+            "Market Cap": "Unavailable (shown as —)",
+            "FDV": "Unavailable (shown as —)",
+            "24h Volume": "Unavailable (shown as —)"
+        },
+        "AKT (Akash)": {
+            "Market Cap": "Unavailable (shown as —)",
+            "FDV": "Unavailable (shown as —)",
+            "24h Volume": "Unavailable (shown as —)",
+            "Note": "Listed as $AKASH-NETWORK, not as 'akash' (which is in AI sector)"
+        }
+    },
+    "file_name": "payd_intelligence_v2_depin.json"
+}
+```
