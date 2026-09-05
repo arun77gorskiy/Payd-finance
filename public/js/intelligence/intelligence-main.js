@@ -179,9 +179,9 @@
                     <h1>PAYD Intelligence</h1>
                     <p class="intel-subtitle">Institutional Crypto Research Platform</p>
                     <p class="intel-header-desc">
-                        Bloomberg-grade market intelligence updated automatically twice a week.
-                        Every metric, score, and insight below is pre-computed by our server-side AI agent
-                        — never generated on page load. The same data serves all users.
+                        Market data refreshes live from verified providers when Intelligence loads.
+                        Deeper research metrics use the latest validated PAYD snapshot and scheduled enrichment runs.
+                        Missing provider data is shown as Unavailable, never silently converted to zero.
                     </p>
                 </div>
 

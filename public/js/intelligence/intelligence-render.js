@@ -375,8 +375,8 @@ const INTEL_RENDER = {
         const pctCell = (v) => (v === null || v === undefined || v === '' || Number.isNaN(v)) ? 'Unavailable' : (Number(v).toFixed(2) + '%');
         const dateCell = (v) => U.fmtDate(v);
         const dataCoverage = (typeof p.data_coverage_pct === 'number') ? p.data_coverage_pct : null;
-        const showRating = dataCoverage === null || dataCoverage >= 50;
-        const ratingText = showRating ? (p.investment_rating || 'Hold') : 'Insufficient Data';
+        const showRating = dataCoverage !== null && dataCoverage >= 50 && !!p.investment_rating;
+        const ratingText = showRating ? p.investment_rating : 'Insufficient Data';
         const ratingCls  = showRating ? U.ratingClass(p.investment_rating) : 'intel-rating-hold';
 
         return `
@@ -424,14 +424,14 @@ const INTEL_RENDER = {
         const rows = projects.map(p => [
             p.ticker, p.name, p.subsector || '', p.ai_score, p.risk_score, p.risk_label,
             p.developer_activity, p.github_activity,
-            (p.metrics && p.metrics.monthly_active_users) || 0,
-            (p.metrics && p.metrics.monthly_revenue_usd) || 0,
-            (p.metrics && p.metrics.tvl_usd) || 0,
-            (p.metrics && p.metrics.nodes_count) || 0,
-            (p.metrics && p.metrics.market_cap_usd) || 0,
-            (p.metrics && p.metrics.fdv_usd) || 0,
+            U.projField(p, 'metrics', 'monthly_active_users') ?? '',
+            U.projField(p, 'metrics', 'monthly_revenue_usd') ?? '',
+            U.projField(p, 'metrics', 'tvl_usd') ?? '',
+            U.projField(p, 'metrics', 'nodes_count') ?? '',
+            U.projField(p, 'metrics', 'market_cap_usd') ?? '',
+            U.projField(p, 'metrics', 'fdv_usd') ?? '',
             (p.metrics && p.metrics.next_unlock) || '',
-            (p.metrics && p.metrics.next_unlock_pct) || 0,
+            U.projField(p, 'metrics', 'next_unlock_pct') ?? '',
             p.investment_rating,
         ]);
         const csv = [cols, ...rows].map(r => r.map(c => `"${String(c).replace(/"/g, '""')}"`).join(',')).join('\n');
@@ -1414,8 +1414,8 @@ const INTEL_RENDER = {
                                     <td class="col-ticker"><span class="intel-row-ticker">${U.esc(p.ticker)}</span></td>
                                     <td class="cell-num"><strong style="color:var(--intel-gold);">${U.fmtScore(p.ai_score)}</strong></td>
                                     <td class="cell-num"><span class="intel-risk ${U.riskClass(p.risk_label)}">${U.fmtRisk(p.risk_score)}</span></td>
-                                    <td class="cell-num cell-mono">${U.fmtUSD((p.metrics && p.metrics.market_cap_usd) || 0, true)}</td>
-                                    <td class="cell-num cell-mono">${U.fmtUSD((p.metrics && p.metrics.tvl_usd) || 0, true)}</td>
+                                    <td class="cell-num cell-mono">${U.fmtUSD(U.projField(p, 'metrics', 'market_cap_usd') ?? '', true)}</td>
+                                    <td class="cell-num cell-mono">${U.fmtUSD(U.projField(p, 'metrics', 'tvl_usd') ?? '', true)}</td>
                                     <td><span class="intel-rating-pill ${U.ratingClass(p.investment_rating)}">${U.esc(U.fmtLabel(p.investment_rating))}</span></td>
                                     <td class="col-action">
                                         <button class="intel-btn intel-btn-primary intel-btn-open-research" data-ticker="${U.esc(p.ticker)}" type="button">Open Research</button>

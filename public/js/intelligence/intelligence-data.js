@@ -82,8 +82,8 @@
         liquidity_usd:       { v2Path: null, default: null,  group: 'market' },
 
         // === Activity (V2.1: из enriched.github) ===
-        developer_activity:  { v2Path: 'enriched.github.commits_30d',       default: 0,    group: 'activity' },
-        github_activity:     { v2Path: 'enriched.github.commits_30d',       default: 0,    group: 'activity' },
+        developer_activity:  { v2Path: 'enriched.github.commits_30d',       default: null, group: 'activity' },
+        github_activity:     { v2Path: 'enriched.github.commits_30d',       default: null, group: 'activity' },
 
         // === Scores (V2.1: приоритет у enriched.ai) ===
         payd_score:          { v2Path: 'enriched.ai.payd_score',           default: null, group: 'scores' },
@@ -245,6 +245,185 @@
         return arr;
     }
 
+    /* =================================================================
+       LIVE MARKET OVERLAY (CoinGecko, client-side)
+       -----------------------------------------------------------------
+       projects_enriched.json remains the durable snapshot for deep research,
+       but market data is refreshed at page load in two batched CoinGecko calls.
+       This avoids requiring a server-side scheduler just to keep price/market
+       fields current. If CoinGecko is unavailable/rate-limited, the last valid
+       snapshot remains untouched.
+       ================================================================= */
+    const LIVE_MARKET_CACHE_KEY = 'payd_live_market_v1';
+    const LIVE_MARKET_TTL_MS = 5 * 60 * 1000;
+    const COINGECKO_LIST_CACHE_KEY = 'payd_cg_id_registry_v1';
+    const COINGECKO_LIST_TTL_MS = 7 * 24 * 60 * 60 * 1000;
+
+    function _readTimedCache(key, ttlMs) {
+        try {
+            const raw = localStorage.getItem(key);
+            if (!raw) return null;
+            const parsed = JSON.parse(raw);
+            if (!parsed || !parsed.savedAt || Date.now() - parsed.savedAt > ttlMs) return null;
+            return parsed.data || null;
+        } catch (_) { return null; }
+    }
+
+    function _writeTimedCache(key, data) {
+        try { localStorage.setItem(key, JSON.stringify({ savedAt: Date.now(), data })); } catch (_) {}
+    }
+
+    function _normalizeCgText(v) {
+        return String(v || '').toLowerCase().replace(/\([^)]*\)/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+    }
+
+    async function resolveMissingCoinGeckoIds(projectsArr) {
+        const missing = projectsArr.filter(p => p && !p.coingeckoId && p.symbol);
+        if (!missing.length) return { resolved: 0, unresolved: 0, source: 'not-needed' };
+
+        // First apply previously verified runtime resolutions.
+        const cachedRegistry = _readTimedCache(COINGECKO_LIST_CACHE_KEY, COINGECKO_LIST_TTL_MS) || {};
+        let resolved = 0;
+        missing.forEach(p => {
+            if (cachedRegistry[p.id]) {
+                p.coingeckoId = cachedRegistry[p.id];
+                resolved++;
+            }
+        });
+
+        const stillMissing = projectsArr.filter(p => p && !p.coingeckoId && p.symbol);
+        if (!stillMissing.length) return { resolved, unresolved: 0, source: 'cache' };
+
+        try {
+            const controller = new AbortController();
+            const timer = setTimeout(() => controller.abort(), 10000);
+            const res = await fetch('https://api.coingecko.com/api/v3/coins/list?include_platform=false', {
+                cache: 'no-store', signal: controller.signal, headers: { Accept: 'application/json' }
+            });
+            clearTimeout(timer);
+            if (!res.ok) throw new Error(`HTTP ${res.status}`);
+            const coins = await res.json();
+            if (!Array.isArray(coins)) throw new Error('unexpected coins/list response');
+
+            const byId = new Map(coins.map(c => [String(c.id || '').toLowerCase(), c]));
+            const bySymbol = new Map();
+            coins.forEach(c => {
+                const sym = String(c.symbol || '').toLowerCase();
+                if (!bySymbol.has(sym)) bySymbol.set(sym, []);
+                bySymbol.get(sym).push(c);
+            });
+
+            const registry = { ...cachedRegistry };
+            for (const p of stillMissing) {
+                let candidate = byId.get(String(p.id || '').toLowerCase()) || null;
+                if (!candidate) {
+                    const sameSymbol = bySymbol.get(String(p.symbol || '').toLowerCase()) || [];
+                    const targetName = _normalizeCgText(p.name);
+                    const exactName = sameSymbol.filter(c => _normalizeCgText(c.name) === targetName);
+                    if (exactName.length === 1) candidate = exactName[0];
+                    else if (sameSymbol.length === 1) candidate = sameSymbol[0];
+                }
+                if (candidate && candidate.id) {
+                    p.coingeckoId = candidate.id;
+                    registry[p.id] = candidate.id;
+                    resolved++;
+                }
+            }
+            _writeTimedCache(COINGECKO_LIST_CACHE_KEY, registry);
+        } catch (e) {
+            console.warn('[intelligence-data] CoinGecko ID resolver unavailable:', e.message);
+        }
+
+        const unresolved = projectsArr.filter(p => p && !p.coingeckoId && p.symbol).length;
+        console.log(`[intelligence-data] CoinGecko IDs: resolved ${resolved}, unresolved ${unresolved}`);
+        return { resolved, unresolved, source: 'coingecko-list' };
+    }
+
+    function _applyCoinGeckoMarketRecord(project, enrichedMap, cg) {
+        if (!project || !cg) return false;
+        let rec = enrichedMap.get(project.id);
+        if (!rec || typeof rec !== 'object' || Array.isArray(rec)) {
+            rec = { id: project.id, symbol: project.symbol, name: project.name, sector: project.sector };
+            enrichedMap.set(project.id, rec);
+        }
+        rec.market = rec.market && typeof rec.market === 'object' ? rec.market : {};
+        const set = (key, value) => {
+            if (value !== undefined && value !== null && !(typeof value === 'number' && Number.isNaN(value))) {
+                rec.market[key] = value;
+            }
+        };
+        set('price_usd', cg.current_price);
+        set('market_cap_usd', cg.market_cap);
+        set('fdv_usd', cg.fully_diluted_valuation);
+        set('circulating_supply', cg.circulating_supply);
+        set('total_supply', cg.total_supply);
+        set('max_supply', cg.max_supply);
+        set('volume_24h_usd', cg.total_volume);
+        set('change_24h_pct', cg.price_change_percentage_24h_in_currency ?? cg.price_change_percentage_24h);
+        set('change_7d_pct', cg.price_change_percentage_7d_in_currency);
+        set('change_30d_pct', cg.price_change_percentage_30d_in_currency);
+        set('ath', cg.ath);
+        set('ath_change_pct', cg.ath_change_percentage);
+        set('atl', cg.atl);
+        set('atl_change_pct', cg.atl_change_percentage);
+        set('high_24h', cg.high_24h);
+        set('low_24h', cg.low_24h);
+        set('market_cap_rank', cg.market_cap_rank);
+        set('last_updated', cg.last_updated || new Date().toISOString());
+        rec._live_market = {
+            source: 'CoinGecko',
+            source_type: 'client_batch_overlay',
+            retrieved_at: new Date().toISOString(),
+            coingecko_id: project.coingeckoId,
+        };
+        return true;
+    }
+
+    async function refreshLiveMarketData(projectsArr, enrichedMap) {
+        if (!Array.isArray(projectsArr) || projectsArr.length === 0) return { updated: 0, source: 'no-projects' };
+        await resolveMissingCoinGeckoIds(projectsArr);
+
+        const ids = Array.from(new Set(projectsArr.map(p => p.coingeckoId).filter(Boolean)));
+        if (!ids.length) return { updated: 0, source: 'no-ids' };
+
+        const cached = _readTimedCache(LIVE_MARKET_CACHE_KEY, LIVE_MARKET_TTL_MS);
+        let rows = Array.isArray(cached) ? cached : null;
+        let source = rows ? 'cache' : 'network';
+
+        if (!rows) {
+            rows = [];
+            try {
+                for (let i = 0; i < ids.length; i += 200) {
+                    const batch = ids.slice(i, i + 200);
+                    const controller = new AbortController();
+                    const timer = setTimeout(() => controller.abort(), 9000);
+                    const url = 'https://api.coingecko.com/api/v3/coins/markets' +
+                        '?vs_currency=usd&ids=' + encodeURIComponent(batch.join(',')) +
+                        '&order=market_cap_desc&per_page=250&page=1&sparkline=false' +
+                        '&price_change_percentage=24h,7d,30d';
+                    const res = await fetch(url, { cache: 'no-store', signal: controller.signal, headers: { Accept: 'application/json' } });
+                    clearTimeout(timer);
+                    if (!res.ok) throw new Error(`CoinGecko markets HTTP ${res.status}`);
+                    const data = await res.json();
+                    if (Array.isArray(data)) rows.push(...data);
+                }
+                if (rows.length) _writeTimedCache(LIVE_MARKET_CACHE_KEY, rows);
+            } catch (e) {
+                console.warn('[intelligence-data] Live CoinGecko overlay failed; using snapshot:', e.message);
+                return { updated: 0, source: 'snapshot-fallback', error: e.message };
+            }
+        }
+
+        const byId = new Map(rows.map(r => [r.id, r]));
+        let updated = 0;
+        projectsArr.forEach(p => {
+            const cg = byId.get(p.coingeckoId);
+            if (cg && _applyCoinGeckoMarketRecord(p, enrichedMap, cg)) updated++;
+        });
+        console.log(`[intelligence-data] ✓ Live CoinGecko overlay: ${updated}/${projectsArr.length} projects (${source})`);
+        return { updated, source, requested: ids.length, returned: rows.length };
+    }
+
     /**
      * Загружает score_history.json и индексирует его по project_id + engine.
      */
@@ -386,17 +565,25 @@
         }
         const riskLabel = riskScore == null ? null
             : (riskScore < 40 ? 'Low' : (riskScore < 60 ? 'Medium' : 'High'));
-        const ratingScore = aiScore == null ? null : Math.round((aiScore / 20) * 10) / 10;
+        const availableCore = [
+            mapped.market_cap_usd, mapped.fdv_usd, mapped.volume_24h_usd,
+            enriched.github?.commits_30d, enriched.github?.stars,
+            enriched.protocol?.tvl_usd, enriched.liquidity?.volume_24h,
+            enriched.network?.network_revenue, enriched.tokenomics?.circulating_supply
+        ].filter(v => v !== null && v !== undefined).length;
+        const dataCoveragePct = Math.round((availableCore / 9) * 100);
+        const ratingScore = (aiScore == null || dataCoveragePct < 50) ? null : Math.round((aiScore / 20) * 10) / 10;
         const investmentRating = ratingScore == null ? null :
             (ratingScore >= 4.0 ? 'Strong Buy' :
              ratingScore >= 3.5 ? 'Buy' :
              ratingScore >= 2.5 ? 'Hold' : 'Speculative');
 
         // V2.1: developer activity из enriched.github
-        const developerActivity = enriched.github?.commits_30d ||
-            (paydScore && paydScore.breakdown && typeof paydScore.breakdown.dev_activity === 'number')
+        const developerActivity = (enriched.github && typeof enriched.github.commits_30d === 'number')
+            ? enriched.github.commits_30d
+            : (paydScore && paydScore.breakdown && typeof paydScore.breakdown.dev_activity === 'number')
                 ? paydScore.breakdown.dev_activity
-                : 0;
+                : null;
 
         // === V1 sector display names ===
         const sectorV1 = normalizeSector(sectorRaw);
@@ -454,7 +641,7 @@
 
             // === ACTIVITY (V2.1: из enriched.github) ===
             developer_activity: developerActivity,
-            github_activity:    enriched.github?.commits_30d || 0,
+            github_activity:    enriched.github?.commits_30d ?? null,
 
             // === SCORES (4 main engines, V2.1: enriched приоритет) ===
             payd_score:          mapped.payd_score,
@@ -471,6 +658,7 @@
             risk_label:          riskLabel,
             investment_rating:   investmentRating,
             rating_score:        ratingScore,
+            data_coverage_pct:  dataCoveragePct,
 
             // === AI Investment Analysis (V2.1: новые поля из enriched) ===
             ai_opinion:          enrichedOpinion,
@@ -491,7 +679,7 @@
                 monthly_active_users: null,
                 monthly_revenue_usd:  null,
                 tvl_usd:              mapped.tvl_usd,
-                nodes_count:          0,
+                nodes_count:          enriched.network?.active_nodes ?? enriched.network?.active_hotspots ?? enriched.network?.nodes ?? null,
                 market_cap_usd:       mapped.market_cap_usd,
                 fdv_usd:              mapped.fdv_usd,
                 price_usd:            mapped.price_usd,
@@ -504,24 +692,24 @@
                 max_supply:           mapped.max_supply,
                 liquidity_usd:        mapped.liquidity_usd,
                 next_unlock:          null,
-                next_unlock_pct:      0,
+                next_unlock_pct:      enriched.tokenomics?.next_unlock_pct ?? enriched.unlocks?.next_unlock_pct ?? null,
                 next_unlock_date:     null,
                 next_unlock_usd_value: null,
             },
 
             // === V1 github subobject (V2.1: из enriched) ===
             github: {
-                stars: enriched.github?.stars || 0,
-                forks: enriched.github?.forks || 0,
-                commits_30d: enriched.github?.commits_30d || 0,
-                active_devs_30d: enriched.developer?.commit_count_4_weeks || 0,
-                contributors_total: 0,
+                stars: enriched.github?.stars ?? null,
+                forks: enriched.github?.forks ?? null,
+                commits_30d: enriched.github?.commits_30d ?? null,
+                active_devs_30d: enriched.developer?.commit_count_4_weeks ?? null,
+                contributors_total: enriched.github?.contributors ?? null,
                 last_commit: enriched.github?.last_commit || enriched.github?.pushed_at || null,
                 repo: p.githubRepo || p.githubOrg || null,
                 primary_languages: (enriched.github?.languages || []).map(l => l.name),
                 language: enriched.github?.language || null,
-                open_issues: enriched.github?.open_issues || 0,
-                watchers: enriched.github?.watchers || 0,
+                open_issues: enriched.github?.open_issues ?? null,
+                watchers: enriched.github?.watchers ?? null,
                 license: enriched.github?.license || null,
                 topics: enriched.github?.topics || [],
                 archived: enriched.github?.archived || false,
@@ -530,7 +718,7 @@
             // === V1 tokenomics subobject ===
             tokenomics: {
                 initial_supply:  null,
-                circulating_pct: 0,
+                circulating_pct: (mapped.circulating_supply != null && mapped.total_supply > 0) ? (mapped.circulating_supply / mapped.total_supply * 100) : null,
                 vesting:         null,
                 utility:         null,
                 buyback_burn:    null,
@@ -550,11 +738,11 @@
 
             // === V1 community subobject (V2.1: из enriched.social) ===
             community: {
-                twitter_followers:  enriched.social?.twitter_followers || 0,
-                telegram_members:  0,
-                discord_members:   0,
-                reddit_subscribers: enriched.social?.reddit_subscribers || 0,
-                github_stars:      enriched.github?.stars || 0,
+                twitter_followers:  enriched.social?.twitter_followers ?? null,
+                telegram_members:  null,
+                discord_members:   null,
+                reddit_subscribers: enriched.social?.reddit_subscribers ?? null,
+                github_stars:      enriched.github?.stars ?? null,
             },
 
             // === V1 links subobject ===
@@ -590,14 +778,14 @@
 
             // === V1 score breakdown ===
             ai_score_components: {
-                fundamentals: (paydScore && paydScore.breakdown && paydScore.breakdown.fundamentals) || 0,
-                tokenomics:   (paydScore && paydScore.breakdown && paydScore.breakdown.tokenomics)   || 0,
-                team:         (paydScore && paydScore.breakdown && paydScore.breakdown.team)         || 0,
-                traction:     (paydScore && paydScore.breakdown && paydScore.breakdown.traction)     || 0,
+                fundamentals: (paydScore && paydScore.breakdown) ? (paydScore.breakdown.fundamentals ?? null) : null,
+                tokenomics:   (paydScore && paydScore.breakdown) ? (paydScore.breakdown.tokenomics ?? null) : null,
+                team:         (paydScore && paydScore.breakdown) ? (paydScore.breakdown.team ?? null) : null,
+                traction:     (paydScore && paydScore.breakdown) ? (paydScore.breakdown.traction ?? null) : null,
             },
 
             ai_score_history: enriched.ai
-                ? [{ date: enriched.ai.calculated_at || new Date().toISOString(), score: enriched.ai.payd_score || 0 }]
+                ? [{ date: enriched.ai.calculated_at || new Date().toISOString(), score: enriched.ai.payd_score ?? null }]
                 : (paydScore
                     ? [{ date: paydScore.date, score: paydScore.value }]
                     : []),
@@ -955,6 +1143,16 @@
                 new Map(),
                 'loadEnrichedData'
             );
+
+            // Refresh market fields for the full universe on every page session.
+            // Two batched calls cover up to 400 CoinGecko IDs; snapshot remains fallback.
+            if (Array.isArray(projectsArr) && projectsArr.length > 0) {
+                await safeFetch(
+                    () => refreshLiveMarketData(projectsArr, enrichedMap),
+                    { updated: 0, source: 'timeout-fallback' },
+                    'refreshLiveMarketData'
+                );
+            }
 
             // === SELF-HEALING: применяем кэшированные новые проекты ===
             // Делаем это ДО проверки на пустой датасет, чтобы восстановленные

@@ -1,0 +1,214 @@
+#!/usr/bin/env node
+/**
+ * PAYD Intelligence V2 — Canonical Market Snapshot Updater
+ *
+ * Purpose:
+ *   - refresh market data for the entire tracked universe
+ *   - preserve all existing deep enrichment (GitHub, DefiLlama, AI, etc.)
+ *   - keep the canonical { projects: [...] } schema used by the frontend
+ *   - never convert missing provider values to zero
+ *
+ * No API key is required for the public CoinGecko endpoint.
+ * Optional env:
+ *   COINGECKO_API_KEY       Demo/Pro key
+ *   COINGECKO_API_MODE      public | demo | pro
+ */
+const fs = require('fs');
+const path = require('path');
+
+const ROOT = process.env.PAYD_ROOT || '/workspace';
+const DATA_DIR = path.join(ROOT, 'public', 'data');
+const PROJECTS_PATH = path.join(DATA_DIR, 'projects.json');
+const ENRICHED_PATH = path.join(DATA_DIR, 'projects_enriched.json');
+const TMP_PATH = ENRICHED_PATH + '.tmp';
+
+const API_MODE = String(process.env.COINGECKO_API_MODE || 'public').toLowerCase();
+const API_KEY = process.env.COINGECKO_API_KEY || '';
+const BASE_URL = API_MODE === 'pro'
+  ? 'https://pro-api.coingecko.com/api/v3'
+  : 'https://api.coingecko.com/api/v3';
+
+function readProjectArray(file) {
+  const raw = JSON.parse(fs.readFileSync(file, 'utf8'));
+  if (Array.isArray(raw)) return raw;
+  if (raw && Array.isArray(raw.projects)) return raw.projects;
+  throw new Error(`${file} must be an array or { projects: [...] }`);
+}
+
+function readEnrichedDocument() {
+  if (!fs.existsSync(ENRICHED_PATH)) return { projects: [] };
+  const raw = JSON.parse(fs.readFileSync(ENRICHED_PATH, 'utf8'));
+  if (Array.isArray(raw)) return { projects: raw };
+  if (raw && Array.isArray(raw.projects)) return raw;
+  // Legacy map-by-id format: migrate without losing records.
+  if (raw && typeof raw === 'object') {
+    return { projects: Object.values(raw).filter(v => v && typeof v === 'object' && v.id) };
+  }
+  return { projects: [] };
+}
+
+function headers() {
+  const h = { Accept: 'application/json', 'User-Agent': 'PAYD-Intelligence/market-updater' };
+  if (API_KEY) {
+    h[API_MODE === 'pro' ? 'x-cg-pro-api-key' : 'x-cg-demo-api-key'] = API_KEY;
+  }
+  return h;
+}
+
+async function getJson(url, timeoutMs = 15000) {
+  const c = new AbortController();
+  const t = setTimeout(() => c.abort(), timeoutMs);
+  try {
+    const r = await fetch(url, { headers: headers(), signal: c.signal });
+    const text = await r.text();
+    let data = null;
+    try { data = JSON.parse(text); } catch (_) {}
+    if (!r.ok) {
+      const err = new Error(`HTTP ${r.status}: ${data?.status?.error_message || data?.error || text.slice(0, 200)}`);
+      err.status = r.status;
+      throw err;
+    }
+    return data;
+  } finally { clearTimeout(t); }
+}
+
+async function resolveMissingIds(projects) {
+  const missing = projects.filter(p => p && !p.coingeckoId && p.symbol);
+  if (!missing.length) return { resolved: 0, unresolved: [] };
+  const list = await getJson(`${BASE_URL}/coins/list?include_platform=false`, 20000);
+  if (!Array.isArray(list)) return { resolved: 0, unresolved: missing.map(p => p.id) };
+
+  const byId = new Map(list.map(c => [String(c.id || '').toLowerCase(), c]));
+  const bySymbol = new Map();
+  for (const c of list) {
+    const s = String(c.symbol || '').toLowerCase();
+    if (!bySymbol.has(s)) bySymbol.set(s, []);
+    bySymbol.get(s).push(c);
+  }
+  const norm = v => String(v || '').toLowerCase().replace(/\([^)]*\)/g, ' ').replace(/[^a-z0-9]+/g, ' ').trim();
+  let resolved = 0;
+  for (const p of missing) {
+    let c = byId.get(String(p.id || '').toLowerCase()) || null;
+    if (!c) {
+      const candidates = bySymbol.get(String(p.symbol || '').toLowerCase()) || [];
+      const nameMatches = candidates.filter(x => norm(x.name) === norm(p.name));
+      if (nameMatches.length === 1) c = nameMatches[0];
+      else if (candidates.length === 1) c = candidates[0];
+    }
+    if (c?.id) { p.coingeckoId = c.id; resolved++; }
+  }
+  return { resolved, unresolved: projects.filter(p => !p.coingeckoId).map(p => p.id) };
+}
+
+async function fetchMarkets(ids) {
+  const out = [];
+  for (let i = 0; i < ids.length; i += 200) {
+    const batch = ids.slice(i, i + 200);
+    const url = `${BASE_URL}/coins/markets?vs_currency=usd&ids=${encodeURIComponent(batch.join(','))}` +
+      '&order=market_cap_desc&per_page=250&page=1&sparkline=false&price_change_percentage=24h,7d,30d';
+    const rows = await getJson(url);
+    if (Array.isArray(rows)) out.push(...rows);
+    if (i + 200 < ids.length) await new Promise(r => setTimeout(r, 1200));
+  }
+  return out;
+}
+
+function applyMarket(target, cg) {
+  target.market = target.market && typeof target.market === 'object' ? target.market : {};
+  const set = (k, v) => { if (v !== null && v !== undefined && !(typeof v === 'number' && Number.isNaN(v))) target.market[k] = v; };
+  set('price_usd', cg.current_price);
+  set('market_cap_usd', cg.market_cap);
+  set('fdv_usd', cg.fully_diluted_valuation);
+  set('circulating_supply', cg.circulating_supply);
+  set('total_supply', cg.total_supply);
+  set('max_supply', cg.max_supply);
+  set('volume_24h_usd', cg.total_volume);
+  set('change_24h_pct', cg.price_change_percentage_24h_in_currency ?? cg.price_change_percentage_24h);
+  set('change_7d_pct', cg.price_change_percentage_7d_in_currency);
+  set('change_30d_pct', cg.price_change_percentage_30d_in_currency);
+  set('ath', cg.ath);
+  set('ath_change_pct', cg.ath_change_percentage);
+  set('atl', cg.atl);
+  set('atl_change_pct', cg.atl_change_percentage);
+  set('high_24h', cg.high_24h);
+  set('low_24h', cg.low_24h);
+  set('market_cap_rank', cg.market_cap_rank);
+  set('last_updated', cg.last_updated || new Date().toISOString());
+  target.market_provenance = {
+    source: 'CoinGecko',
+    retrieved_at: new Date().toISOString(),
+    coingecko_id: cg.id,
+    status: 'AVAILABLE'
+  };
+}
+
+async function main() {
+  const projects = readProjectArray(PROJECTS_PATH);
+  const doc = readEnrichedDocument();
+  const existingById = new Map(doc.projects.map(p => [p.id, p]));
+
+  const resolution = await resolveMissingIds(projects);
+  const ids = [...new Set(projects.map(p => p.coingeckoId).filter(Boolean))];
+  const rows = await fetchMarkets(ids);
+  const byCg = new Map(rows.map(r => [r.id, r]));
+
+  let updated = 0;
+  const merged = projects.map(p => {
+    const target = existingById.get(p.id) || { ...p };
+    // Keep canonical identity current while preserving enrichment fields.
+    Object.assign(target, {
+      id: p.id, symbol: p.symbol, name: p.name, sector: p.sector,
+      sectors: p.sectors, coingeckoId: p.coingeckoId || null,
+      cmcId: p.cmcId ?? target.cmcId ?? null,
+      githubOrg: p.githubOrg ?? target.githubOrg ?? null,
+      githubRepo: p.githubRepo ?? target.githubRepo ?? null,
+      xHandle: p.xHandle ?? target.xHandle ?? null,
+      website: p.website ?? target.website ?? null,
+    });
+    const cg = p.coingeckoId ? byCg.get(p.coingeckoId) : null;
+    if (cg) { applyMarket(target, cg); updated++; }
+    else {
+      target.market_provenance = {
+        source: 'CoinGecko', retrieved_at: new Date().toISOString(),
+        coingecko_id: p.coingeckoId || null,
+        status: p.coingeckoId ? 'PROVIDER_NO_DATA' : 'MISSING_IDENTIFIER'
+      };
+    }
+    return target;
+  });
+
+  const output = {
+    ...doc,
+    schema_version: 'payd-intelligence-v2.2',
+    dataset_version: new Date().toISOString(),
+    generated_at: new Date().toISOString(),
+    market_provider: 'CoinGecko',
+    market_projects_updated: updated,
+    market_projects_total: projects.length,
+    unresolved_coingecko_ids: resolution.unresolved,
+    projects: merged,
+  };
+
+  fs.writeFileSync(TMP_PATH, JSON.stringify(output, null, 2) + '\n');
+  JSON.parse(fs.readFileSync(TMP_PATH, 'utf8')); // validate before replace
+  fs.renameSync(TMP_PATH, ENRICHED_PATH);
+
+  console.log(JSON.stringify({
+    ok: true,
+    projects: projects.length,
+    ids_requested: ids.length,
+    market_rows_returned: rows.length,
+    updated,
+    resolved_ids_this_run: resolution.resolved,
+    unresolved_ids: resolution.unresolved,
+    output: ENRICHED_PATH,
+  }, null, 2));
+
+  if (updated === 0) process.exitCode = 2;
+}
+
+main().catch(err => {
+  try { if (fs.existsSync(TMP_PATH)) fs.unlinkSync(TMP_PATH); } catch (_) {}
+  console.error('[PAYD market updater] FATAL:', err.message);
+  process.exit(1);
+});

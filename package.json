@@ -2,5 +2,8 @@
   "dependencies": {
     "puppeteer-core": "^24.43.1",
     "ws": "^8.21.3"
+  },
+  "scripts": {
+    "update:intelligence-market": "node code/update_market_snapshot.js"
   }
 }

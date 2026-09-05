@@ -1,0 +1,28 @@
+📄 Extracted from page: Payd_Finance | AI Crypto Trading & Education
+URL: https://ixfcvc9gje2f.space.mcode.io/#/depin
+
+Extracted content:
+```json
+{
+    "title": "DePIN Intelligence - Payd_Finance | AI Crypto Trading & Education",
+    "url": "https://ixfcvc9gje2f.space.mcode.io/#/depin",
+    "summary": "The page is the DePIN Intelligence section of Payd_Finance, an AI-powered crypto trading and education platform. It displays a comprehensive table tracking 34 DePIN (Decentralized Physical Infrastructure Networks) projects with various financial and operational metrics. The table includes columns for AI Score, Risk level, Dev Activity, GitHub stats, Users, Revenue, TVL, Nodes, Market Cap, FDV, Unlock info, and Investment Rating. The data is sourced from CoinGecko, CoinMarketCap, DefiLlama, Token Unlocks, GitHub, and News providers. Last sync: Sep 5, 2026. The page is primarily in Russian but includes English crypto terminology.",
+    "key_points": [
+        "Render (RENDER): AI Score 78 (+1.7%), Risk 22 (Low), Market Cap $759.9M, FDV $781.6M, Investment Rating: Insufficient Data",
+        "Helium (HNT): AI Score 72 (+77.4%), Risk 45 (Medium), Dev Activity 0, GitHub 0, Market Cap $110.4M, FDV $110.4M, Investment Rating: Buy",
+        "Akash-network (AKT): AI Score Unavailable (+3.9%), Risk Unavailable, Market Cap $157.0M, FDV $157.0M, Investment Rating: Insufficient Data",
+        "Most projects in the table show 'Unavailable' for Dev Activity, GitHub, Users, Revenue, TVL, and Nodes metrics",
+        "The table contains 34 tracked DePIN projects total",
+        "All 5 of 6 data providers are active (CoinGecko, CoinMarketCap, DefiLlama, Token Unlocks, GitHub, News)",
+        "Platform agent version: v3.2.1, AI System Online v2.4",
+        "No 24h Volume or price data is displayed in the DePIN table - only Market Cap and FDV are provided as financial metrics",
+        "Other notable DePIN projects tracked: Arweave ($204.7M MC), Grass ($234.2M MC), Crust-network, Streamr, Dimo, Geodnet, Hivemapper, Livepeer, Peaq, Siacoin, Storj, World-mobile-token",
+        "Investment Rating column shows mostly 'Insufficient Data' except for Helium which shows 'Buy'",
+        "Data refreshes live from verified providers when Intelligence loads"
+    ],
+    "relevant_links": [
+        "https://ixfcvc9gje2f.space.mcode.io/#/depin"
+    ],
+    "file_name": "depin_intelligence_financial_data.json"
+}
+```

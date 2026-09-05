@@ -3,72 +3,58 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "STEP 1: Создать резервную копию текущего рабочего пространства",
+        "content": "STEP 1: Получить fill_missing_market_cmc.js из GitHub (commit 6b1efcf)",
         "details": "",
-        "status": "completed",
+        "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "STEP 2: Извлечь Payd-finance-fixed.zip в /workspace",
+        "content": "STEP 2: Создать backup projects_enriched.json с timestamp",
         "details": "",
-        "status": "completed",
+        "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "STEP 3: Проверить наличие и содержимое критических файлов Intelligence V2",
+        "content": "STEP 3: Запустить fill_missing_market_cmc.js",
         "details": "",
-        "status": "completed",
+        "status": "pending",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "STEP 4: Сохранить валидные исторические данные (не превращать null в 0)",
+        "content": "STEP 4: Валидация (BEFORE/AFTER coverage + identity check)",
         "details": "",
-        "status": "completed",
+        "status": "pending",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "STEP 5: Установить зависимости и запустить сборку",
+        "content": "STEP 5: Контрольные проекты (HNT/RENDER/AKT/MINA/FIL/TAO/IMX)",
         "details": "",
-        "status": "completed",
-        "priority": "medium"
+        "status": "pending",
+        "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "STEP 6: Развернуть исправленный проект на существующем сайте",
+        "content": "STEP 6: Проверка provenance для CMC-заполненных полей",
         "details": "",
-        "status": "completed",
+        "status": "pending",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "STEP 7: Валидация живого сайта (BTC, HNT, RENDER, AKT)",
+        "content": "STEP 7: Rebuild dist и deploy на production",
         "details": "",
-        "status": "completed",
+        "status": "pending",
         "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "STEP 8: Проверка наборов данных и статистики",
+        "content": "STEP 8: Финальный отчёт и STOP",
         "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "9": {
-        "id": "9",
-        "content": "STEP 9: Проверка кэша версий ресурсов на production",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "10": {
-        "id": "10",
-        "content": "STEP 10: Сформировать финальный отчет и остановиться",
-        "details": "",
-        "status": "completed",
+        "status": "pending",
         "priority": "high"
       }
     }

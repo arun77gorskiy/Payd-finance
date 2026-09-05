@@ -125,7 +125,18 @@
 
             // Строим минимальный projects dict с тикерами — этого достаточно для быстрого рендера
             const projectsDict = {};
-            const enrichedMap = enriched && typeof enriched === 'object' ? new Map(Object.entries(enriched)) : new Map();
+            const enrichedMap = new Map();
+            if (enriched && Array.isArray(enriched.projects)) {
+                enriched.projects.forEach(rec => {
+                    if (rec && rec.id) enrichedMap.set(rec.id, rec);
+                });
+            } else if (enriched && typeof enriched === 'object') {
+                Object.entries(enriched).forEach(([id, rec]) => {
+                    if (rec && typeof rec === 'object' && !Array.isArray(rec)) {
+                        enrichedMap.set(rec.id || id, rec);
+                    }
+                });
+            }
             projects.forEach(p => {
                 if (!p || !p.symbol) return;
                 const tk = p.symbol.toUpperCase();
@@ -146,7 +157,7 @@
                         tvl_usd: enr.protocol?.tvl_usd || null,
                         price_usd: enr.market?.price_usd || null,
                     },
-                    github: { stars: enr.github?.stars || 0 },
+                    github: { stars: enr.github?.stars ?? null },
                     _v2_source: p,
                 };
             });

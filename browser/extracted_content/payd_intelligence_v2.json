@@ -1,35 +1,38 @@
 📄 Extracted from page: PAYD Intelligence V2 — Autonomous Discovery
-URL: https://7elfv1zodvzl.space.minimax.io/intelligence-v2.html
+URL: https://ixfcvc9gje2f.space.mcode.io/intelligence-v2.html
 
 Extracted content:
 ```json
 {
     "title": "PAYD Intelligence V2 — Autonomous Discovery",
-    "url": "https://7elfv1zodvzl.space.minimax.io/intelligence-v2.html",
-    "summary": "PAYD Intelligence V2 page for autonomous discovery with multi-source quality and lifecycle engine. The page is in a loading state with most dynamic content sections showing 'Loading…' or 'Initializing pipeline…' placeholders. The page architecture includes sections for Architecture, Discovery (with status indicators), Discovery Engine controls, Sector Coverage (noting no max limit for DePIN projects), Tracked Projects (with filter tabs), Lifecycle Events, an Automated Intelligence Update Engine (3 times per week on Mon/Wed/Fri at 09:00 UTC), and Latest Intelligence reports. The page uses a LocalJsonDataProvider which can be switched via config file. The 'Tracked' statistics value is not yet rendered (showing '—' as a placeholder), indicating the page has not finished loading dynamic data.",
+    "url": "https://ixfcvc9gje2f.space.mcode.io/intelligence-v2.html",
+    "summary": "PAYD Intelligence V2 is an autonomous discovery and multi-source quality platform for tracking cryptocurrency projects. It currently tracks 349 Core projects across 9 sectors (ai, defi, depin, desci, gaming, infrastructure, layer1, layer2, rwa). The page provides project listings with names, tickers, sector tags, and descriptions, but does not display quantitative financial metrics (Market Cap, FDV, 24h Volume) for any projects.",
     "key_points": [
-        "Page title: PAYD Intelligence V2 — Autonomous Discovery",
-        "Subtitle: Autonomous Discovery · Multi-Source Quality · Lifecycle Engine",
-        "Navigation link back to main page: '← На главную' (Back to main)",
-        "Architecture section status: 'Loading architecture…'",
-        "Discovery section shows 4 status indicators with placeholder '—' values: Tracked, 🌱 Emerging, 👁 Watchlist, ⭐ Core, 📦 Archive",
-        "Tracked statistics value: '—' (not yet loaded/rendered)",
-        "Discovery Engine has 3 action buttons in Russian: 'Запустить discovery cycle' (Run discovery cycle), 'Оценить lifecycle' (Evaluate lifecycle), 'Обновить' (Refresh)",
-        "Sector Coverage note: 'NO MAX LIMIT — если 63 DePIN проекта проходят quality filter, отслеживаются все 63' (If 63 DePIN projects pass quality filter, all 63 are tracked)",
-        "Sector Coverage status: 'Loading sectors…'",
-        "Tracked Projects section has filter tabs: All, 🌱 Emerging, 👁 Watchlist, ⭐ Core, 📦 Archive",
-        "Tracked Projects status: 'Loading projects…'",
-        "Lifecycle Events status: 'Loading events…'",
-        "Automated Intelligence Update Engine: updates 3 times per week (Mon, Wed, Fri at 09:00 UTC), 6-step cycle: refresh → validate → AI analysis → update rankings → generate intelligence → save history",
-        "Update Engine status: 'Initializing pipeline…'",
-        "Latest Intelligence section: 'Loading intelligence…'",
-        "Footer indicates: 'PAYD Intelligence V2 · Database-agnostic · LocalJsonDataProvider active'",
-        "Config note: To switch provider, edit 'public/js/intelligence/config/data-provider.config.js' — no other code changes required",
-        "Page state: Partially loaded — architecture, sectors, projects, events, and intelligence data still loading; statistics not yet populated"
+        "Platform tracks 349 projects total, all in 'Core' status, with 0 Emerging, 0 Watchlist, and 0 Archive projects",
+        "Sector coverage includes: ai (38), defi (41), depin (34), desci (32), gaming (36), infrastructure (33), layer1 (48), layer2 (39), rwa (48)",
+        "DePIN sector contains 34 projects including AKASH-NETWORK, HELIUM, RENDER, and others focused on decentralized physical infrastructure",
+        "Layer1 sector contains 48 projects including BITCOIN, and others like Ethereum, Solana, Cardano, Cosmos, Polkadot, etc.",
+        "No Market Cap, FDV, or 24h Volume data is displayed for any project on this page",
+        "Quality and Discovered fields are shown as '—' (em dash) for all projects, indicating no data populated",
+        "All four requested projects are tracked: BTC (BITCOIN) in layer1, HNT (HELIUM) in depin, RENDER in depin, AKT (AKASH-NETWORK) in depin",
+        "Platform uses LocalJsonDataProvider and features a Discovery Engine with lifecycle evaluation capabilities",
+        "Automated intelligence updates 3 times weekly (Mon/Wed/Fri at 09:00 UTC)",
+        "Architecture includes ProjectService + DiscoveryService across 7 repositories"
     ],
     "relevant_links": [
-        "/index.html"
+        "https://ixfcvc9gje2f.space.mcode.io/index.html"
     ],
-    "file_name": "payd_intelligence_v2.json"
+    "file_name": "payd_intelligence_v2.json",
+    "extraction_notes": {
+        "requested_projects_status": {
+            "BTC (Bitcoin)": "Found as $BITCOIN in layer1 sector - listed but no Market Cap, FDV, or 24h Volume data shown",
+            "HNT (Helium)": "Found as $HELIUM in depin sector - listed but no Market Cap, FDV, or 24h Volume data shown",
+            "RENDER": "Found as $RENDER in depin sector - listed but no Market Cap, FDV, or 24h Volume data shown",
+            "AKT (Akash Network)": "Found as $AKASH-NETWORK in depin sector - listed but no Market Cap, FDV, or 24h Volume data shown"
+        },
+        "depin_sector_description": "DePIN (Decentralized Physical Infrastructure Networks) sector contains 34 projects including: AKASH-NETWORK (open-source supercloud for unused datacenter capacity), ALEPH-IM (decentralized cloud platform), ANKR-NETWORK (Web3 infrastructure provider), ARWEAVE (permanent data storage), SWARM (decentralized storage for Ethereum), CESS (high-performance decentralized storage), CRUST-NETWORK (decentralized cloud storage), STREAMR (real-time data streams), DIMO (automotive DePIN), DEEPER-NETWORK (decentralized VPN), SENTINEL (decentralized VPN), FLUX (decentralized cloud infrastructure), GEODNET (GNSS/RTK reference stations), GRASS (residential bandwidth DePIN), HELIUM (decentralized wireless network), HIVEMAPPER (decentralized mapping), IAGON (decentralized storage on Cardano), IOTEX (IoT-focused L1), LIVEPEER (decentralized video transcoding), MXC (decentralized data network), MYSTERIUM (decentralized VPN), NODLE-NETWORK (Bluetooth IoT network), NUBILA (environmental data network), POLLEN-MOBILE (decentralized 4G/5G), PEAQ (DePIN-focused L1 for machine economy), PHALA (TEE-based confidential computing), POWERPOD (EV charging DePIN), RENDER (decentralized GPU compute), SIACOIN (decentralized storage), STORJ (decentralized cloud storage), THINGSIX (LoRaWAN coverage), WAYRU (decentralized WiFi), WORLD-MOBILE-TOKEN (decentralized mobile network), WEATHERXM (community weather station network)",
+        "layer1_sector_description": "Layer1 sector contains 48 projects including: CARDANO (research-driven PoS L1 with Ouroboros), ALGORAND (pure PoS with instant finality), APTOS (Move-based PoS from former Meta Diem engineers), COSMOS (Internet of blockchains with IBC), AVALANCHE-2 (three-chain architecture), BERACHAIN (EVM-identical with Proof-of-Liquidity), BINANCECOIN (BNB Chain native), BITCOIN (first decentralized P2P digital currency), CONFLUX-TOKEN (Tree-Graph consensus), CRYPTO-COM-CHAIN (EVM L1 from Crypto.com), CASPER-NETWORK (PoS for enterprise), DOGECOIN (meme-coin PoW payment network), POLKADOT (multi-chain sharded protocol), MULTIVERSX (sharded EVM-compatible), EOS (Antelope DPoS), ETHEREUM (programmable blockchain with smart contracts), FILECOIN (decentralized storage marketplace), FLOW (multi-role pipelined L1), FLARE (EVM L1 with FTSO oracle), FANTOM (DAG-based aBFT), HEDERA-HASHGRAPH (hashgraph consensus), INTERNET-COMPUTER (chain-key cryptography L1), INJECTIVE-PROTOCOL (Cosmos-based for finance), KASPA (GHOSTDAG PoW), KAVA (Cosmos-EVM co-chain), KADENA (braided parallel chains), KUJIRA (Cosmos-based DeFi hub), LITECOIN (Bitcoin fork), MINA-PROTOCOL (succinct ~22KB blockchain), IOTA (feeless Tangle DLT), MONAD (high-performance EVM with parallel execution), NEAR (sharded account-based), NEO (multi-language smart contracts), OASIS-NETWORK (privacy-first with ParaTimes), SONIC-3 (EVM from Fantom), SEI-NETWORK (parallelized EVM for trading), SOLANA (PoS with proof-of-history), SUI (Move-based horizontally scalable), BITTENSOR (decentralized ML network), CELESTIA (modular data-availability network), THE-OPEN-NETWORK (Telegram-developed), TRON (high-throughput EVM for stablecoins), VECHAIN (enterprise with dual-token), CHIA (proof-of-space-and-time), STELLAR (payment network), RIPPLE (XRP Ledger for remittances), TEZOS (PoS with on-chain governance), ZILLIQA (sharded high-throughput)",
+        "data_availability_note": "The page does not provide Market Cap, FDV, or 24h Volume data for any projects. Only project names, tickers, sector tags, and textual descriptions are available. Quality and Discovered metrics are shown as em dashes (—) for all projects."
+    }
 }
 ```
