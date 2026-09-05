@@ -29,7 +29,6 @@ const PROVIDER_IDS = {
         defillama_protocol: 'ethereum',
         github: ['ethereum/go-ethereum', 'ethereum/research'],
         website: 'https://ethereum.org',
-        coinglass_symbol: 'ETH',
     },
     'bitcoin': {
         coingecko: 'bitcoin',
@@ -38,7 +37,6 @@ const PROVIDER_IDS = {
         defillama_protocol: null,
         github: ['bitcoin/bitcoin'],
         website: 'https://bitcoin.org',
-        coinglass_symbol: 'BTC',
     },
     'solana': {
         coingecko: 'solana',
@@ -47,7 +45,6 @@ const PROVIDER_IDS = {
         defillama_protocol: 'solana',
         github: ['solana-labs/solana', 'anza-xyz/solana-sdk'],
         website: 'https://solana.com',
-        coinglass_symbol: 'SOL',
     },
     'cardano': {
         coingecko: 'cardano',
@@ -226,7 +223,6 @@ const PROVIDER_IDS = {
         defillama_protocol: 'arbitrum-bridge',  // есть bridge protocol в DefiLlama
         github: ['OffchainLabs/nitro', 'OffchainLabs/arbitrum'],
         website: 'https://arbitrum.io',
-        coinglass_symbol: 'ARB',
     },
     'optimism': {
         coingecko: 'optimism',
@@ -235,7 +231,6 @@ const PROVIDER_IDS = {
         defillama_protocol: 'optimism-bridge',
         github: ['ethereum-optimism/optimism'],
         website: 'https://www.optimism.io',
-        coinglass_symbol: 'OP',
     },
     'polygon': {
         coingecko: 'matic-network',
@@ -560,7 +555,6 @@ const PROVIDER_IDS = {
         defillama_protocol: 'chainlink',
         github: ['smartcontractkit/chainlink'],
         website: 'https://chain.link',
-        coinglass_symbol: 'LINK',
     },
     'the-graph': {
         coingecko: 'the-graph',
@@ -593,7 +587,6 @@ const PROVIDER_IDS = {
         defillama_protocol: 'helium',
         github: ['helium/blockchain-core'],
         website: 'https://helium.com',
-        coinglass_symbol: 'HNT',
     },
     'hivemapper': {
         coingecko: 'hivemapper',
@@ -773,34 +766,6 @@ const PROVIDER_IDS = {
         github: ['yieldguild/registry-contracts'],
         website: 'https://yieldguild.io',
     },
-    // ────────── CoinGlass control group (incremental) ──────────
-    'render-token': {
-        coingecko: 'render-token',
-        coinmarketcap: '5690',
-        defillama_chain: null,
-        defillama_protocol: 'render-network',
-        github: ['rsksmart/render-token', 'Render-Token/render'],
-        website: 'https://renderfoundation.com',
-        coinglass_symbol: 'RENDER',
-    },
-    'akash-network': {
-        coingecko: 'akash-network',
-        coinmarketcap: '3861',
-        defillama_chain: null,
-        defillama_protocol: 'akash',
-        github: ['akash-network/node', 'akash/akash'],
-        website: 'https://akash.network',
-        coinglass_symbol: 'AKT',
-    },
-    'ondo-finance': {
-        coingecko: 'ondo-finance',
-        coinmarketcap: '17708',
-        defillama_chain: null,
-        defillama_protocol: 'ondo-global-markets',
-        github: [],
-        website: 'https://ondo.finance',
-        coinglass_symbol: 'ONDO',
-    },
 };
 
 /**
@@ -830,7 +795,6 @@ function buildEmptyIdentifiers() {
         github: [],
         x: null,
         website: null,
-        coinglass_symbol: null,
     };
 }
 
