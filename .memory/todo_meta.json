@@ -3,56 +3,42 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "STEP 1: Получить fill_missing_market_cmc.js из GitHub (commit 6b1efcf)",
+        "content": "STEP 1: Extract all 70+ unresolved projects (mc=null)",
         "details": "",
         "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "STEP 2: Создать backup projects_enriched.json с timestamp",
+        "content": "STEP 2: Classify each unresolved project (A-H)",
         "details": "",
         "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "STEP 3: Запустить fill_missing_market_cmc.js",
+        "content": "STEP 3: Identity duplicate audit (id/symbol/cgid/cmcid)",
         "details": "",
         "status": "pending",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "STEP 4: Валидация (BEFORE/AFTER coverage + identity check)",
+        "content": "STEP 4: Market cap reconstruction candidates (price × supply)",
         "details": "",
         "status": "pending",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "STEP 5: Контрольные проекты (HNT/RENDER/AKT/MINA/FIL/TAO/IMX)",
+        "content": "STEP 5: Write audit JSON + CSV files to /workspace/tmp/",
         "details": "",
         "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "STEP 6: Проверка provenance для CMC-заполненных полей",
-        "details": "",
-        "status": "pending",
-        "priority": "high"
-      },
-      "7": {
-        "id": "7",
-        "content": "STEP 7: Rebuild dist и deploy на production",
-        "details": "",
-        "status": "pending",
-        "priority": "high"
-      },
-      "8": {
-        "id": "8",
-        "content": "STEP 8: Финальный отчёт и STOP",
+        "content": "STEP 6: Final summary report and STOP",
         "details": "",
         "status": "pending",
         "priority": "high"
