@@ -1,0 +1,405 @@
+Continue from the current PaydFinance production baseline.
+
+DO NOT run additional market enrichment yet.
+
+The audit has revealed that the primary remaining problem is now PROJECT IDENTITY QUALITY, not API coverage.
+
+We must repair the canonical identity registry BEFORE using CoinMarketCap or CoinGecko again for unresolved assets.
+
+Current audit findings:
+
+* Total project records: 364
+* Unresolved Market Cap records: 70
+* Duplicate internal ID groups: 1
+* Duplicate symbol groups: 14
+* Duplicate CoinGecko ID groups: 11
+* Duplicate CMC ID groups: 17
+
+Some duplicate provider IDs are clearly unsafe because unrelated assets share the same provider ID.
+
+Examples:
+
+CMC ID 1732:
+
+* numerai
+* storj
+
+CMC ID 27075:
+
+* nosana
+* safe
+* mantle
+
+CMC ID 14556:
+
+* swarm
+* boba
+
+CMC ID 24522:
+
+* researchhub
+* nxyz
+
+CMC ID 25110:
+
+* goldsky
+* thirdweb
+
+These MUST NOT be treated as the same asset.
+
+At the same time, some duplicate records represent one legitimate asset appearing in several PAYD sectors.
+
+Examples:
+
+AKT:
+
+* akash
+* akash-network
+
+FIL:
+
+* ipfs
+* filecoin
+
+TAO:
+
+* tao
+* bittensor
+
+IMX:
+
+* immutable-x
+* immutable
+
+ICP:
+
+* icp
+* internet-computer
+
+POL:
+
+* polygon
+* polygon-ecosystem-token
+
+MINA:
+
+* mina
+* mina-protocol
+
+The goal is to create a canonical identity system without losing sector membership.
+
+## CRITICAL SAFETY RULE
+
+DO NOT trust an existing CoinGecko ID or CMC ID merely because it exists in the dataset.
+
+Every conflicting provider identifier must be revalidated.
+
+Do not use symbol-only matching.
+
+Do not copy provider data between records until identity is verified.
+
+Do not delete records yet.
+
+Do not modify production `projects_enriched.json` until the proposed identity corrections pass validation.
+
+---
+
+## STEP 1 — CREATE CANONICAL ASSET MODEL
+
+Build a canonical asset registry where one tradable asset has one canonical identity.
+
+Recommended structure:
+
+{
+"canonical_id": "...",
+"name": "...",
+"symbol": "...",
+"entity_type": "TOKEN|CHAIN|PROTOCOL|COMPANY|INFRASTRUCTURE|NO_TOKEN",
+"sectors": [],
+"provider_ids": {
+"coingecko": null,
+"coinmarketcap": null
+},
+"aliases": [],
+"legacy_payd_ids": [],
+"identity_status": "VERIFIED|REVIEW|NO_TOKEN|INACTIVE",
+"identity_confidence": 0.0,
+"evidence": []
+}
+
+Do not collapse sectors.
+
+Example:
+
+Akash may remain one canonical AKT asset with:
+
+sectors = ["ai", "depin"]
+
+and legacy PAYD IDs:
+
+["akash", "akash-network"]
+
+---
+
+## STEP 2 — VERIFY ALL DUPLICATE PROVIDER IDS
+
+Revalidate ALL:
+
+* 11 duplicate CoinGecko ID groups
+* 17 duplicate CMC ID groups
+
+For every project in these groups verify identity using, in priority order:
+
+1. provider ID response name
+2. provider symbol
+3. official website/domain
+4. official project documentation
+5. contract address where available
+6. project name
+7. official GitHub / X links
+
+Symbol alone is NOT sufficient.
+
+For each existing provider ID classify:
+
+VERIFIED_CORRECT
+INCORRECT_ID
+SAME_CANONICAL_ASSET
+AMBIGUOUS
+NO_TOKEN
+
+---
+
+## STEP 3 — SPECIAL CRITICAL GROUPS
+
+Explicitly resolve:
+
+AKT
+FIL
+TAO
+IMX
+ICP
+POL
+MINA
+FRAX
+APE
+MINT
+
+Also resolve these suspicious CMC groups:
+
+1732
+27075
+14556
+24800
+24522
+24455
+25110
+8646
+
+Do not assume these IDs are correct.
+
+---
+
+## STEP 4 — FIX THE `mina-protocol` DUPLICATE
+
+There are currently two records with exact internal:
+
+`id = mina-protocol`
+
+This violates unique project identity.
+
+Determine whether they are exact duplicate rows.
+
+If yes:
+
+propose ONE canonical MINA asset with all relevant sectors preserved.
+
+Do not simply delete one row without preserving sector information and metadata.
+
+---
+
+## STEP 5 — NO-TOKEN ENTITIES
+
+Review projects classified as NO_TOKEN, including examples such as:
+
+* alchemy
+* bloxroute
+* blockscout
+* chainstack
+* infura
+* koinly
+* quicknode
+* securitize
+* sp-global
+* tenderly
+
+These may remain in Intelligence as companies/infrastructure projects, but they must NOT be treated as tradable tokens.
+
+For verified NO_TOKEN entities:
+
+entity_type = COMPANY or INFRASTRUCTURE
+tradable_asset = false
+market_cap_usd = null
+market_status = NOT_APPLICABLE
+
+Do not assign unrelated CoinGecko/CMC tokens to them.
+
+---
+
+## STEP 6 — WRONG IDENTIFIERS
+
+Explicitly inspect:
+
+`data-union`
+Current CoinGecko ID:
+`ducat`
+
+Audit says this refers to Ducat, not Data Union.
+
+`matrixport-rwa`
+Current CoinGecko ID:
+`mstable`
+
+Audit says this refers to mStable/MTA, not Matrixport RWA.
+
+Remove incorrect provider mappings from the proposed corrected identity registry.
+
+Do NOT replace them with another ID unless verified.
+
+---
+
+## STEP 7 — UNRESOLVED MARKET GROUP
+
+Revalidate the 27 records classified:
+
+`G_PROVIDER_MAPPING_GAP`
+
+Do NOT automatically accept their current CMC IDs.
+
+For each determine:
+
+* correct CoinGecko ID
+* correct CMC ID
+* whether token still trades
+* whether project has a native token
+* whether provider entry actually represents this project
+
+Output identity confidence.
+
+Minimum confidence for automatic correction:
+
+0.95
+
+0.80–0.949:
+NEEDS_REVIEW
+
+Below 0.80:
+do not assign provider ID.
+
+---
+
+## STEP 8 — DO NOT DERIVE MARKET CAP YET
+
+The audit found:
+
+derived market cap candidates = 0
+
+because the unresolved set has no verified pair of:
+
+price_usd
++
+circulating_supply > 0
+
+Therefore do not calculate Market Cap yet.
+
+---
+
+## STEP 9 — CREATE PROPOSED IDENTITY FILES
+
+Create:
+
+`/workspace/tmp/payd_canonical_identity_registry.json`
+
+`/workspace/tmp/payd_identity_corrections.json`
+
+`/workspace/tmp/payd_identity_corrections.csv`
+
+`/workspace/tmp/payd_identity_conflicts.json`
+
+Do NOT update production dataset yet.
+
+Each correction must include:
+
+* legacy PAYD ID
+* canonical ID
+* old CoinGecko ID
+* proposed CoinGecko ID
+* old CMC ID
+* proposed CMC ID
+* entity type
+* tradable_asset
+* sectors
+* correction reason
+* evidence
+* confidence
+
+---
+
+## STEP 10 — VALIDATION RULES
+
+The proposed registry must satisfy:
+
+1. canonical_id is unique
+2. no unrelated canonical assets share one CoinGecko ID
+3. no unrelated canonical assets share one CMC ID
+4. same asset may belong to multiple sectors
+5. sector membership is preserved
+6. NO_TOKEN entities do not receive token market metrics
+7. incorrect identifiers are removed
+8. ambiguous mappings are not auto-fixed
+9. symbol collision alone never merges assets
+10. all identity changes are traceable
+
+---
+
+## STEP 11 — REPORT
+
+Return:
+
+TOTAL RAW PROJECT RECORDS
+
+TOTAL CANONICAL ASSETS
+
+MULTI-SECTOR ASSETS
+
+NO-TOKEN ENTITIES
+
+INACTIVE/DELISTED ASSETS
+
+VERIFIED COINGECKO IDS
+
+VERIFIED CMC IDS
+
+INCORRECT COINGECKO IDS FOUND
+
+INCORRECT CMC IDS FOUND
+
+AMBIGUOUS IDENTITIES
+
+DUPLICATE INTERNAL IDS RESOLVED
+
+DUPLICATE COINGECKO CONFLICTS BEFORE → AFTER
+
+DUPLICATE CMC CONFLICTS BEFORE → AFTER
+
+Then list every proposed identity correction:
+
+legacy ID | symbol | canonical ID | old CG | new CG | old CMC | new CMC | action | confidence
+
+STOP.
+
+Do NOT modify production data yet.
+
+Do NOT start Deep Enrichment.
+
+Do NOT run market updater yet.
