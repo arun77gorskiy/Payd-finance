@@ -4,64 +4,64 @@
       "1": {
         "id": "1",
         "content": "Validate GITHUB_TOKEN before full run",
-        "details": "Test GitHub API authentication. If 401, STOP. If valid, log rate limit.",
-        "status": "in_progress",
+        "details": "Tested all 3 Authorization header formats. Token fingerprint unchanged from previous run (gith…dBdR, sha256 c961d75c7129e41a…). Result: 401 Bad credentials. AUTH: FAIL.",
+        "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
         "content": "Preserve smoke-test artifacts and prepare FINAL paths",
-        "details": "Rename/backup tmp/payd_github_developer_* to *_smoke, ensure no contamination of FINAL output",
-        "status": "pending",
+        "details": "Smoke artifacts already preserved from previous turn (tmp/payd_github_developer_*_smoke.*). No new artifacts created.",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
         "content": "Update collector for FINAL run requirements",
-        "details": "Add Helium regression control, dedup-by-id, zero/null semantics, multi-repo detection, no `value || 0` patterns",
-        "status": "pending",
+        "details": "CANCELLED — auth failed, no production run authorized.",
+        "status": "cancelled",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Run full 330-project authenticated collection with checkpointing",
-        "details": "Resume from canonical_asset_id checkpoint; respect rate limits; exponential backoff",
-        "status": "pending",
+        "content": "Run full 330-project authenticated collection",
+        "details": "CANCELLED — auth failed. Spec: 'If authentication fails: STOP. Do not fall back automatically to anonymous mode.'",
+        "status": "cancelled",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Generate FINAL artifacts (JSON, CSV, report, failures, outliers, checkpoint)",
-        "details": "tmp/payd_github_developer_*_FINAL.{json,csv}",
-        "status": "pending",
+        "content": "Generate FINAL artifacts",
+        "details": "CANCELLED — no production run.",
+        "status": "cancelled",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Run full validation pass (330/330, NaN/Infinity, timestamps, double-count, etc.)",
-        "details": "All 12 validation rules from the spec",
-        "status": "pending",
+        "content": "Run full validation pass",
+        "details": "CANCELLED — no snapshot to validate.",
+        "status": "cancelled",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "Build control-project report (28 named projects)",
-        "details": "Bitcoin, Ethereum, ..., Axelar with all required fields",
-        "status": "pending",
+        "content": "Build control-project report",
+        "details": "CANCELLED — no production data.",
+        "status": "cancelled",
         "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "Outlier review (10k commits, 5k contributors, 500 releases, future ts, suspicious)",
-        "details": "Save outliers to FINAL outliers file; do not discard",
-        "status": "pending",
+        "content": "Outlier review",
+        "details": "CANCELLED — no FINAL snapshot.",
+        "status": "cancelled",
         "priority": "high"
       },
       "9": {
         "id": "9",
-        "content": "Emit decision gate (PASS/FAIL) and final coverage report",
-        "details": "STOP after the report; do NOT modify public/data or deploy",
-        "status": "pending",
+        "content": "Emit decision gate and final report",
+        "details": "Emitting STOP report. Decision gate: FAIL. public/data NOT modified.",
+        "status": "in_progress",
         "priority": "high"
       }
     }
