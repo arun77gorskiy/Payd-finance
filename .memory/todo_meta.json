@@ -12,7 +12,7 @@
         "id": "2",
         "content": "Add display_name field for all 354 assets",
         "details": "Human-readable display_name. Preserve canonical_asset_id separately. Examples: akash -> Akash Network, bittensor -> Bittensor, internet-computer -> Internet Computer, mina-protocol -> Mina Protocol, aleph-im -> Aleph.im, ankr-network -> Ankr, crust-network -> Crust Network, render-token -> Render, helium -> Helium",
-        "status": "in_progress",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
