@@ -3,64 +3,64 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Backup projects_enriched.json before enrichment",
-        "details": "Create timestamped backup before any modifications. Atomic writes after enrichment.",
-        "status": "completed",
+        "content": "Validate GITHUB_TOKEN before full run",
+        "details": "Test GitHub API authentication. If 401, STOP. If valid, log rate limit.",
+        "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Add display_name field for all 354 assets",
-        "details": "Human-readable display_name. Preserve canonical_asset_id separately. Examples: akash -> Akash Network, bittensor -> Bittensor, internet-computer -> Internet Computer, mina-protocol -> Mina Protocol, aleph-im -> Aleph.im, ankr-network -> Ankr, crust-network -> Crust Network, render-token -> Render, helium -> Helium",
-        "status": "completed",
+        "content": "Preserve smoke-test artifacts and prepare FINAL paths",
+        "details": "Rename/backup tmp/payd_github_developer_* to *_smoke, ensure no contamination of FINAL output",
+        "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Add GitHub verified mapping (github_org/repo with provenance)",
-        "details": "For each canonical asset determine: github_org, github_repo, github_url, mapping_status, mapping_confidence, mapping_source. Never infer from ticker. For verified repos: commits_30d, commits_90d, contributors, releases_90d, last_commit_at, stars, forks, open_issues, repository_updated_at, developer_activity_status, retrieved_at. Use .value/.source/.retrieved_at/.status structure. NOT 0 if not available.",
+        "content": "Update collector for FINAL run requirements",
+        "details": "Add Helium regression control, dedup-by-id, zero/null semantics, multi-repo detection, no `value || 0` patterns",
         "status": "pending",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Add entity_type classification",
-        "details": "CHAIN / PROTOCOL / APPLICATION / INFRASTRUCTURE / TOKEN_ONLY / NO_TOKEN for each canonical asset. Drives DefiLlama applicability.",
+        "content": "Run full 330-project authenticated collection with checkpointing",
+        "details": "Resume from canonical_asset_id checkpoint; respect rate limits; exponential backoff",
         "status": "pending",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Add DefiLlama metrics (TVL, fees, revenue) with provenance",
-        "details": "Where applicable: TVL, TVL change 7d/30d, fees 24h/7d/30d, revenue 24h/7d/30d, chain/protocol identifier, last_updated. Do not fabricate Users from TVL or Revenue from Fees.",
+        "content": "Generate FINAL artifacts (JSON, CSV, report, failures, outliers, checkpoint)",
+        "details": "tmp/payd_github_developer_*_FINAL.{json,csv}",
         "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Update canonical-normalizer.js to expose new semantics",
-        "details": "Add display_name to canonical view. Expose developer.github object with .status (AVAILABLE/UNAVAILABLE/NOT_APPLICABLE) and .metrics with .value/.source/.retrieved_at. Same for defillama.tvl/fees/revenue.",
+        "content": "Run full validation pass (330/330, NaN/Infinity, timestamps, double-count, etc.)",
+        "details": "All 12 validation rules from the spec",
         "status": "pending",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "Run validation: 0 mismatches, 0 fake-zeros, 0 NaN, 0 regressions",
-        "details": "canonical=354, cross_sector_mismatches=0, duplicate IDs=0, duplicate CG/CMC=0, fake-zero=0, NaN=0, Infinity=0, market-data regression=0",
+        "content": "Build control-project report (28 named projects)",
+        "details": "Bitcoin, Ethereum, ..., Axelar with all required fields",
         "status": "pending",
         "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "Deploy and visual validate DePIN (Render, Helium, Akash)",
-        "details": "After enrichment deploy, inspect all 10 sectors. DePIN must show correct field states for Render, Helium, Akash (control assets).",
+        "content": "Outlier review (10k commits, 5k contributors, 500 releases, future ts, suspicious)",
+        "details": "Save outliers to FINAL outliers file; do not discard",
         "status": "pending",
         "priority": "high"
       },
       "9": {
         "id": "9",
-        "content": "Write before/after enrichment report",
-        "details": "tmp/payd_deep_enrichment_phase1_report.md with before/after coverage, control results for Render/Helium/Akash/Filecoin/Bittensor/ETH/SOL/Aave/Uniswap/Ondo.",
+        "content": "Emit decision gate (PASS/FAIL) and final coverage report",
+        "details": "STOP after the report; do NOT modify public/data or deploy",
         "status": "pending",
         "priority": "high"
       }
