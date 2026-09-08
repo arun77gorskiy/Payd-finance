@@ -435,6 +435,7 @@
 
     // -------------------------------------------------------------
     // Sectors — coverage по секторам (без max-limit)
+    // Источник: window.PAYD_INTEL_CACHED_DATA.canonical (ЕДИНЫЙ runtime map)
     // -------------------------------------------------------------
     async function renderSectors() {
         console.log('[PAYD-V2-Render][TRACE-13] renderSectors() called', {
@@ -442,20 +443,39 @@
             hasGrid: !!(document.getElementById('payd-v2-sector-grid')),
         });
         const grid = document.getElementById('payd-v2-sector-grid');
-        if (!grid || !State.projectService) return;
+        if (!grid) return;
+
+        // CANONICAL SOURCE: всегда читаем из window.PAYD_INTEL_CACHED_DATA.canonical
+        // Это ОДИН runtime map, общий для всех секторов. Никаких
+        // sector-specific частичных сборок.
+        const cached = (global.PAYD_INTEL_CACHED_DATA && global.PAYD_INTEL_CACHED_DATA.canonical) || null;
+        const runtime = cached && cached._ready ? cached : null;
+        if (!runtime) {
+            grid.innerHTML = '<div class="payd-v2-loading">Loading canonical runtime…</div>';
+            return;
+        }
 
         try {
-            const all = filterVerified(await State.projectService.getAllProjects());
+            const all = Array.from(runtime.projects.values());
+            const verified = filterVerified(all);
             console.log('[PAYD-V2-Render][TRACE-13] renderSectors projects:', {
-                verifiedCount: all.length,
+                total: all.length,
+                verifiedCount: verified.length,
+                sector_index_size: Object.keys(runtime.sectorIndex).length,
             });
+
+            // Группируем по sector_memberships (ОДИН проход, идемпотентно)
             const groups = {};
-            for (const p of all) {
-                const s = p.sector || 'Uncategorized';
-                if (!groups[s]) groups[s] = { total: 0, byStatus: { emerging: 0, watchlist: 0, core: 0, archive: 0 } };
-                groups[s].total += 1;
-                const st = p.status || 'core';
-                groups[s].byStatus[st] = (groups[s].byStatus[st] || 0) + 1;
+            for (const p of verified) {
+                const sectors = (p.sector_memberships && p.sector_memberships.length > 0)
+                    ? p.sector_memberships
+                    : ['Uncategorized'];
+                sectors.forEach(sector => {
+                    if (!groups[sector]) groups[sector] = { total: 0, byStatus: { emerging: 0, watchlist: 0, core: 0, archive: 0 } };
+                    groups[sector].total += 1;
+                    const st = p.status || 'core';
+                    groups[sector].byStatus[st] = (groups[sector].byStatus[st] || 0) + 1;
+                });
             }
 
             const max = Math.max(1, ...Object.values(groups).map(g => g.total));
@@ -463,7 +483,7 @@
             grid.innerHTML = Object.entries(groups).map(([sector, g]) => {
                 const widthPct = Math.min(100, Math.round((g.total / max) * 100));
                 return `
-                    <div class="payd-v2-sector-card">
+                    <div class="payd-v2-sector-card" data-sector="${escapeHtml(sector)}" role="button" tabindex="0">
                         <p class="payd-v2-sector-name">${escapeHtml(sector)}</p>
                         <div class="payd-v2-sector-counts">${g.total} projects · ⭐ ${g.byStatus.core} · 👁 ${g.byStatus.watchlist} · 🌱 ${g.byStatus.emerging} · 📦 ${g.byStatus.archive}</div>
                         <div class="payd-v2-sector-bar"><div class="payd-v2-sector-bar-fill" style="width:${widthPct}%;"></div></div>
@@ -471,9 +491,61 @@
                     </div>
                 `;
             }).join('');
+
+            // Click → filter projects by sector
+            grid.querySelectorAll('.payd-v2-sector-card').forEach(card => {
+                card.addEventListener('click', () => {
+                    const sector = card.dataset.sector;
+                    if (sector) {
+                        State.currentFilter = 'sector:' + sector;
+                        // Update filter buttons visually
+                        document.querySelectorAll('.payd-v2-filter').forEach(b => b.classList.remove('payd-v2-filter-active'));
+                        renderProjectsBySector(sector);
+                    }
+                });
+            });
         } catch (e) {
             console.error('[PAYD-V2-Render] renderSectors failed:', e);
         }
+    }
+
+    // -------------------------------------------------------------
+    // Render projects filtered by a single sector — используя canonical runtime
+    // ОДИН и тот же объект отображается во всех секторах, где он member.
+    // -------------------------------------------------------------
+    async function renderProjectsBySector(sector) {
+        const container = document.getElementById('payd-v2-projects');
+        if (!container) return;
+        const cached = (global.PAYD_INTEL_CACHED_DATA && global.PAYD_INTEL_CACHED_DATA.canonical) || null;
+        if (!cached || !cached._ready) {
+            container.innerHTML = '<div class="payd-v2-loading">Loading canonical…</div>';
+            return;
+        }
+
+        const ids = cached.sectorIndex[sector] || [];
+        const all = ids.map(id => cached.projects.get(id)).filter(Boolean);
+        const verified = filterVerified(all);
+        if (verified.length === 0) {
+            container.innerHTML = `<div class="payd-v2-empty">No verified assets in <strong>${escapeHtml(sector)}</strong>.</div>`;
+            return;
+        }
+
+        // CANONICAL CARD — единый шаблон для всех секторов
+        container.innerHTML = `
+            <div class="payd-v2-sector-header">
+                <h3>${escapeHtml(sector)} · ${verified.length} assets</h3>
+                <button class="payd-v2-btn payd-v2-btn-ghost payd-v2-btn-clear-sector" type="button">← All assets</button>
+            </div>
+            ${verified.map(p => createCanonicalProjectCard(p)).join('')}
+        `;
+        const clearBtn = container.querySelector('.payd-v2-btn-clear-sector');
+        if (clearBtn) clearBtn.addEventListener('click', () => {
+            document.querySelectorAll('.payd-v2-filter').forEach(b => {
+                if (b.dataset.status === 'all') b.classList.add('payd-v2-filter-active');
+                else b.classList.remove('payd-v2-filter-active');
+            });
+            renderProjects('all');
+        });
     }
 
     // =============================================================
@@ -584,6 +656,64 @@
             </div>
 
             ${tags.length > 0 ? `<div class="payd-v2-project-scores">${tags.slice(0, 4).map(t => `<span class="payd-v2-score-chip">#${escapeHtml(t)}</span>`).join('')}</div>` : ''}
+        </article>
+        `;
+    }
+
+    /**
+     * CANONICAL PROJECT CARD — единый шаблон для ВСЕХ секторов.
+     * Использует ТОЛЬКО поля из canonical runtime map.
+     * Один и тот же объект отображается в каждом sector, где он member.
+     * Все значения идентичны — sector membership управляет ТОЛЬКО местом показа.
+     *
+     * NO_TOKEN assets:
+     *   - market.* = null → отображается "Not Applicable"
+     *   - никаких fake $0 / 0%
+     *
+     * Multi-sector assets (например, bittensor ∈ {Layer 1, AI, DeSci}):
+     *   - одинаковые Market Cap, FDV, AI Score, Risk во всех трёх секторах
+     *   - sector_memberships показывается в виде pill'ов
+     */
+    function createCanonicalProjectCard(p) {
+        const disp = p._display || {};
+        const isNoToken = disp.is_no_token || p.tradable_asset === false;
+        const sectorPills = (p.sector_memberships || []).map(s => `<span class="payd-v2-sector-pill">${escapeHtml(s)}</span>`).join('');
+        // Format field with "Not Applicable" for NO_TOKEN, "Unavailable" for null tradable
+        const mField = (val, noTokenLabel) => {
+            if (isNoToken) return `<span class="payd-v2-na">${noTokenLabel || 'Not Applicable'}</span>`;
+            if (val === null || val === undefined) return `<span class="payd-v2-unavail">Unavailable</span>`;
+            return escapeHtml(val);
+        };
+        const numField = (val) => {
+            if (val === null || val === undefined) return `<span class="payd-v2-unavail">Unavailable</span>`;
+            return escapeHtml(String(val));
+        };
+
+        return `
+        <article class="payd-v2-project-card payd-v2-canonical-card ${isNoToken ? 'payd-v2-no-token' : ''}" data-project-id="${escapeHtml(p.id)}">
+            <div class="payd-v2-project-header">
+                <div>
+                    <div class="payd-v2-project-ticker">$${escapeHtml(p.symbol || p.id.toUpperCase())}</div>
+                    <p class="payd-v2-project-name">${escapeHtml(p.name || p.id)}</p>
+                    <div class="payd-v2-sector-pills">${sectorPills}</div>
+                </div>
+                <div class="payd-v2-badges">
+                    ${isNoToken ? '<span class="payd-v2-badge payd-v2-badge-no-token" title="Not a tradable asset">NO_TOKEN</span>' : '<span class="payd-v2-badge payd-v2-badge-tradable">Tradable</span>'}
+                    <span class="payd-v2-badge payd-v2-badge-status-${escapeHtml((p.identity_status || 'unknown').toLowerCase())}">${escapeHtml(p.identity_status || 'UNKNOWN')}</span>
+                </div>
+            </div>
+
+            <div class="payd-v2-canonical-grid">
+                <div class="payd-v2-metric"><span class="payd-v2-metric-label">Price</span><span class="payd-v2-metric-value">${mField(disp.price, 'Not Applicable')}</span></div>
+                <div class="payd-v2-metric"><span class="payd-v2-metric-label">Market Cap</span><span class="payd-v2-metric-value">${mField(disp.market_cap, 'Not Applicable')}</span></div>
+                <div class="payd-v2-metric"><span class="payd-v2-metric-label">FDV</span><span class="payd-v2-metric-value">${mField(disp.fdv, 'Not Applicable')}</span></div>
+                <div class="payd-v2-metric"><span class="payd-v2-metric-label">Volume 24h</span><span class="payd-v2-metric-value">${mField(disp.volume_24h, 'Not Applicable')}</span></div>
+                <div class="payd-v2-metric"><span class="payd-v2-metric-label">24h Change</span><span class="payd-v2-metric-value">${mField(disp.change_24h, 'Not Applicable')}</span></div>
+                <div class="payd-v2-metric"><span class="payd-v2-metric-label">TVL</span><span class="payd-v2-metric-value">${disp.tvl ? escapeHtml(disp.tvl) : (isNoToken ? '<span class="payd-v2-na">Not Applicable</span>' : '<span class="payd-v2-unavail">Unavailable</span>')}</span></div>
+                <div class="payd-v2-metric"><span class="payd-v2-metric-label">AI Score</span><span class="payd-v2-metric-value">${numField(disp.ai_score)}</span></div>
+                <div class="payd-v2-metric"><span class="payd-v2-metric-label">Risk</span><span class="payd-v2-metric-value">${numField(disp.risk_score)}</span></div>
+                <div class="payd-v2-metric"><span class="payd-v2-metric-label">Rank</span><span class="payd-v2-metric-value">${numField(disp.rank)}</span></div>
+            </div>
         </article>
         `;
     }

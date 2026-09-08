@@ -54,6 +54,9 @@
         const CRITICAL_SCRIPTS = [
             `${V2_BASE}/config/data-provider.config.js`,
             `${V2_BASE}/utils/field-utils.js`,
+            // CRITICAL: Canonical normalizer must load BEFORE preloader,
+            // чтобы preloader мог сразу построить unified runtime map.
+            `${V2_BASE}/canonical-normalizer.js`,
             `${V2_BASE}/data/IDataProvider.js`,
             `${V2_BASE}/data/IMarketDataProvider.js`,
             `${V2_BASE}/data/providers/LocalJsonDataProvider.js`,

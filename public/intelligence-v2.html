@@ -134,6 +134,8 @@
     </footer>
 
     <!-- V2 Self-Healing modules (must load BEFORE the bundle so they register globally) -->
+    <!-- CANONICAL NORMALIZER must load BEFORE preloader (critical) -->
+    <script src="/js/intelligence/canonical-normalizer.js" defer></script>
     <script src="/js/intelligence/intelligence-data-preloader.js" defer></script>
     <script src="/js/intelligence/healing/SectorIntegrityChecker.js" defer></script>
     <script src="/js/intelligence/healing/AutoDiscoveryService.js" defer></script>

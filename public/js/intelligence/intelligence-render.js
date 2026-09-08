@@ -10,7 +10,7 @@ const U = window.PAYD_INTEL_UTILS;
 const D = window.PAYD_INTEL.data;
 
 // Версия билда — выводится в консоль при загрузке модуля
-console.log("[PAYD Intelligence Render] VERSION: sector-filter-fix-v2 (2026-08-30-1)");
+console.log("[PAYD Intelligence Render] VERSION: canonical-sso-fix-v3 (2026-09-08)");
 
 /* === Canonical sector mapping (lowercase) ===
    Используется ТОЛЬКО для нормализации значений p.sector / p.sectors
@@ -107,6 +107,296 @@ const SECTOR_CATMAP = {
     depin:  { label: 'DePIN',   sectors: ['depin'] },
     ai:     { label: 'AI',      sectors: ['ai'] },
 };
+
+/* === CANONICAL SINGLE SOURCE OF TRUTH (v3) ===
+   V1 renderer теперь читает ВСЕ проектные данные из канонического
+   runtime map (window.PAYD_INTEL_CACHED_DATA.canonical), который
+   построен один раз модулем canonical-normalizer.js.
+   Это гарантирует, что один и тот же проект в разных секторах
+   показывает ИДЕНТИЧНЫЕ поля (Market Cap, FDV, AI Score, Risk, etc.). */
+function _getCanonicalRuntime() {
+    const cached = (window.PAYD_INTEL_CACHED_DATA && window.PAYD_INTEL_CACHED_DATA.canonical) || null;
+    if (cached && cached._ready && cached.projects instanceof Map && cached.projects.size > 0) {
+        return cached;
+    }
+    return null;
+}
+
+/* Маппинг V1-формата секторов (lowercase) → canonical Title Case */
+const V1_TO_CANONICAL_SECTOR = {
+    'l1':     'Layer 1',
+    'l2':     'Layer 2',
+    'defi':   'DeFi',
+    'rwa':    'RWA',
+    'gaming': 'Gaming',
+    'desci':  'DeSci',
+    'depin':  'DePIN',
+    'ai':     'AI',
+    'infrastructure': 'Infrastructure',
+    'zk':     'ZK',
+};
+
+/**
+ * Преобразует canonical-объект в V1 view shape.
+ * Все V1-функции ниже читают ИСКЛЮЧИТЕЛЬНО через эту функцию,
+ * чтобы гарантировать идентичность данных во всех секторах.
+ */
+function canonicalToV1View(p) {
+    if (!p) return null;
+    if (p._v1_view) return p._v1_view; // memoize
+
+    const m   = p.market || {};
+    const ai  = p.ai     || {};
+    const dev = p.developer || {};
+    const pro = p.protocol   || {};
+    const tok = p.tokenomics || {};
+
+    // Score fields
+    const aiScore     = (ai.payd_score != null) ? Math.round(ai.payd_score) : null;
+    const aiScore7d   = (m.change_7d_pct != null) ? Math.round(m.change_7d_pct * 10) / 10 : null;
+    const riskScore   = (ai.risk_score != null) ? Math.round(ai.risk_score) : null;
+    const riskLabel   = riskScore == null ? null
+        : (riskScore < 40 ? 'Low' : (riskScore < 60 ? 'Medium' : 'High'));
+
+    // Coverage / rating (best-effort, по наличию данных)
+    const availableCore = [
+        m.market_cap_usd, m.fdv_usd, m.volume_24h_usd,
+        dev.commits_30d, dev.stars, pro.tvl_usd, tok.circulating_pct
+    ].filter(v => v !== null && v !== undefined).length;
+    const dataCoveragePct = Math.round((availableCore / 7) * 100);
+    const ratingScore = (aiScore == null || dataCoveragePct < 50) ? null : Math.round((aiScore / 20) * 10) / 10;
+    const investmentRating = ratingScore == null ? null :
+        (ratingScore >= 4.0 ? 'Strong Buy' :
+         ratingScore >= 3.5 ? 'Buy' :
+         ratingScore >= 2.5 ? 'Hold' : 'Speculative');
+
+    // Sector display
+    const sectorV1 = (p.sector_memberships && p.sector_memberships[0]) || 'Uncategorized';
+
+    const v1 = {
+        // Identity
+        id:           p.id,
+        ticker:       String(p.symbol || p.id).toUpperCase(),
+        name:         p.name || p.id,
+        logo:         (p.name && p.name.length > 0) ? '◆' : '◇',
+        description:  p.description || '',
+        summary:      (p.description || '').slice(0, 200),
+        thesis:       (p.description || '').slice(0, 200),
+        sector:       sectorV1,
+        subsector:    sectorV1,
+        category:     p.sector_memberships || [],
+        sectors:      p.sector_memberships || [],
+
+        // Provider IDs
+        coingecko_id:  p.coingeckoId || null,
+        cmc_id:        p.cmcId || null,
+        cmc_slug:      p.cmcSlug || null,
+        website:       p.website || null,
+        x_handle:      p.xHandle || null,
+        github_org:    dev.github_org || p.githubOrg || null,
+        github_repo:   dev.github_repo || p.githubRepo || null,
+        tier:          p.tier || 'tier2',
+        verified_status: p.verifiedStatus || 'unverified',
+        last_verified_at: p.lastVerifiedAt || null,
+
+        // Market (canonical)
+        price_usd:          m.price_usd ?? null,
+        market_cap_usd:     m.market_cap_usd ?? null,
+        fdv_usd:            m.fdv_usd ?? null,
+        circulating_supply: m.circulating_supply ?? null,
+        total_supply:       m.total_supply ?? null,
+        max_supply:         m.max_supply ?? null,
+        volume_24h_usd:     m.volume_24h_usd ?? null,
+        change_24h_pct:     m.change_24h_pct ?? null,
+        change_7d_pct:      m.change_7d_pct ?? null,
+        change_30d_pct:     m.change_30d_pct ?? null,
+        ath:                m.ath ?? null,
+        ath_change_pct:     null,
+        atl:                m.atl ?? null,
+        market_cap_rank:    m.market_cap_rank ?? null,
+        tvl_usd:            pro.tvl_usd ?? null,
+        liquidity_usd:      null,
+
+        // Activity
+        developer_activity: dev.developer_activity ?? dev.commits_30d ?? null,
+        github_activity:    dev.commits_30d ?? null,
+
+        // Scores
+        payd_score:         aiScore,
+        conviction_score:   null,
+        alpha_score:        null,
+        risk_score:         riskScore,
+        risk_label:         riskLabel,
+        investment_rating:  investmentRating,
+        rating_score:       ratingScore,
+        data_coverage_pct:  dataCoveragePct,
+        ai_score:           aiScore,
+        ai_score_change_7d: aiScore7d,
+
+        // AI investment analysis
+        ai_opinion:        null,
+        bull_case:         [],
+        bear_case:         [],
+        investment_thesis: [],
+
+        // V1 misc
+        founded:      new Date().getFullYear() - 3,
+        headquarters: 'Unavailable',
+        team:         [],
+        investors:    [],
+        partnerships: [],
+        roadmap:      [],
+        advantages:   [],
+        disadvantages:[],
+        competitors:  [],
+        unlock_schedule: [],
+
+        // Sub-objects для V1 render
+        metrics: {
+            monthly_active_users: pro.users ?? null,
+            monthly_revenue_usd:  pro.revenue ?? null,
+            tvl_usd:              pro.tvl_usd ?? null,
+            nodes_count:          null,
+            market_cap_usd:       m.market_cap_usd ?? null,
+            fdv_usd:              m.fdv_usd ?? null,
+            price_usd:            m.price_usd ?? null,
+            volume_24h_usd:       m.volume_24h_usd ?? null,
+            change_24h_pct:       m.change_24h_pct ?? null,
+            change_7d_pct:        m.change_7d_pct ?? null,
+            change_30d_pct:       m.change_30d_pct ?? null,
+            circulating_supply:   m.circulating_supply ?? null,
+            total_supply:         m.total_supply ?? null,
+            max_supply:           m.max_supply ?? null,
+            liquidity_usd:        null,
+            next_unlock:          null,
+            next_unlock_pct:      tok.next_unlock_pct ?? null,
+            next_unlock_date:     tok.next_unlock_date ?? null,
+            next_unlock_usd_value:null,
+        },
+
+        github: {
+            stars:              dev.stars ?? null,
+            forks:              null,
+            commits_30d:        dev.commits_30d ?? null,
+            active_devs_30d:    dev.contributors ?? null,
+            contributors_total: dev.contributors ?? null,
+            last_commit:        dev.last_commit ?? null,
+            repo:               p.githubRepo || p.githubOrg || null,
+            primary_languages:  [],
+            language:           null,
+            open_issues:        null,
+            watchers:           null,
+            license:            null,
+            topics:             [],
+            archived:           false,
+        },
+
+        tokenomics: {
+            initial_supply:  null,
+            circulating_pct: (m.circulating_supply != null && m.total_supply > 0) ? (m.circulating_supply / m.total_supply * 100) : null,
+            vesting:         null,
+            utility:         null,
+            buyback_burn:    null,
+        },
+
+        social: {
+            twitter_handle: p.xHandle || null,
+            twitter_url:    p.xHandle ? `https://x.com/${p.xHandle}` : null,
+            telegram:       null,
+            discord:        null,
+            medium:         null,
+            blog:           null,
+            forum:          null,
+            reddit:         null,
+        },
+
+        community: {
+            twitter_followers:  null,
+            telegram_members:   null,
+            discord_members:    null,
+            reddit_subscribers: null,
+            github_stars:       dev.stars ?? null,
+        },
+
+        links: {
+            website:       p.website || null,
+            whitepaper:    null,
+            explorer:      null,
+            blog:          null,
+            documentation: null,
+            github:        p.githubRepo ? ('https://github.com/' + p.githubRepo) : (p.githubOrg ? ('https://github.com/' + p.githubOrg) : null),
+        },
+
+        market_data: {
+            price_usd:          m.price_usd ?? null,
+            market_cap_usd:     m.market_cap_usd ?? null,
+            fdv_usd:            m.fdv_usd ?? null,
+            volume_24h_usd:     m.volume_24h_usd ?? null,
+            change_24h_pct:     m.change_24h_pct ?? null,
+            change_7d_pct:      m.change_7d_pct ?? null,
+            change_30d_pct:     m.change_30d_pct ?? null,
+            circulating_supply: m.circulating_supply ?? null,
+            total_supply:       m.total_supply ?? null,
+            max_supply:         m.max_supply ?? null,
+            liquidity_usd:      null,
+            ath:                m.ath ?? null,
+            ath_change_pct:     null,
+            market_cap_rank:    m.market_cap_rank ?? null,
+        },
+
+        protocol_data: p.protocol || null,
+
+        ai_score_components: {
+            fundamentals: null,
+            tokenomics:   null,
+            team:         null,
+            traction:     null,
+        },
+
+        ai_score_history: ai.payd_score != null
+            ? [{ date: new Date().toISOString().slice(0, 10), score: aiScore }]
+            : [],
+
+        // Multi-sector metadata
+        sector_memberships: p.sector_memberships || [],
+        canonical_asset_id: p.canonical_asset_id || p.id,
+        is_canonical_view:  true,
+
+        // Debug
+        _v2_source: {
+            id: p.id,
+            symbol: p.symbol,
+            sector_memberships: p.sector_memberships,
+            has_real_scores: ai.payd_score != null,
+            field_mapping_version: '3.0-canonical-sso',
+        },
+    };
+    p._v1_view = v1; // memoize
+    return v1;
+}
+
+/** Возвращает список V1-view объектов из канонического runtime. */
+function getCanonicalV1List() {
+    const runtime = _getCanonicalRuntime();
+    if (!runtime) return null;
+    return Array.from(runtime.projects.values()).map(canonicalToV1View).filter(Boolean);
+}
+
+/** Возвращает V1-view по ticker или id. */
+function getCanonicalV1ByTicker(ticker) {
+    if (!ticker) return null;
+    const runtime = _getCanonicalRuntime();
+    if (!runtime) return null;
+    const tk = String(ticker).toUpperCase();
+    // Try direct lookup
+    let p = runtime.projects.get(tk) || runtime.projects.get(ticker) || runtime.projects.get(String(ticker).toLowerCase());
+    if (p) return canonicalToV1View(p);
+    // Search by symbol
+    for (const obj of runtime.projects.values()) {
+        if (obj && obj.symbol && obj.symbol.toUpperCase() === tk) return canonicalToV1View(obj);
+    }
+    return null;
+}
 
 const INTEL_RENDER = {
     /* === Generic helpers === */
@@ -282,7 +572,11 @@ const INTEL_RENDER = {
         // Attach research click → project detail
         container.querySelectorAll('[data-ticker]').forEach(el => {
             const t = el.dataset.ticker;
-            if (t && D.projects && D.projects.projects[t]) {
+            if (!t) return;
+            // CANONICAL SSO: используем canonical runtime для проверки существования
+            const inCanonical = !!getCanonicalV1ByTicker(t);
+            const inLegacy    = !!(D.projects && D.projects.projects[t]);
+            if (inCanonical || inLegacy) {
                 el.addEventListener('click', () => window.PAYD_INTEL_ROUTER.go('project', { ticker: t }));
             }
         });
@@ -792,12 +1086,18 @@ const INTEL_RENDER = {
         U.observeReveal(container);
     },
 
-    /* === Render: Project Detail (Project Research) === */
+    /* === Render: Project Detail (Project Research) ===
+       CANONICAL SSO: проект ищется в каноническом runtime по id/symbol.
+       Тот же объект, что и в sector views — никаких расхождений. */
     renderProjectDetail(container, ticker) {
-        const d = D.projects;
-        if (!d) return this.renderLoading(container);
-
-        const p = d.projects[ticker];
+        // Приоритет 1: канонический runtime
+        let p = getCanonicalV1ByTicker(ticker);
+        // Приоритет 2: legacy fallback
+        if (!p) {
+            const d = D.projects;
+            if (!d) return this.renderLoading(container);
+            p = d.projects[ticker] || null;
+        }
         if (!p) {
             container.innerHTML = `
                 <button class="intel-detail-back" id="intel-back-btn">← Back to Intelligence</button>
@@ -1286,18 +1586,26 @@ const INTEL_RENDER = {
         `;
     },
 
-    /* === Research Library === */
+    /* === Research Library ===
+       CANONICAL SSO: всегда читаем из канонического runtime map. */
     renderResearch(container) {
+        const canonicalList = getCanonicalV1List();
+        if (canonicalList) {
+            return this._renderResearchBody(container, canonicalList);
+        }
+        // Fallback на legacy данные, если canonical ещё не готов
         const d = D.projects;
         if (!d) return this.renderLoading(container);
+        return this._renderResearchBody(container, Object.values(d.projects));
+    },
 
-        const allProjects = Object.values(d.projects);
-        const sorted = allProjects.sort(U.compareByScoreDesc(p => p.ai_score));
+    _renderResearchBody(container, allProjects) {
+        const sorted = [...allProjects].sort(U.compareByScoreDesc(p => p.ai_score));
 
         container.innerHTML = `
             <div class="intel-subhead reveal-on-scroll">
                 <div>
-                    <h3>Research Library · ${allProjects.length} deep-dive reports</h3>
+                    <h3>Research Library · ${sorted.length} deep-dive reports</h3>
                     <div class="intel-subhead-meta">Pre-computed institutional research. Updated by AI agent each cycle.</div>
                 </div>
             </div>
@@ -1355,25 +1663,39 @@ const INTEL_RENDER = {
         U.observeReveal(container);
     },
 
-    /* === AI Category View (Layer 1, Layer 2, DeFi, RWA, Gaming, DeSci, DePIN, AI) === */
+    /* === AI Category View (Layer 1, Layer 2, DeFi, RWA, Gaming, DeSci, DePIN, AI) ===
+       CANONICAL SSO: фильтрация по sectorIndex канонического runtime.
+       Multi-sector проекты появляются во всех своих секторах
+       с ИДЕНТИЧНЫМИ полями (Market Cap, FDV, AI Score, Risk, ...). */
     renderAICategoryView(container, cat) {
-        const d = D.projects;
-        if (!d) {
-            return this.renderLoading(container);
+        const meta = SECTOR_CATMAP[cat] || SECTOR_CATMAP.l1;
+        const canonSector = V1_TO_CANONICAL_SECTOR[cat];
+
+        // Приоритет 1: канонический runtime (single source of truth)
+        let filtered = null;
+        const runtime = _getCanonicalRuntime();
+        if (runtime && canonSector) {
+            const ids = runtime.sectorIndex[canonSector] || [];
+            filtered = ids
+                .map(id => runtime.projects.get(id))
+                .filter(Boolean)
+                .map(canonicalToV1View)
+                .filter(Boolean);
         }
 
-        const allProjects = Object.values(d.projects);
+        // Приоритет 2: legacy fallback (если canonical ещё не готов)
+        if (!filtered) {
+            const d = D.projects;
+            if (!d) return this.renderLoading(container);
+            const allProjects = Object.values(d.projects);
+            const targetCanons = meta.sectors;
+            filtered = allProjects.filter(p => {
+                const projectSectors = normalizeSectorValue(p);
+                return projectSectors.some(s => targetCanons.indexOf(s) !== -1);
+            });
+        }
 
-        const meta = SECTOR_CATMAP[cat] || SECTOR_CATMAP.l1;
-        const targetCanons = meta.sectors;
-
-        const filtered = allProjects.filter(p => {
-            const projectSectors = normalizeSectorValue(p);
-            // === КАНОНИЧЕСКИЙ EXACT MATCH по lowercase ===
-            return projectSectors.some(s => targetCanons.indexOf(s) !== -1);
-        });
-
-        const sorted = filtered.sort(U.compareByScoreDesc(p => p.ai_score));
+        const sorted = [...filtered].sort(U.compareByScoreDesc(p => p.ai_score));
 
         container.innerHTML = `
             <div class="intel-subhead reveal-on-scroll">

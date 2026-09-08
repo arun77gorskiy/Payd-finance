@@ -53,7 +53,7 @@
     }
 
     // Создаём CACHED_DATA до загрузки — чтобы render мог использовать его немедленно
-    const EMPTY_PROJECTS = { last_updated: new Date().toISOString(), projects: {}, _fallback: true, _preloader: true };
+    const EMPTY_PROJECTS = { last_updated: new Date().toISOString(), projects: {}, _fallback: true, _preloader: true, _canonical: true };
     const EMPTY_OVERVIEW = {
         last_updated: new Date().toISOString(),
         next_run_at: new Date().toISOString(),
@@ -73,12 +73,13 @@
     window.PAYD_INTEL_CACHED_DATA = {
         projects: cacheGet('projects') || EMPTY_PROJECTS,
         overview: cacheGet('overview') || EMPTY_OVERVIEW,
+        canonical: { projects: new Map(), list: [], sectorIndex: {}, stats: null, _preloader: true, _ready: false },
         depin: { last_updated: new Date().toISOString(), sector: 'DePIN', total_projects: 0, projects: [] },
         aiInfra: { last_updated: new Date().toISOString(), categories: {} },
         _preloaded: false,
     };
 
-    log('Empty cached data structure created');
+    log('Empty cached data structure created (canonical-ready)');
 
     // Нормализация секторов: V1/V2 renderer ожидают формат "Layer 1", "DePIN"
     // а projects.json хранит в lowercase ('layer1', 'depin').
@@ -120,10 +121,25 @@
         const projects = projectsRes.status === 'fulfilled' ? projectsRes.value : null;
         const enriched = enrichedRes.status === 'fulfilled' ? enrichedRes.value : null;
 
-        if (projects && Array.isArray(projects) && projects.length > 0) {
-            log(`✓ projects.json: ${projects.length} projects`);
+        // ===============================================================
+        // CANONICAL RUNTIME: ОДИН источник правды для всех секторов
+        // Используем projects_enriched.json (canonical, 354 records)
+        // ===============================================================
+        let canonicalRuntime = null;
+        if (enriched && Array.isArray(enriched.projects) && enriched.projects.length > 0) {
+            if (window.PAYD_INTEL && window.PAYD_INTEL.Canonical && typeof window.PAYD_INTEL.Canonical.build === 'function') {
+                canonicalRuntime = window.PAYD_INTEL.Canonical.build(enriched.projects);
+                log(`✓ Canonical runtime built from projects_enriched.json: ${canonicalRuntime.stats.total} assets`);
+            } else {
+                log('⚠ Canonical normalizer not loaded yet, will build on demand');
+            }
+        }
 
-            // Строим минимальный projects dict с тикерами — этого достаточно для быстрого рендера
+        if (projects && Array.isArray(projects) && projects.length > 0) {
+            log(`✓ projects.json: ${projects.length} projects (used for V1 fallback only)`);
+
+            // Строим минимальный projects dict с тикерами — для V1 fallback
+            // ВАЖНО: это НЕ источник правды. Canonical runtime — выше.
             const projectsDict = {};
             const enrichedMap = new Map();
             if (enriched && Array.isArray(enriched.projects)) {
@@ -219,6 +235,10 @@
             window.PAYD_INTEL_CACHED_DATA = {
                 projects: { last_updated: new Date().toISOString(), projects: projectsDict, _preloader: true, _from_preloader: true },
                 overview: overviewData,
+                // CANONICAL RUNTIME — единственный источник правды для всех секторов
+                canonical: canonicalRuntime
+                    ? { ...canonicalRuntime, _preloader: true, _ready: true }
+                    : { projects: new Map(), list: [], sectorIndex: {}, stats: null, _preloader: true, _ready: false, _deferred: true },
                 depin: {
                     last_updated: new Date().toISOString(),
                     sector: 'DePIN',
@@ -238,6 +258,7 @@
                 window.dispatchEvent(new CustomEvent('payd:preloader-ready', {
                     detail: {
                         projects: Object.keys(projectsDict).length,
+                        canonical_total: canonicalRuntime ? canonicalRuntime.stats.total : 0,
                         depin: depinProjects.length,
                         sectors: sectorsCount,
                         ts: Date.now(),
@@ -250,7 +271,7 @@
             // чтобы main.js знал, что preloader отработал (с пустым результатом)
             try {
                 window.dispatchEvent(new CustomEvent('payd:preloader-ready', {
-                    detail: { projects: 0, depin: 0, error: 'no_projects', ts: Date.now() }
+                    detail: { projects: 0, canonical_total: 0, depin: 0, error: 'no_projects', ts: Date.now() }
                 }));
             } catch (e) { /* CustomEvent unsupported */ }
         }

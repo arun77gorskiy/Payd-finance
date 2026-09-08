@@ -3,30 +3,44 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Создать dry-run preview `projects_enriched_v2.json` (с применёнными identity-коррекциями)",
-        "details": "",
+        "content": "Refactor V1 renderer (intelligence-render.js) to use canonical runtime map",
+        "details": "Add canonicalToV1View adapter. Replace Object.values(D.projects) with canonical list in renderResearch/renderAICategoryView. Use canonical object by ID in renderProjectDetail. Preserve all current UI behavior (ai_score, risk_label, investment_rating, etc.)",
         "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Сгенерировать diff-отчёт current vs proposed",
-        "details": "",
-        "status": "pending",
+        "content": "Build cross-sector consistency test script",
+        "details": "Test BTC, ETH, Bittensor, Akash, Filecoin, IMX, ICP, MINA, Polygon, Helium, Render. For each multi-sector asset, ensure identical canonical fields across all sectors. Output tmp/payd_cross_sector_consistency_report.json",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Создать apply-скрипт (готовый, но не запускать)",
-        "details": "",
-        "status": "pending",
+        "content": "Run consistency test against live data and verify cross_sector_mismatches=0",
+        "details": "Use local canonical map. For each canonical asset in sample list, compare fields across all its sectors",
+        "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Финальный отчёт: что изменится в production после approval",
-        "details": "",
-        "status": "pending",
+        "content": "Write final consistency + refactor report",
+        "details": "Create tmp/payd_frontend_canonical_refactor_report.md with: root cause, files changed, before/after architecture, project count, sector counts, multi-sector count, cross-sector mismatch count, asset consistency results",
+        "status": "in_progress",
+        "priority": "high"
+      },
+      "5": {
+        "id": "5",
+        "content": "Redeploy production",
+        "details": "Deploy via deploy tool. Verify live URL serves new build. Confirm canonical normalizer is loaded before preloader. Confirm 354 records served.",
+        "status": "in_progress",
+        "priority": "high"
+      },
+      "6": {
+        "id": "6",
+        "content": "Final delivery: report + LIVE URL",
+        "details": "Present deliver_assets with deployment URL, consistency report, refactor report",
+        "status": "in_progress",
         "priority": "high"
       }
     }
