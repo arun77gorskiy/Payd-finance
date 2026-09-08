@@ -3,79 +3,30 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "STEP 1: Build canonical asset model structure",
+        "content": "Создать dry-run preview `projects_enriched_v2.json` (с применёнными identity-коррекциями)",
         "details": "",
-        "status": "completed",
+        "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "STEP 2: Verify all duplicate provider IDs (11 CG + 17 CMC groups)",
+        "content": "Сгенерировать diff-отчёт current vs proposed",
         "details": "",
-        "status": "completed",
+        "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "STEP 3: Resolve special critical groups (AKT, FIL, TAO, IMX, ICP, POL, MINA, FRAX, APE, MINT + 8 suspicious CMC)",
+        "content": "Создать apply-скрипт (готовый, но не запускать)",
         "details": "",
-        "status": "completed",
+        "status": "pending",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "STEP 4: Fix mina-protocol duplicate (2 records)",
+        "content": "Финальный отчёт: что изменится в production после approval",
         "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "5": {
-        "id": "5",
-        "content": "STEP 5: Identify NO_TOKEN entities (10+ projects)",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "6": {
-        "id": "6",
-        "content": "STEP 6: Remove wrong identifiers (data-union, matrixport-rwa)",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "7": {
-        "id": "7",
-        "content": "STEP 7: Revalidate 27 G_PROVIDER_MAPPING_GAP records",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "8": {
-        "id": "8",
-        "content": "STEP 8: Skip derived market cap (per user instruction)",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "9": {
-        "id": "9",
-        "content": "STEP 9: Create 4 proposed identity files (registry, corrections JSON, corrections CSV, conflicts)",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "10": {
-        "id": "10",
-        "content": "STEP 10: Validate against 10 rules",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "11": {
-        "id": "11",
-        "content": "STEP 11: Generate final report",
-        "details": "",
-        "status": "completed",
+        "status": "pending",
         "priority": "high"
       }
     }
