@@ -165131,14 +165131,18 @@ function escapeHtmlText(s) {
 <script src="js/intelligence/services/bootstrap.js"></script>
 
 <!-- Existing Intelligence Module -->
-<script src="js/intelligence/intelligence-data-preloader.js?v=20260906-3"></script>
-<script src="js/intelligence/intelligence-utils.js"></script>
-<script src="js/intelligence/intelligence-data.js?v=20260906-3"></script>
-<script src="js/intelligence/intelligence-verified-ui.js?v=20260906-3"></script>
-<script src="js/intelligence/intelligence-render.js?v=20260906-3"></script>
+<!-- Canonical Normalizer (Single Source of Truth) — MUST load BEFORE preloader -->
+<script src="js/intelligence/canonical-normalizer.js?v=20260908-1"></script>
+<!-- Intelligence V2 Render (uses canonical runtime) -->
+<script src="js/intelligence/intelligence-v2-render.js?v=20260908-1"></script>
+<script src="js/intelligence/intelligence-data-preloader.js?v=20260908-1"></script>
+<script src="js/intelligence/intelligence-utils.js?v=20260908-1"></script>
+<script src="js/intelligence/intelligence-data.js?v=20260908-1"></script>
+<script src="js/intelligence/intelligence-verified-ui.js?v=20260908-1"></script>
+<script src="js/intelligence/intelligence-render.js?v=20260908-1"></script>
 <!-- Payd Alpha Engine — UI для 3 score cards, AI summary, history chart, auto-labels, timeline -->
-<script src="js/intelligence/intelligence-alpha-render.js?v=20260906-3"></script>
-<script src="js/intelligence/intelligence-main.js?v=20260906-3"></script>
+<script src="js/intelligence/intelligence-alpha-render.js?v=20260908-1"></script>
+<script src="js/intelligence/intelligence-main.js?v=20260908-1"></script>
 <!-- Architecture init MUST be last so all globals are loaded -->
-<script src="js/intelligence/intelligence-services-init.js"></script>
+<script src="js/intelligence/intelligence-services-init.js?v=20260908-1"></script>
 </html>

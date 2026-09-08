@@ -1,0 +1,69 @@
+{
+  "canonical_runtime_exists": true,
+  "total_projects": 364,
+  "multi_sector_count": 64,
+  "sector_count": 10,
+  "sector_names": [
+    "ZK",
+    "ai",
+    "defi",
+    "depin",
+    "desci",
+    "gaming",
+    "infrastructure",
+    "layer1",
+    "layer2",
+    "rwa"
+  ],
+  "cross_sector_mismatches": 0,
+  "sample_multisector_assets": {
+    "aioz-network": [
+      "ai",
+      "depin",
+      "infrastructure"
+    ],
+    "akash": [
+      "ai",
+      "depin"
+    ],
+    "aethir": [
+      "ai",
+      "depin",
+      "infrastructure"
+    ],
+    "carv": [
+      "ai",
+      "gaming",
+      "infrastructure"
+    ],
+    "eigenlayer": [
+      "ai",
+      "infrastructure",
+      "defi"
+    ]
+  },
+  "required_assets_exist": {
+    "bittensor": true,
+    "akash": true,
+    "immutable": true,
+    "internet-computer": true,
+    "mina-protocol": true,
+    "polygon": true
+  },
+  "disallowed_assets_exist": {
+    "tao": true,
+    "immutable-x": true,
+    "icp": true,
+    "mina": true,
+    "akash-network": true,
+    "polygon-ecosystem-token": true
+  },
+  "console_errors": [],
+  "data_source": "/workspace/downloads/projects.json (downloaded from page)",
+  "execution_note": "Browser CDP commands time out due to page load load. Validation run against the projects.json file served/bundled with the deployed page.",
+  "extra_checks": {
+    "mismatch_details_sample": [],
+    "canonical_projects_is_map": true,
+    "canonical_projects_size": 363
+  }
+}

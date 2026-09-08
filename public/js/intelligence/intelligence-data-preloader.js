@@ -20,6 +20,45 @@
 
     log('Preloader started');
 
+    // === BUILD VERSION GUARD ===
+    // При смене версии билда автоматически инвалидируем весь кэш,
+    // чтобы пользователь не получал устаревшие данные после редеплоя.
+    const BUILD_VERSION = '20260908-1';
+    try {
+        const stored = (typeof localStorage !== 'undefined')
+            ? localStorage.getItem('payd_build_version')
+            : null;
+        if (stored !== BUILD_VERSION) {
+            // Чистим всё связанное с предыдущим билдом
+            try {
+                if (typeof sessionStorage !== 'undefined') {
+                    const keys = [];
+                    for (let i = 0; i < sessionStorage.length; i++) {
+                        const k = sessionStorage.key(i);
+                        if (k && (k.indexOf('payd_pre_') === 0 || k.indexOf('payd_') === 0)) {
+                            keys.push(k);
+                        }
+                    }
+                    keys.forEach(k => sessionStorage.removeItem(k));
+                }
+            } catch (_) {}
+            try {
+                if (typeof localStorage !== 'undefined') {
+                    const keys = [];
+                    for (let i = 0; i < localStorage.length; i++) {
+                        const k = localStorage.key(i);
+                        if (k && (k.indexOf('payd_pre_') === 0 || k.indexOf('payd_') === 0 || k.indexOf('payd_intel') === 0 || k.indexOf('payd_canon') === 0)) {
+                            keys.push(k);
+                        }
+                    }
+                    keys.forEach(k => localStorage.removeItem(k));
+                    localStorage.setItem('payd_build_version', BUILD_VERSION);
+                }
+            } catch (_) {}
+            log(`Build version changed (${stored} -> ${BUILD_VERSION}), cache invalidated`);
+        }
+    } catch (_) {}
+
     // Утилита fetch с таймаутом
     function fetchWithTimeout(url, ms = 4000) {
         const c = (typeof AbortController !== 'undefined') ? new AbortController() : null;
