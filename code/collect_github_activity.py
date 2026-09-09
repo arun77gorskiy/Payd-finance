@@ -47,7 +47,7 @@ OUT_FAILURES = 'tmp/payd_github_developer_enrichment_failures.json'
 OUT_CHECKPOINT = 'tmp/payd_github_developer_checkpoint.json'
 OUT_CSV = 'tmp/payd_github_developer_enrichment.csv'
 
-GITHUB_TOKEN = os.environ.get('GITHUB_TOKEN', '').strip()
+GITHUB_TOKEN = os.environ.get('PAYD_GITHUB_TOKEN') or os.environ.get('GITHUB_TOKEN', '').strip()
 API_BASE = 'https://api.github.com'
 
 NOW = datetime.now(timezone.utc)
