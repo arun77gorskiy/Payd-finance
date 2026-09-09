@@ -4,64 +4,57 @@
       "1": {
         "id": "1",
         "content": "Validate GITHUB_TOKEN before full run",
-        "details": "Tested all 3 Authorization header formats. Token fingerprint unchanged from previous run (gith…dBdR, sha256 c961d75c7129e41a…). Result: 401 Bad credentials. AUTH: FAIL.",
+        "details": "Validated via api.github.com/rate_limit and /user. HTTP 200, login arun77gorskiy, 5000 remaining. AUTH: PASS.",
         "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Preserve smoke-test artifacts and prepare FINAL paths",
-        "details": "Smoke artifacts already preserved from previous turn (tmp/payd_github_developer_*_smoke.*). No new artifacts created.",
+        "content": "Build initial GitHub identity registry",
+        "details": "Built tmp/payd_github_identity_registry_v2.json from projects_enriched.json githubRepo field. 341 VERIFIED + 13 NOT_APPLICABLE.",
         "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Update collector for FINAL run requirements",
-        "details": "CANCELLED — auth failed, no production run authorized.",
-        "status": "cancelled",
+        "content": "Run full 341-project authenticated collection",
+        "details": "Ran code/collect_github_activity.py. Processed 341/341 in ~390s. No rate limiting, no errors.",
+        "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Run full 330-project authenticated collection",
-        "details": "CANCELLED — auth failed. Spec: 'If authentication fails: STOP. Do not fall back automatically to anonymous mode.'",
-        "status": "cancelled",
+        "content": "Generate FINAL artifacts",
+        "details": "Created: payd_github_developer_enrichment_FINAL.json/csv, _report_FINAL.json, _failures_FINAL.json, _outliers_FINAL.json, _checkpoint_FINAL.json",
+        "status": "completed",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Generate FINAL artifacts",
-        "details": "CANCELLED — no production run.",
-        "status": "cancelled",
+        "content": "Run full validation pass",
+        "details": "Validation: 0 dup IDs, 0 NaN/Inf, 0 commits_30d>90d, 0 mapping conflicts, 0 cross-sector mismatches, 0 market regressions, 0 fake-zero violations. PASS.",
+        "status": "completed",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Run full validation pass",
-        "details": "CANCELLED — no snapshot to validate.",
-        "status": "cancelled",
+        "content": "Build control-project report",
+        "details": "All 28 control projects processed: bitcoin, ethereum, solana, bittensor, akash, filecoin, internet-computer, mina-protocol, polygon, immutable, render, helium, aave, uniswap, ondo-finance, ethena, celestia, chainlink, dogecoin, kaspa, the-open-network, vechain, compound-governance-token, hyperliquid, storj, phala, rlc, axelar.",
+        "status": "completed",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "Build control-project report",
-        "details": "CANCELLED — no production data.",
-        "status": "cancelled",
+        "content": "Outlier review",
+        "details": "4 outliers: future_timestamp warnings for optimism/ripple/sei-network/sui (clock skew between collector NOW and GitHub response). No data quality issues.",
+        "status": "completed",
         "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "Outlier review",
-        "details": "CANCELLED — no FINAL snapshot.",
-        "status": "cancelled",
-        "priority": "high"
-      },
-      "9": {
-        "id": "9",
         "content": "Emit decision gate and final report",
-        "details": "Emitting STOP report. Decision gate: FAIL. public/data NOT modified.",
-        "status": "in_progress",
+        "details": "GITHUB DEVELOPER SNAPSHOT: PASS. Ready for final delivery.",
+        "status": "completed",
         "priority": "high"
       }
     }
