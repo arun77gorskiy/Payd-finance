@@ -496,19 +496,25 @@ def main():
         print('FATAL: Whitelist assertion failed. Aborting.')
         sys.exit(1)
 
-    whitelist_ids = set(wl['whitelist'])
+    # --- Deterministic queue: sorted iteration over authoritative whitelist ---
+    # Use a SORTED list (not a set) so that `--offset` / `--limit` produce
+    # stable, reproducible slices. Membership checks still use a set for O(1) lookup.
+    whitelist_ids_set = set(wl['whitelist'])
+    whitelist_ids_sorted = sorted(wl['whitelist'])
     whitelist_meta = {e['canonical_id']: e for e in wl['whitelist_meta']}
-    print(f'Frozen whitelist count: {len(whitelist_ids)}')
-    assert len(whitelist_ids) == 298, f'Expected 298, got {len(whitelist_ids)}'
+    print(f'Frozen whitelist count: {len(whitelist_ids_set)}')
+    assert len(whitelist_ids_set) == 298, f'Expected 298, got {len(whitelist_ids_set)}'
+    assert len(whitelist_ids_sorted) == 298, f'Expected 298 sorted, got {len(whitelist_ids_sorted)}'
+    assert len(set(whitelist_ids_sorted)) == 298, f'Duplicate canonical IDs in whitelist: {298 - len(set(whitelist_ids_sorted))}'
 
     # Load authoritative registry for repository roles and repo URLs
     with open(REGISTRY_PATH, 'r') as f:
         reg = json.load(f)
     registry = reg['registry']
 
-    # Build collection list (only VERIFIED canonical IDs)
+    # Build collection list (only VERIFIED canonical IDs) — DETERMINISTIC order
     projects_to_collect = []
-    for pid in whitelist_ids:
+    for pid in whitelist_ids_sorted:
         entry = whitelist_meta[pid]
         repos = entry.get('official_repositories', [])
         if not repos:
@@ -545,7 +551,7 @@ def main():
     # Sanity check: no REVIEW or NOT_APPLICABLE
     for project in projects_to_collect:
         pid = project['canonical_id']
-        assert pid in whitelist_ids, f'{pid} not in whitelist'
+        assert pid in whitelist_ids_set, f'{pid} not in whitelist'
         # Defensive: re-check registry status
         assert registry[pid]['github_mapping_status'] == 'VERIFIED', (
             f'{pid} is not VERIFIED in registry'
@@ -644,7 +650,7 @@ def main():
         }, f, ensure_ascii=False, indent=2)
 
     # Save report
-    _save_report(snapshot, len(projects_to_collect), counter, len(whitelist_ids))
+    _save_report(snapshot, len(projects_to_collect), counter, len(whitelist_ids_set))
     print()
     print('Done. Snapshot saved to', OUT_SNAPSHOT)
     print('Report saved to', OUT_REPORT)
