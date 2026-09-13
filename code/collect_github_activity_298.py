@@ -323,9 +323,13 @@ def aggregate_metrics(per_repo_metrics, project_id, repos_with_roles):
     any_rate_limited = False
     any_api_error = False
     all_failed = True
+    all_archived = True
+    has_non_archived_repo = False
     statuses_seen = set()
+    per_repo_count = 0
 
     for rm in per_repo_metrics:
+        per_repo_count += 1
         statuses_seen.add(rm['collection_status'])
         if rm['collection_status'] == 'RATE_LIMITED':
             any_rate_limited = True
@@ -334,6 +338,13 @@ def aggregate_metrics(per_repo_metrics, project_id, repos_with_roles):
         if rm['collection_status'] in ('AVAILABLE',):
             all_failed = False
             has_any_available = True
+        # Track archived state per approved repository
+        if not rm.get('is_archived', False):
+            all_archived = False
+            has_non_archived_repo = True
+        else:
+            # archived repo still counts as a valid response (not a hard fail)
+            all_failed = False
 
         # Commits
         if rm['commits_30d'] is not None:
@@ -427,12 +438,19 @@ def aggregate_metrics(per_repo_metrics, project_id, repos_with_roles):
         canonical['days_since_last_commit'] = None
 
     # Status logic
+    # Canonical status is derived from ALL approved repositories:
+    # - If at least one approved repo is analytically active, project is AVAILABLE
+    # - If every approved repo is archived, project is ARCHIVED
+    # - Rate limits, hard API errors, and complete failures are surfaced explicitly
     if any_rate_limited:
         canonical['collection_status'] = 'RATE_LIMITED'
     elif all_failed:
         canonical['collection_status'] = 'UNAVAILABLE'
     elif any_api_error:
         canonical['collection_status'] = 'API_ERROR'
+    elif per_repo_count > 0 and all_archived and not has_non_archived_repo:
+        # Every approved repo returned archived=True and there is no active repo
+        canonical['collection_status'] = 'ARCHIVED'
     elif has_any_available:
         canonical['collection_status'] = 'AVAILABLE'
     else:
