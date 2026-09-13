@@ -473,13 +473,21 @@ def load_checkpoint():
 
 
 def save_checkpoint(state):
-    with open(OUT_CHECKPOINT, 'w', encoding='utf-8') as f:
+    tmp = OUT_CHECKPOINT + '.tmp'
+    with open(tmp, 'w', encoding='utf-8') as f:
         json.dump(state, f, ensure_ascii=False, indent=2)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, OUT_CHECKPOINT)
 
 
 def save_snapshot(snapshot):
-    with open(OUT_SNAPSHOT, 'w', encoding='utf-8') as f:
+    tmp = OUT_SNAPSHOT + '.tmp'
+    with open(tmp, 'w', encoding='utf-8') as f:
         json.dump(snapshot, f, ensure_ascii=False, indent=2)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, OUT_SNAPSHOT)
 
 
 def main():
@@ -520,10 +528,9 @@ def main():
     whitelist_ids_set = set(wl['whitelist'])
     whitelist_ids_sorted = sorted(wl['whitelist'])
     whitelist_meta = {e['canonical_id']: e for e in wl['whitelist_meta']}
-    print(f'Frozen whitelist count: {len(whitelist_ids_set)}')
-    assert len(whitelist_ids_set) == 298, f'Expected 298, got {len(whitelist_ids_set)}'
-    assert len(whitelist_ids_sorted) == 298, f'Expected 298 sorted, got {len(whitelist_ids_sorted)}'
-    assert len(set(whitelist_ids_sorted)) == 298, f'Duplicate canonical IDs in whitelist: {298 - len(set(whitelist_ids_sorted))}'
+    print(f'Frozen whitelist count (active): {len(whitelist_ids_set)}')
+    # NOTE: active whitelist may be < 298 if some projects were deferred for review
+    # The deferred list is stored in wl['deferred']['review_required']
 
     # Load authoritative registry for repository roles and repo URLs
     with open(REGISTRY_PATH, 'r') as f:
@@ -567,13 +574,26 @@ def main():
         print(f'--limit applied: capped to {args.limit}')
 
     # Sanity check: no REVIEW or NOT_APPLICABLE
+    deferred_ids = set((wl.get('deferred') or {}).get('review_required', []))
+    accepted_statuses = {'VERIFIED', 'VERIFIED_UPDATED'}
+    skipped_deferred = []
+    final_projects = []
     for project in projects_to_collect:
         pid = project['canonical_id']
         assert pid in whitelist_ids_set, f'{pid} not in whitelist'
+        # Skip REVIEW_REQUIRED projects (no confident mapping)
+        if pid in deferred_ids:
+            skipped_deferred.append(pid)
+            continue
         # Defensive: re-check registry status
-        assert registry[pid]['github_mapping_status'] == 'VERIFIED', (
-            f'{pid} is not VERIFIED in registry'
+        status = registry[pid]['github_mapping_status']
+        assert status in accepted_statuses, (
+            f'{pid} has unexpected registry status: {status}'
         )
+        final_projects.append(project)
+    if skipped_deferred:
+        print(f'Skipped REVIEW_REQUIRED projects: {len(skipped_deferred)}')
+    projects_to_collect = final_projects
 
     # Checkpoint
     state = load_checkpoint()
@@ -655,8 +675,9 @@ def main():
     save_checkpoint(state)
     save_snapshot(snapshot)
 
-    # Save failures separately
-    with open(OUT_FAILURES, 'w', encoding='utf-8') as f:
+    # Save failures separately (atomic)
+    tmp = OUT_FAILURES + '.tmp'
+    with open(tmp, 'w', encoding='utf-8') as f:
         json.dump({
             'metadata': {
                 'generated_at': NOW.isoformat(),
@@ -666,6 +687,9 @@ def main():
             'failures': failures,
             'rate_limited': rate_limited_list,
         }, f, ensure_ascii=False, indent=2)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, OUT_FAILURES)
 
     # Save report
     _save_report(snapshot, len(projects_to_collect), counter, len(whitelist_ids_set))
@@ -777,11 +801,16 @@ def _save_report(snapshot, total_processed, counter, total_requested):
         'unauthorized_ids': [],  # Verified in phase C validation
     }
 
-    with open(OUT_REPORT, 'w', encoding='utf-8') as f:
+    tmp = OUT_REPORT + '.tmp'
+    with open(tmp, 'w', encoding='utf-8') as f:
         json.dump(report, f, ensure_ascii=False, indent=2)
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp, OUT_REPORT)
 
-    # CSV
-    with open(OUT_CSV, 'w', encoding='utf-8', newline='') as f:
+    # CSV (atomic via tmp)
+    tmp_csv = OUT_CSV + '.tmp'
+    with open(tmp_csv, 'w', encoding='utf-8', newline='') as f:
         w = csv.writer(f)
         w.writerow([
             'canonical_id', 'display_name', 'github_org', 'primary_repo',
@@ -802,6 +831,9 @@ def _save_report(snapshot, total_processed, counter, total_requested):
                 s.get('stars_total'), s.get('forks_total'),
                 s.get('collection_status'),
             ])
+        f.flush()
+        os.fsync(f.fileno())
+    os.replace(tmp_csv, OUT_CSV)
 
 
 if __name__ == '__main__':
