@@ -3,58 +3,58 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Validate GITHUB_TOKEN before full run",
-        "details": "Validated via api.github.com/rate_limit and /user. HTTP 200, login arun77gorskiy, 5000 remaining. AUTH: PASS.",
-        "status": "completed",
+        "content": "Step 1: GitHub API verification — check org/repo existence for all candidates",
+        "details": "Для каждого из 9 кандидатов проверить 2 org (public + enriched), найти правильный с strong evidence",
+        "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Build initial GitHub identity registry",
-        "details": "Built tmp/payd_github_identity_registry_v2.json from projects_enriched.json githubRepo field. 341 VERIFIED + 13 NOT_APPLICABLE.",
-        "status": "completed",
+        "content": "Step 2: Repository activity evidence — collect commits/releases/last_push from chosen org/repo",
+        "details": "Для выбранных org/repo получить commits_90d, releases_90d, last_commit_at, contributors",
+        "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Run full 341-project authenticated collection",
-        "details": "Ran code/collect_github_activity.py. Processed 341/341 in ~390s. No rate limiting, no errors.",
-        "status": "completed",
+        "content": "Step 3: Multi-signal ACTIVE classification (full / relaxed)",
+        "details": "Применить multi-signal rules: commits>=10+days<=60 OR commits>=5+other_signals",
+        "status": "pending",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Generate FINAL artifacts",
-        "details": "Created: payd_github_developer_enrichment_FINAL.json/csv, _report_FINAL.json, _failures_FINAL.json, _outliers_FINAL.json, _checkpoint_FINAL.json",
-        "status": "completed",
+        "content": "Step 4: Market data injection (CoinGecko) + 9 candidates",
+        "details": "Для каждого кандидата подтянуть market_cap_usd из coingecko",
+        "status": "pending",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Run full validation pass",
-        "details": "Validation: 0 dup IDs, 0 NaN/Inf, 0 commits_30d>90d, 0 mapping conflicts, 0 cross-sector mismatches, 0 market regressions, 0 fake-zero violations. PASS.",
-        "status": "completed",
+        "content": "Step 5: Final gate REACTIVATION_APPROVED / ACTIVITY_REVIEW_REQUIRED",
+        "details": "Собрать финальное решение по каждому кандидату на основе всех сигналов",
+        "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Build control-project report",
-        "details": "All 28 control projects processed: bitcoin, ethereum, solana, bittensor, akash, filecoin, internet-computer, mina-protocol, polygon, immutable, render, helium, aave, uniswap, ondo-finance, ethena, celestia, chainlink, dogecoin, kaspa, the-open-network, vechain, compound-governance-token, hyperliquid, storj, phala, rlc, axelar.",
-        "status": "completed",
+        "content": "Step 6: Akash integration — объединить результат с предыдущим таском",
+        "details": "Включить Akash как REACTIVATION_APPROVED из task 2 в финальный отчёт по 10",
+        "status": "pending",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "Outlier review",
-        "details": "4 outliers: future_timestamp warnings for optimism/ripple/sei-network/sui (clock skew between collector NOW and GitHub response). No data quality issues.",
-        "status": "completed",
+        "content": "Step 7: NO MUTATION check — master universe остаётся 354",
+        "details": "Подтвердить что никаких изменений в production не вносилось",
+        "status": "pending",
         "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "Emit decision gate and final report",
-        "details": "GITHUB DEVELOPER SNAPSHOT: PASS. Ready for final delivery.",
-        "status": "completed",
+        "content": "Step 8: Output JSON — финальные файлы в tmp/",
+        "details": "Создать payd_9_github_verification.json + payd_10_combined_final_gate.json + payd_validation_report.json",
+        "status": "pending",
         "priority": "high"
       }
     }
