@@ -1,0 +1,351 @@
+# Source URL: https://defillama.com/protocol/virtuals-protocol
+# Content Length: 18836 characters
+# Extracted at: 2026-09-15 03:30:02
+#============================================================
+
+Virtuals Protocol TVL, Fees, Revenue & Volume
+[Navigate to DeFi Dashboard![](/assets/defillama.webp)![](/assets/defillama-dark.webp)](/)
+[Home](/)[Metrics](/metrics)[Tools](/tools)[Chains](/chains)[Yields](/yields)[Stablecoins](/stablecoins)[RWA](/rwa)[MiCA](/mica)[Tokens](/tokens)[Equities](/equities)[Pre-IPO](/pre-ipo)[Market Makers](/market-makers)[Universal Token Rating](/universal-token-rating)[Support](/support)[API & MCP](https://api-docs.defillama.com)[DEX Aggregator](https://swap.defillama.com)[Investor Relations](https://investors.defillama.com)[DefiLlama Research](/research)
+PREMIUM[Try free](/subscription)
+[Pricing](/subscription)[Mobile AppNew](/app)[LlamaAI](/ai)[Downloads](/downloads)[Custom Dashboards](/pro)[Sheets](/sheets)[LlamaFeed](https://llamafeed.io)
+Old Menu
+Market Overview
+[Overview](/)[Chains](/chains)[Categories](/categories)[Oracles](/oracles)[Bridged TVL](/bridged)[Forks](/forks)[Top Protocols](/top-protocols)
+Yields
+[Overview](/yields)[Leveraged Lending](/yields/loop)[Watchlist](/yields/watchlist)
+Fees & Revenue
+[Revenue](/revenue)[Fees](/fees)[Holders Revenue](/holders-revenue)[Revenue (Chains)](/revenue/chains)[Fees (Chains)](/fees/chains)[Earnings](/earnings)[App Revenue (Chains)](/app-revenue/chains)[App Fees (Chains)](/app-fees/chains)[REV (Chains)](/rev/chains)
+Volume
+[Perps](/perps)[DEXs](/dexs)[Bridge Aggregators](/bridge-aggregators)[DEXs (Chains)](/dexs/chains)[DEX Aggregators](/dex-aggregators)[Perps (Chains)](/perps/chains)[Open Interest](/open-interest)[Perps Aggregators](/perps-aggregators)[Options Premium Volume](/options/premium-volume)[Options Notional Volume](/options/notional-volume)
+Stablecoins
+[Overview](/stablecoins)[Chains](/stablecoins/chains)
+[Airdrops](/airdrops)[CEX Transparency](/cexs)[Equities](/equities)[DATs](/digital-asset-treasuries)[ETFs](/etfs)[Hacks](/hacks)NFTs
+[Marketplaces](/nfts/marketplaces)[Volume (Chains)](/nfts/chains)[Collections](/nfts)[Earnings](/nfts/earnings)
+Bridges
+[Overview](/bridges)[Chains](/bridges/chains)[Transactions](/bridge-transactions)
+[Treasuries](/treasuries)Raises
+[Overview](/raises)[Investors](/raises/investors)
+Unlocks
+[Overview](/unlocks)[Calendar](/unlocks/calendar)
+[Recently Listed](/recent)[Narrative Tracker](/narrative-tracker)[ETH Liquid Staking](/lst)[Token Rights](/token-rights)[Correlations Matrix](/correlation)[Watchlist](/watchlist)[Token Liquidity](/liquidity)[Directory](/directory)[Token PnL](/token-pnl)[Compare Chains](/compare-chains?chains=OP+Mainnet&chains=Arbitrum)[Compare Protocols](/compare-protocols?protocol=Sky+Lending&protocol=Curve+DEX)[Token Usage](/token-usage?token=ETH)
+More
+[Support](/support)
+[Careers](https://github.com/DefiLlama/careers/blob/master/README.md)
+[Report Incorrect Data](/report-error)
+[Press / Media](/press)
+[API Reference](https://api-docs.defillama.com)
+[List your project](https://docs.llama.fi/list-your-project/submit-a-project)
+[Data Definitions](/data-definitions)
+About Us
+[About / Contact](/about)
+[Twitter](https://x.com/DefiLlama)
+[Discord](https://discord.defillama.com)
+[Donate](/donations)
+[Terms of Service](/terms)
+[Privacy Policy](/privacy-policy)
+Sign In / Subscribe /
+[Navigate to DeFi Dashboard![](/assets/defillama.webp)](/)[Try LlamaAI](/ai)SearchOpen Settings MenuOpen Navigation MenuOpen Search⌘K[Try LlamaAI](/ai)Include in TVL
+InformationTVLUnlocksFees and RevenueDEX VolumeToken Rights
+![](/assets/llamaai/llama-ai.svg)Ask about Virtuals Protocol
+Scan X sentiment for Virtuals Protocol versus zyfai and identify catalysts behind recent investor positioning.Virtuals Protocol generated $115.7K in seven-day fees despite zero TVL—are reported revenues economically supported?Set an exit trigger for Virtuals Protocol or rotate into agentfi after a 20% further decline?Run an on-chain check of Virtuals Protocol fee-generating contracts and identify active Base users.Virtuals Protocol’s P/F is 51.4x while krystal-auto-farm-vault has measurable TVL—does the premium reflect growth expectations?
+# Virtuals Protocol(VIRTUAL)Add to watchlist
+Total Value Locked$0
+## TVL by Chain
+Base$0
+## Key Metrics
+![](/assets/defillama-dark-neutral.webp)![](/assets/defillama-light-neutral.webp)
+Fees 30d$666,446
+Fees 30d by chain
+Robinhood Chain$380,583
+Base$282,775
+Solana$3,088.02
+Ethereum$0
+Fees 7d$120,371
+Robinhood Chain$74,121
+Base$45,639
+Solana$611.02
+Ethereum$0
+Fees 24h$24,243
+Robinhood Chain$22,338
+Base$1,905
+Ethereum$0
+Solana$0
+Cumulative Fees$73.99m
+Base$70.61m
+Robinhood Chain$2.7m
+Solana$448,493.02
+Ethereum$233,871
+Revenue 30d$666,446
+Revenue 30d by chain
+Robinhood Chain$380,583
+Base$282,775
+Solana$3,088.02
+Ethereum$0
+Revenue 7d$120,371
+Robinhood Chain$74,121
+Base$45,639
+Solana$611.02
+Ethereum$0
+Revenue 24h$24,243
+Robinhood Chain$22,338
+Base$1,905
+Ethereum$0
+Solana$0
+Cumulative Revenue$73.99m
+Base$70.61m
+Robinhood Chain$2.7m
+Solana$448,493.02
+Ethereum$233,871
+Holders Revenue 30d$0
+Holders Revenue 30d by chain
+Base$0
+Ethereum$0
+Robinhood Chain$0
+Solana$0
+Holders Revenue 7d$0
+Base$0
+Ethereum$0
+Robinhood Chain$0
+Solana$0
+Holders Revenue 24h$0
+Base$0
+Ethereum$0
+Robinhood Chain$0
+Solana$0
+Cumulative Holders Revenue$0
+Base$0
+Ethereum$0
+Robinhood Chain$0
+Solana$0
+Incentives 1y$0
+Incentives 30d$0
+Incentives 7d$0
+Incentives 24h$0
+Cumulative Incentives$0
+Earnings (Annualized)$17.48m
+Earnings 30d$666,446
+Earnings 7d$120,371
+Earnings 24h$24,243
+Cumulative Earnings$73.99m
+DEX Volume 30d$5.84m
+DEX Volume 30d by chain
+Robinhood Chain$4.95m
+Base$872,742
+Solana$21,380.56
+DEX Volume 7d$803,851
+Robinhood Chain$745,609
+Base$45,594
+Solana$12,648
+DEX Volume 24h$86,398
+Robinhood Chain$84,277
+Base$2,121
+Solana$0
+Cumulative DEX Volume$55.33m
+Robinhood Chain$54.18m
+Base$1.12m
+Solana$21,380.56
+Market Cap$414.33m
+$VIRTUAL Price$0.63
+All Time High$5.07
+All Time Low$0.0075
+[View $VIRTUAL token page](/token/VIRTUAL)
+Fully Diluted Valuation$629.31m
+Outstanding FDV$629.48m
+$VIRTUAL Volume 24h$41.38m
+CEX Volume$22.48m
+DEX Volume$21.63m(52.28% of total)
+Staked$14.06m(3.39% of mcap)
+Report incorrect data.png
+![](https://icons.llamao.fi/icons/protocols/virtuals-protocol?w=48&h=48)Virtuals Protocol(VIRTUAL)Add to watchlist
+Total Value Locked$0
+## TVL by Chain
+Base$0
+Add MetricsFeesStaking
+USDETH
+DWMQYC
+Embed Chart.csv.png
+## Key Metrics
+![](/assets/defillama-dark-neutral.webp)![](/assets/defillama-light-neutral.webp)
+Fees 30d$666,446
+Fees 30d by chain
+Robinhood Chain$380,583
+Base$282,775
+Solana$3,088.02
+Ethereum$0
+Fees 7d$120,371
+Robinhood Chain$74,121
+Base$45,639
+Solana$611.02
+Ethereum$0
+Fees 24h$24,243
+Robinhood Chain$22,338
+Base$1,905
+Ethereum$0
+Solana$0
+Cumulative Fees$73.99m
+Base$70.61m
+Robinhood Chain$2.7m
+Solana$448,493.02
+Ethereum$233,871
+Revenue 30d$666,446
+Revenue 30d by chain
+Robinhood Chain$380,583
+Base$282,775
+Solana$3,088.02
+Ethereum$0
+Revenue 7d$120,371
+Robinhood Chain$74,121
+Base$45,639
+Solana$611.02
+Ethereum$0
+Revenue 24h$24,243
+Robinhood Chain$22,338
+Base$1,905
+Ethereum$0
+Solana$0
+Cumulative Revenue$73.99m
+Base$70.61m
+Robinhood Chain$2.7m
+Solana$448,493.02
+Ethereum$233,871
+Holders Revenue 30d$0
+Holders Revenue 30d by chain
+Base$0
+Ethereum$0
+Robinhood Chain$0
+Solana$0
+Holders Revenue 7d$0
+Base$0
+Ethereum$0
+Robinhood Chain$0
+Solana$0
+Holders Revenue 24h$0
+Base$0
+Ethereum$0
+Robinhood Chain$0
+Solana$0
+Cumulative Holders Revenue$0
+Base$0
+Ethereum$0
+Robinhood Chain$0
+Solana$0
+Incentives 1y$0
+Incentives 30d$0
+Incentives 7d$0
+Incentives 24h$0
+Cumulative Incentives$0
+Earnings (Annualized)$17.48m
+Earnings 30d$666,446
+Earnings 7d$120,371
+Earnings 24h$24,243
+Cumulative Earnings$73.99m
+DEX Volume 30d$5.84m
+DEX Volume 30d by chain
+Robinhood Chain$4.95m
+Base$872,742
+Solana$21,380.56
+DEX Volume 7d$803,851
+Robinhood Chain$745,609
+Base$45,594
+Solana$12,648
+DEX Volume 24h$86,398
+Robinhood Chain$84,277
+Base$2,121
+Solana$0
+Cumulative DEX Volume$55.33m
+Robinhood Chain$54.18m
+Base$1.12m
+Solana$21,380.56
+Market Cap$414.33m
+$VIRTUAL Price$0.63
+All Time High$5.07
+All Time Low$0.0075
+[View $VIRTUAL token page](/token/VIRTUAL)
+Fully Diluted Valuation$629.31m
+Outstanding FDV$629.48m
+$VIRTUAL Volume 24h$41.38m
+CEX Volume$22.48m
+DEX Volume$21.63m(52.28% of total)
+Staked$14.06m(3.39% of mcap)
+Report incorrect data.png
+## Protocol Information
+Society of AI Agents base
+[Website](https://app.virtuals.io/referral?code=JsPKKT)[Twitter](https://x.com/virtuals\_io)
+Category:[AI Agents](/protocols/ai-agents)
+## Methodology
+[TVL:Counts VIRTUAL locked in pre-graduation agent bonding curve pools (FPair) and VIRTUAL locked in the Virtuals Protocol staking contract.View code on GitHub](https://github.com/DefiLlama/DefiLlama-Adapters/blob/main/projects/virtuals-protocol/index.js)[Fees:Revenue from Virtual Protocol across several streams: 1) Base Virtual-fun (legacy buy/sell transactions), 2) Base Virtual-app (legacy non-trading), 3) Base CBBTC-prototype (direct transfers to prototype wallet), 4) Base CBBTC-sentient (outflows from tax manager representing agent treasury distributions), 5) the new 1% platform fee collected in USD stablecoins (USDC on Base, USDG on Robinhood) to the platform tax wallet, and 6) Solana, in two parts: the pre-DBC bonding tax collected as VIRTUAL from 2025-02, and from 2026-08-21 the trading tax distributed in JupUSD, the Solana analogue of the USDC and USDG legs and likewise covering bonding and post-graduation trading alike. Also includes Ethereum VIRTUAL transfers to the protocol dev/ecosystem wallet. Individual ecosystem and treasury transfers are replaced by the tax manager outflow method to avoid double counting.View code on GitHub](https://github.com/DefiLlama/dimension-adapters/blob/master/fees/virtual-protocol.ts)[Revenue:Fees collected by the Protocol.View code on GitHub](https://github.com/DefiLlama/dimension-adapters/blob/master/fees/virtual-protocol.ts)[Holders Revenue:View code on GitHub](https://github.com/DefiLlama/dimension-adapters/blob/master/fees/virtual-protocol.ts)[DEX Volume:Bonding-curve trading volume on Virtual Protocol's own venue, reconstructed on-chain (no private tables). Bonding pairs are collected from the bonding-factory events (PreLaunched/Launched for the current factory generation, PairCreated for the legacy Base FFactories); volume is the VIRTUAL leg of each FPair Swap, priced to USD. Post-graduation trades are excluded as they occur on third-party DEXs already counted elsewhere. Covers Base (legacy + current factories) and Robinhood. On Solana both bonding venues are counted: Virtual Protocol's own program from 2025-02, whose pools are found from the tax paid in each swap because that program is not decoded, and its Meteora Dynamic Bonding Curve from 2026-08-21, whose pools come from the VIRTUAL-quoted DBC configs.View code on GitHub](https://github.com/DefiLlama/dimension-adapters/blob/master/dexs/virtual-protocol.ts)
+Incentives:Tokens allocated to users through liquidity mining or incentive schemes, typically as part of governance or reward mechanisms.
+Earnings:Revenue of the protocol minus the incentives distributed to users
+Subscribe to the DefiLlama NewsletterGet DefiLlama's newsletter, Research updates, or both, delivered to your inbox.
+NewsletterResearch Notes
+Subscribe
+## Competitors
+Create comparison dashboard
+[MorpheusAI ($21.32m)](/protocol/morpheusai)[ZyFAI ($10.21m)](/protocol/zyfai)[Krystal Auto-Farm Vault ($596,515)](/protocol/krystal-auto-farm-vault)[Infinite Trading Protocol ($238,340.72)](/protocol/infinite-trading-protocol)[Giza ($13,759.47)](/protocol/giza)[TermiX ($4,349.28)](/protocol/termix)[Glorb ($790.66)](/protocol/glorb)[Vaultfire ($39.97)](/protocol/vaultfire)[Vader AI](/protocol/vader-ai)[Botto](/protocol/botto)
+## Income Statement for Virtuals Protocol
+YearlyQuarterlyMonthlyCumulative
+.csv
+![](/assets/defillama-dark-neutral.webp)![](/assets/defillama-light-neutral.webp)
+| Q3 2026\\* | Q2 2026 | Q1 2026 | Q4 2025 | Q3 2025 | Q2 2025 | Q1 2025 | Q4 2024 |
+| --- | --- | --- | --- | --- | --- | --- | --- |
+| Gross Protocol Revenue | $3.16M | $997.6K | $3.03M | $8.9M | $7.01M | $10.76M | $19.5M | $20.63M |
+| Cost of Revenue | $0 | $0 | $0 | $0 | $0 | $0 | $0 | $0 |
+| Gross Profit | $3.16M | $997.6K | $3.03M | $8.9M | $7.01M | $10.76M | $19.5M | $20.63M |
+| Incentives | $0 | $0 | $0 | $0 | $0 | $0 | $0 | $0 |
+| Earnings | $3.16M | $997.6K | $3.03M | $8.9M | $7.01M | $10.76M | $19.5M | $20.63M |
+| Token Holder Net Income | $0 | $0 | $0 | $0 | $0 | $0 | $0 | $0 |
+### Income Flow Visualization
+YearlyQuarterlyMonthlyCumulative
+Q2 2026.png
+## Frequently Asked Questions
+What is Virtuals Protocol's TVL?
+Virtuals Protocol currently has $0 in total value locked.
+What chains does Virtuals Protocol operate on?
+Virtuals Protocol operates on [Base](/chain/base).
+How much has Virtuals Protocol generated in fees and revenue?
+Over the past 30 days, Virtuals Protocol generated $666,446 in fees. Of that, $666,446 was protocol revenue. Based on the trailing year, the annualized rate is $17.48m in fees and $17.48m in revenue.
+What is the VIRTUAL token price and valuation?
+[VIRTUAL](/token/VIRTUAL) is currently trading at $0.63. Its circulating market capitalization is $416.35m, ranking it #166. Its fully diluted valuation is $632.38m. Supply currently stands at 658.39m circulating, 1b total supply, 1b maximum supply.
+How has VIRTUAL performed recently?
+VIRTUAL is down 13.7% over the past 7 days and up 11.3% over the past 30 days. Its all-time high is $5.07, reached on Jan 1, 2025. The token is currently 87.5% below that level.
+How does Virtuals Protocol's TVL compare to similar protocols?
+Among [AI Agents protocols](/protocols/ai-agents) tracked by DefiLlama, Virtuals Protocol ranks #16 by TVL. The category holds $33.67m across 35 protocols, and Virtuals Protocol accounts for 0% of that total. Other leading protocols include [MorpheusAI](/protocol/morpheusai), [ZyFAI](/protocol/zyfai), [Krystal Auto-Farm Vault](/protocol/krystal-auto-farm-vault), [Infinite Trading Protocol](/protocol/infinite-trading-protocol), [Giza](/protocol/giza), [TermiX](/protocol/termix), [Glorb](/protocol/glorb), [Vaultfire](/protocol/vaultfire), [Vader AI](/protocol/vader-ai), and [Botto](/protocol/botto).
+How much trading volume does Virtuals Protocol process?
+Virtuals Protocol processed $5.84m in [DEX volume](/protocol/dexs/virtuals-protocol) over the past 30 days.
+## Search
+## Settings
+Staking
+Dark Mode
+Close Navigation Menu
+Main
+[Home](/)[Metrics](/metrics)[Tools](/tools)[Chains](/chains)[Yields](/yields)[Stablecoins](/stablecoins)[RWA](/rwa)[MiCA](/mica)[Tokens](/tokens)[Equities](/equities)[Pre-IPO](/pre-ipo)[Market Makers](/market-makers)[Universal Token Rating](/universal-token-rating)[Support](/support)[API & MCP](https://api-docs.defillama.com)[DEX Aggregator](https://swap.defillama.com)[Investor Relations](https://investors.defillama.com)[DefiLlama Research](/research)
+PREMIUM[Try free](/subscription)
+[Pricing](/subscription)[Mobile AppNew](/app)[LlamaAI](/ai)[Downloads](/downloads)[Custom Dashboards](/pro)[Sheets](/sheets)[LlamaFeed](https://llamafeed.io)
+Old Menu
+Market Overview
+[Overview](/)[Chains](/chains)[Categories](/categories)[Oracles](/oracles)[Bridged TVL](/bridged)[Forks](/forks)[Top Protocols](/top-protocols)
+Yields
+[Overview](/yields)[Leveraged Lending](/yields/loop)[Watchlist](/yields/watchlist)
+Fees & Revenue
+[Revenue](/revenue)[Fees](/fees)[Holders Revenue](/holders-revenue)[Revenue (Chains)](/revenue/chains)[Fees (Chains)](/fees/chains)[Earnings](/earnings)[App Revenue (Chains)](/app-revenue/chains)[App Fees (Chains)](/app-fees/chains)[REV (Chains)](/rev/chains)
+Volume
+[Perps](/perps)[DEXs](/dexs)[Bridge Aggregators](/bridge-aggregators)[DEXs (Chains)](/dexs/chains)[DEX Aggregators](/dex-aggregators)[Perps (Chains)](/perps/chains)[Open Interest](/open-interest)[Perps Aggregators](/perps-aggregators)[Options Premium Volume](/options/premium-volume)[Options Notional Volume](/options/notional-volume)
+Stablecoins
+[Overview](/stablecoins)[Chains](/stablecoins/chains)
+[Airdrops](/airdrops)[CEX Transparency](/cexs)[Equities](/equities)[DATs](/digital-asset-treasuries)[ETFs](/etfs)[Hacks](/hacks)NFTs
+[Marketplaces](/nfts/marketplaces)[Volume (Chains)](/nfts/chains)[Collections](/nfts)[Earnings](/nfts/earnings)
+Bridges
+[Overview](/bridges)[Chains](/bridges/chains)[Transactions](/bridge-transactions)
+[Treasuries](/treasuries)Raises
+[Overview](/raises)[Investors](/raises/investors)
+Unlocks
+[Overview](/unlocks)[Calendar](/unlocks/calendar)
+[Recently Listed](/recent)[Narrative Tracker](/narrative-tracker)[ETH Liquid Staking](/lst)[Token Rights](/token-rights)[Correlations Matrix](/correlation)[Watchlist](/watchlist)[Token Liquidity](/liquidity)[Directory](/directory)[Token PnL](/token-pnl)[Compare Chains](/compare-chains?chains=OP+Mainnet&chains=Arbitrum)[Compare Protocols](/compare-protocols?protocol=Sky+Lending&protocol=Curve+DEX)[Token Usage](/token-usage?token=ETH)
+More
+[Support](/support)[Careers](https://github.com/DefiLlama/careers/blob/master/README.md)[Report Incorrect Data](/report-error)[Press / Media](/press)[API Reference](https://api-docs.defillama.com)[List your project](https://docs.llama.fi/list-your-project/submit-a-project)[Data Definitions](/data-definitions)
+About Us
+[About / Contact](/about)[Twitter](https://x.com/DefiLlama)[Discord](https://discord.defillama.com)[Donate](/donations)[Terms of Service](/terms)[Privacy Policy](/privacy-policy)
+Sign In / Subscribe
+[![](https://icons.llamao.fi/icons/chains/rsz\_robinhood-chain?w=48&h=48)Robinhood ChainChain](/chain/robinhood-chain)[![](https://icons.llamao.fi/icons/chains/rsz\_solana?w=48&h=48)SolanaChain](/chain/solana)[![](https://icons.llamao.fi/icons/chains/rsz\_ethereum?w=48&h=48)EthereumChain](/chain/ethereum)[![](https://icons.llamao.fi/icons/protocols/hyperliquid?w=48&h=48)HyperliquidProtocol](/protocol/hyperliquid)[![](https://icons.llamao.fi/icons/protocols/uniswap?w=48&h=48)UniswapProtocol](/protocol/uniswap)[![](https://icons.llamao.fi/icons/protocols/aave?w=48&h=48)AaveProtocol](/protocol/aave)[![](https://icons.llamao.fi/icons/pegged/usd-coin?w=48&h=48)USD CoinStablecoin](/stablecoin/usd-coin)[![](https://icons.llamao.fi/icons/pegged/tether?w=48&h=48)TetherStablecoin](/stablecoin/tether)[![](https://icons.llamao.fi/icons/pegged/world-liberty-financial-usd?w=48&h=48)World Liberty Financial USDStablecoin](/stablecoin/world-liberty-financial-usd)[ChainsMetric](/chains)[Perp Volume by ProtocolMetric](/perps)[Revenue by ProtocolMetric](/revenue)[LendingCategory](/protocols/lending)[Yield AggregatorCategory](/protocols/yield-aggregator)[Prediction MarketCategory](/protocols/prediction-market)[Dashboard BuilderTool](/pro)[Correlations Matrix by CoinTool](/correlation)[DeFi WatchlistTool](/watchlist)[Hyperliquid BuilderTag](/protocols/hyperliquid-builder)[Treasury BillsTag](/protocols/treasury-bills)[CommoditiesTag](/protocols/commodities)
+Deselect AllSelect All
+StakingOnly

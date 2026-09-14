@@ -1,0 +1,219 @@
+# Source URL: https://www.grass.io/learn/july-7-grass-token-holder-and-network-participant-call/
+# Content Length: 13496 characters
+# Extracted at: 2026-09-15 03:29:59
+#============================================================
+
+
+Recap of the July 7 Grass Token Holder and Network Participant Call[![]()
+
+™
+
+![]()
+
+™](/)[Download](/download/)[Learn](/learn/)[Open Dashboard](https://app.grass.io)FeaturedNewsJuly 10 2026 Share Tweet  Copy Link
+
+Recap of the July 7 Grass Token Holder and Network Participant Call
+===================================================================
+
+On July 7, Grass hosted the token holder and network participant call for H1 2026. Below is a recap of what was shared.
+
+Why Grass Exists
+================
+
+AI is only as good as the data it’s trained on, and acquiring useful data at internet scale is still an open problem in the industry. This is what Grass solves.
+
+This is challenging for three reasons:
+
+1. **Scale**  
+   The web spans billions of pages we have to cover continuously. Collecting meaningful coverage requires a globally distributed residential proxy network that is operating continuously.
+2. **Impermanence**  
+   New knowledge is published every second. Old content disappears or gets changed. Building a high-quality dataset isn’t something you do once. It’s a continuous process of discovering, acquiring, filtering, and refreshing information as the internet evolves.
+3. **Quality**  
+   Two different datasets of the same size do not contribute equally to model performance. The engineering challenge is not arbitrarily collecting more data. It is figuring out how to scale the collection of data that actually improves model performance.
+
+Building a frontier training corpus isn’t a project you finish. It is an evolving infrastructure that you operate continuously.
+
+Financials
+==========
+
+**Revenue**
+
+Revenue has accelerated since Grass launched its products and services in early 2025. Grass has reinvested, and intends to continue reinvesting, the majority of the revenue it generates into network growth.
+
+2025:
+
+* H1: $2.7 million
+* H2: $14.3 million
+* 2025 Total: $17 million
+
+2026:
+
+* H1: $17 million
+
+![]()
+
+This means our 2026 H1 revenues are nearly 7x our first-half 2025 result.
+
+H1 of 2026 reflects the durability of the demand we are seeing from AI labs for high-quality, ethically sourced web data. We have now seen repeat business from nearly every AI customer we serve, and our structural cost advantages in multimodal data let us price competitively while protecting margin.
+
+Our customer base now spans leading private AI companies, Fortune 100 enterprises including members of the Magnificent Seven, several of the most closely watched new labs, and specialized developers across video, text-to-speech, and coding.
+
+We’ve also learned that our business is seasonal. Consistent with that pattern, approximately $15 million in business Grass had expected to begin in the first half of 2026 has shifted into the third quarter. Combined with roughly $35 million in late-stage commercial opportunities expected to begin in the second half of 2026 and business already under contract, Grass anticipates full-year 2026 revenue of approximately $65-75 million from training data alone. Grass has reinvested, and intends to continue reinvesting, the majority of the revenue it generates into initiatives that further this network growth.
+
+An important reminder that Grass does not disclose the names of AI labs that purchase training data; training datasets are treated as proprietary intellectual property across the industry
+
+**Capital Allocation**
+
+Grass has continued to invest in the infrastructure that underpins the network. During 2025, Grass acquired a significant amount of compute and storage ahead of material increases in cloud pricing across the industry. Those investments have reduced the network’s operating expenses by more than $1 million per month and are an important factor as to why the business is profitable today.
+
+Ongoing cash expenses for Grass are now approximately $2-3 million per month, the majority of which are infrastructure-related across compute, storage, and bandwidth. Roughly 20% of total first-half 2026 spend was paid to Wynd Labs primarily for costs relating to headcount (45 FTE). All infrastructure is owned by Grass.
+
+Where We’re Headed
+==================
+
+Working closely with frontier labs reveals a permanent reality: demand for training data isn’t slowing down. As such, deepening our position in training data remained our top priority in the first half of 2026, however, it is finally time for us to expand into inference data via our Live Context Retrieval (LCR) products.
+
+Leveraging the infrastructure we've built to date to map and structure the public web gives us a competitive advantage in entering the inference data market. Launching our first LCR products later this summer officially opens our pipelines to serve live AI models, converting a static web map into a high-performance engine built to win on speed, cost, and accuracy.
+
+Structure and Alignment
+=======================
+
+Wynd Labs operates strictly as a core service provider to Grass, handling core engineering, software development, and operational business development.
+
+Intellectual property, customer contracts, and commercial relationships remain entirely under network ownership; consequently, all generated contract revenue accrues directly to Grass rather than Wynd Labs.
+
+Executing enterprise agreements through the Foundation ensures that the enduring value of the ecosystem stays within the network, preventing the value migration common in traditional corporate equity startups.
+
+The structure is intended to keep the enduring value of Grass within the network, rather than allowing it to migrate to a separate ownership vehicle as can occur in traditional startups.
+
+Since token genesis, every dollar raised has flown exclusively through the token ecosystem with zero equity financing, and the network has no plans to introduce an equity component.
+
+Grass’s objective is to keep long-term token holders and network participants aligned with the long-term success of the network.
+
+Aligning long-term token holders with the network's structural success remains our core objective.
+
+Network Progress
+================
+
+Reaching millions of active nodes, the Grass network continues to expand organically through community referrals and organic discovery. Keeping pace with our scaling footprint, recent upgrades to our bot detection and security filters have improved the network’s latency and connection success rates.
+
+Evolving our reward model to match our expanding infrastructure, participant allocations for Stage 2 will be distributed exclusively in USDC. Shifting to stablecoin payouts allows operators in all eligible global regions to claim their allocations quickly and compliantly amid fluid regulatory environments. Because these rewards are funded entirely by network revenue rather than protocol inflation, the distribution introduces zero net new emissions and leaves the circulating supply of GRASS completely unaltered.
+
+Your individual allocation will be calculated programmatically based on clear hardware performance metrics: overall node availability, connection stability, geographic demand, and actual data volume routed through your connection.
+
+During Stage 2, we found that 150k users received about 90% of the network traffic. This was as a result of the network prioritizing bandwidth usage through nodes offering the highest stability, updated software, and high-demand geographies.
+
+Steps users can take to increase their probability of being prioritized by the network include:
+
+* Run your node on a residential network (not a VPN).
+* Maintain a stable, reliable connection that does not frequently disconnect.
+* Keep your apps fully up to date.
+* Use a preferred device type. Androids have been the highest earning device type on the network, followed by desktop, then chrome extensions.
+
+Other Network Updates
+=====================
+
+Alongside Stage 2, Grass will release an in-app, non-custodial wallet to simplify claiming for all users, whether or not they are crypto-native. The wallet is expected to be released in mid-July, ahead of the claim window.
+
+Also, Grasshopper, our dedicated plug-and-play device for network contributors, will not proceed to rollout at this time as the network prioritizes initiatives of higher value to the business’s immediate needs.
+
+Looking Forward
+===============
+
+Reflecting on the first half of 2026 we can see the positive outcomes emerging from the decisions we’ve made over the last 12 months and a genuine cause for excitement for us as a business as we enter the next stage of the network.
+
+* Revenue has accelerated from $17M in 2025 to $18M in H1 2026, with full-year 2026 projected at roughly $65–75M from training data.
+* The business is profitable, running on ~$2–3M/month in mostly infrastructure costs,
+* 2025 compute/storage investments have cut opex by over $1M/month.
+* USDC Participant rewards for Stage 2 are not net new emissions, and the circulating supply of GRASS tokens will not increase in connection with the distribution.
+* Focus will continue on deepening our position in training data.
+* Grass will begin publicly launching the first products under the LCR umbrella this summer, opening our infrastructure to AI models in real time.
+
+As a business we’ve graduated from subsidized growth to a self-sustaining economy. We are now operating, and continuing to cement our place, as a business with customers, cash flow, and a network whose participants are compensated because the underlying service creates real economic value.
+
+We're still early in that journey, and there's an enormous amount of work ahead of us. But today feels like an important step, and it makes us incredibly excited for what's next.
+
+A recording of the call can be found here on Grass’ Youtube Channel: <https://youtube.com/live/iZFt32Mbh38>
+
+Get rewarded for the internet   
+you don’t use  
+Grass turns your unused   
+ internet into rewards automatically.
+
+[Start Now](https://app.grass.io/register?referralCode=GRASS)[Open Dashboard](https://app.grass.io)
+### Featured
+
+[![]()](/learn/grass-101-what-is-grass/)[Grass 101: What is Grass?
+-------------------------](/learn/grass-101-what-is-grass/)
+
+Before we get into Grass 101, let’s start with an analogy to understand what
+‘unused internet’ means. Think of your home internet like a big highway with
+multiple lanes. Most of the time, many of those lanes are empty—this is your
+unused internet bandwidth, or what we call ‘unused internet’, for sho
+
+[Learn More](/learn/grass-101-what-is-grass/)[View All Articles](/learn/)[![]()
+
+™](/)[Home](/)[Learn](/learn/)[FAQ](https://grass-foundation.gitbook.io/grass-docs/introduction/faq)[Media Kit](/media-kit/)[Documentation](https://grass-foundation.gitbook.io/grass-docs)
+
+Member Of
+
+[![]()](https://www.amtso.org/)
+
+Certified By
+
+[![]()](https://customer.appesteem.com/certified?vendor=GRASS)
+
+---
+
+© 2026 Grass OpCo Ltd. All trademarks used on this website are the property of Grass OpCo Ltd. All rights reserved.
+
+[Privacy Policy](/privacy-policy/)[General Terms and Conditions](/terms-and-conditions/)[Wallet Terms and Conditions](/wallet-terms-and-conditions/)[Rewards Terms and Conditions](https://www.grassfoundation.io/rewards-program-terms-and-conditions)[Network Use Policy](/network-use-policy/)[Cookie Policy](/cookie-policy/)
+
+Cookie Settings
+
+
+
+This website uses cookies to remember users and understand ways to enhance their experience. Some cookies are essential, others help us improve your experience by providing insight into how the site is used. For more information, please visit our [Cookie Policy](/cookie-policy/)
+
+Cookie Settings
+Essential Only
+Accept All
+
+
+
+Grass uses Cookies to optimize your experience
+----------------------------------------------
+
+---
+
+We use cookies because they are necessary for our website to function. We use other cookies to enhance your experience by providing insights on how you use our website. We recommend accepting all cookies to get the most value when using our website. You can learn more about each category of cookies by reading our [Cookie Policy](/cookie-policy/).
+
+Manage Cookies:
+
+Essential Cookies
+
+Non Essential Cookies:
+
+Google Analytics Cookies
+
+**Google Analytics Cookies** track and analyze website traffic and user behavior. They uniquely identify users, monitor their interactions, and maintain session data across multiple visits, providing insights for improving website performance and user engagement.
+
+
+Microsoft Clarity Cookies
+
+**Microsoft Clarity Cookies** track user behavior on websites to provide insights for improving user experience and site performance. They identify users, monitor their interactions, and gather data for analytics and targeted advertising, ensuring consistent tracking across sessions.
+
+
+Convert Experiment Cookies
+
+**Convert Experiment Cookies** track user behavior on websites to provide insights for improving user experience and site performance. They identify users, monitor their interactions, and gather data for analytics and targeted advertising, ensuring consistent tracking across sessions.
+
+
+Meta Pixel Cookies
+
+**Meta Pixel Cookies** help measure advertising effectiveness by tracking actions such as pages visited and interactions with our website. These cookies identify user information and may share it with Meta (Facebook) for analytics and advertising purposes
+
+
+SAVE
+
+[![]()™](/)[Start Now](https://app.grass.io/register?referralCode=GRASS)[Open Dashboard](https://app.grass.io)[Download](/download/)[Learn](/learn/)

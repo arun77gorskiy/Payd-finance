@@ -3,57 +3,71 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Step 1: GitHub API verification — check org/repo existence for all candidates",
-        "details": "Для каждого из 9 кандидатов проверить 2 org (public + enriched), найти правильный с strong evidence",
+        "content": "Загрузить authoritative 354 canonical registry",
+        "details": "Найти публичный 354-проект реестр + сектор членство",
         "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Step 2: Repository activity evidence — collect commits/releases/last_push from chosen org/repo",
-        "details": "Для выбранных org/repo получить commits_90d, releases_90d, last_commit_at, contributors",
+        "content": "Определить текущий active sector universe",
+        "details": "Для каждого сектора знать who is in active universe vs excluded",
         "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Step 3: Multi-signal ACTIVE classification (full / relaxed)",
-        "details": "Применить multi-signal rules: commits>=10+days<=60 OR commits>=5+other_signals",
+        "content": "Картировать 10 кандидатов на их authoritative sectors",
+        "details": "Для каждого кандидата определить в каких sectors они авторитетно присутствуют",
         "status": "pending",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Step 4: Market data injection (CoinGecko) + 9 candidates",
-        "details": "Для каждого кандидата подтянуть market_cap_usd из coingecko",
+        "content": "Reactivate 10 кандидатов в их секторы",
+        "details": "Применить гейты: MC >= $5.5M, ACTIVE/ACTIVE_NON_GITHUB_CONFIRMED, identity verified",
         "status": "pending",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Step 5: Final gate REACTIVATION_APPROVED / ACTIVITY_REVIEW_REQUIRED",
-        "details": "Собрать финальное решение по каждому кандидату на основе всех сигналов",
+        "content": "Rank секторов по Market Cap",
+        "details": "Re-rank eligible active projects by mc DESC. Reuse identical market/activity data.",
         "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Step 6: Akash integration — объединить результат с предыдущим таском",
-        "details": "Включить Akash как REACTIVATION_APPROVED из task 2 в финальный отчёт по 10",
+        "content": "Recompute sector counts",
+        "details": "after/before + reactive/removed/target/deficit/HEALTHY/PARTIAL/UNDERFILLED",
         "status": "pending",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "Step 7: NO MUTATION check — master universe остаётся 354",
-        "details": "Подтвердить что никаких изменений в production не вносилось",
+        "content": "Per-candidate effect (10 проектов)",
+        "details": "canonical_id, sectors, market_cap, activity, evidence type, action per sector",
         "status": "pending",
         "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "Step 8: Output JSON — финальные файлы в tmp/",
-        "details": "Создать payd_9_github_verification.json + payd_10_combined_final_gate.json + payd_validation_report.json",
+        "content": "Recompute AUTO rotation mode per sector",
+        "details": "AUTO/OBSERVE_ONLY/DISABLED. DO NOT activate.",
+        "status": "pending",
+        "priority": "high"
+      },
+      "9": {
+        "id": "9",
+        "content": "Создать 3 выходных JSON файла",
+        "details": "payd_final_reactivation_sector_preview.json + payd_final_reactivation_changes.json + payd_final_sector_counts_after_reactivation.json",
+        "status": "pending",
+        "priority": "high"
+      },
+      "10": {
+        "id": "10",
+        "content": "Запустить 12-condition final validation",
+        "details": "PASS/FAIL only at end",
         "status": "pending",
         "priority": "high"
       }

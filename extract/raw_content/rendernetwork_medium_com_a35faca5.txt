@@ -1,0 +1,198 @@
+# Source URL: https://rendernetwork.medium.com/render-network-foundation-monthly-report-december-2025-43d956808e3f
+# Content Length: 21224 characters
+# Extracted at: 2026-09-15 03:30:03
+#============================================================
+
+Render Network Foundation Monthly Report — December 2025 | by Render Network | Medium
+[Sitemap](/sitemap/sitemap.xml)
+[Open in app](https://play.google.com/store/apps/details?id=com.medium.reader&referrer=utm\_source%3DmobileNavBar&source=---top\_nav\_layout\_nav-------------------------------------------)
+Sign up
+[Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Frendernetwork.medium.com%2Frender-network-foundation-monthly-report-december-2025-43d956808e3f&source=post\_page---top\_nav\_layout\_nav-----------------------global\_nav--------------------)
+[Medium Logo](https://medium.com/?source=---top\_nav\_layout\_nav-------------------------------------------)
+Get app
+[Write](https://medium.com/m/signin?operation=register&redirect=https%3A%2F%2Fmedium.com%2Fnew-story&source=---top\_nav\_layout\_nav-----------------------new\_post\_topnav--------------------)
+[Search](https://medium.com/search?source=---top\_nav\_layout\_nav-------------------------------------------)
+Sign up
+[Sign in](https://medium.com/m/signin?operation=login&redirect=https%3A%2F%2Frendernetwork.medium.com%2Frender-network-foundation-monthly-report-december-2025-43d956808e3f&source=post\_page---top\_nav\_layout\_nav-----------------------global\_nav--------------------)
+![](https://miro.medium.com/v2/resize:fill:32:32/1\*dmbNkD5D-u45r44go\_cf0g.png)
+1. [Top 10 moments of 2025 in 2 minutes flat](/?source=post\_page-----43d956808e3f-----------------------------------------#85c3)
+2. [RenderCon: April 16–17 in Hollywood — Save the Date!](/?source=post\_page-----43d956808e3f-----------------------------------------#468e)
+3. [The Render Network at Solana Breakpoint 2025](/?source=post\_page-----43d956808e3f-----------------------------------------#5cf0)
+4. [Ecosystem metrics](/?source=post\_page-----43d956808e3f-----------------------------------------#c536)
+1. [Glossary](/?source=post\_page-----43d956808e3f-----------------------------------------#9167)
+5. [The Burn-Mint Equilibrium Model has resulted in 1,000,000 RENDER burned](/?source=post\_page-----43d956808e3f-----------------------------------------#5162)
+6. [Partner and product updates](/?source=post\_page-----43d956808e3f-----------------------------------------#9d28)
+1. [Ecosystem Partners](/?source=post\_page-----43d956808e3f-----------------------------------------#9282)
+2. [Artist spotlight: Patrick Levar](/?source=post\_page-----43d956808e3f-----------------------------------------#9ca8)
+7. [In the News](/?source=post\_page-----43d956808e3f-----------------------------------------#6560)
+1. [Dispersed, the AI compute subnet, gets media coverage](/?source=post\_page-----43d956808e3f-----------------------------------------#96a7)
+2. [The Render Network on the DePIN Hub podcast](/?source=post\_page-----43d956808e3f-----------------------------------------#084e)
+3. [Render Network: Inside DePIN’s Compute Pioneer](/?source=post\_page-----43d956808e3f-----------------------------------------#5886)
+8. [Announcements](/?source=post\_page-----43d956808e3f-----------------------------------------#4b0d)
+1. [The Render Network merchandise store is now open!](/?source=post\_page-----43d956808e3f-----------------------------------------#9ca2)
+2. [Render Royale: the Premier Monthly 3D Contest — December recap](/?source=post\_page-----43d956808e3f-----------------------------------------#8a0f)
+3. [Motion Plus Design presentations and interview are now available](/?source=post\_page-----43d956808e3f-----------------------------------------#df3f)
+9. [What’s coming up](/?source=post\_page-----43d956808e3f-----------------------------------------#b73d)
+1. [SUBMERGE: Beyond the Render has been extended through March](/?source=post\_page-----43d956808e3f-----------------------------------------#cae9)
+[![](https://miro.medium.com/v2/resize:fill:40:40/1\*ZifcaMAG2oeWSwB7vnL59g.png)](/?source=post\_page---post\_author\_sidebar--43d956808e3f-----------------3d2d407322fb------------------------)
+## Render Network
+Try the leading decentralized GPU computing platform today at: 
+[Decentralized Ai](https://medium.com/tag/decentralized-ai?source=post\_page---header\_tags--43d956808e3f-----------------------------------------)
+[Blockchain](https://medium.com/tag/blockchain?source=post\_page---header\_tags--43d956808e3f-----------------------------------------)
+[Depin](https://medium.com/tag/depin?source=post\_page---header\_tags--43d956808e3f-----------------------------------------)
+[3d Rendering](https://medium.com/tag/3d-rendering?source=post\_page---header\_tags--43d956808e3f-----------------------------------------)
+[Generative Ai Tools](https://medium.com/tag/generative-ai-tools?source=post\_page---header\_tags--43d956808e3f-----------------------------------------)
+# \*\*Render Network Foundation Monthly Report — December 2025\*\*
+[![](https://miro.medium.com/v2/resize:fill:32:32/1\*ZifcaMAG2oeWSwB7vnL59g.png)](/?source=post\_page---byline--43d956808e3f-----------------------------------------)
+[Render Network](/?source=post\_page---byline--43d956808e3f-----------------------------------------)
+8 min read
+·
+Jan 8, 2026
+--
+--
+[Listen](https://medium.com/m/signin?actionUrl=https%3A%2F%2Fmedium.com%2Fplans%3Fdimension%3Dpost\_audio\_button%26postId%3D43d956808e3f&operation=register&redirect=https%3A%2F%2Frendernetwork.medium.com%2Frender-network-foundation-monthly-report-december-2025-43d956808e3f&source=---header\_actions--43d956808e3f---------------------post\_audio\_button--------------------)
+Share
+Catch our 2-minute recap of 2025, Render Network at Solana Breakpoint, new merch store now open, media coverage of the Dispersed launch, Render Network on the DePIN Hub podcast, and key metrics for the month.
+![](https://miro.medium.com/v2/resize:fit:512/1\*ayoDkU0l9Hh9LB1UkTLB7A.jpeg)
+## \*\*Top 10 moments of 2025 in 2 minutes flat\*\*
+The Render Network had a full year in 2025. Here are top 10 highlights summarized in 2 minutes:
+## \*\*RenderCon: April 16–17 in Hollywood — Save the Date!\*\*
+After a knockout inaugural year, RenderCon is back in 2026! Taking place at Nya Studios in Hollywood, California, the two-day event is already considered by leading motion graphics artists as the most informative and relevant conference in the space, where leading minds converge. It will feature presentations and workshops by top thinkers in the 3D graphics, VFX, AI and compute fields. Look out for more details in the coming weeks.
+Interested in attending? Hold the dates on your calendar: April 16 and 17th. We are excited to connect with you there in person.
+Watch the 2025 RenderCon sizzle real here:
+## \*\*The Render Network at Solana Breakpoint 2025\*\*
+The Render Network was a headline sponsor at this year’s Solana [Breakpoint](https://solana.com/breakpoint) event in Abu Dhabi, United Arab Emirates. It took place December 11–13.
+The team representing the Foundation at the booth had great conversations with attendees across the Solana ecosystem as well as prospects:
+Sunny Osahn, Foundation Grants Lead, gave a product talk onstage on December 13th. He announced Dispersed, the name of the Render Network Compute Subnet enabled by RNP-019.
+As part of the announcement, Sunny shared that OTOY, the long-standing Render Network ecosystem partner, released the beta version of OTOY Studio. It will be the first major user of [Dispersed](https://dispersed.com/). OTOY Studio will offer over 600 curated Artist AI models, supporting builders as traditional 3D and AI workflows continue to converge. OTOY will aim to run as many open weight models as possible on Dispersed.
+The Render Network featured prominently at Breakpoint, from the moment the conference opened: The Breakpoint trailer was made by Render Network artist Brilly, rendered on the Render Network:
+## \*\*Ecosystem metrics\*\*
+The Render Network Foundation tracks various metrics on its network. Below is the aggregate view of the month’s activity, previous month’s activity, and month-over-month change for a few key metrics. Much of this information is found at [stats.renderfoundation.com](https://stats.renderfoundation.com/).
+Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:700/1\*WZ2McQZvcIa6pwUcNa29gw.png)
+### \*\*Glossary\*\*
+\*\*Frames rendered\*\* — number of frames rendered by the network.
+\*\*Burns\*\* — the USDC equivalent of RENDER tokens burned on the network. Additional [burn and mint data](https://stats.renderfoundation.com/#bme) and details of the [burn and mint equilibrium model](https://github.com/rendernetwork/RNPs/blob/main/RNP-001.md) (BME).
+\*\*Emissions\*\* — RENDER tokens minted for the month per the emissions schedule for BME.
+\*\*Rewards to Foundation rendering node (RENDER) —\*\* RENDER token rewards issued (both for rendering jobs and availability) to the rendering node operated on behalf of the Foundation. The Foundation’s rendering node Solana wallet address is: AAHwFzKj8U1E7JyNBz2v561eXCz41Uv123xzjAYo3GdT
+\*\*Foundation rendering node cost to operate (USD)\*\* — Cost, in USD, of running the Foundation rendering node in its geographic location. The price of running a node on the Render Network varies depending on geography, local energy market, local utility service and other factors.
+\*\*Foundation rendering node kilo-watt hours (kWh)\*\* — Amount of energy consumed by the Foundation rendering node during the reported period.
+Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:700/1\*sUA8Wfxef-bwIzlXlNXInw.png)
+\*\*Rewards for jobs\*\* — rewards sent, in RENDER tokens, to render node operators on the network whose machines were used to complete rendering jobs. Rewards are issued by epoch, which occur weekly.
+\*\*Rewards for availability —\*\* rewards sent, in RENDER tokens, to render node operators who made their machines available to the network. Rewards are issued by epoch, which occur weekly.
+\*\*Total rewards to nodes —\*\* the sum of rewards sent to render node operators for rendering and availability.
+\*\*Governance Updates\*\*
+## \*\*The Burn-Mint Equilibrium Model has resulted in 1,000,000 RENDER burned\*\*
+In December 2025, we reached an important milestone: we hit the 1 millionth RENDER burned on the network.
+Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:700/1\*uelIO8YwE0kG40jV3rBZQw.jpeg)
+Not sure what this means? Check out our [explainer](/how-the-render-network-operates-foundation-network-and-treasury-a43bc492616e) on how the burn-mint equilibrium process works, how the governance model dictates that every job processed on the network results in equivalent RENDER burned, and how the treasury is managed by the foundation.
+## \*\*Partner and product updates\*\*
+### E\*\*cosystem Partners\*\*
+This section highlights the Render Network ecosystem partners.
+\*\*OTOY Product News\*\*Below are product updates from OTOY, a Render Network ecosystem partner and primary technology service provider to the network.
+\*\*Octane 2026.1 is released in beta on the Render Network\*\*
+OctaneRender 2026.1 integrates advanced rendering technologies like 3D Gaussian Splats, Meshlets for geometry streaming, native MaterialX/OpenPBR support, and enhanced AI denoising (Neural Radiance Cache) for faster, more efficient GPU rendering, with early alphas/betas bringing cross-platform Apple Silicon support and new tools for artists across various DCC plugins like Cinema 4D and Houdini, moving towards production-ready features.
+It is currently being tested on the Render Network and should be opened up to broader usage soon.
+[Redshift 2026.2](https://support.maxon.net/hc/en-us/articles/8814051767964-Redshift-2026-2-1-2025-12-December-11-2025) is now supported on the Render Network. This is the latest version of the renderer released by Maxon.
+### \*\*Artist spotlight: Patrick Levar\*\*
+Patrick Levar stumbled upon 3D graphics because he was bored. That’s right. Though he was already hosting a popular YouTube channel about mobile filmmaking, Patrick found that he needed a challenge. So he decided to include 3D motion graphics into his cell phone footage. He learned Cinema 4D and then Octane Render after watching another filmmaker use it.
+Patrick shares how he always had to leave his rendering for right before going to bed because they took so long on his local machine. With the Render Network, he can free up his machine so he can keep working while the rendering is being handled in parallel. Iterations can be done quickly, in just 15 minutes vs. hours or overnight.
+## \*\*In the News\*\*
+### Dispersed, the AI compute subnet, gets media coverage
+In April 2025, the Render Network saw the passing of governance proposal RNP-019, enabling a RENDER rewards framework for a dedicated network of decentralized GPUs specifically designed for general purpose and AI workloads. This network would be separate from the existing rendering network.
+The subnet — designed and developed based on the experience, knowledge, and model of the long-running rendering network — got its official name and website in December: [Dispersed](https://dispersed.com/), unveiled at the Solana Breakpoint conference on December 13th, aims to serve the increasing AI compute needs of a growing number of sectors.
+Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:700/1\*JITPDPX0NpIokrL9Rlpk1A.png)
+The announcement was made by Sunny Osahn, Grants Lead for the Render Network Foundation during the Render Network product keynote.
+Various crypto trade publications covered the announcement:
+## Get Render Network’s stories in your inbox
+Join Medium for free to get updates from this writer.
+Subscribe
+Subscribe
+Remember me for faster sign in
+\*Bitcoin News\*
+Render Network Targets Cloud Bottlenecks With Distributed GPU Platform
+
+\*CryptoNews\*
+The Render Network Foundation has launched Dispersed, a distributed GPU computing platform aimed at easing growing constraints in centralized cloud infrastructure as global artificial intelligence (AI) workloads expand.
+
+\*AInvest\*
+Dispersed Launch Fuels GPU Decentralization Push in AI Compute Sector
+
+\*CurrencyAnalytics\*
+Innovative GPU Platform Aims to Tackle Cloud Computing Challenges
+\*SolanaFloor\*
+Render Network launches Dispersed
+### \*\*The Render Network on the DePIN Hub podcast\*\*
+Trevor Harries-Jones, board member at the Render Network Foundation, talked with Daniel Andrade, founder of the DePIN Hub platform and DePIN Hub podcast. They discussed:
+\* How the Render Network sends frames out to be rendered by distributed GPUs
+\* The role of managing the supply of and demand for nodes
+\* An overview of what makes rendering such a technical use case
+\* How early generative AI still is for creative workflows — and how fast its evolving
+\* The outsized role of inferencing in AI, to which decentralized networks are well suited
+### \*\*Render Network: Inside DePIN’s Compute Pioneer\*\*
+Render Network Foundation board member, Trevor Harries-Jones, spoke to the fellow DePIN project, Helium, as part of a recent interview series from the decentralized wireless infrastructure project. This interview was conducted at the Helium Beach House in Abu Dhabi during Solana Breakpoint 2025.
+## \*\*Announcements\*\*
+### \*\*The Render Network merchandise store is now open!\*\*
+Interested in picking up a hat, hoodie, coffee mug, or hat? Check out our newly unveiled [merchandise store](https://merch.renderfoundation.com/)!
+Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:700/1\*2THntIJf3NdDJh61caNo7g.png)
+All items were designed by real artists who use the Render Network.
+We shared more about the merch store launch here:
+### \*\*Render Royale: the Premier Monthly 3D Contest — December recap\*\*
+The final Render Royale contest of the year invited artists to imagine the future through a festive but fractured lens. \*\*Frozen Futures & Cyber Christmas\*\* was the theme, challenging creators to explore survival, nostalgia, and technology in worlds where warmth is scarce and tradition has evolved — or vanished entirely.
+\*\*\*Random Frozen Scenes\*\*\* by Turhan Pathan
+Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:700/1\*q3s-ixSFWb6YXcXz6BZ2QQ.png)
+\*\*\*Lead the Way\*\*\*by Deneth Vihara
+Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:700/1\*0OHx2nmXxFeNFiqqD6B1KA.png)
+\*\*\*Delivery\*\*\* by JC
+Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:700/1\*IJqhl8Sd5KrH96djd-2TLg.png)
+From post-apocalyptic journeys across icy wastelands to frozen monuments caught mid-conflict, the submissions captured both spectacle and story. Here are the standout winners from the final Render Royale of 2025.
+More info on the [winners here](/render-royale-december-2025-frozen-futures-cyber-christmas-ad4acacbbad8).
+### \*\*Motion Plus Design presentations and interview are now available\*\*
+Presentations from our sponsorship of Motion Plus Design are now available for replay.
+Phil Gara, VP of Marketing and Strategy at OTOY [talked](https://motion-plus-design.com/watch/talks/159) about the Render Network in New York City in June.
+Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:700/1\*UF5HgYLW0VIZlr67imrV\_A.png)
+Watch Phil’s talk in New York City here: 
+Sunny Osahn, Render Network Foundation Grants Lead, also gave a presentation at the Paris one-day conference in November.
+Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:700/1\*YMd-1UQADJ4TLgj49ldmIQ.png)
+Watch Sunny’s talk in Paris here: 
+Sunny also sat for an interview with Motion Plus Design.
+Press enter or click to view image in full size
+![](https://miro.medium.com/v2/resize:fit:700/1\*59AIUCa2YCsYOXI0r2LNnQ.png)
+Check out the interview here: 
+## What’s coming up
+### \*\*SUBMERGE: Beyond the Render has been extended through March\*\*
+[\*SUMBERGE: Beyond the Render\*](https://www.artechouse.com/program/submerge/), the first-of-its kind art exhibition sponsored by the Render Network in collaboration with ARTECHOUSE NYC, has been extended until March. Originally scheduled to end in December, the exhibit resumes in January 2026. A perfect winter-time activity if you or someone you know is based in or traveling to New York City in the next couple of months.
+[Decentralized Ai](https://medium.com/tag/decentralized-ai?source=post\_page---footer\_tags--43d956808e3f-----------------------------------------)
+[Blockchain](https://medium.com/tag/blockchain?source=post\_page---footer\_tags--43d956808e3f-----------------------------------------)
+[Depin](https://medium.com/tag/depin?source=post\_page---footer\_tags--43d956808e3f-----------------------------------------)
+[3d Rendering](https://medium.com/tag/3d-rendering?source=post\_page---footer\_tags--43d956808e3f-----------------------------------------)
+[Generative Ai Tools](https://medium.com/tag/generative-ai-tools?source=post\_page---footer\_tags--43d956808e3f-----------------------------------------)
+--
+--
+--
+[![](https://miro.medium.com/v2/resize:fill:48:48/1\*ZifcaMAG2oeWSwB7vnL59g.png)](/?source=post\_page---post\_author\_info--43d956808e3f-----------------------------------------)
+[![](https://miro.medium.com/v2/resize:fill:64:64/1\*ZifcaMAG2oeWSwB7vnL59g.png)](/?source=post\_page---post\_author\_info--43d956808e3f-----------------------------------------)
+[## Written by Render Network](/?source=post\_page---post\_author\_info--43d956808e3f-----------------------------------------)
+[3.9K followers](/followers?source=post\_page---post\_author\_info--43d956808e3f-----------------------------------------)
+·[4 following](/following?source=post\_page---post\_author\_info--43d956808e3f-----------------------------------------)
+Try the leading decentralized GPU computing platform today at: 
+[Help](https://help.medium.com/hc/en-us?source=post\_page-----43d956808e3f-----------------------------------------)
+[Status](https://status.medium.com/?source=post\_page-----43d956808e3f-----------------------------------------)
+[About](https://medium.com/about?autoplay=1&source=post\_page-----43d956808e3f-----------------------------------------)
+[Careers](https://medium.com/jobs-at-medium/work-at-medium-959d1a85284e?source=post\_page-----43d956808e3f-----------------------------------------)
+[Press](mailto:pressinquiries@medium.com)
+[Blog](https://blog.medium.com/?source=post\_page-----43d956808e3f-----------------------------------------)
+[Store](https://medium.com/store)
+[Privacy](https://policy.medium.com/medium-privacy-policy-f03bf92035c9?source=post\_page-----43d956808e3f-----------------------------------------)
+[Rules](https://policy.medium.com/medium-rules-30e5502c4eb4?source=post\_page-----43d956808e3f-----------------------------------------)
+[Terms](https://policy.medium.com/medium-terms-of-service-9db0094a1e0f?source=post\_page-----43d956808e3f-----------------------------------------)
+[Text to speech](https://speechify.com/medium?source=post\_page-----43d956808e3f-----------------------------------------)
