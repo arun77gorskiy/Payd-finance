@@ -3,71 +3,64 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "Загрузить authoritative 354 canonical registry",
-        "details": "Найти публичный 354-проект реестр + сектор членство",
-        "status": "in_progress",
+        "content": "Создать timestamped backups production файлов",
+        "details": "Создать резервные копии projects_enriched.json, sector_config.json, intelligence/projects.json и других связанных файлов в dist/data/ и public/data/",
+        "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "Определить текущий active sector universe",
-        "details": "Для каждого сектора знать who is in active universe vs excluded",
-        "status": "pending",
+        "content": "Загрузить валидированные результаты dry-run",
+        "details": "Прочитать payd_final_reactivation_sector_preview.json и payd_final_reactivation_changes.json",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "Картировать 10 кандидатов на их authoritative sectors",
-        "details": "Для каждого кандидата определить в каких sectors они авторитетно присутствуют",
-        "status": "pending",
+        "content": "Создать скрипт atomic apply",
+        "details": "Написать payd_apply_reactivation_10.py, который применяет реактивацию 10 проектов к production файлам без изменения канонического юниверса (354)",
+        "status": "completed",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "Reactivate 10 кандидатов в их секторы",
-        "details": "Применить гейты: MC >= $5.5M, ACTIVE/ACTIVE_NON_GITHUB_CONFIRMED, identity verified",
-        "status": "pending",
+        "content": "Применить реактивацию к dist/data",
+        "details": "Атомарное обновление production данных: projects_enriched.json, intelligence/projects.json, sector_config.json (rotation mode = DISABLED для всех)",
+        "status": "completed",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "Rank секторов по Market Cap",
-        "details": "Re-rank eligible active projects by mc DESC. Reuse identical market/activity data.",
-        "status": "pending",
+        "content": "Запустить post-apply валидацию",
+        "details": "Проверить: 354 master, 0 новых canonical, 0 NaN/Inf/fake zeros, sector counts match expected (Layer1=46, Layer2=23, DePIN=19, AI=37, DeFi=40, RWA=18, Gaming=21, DeSci=10, Infrastructure=36, ZK=0)",
+        "status": "completed",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "Recompute sector counts",
-        "details": "after/before + reactive/removed/target/deficit/HEALTHY/PARTIAL/UNDERFILLED",
-        "status": "pending",
-        "priority": "high"
+        "content": "Скопировать dist → public",
+        "details": "Обновить public/data версии файлов для фронтенда",
+        "status": "completed",
+        "priority": "medium"
       },
       "7": {
         "id": "7",
-        "content": "Per-candidate effect (10 проектов)",
-        "details": "canonical_id, sectors, market_cap, activity, evidence type, action per sector",
-        "status": "pending",
+        "content": "Deploy production и live HTTP валидация",
+        "details": "Деплой обновлённого приложения и проверка через test_website",
+        "status": "in_progress",
         "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "Recompute AUTO rotation mode per sector",
-        "details": "AUTO/OBSERVE_ONLY/DISABLED. DO NOT activate.",
+        "content": "Browser runtime валидация",
+        "details": "Открыть сайт, проверить отображение 10 кандидатов в их секторах, проверить console errors",
         "status": "pending",
         "priority": "high"
       },
       "9": {
         "id": "9",
-        "content": "Создать 3 выходных JSON файла",
-        "details": "payd_final_reactivation_sector_preview.json + payd_final_reactivation_changes.json + payd_final_sector_counts_after_reactivation.json",
-        "status": "pending",
-        "priority": "high"
-      },
-      "10": {
-        "id": "10",
-        "content": "Запустить 12-condition final validation",
-        "details": "PASS/FAIL only at end",
+        "content": "Финальный отчёт",
+        "details": "Создать payd_apply_reactivation_report.json со всеми валидациями и LIVE URL",
         "status": "pending",
         "priority": "high"
       }

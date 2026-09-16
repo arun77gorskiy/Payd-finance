@@ -1,92 +1,162 @@
-[
-  {
-    "id": "sector_Layer1",
-    "sector": "Layer1",
-    "min_projects": 30,
-    "max_projects": null,
-    "weight": 1.0,
-    "description": "Base-layer blockchains (Ethereum, Solana, etc.)",
-    "updated_at": "2026-07-15T00:00:00.000Z"
-  },
-  {
-    "id": "sector_Layer2",
-    "sector": "Layer2",
-    "min_projects": 30,
-    "max_projects": null,
-    "weight": 1.0,
-    "description": "Layer 2 scaling solutions (Arbitrum, Optimism, etc.)",
-    "updated_at": "2026-07-15T00:00:00.000Z"
-  },
-  {
-    "id": "sector_DePIN",
-    "sector": "DePIN",
-    "min_projects": 30,
-    "max_projects": null,
-    "weight": 1.0,
-    "description": "Decentralized Physical Infrastructure Networks",
-    "updated_at": "2026-07-15T00:00:00.000Z"
-  },
-  {
-    "id": "sector_AI",
-    "sector": "AI",
-    "min_projects": 30,
-    "max_projects": null,
-    "weight": 1.0,
-    "description": "AI and Machine Learning protocols",
-    "updated_at": "2026-07-15T00:00:00.000Z"
-  },
-  {
-    "id": "sector_DeFi",
-    "sector": "DeFi",
-    "min_projects": 30,
-    "max_projects": null,
-    "weight": 1.0,
-    "description": "Decentralized Finance protocols",
-    "updated_at": "2026-07-15T00:00:00.000Z"
-  },
-  {
-    "id": "sector_RWA",
-    "sector": "RWA",
-    "min_projects": 25,
-    "max_projects": null,
-    "weight": 0.9,
-    "description": "Real World Assets tokenization",
-    "updated_at": "2026-07-15T00:00:00.000Z"
-  },
-  {
-    "id": "sector_Gaming",
-    "sector": "Gaming",
-    "min_projects": 25,
-    "max_projects": null,
-    "weight": 0.8,
-    "description": "Web3 Gaming and metaverse",
-    "updated_at": "2026-07-15T00:00:00.000Z"
-  },
-  {
-    "id": "sector_DeSci",
-    "sector": "DeSci",
-    "min_projects": 20,
-    "max_projects": null,
-    "weight": 0.9,
-    "description": "Decentralized Science",
-    "updated_at": "2026-07-15T00:00:00.000Z"
-  },
-  {
-    "id": "sector_Infrastructure",
-    "sector": "Infrastructure",
-    "min_projects": 25,
-    "max_projects": null,
-    "weight": 0.9,
-    "description": "Cross-chain, oracle, indexing, middleware",
-    "updated_at": "2026-07-15T00:00:00.000Z"
-  },
-  {
-    "id": "sector_ZK",
-    "sector": "ZK",
-    "min_projects": 20,
-    "max_projects": null,
-    "weight": 1.0,
-    "description": "Zero-Knowledge proof projects",
-    "updated_at": "2026-07-15T00:00:00.000Z"
+{
+  "metadata": {
+    "updated_at": "2026-09-16T16:35:04.399997+00:00",
+    "auto_rotation_enabled_in_production": false,
+    "hysteresis": {
+      "entry_market_cap_usd": 5500000.0,
+      "exit_market_cap_usd": 5000000.0
+    },
+    "sectors": [
+      {
+        "id": "sector_Layer1",
+        "sector": "Layer1",
+        "min_projects": 30,
+        "max_projects": null,
+        "weight": 1.0,
+        "description": "Base-layer blockchains (Ethereum, Solana, etc.)",
+        "updated_at": "2026-07-15T00:00:00.000Z",
+        "rotation_mode": "DISABLED",
+        "rotation_enabled_in_production": false,
+        "hysteresis": {
+          "entry_market_cap_usd": 5500000.0,
+          "exit_market_cap_usd": 5000000.0
+        }
+      },
+      {
+        "id": "sector_Layer2",
+        "sector": "Layer2",
+        "min_projects": 30,
+        "max_projects": null,
+        "weight": 1.0,
+        "description": "Layer 2 scaling solutions (Arbitrum, Optimism, etc.)",
+        "updated_at": "2026-07-15T00:00:00.000Z",
+        "rotation_mode": "DISABLED",
+        "rotation_enabled_in_production": false,
+        "hysteresis": {
+          "entry_market_cap_usd": 5500000.0,
+          "exit_market_cap_usd": 5000000.0
+        }
+      },
+      {
+        "id": "sector_DePIN",
+        "sector": "DePIN",
+        "min_projects": 30,
+        "max_projects": null,
+        "weight": 1.0,
+        "description": "Decentralized Physical Infrastructure Networks",
+        "updated_at": "2026-07-15T00:00:00.000Z",
+        "rotation_mode": "DISABLED",
+        "rotation_enabled_in_production": false,
+        "hysteresis": {
+          "entry_market_cap_usd": 5500000.0,
+          "exit_market_cap_usd": 5000000.0
+        }
+      },
+      {
+        "id": "sector_AI",
+        "sector": "AI",
+        "min_projects": 30,
+        "max_projects": null,
+        "weight": 1.0,
+        "description": "AI and Machine Learning protocols",
+        "updated_at": "2026-07-15T00:00:00.000Z",
+        "rotation_mode": "DISABLED",
+        "rotation_enabled_in_production": false,
+        "hysteresis": {
+          "entry_market_cap_usd": 5500000.0,
+          "exit_market_cap_usd": 5000000.0
+        }
+      },
+      {
+        "id": "sector_DeFi",
+        "sector": "DeFi",
+        "min_projects": 30,
+        "max_projects": null,
+        "weight": 1.0,
+        "description": "Decentralized Finance protocols",
+        "updated_at": "2026-07-15T00:00:00.000Z",
+        "rotation_mode": "DISABLED",
+        "rotation_enabled_in_production": false,
+        "hysteresis": {
+          "entry_market_cap_usd": 5500000.0,
+          "exit_market_cap_usd": 5000000.0
+        }
+      },
+      {
+        "id": "sector_RWA",
+        "sector": "RWA",
+        "min_projects": 25,
+        "max_projects": null,
+        "weight": 0.9,
+        "description": "Real World Assets tokenization",
+        "updated_at": "2026-07-15T00:00:00.000Z",
+        "rotation_mode": "DISABLED",
+        "rotation_enabled_in_production": false,
+        "hysteresis": {
+          "entry_market_cap_usd": 5500000.0,
+          "exit_market_cap_usd": 5000000.0
+        }
+      },
+      {
+        "id": "sector_Gaming",
+        "sector": "Gaming",
+        "min_projects": 25,
+        "max_projects": null,
+        "weight": 0.8,
+        "description": "Web3 Gaming and metaverse",
+        "updated_at": "2026-07-15T00:00:00.000Z",
+        "rotation_mode": "DISABLED",
+        "rotation_enabled_in_production": false,
+        "hysteresis": {
+          "entry_market_cap_usd": 5500000.0,
+          "exit_market_cap_usd": 5000000.0
+        }
+      },
+      {
+        "id": "sector_DeSci",
+        "sector": "DeSci",
+        "min_projects": 20,
+        "max_projects": null,
+        "weight": 0.9,
+        "description": "Decentralized Science",
+        "updated_at": "2026-07-15T00:00:00.000Z",
+        "rotation_mode": "DISABLED",
+        "rotation_enabled_in_production": false,
+        "hysteresis": {
+          "entry_market_cap_usd": 5500000.0,
+          "exit_market_cap_usd": 5000000.0
+        }
+      },
+      {
+        "id": "sector_Infrastructure",
+        "sector": "Infrastructure",
+        "min_projects": 25,
+        "max_projects": null,
+        "weight": 0.9,
+        "description": "Cross-chain, oracle, indexing, middleware",
+        "updated_at": "2026-07-15T00:00:00.000Z",
+        "rotation_mode": "DISABLED",
+        "rotation_enabled_in_production": false,
+        "hysteresis": {
+          "entry_market_cap_usd": 5500000.0,
+          "exit_market_cap_usd": 5000000.0
+        }
+      },
+      {
+        "id": "sector_ZK",
+        "sector": "ZK",
+        "min_projects": 20,
+        "max_projects": null,
+        "weight": 1.0,
+        "description": "Zero-Knowledge proof projects",
+        "updated_at": "2026-07-15T00:00:00.000Z",
+        "rotation_mode": "DISABLED",
+        "rotation_enabled_in_production": false,
+        "hysteresis": {
+          "entry_market_cap_usd": 5500000.0,
+          "exit_market_cap_usd": 5000000.0
+        }
+      }
+    ]
   }
-]
+}
