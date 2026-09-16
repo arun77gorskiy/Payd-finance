@@ -3,78 +3,78 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "STEP 1: Инвентаризация секций index.html — DOM id/class, видимость, интерактив, JS зависимости",
-        "details": "Найти все секции в index.html, для каждой определить: видна ли при загрузке, интерактивная ли, какой JS используется.",
-        "status": "in_progress",
+        "content": "STEP 1: Инвентаризация секций index.html",
+        "details": "",
+        "status": "completed",
         "priority": "high"
       },
       "2": {
         "id": "2",
         "content": "STEP 2: Маппинг каждого script в index.html",
-        "details": "Каждый <script src=...>: размер, load order, defer/async, globals exported/consumed, DOM selectors, listeners, requests.",
-        "status": "pending",
+        "details": "",
+        "status": "completed",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "STEP 3: Trading Lab аудит — 19 скриптов",
-        "details": "Проверить, используется ли хоть один на homepage. Идентифицировать источник 9600 candles / 140 scenarios.",
-        "status": "pending",
+        "content": "PART A: Intelligence V1 audit — exports, dependencies, DOM",
+        "details": "",
+        "status": "in_progress",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "STEP 4: Intelligence V1 аудит",
-        "details": "intelligence-data.js, intelligence-main.js, intelligence-render.js, intelligence-alpha-render.js, intelligence-verified-ui.js, intelligence-services-init.js — ищем homepage consumer.",
+        "content": "PART B: DOM consumer check для V1 selectors",
+        "details": "",
         "status": "pending",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "STEP 5: Intelligence V2 minimum render path",
-        "details": "DOMContentLoaded → первый Intelligence render. Минимально необходимые модули.",
+        "content": "PART C: V1 runtime trace",
+        "details": "",
         "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "STEP 6: Provider/Engine аудит",
-        "details": "22 скрипта: ServiceBase, providers, scoring engines. Нужны ли они для homepage first render?",
+        "content": "PART D: V1 финальная классификация",
+        "details": "",
         "status": "pending",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "STEP 7: Production data architecture check",
-        "details": "Может ли homepage рендериться только из canonical/summary JSON без provider engines?",
+        "content": "PART E: Trading Lab Preview minimum dependencies",
+        "details": "",
         "status": "pending",
-        "priority": "medium"
+        "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "STEP 8: Network request map",
-        "details": "Какие запросы инициируются homepage, классификация, байты, инициаторы.",
+        "content": "PART F: Preview vs Full Lab разделение",
+        "details": "",
         "status": "pending",
-        "priority": "medium"
+        "priority": "high"
       },
       "9": {
         "id": "9",
-        "content": "STEP 9: Build proposed minimal bundle (без изменений)",
-        "details": "Tier A/B/C/D классификация. Точные имена файлов.",
+        "content": "PART G: 9600 candle root cause trace",
+        "details": "",
         "status": "pending",
-        "priority": "medium"
+        "priority": "high"
       },
       "10": {
         "id": "10",
-        "content": "STEP 10: Expected optimization impact",
-        "details": "Текущие vs предложенные цифры.",
+        "content": "PART H: Expected minimal homepage Lab path",
+        "details": "",
         "status": "pending",
-        "priority": "medium"
+        "priority": "high"
       },
       "11": {
         "id": "11",
-        "content": "STEP 11: Финальный отчёт — 3 JSON файла + summary",
-        "details": "payd_homepage_feature_map.json, payd_homepage_dependency_audit.json, payd_homepage_script_classification.json, payd_homepage_network_map.json",
+        "content": "Создать 3 JSON отчёта и финальный summary",
+        "details": "",
         "status": "pending",
         "priority": "high"
       }
