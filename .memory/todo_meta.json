@@ -3,92 +3,127 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "STEP 3.1 — Audit IntelligenceScheduler (find, parse, classify)",
-        "details": "",
+        "content": "STEP 4.1: Создать backup всех production файлов перед изменениями",
+        "details": "1. Создать tmp/step4_backup/\n2. Скопировать все файлы, которые будут модифицированы\n3. Сгенерировать tmp/step4_backup_manifest.json с SHA256 хешами",
         "status": "in_progress",
         "priority": "high"
       },
       "2": {
         "id": "2",
-        "content": "STEP 3.2 — Scheduler side effects classification",
-        "details": "",
+        "content": "STEP 4.2: Загрузить STEP 3 dependency graph и построить DAG",
+        "details": "1. Прочитать tmp/payd_v2_boot_dependency_graph.json\n2. Прочитать tmp/payd_v2_optional_script_classification.json\n3. Построить точный DAG для 12 BOOT_CRITICAL скриптов\n4. Определить реальные зависимости между скриптами",
         "status": "pending",
         "priority": "high"
       },
       "3": {
         "id": "3",
-        "content": "STEP 3.3 — Provider audit (LocalJson, CoinGecko, etc.)",
-        "details": "",
+        "content": "STEP 4.3: Заменить серийную загрузку на dependency waves",
+        "details": "1. Создать новый loader с волнами зависимостей\n2. Wave 1: независимые foundational модули (параллельно)\n3. Wave 2: модули, зависящие от Wave 1 (параллельно)\n4. Wave 3: рендерер/bootstrap (параллельно)\n5. Внутри волны — параллельная загрузка, между волнами — последовательная",
         "status": "pending",
         "priority": "high"
       },
       "4": {
         "id": "4",
-        "content": "STEP 3.4 — Engine audit (analysis, scoring, ranking, etc.)",
-        "details": "",
+        "content": "STEP 4.4: Удалить искусственное накопление serial timeout",
+        "details": "1. Использовать native onload/onerror вместо await\n2. Добавить bounded timeout на волну, а не на каждый скрипт\n3. Убедиться, что ошибка одного скрипта не блокирует всю страницу\n4. Сохранить детерминированные ошибки для критических скриптов",
         "status": "pending",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "STEP 3.5 — Global registration audit",
-        "details": "",
+        "content": "STEP 4.5: Приоритет первого рендера — FIRST_MEANINGFUL_V2_RENDER",
+        "details": "1. Определить минимальный набор: canonical local dataset + normalization + sector + renderer\n2. Не ждать scheduler/discovery/scoring/ranking/lifecycle/report/providers/validation/history/pipeline-ui\n3. Рендерить сразу после готовности минимального набора",
         "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "STEP 3.6 — Script-evaluation side effects",
-        "details": "",
+        "content": "STEP 4.6: POST_RENDER_IMMEDIATE (2 модуля из STEP 3)",
+        "details": "1. Сохранить ровно 2 модуля из STEP 3: intelligence-v2-pipeline-ui.js, IntelligenceGenerators.js\n2. Загружать их сразу после первого рендера\n3. Не блокировать initial UI",
         "status": "pending",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "STEP 3.7 — Build first-render dependency graph",
-        "details": "",
+        "content": "STEP 4.7: INTERACTION_LAZY — 32 модуля с ensureFeatureLoaded()",
+        "details": "1. Создать generic loader с idempotent + Promise cached\n2. Сопоставить каждый из 32 модулей с триггером (tab open, report, discovery, scoring, history, ranking)\n3. Не разбрасывать script injection по UI коду",
         "status": "pending",
         "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "STEP 3.8 — Classify all 38 OPTIONAL scripts",
-        "details": "",
+        "content": "STEP 4.8: SCHEDULED_ONLY — 4 модуля scheduler",
+        "details": "1. Не загружать scheduler при загрузке страницы\n2. Загружать после interactive только когда scheduling требуется\n3. Не запускать таймеры только из-за открытия страницы",
         "status": "pending",
         "priority": "high"
       },
       "9": {
         "id": "9",
-        "content": "STEP 3.9 — Healing module duplication analysis",
-        "details": "",
+        "content": "STEP 4.9: Side-effect safety — 16 файлов",
+        "details": "1. Убедиться, что side effects выполняются не более 1 раза\n2. Event listeners не дублируются\n3. Timers не дублируются\n4. Globals не перезаписываются\n5. Ввести init() guards при необходимости",
         "status": "pending",
         "priority": "high"
       },
       "10": {
         "id": "10",
-        "content": "STEP 3.10 — Network boot audit",
-        "details": "",
+        "content": "STEP 4.10: Initial loader UI behavior",
+        "details": "1. Loader исчезает сразу после первого рендера\n2. Состояния: BOOTING → DATA_READY → FIRST_RENDER → INTERACTIVE\n3. Не infinite loading\n4. На критической ошибке — recoverable error state",
         "status": "pending",
         "priority": "high"
       },
       "11": {
         "id": "11",
-        "content": "STEP 3.11 — Build timing model",
-        "details": "",
+        "content": "STEP 4.11: Cache/version safety",
+        "details": "1. Сохранить cache-busting\n2. Обновить runtime build/version identifier\n3. Не создать state где новый loader + старые зависимости некорректны",
         "status": "pending",
         "priority": "medium"
       },
       "12": {
         "id": "12",
-        "content": "STEP 3.12 — Propose target boot architecture",
-        "details": "",
+        "content": "STEP 4.12: Performance instrumentation",
+        "details": "1. Добавить performance.mark():\n   - payd_boot_start\n   - payd_critical_start\n   - payd_critical_complete\n   - payd_data_start\n   - payd_data_ready\n   - payd_first_render\n   - payd_interactive\n   - payd_post_render_start\n   - payd_post_render_complete\n2. Не изменять поведение приложения",
         "status": "pending",
         "priority": "medium"
       },
       "13": {
         "id": "13",
-        "content": "Generate all output JSON files + final markdown report",
-        "details": "",
+        "content": "STEP 4.13: НЕ менять архитектуру данных",
+        "details": "1. canonical 354-project universe — без изменений\n2. sector memberships — без изменений\n3. market data, GitHub data, classification — без изменений\n4. Payd Score, Risk Score, rotation — без изменений\n5. Trading Lab — без изменений",
+        "status": "pending",
+        "priority": "medium"
+      },
+      "14": {
+        "id": "14",
+        "content": "STEP 4.14: Local validation",
+        "details": "1. Запустить V2 страницу локально\n2. Валидировать:\n   - page opens\n   - loader terminates\n   - default sector renders\n   - sector navigation\n   - canonical project count unchanged\n   - sector counts unchanged\n   - market fields unchanged\n   - display names unchanged\n   - no duplicate rows\n   - no blocking console errors\n   - OPTIONAL не блокирует\n   - POST_RENDER init after render\n   - lazy загружается по запросу\n   - scheduled не блокирует boot",
+        "status": "pending",
+        "priority": "high"
+      },
+      "15": {
+        "id": "15",
+        "content": "STEP 4.15: Performance comparison",
+        "details": "1. Измерить BEFORE и AFTER\n2. cold load, warm load, 3 раза каждый\n3. Создать tmp/payd_v2_step4_before_metrics.json и tmp/payd_v2_step4_after_metrics.json\n4. Не заявлять \"3 секунды\" без измерения",
+        "status": "pending",
+        "priority": "high"
+      },
+      "16": {
+        "id": "16",
+        "content": "STEP 4.16: Failure tests",
+        "details": "A: один non-critical lazy падает → V2 table работает\nB: один POST_RENDER падает → base V2 table работает\nC: canonical fetch падает → error/fallback, не infinite loader\nD: critical renderer падает → deterministic boot error, не 60s stall",
+        "status": "pending",
+        "priority": "high"
+      },
+      "17": {
+        "id": "17",
+        "content": "STEP 4.17: Rollback test",
+        "details": "1. Восстановить tmp/step4_backup/\n2. Сравнить SHA256\n3. Не оставлять rollback, только доказать integrity\n4. Сгенерировать tmp/payd_v2_step4_changed_files.json",
+        "status": "pending",
+        "priority": "high"
+      },
+      "18": {
+        "id": "18",
+        "content": "STEP 4 REPORT: Сгенерировать финальный отчёт",
+        "details": "Создать tmp/payd_v2_step4_report.md со всеми required outputs:\n- Architecture (before/after/waves/lazy/post/scheduled)\n- Performance (cold/warm medians, improvements %)\n- Safety (data/sector/canonical/duplicates/errors)\n- Failure tests PASS/FAIL\n- STEP 4 verdict: PASS / FAIL",
         "status": "pending",
         "priority": "high"
       }
