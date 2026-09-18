@@ -133,15 +133,11 @@
         <p class="payd-v2-footer-hint">To switch provider, edit <code>public/js/intelligence/config/data-provider.config.js</code> — no other code changes required.</p>
     </footer>
 
-    <!-- V2 Self-Healing modules (must load BEFORE the bundle so they register globally) -->
+    <!-- V2 minimal boot shell (STEP 4 refactor):
+         - intelligence-data-preloader.js: canonical data + cached enrichment
+         - intelligence-v2-bundle.js: dependency-wave loader
+         Healing modules moved to INTERACTION_LAZY (loaded on demand) -->
     <script src="/js/intelligence/intelligence-data-preloader.js" defer></script>
-    <script src="/js/intelligence/healing/SectorIntegrityChecker.js" defer></script>
-    <script src="/js/intelligence/healing/AutoDiscoveryService.js" defer></script>
-    <script src="/js/intelligence/healing/SectorClassifier.js" defer></script>
-    <script src="/js/intelligence/healing/AutoEnrichmentService.js" defer></script>
-    <script src="/js/intelligence/healing/SelfHealingEngine.js" defer></script>
-
-    <!-- V2 Self-loading orchestrator: НЕ модифицирует index.html -->
-    <script src="/js/intelligence/intelligence-v2-bundle.js" defer></script>
+    <script src="/js/intelligence/intelligence-v2-bundle.js?v=4.0.0-wave" defer></script>
 </body>
 </html>
