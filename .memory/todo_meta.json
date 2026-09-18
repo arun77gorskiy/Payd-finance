@@ -3,77 +3,91 @@
     "Coordinator": {
       "1": {
         "id": "1",
-        "content": "STEP 1: Инвентаризация секций index.html",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "2": {
-        "id": "2",
-        "content": "STEP 2: Маппинг каждого script в index.html",
-        "details": "",
-        "status": "completed",
-        "priority": "high"
-      },
-      "3": {
-        "id": "3",
-        "content": "PART A: Intelligence V1 audit — exports, dependencies, DOM",
+        "content": "STEP 3.1 — Audit IntelligenceScheduler (find, parse, classify)",
         "details": "",
         "status": "in_progress",
         "priority": "high"
       },
+      "2": {
+        "id": "2",
+        "content": "STEP 3.2 — Scheduler side effects classification",
+        "details": "",
+        "status": "pending",
+        "priority": "high"
+      },
+      "3": {
+        "id": "3",
+        "content": "STEP 3.3 — Provider audit (LocalJson, CoinGecko, etc.)",
+        "details": "",
+        "status": "pending",
+        "priority": "high"
+      },
       "4": {
         "id": "4",
-        "content": "PART B: DOM consumer check для V1 selectors",
+        "content": "STEP 3.4 — Engine audit (analysis, scoring, ranking, etc.)",
         "details": "",
         "status": "pending",
         "priority": "high"
       },
       "5": {
         "id": "5",
-        "content": "PART C: V1 runtime trace",
+        "content": "STEP 3.5 — Global registration audit",
         "details": "",
         "status": "pending",
         "priority": "high"
       },
       "6": {
         "id": "6",
-        "content": "PART D: V1 финальная классификация",
+        "content": "STEP 3.6 — Script-evaluation side effects",
         "details": "",
         "status": "pending",
         "priority": "high"
       },
       "7": {
         "id": "7",
-        "content": "PART E: Trading Lab Preview minimum dependencies",
+        "content": "STEP 3.7 — Build first-render dependency graph",
         "details": "",
         "status": "pending",
         "priority": "high"
       },
       "8": {
         "id": "8",
-        "content": "PART F: Preview vs Full Lab разделение",
+        "content": "STEP 3.8 — Classify all 38 OPTIONAL scripts",
         "details": "",
         "status": "pending",
         "priority": "high"
       },
       "9": {
         "id": "9",
-        "content": "PART G: 9600 candle root cause trace",
+        "content": "STEP 3.9 — Healing module duplication analysis",
         "details": "",
         "status": "pending",
         "priority": "high"
       },
       "10": {
         "id": "10",
-        "content": "PART H: Expected minimal homepage Lab path",
+        "content": "STEP 3.10 — Network boot audit",
         "details": "",
         "status": "pending",
         "priority": "high"
       },
       "11": {
         "id": "11",
-        "content": "Создать 3 JSON отчёта и финальный summary",
+        "content": "STEP 3.11 — Build timing model",
+        "details": "",
+        "status": "pending",
+        "priority": "medium"
+      },
+      "12": {
+        "id": "12",
+        "content": "STEP 3.12 — Propose target boot architecture",
+        "details": "",
+        "status": "pending",
+        "priority": "medium"
+      },
+      "13": {
+        "id": "13",
+        "content": "Generate all output JSON files + final markdown report",
         "details": "",
         "status": "pending",
         "priority": "high"
