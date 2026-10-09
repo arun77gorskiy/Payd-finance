@@ -1,0 +1,57 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "regions": [
+    "iad1"
+  ],
+  "functions": {
+    "api/healthz.js": {
+      "maxDuration": 10,
+      "memory": 256,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/intelligence/market.js": {
+      "maxDuration": 10,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/healthz",
+      "destination": "/api/healthz"
+    },
+    {
+      "source": "/api/intelligence/market",
+      "destination": "/api/intelligence/market"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "github": {
+    "silent": true
+  }
+}

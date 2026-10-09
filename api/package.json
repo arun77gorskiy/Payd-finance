@@ -1,0 +1,16 @@
+{
+  "name": "payd-market-gateway-vercel",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PAYD Market Gateway \u2014 Vercel Node.js serverless functions wrapping the platform-independent core service. Routes: GET /api/healthz, GET /api/intelligence/market?id=<canonical-id>",
+  "main": "api/_lib/runtime.js",
+  "scripts": {
+    "test": "node api/_test/vercel_smoke.js"
+  },
+  "engines": {
+    "node": "22.x"
+  },
+  "dependencies": {},
+  "devDependencies": {},
+  "license": "UNLICENSED"
+}

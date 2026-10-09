@@ -1,0 +1,6124 @@
+{
+  "generated_at": "2026-10-01T04:07:00Z",
+  "source": "PAYD canonical + CMC ID audit",
+  "count": 354,
+  "sectors": [
+    "AI",
+    "DeFi",
+    "DePIN",
+    "DeSci",
+    "Gaming",
+    "Infrastructure",
+    "Layer 1",
+    "Layer 2",
+    "RWA",
+    "ZK"
+  ],
+  "records": [
+    {
+      "id": "bitcoin",
+      "symbol": "BTC",
+      "name": "bitcoin",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 1605446827999,
+      "cmcId": "1",
+      "cmcSlug": "bitcoin"
+    },
+    {
+      "id": "ethereum",
+      "symbol": "ETH",
+      "name": "ethereum",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 302306048021,
+      "cmcId": "1027",
+      "cmcSlug": "ethereum"
+    },
+    {
+      "id": "binancecoin",
+      "symbol": "BNB",
+      "name": "binancecoin",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 103627585666,
+      "cmcId": "1839",
+      "cmcSlug": "bnb"
+    },
+    {
+      "id": "ripple",
+      "symbol": "XRP",
+      "name": "ripple",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 89047803253,
+      "cmcId": "52",
+      "cmcSlug": "xrp"
+    },
+    {
+      "id": "solana",
+      "symbol": "SOL",
+      "name": "solana",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 60792789322,
+      "cmcId": "5426",
+      "cmcSlug": "solana"
+    },
+    {
+      "id": "tron",
+      "symbol": "TRX",
+      "name": "tron",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 31721991056,
+      "cmcId": "1958",
+      "cmcSlug": "tron"
+    },
+    {
+      "id": "hyperliquid",
+      "symbol": "HYPE",
+      "name": "hyperliquid",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 19028156477,
+      "cmcId": "32196",
+      "cmcSlug": "hyperliquid"
+    },
+    {
+      "id": "zcash",
+      "symbol": "ZEC",
+      "name": "Zcash",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 17355308831,
+      "cmcId": "1437",
+      "cmcSlug": "zcash"
+    },
+    {
+      "id": "dogecoin",
+      "symbol": "DOGE",
+      "name": "dogecoin",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 14324591076,
+      "cmcId": "74",
+      "cmcSlug": "dogecoin"
+    },
+    {
+      "id": "chainlink",
+      "symbol": "LINK",
+      "name": "chainlink",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 9010343598,
+      "cmcId": "1975",
+      "cmcSlug": "chainlink"
+    },
+    {
+      "id": "cardano",
+      "symbol": "ADA",
+      "name": "cardano",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 8279219752,
+      "cmcId": "2010",
+      "cmcSlug": "cardano"
+    },
+    {
+      "id": "stellar",
+      "symbol": "XLM",
+      "name": "stellar",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 6434353498,
+      "cmcId": "512",
+      "cmcSlug": "stellar"
+    },
+    {
+      "id": "uniswap",
+      "symbol": "UNI",
+      "name": "uniswap",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 4381150019,
+      "cmcId": "7083",
+      "cmcSlug": "uniswap"
+    },
+    {
+      "id": "litecoin",
+      "symbol": "LTC",
+      "name": "litecoin",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 4259957632,
+      "cmcId": "2",
+      "cmcSlug": "litecoin"
+    },
+    {
+      "id": "the-open-network",
+      "symbol": "TON",
+      "name": "the-open-network",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 3972701212,
+      "cmcId": "11419",
+      "cmcSlug": "gram"
+    },
+    {
+      "id": "hedera-hashgraph",
+      "symbol": "HBAR",
+      "name": "hedera-hashgraph",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 3545171046,
+      "cmcId": "4642",
+      "cmcSlug": "hedera"
+    },
+    {
+      "id": "sui",
+      "symbol": "SUI",
+      "name": "sui",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 3290413449,
+      "cmcId": "20947",
+      "cmcSlug": "sui"
+    },
+    {
+      "id": "avalanche-2",
+      "symbol": "AVAX",
+      "name": "avalanche-2",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 3287134194,
+      "cmcId": "5805",
+      "cmcSlug": "avalanche"
+    },
+    {
+      "id": "near",
+      "symbol": "NEAR",
+      "name": "near",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 2905758231,
+      "cmcId": "6535",
+      "cmcSlug": "near"
+    },
+    {
+      "id": "crypto-com-chain",
+      "symbol": "CRO",
+      "name": "crypto-com-chain",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 2744343744,
+      "cmcId": "3635",
+      "cmcSlug": "cronos"
+    },
+    {
+      "id": "tether-gold",
+      "symbol": "XAUT",
+      "name": "tether-gold",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 2712914798,
+      "cmcId": "5176",
+      "cmcSlug": "tether-gold"
+    },
+    {
+      "id": "hashnote",
+      "symbol": "USYC",
+      "name": "hashnote",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 2624340328,
+      "cmcId": "28558",
+      "cmcSlug": "hashnote-usyc"
+    },
+    {
+      "id": "bittensor",
+      "symbol": "TAO",
+      "name": "Bittensor",
+      "sectors": [
+        "DeSci",
+        "AI",
+        "Layer 1"
+      ],
+      "market_cap_usd": 2454835220,
+      "cmcId": "22974",
+      "cmcSlug": "bittensor"
+    },
+    {
+      "id": "aave",
+      "symbol": "AAVE",
+      "name": "aave",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 2081513591,
+      "cmcId": "7278",
+      "cmcSlug": "aave"
+    },
+    {
+      "id": "mantle",
+      "symbol": "MNT",
+      "name": "mantle",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 1924042448,
+      "cmcId": "27075",
+      "cmcSlug": "mantle"
+    },
+    {
+      "id": "pax-gold",
+      "symbol": "PAXG",
+      "name": "pax-gold",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 1917866672,
+      "cmcId": "4705",
+      "cmcSlug": "pax-gold"
+    },
+    {
+      "id": "ondo-finance",
+      "symbol": "ONDO",
+      "name": "ondo-finance",
+      "sectors": [
+        "DeFi",
+        "RWA"
+      ],
+      "market_cap_usd": 1800713935,
+      "cmcId": "21159",
+      "cmcSlug": "ondo-finance"
+    },
+    {
+      "id": "morpho",
+      "symbol": "MORPHO",
+      "name": "morpho",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 1716927354,
+      "cmcId": "34104",
+      "cmcSlug": "morpho"
+    },
+    {
+      "id": "internet-computer",
+      "symbol": "ICP",
+      "name": "Internet Computer",
+      "sectors": [
+        "Infrastructure",
+        "Layer 1"
+      ],
+      "market_cap_usd": 1687057531,
+      "cmcId": "8916",
+      "cmcSlug": "internet-computer"
+    },
+    {
+      "id": "ethena",
+      "symbol": "ENA",
+      "name": "ethena",
+      "sectors": [
+        "DeFi",
+        "RWA"
+      ],
+      "market_cap_usd": 1671499508,
+      "cmcId": "30171",
+      "cmcSlug": "ethena"
+    },
+    {
+      "id": "polkadot",
+      "symbol": "DOT",
+      "name": "polkadot",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 1550595497,
+      "cmcId": "6636",
+      "cmcSlug": "polkadot-new"
+    },
+    {
+      "id": "polygon",
+      "symbol": "POL",
+      "name": "Polygon",
+      "sectors": [
+        "Layer 2",
+        "ZK"
+      ],
+      "market_cap_usd": 1017493636,
+      "cmcId": "28321",
+      "cmcSlug": "polygon-ecosystem-token"
+    },
+    {
+      "id": "arbitrum",
+      "symbol": "ARB",
+      "name": "arbitrum",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 952297028,
+      "cmcId": "11841",
+      "cmcSlug": "arbitrum"
+    },
+    {
+      "id": "rocket-pool-eth",
+      "symbol": "RPL",
+      "name": "rocket-pool-eth",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 918893215,
+      "cmcId": "2943",
+      "cmcSlug": "rocket-pool"
+    },
+    {
+      "id": "algorand",
+      "symbol": "ALGO",
+      "name": "algorand",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 856652078,
+      "cmcId": "4030",
+      "cmcSlug": "algorand"
+    },
+    {
+      "id": "kaspa",
+      "symbol": "KAS",
+      "name": "kaspa",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 842522520,
+      "cmcId": "20396",
+      "cmcSlug": "kaspa"
+    },
+    {
+      "id": "venice-token",
+      "symbol": "VVV",
+      "name": "venice-token",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 824706301,
+      "cmcId": "35509",
+      "cmcSlug": "venice-token"
+    },
+    {
+      "id": "cosmos",
+      "symbol": "ATOM",
+      "name": "cosmos",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 817608944,
+      "cmcId": "3794",
+      "cmcSlug": "cosmos"
+    },
+    {
+      "id": "render",
+      "symbol": "RENDER",
+      "name": "render",
+      "sectors": [
+        "DePIN",
+        "AI"
+      ],
+      "market_cap_usd": 761789321,
+      "cmcId": "5690",
+      "cmcSlug": "render"
+    },
+    {
+      "id": "jupiter-exchange-solana",
+      "symbol": "JUP",
+      "name": "jupiter-exchange-solana",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 731110008,
+      "cmcId": "29210",
+      "cmcSlug": "jupiter"
+    },
+    {
+      "id": "pancakeswap-token",
+      "symbol": "CAKE",
+      "name": "pancakeswap-token",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 727073841,
+      "cmcId": "7186",
+      "cmcSlug": "pancakeswap"
+    },
+    {
+      "id": "filecoin",
+      "symbol": "FIL",
+      "name": "Filecoin",
+      "sectors": [
+        "Layer 1",
+        "DePIN",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 710106213,
+      "cmcId": "2280",
+      "cmcSlug": "filecoin"
+    },
+    {
+      "id": "ipfs",
+      "symbol": "FIL",
+      "name": "IPFS",
+      "sectors": [
+        "DeSci",
+        "Infrastructure",
+        "DePIN"
+      ],
+      "market_cap_usd": 647379593
+    },
+    {
+      "id": "vechain",
+      "symbol": "VET",
+      "name": "vechain",
+      "sectors": [
+        "Layer 1",
+        "RWA"
+      ],
+      "market_cap_usd": 595703707,
+      "cmcId": "3077",
+      "cmcSlug": "vechain"
+    },
+    {
+      "id": "flare",
+      "symbol": "FLR",
+      "name": "flare",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 582409840.9054749,
+      "cmcId": "7950",
+      "cmcSlug": "flare"
+    },
+    {
+      "id": "curve-dao-token",
+      "symbol": "CRV",
+      "name": "curve-dao-token",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 576218218,
+      "cmcId": "6538",
+      "cmcSlug": "curve-dao-token"
+    },
+    {
+      "id": "aptos",
+      "symbol": "APT",
+      "name": "aptos",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 519031919,
+      "cmcId": "21794",
+      "cmcSlug": "aptos"
+    },
+    {
+      "id": "wrapped-stx",
+      "symbol": "WSTX",
+      "name": "wrapped-stx",
+      "sectors": [
+        "RWA",
+        "DeFi"
+      ],
+      "market_cap_usd": 501220971,
+      "cmcId": "22257",
+      "cmcSlug": "wrapped-stacks"
+    },
+    {
+      "id": "injective-protocol",
+      "symbol": "INJ",
+      "name": "injective-protocol",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 491454028,
+      "cmcId": "7226",
+      "cmcSlug": "injective-protocol"
+    },
+    {
+      "id": "virtuals-protocol",
+      "symbol": "VIRTUAL",
+      "name": "virtuals-protocol",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 452693362,
+      "cmcId": "29420",
+      "cmcSlug": "virtual-protocol"
+    },
+    {
+      "id": "pyth-network",
+      "symbol": "PYTH",
+      "name": "pyth-network",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 434547326,
+      "cmcId": "28177",
+      "cmcSlug": "pyth-network"
+    },
+    {
+      "id": "fetch-ai",
+      "symbol": "FET",
+      "name": "fetch-ai",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 380449307,
+      "cmcId": "3773",
+      "cmcSlug": "artificial-superintelligence-alliance"
+    },
+    {
+      "id": "layerzero",
+      "symbol": "ZRO",
+      "name": "layerzero",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 376966019,
+      "cmcId": "26997",
+      "cmcSlug": "layerzero"
+    },
+    {
+      "id": "midnight-3",
+      "symbol": "NIGHT",
+      "name": "Midnight",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 368685289,
+      "cmcId": "39064",
+      "cmcSlug": "midnight"
+    },
+    {
+      "id": "celestia",
+      "symbol": "TIA",
+      "name": "celestia",
+      "sectors": [
+        "Layer 1",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 360815577,
+      "cmcId": "22861",
+      "cmcSlug": "celestia"
+    },
+    {
+      "id": "pendle",
+      "symbol": "PENDLE",
+      "name": "pendle",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 339455786,
+      "cmcId": "9481",
+      "cmcSlug": "pendle"
+    },
+    {
+      "id": "lido-dao",
+      "symbol": "LDO",
+      "name": "lido-dao",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 324413916,
+      "cmcId": "8000",
+      "cmcSlug": "lido-dao"
+    },
+    {
+      "id": "sei-network",
+      "symbol": "SEI",
+      "name": "sei-network",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 321792010,
+      "cmcId": "23149",
+      "cmcSlug": "sei-network"
+    },
+    {
+      "id": "gnosis",
+      "symbol": "GNO",
+      "name": "gnosis",
+      "sectors": [
+        "Layer 2",
+        "DeFi"
+      ],
+      "market_cap_usd": 311923007,
+      "cmcId": "1659",
+      "cmcSlug": "gnosis"
+    },
+    {
+      "id": "monad",
+      "symbol": "MON",
+      "name": "monad",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 297431124,
+      "cmcId": "30495",
+      "cmcSlug": "monad"
+    },
+    {
+      "id": "tezos",
+      "symbol": "XTZ",
+      "name": "tezos",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 258894286,
+      "cmcId": "2011",
+      "cmcSlug": "tezos"
+    },
+    {
+      "id": "conflux-token",
+      "symbol": "CFX",
+      "name": "conflux-token",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 254616897,
+      "cmcId": "7334",
+      "cmcSlug": "conflux-network"
+    },
+    {
+      "id": "grass",
+      "symbol": "GRASS",
+      "name": "grass",
+      "sectors": [
+        "DePIN",
+        "AI"
+      ],
+      "market_cap_usd": 233481213,
+      "cmcId": "32956",
+      "cmcSlug": "grass"
+    },
+    {
+      "id": "optimism",
+      "symbol": "OP",
+      "name": "optimism",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 232077092,
+      "cmcId": "11840",
+      "cmcSlug": "optimism"
+    },
+    {
+      "id": "raydium",
+      "symbol": "RAY",
+      "name": "raydium",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 231657670,
+      "cmcId": "8526",
+      "cmcSlug": "raydium"
+    },
+    {
+      "id": "frax-finance",
+      "symbol": "FRAX",
+      "name": "Frax",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 217569407,
+      "cmcId": "6952",
+      "cmcSlug": "frax"
+    },
+    {
+      "id": "frax",
+      "symbol": "FXS",
+      "name": "Frax Share",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 217569407,
+      "cmcId": "6953",
+      "cmcSlug": "frax"
+    },
+    {
+      "id": "convex-finance",
+      "symbol": "CVX",
+      "name": "convex-finance",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 211456966,
+      "cmcId": "9903",
+      "cmcSlug": "convex-finance"
+    },
+    {
+      "id": "starknet",
+      "symbol": "STRK",
+      "name": "starknet",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 206078012,
+      "cmcId": "22691",
+      "cmcSlug": "starknet"
+    },
+    {
+      "id": "compound-governance-token",
+      "symbol": "COMP",
+      "name": "compound-governance-token",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 201401403,
+      "cmcId": "5692",
+      "cmcSlug": "compound"
+    },
+    {
+      "id": "arweave",
+      "symbol": "AR",
+      "name": "arweave",
+      "sectors": [
+        "DePIN",
+        "Infrastructure",
+        "DeSci"
+      ],
+      "market_cap_usd": 195946275,
+      "cmcId": "5632",
+      "cmcSlug": "arweave"
+    },
+    {
+      "id": "the-graph",
+      "symbol": "GRT",
+      "name": "the-graph",
+      "sectors": [
+        "AI",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 192755648,
+      "cmcId": "6719",
+      "cmcSlug": "the-graph"
+    },
+    {
+      "id": "iota",
+      "symbol": "MIOTA",
+      "name": "iota",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 186461338,
+      "cmcId": "1720",
+      "cmcSlug": "iota"
+    },
+    {
+      "id": "eigenlayer",
+      "symbol": "EIGEN",
+      "name": "eigenlayer",
+      "sectors": [
+        "AI",
+        "Infrastructure",
+        "DeFi"
+      ],
+      "market_cap_usd": 186108097,
+      "cmcId": "30494",
+      "cmcSlug": "eigencloud"
+    },
+    {
+      "id": "swissborg",
+      "symbol": "BORG",
+      "name": "swissborg",
+      "sectors": [
+        "RWA",
+        "DeFi"
+      ],
+      "market_cap_usd": 179659955,
+      "cmcId": "2499",
+      "cmcSlug": "swissborg"
+    },
+    {
+      "id": "theta",
+      "symbol": "THETA",
+      "name": "theta",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 177689906,
+      "cmcId": "2416",
+      "cmcSlug": "theta-token"
+    },
+    {
+      "id": "akash",
+      "symbol": "AKT",
+      "name": "Akash Network",
+      "sectors": [
+        "AI",
+        "DePIN"
+      ],
+      "market_cap_usd": 166846718,
+      "cmcId": "7431",
+      "cmcSlug": "akash-network"
+    },
+    {
+      "id": "axie-infinity",
+      "symbol": "AXS",
+      "name": "axie-infinity",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 165741914,
+      "cmcId": "6783",
+      "cmcSlug": "axie-infinity"
+    },
+    {
+      "id": "thorchain",
+      "symbol": "RUNE",
+      "name": "thorchain",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 161091636,
+      "cmcId": "4157",
+      "cmcSlug": "thorchain"
+    },
+    {
+      "id": "humanity",
+      "symbol": "H",
+      "name": "Humanity",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 153225269,
+      "cmcId": "36922",
+      "cmcSlug": "humanity-protocol"
+    },
+    {
+      "id": "neo",
+      "symbol": "NEO",
+      "name": "neo",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 150410730,
+      "cmcId": "1376",
+      "cmcSlug": "neo"
+    },
+    {
+      "id": "apecoin",
+      "symbol": "APE",
+      "name": "ApeCoin",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 146736444,
+      "cmcId": "18876",
+      "cmcSlug": "apecoin"
+    },
+    {
+      "id": "decentraland",
+      "symbol": "MANA",
+      "name": "decentraland",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 146690854,
+      "cmcId": "1966",
+      "cmcSlug": "decentraland"
+    },
+    {
+      "id": "origintrail",
+      "symbol": "TRAC",
+      "name": "origintrail",
+      "sectors": [
+        "AI",
+        "Infrastructure",
+        "RWA",
+        "DeSci"
+      ],
+      "market_cap_usd": 144077409,
+      "cmcId": "2467",
+      "cmcSlug": "origintrail"
+    },
+    {
+      "id": "multiversx",
+      "symbol": "EGLD",
+      "name": "multiversx",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 140359105.72153652,
+      "cmcId": "6892",
+      "cmcSlug": "multiversx"
+    },
+    {
+      "id": "1inch",
+      "symbol": "1INCH",
+      "name": "1inch",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 132204318,
+      "cmcId": "8104",
+      "cmcSlug": "1inch"
+    },
+    {
+      "id": "zencash",
+      "symbol": "ZEN",
+      "name": "Horizen",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 127955043,
+      "cmcId": "1698",
+      "cmcSlug": "horizen"
+    },
+    {
+      "id": "ozone-chain",
+      "symbol": "OZO",
+      "name": "Ozone Chain",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 125880342,
+      "cmcId": "28076",
+      "cmcSlug": "ozone-chain"
+    },
+    {
+      "id": "synthetix",
+      "symbol": "SNX",
+      "name": "synthetix",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 124930802,
+      "cmcId": "2586",
+      "cmcSlug": "synthetix"
+    },
+    {
+      "id": "railgun",
+      "symbol": "RAIL",
+      "name": "Railgun",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 119351207,
+      "cmcId": "10854",
+      "cmcSlug": "railgun"
+    },
+    {
+      "id": "immutable",
+      "symbol": "IMX",
+      "name": "Immutable",
+      "sectors": [
+        "Gaming",
+        "Layer 2"
+      ],
+      "market_cap_usd": 117637661,
+      "cmcId": "10603",
+      "cmcSlug": "immutable-x"
+    },
+    {
+      "id": "the-sandbox",
+      "symbol": "SAND",
+      "name": "the-sandbox",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 116498152,
+      "cmcId": "6210",
+      "cmcSlug": "the-sandbox"
+    },
+    {
+      "id": "sonic-3",
+      "symbol": "S",
+      "name": "sonic-3",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 115397916,
+      "cmcId": "32684",
+      "cmcSlug": "sonic"
+    },
+    {
+      "id": "helium",
+      "symbol": "HNT",
+      "name": "helium",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 111714647,
+      "cmcId": "5665",
+      "cmcSlug": "helium"
+    },
+    {
+      "id": "golem",
+      "symbol": "GLM",
+      "name": "golem",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 110727445,
+      "cmcId": "1455",
+      "cmcSlug": "golem-network-tokens"
+    },
+    {
+      "id": "geodnet",
+      "symbol": "GEOD",
+      "name": "geodnet",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 107781057,
+      "cmcId": "20969",
+      "cmcSlug": "geodnet"
+    },
+    {
+      "id": "mina-protocol",
+      "symbol": "MINA",
+      "name": "Mina Protocol",
+      "sectors": [
+        "Infrastructure",
+        "Layer 1",
+        "ZK"
+      ],
+      "market_cap_usd": 106556304,
+      "cmcId": "8646",
+      "cmcSlug": "mina-protocol"
+    },
+    {
+      "id": "instadapp",
+      "symbol": "INST",
+      "name": "instadapp",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 104451527,
+      "cmcId": "6363",
+      "cmcSlug": "instadapp"
+    },
+    {
+      "id": "zksync",
+      "symbol": "ZK",
+      "name": "zksync",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 103305489,
+      "cmcId": "24091",
+      "cmcSlug": "zksync"
+    },
+    {
+      "id": "sentient",
+      "symbol": "SENT",
+      "name": "sentient",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 96848809,
+      "cmcId": "38868",
+      "cmcSlug": "sentient"
+    },
+    {
+      "id": "aethir",
+      "symbol": "ATH",
+      "name": "aethir",
+      "sectors": [
+        "AI",
+        "DePIN",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 94223589,
+      "cmcId": "30083",
+      "cmcSlug": "aethir"
+    },
+    {
+      "id": "gala",
+      "symbol": "GALA",
+      "name": "gala",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 93111551,
+      "cmcId": "7080",
+      "cmcSlug": "gala"
+    },
+    {
+      "id": "nexus-4",
+      "symbol": "NEX",
+      "name": "Nexus",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 87847812,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "plume-network",
+      "symbol": "PLUME",
+      "name": "plume-network",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 87448189,
+      "cmcId": "35364",
+      "cmcSlug": "plume"
+    },
+    {
+      "id": "yearn-finance",
+      "symbol": "YFI",
+      "name": "yearn-finance",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 83333415,
+      "cmcId": "5864",
+      "cmcSlug": "yearn-finance"
+    },
+    {
+      "id": "beam",
+      "symbol": "BEAM",
+      "name": "beam",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 80746272,
+      "cmcId": "28298",
+      "cmcSlug": "onbeam"
+    },
+    {
+      "id": "gmx",
+      "symbol": "GMX",
+      "name": "gmx",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 78441150,
+      "cmcId": "11857",
+      "cmcSlug": "gmx"
+    },
+    {
+      "id": "orca",
+      "symbol": "ORCA",
+      "name": "orca",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 77843222,
+      "cmcId": "11165",
+      "cmcSlug": "orca"
+    },
+    {
+      "id": "safe",
+      "symbol": "SAFE",
+      "name": "safe",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 75382018,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "kaito",
+      "symbol": "KAITO",
+      "name": "kaito",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 74417288,
+      "cmcId": "35763",
+      "cmcSlug": "kaito"
+    },
+    {
+      "id": "arkham",
+      "symbol": "ARKM",
+      "name": "arkham",
+      "sectors": [
+        "Infrastructure",
+        "AI"
+      ],
+      "market_cap_usd": 74202985,
+      "cmcId": "27565",
+      "cmcSlug": "arkham"
+    },
+    {
+      "id": "sushi",
+      "symbol": "SUSHI",
+      "name": "sushi",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 73327533,
+      "cmcId": "6758",
+      "cmcSlug": "sushi"
+    },
+    {
+      "id": "livepeer",
+      "symbol": "LPT",
+      "name": "livepeer",
+      "sectors": [
+        "DePIN",
+        "AI",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 73047482,
+      "cmcId": "3640",
+      "cmcSlug": "livepeer"
+    },
+    {
+      "id": "aioz-network",
+      "symbol": "AIOZ",
+      "name": "aioz-network",
+      "sectors": [
+        "AI",
+        "DePIN",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 72877520,
+      "cmcId": "9104",
+      "cmcSlug": "aioz-network"
+    },
+    {
+      "id": "story-protocol",
+      "symbol": "IP",
+      "name": "story-protocol",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 68214210,
+      "cmcId": "29147",
+      "cmcSlug": "story-2"
+    },
+    {
+      "id": "spark",
+      "symbol": "SPK",
+      "name": "spark",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 68030111,
+      "cmcId": "36569",
+      "cmcSlug": "spark"
+    },
+    {
+      "id": "numerai",
+      "symbol": "NMR",
+      "name": "numerai",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 65649444,
+      "cmcId": "1732",
+      "cmcSlug": "numeraire"
+    },
+    {
+      "id": "peaq",
+      "symbol": "PEAQ",
+      "name": "peaq",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 65230616,
+      "cmcId": "14588",
+      "cmcSlug": "peaq"
+    },
+    {
+      "id": "linea",
+      "symbol": "LINEA",
+      "name": "linea",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 64534407,
+      "cmcId": "27633",
+      "cmcSlug": "linea"
+    },
+    {
+      "id": "wormhole",
+      "symbol": "W",
+      "name": "wormhole",
+      "sectors": [
+        "DeFi",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 63620709,
+      "cmcId": "29515",
+      "cmcSlug": "wormhole"
+    },
+    {
+      "id": "allora",
+      "symbol": "ALLO",
+      "name": "allora",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 61238624,
+      "cmcId": "28907",
+      "cmcSlug": "allora"
+    },
+    {
+      "id": "chainopera-ai",
+      "symbol": "COAI",
+      "name": "chainopera-ai",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 59601462,
+      "cmcId": "28911",
+      "cmcSlug": "chainopera-ai"
+    },
+    {
+      "id": "berachain",
+      "symbol": "BERA",
+      "name": "berachain",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 59013462.15536534,
+      "cmcId": "24647",
+      "cmcSlug": "berachain"
+    },
+    {
+      "id": "enjincoin",
+      "symbol": "ENJ",
+      "name": "enjincoin",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 55810740,
+      "cmcId": "2130",
+      "cmcSlug": "enjin"
+    },
+    {
+      "id": "venus",
+      "symbol": "XVS",
+      "name": "venus",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 55678470,
+      "cmcId": "7281",
+      "cmcSlug": "venus"
+    },
+    {
+      "id": "zetachain",
+      "symbol": "ZETA",
+      "name": "zetachain",
+      "sectors": [
+        "Layer 2",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 55477208,
+      "cmcId": "21259",
+      "cmcSlug": "zetachain"
+    },
+    {
+      "id": "kava",
+      "symbol": "KAVA",
+      "name": "kava",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 55369680,
+      "cmcId": "4846",
+      "cmcSlug": "kava"
+    },
+    {
+      "id": "zilliqa",
+      "symbol": "ZIL",
+      "name": "zilliqa",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 54671611,
+      "cmcId": "2469",
+      "cmcSlug": "zilliqa"
+    },
+    {
+      "id": "axelar",
+      "symbol": "AXL",
+      "name": "axelar",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 54102405,
+      "cmcId": "17799",
+      "cmcSlug": "axelar"
+    },
+    {
+      "id": "oasis-network",
+      "symbol": "ROSE",
+      "name": "oasis-network",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 54039646,
+      "cmcId": "7653",
+      "cmcSlug": "oasis-network"
+    },
+    {
+      "id": "astar",
+      "symbol": "ASTR",
+      "name": "astar",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 51577317,
+      "cmcId": "12886",
+      "cmcSlug": "astar"
+    },
+    {
+      "id": "concordium",
+      "symbol": "CCD",
+      "name": "Concordium",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 49988927,
+      "cmcId": "18031",
+      "cmcSlug": "concordium"
+    },
+    {
+      "id": "fireblocks",
+      "symbol": "FB",
+      "name": "fireblocks",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 48591981.44753713,
+      "cmcId": "24877",
+      "cmcSlug": "fireblocks"
+    },
+    {
+      "id": "flow",
+      "symbol": "FLOW",
+      "name": "flow",
+      "sectors": [
+        "Layer 1",
+        "Gaming"
+      ],
+      "market_cap_usd": 48402749,
+      "cmcId": "4558",
+      "cmcSlug": "flow"
+    },
+    {
+      "id": "casper-network",
+      "symbol": "CSPR",
+      "name": "casper-network",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 47758671,
+      "cmcId": "10784",
+      "cmcSlug": "casper-network"
+    },
+    {
+      "id": "dusk-network",
+      "symbol": "DUSK",
+      "name": "dusk-network",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 46999005,
+      "cmcId": "4092",
+      "cmcSlug": "dusk-network"
+    },
+    {
+      "id": "celo",
+      "symbol": "CELO",
+      "name": "celo",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 46973535,
+      "cmcId": "5567",
+      "cmcSlug": "celo"
+    },
+    {
+      "id": "subsquid",
+      "symbol": "SQD",
+      "name": "subsquid",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 46767369,
+      "cmcId": "24455",
+      "cmcSlug": "subsquid"
+    },
+    {
+      "id": "kamino",
+      "symbol": "KMNO",
+      "name": "kamino",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 43679727.45903181,
+      "cmcId": "28688",
+      "cmcSlug": "kamino-2"
+    },
+    {
+      "id": "ankr-network",
+      "symbol": "ANKR",
+      "name": "ankr-network",
+      "sectors": [
+        "DePIN",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 42161164.93527535,
+      "cmcId": "3783",
+      "cmcSlug": "ankr"
+    },
+    {
+      "id": "pirate-chain",
+      "symbol": "ARRR",
+      "name": "Pirate Chain",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 41006308,
+      "cmcId": "3951",
+      "cmcSlug": "pirate-chain"
+    },
+    {
+      "id": "ronin",
+      "symbol": "RON",
+      "name": "ronin",
+      "sectors": [
+        "Gaming",
+        "Layer 1"
+      ],
+      "market_cap_usd": 40693229,
+      "cmcId": "14131",
+      "cmcSlug": "ronin"
+    },
+    {
+      "id": "movement",
+      "symbol": "MOVE",
+      "name": "Movement",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 38804225,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "propy",
+      "symbol": "PRO",
+      "name": "propy",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 38447923,
+      "cmcId": "1974",
+      "cmcSlug": "propy"
+    },
+    {
+      "id": "cysic",
+      "symbol": "CYS",
+      "name": "Cysic",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 37769571,
+      "cmcId": "39071",
+      "cmcSlug": "cysic"
+    },
+    {
+      "id": "siacoin",
+      "symbol": "SC",
+      "name": "siacoin",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 36462565,
+      "cmcId": "1925",
+      "cmcSlug": "siacoin"
+    },
+    {
+      "id": "uma",
+      "symbol": "UMA",
+      "name": "uma",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 35440331,
+      "cmcId": "5617",
+      "cmcSlug": "uma"
+    },
+    {
+      "id": "ocean-protocol",
+      "symbol": "OCEAN",
+      "name": "ocean-protocol",
+      "sectors": [
+        "AI",
+        "Infrastructure",
+        "DeSci"
+      ],
+      "market_cap_usd": 35318187,
+      "cmcId": "3911",
+      "cmcSlug": "ocean-protocol"
+    },
+    {
+      "id": "succinct",
+      "symbol": "PROVE",
+      "name": "Succinct",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 35175287,
+      "cmcId": "37593",
+      "cmcSlug": "succinct"
+    },
+    {
+      "id": "band-protocol",
+      "symbol": "BAND",
+      "name": "band-protocol",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 34793080,
+      "cmcId": "4679",
+      "cmcSlug": "band-protocol"
+    },
+    {
+      "id": "sahara-ai",
+      "symbol": "SAHARA",
+      "name": "sahara-ai",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 34315525,
+      "cmcId": "28401",
+      "cmcSlug": "sahara-ai"
+    },
+    {
+      "id": "api3",
+      "symbol": "API3",
+      "name": "api3",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 34061133,
+      "cmcId": "7733",
+      "cmcSlug": "api3"
+    },
+    {
+      "id": "euler",
+      "symbol": "EUL",
+      "name": "euler",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 31674821,
+      "cmcId": "14239",
+      "cmcSlug": "euler"
+    },
+    {
+      "id": "world-mobile-token",
+      "symbol": "WMTX",
+      "name": "world-mobile-token",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 31265260,
+      "cmcId": "13769",
+      "cmcSlug": "world-mobile-token"
+    },
+    {
+      "id": "manta",
+      "symbol": "MANTA",
+      "name": "manta",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 29384546,
+      "cmcId": "21965",
+      "cmcSlug": "manta-network"
+    },
+    {
+      "id": "iotex",
+      "symbol": "IOTX",
+      "name": "iotex",
+      "sectors": [
+        "DePIN",
+        "Layer 1",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 29084495,
+      "cmcId": "2777",
+      "cmcSlug": "iotex"
+    },
+    {
+      "id": "vana",
+      "symbol": "VANA",
+      "name": "vana",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 28737327,
+      "cmcId": "27922",
+      "cmcSlug": "vana"
+    },
+    {
+      "id": "nosana",
+      "symbol": "NOS",
+      "name": "nosana",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 27755370,
+      "cmcId": "16612",
+      "cmcSlug": "nosana"
+    },
+    {
+      "id": "iexec-rlc",
+      "symbol": "RLC",
+      "name": "iexec-rlc",
+      "sectors": [
+        "AI",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 27707895,
+      "cmcId": "1637",
+      "cmcSlug": "iexec-rlc"
+    },
+    {
+      "id": "zerobase",
+      "symbol": "ZBT",
+      "name": "ZEROBASE",
+      "sectors": [
+        "ZK"
+      ],
+      "market_cap_usd": 27266707,
+      "cmcId": "38427",
+      "cmcSlug": "zerobase"
+    },
+    {
+      "id": "chia",
+      "symbol": "XCH",
+      "name": "chia",
+      "sectors": [
+        "Layer 1",
+        "DePIN"
+      ],
+      "market_cap_usd": 27197844,
+      "cmcId": "9261",
+      "cmcSlug": "chia"
+    },
+    {
+      "id": "illuvium",
+      "symbol": "ILV",
+      "name": "illuvium",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 26183414,
+      "cmcId": "8719",
+      "cmcSlug": "illuvium"
+    },
+    {
+      "id": "gensyn",
+      "symbol": "AI",
+      "name": "gensyn",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 26069213,
+      "cmcId": "27092",
+      "cmcSlug": "gensyn"
+    },
+    {
+      "id": "nillion",
+      "symbol": "NIL",
+      "name": "nillion",
+      "sectors": [
+        "AI",
+        "Infrastructure",
+        "DeSci"
+      ],
+      "market_cap_usd": 26016126,
+      "cmcId": "28333",
+      "cmcSlug": "nillion"
+    },
+    {
+      "id": "lisk",
+      "symbol": "LSK",
+      "name": "lisk",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 23838132,
+      "cmcId": "1214",
+      "cmcSlug": "lisk"
+    },
+    {
+      "id": "aleo",
+      "symbol": "ALEO",
+      "name": "aleo",
+      "sectors": [
+        "DeSci",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 23570940,
+      "cmcId": "24418",
+      "cmcSlug": "aleo"
+    },
+    {
+      "id": "carv",
+      "symbol": "CARV",
+      "name": "carv",
+      "sectors": [
+        "AI",
+        "Gaming",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 23382697,
+      "cmcId": "26500",
+      "cmcSlug": "carv"
+    },
+    {
+      "id": "smooth-love-potion",
+      "symbol": "SLP",
+      "name": "smooth-love-potion",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 23318195,
+      "cmcId": "5824",
+      "cmcSlug": "smooth-love-potion"
+    },
+    {
+      "id": "skale",
+      "symbol": "SKL",
+      "name": "skale",
+      "sectors": [
+        "Layer 2",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 23201146,
+      "cmcId": "5691",
+      "cmcSlug": "skale"
+    },
+    {
+      "id": "metis",
+      "symbol": "METIS",
+      "name": "metis",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 22204496,
+      "cmcId": "9640",
+      "cmcSlug": "metisdao"
+    },
+    {
+      "id": "yield-guild-games",
+      "symbol": "YGG",
+      "name": "yield-guild-games",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 22160034,
+      "cmcId": "10223",
+      "cmcSlug": "yield-guild-games"
+    },
+    {
+      "id": "phala",
+      "symbol": "PHA",
+      "name": "phala",
+      "sectors": [
+        "DePIN",
+        "AI",
+        "DeSci"
+      ],
+      "market_cap_usd": 21311865.757154495,
+      "cmcId": "6841",
+      "cmcSlug": "phala-network"
+    },
+    {
+      "id": "wax",
+      "symbol": "WAXP",
+      "name": "wax",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 20862039,
+      "cmcId": "1774",
+      "cmcSlug": "wax"
+    },
+    {
+      "id": "chaingpt",
+      "symbol": "CGPT",
+      "name": "chaingpt",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 20457237,
+      "cmcId": "24127",
+      "cmcSlug": "chaingpt"
+    },
+    {
+      "id": "clearpool",
+      "symbol": "CPOOL",
+      "name": "clearpool",
+      "sectors": [
+        "RWA",
+        "DeFi"
+      ],
+      "market_cap_usd": 20376616,
+      "cmcId": "17733",
+      "cmcSlug": "clearpool"
+    },
+    {
+      "id": "synapse",
+      "symbol": "SYN",
+      "name": "synapse",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 20229165,
+      "cmcId": "12147",
+      "cmcSlug": "synapse-2"
+    },
+    {
+      "id": "blast",
+      "symbol": "BLAST",
+      "name": "blast",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 20097231,
+      "cmcId": "28452",
+      "cmcSlug": "blast"
+    },
+    {
+      "id": "big-time",
+      "symbol": "BIGTIME",
+      "name": "big-time",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 19433868,
+      "cmcId": "28257",
+      "cmcSlug": "big-time"
+    },
+    {
+      "id": "cyber",
+      "symbol": "CYBER",
+      "name": "cyber",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 18835751,
+      "cmcId": "24777",
+      "cmcSlug": "cyberconnect"
+    },
+    {
+      "id": "pokt-network",
+      "symbol": "POKT",
+      "name": "pokt-network",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 18492623,
+      "cmcId": "12823",
+      "cmcSlug": "pocket-network"
+    },
+    {
+      "id": "sophon",
+      "symbol": "SOPH",
+      "name": "sophon",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 17168755,
+      "cmcId": "29430",
+      "cmcSlug": "sophon"
+    },
+    {
+      "id": "morpheusai",
+      "symbol": "MOR",
+      "name": "morpheusai",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 17019004,
+      "cmcId": "26712",
+      "cmcSlug": "morpheusai"
+    },
+    {
+      "id": "singularitynet",
+      "symbol": "AGIX",
+      "name": "singularitynet",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 17005606,
+      "cmcId": "2424",
+      "cmcSlug": "singularitynet"
+    },
+    {
+      "id": "xai",
+      "symbol": "XAI",
+      "name": "xai",
+      "sectors": [
+        "Layer 2",
+        "Gaming"
+      ],
+      "market_cap_usd": 15859781,
+      "cmcId": "24117",
+      "cmcSlug": "xai-blockchain"
+    },
+    {
+      "id": "realio-network",
+      "symbol": "RIO",
+      "name": "realio",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 15700839,
+      "cmcId": "24232",
+      "cmcSlug": "realio-network"
+    },
+    {
+      "id": "magic",
+      "symbol": "MAGIC",
+      "name": "magic",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 15554873,
+      "cmcId": "14783",
+      "cmcSlug": "magic-token"
+    },
+    {
+      "id": "chromia",
+      "symbol": "CHR",
+      "name": "chromia",
+      "sectors": [
+        "Gaming",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 15424325.342196627,
+      "cmcId": "3978",
+      "cmcSlug": "chromia"
+    },
+    {
+      "id": "sapien",
+      "symbol": "SAPIEN",
+      "name": "sapien",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 15334707,
+      "cmcId": "26105",
+      "cmcSlug": "sapien-2"
+    },
+    {
+      "id": "portal",
+      "symbol": "PORTAL",
+      "name": "portal",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 14571394,
+      "cmcId": "29555",
+      "cmcSlug": "portal-2"
+    },
+    {
+      "id": "orderly",
+      "symbol": "ORDER",
+      "name": "orderly",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 14005138,
+      "cmcId": "25144",
+      "cmcSlug": "orderly-network"
+    },
+    {
+      "id": "my-neighbor-alice",
+      "symbol": "ALICE",
+      "name": "my-neighbor-alice",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 13875090,
+      "cmcId": "8766",
+      "cmcSlug": "my-neighbor-alice"
+    },
+    {
+      "id": "aevo",
+      "symbol": "AEVO",
+      "name": "aevo",
+      "sectors": [
+        "Layer 2",
+        "DeSci",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 13103422.8065502,
+      "cmcId": "27533",
+      "cmcSlug": "aevo"
+    },
+    {
+      "id": "aurora",
+      "symbol": "AURORA",
+      "name": "aurora",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 13010656,
+      "cmcId": "14803",
+      "cmcSlug": "aurora-near"
+    },
+    {
+      "id": "lagrange",
+      "symbol": "LA",
+      "name": "lagrange",
+      "sectors": [
+        "AI",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 13001536,
+      "cmcId": "28843",
+      "cmcSlug": "lagrange"
+    },
+    {
+      "id": "storj",
+      "symbol": "STORJ",
+      "name": "storj",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 12775050,
+      "cmcId": "1772",
+      "cmcSlug": "storj"
+    },
+    {
+      "id": "hairdao",
+      "symbol": "HAIR",
+      "name": "hairdao",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": 12228915,
+      "cmcId": "25455",
+      "cmcSlug": "hairdao"
+    },
+    {
+      "id": "loopring",
+      "symbol": "LRC",
+      "name": "loopring",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 11459899,
+      "cmcId": "1934",
+      "cmcSlug": "loopring"
+    },
+    {
+      "id": "alethea-ai",
+      "symbol": "ALI",
+      "name": "alethea-ai",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 11395384,
+      "cmcId": "23538",
+      "cmcSlug": "alethea-artificial-liquid-intelligence-token"
+    },
+    {
+      "id": "iagon",
+      "symbol": "IAG",
+      "name": "iagon",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 10395511,
+      "cmcId": "4278",
+      "cmcSlug": "iagon"
+    },
+    {
+      "id": "elysia",
+      "symbol": "EL",
+      "name": "elysia",
+      "sectors": [
+        "RWA",
+        "DeFi"
+      ],
+      "market_cap_usd": 10300390,
+      "cmcId": "28345",
+      "cmcSlug": "elysia"
+    },
+    {
+      "id": "swarm",
+      "symbol": "BZZ",
+      "name": "swarm",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 9766615.399800057,
+      "cmcId": "10293",
+      "cmcSlug": "ethereum-swarm"
+    },
+    {
+      "id": "chainbase",
+      "symbol": "C",
+      "name": "chainbase",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 9709166,
+      "cmcId": "31250",
+      "cmcSlug": "chainbase"
+    },
+    {
+      "id": "boba",
+      "symbol": "BOBA",
+      "name": "boba",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 9627620,
+      "cmcId": "14556",
+      "cmcSlug": "boba-network"
+    },
+    {
+      "id": "drift-protocol",
+      "symbol": "DRIFT",
+      "name": "drift-protocol",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 9078093,
+      "cmcId": "27962",
+      "cmcSlug": "drift-protocol"
+    },
+    {
+      "id": "tokenfi",
+      "symbol": "TOKEN",
+      "name": "tokenfi",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 9006488,
+      "cmcId": "29192",
+      "cmcSlug": "tokenfi"
+    },
+    {
+      "id": "hivemapper",
+      "symbol": "HONEY",
+      "name": "hivemapper",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 8779274,
+      "cmcId": "17680",
+      "cmcSlug": "hivemapper"
+    },
+    {
+      "id": "brickken",
+      "symbol": "BKN",
+      "name": "brickken",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 7883102,
+      "cmcId": "24750",
+      "cmcSlug": "brickken"
+    },
+    {
+      "id": "balancer",
+      "symbol": "BAL",
+      "name": "balancer",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 7690056,
+      "cmcId": "5728",
+      "cmcSlug": "balancer"
+    },
+    {
+      "id": "autonolas",
+      "symbol": "OLAS",
+      "name": "autonolas",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 7444665,
+      "cmcId": "22154",
+      "cmcSlug": "autonolas"
+    },
+    {
+      "id": "moonbeam",
+      "symbol": "GLMR",
+      "name": "moonbeam",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 7285912,
+      "cmcId": "9288",
+      "cmcSlug": "moonbeam"
+    },
+    {
+      "id": "origin-dollar",
+      "symbol": "OUSD",
+      "name": "origin-dollar",
+      "sectors": [
+        "DeFi",
+        "RWA"
+      ],
+      "market_cap_usd": 6246074,
+      "cmcId": "8950",
+      "cmcSlug": "origin-dollar"
+    },
+    {
+      "id": "vita-dao",
+      "symbol": "VITA",
+      "name": "vita-dao",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": 6189360,
+      "cmcId": "20788",
+      "cmcSlug": "vitadao"
+    },
+    {
+      "id": "paal-ai",
+      "symbol": "PAAL",
+      "name": "paal-ai",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 6116477,
+      "cmcId": "24013",
+      "cmcSlug": "paal-ai"
+    },
+    {
+      "id": "quickswap",
+      "symbol": "QUICK",
+      "name": "quickswap",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 5938662,
+      "cmcId": "10366",
+      "cmcSlug": "quickswap"
+    },
+    {
+      "id": "dydx",
+      "symbol": "DYDX",
+      "name": "dydx",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 5718553,
+      "cmcId": "11156",
+      "cmcSlug": "dydx"
+    },
+    {
+      "id": "beefy",
+      "symbol": "BIFI",
+      "name": "beefy",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 4320409,
+      "cmcId": "7311",
+      "cmcSlug": "beefy-finance"
+    },
+    {
+      "id": "scroll",
+      "symbol": "SCR",
+      "name": "scroll",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 4168379,
+      "cmcId": "26971",
+      "cmcSlug": "scroll"
+    },
+    {
+      "id": "dimo",
+      "symbol": "DIMO",
+      "name": "dimo",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 4061938,
+      "cmcId": "14793",
+      "cmcSlug": "dimo"
+    },
+    {
+      "id": "cess",
+      "symbol": "CESS",
+      "name": "cess",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 4012790,
+      "cmcId": "20810",
+      "cmcSlug": "cess"
+    },
+    {
+      "id": "pixels",
+      "symbol": "PIXEL",
+      "name": "pixels",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 3878829,
+      "cmcId": "29243",
+      "cmcSlug": "pixels"
+    },
+    {
+      "id": "star-atlas",
+      "symbol": "ATLAS",
+      "name": "star-atlas",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 3496033,
+      "cmcId": "11071",
+      "cmcSlug": "star-atlas"
+    },
+    {
+      "id": "polytrade",
+      "symbol": "TRADE",
+      "name": "polytrade",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 3413157,
+      "cmcId": "19099",
+      "cmcSlug": "polytrade"
+    },
+    {
+      "id": "mysterium",
+      "symbol": "MYST",
+      "name": "mysterium",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 3331410,
+      "cmcId": "8321",
+      "cmcSlug": "mysterium"
+    },
+    {
+      "id": "zircuit",
+      "symbol": "ZRC",
+      "name": "zircuit",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 3273000,
+      "cmcId": "25825",
+      "cmcSlug": "zircuit"
+    },
+    {
+      "id": "netmind",
+      "symbol": "NMT",
+      "name": "netmind",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 3155668,
+      "cmcId": "23133",
+      "cmcSlug": "netmind-token"
+    },
+    {
+      "id": "goldfinch",
+      "symbol": "GFI",
+      "name": "goldfinch",
+      "sectors": [
+        "DeFi",
+        "RWA"
+      ],
+      "market_cap_usd": 2804466,
+      "cmcId": "13956",
+      "cmcSlug": "goldfinch"
+    },
+    {
+      "id": "oasys",
+      "symbol": "OAS",
+      "name": "oasys",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 2446572,
+      "cmcId": "22265",
+      "cmcSlug": "oasys"
+    },
+    {
+      "id": "botto",
+      "symbol": "BOTTO",
+      "name": "botto",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 2032317,
+      "cmcId": "24050",
+      "cmcSlug": "botto"
+    },
+    {
+      "id": "cere-network",
+      "symbol": "CERE",
+      "name": "cere-network",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": 1861631,
+      "cmcId": "21941",
+      "cmcSlug": "cere-network"
+    },
+    {
+      "id": "kujira",
+      "symbol": "KUJI",
+      "name": "kujira",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 1799230.7116731838,
+      "cmcId": "15185",
+      "cmcSlug": "kujira"
+    },
+    {
+      "id": "sentinel",
+      "symbol": "DVPN",
+      "name": "sentinel",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 1642190,
+      "cmcId": "2643",
+      "cmcSlug": "sentinel"
+    },
+    {
+      "id": "nodle-network",
+      "symbol": "NODL",
+      "name": "nodle-network",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 1544679,
+      "cmcId": "16506",
+      "cmcSlug": "nodle-network"
+    },
+    {
+      "id": "ribbon-finance",
+      "symbol": "RBN",
+      "name": "ribbon-finance",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 1529101,
+      "cmcId": "12387",
+      "cmcSlug": "ribbon-finance"
+    },
+    {
+      "id": "mountain-protocol",
+      "symbol": "USDM",
+      "name": "mountain-protocol",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 1414053,
+      "cmcId": "27788",
+      "cmcSlug": "mountain-protocol-usdm"
+    },
+    {
+      "id": "gamefi",
+      "symbol": "GFI",
+      "name": "gamefi",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 1296836,
+      "cmcId": "18033",
+      "cmcSlug": "gamefi"
+    },
+    {
+      "id": "kadena",
+      "symbol": "KDA",
+      "name": "kadena",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 1272719,
+      "cmcId": "5647",
+      "cmcSlug": "kadena"
+    },
+    {
+      "id": "truefi",
+      "symbol": "TRU",
+      "name": "truefi",
+      "sectors": [
+        "RWA",
+        "DeFi"
+      ],
+      "market_cap_usd": 1163210,
+      "cmcId": "7723",
+      "cmcSlug": "truefi"
+    },
+    {
+      "id": "creditum",
+      "symbol": "CREDIT",
+      "name": "creditum",
+      "sectors": [
+        "RWA",
+        "DeFi"
+      ],
+      "market_cap_usd": 1078748.5960371892,
+      "cmcId": "8992",
+      "cmcSlug": "creditum"
+    },
+    {
+      "id": "polymath",
+      "symbol": "POLY",
+      "name": "polymath",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 1045160,
+      "cmcId": "2496",
+      "cmcSlug": "polymath"
+    },
+    {
+      "id": "mxc",
+      "symbol": "MXC",
+      "name": "mxc",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 966298,
+      "cmcId": "5733",
+      "cmcSlug": "mxc"
+    },
+    {
+      "id": "backed-finance",
+      "symbol": "BPRO",
+      "name": "backed-finance",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 901994,
+      "cmcId": "28833",
+      "cmcSlug": "backed"
+    },
+    {
+      "id": "valleyDAO",
+      "symbol": "GROW",
+      "name": "valleyDAO",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": 626610,
+      "cmcId": "25100",
+      "cmcSlug": "valleydao"
+    },
+    {
+      "id": "playdapp",
+      "symbol": "PDA",
+      "name": "playdapp",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 596334,
+      "cmcId": "7462",
+      "cmcSlug": "playdapp"
+    },
+    {
+      "id": "myria",
+      "symbol": "MYRIA",
+      "name": "myria",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 573139,
+      "cmcId": "23728",
+      "cmcSlug": "myria"
+    },
+    {
+      "id": "cerebrumdao",
+      "symbol": "NEURO",
+      "name": "cerebrumdao",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": 570090,
+      "cmcId": "25224",
+      "cmcSlug": "cerebrum-dao"
+    },
+    {
+      "id": "cryoDAO",
+      "symbol": "CRYO",
+      "name": "cryoDAO",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": 504689,
+      "cmcId": "25024",
+      "cmcSlug": "cryodao"
+    },
+    {
+      "id": "mode",
+      "symbol": "MODE",
+      "name": "mode",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 395919,
+      "cmcId": "29204",
+      "cmcSlug": "mode"
+    },
+    {
+      "id": "mobox",
+      "symbol": "MBOX",
+      "name": "mobox",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 358641,
+      "cmcId": "9175",
+      "cmcSlug": "mobox"
+    },
+    {
+      "id": "streamr",
+      "symbol": "DATA",
+      "name": "streamr",
+      "sectors": [
+        "DePIN",
+        "Infrastructure",
+        "DeSci"
+      ],
+      "market_cap_usd": 315479,
+      "cmcId": "2143",
+      "cmcSlug": "streamr"
+    },
+    {
+      "id": "crust-network",
+      "symbol": "CRU",
+      "name": "crust-network",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 271641,
+      "cmcId": "10466",
+      "cmcSlug": "crust"
+    },
+    {
+      "id": "maple",
+      "symbol": "MPL",
+      "name": "maple",
+      "sectors": [
+        "DeFi",
+        "RWA"
+      ],
+      "market_cap_usd": 197140.75953736898,
+      "cmcId": "13632",
+      "cmcSlug": "maple"
+    },
+    {
+      "id": "cortex",
+      "symbol": "CTXC",
+      "name": "cortex",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": 185776,
+      "cmcId": "2638",
+      "cmcSlug": "cortex"
+    },
+    {
+      "id": "flux",
+      "symbol": "FLUX",
+      "name": "flux",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 149834,
+      "cmcId": "3029",
+      "cmcSlug": "flux"
+    },
+    {
+      "id": "spheron",
+      "symbol": "SPHN",
+      "name": "spheron",
+      "sectors": [
+        "DeSci",
+        "DePIN",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 137748,
+      "cmcId": "24367",
+      "cmcSlug": "spheron-network"
+    },
+    {
+      "id": "nubila",
+      "symbol": "NUB",
+      "name": "nubila",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 127122,
+      "cmcId": "29023",
+      "cmcSlug": "nubila-network"
+    },
+    {
+      "id": "pollen-mobile",
+      "symbol": "PCN",
+      "name": "pollen-mobile",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 120837,
+      "cmcId": "22614",
+      "cmcSlug": "pollen-mobile"
+    },
+    {
+      "id": "idena",
+      "symbol": "IDNA",
+      "name": "idena",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": 113078,
+      "cmcId": "5836",
+      "cmcSlug": "idena"
+    },
+    {
+      "id": "karura",
+      "symbol": "KAR",
+      "name": "karura",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 103831,
+      "cmcId": "10042",
+      "cmcSlug": "karura"
+    },
+    {
+      "id": "everclear",
+      "symbol": "CLEAR",
+      "name": "everclear",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 71488,
+      "cmcId": "29876",
+      "cmcSlug": "everclear"
+    },
+    {
+      "id": "match-quest",
+      "symbol": "MQ",
+      "name": "match-quest",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 66403.44923078333,
+      "cmcId": "29811",
+      "cmcSlug": "match-quest"
+    },
+    {
+      "id": "xana",
+      "symbol": "XETA",
+      "name": "xana",
+      "sectors": [
+        "RWA",
+        "Gaming"
+      ],
+      "market_cap_usd": 40796,
+      "cmcId": "21666",
+      "cmcSlug": "xana"
+    },
+    {
+      "id": "stargate",
+      "symbol": "STG",
+      "name": "stargate",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 33918,
+      "cmcId": "18934",
+      "cmcSlug": "stargate"
+    },
+    {
+      "id": "toucan-protocol",
+      "symbol": "BCT",
+      "name": "toucan-protocol",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 22471,
+      "cmcId": "23238",
+      "cmcSlug": "toucan-protocol-base-carbon-tonne"
+    },
+    {
+      "id": "chainport",
+      "symbol": "PORT",
+      "name": "chainport",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 17404.42,
+      "cmcId": "22633",
+      "cmcSlug": "chainport"
+    },
+    {
+      "id": "off-the-grid",
+      "symbol": "GUN",
+      "name": "off-the-grid",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 9923.705344652288,
+      "cmcId": "32200",
+      "cmcSlug": "gunzilla"
+    },
+    {
+      "id": "bob",
+      "symbol": "BOB",
+      "name": "bob",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 7035.49,
+      "cmcId": "31962",
+      "cmcSlug": "bob-2"
+    },
+    {
+      "id": "lyra",
+      "symbol": "LYRA",
+      "name": "lyra",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 4528.47,
+      "cmcId": "27620",
+      "cmcSlug": "lyra-3"
+    },
+    {
+      "id": "ceramic",
+      "symbol": "CERA",
+      "name": "ceramic",
+      "sectors": [
+        "DeSci",
+        "Infrastructure"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "24022",
+      "cmcSlug": "ceramic"
+    },
+    {
+      "id": "centrifuge",
+      "symbol": "CFG",
+      "name": "centrifuge",
+      "sectors": [
+        "DeFi",
+        "RWA"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "6748",
+      "cmcSlug": "centrifuge"
+    },
+    {
+      "id": "deeper-network",
+      "symbol": "DPR",
+      "name": "deeper-network",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "8914",
+      "cmcSlug": "deeper-network"
+    },
+    {
+      "id": "dopex",
+      "symbol": "DPX",
+      "name": "dopex",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "19225",
+      "cmcSlug": "dopex"
+    },
+    {
+      "id": "eos",
+      "symbol": "EOS",
+      "name": "eos",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "1765",
+      "cmcSlug": "eos"
+    },
+    {
+      "id": "fantom",
+      "symbol": "FTM",
+      "name": "fantom",
+      "sectors": [
+        "Layer 1"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "3513",
+      "cmcSlug": "fantom"
+    },
+    {
+      "id": "huddle01",
+      "symbol": "HUDL",
+      "name": "huddle01",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "23412",
+      "cmcSlug": "huddle01"
+    },
+    {
+      "id": "defi-kingdoms",
+      "symbol": "JEWEL",
+      "name": "defi-kingdoms",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "12319",
+      "cmcSlug": "defi-kingdoms"
+    },
+    {
+      "id": "klima-dao",
+      "symbol": "KLIMA",
+      "name": "klima-dao",
+      "sectors": [
+        "RWA",
+        "DeFi"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "18363",
+      "cmcSlug": "klima-dao"
+    },
+    {
+      "id": "moss-carbon-credit",
+      "symbol": "MCO2",
+      "name": "moss-carbon-credit",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "18227",
+      "cmcSlug": "moss-carbon-credit"
+    },
+    {
+      "id": "maker",
+      "symbol": "MKR",
+      "name": "maker",
+      "sectors": [
+        "DeFi",
+        "RWA"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "1518",
+      "cmcSlug": "maker"
+    },
+    {
+      "id": "moralis",
+      "symbol": "MOR",
+      "name": "moralis",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "24755",
+      "cmcSlug": "moralis"
+    },
+    {
+      "id": "rom",
+      "symbol": "ROM",
+      "name": "rom",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "29211",
+      "cmcSlug": "rom"
+    },
+    {
+      "id": "singularitydao",
+      "symbol": "SDAO",
+      "name": "singularitydao",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "12023",
+      "cmcSlug": "singularitydao"
+    },
+    {
+      "id": "matrixdock",
+      "symbol": "STBT",
+      "name": "matrixdock",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "29096",
+      "cmcSlug": "matrixdock"
+    },
+    {
+      "id": "openeden",
+      "symbol": "TBILL",
+      "name": "openeden",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "28143",
+      "cmcSlug": "openeden-tbill"
+    },
+    {
+      "id": "thingsix",
+      "symbol": "THIX",
+      "name": "thingsix",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "23967",
+      "cmcSlug": "thingsix"
+    },
+    {
+      "id": "tangible",
+      "symbol": "TNGBL",
+      "name": "tangible",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "22870",
+      "cmcSlug": "tangible"
+    },
+    {
+      "id": "walletconnect",
+      "symbol": "WC",
+      "name": "walletconnect",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": 0,
+      "cmcId": "27319",
+      "cmcSlug": "walletconnect"
+    },
+    {
+      "id": "zero-gravity",
+      "symbol": "0G",
+      "name": "zero-gravity",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "28556",
+      "cmcSlug": "0g"
+    },
+    {
+      "id": "aether",
+      "symbol": "AET",
+      "name": "aether",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "25245",
+      "cmcSlug": "aether"
+    },
+    {
+      "id": "agora-health",
+      "symbol": "AGORA",
+      "name": "agora-health",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "25567",
+      "cmcSlug": "agora-health"
+    },
+    {
+      "id": "alchemy",
+      "symbol": "ALCH",
+      "name": "alchemy",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "aleph-im",
+      "symbol": "ALEPH",
+      "name": "aleph-im",
+      "sectors": [
+        "DePIN",
+        "Infrastructure",
+        "AI"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "5827",
+      "cmcSlug": "aleph"
+    },
+    {
+      "id": "alienswap",
+      "symbol": "ALIEN",
+      "name": "alienswap",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "22664",
+      "cmcSlug": "alienswap"
+    },
+    {
+      "id": "antidote",
+      "symbol": "ANTIDOTE",
+      "name": "antidote",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "franklin-templeton",
+      "symbol": "BENJI",
+      "name": "benji",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "31581",
+      "cmcSlug": "franklin-templeton"
+    },
+    {
+      "id": "biomapper",
+      "symbol": "BIO",
+      "name": "biomapper",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "25420",
+      "cmcSlug": "biomapper"
+    },
+    {
+      "id": "biopset",
+      "symbol": "BIOPSET",
+      "name": "biopset",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "25321",
+      "cmcSlug": "biopset"
+    },
+    {
+      "id": "biodao",
+      "symbol": "BIOT",
+      "name": "biodao",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "bloxroute",
+      "symbol": "BLXR",
+      "name": "bloxroute",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "blockscout",
+      "symbol": "BSCT",
+      "name": "blockscout",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "bullieverse",
+      "symbol": "BULL",
+      "name": "bullieverse",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "11687",
+      "cmcSlug": "bullrise"
+    },
+    {
+      "id": "cryogenseed",
+      "symbol": "CGS",
+      "name": "cryogenseed",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "25522",
+      "cmcSlug": "cryogenseed"
+    },
+    {
+      "id": "corusdao",
+      "symbol": "COR",
+      "name": "corusdao",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "25122",
+      "cmcSlug": "corusdao"
+    },
+    {
+      "id": "covalent",
+      "symbol": "CQT",
+      "name": "covalent",
+      "sectors": [
+        "DeSci",
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "7411",
+      "cmcSlug": "covalent"
+    },
+    {
+      "id": "credix",
+      "symbol": "CRED",
+      "name": "credix",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "27812",
+      "cmcSlug": "credix-finance"
+    },
+    {
+      "id": "chainstack",
+      "symbol": "CSX",
+      "name": "chainstack",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "digix-gold-token",
+      "symbol": "DGX",
+      "name": "digix-gold-token",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "2739",
+      "cmcSlug": "digix-gold-token"
+    },
+    {
+      "id": "data-union",
+      "symbol": "DUCAT",
+      "name": "data-union",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "eclipse",
+      "symbol": "ECLIPSE",
+      "name": "eclipse",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "fasset",
+      "symbol": "FASSET",
+      "name": "fasset",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "27555",
+      "cmcSlug": "fasset"
+    },
+    {
+      "id": "gravity",
+      "symbol": "G",
+      "name": "gravity",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "genobank",
+      "symbol": "GENE",
+      "name": "genobank",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "22555",
+      "cmcSlug": "genobank"
+    },
+    {
+      "id": "genomesdao",
+      "symbol": "GENE",
+      "name": "genomesdao",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "21634",
+      "cmcSlug": "genomesdao"
+    },
+    {
+      "id": "goldsky",
+      "symbol": "GOLD",
+      "name": "goldsky",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "infura",
+      "symbol": "INFRA",
+      "name": "infura",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "junca-cash",
+      "symbol": "JCA",
+      "name": "junca-cash",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "21587",
+      "cmcSlug": "junca-cash"
+    },
+    {
+      "id": "kakarot",
+      "symbol": "KAKAROT",
+      "name": "kakarot",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "koinly",
+      "symbol": "KOINLY",
+      "name": "koinly",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "labdao",
+      "symbol": "LAB",
+      "name": "labdao",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "33223",
+      "cmcSlug": "lab"
+    },
+    {
+      "id": "landx-finance",
+      "symbol": "LNDX",
+      "name": "landx",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "29386",
+      "cmcSlug": "landx-finance"
+    },
+    {
+      "id": "lofty",
+      "symbol": "LOFTY",
+      "name": "lofty",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "22617",
+      "cmcSlug": "lofty-2"
+    },
+    {
+      "id": "lyra-finance",
+      "symbol": "LYRA",
+      "name": "lyra-finance",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "15447",
+      "cmcSlug": "lyra-finance"
+    },
+    {
+      "id": "mintchain",
+      "symbol": "MINT",
+      "name": "Mintchain",
+      "sectors": [
+        "Gaming",
+        "Layer 2"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "31417",
+      "cmcSlug": "mintchain-2"
+    },
+    {
+      "id": "mango",
+      "symbol": "MNGO",
+      "name": "mango",
+      "sectors": [
+        "DeFi"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "11171",
+      "cmcSlug": "mango-markets"
+    },
+    {
+      "id": "molecule",
+      "symbol": "MOL",
+      "name": "molecule",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "3502",
+      "cmcSlug": "molecule"
+    },
+    {
+      "id": "matrixport-rwa",
+      "symbol": "MTA",
+      "name": "matrixport-rwa",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "connext",
+      "symbol": "NEXT",
+      "name": "connext",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "nucleation",
+      "symbol": "NUCT",
+      "name": "nucleation",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "25600",
+      "cmcSlug": "nucleation"
+    },
+    {
+      "id": "nxyz",
+      "symbol": "NXYZ",
+      "name": "nxyz",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "mantra-dao",
+      "symbol": "OM",
+      "name": "mantra",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "6536",
+      "cmcSlug": "mantra"
+    },
+    {
+      "id": "openlab",
+      "symbol": "OPENLAB",
+      "name": "openlab",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "25443",
+      "cmcSlug": "openlab"
+    },
+    {
+      "id": "powerpod",
+      "symbol": "POD",
+      "name": "powerpod",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "polynomial",
+      "symbol": "POLY",
+      "name": "polynomial",
+      "sectors": [
+        "Layer 2"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "27689",
+      "cmcSlug": "polynomialfi"
+    },
+    {
+      "id": "psilocin",
+      "symbol": "PSIL",
+      "name": "psilocin",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "25333",
+      "cmcSlug": "psilocin"
+    },
+    {
+      "id": "quicknode",
+      "symbol": "QNODE",
+      "name": "quicknode",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "rari",
+      "symbol": "RARI",
+      "name": "rari",
+      "sectors": [
+        "Layer 2",
+        "DeFi"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "redbelly-network",
+      "symbol": "RBNT",
+      "name": "redbelly-network",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "realt-coin",
+      "symbol": "REALT",
+      "name": "realt-coin",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "11814",
+      "cmcSlug": "realt"
+    },
+    {
+      "id": "redstone-finance",
+      "symbol": "RED",
+      "name": "redstone-finance",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "researchhub",
+      "symbol": "RSC",
+      "name": "researchhub",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "27054",
+      "cmcSlug": "researchcoin"
+    },
+    {
+      "id": "rwa-x",
+      "symbol": "RWAX",
+      "name": "rwa-x",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "28623",
+      "cmcSlug": "rwa-x"
+    },
+    {
+      "id": "rxbio",
+      "symbol": "RXBIO",
+      "name": "rxbio",
+      "sectors": [
+        "DeSci"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "24999",
+      "cmcSlug": "rxbio"
+    },
+    {
+      "id": "securitize",
+      "symbol": "SECURITIZE",
+      "name": "securitize",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "seed-photo",
+      "symbol": "SEED",
+      "name": "seed-photo",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "10895",
+      "cmcSlug": "seed"
+    },
+    {
+      "id": "shrapnel",
+      "symbol": "SHRAP",
+      "name": "shrapnel",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "28363",
+      "cmcSlug": "shrapnel-com"
+    },
+    {
+      "id": "smart-coin",
+      "symbol": "SMART",
+      "name": "smart-coin",
+      "sectors": [
+        "Gaming"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "28340",
+      "cmcSlug": "smart-blockchain"
+    },
+    {
+      "id": "synesis-one",
+      "symbol": "SNS",
+      "name": "synesis-one",
+      "sectors": [
+        "AI"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "sp-global",
+      "symbol": "SPGI",
+      "name": "sp-global",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "thirdweb",
+      "symbol": "THIRDWEB",
+      "name": "thirdweb",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "tenderly",
+      "symbol": "TND",
+      "name": "tenderly",
+      "sectors": [
+        "Infrastructure"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "trademate",
+      "symbol": "TRDM",
+      "name": "trademate",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "24033",
+      "cmcSlug": "trademate"
+    },
+    {
+      "id": "traditional-finance",
+      "symbol": "TRFI",
+      "name": "traditional-finance",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "28512",
+      "cmcSlug": "traditional-finance"
+    },
+    {
+      "id": "superstate",
+      "symbol": "USTB",
+      "name": "superstate",
+      "sectors": [
+        "RWA"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "32188",
+      "cmcSlug": "superstate"
+    },
+    {
+      "id": "wayru",
+      "symbol": "WAYRU",
+      "name": "wayru",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": null,
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    {
+      "id": "weatherxm",
+      "symbol": "WXM",
+      "name": "weatherxm",
+      "sectors": [
+        "DePIN"
+      ],
+      "market_cap_usd": null,
+      "cmcId": "23161",
+      "cmcSlug": "weatherxm"
+    }
+  ],
+  "_classification": {
+    "bitcoin": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1",
+      "cmcSlug": "bitcoin"
+    },
+    "ethereum": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1027",
+      "cmcSlug": "ethereum"
+    },
+    "binancecoin": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1839",
+      "cmcSlug": "bnb"
+    },
+    "ripple": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "52",
+      "cmcSlug": "xrp"
+    },
+    "solana": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5426",
+      "cmcSlug": "solana"
+    },
+    "tron": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1958",
+      "cmcSlug": "tron"
+    },
+    "hyperliquid": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "32196",
+      "cmcSlug": "hyperliquid"
+    },
+    "zcash": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1437",
+      "cmcSlug": "zcash"
+    },
+    "dogecoin": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "74",
+      "cmcSlug": "dogecoin"
+    },
+    "chainlink": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1975",
+      "cmcSlug": "chainlink"
+    },
+    "cardano": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2010",
+      "cmcSlug": "cardano"
+    },
+    "stellar": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "512",
+      "cmcSlug": "stellar"
+    },
+    "uniswap": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "7083",
+      "cmcSlug": "uniswap"
+    },
+    "litecoin": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2",
+      "cmcSlug": "litecoin"
+    },
+    "the-open-network": {
+      "final_status": "AMBIGUOUS",
+      "notes": "Multiple candidates: Multiple matches with partial name similarity (top sim=0.71)",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "hedera-hashgraph": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "4642",
+      "cmcSlug": "hedera"
+    },
+    "sui": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "20947",
+      "cmcSlug": "sui"
+    },
+    "avalanche-2": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5805",
+      "cmcSlug": "avalanche"
+    },
+    "near": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "6535",
+      "cmcSlug": "near"
+    },
+    "crypto-com-chain": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "3635",
+      "cmcSlug": "cronos"
+    },
+    "tether-gold": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5176",
+      "cmcSlug": "tether-gold"
+    },
+    "hashnote": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=0.85)",
+      "cmcId": "28558",
+      "cmcSlug": "hashnote-usyc"
+    },
+    "bittensor": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "22974",
+      "cmcSlug": "bittensor"
+    },
+    "aave": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "7278",
+      "cmcSlug": "aave"
+    },
+    "mantle": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "27075",
+      "cmcSlug": "mantle"
+    },
+    "pax-gold": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "4705",
+      "cmcSlug": "pax-gold"
+    },
+    "ondo-finance": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "21159",
+      "cmcSlug": "ondo-finance"
+    },
+    "morpho": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=1.00, score=105 vs 75",
+      "cmcId": "34104",
+      "cmcSlug": "morpho"
+    },
+    "internet-computer": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "8916",
+      "cmcSlug": "internet-computer"
+    },
+    "ethena": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "30171",
+      "cmcSlug": "ethena"
+    },
+    "polkadot": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "6636",
+      "cmcSlug": "polkadot-new"
+    },
+    "polygon": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "28321",
+      "cmcSlug": "polygon-ecosystem-token"
+    },
+    "arbitrum": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "11841",
+      "cmcSlug": "arbitrum"
+    },
+    "rocket-pool-eth": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2943",
+      "cmcSlug": "rocket-pool"
+    },
+    "algorand": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "4030",
+      "cmcSlug": "algorand"
+    },
+    "kaspa": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "20396",
+      "cmcSlug": "kaspa"
+    },
+    "venice-token": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=1.00, score=105 vs 45",
+      "cmcId": "35509",
+      "cmcSlug": "venice-token"
+    },
+    "cosmos": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "3794",
+      "cmcSlug": "cosmos"
+    },
+    "render": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5690",
+      "cmcSlug": "render"
+    },
+    "jupiter-exchange-solana": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "29210",
+      "cmcSlug": "jupiter"
+    },
+    "pancakeswap-token": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=0.85, score=105 vs 45",
+      "cmcId": "7186",
+      "cmcSlug": "pancakeswap"
+    },
+    "filecoin": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2280",
+      "cmcSlug": "filecoin"
+    },
+    "ipfs": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "vechain": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "3077",
+      "cmcSlug": "vechain"
+    },
+    "flare": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "7950",
+      "cmcSlug": "flare"
+    },
+    "curve-dao-token": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "6538",
+      "cmcSlug": "curve-dao-token"
+    },
+    "aptos": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "21794",
+      "cmcSlug": "aptos"
+    },
+    "wrapped-stx": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=0.84)",
+      "cmcId": "22257",
+      "cmcSlug": "wrapped-stacks"
+    },
+    "injective-protocol": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "7226",
+      "cmcSlug": "injective-protocol"
+    },
+    "virtuals-protocol": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=1.00)",
+      "cmcId": "29420",
+      "cmcSlug": "virtual-protocol"
+    },
+    "pyth-network": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "28177",
+      "cmcSlug": "pyth-network"
+    },
+    "fetch-ai": {
+      "final_status": "DRIFTED_VERIFIED",
+      "notes": "FET token migrated to ASI Alliance (Artificial Superintelligence Alliance). Same asset, new name.",
+      "cmcId": "3773",
+      "cmcSlug": "artificial-superintelligence-alliance"
+    },
+    "layerzero": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=1.00, score=105 vs 30",
+      "cmcId": "26997",
+      "cmcSlug": "layerzero"
+    },
+    "midnight-3": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "39064",
+      "cmcSlug": "midnight"
+    },
+    "celestia": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "22861",
+      "cmcSlug": "celestia"
+    },
+    "pendle": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "9481",
+      "cmcSlug": "pendle"
+    },
+    "lido-dao": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "8000",
+      "cmcSlug": "lido-dao"
+    },
+    "sei-network": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "23149",
+      "cmcSlug": "sei-network"
+    },
+    "gnosis": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1659",
+      "cmcSlug": "gnosis"
+    },
+    "monad": {
+      "final_status": "PROMOTED",
+      "notes": "Top by name sim=1.00, but score gap=15",
+      "cmcId": "30495",
+      "cmcSlug": "monad"
+    },
+    "tezos": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2011",
+      "cmcSlug": "tezos"
+    },
+    "conflux-token": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=0.85, score=105 vs 30",
+      "cmcId": "7334",
+      "cmcSlug": "conflux-network"
+    },
+    "grass": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=1.00, score=105 vs 75",
+      "cmcId": "32956",
+      "cmcSlug": "grass"
+    },
+    "optimism": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "11840",
+      "cmcSlug": "optimism"
+    },
+    "raydium": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "8526",
+      "cmcSlug": "raydium"
+    },
+    "frax-finance": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "6952",
+      "cmcSlug": "frax"
+    },
+    "frax": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "convex-finance": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "9903",
+      "cmcSlug": "convex-finance"
+    },
+    "starknet": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "22691",
+      "cmcSlug": "starknet"
+    },
+    "compound-governance-token": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5692",
+      "cmcSlug": "compound"
+    },
+    "arweave": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5632",
+      "cmcSlug": "arweave"
+    },
+    "the-graph": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "6719",
+      "cmcSlug": "the-graph"
+    },
+    "iota": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "eigenlayer": {
+      "final_status": "DRIFTED_VERIFIED",
+      "notes": "EigenLayer rebranded to EigenCloud. Same asset (cmcId=30494), updated slug.",
+      "cmcId": "30494",
+      "cmcSlug": "eigencloud"
+    },
+    "swissborg": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=1.00)",
+      "cmcId": "2499",
+      "cmcSlug": "swissborg"
+    },
+    "theta": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2416",
+      "cmcSlug": "theta-token"
+    },
+    "akash": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=1.00, score=105 vs 30",
+      "cmcId": "7431",
+      "cmcSlug": "akash-network"
+    },
+    "axie-infinity": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "6783",
+      "cmcSlug": "axie-infinity"
+    },
+    "thorchain": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "4157",
+      "cmcSlug": "thorchain"
+    },
+    "humanity": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "36922",
+      "cmcSlug": "humanity-protocol"
+    },
+    "neo": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1376",
+      "cmcSlug": "neo"
+    },
+    "apecoin": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "18876",
+      "cmcSlug": "apecoin"
+    },
+    "decentraland": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1966",
+      "cmcSlug": "decentraland"
+    },
+    "origintrail": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2467",
+      "cmcSlug": "origintrail"
+    },
+    "multiversx": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "6892",
+      "cmcSlug": "multiversx"
+    },
+    "1inch": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "8104",
+      "cmcSlug": "1inch"
+    },
+    "zencash": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1698",
+      "cmcSlug": "horizen"
+    },
+    "ozone-chain": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "28076",
+      "cmcSlug": "ozone-chain"
+    },
+    "synthetix": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2586",
+      "cmcSlug": "synthetix"
+    },
+    "railgun": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "10854",
+      "cmcSlug": "railgun"
+    },
+    "immutable": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "10603",
+      "cmcSlug": "immutable-x"
+    },
+    "the-sandbox": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "6210",
+      "cmcSlug": "the-sandbox"
+    },
+    "sonic-3": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=0.85, score=105 vs 75",
+      "cmcId": "32684",
+      "cmcSlug": "sonic"
+    },
+    "helium": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5665",
+      "cmcSlug": "helium"
+    },
+    "golem": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=1.00)",
+      "cmcId": "1455",
+      "cmcSlug": "golem-network-tokens"
+    },
+    "geodnet": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=1.00)",
+      "cmcId": "20969",
+      "cmcSlug": "geodnet"
+    },
+    "mina-protocol": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "8646",
+      "cmcSlug": "mina-protocol"
+    },
+    "instadapp": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "zksync": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "24091",
+      "cmcSlug": "zksync"
+    },
+    "sentient": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=1.00, score=105 vs 60",
+      "cmcId": "38868",
+      "cmcSlug": "sentient"
+    },
+    "aethir": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=1.00, score=105 vs 75",
+      "cmcId": "30083",
+      "cmcSlug": "aethir"
+    },
+    "gala": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "7080",
+      "cmcSlug": "gala"
+    },
+    "nexus-4": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "plume-network": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=0.85)",
+      "cmcId": "35364",
+      "cmcSlug": "plume"
+    },
+    "yearn-finance": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5864",
+      "cmcSlug": "yearn-finance"
+    },
+    "beam": {
+      "final_status": "PROMOTED",
+      "notes": "Top by name sim=1.00, but score gap=15",
+      "cmcId": "28298",
+      "cmcSlug": "onbeam"
+    },
+    "gmx": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "11857",
+      "cmcSlug": "gmx"
+    },
+    "orca": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "11165",
+      "cmcSlug": "orca"
+    },
+    "safe": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "kaito": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=1.00)",
+      "cmcId": "35763",
+      "cmcSlug": "kaito"
+    },
+    "arkham": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=1.00)",
+      "cmcId": "27565",
+      "cmcSlug": "arkham"
+    },
+    "sushi": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "6758",
+      "cmcSlug": "sushi"
+    },
+    "livepeer": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "3640",
+      "cmcSlug": "livepeer"
+    },
+    "aioz-network": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=1.00)",
+      "cmcId": "9104",
+      "cmcSlug": "aioz-network"
+    },
+    "story-protocol": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "IP symbol on CMC only matches \"TRUMP IP\" (unrelated token). No verified mapping.",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "spark": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=1.00, score=105 vs 75",
+      "cmcId": "36569",
+      "cmcSlug": "spark"
+    },
+    "numerai": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1732",
+      "cmcSlug": "numeraire"
+    },
+    "peaq": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=1.00)",
+      "cmcId": "14588",
+      "cmcSlug": "peaq"
+    },
+    "linea": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "wormhole": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "allora": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "chainopera-ai": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "berachain": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "24647",
+      "cmcSlug": "berachain"
+    },
+    "enjincoin": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2130",
+      "cmcSlug": "enjin"
+    },
+    "venus": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "zetachain": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "21259",
+      "cmcSlug": "zetachain"
+    },
+    "kava": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "4846",
+      "cmcSlug": "kava"
+    },
+    "zilliqa": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2469",
+      "cmcSlug": "zilliqa"
+    },
+    "axelar": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "17799",
+      "cmcSlug": "axelar"
+    },
+    "oasis-network": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "7653",
+      "cmcSlug": "oasis-network"
+    },
+    "astar": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "concordium": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "18031",
+      "cmcSlug": "concordium"
+    },
+    "fireblocks": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "flow": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "4558",
+      "cmcSlug": "flow"
+    },
+    "casper-network": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "dusk-network": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "4092",
+      "cmcSlug": "dusk-network"
+    },
+    "celo": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5567",
+      "cmcSlug": "celo"
+    },
+    "subsquid": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "kamino": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "ankr-network": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "3783",
+      "cmcSlug": "ankr"
+    },
+    "pirate-chain": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "3951",
+      "cmcSlug": "pirate-chain"
+    },
+    "ronin": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "movement": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "propy": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1974",
+      "cmcSlug": "propy"
+    },
+    "cysic": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "39071",
+      "cmcSlug": "cysic"
+    },
+    "siacoin": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "uma": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5617",
+      "cmcSlug": "uma"
+    },
+    "ocean-protocol": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "3911",
+      "cmcSlug": "ocean-protocol"
+    },
+    "succinct": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "37593",
+      "cmcSlug": "succinct"
+    },
+    "band-protocol": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "4679",
+      "cmcSlug": "band-protocol"
+    },
+    "sahara-ai": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "api3": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "euler": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "world-mobile-token": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "13769",
+      "cmcSlug": "world-mobile-token"
+    },
+    "manta": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "iotex": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2777",
+      "cmcSlug": "iotex"
+    },
+    "vana": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "nosana": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "16612",
+      "cmcSlug": "nosana"
+    },
+    "iexec-rlc": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1637",
+      "cmcSlug": "iexec-rlc"
+    },
+    "zerobase": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "38427",
+      "cmcSlug": "zerobase"
+    },
+    "chia": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "illuvium": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "8719",
+      "cmcSlug": "illuvium"
+    },
+    "gensyn": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "nillion": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "lisk": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1214",
+      "cmcSlug": "lisk"
+    },
+    "aleo": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "carv": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "smooth-love-potion": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5824",
+      "cmcSlug": "smooth-love-potion"
+    },
+    "skale": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5691",
+      "cmcSlug": "skale"
+    },
+    "metis": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "9640",
+      "cmcSlug": "metisdao"
+    },
+    "yield-guild-games": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "phala": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "6841",
+      "cmcSlug": "phala-network"
+    },
+    "wax": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "chaingpt": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "clearpool": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "synapse": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "12147",
+      "cmcSlug": "synapse-2"
+    },
+    "blast": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "big-time": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "cyber": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "pokt-network": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "sophon": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "morpheusai": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "singularitynet": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2424",
+      "cmcSlug": "singularitynet"
+    },
+    "xai": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "realio-network": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "magic": {
+      "final_status": "DRIFTED_VERIFIED",
+      "notes": "Magic rebranded to Treasure. Same asset (cmcId=14783), updated slug.",
+      "cmcId": "14783",
+      "cmcSlug": "magic-token"
+    },
+    "chromia": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "3978",
+      "cmcSlug": "chromia"
+    },
+    "sapien": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "portal": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "29555",
+      "cmcSlug": "portal-2"
+    },
+    "orderly": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "my-neighbor-alice": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "8766",
+      "cmcSlug": "my-neighbor-alice"
+    },
+    "aevo": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "aurora": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "14803",
+      "cmcSlug": "aurora-near"
+    },
+    "lagrange": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "storj": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1772",
+      "cmcSlug": "storj"
+    },
+    "hairdao": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "loopring": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1934",
+      "cmcSlug": "loopring"
+    },
+    "alethea-ai": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "iagon": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "elysia": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "swarm": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "10293",
+      "cmcSlug": "ethereum-swarm"
+    },
+    "chainbase": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "boba": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "14556",
+      "cmcSlug": "boba-network"
+    },
+    "drift-protocol": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "tokenfi": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "hivemapper": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "brickken": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "balancer": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5728",
+      "cmcSlug": "balancer"
+    },
+    "autonolas": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "moonbeam": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "origin-dollar": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "vita-dao": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "paal-ai": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "quickswap": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "dydx": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "beefy": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "7311",
+      "cmcSlug": "beefy-finance"
+    },
+    "scroll": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "dimo": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "cess": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "pixels": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "star-atlas": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "polytrade": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "mysterium": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "zircuit": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "netmind": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "goldfinch": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "oasys": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "22265",
+      "cmcSlug": "oasys"
+    },
+    "botto": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "cere-network": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "kujira": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "15185",
+      "cmcSlug": "kujira"
+    },
+    "sentinel": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "nodle-network": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "ribbon-finance": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "12387",
+      "cmcSlug": "ribbon-finance"
+    },
+    "mountain-protocol": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "gamefi": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "kadena": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5647",
+      "cmcSlug": "kadena"
+    },
+    "truefi": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "creditum": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "polymath": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2496",
+      "cmcSlug": "polymath"
+    },
+    "mxc": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "backed-finance": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "valleyDAO": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "playdapp": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "myria": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "cerebrumdao": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "cryoDAO": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "mode": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "mobox": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "9175",
+      "cmcSlug": "mobox"
+    },
+    "streamr": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2143",
+      "cmcSlug": "streamr"
+    },
+    "crust-network": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "maple": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "cortex": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "2638",
+      "cmcSlug": "cortex"
+    },
+    "flux": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "3029",
+      "cmcSlug": "flux"
+    },
+    "spheron": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "nubila": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "pollen-mobile": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "idena": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "5836",
+      "cmcSlug": "idena"
+    },
+    "karura": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "10042",
+      "cmcSlug": "karura"
+    },
+    "everclear": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "match-quest": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "xana": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "stargate": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "18934",
+      "cmcSlug": "stargate"
+    },
+    "toucan-protocol": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "chainport": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "off-the-grid": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "bob": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "lyra": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "ceramic": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "centrifuge": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "6748",
+      "cmcSlug": "centrifuge"
+    },
+    "deeper-network": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "dopex": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "eos": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1765",
+      "cmcSlug": "eos"
+    },
+    "fantom": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "3513",
+      "cmcSlug": "fantom"
+    },
+    "huddle01": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "defi-kingdoms": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "12319",
+      "cmcSlug": "defi-kingdoms"
+    },
+    "klima-dao": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "moss-carbon-credit": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "maker": {
+      "final_status": "VALID",
+      "notes": "Identity verified",
+      "cmcId": "1518",
+      "cmcSlug": "maker"
+    },
+    "moralis": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "rom": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "singularitydao": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "matrixdock": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "openeden": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "thingsix": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "tangible": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "walletconnect": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "zero-gravity": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "aether": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "agora-health": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "alchemy": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "aleph-im": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "alienswap": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "antidote": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "franklin-templeton": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "biomapper": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "biopset": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "biodao": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "bloxroute": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "blockscout": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "bullieverse": {
+      "final_status": "PROMOTED",
+      "notes": "Top by name sim=0.93, but score gap=0",
+      "cmcId": "11687",
+      "cmcSlug": "bullrise"
+    },
+    "cryogenseed": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "CGS symbol on CMC only matches \"Cougar\" (unrelated). No verified mapping.",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "corusdao": {
+      "final_status": "AMBIGUOUS",
+      "notes": "Multiple candidates: Multiple matches with partial name similarity (top sim=0.50)",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "covalent": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=1.00)",
+      "cmcId": "7411",
+      "cmcSlug": "covalent"
+    },
+    "credix": {
+      "final_status": "AMBIGUOUS",
+      "notes": "Multiple candidates: Multiple matches with partial name similarity (top sim=0.77)",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "chainstack": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "digix-gold-token": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=1.00)",
+      "cmcId": "2739",
+      "cmcSlug": "digix-gold-token"
+    },
+    "data-union": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "eclipse": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "fasset": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "gravity": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "genobank": {
+      "final_status": "AMBIGUOUS",
+      "notes": "Multiple candidates: Multiple matches with partial name similarity (top sim=0.71)",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "genomesdao": {
+      "final_status": "AMBIGUOUS",
+      "notes": "Multiple candidates: Multiple matches with partial name similarity (top sim=0.70)",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "goldsky": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "infura": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "junca-cash": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "kakarot": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "koinly": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "labdao": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=0.85, score=105 vs 10",
+      "cmcId": "33223",
+      "cmcSlug": "lab"
+    },
+    "landx-finance": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=0.85)",
+      "cmcId": "29386",
+      "cmcSlug": "landx-finance"
+    },
+    "lofty": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "lyra-finance": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=0.85, score=90 vs 60",
+      "cmcId": "15447",
+      "cmcSlug": "lyra-finance"
+    },
+    "mintchain": {
+      "final_status": "AMBIGUOUS",
+      "notes": "Multiple candidates: Multiple matches with partial name similarity (top sim=0.77)",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "mango": {
+      "final_status": "PROMOTED",
+      "notes": "Single match: symbol+name (sim=1.00)",
+      "cmcId": "11171",
+      "cmcSlug": "mango-markets"
+    },
+    "molecule": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=1.00, score=75 vs 45",
+      "cmcId": "3502",
+      "cmcSlug": "molecule"
+    },
+    "matrixport-rwa": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "connext": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "nucleation": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "nxyz": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "mantra-dao": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=0.85, score=75 vs 10",
+      "cmcId": "6536",
+      "cmcSlug": "mantra"
+    },
+    "openlab": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "powerpod": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "polynomial": {
+      "final_status": "AMBIGUOUS",
+      "notes": "Multiple candidates: Multiple matches with partial name similarity (top sim=0.75)",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "psilocin": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "quicknode": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "rari": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "redbelly-network": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "realt-coin": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "redstone-finance": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "researchhub": {
+      "final_status": "AMBIGUOUS",
+      "notes": "Multiple candidates: Multiple matches with partial name similarity (top sim=0.71)",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "rwa-x": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "rxbio": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "securitize": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "seed-photo": {
+      "final_status": "PROMOTED",
+      "notes": "Top by name sim=0.85, but score gap=0",
+      "cmcId": "10895",
+      "cmcSlug": "seed"
+    },
+    "shrapnel": {
+      "final_status": "PROMOTED",
+      "notes": "Top by name sim=1.00, but score gap=15",
+      "cmcId": "28363",
+      "cmcSlug": "shrapnel-com"
+    },
+    "smart-coin": {
+      "final_status": "PROMOTED",
+      "notes": "Top candidate clear: name sim=0.85, score=105 vs 60",
+      "cmcId": "28340",
+      "cmcSlug": "smart-blockchain"
+    },
+    "synesis-one": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "sp-global": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "thirdweb": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "tenderly": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "trademate": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "traditional-finance": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "superstate": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "wayru": {
+      "final_status": "MISSING",
+      "notes": "No CMC candidate for symbol",
+      "cmcId": null,
+      "cmcSlug": null
+    },
+    "weatherxm": {
+      "final_status": "INVALID_REMOVED",
+      "notes": "Old ID was wrong, no candidate found",
+      "cmcId": null,
+      "cmcSlug": null
+    }
+  },
+  "_audit_meta": {
+    "audit_date": "2026-10-02",
+    "total": 354,
+    "changed": 39,
+    "removed": 141
+  }
+}
