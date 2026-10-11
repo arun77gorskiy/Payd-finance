@@ -60,6 +60,14 @@
         "iad1"
       ],
       "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/reconcile-stage5b-v4-discovery.js": {
+      "maxDuration": 30,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
     }
   },
   "rewrites": [
