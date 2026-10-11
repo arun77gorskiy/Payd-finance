@@ -6,6 +6,7 @@ on:
       - stage5b/vercel-deployment
     paths:
       - .github/workflows/stage5b-cmc-reconcile.yml
+      - scripts/reconcile-cmc-stage5b.mjs
 
 permissions:
   contents: write
@@ -26,7 +27,7 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Reconcile high-confidence CMC mappings
+      - name: Apply approved V7 collision-guard remaps
         run: node scripts/reconcile-cmc-stage5b.mjs
 
       - name: Run Stage5B tests
@@ -42,5 +43,5 @@ jobs:
             echo "No reconciled changes to commit."
             exit 0
           fi
-          git commit -m "fix(stage5b): reconcile high-confidence CMC mappings"
+          git commit -m "fix(stage5b): apply approved V7 CMC remaps"
           git push origin HEAD:stage5b/vercel-deployment
