@@ -1534,8 +1534,8 @@
         "Layer 1"
       ],
       "market_cap_usd": 47758671,
-      "cmcId": "10784",
-      "cmcSlug": "casper-network"
+      "cmcId": "5899",
+      "cmcSlug": "casper"
     },
     {
       "id": "dusk-network",
@@ -2068,8 +2068,8 @@
         "AI"
       ],
       "market_cap_usd": 17019004,
-      "cmcId": "26712",
-      "cmcSlug": "morpheusai"
+      "cmcId": "31656",
+      "cmcSlug": "morpheus"
     },
     {
       "id": "singularitynet",
@@ -2316,8 +2316,8 @@
         "DeFi"
       ],
       "market_cap_usd": 9078093,
-      "cmcId": "27962",
-      "cmcSlug": "drift-protocol"
+      "cmcId": "31278",
+      "cmcSlug": "drift"
     },
     {
       "id": "tokenfi",
@@ -2482,8 +2482,8 @@
         "DePIN"
       ],
       "market_cap_usd": 4012790,
-      "cmcId": "20810",
-      "cmcSlug": "cess"
+      "cmcId": "36957",
+      "cmcSlug": "cess-network"
     },
     {
       "id": "pixels",
@@ -2626,8 +2626,8 @@
         "DePIN"
       ],
       "market_cap_usd": 1544679,
-      "cmcId": "16506",
-      "cmcSlug": "nodle-network"
+      "cmcId": "6837",
+      "cmcSlug": "nodleiot"
     },
     {
       "id": "ribbon-finance",
