@@ -1,37 +1,44 @@
-# Stage 5C — persistent CMC mapping repair and quarantine
+# Stage 5C — persistent CMC identity repair
 
-Status: **partial; live re-audit and remaining identity repairs are outstanding**.
+Status: **75 ID corrections prepared; fresh authenticated quote audit still required**.
 
-The Stage 5B branch still uses the October 1 canonical dataset with five V7 remaps already persisted in commit d315f64. The v3 reconciliation and v7 collision-guard endpoints build their candidate changes in memory and explicitly do not write token-index.json; persisting five V7 remaps did not apply the full v3 candidate. The saved v3 export differs from the October 12 full audit for 98 failing records, including all 22 slug-only failures. Its metadata also disagrees with its own records in 163 places. It is a candidate export, not an authoritative verified replacement.
+## Verified Preview result
 
-## Implemented
+The browser-fetched Stage 5B audit at 2026-10-12T11:27:51.478Z verified commit 6ef72e3 with dataset SHA-256 184d3bba63aecfca221dc1f278771d92096b211e997bba58c5fab4173aef3675. It returned 179 PASS / 144 FAIL for 323 mappings, with 318 quotes, zero duplicate IDs and all seven mandatory tokens passing. All 22 earlier slug corrections passed. No slug-only failures remained.
 
-- Persist all 22 exact slug corrections observed in the October 12 audit. Preserve CMC IDs, canonical IDs, symbols, sectors and existing market snapshot values.
-- Quarantine 144 records: 130 symbol mismatches, 5 absent quotes and 9 invalid prices. Retain their old IDs for traceability; the resolver returns UNKNOWN_MAPPING with market=null and never fetches them.
-- Treat explicitly classified project_without_token/unverified records as unavailable even if an old CMC ID exists. This supports later taxonomy work without assuming every missing quote is a non-token.
-- Check CMC symbol and slug in the runtime normalizer, as well as the numeric ID. A matching ID can still identify the wrong canonical project.
-- Resolve before reading the memory cache, so quarantined mappings cannot return an old LIVE result.
-- Expose canonical dataset SHA-256, Vercel commit, quarantine count and runtime eligible count in health responses.
-- Align legacy classification metadata for corrected/quarantined records.
-- Keep api/audit-stage5b.js byte-for-byte unchanged. It still checks all 323 retained mappings, including quarantined failures; quarantine does not manufacture a PASS.
+The 144 failures break down into 130 symbol mismatches, 5 missing quotes and 9 invalid-price-only records. Some symbol mismatches represent rebrands, so they are not automatically classified as wrong projects.
 
-The 354 records contain 323 retained CMC IDs, 31 originally unmapped records, 144 quarantined mappings and **179 runtime-eligible mappings**. These are configuration counts, not a new live result. The historical 157/323 PASS rate was **48.61%**, not 51%.
+Full evidence: reports/stage5c-live-audit-20261012.json.
 
-## Validation
+## New ID corrections
 
-72 offline tests pass: 48 core, 15 Vercel smoke and 9 mapping regression tests. These cover all 144 quarantined and all 31 unmapped records without provider calls, same-ID wrong-symbol/wrong-slug responses, stale LIVE cache quarantine and dataset fingerprinting.
+75 quarantined records now use CMC IDs checked against CoinMarketCap's own listing UCID, symbol and slug. Every change retains its canonical ID and symbol. Every change has a primary source URL and previous mapping in reports/stage5c-repair.json and the canonical record. Existing numeric IDs are never selected by ticker similarity alone.
 
-No fresh authenticated CMC re-audit was performed. Vercel deployment inspection returned HTTP 403 for the existing realstrades-8509s-projects team and payd-cmc-backend project; there is no authenticated Vercel CLI in this environment.
+QuickSwap is excluded from this batch: the suggested 8206 listing is explicitly QuickSwap [Old]. The New/Old token choice requires migration and chain/contract review.
 
-## Required next work
+**All 144 quarantine flags remain in force.** The 75 metadata-corrected records remain unavailable to runtime requests until fresh authenticated quotes validate the new IDs. Runtime-eligible count is still 179; 69 quarantined records still need identity or market-data review. The 31 originally unmapped records remain separately accounted for.
 
-1. Deploy this reviewed commit to the existing backend Preview environment using the user's authorized Vercel account.
-2. Confirm /healthz canonical_dataset.sha256 matches the committed canonical file, and canonical_dataset.git_commit matches the tested commit.
-3. Run the unchanged /api/audit-stage5b?run=1 and retain the full response. Its strict failures remain visible even for quarantined entries.
-4. Repair every remaining identity using CMC metadata plus primary project evidence (official site and chain/contract where available). Same-symbol/name similarity and automatic symbol changes are insufficient.
-5. Specifically review rebrands/migrations such as TON/GRAM, IOTA/MIOTA, FXS/FRAX and duplicate project aliases such as lyra/lyra-finance. Do not send a token to an already-owned CMC ID.
-6. Verify the 31 originally unmapped entries individually; some may be real tokens, others companies/protocols. Finish token, stablecoin/wrapped, project_without_token and unverified taxonomy only with evidence.
-7. Lift quarantine only after exact numeric ID/symbol/slug identity and usable quote validation pass. Verify the runtime API, not only the audit handler, for every changed identity.
-8. Require zero proven wrong-asset mappings, zero ID collisions, all seven mandatory assets passing, and full accounting of every explicit no-token/no-quote/unverified entry. Stage 5C remains incomplete while tradable identities are unresolved.
+No new quote PASS count is claimed for this commit. The recorded 179 PASS refers to the previous commit, not the new table.
 
-The production frontend, market-snapshot.json and Scanner have no changes in this patch.
+## Runtime safeguards
+
+- The resolver blocks absent, unverified, quarantined and explicit project_without_token identities.
+- The normalizer checks numeric ID, symbol and slug before returning any market data.
+- Resolution precedes cache reads, preventing quarantined records from returning cached LIVE data.
+- Health exposes the exact canonical SHA-256, commit and eligible/quarantine counts.
+- api/audit-stage5b.js remains byte-for-byte unchanged and still audits all 323 retained numeric IDs.
+
+## Verification and remaining work
+
+72 offline tests pass: 48 core, 15 Vercel smoke, 9 regression tests. The canonical table preserves all 354 projects, 323 distinct CMC IDs and 31 originally unmapped records. There are no CMC-ID or canonical-ID collisions.
+
+After this commit's Preview is READY:
+
+1. Read /api/healthz and retain the exact git_commit and SHA-256.
+2. Run /api/audit-stage5b?run=1 and retain the full result.
+3. Release quarantine only for the repaired entries that pass the fresh exact-ID/symbol/slug audit and have a usable quote.
+4. Verify the runtime market API for released entries. Failed mappings and missing/invalid quotes stay unavailable.
+5. Review remaining rebrands/migrations (including TON/GRAM, INST/FLUID, IOTA/MIOTA, FXS/FRAX and QuickSwap Old/New) with explicit identity evidence. Do not silently change symbols.
+6. Classify token, stablecoin/wrapped, project_without_token and unverified entries using verified project evidence. Missing quotes alone do not establish no-token.
+
+Stage 5C remains incomplete while identity/taxonomy review is outstanding. The Vercel connector still has an account-scope HTTP 403, so live responses are supplied through the user's authenticated browser. Production promotion is not performed here.

@@ -1388,14 +1388,26 @@
         "Layer 2"
       ],
       "market_cap_usd": 64534407,
-      "cmcId": "27633",
+      "cmcId": "27657",
       "cmcSlug": "linea",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:NCAT",
-        "slug_mismatch:ncat",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "27633",
+        "cmcSlug": "linea",
+        "reasons": [
+          "symbol_mismatch:NCAT",
+          "slug_mismatch:ncat",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/linea/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "wormhole",
@@ -1406,14 +1418,26 @@
         "Infrastructure"
       ],
       "market_cap_usd": 63620709,
-      "cmcId": "29515",
+      "cmcId": "29587",
       "cmcSlug": "wormhole",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:MDX",
-        "slug_mismatch:multidex-ai",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "29515",
+        "cmcSlug": "wormhole",
+        "reasons": [
+          "symbol_mismatch:MDX",
+          "slug_mismatch:multidex-ai",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/wormhole/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "allora",
@@ -1423,14 +1447,26 @@
         "AI"
       ],
       "market_cap_usd": 61238624,
-      "cmcId": "28907",
+      "cmcId": "38908",
       "cmcSlug": "allora",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:BRGE",
-        "slug_mismatch:ordbridge",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "28907",
+        "cmcSlug": "allora",
+        "reasons": [
+          "symbol_mismatch:BRGE",
+          "slug_mismatch:ordbridge",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/allora/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "chainopera-ai",
@@ -1440,14 +1476,26 @@
         "AI"
       ],
       "market_cap_usd": 59601462,
-      "cmcId": "28911",
+      "cmcId": "38489",
       "cmcSlug": "chainopera-ai",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:BCX",
-        "slug_mismatch:solanapepe",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "28911",
+        "cmcSlug": "chainopera-ai",
+        "reasons": [
+          "symbol_mismatch:BCX",
+          "slug_mismatch:solanapepe",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/chainopera-ai/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "berachain",
@@ -1479,13 +1527,25 @@
         "DeFi"
       ],
       "market_cap_usd": 55678470,
-      "cmcId": "7281",
+      "cmcId": "7288",
       "cmcSlug": "venus",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:XPRT",
-        "slug_mismatch:persistence"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "7281",
+        "cmcSlug": "venus",
+        "reasons": [
+          "symbol_mismatch:XPRT",
+          "slug_mismatch:persistence"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/venus/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "zetachain",
@@ -1551,14 +1611,26 @@
         "Layer 2"
       ],
       "market_cap_usd": 51577317,
-      "cmcId": "12886",
+      "cmcId": "12885",
       "cmcSlug": "astar",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:BLXM",
-        "slug_mismatch:bloxmove",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "12886",
+        "cmcSlug": "astar",
+        "reasons": [
+          "symbol_mismatch:BLXM",
+          "slug_mismatch:bloxmove",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/astar/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "concordium",
@@ -1640,12 +1712,24 @@
         "Infrastructure"
       ],
       "market_cap_usd": 46767369,
-      "cmcId": "24455",
+      "cmcId": "12894",
       "cmcSlug": "subsquid",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "quote_not_returned"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "24455",
+        "cmcSlug": "subsquid",
+        "reasons": [
+          "quote_not_returned"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/subsquid/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "kamino",
@@ -1655,13 +1739,25 @@
         "DeFi"
       ],
       "market_cap_usd": 43679727.45903181,
-      "cmcId": "28688",
-      "cmcSlug": "kamino-2",
+      "cmcId": "30986",
+      "cmcSlug": "kamino-finance",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:AIAT",
-        "slug_mismatch:ai-analysis-token"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "28688",
+        "cmcSlug": "kamino-2",
+        "reasons": [
+          "symbol_mismatch:AIAT",
+          "slug_mismatch:ai-analysis-token"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/kamino-finance/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "ankr-network",
@@ -1695,14 +1791,26 @@
         "Layer 1"
       ],
       "market_cap_usd": 40693229,
-      "cmcId": "14131",
+      "cmcId": "14101",
       "cmcSlug": "ronin",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:LEAG",
-        "slug_mismatch:leaguedao",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "14131",
+        "cmcSlug": "ronin",
+        "reasons": [
+          "symbol_mismatch:LEAG",
+          "slug_mismatch:leaguedao",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/ronin/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "movement",
@@ -1745,14 +1853,26 @@
         "DePIN"
       ],
       "market_cap_usd": 36462565,
-      "cmcId": "1925",
+      "cmcId": "1042",
       "cmcSlug": "siacoin",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:WTC",
-        "slug_mismatch:waltonchain",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "1925",
+        "cmcSlug": "siacoin",
+        "reasons": [
+          "symbol_mismatch:WTC",
+          "slug_mismatch:waltonchain",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/siacoin/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "uma",
@@ -1808,14 +1928,26 @@
         "AI"
       ],
       "market_cap_usd": 34315525,
-      "cmcId": "28401",
+      "cmcId": "36671",
       "cmcSlug": "sahara-ai",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:DAW",
-        "slug_mismatch:daw-currency",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "28401",
+        "cmcSlug": "sahara-ai",
+        "reasons": [
+          "symbol_mismatch:DAW",
+          "slug_mismatch:daw-currency",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/sahara-ai/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "api3",
@@ -1825,14 +1957,26 @@
         "Infrastructure"
       ],
       "market_cap_usd": 34061133,
-      "cmcId": "7733",
+      "cmcId": "7737",
       "cmcSlug": "api3",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:LCT",
-        "slug_mismatch:light-coin-exchange-token",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "7733",
+        "cmcSlug": "api3",
+        "reasons": [
+          "symbol_mismatch:LCT",
+          "slug_mismatch:light-coin-exchange-token",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/api3/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "euler",
@@ -1842,14 +1986,26 @@
         "DeFi"
       ],
       "market_cap_usd": 31674821,
-      "cmcId": "14239",
-      "cmcSlug": "euler",
+      "cmcId": "14280",
+      "cmcSlug": "euler-finance",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SNK",
-        "slug_mismatch:snake-token",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "14239",
+        "cmcSlug": "euler",
+        "reasons": [
+          "symbol_mismatch:SNK",
+          "slug_mismatch:snake-token",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/euler-finance/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "world-mobile-token",
@@ -1870,14 +2026,26 @@
         "Layer 2"
       ],
       "market_cap_usd": 29384546,
-      "cmcId": "21965",
+      "cmcId": "13631",
       "cmcSlug": "manta-network",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:DST",
-        "slug_mismatch:double-swap-token",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "21965",
+        "cmcSlug": "manta-network",
+        "reasons": [
+          "symbol_mismatch:DST",
+          "slug_mismatch:double-swap-token",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/manta-network/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "iotex",
@@ -1900,13 +2068,25 @@
         "AI"
       ],
       "market_cap_usd": 28737327,
-      "cmcId": "27922",
+      "cmcId": "34619",
       "cmcSlug": "vana",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SHIA",
-        "slug_mismatch:shiba-saga"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "27922",
+        "cmcSlug": "vana",
+        "reasons": [
+          "symbol_mismatch:SHIA",
+          "slug_mismatch:shiba-saga"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/vana/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "nosana",
@@ -1951,13 +2131,25 @@
         "DePIN"
       ],
       "market_cap_usd": 27197844,
-      "cmcId": "9261",
-      "cmcSlug": "chia",
+      "cmcId": "9258",
+      "cmcSlug": "chia-network",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:KEL",
-        "slug_mismatch:kelvpn"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "9261",
+        "cmcSlug": "chia",
+        "reasons": [
+          "symbol_mismatch:KEL",
+          "slug_mismatch:kelvpn"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/chia-network/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "illuvium",
@@ -1978,14 +2170,26 @@
         "AI"
       ],
       "market_cap_usd": 26069213,
-      "cmcId": "27092",
+      "cmcId": "39883",
       "cmcSlug": "gensyn",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:TRY",
-        "slug_mismatch:trinity-eth",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "27092",
+        "cmcSlug": "gensyn",
+        "reasons": [
+          "symbol_mismatch:TRY",
+          "slug_mismatch:trinity-eth",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/gensyn/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "nillion",
@@ -1997,14 +2201,26 @@
         "DeSci"
       ],
       "market_cap_usd": 26016126,
-      "cmcId": "28333",
+      "cmcId": "35702",
       "cmcSlug": "nillion",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:XDOGE",
-        "slug_mismatch:xdoge-eth",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "28333",
+        "cmcSlug": "nillion",
+        "reasons": [
+          "symbol_mismatch:XDOGE",
+          "slug_mismatch:xdoge-eth",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/nillion/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "lisk",
@@ -2026,14 +2242,26 @@
         "Infrastructure"
       ],
       "market_cap_usd": 23570940,
-      "cmcId": "24418",
+      "cmcId": "32193",
       "cmcSlug": "aleo",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:KARTB",
-        "slug_mismatch:kartbox",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "24418",
+        "cmcSlug": "aleo",
+        "reasons": [
+          "symbol_mismatch:KARTB",
+          "slug_mismatch:kartbox",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/aleo/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "carv",
@@ -2045,14 +2273,26 @@
         "Infrastructure"
       ],
       "market_cap_usd": 23382697,
-      "cmcId": "26500",
+      "cmcId": "33372",
       "cmcSlug": "carv",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:RFDAI",
-        "slug_mismatch:refund-ai",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "26500",
+        "cmcSlug": "carv",
+        "reasons": [
+          "symbol_mismatch:RFDAI",
+          "slug_mismatch:refund-ai",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/carv/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "smooth-love-potion",
@@ -2096,14 +2336,26 @@
         "Gaming"
       ],
       "market_cap_usd": 22160034,
-      "cmcId": "10223",
+      "cmcId": "10688",
       "cmcSlug": "yield-guild-games",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:VEGA",
-        "slug_mismatch:vegaprotocol",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "10223",
+        "cmcSlug": "yield-guild-games",
+        "reasons": [
+          "symbol_mismatch:VEGA",
+          "slug_mismatch:vegaprotocol",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/yield-guild-games/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "phala",
@@ -2126,13 +2378,25 @@
         "Gaming"
       ],
       "market_cap_usd": 20862039,
-      "cmcId": "1774",
+      "cmcId": "2300",
       "cmcSlug": "wax",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SOCC",
-        "slug_mismatch:socialcoin-socc"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "1774",
+        "cmcSlug": "wax",
+        "reasons": [
+          "symbol_mismatch:SOCC",
+          "slug_mismatch:socialcoin-socc"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/wax/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "chaingpt",
@@ -2142,14 +2406,26 @@
         "AI"
       ],
       "market_cap_usd": 20457237,
-      "cmcId": "24127",
+      "cmcId": "23756",
       "cmcSlug": "chaingpt",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:GDCC",
-        "slug_mismatch:global-digital-cluster-coin",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "24127",
+        "cmcSlug": "chaingpt",
+        "reasons": [
+          "symbol_mismatch:GDCC",
+          "slug_mismatch:global-digital-cluster-coin",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/chaingpt/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "clearpool",
@@ -2160,14 +2436,26 @@
         "DeFi"
       ],
       "market_cap_usd": 20376616,
-      "cmcId": "17733",
+      "cmcId": "12573",
       "cmcSlug": "clearpool",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:MORE",
-        "slug_mismatch:moremoney-finance",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "17733",
+        "cmcSlug": "clearpool",
+        "reasons": [
+          "symbol_mismatch:MORE",
+          "slug_mismatch:moremoney-finance",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/clearpool/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "synapse",
@@ -2188,13 +2476,25 @@
         "Layer 2"
       ],
       "market_cap_usd": 20097231,
-      "cmcId": "28452",
+      "cmcId": "28480",
       "cmcSlug": "blast",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:rats",
-        "slug_mismatch:rats-ordinals"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "28452",
+        "cmcSlug": "blast",
+        "reasons": [
+          "symbol_mismatch:rats",
+          "slug_mismatch:rats-ordinals"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/blast/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "big-time",
@@ -2204,14 +2504,26 @@
         "Gaming"
       ],
       "market_cap_usd": 19433868,
-      "cmcId": "28257",
+      "cmcId": "28230",
       "cmcSlug": "big-time",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:7",
-        "slug_mismatch:lucky7",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "28257",
+        "cmcSlug": "big-time",
+        "reasons": [
+          "symbol_mismatch:7",
+          "slug_mismatch:lucky7",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/big-time/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "cyber",
@@ -2221,14 +2533,26 @@
         "Layer 2"
       ],
       "market_cap_usd": 18835751,
-      "cmcId": "24777",
+      "cmcId": "24781",
       "cmcSlug": "cyberconnect",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:JEET",
-        "slug_mismatch:jeet-token",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "24777",
+        "cmcSlug": "cyberconnect",
+        "reasons": [
+          "symbol_mismatch:JEET",
+          "slug_mismatch:jeet-token",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/cyberconnect/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "pokt-network",
@@ -2238,14 +2562,26 @@
         "Infrastructure"
       ],
       "market_cap_usd": 18492623,
-      "cmcId": "12823",
+      "cmcId": "11823",
       "cmcSlug": "pocket-network",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SHIBBCH",
-        "slug_mismatch:shiba-bch",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "12823",
+        "cmcSlug": "pocket-network",
+        "reasons": [
+          "symbol_mismatch:SHIBBCH",
+          "slug_mismatch:shiba-bch",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/pocket-network/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "sophon",
@@ -2255,13 +2591,25 @@
         "Layer 2"
       ],
       "market_cap_usd": 17168755,
-      "cmcId": "29430",
+      "cmcId": "32087",
       "cmcSlug": "sophon",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SHIB",
-        "slug_mismatch:shibwifhat"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "29430",
+        "cmcSlug": "sophon",
+        "reasons": [
+          "symbol_mismatch:SHIB",
+          "slug_mismatch:shibwifhat"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/sophon/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "morpheusai",
@@ -2294,14 +2642,26 @@
         "Gaming"
       ],
       "market_cap_usd": 15859781,
-      "cmcId": "24117",
-      "cmcSlug": "xai-blockchain",
+      "cmcId": "28933",
+      "cmcSlug": "xai-games",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:MINT",
-        "slug_mismatch:musicn",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "24117",
+        "cmcSlug": "xai-blockchain",
+        "reasons": [
+          "symbol_mismatch:MINT",
+          "slug_mismatch:musicn",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/xai-games/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "realio-network",
@@ -2311,14 +2671,26 @@
         "RWA"
       ],
       "market_cap_usd": 15700839,
-      "cmcId": "24232",
+      "cmcId": "4166",
       "cmcSlug": "realio-network",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:RMATIC",
-        "slug_mismatch:stafi-staked-matic",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "24232",
+        "cmcSlug": "realio-network",
+        "reasons": [
+          "symbol_mismatch:RMATIC",
+          "slug_mismatch:stafi-staked-matic",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/realio-network/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "magic",
@@ -2351,14 +2723,26 @@
         "AI"
       ],
       "market_cap_usd": 15334707,
-      "cmcId": "26105",
-      "cmcSlug": "sapien-2",
+      "cmcId": "38117",
+      "cmcSlug": "sapien-io",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:PEPEGPT",
-        "slug_mismatch:pepe-gpt",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "26105",
+        "cmcSlug": "sapien-2",
+        "reasons": [
+          "symbol_mismatch:PEPEGPT",
+          "slug_mismatch:pepe-gpt",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/sapien-io/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "portal",
@@ -2379,14 +2763,26 @@
         "Layer 2"
       ],
       "market_cap_usd": 14005138,
-      "cmcId": "25144",
+      "cmcId": "32809",
       "cmcSlug": "orderly-network",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:BXR",
-        "slug_mismatch:bitxor",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "25144",
+        "cmcSlug": "orderly-network",
+        "reasons": [
+          "symbol_mismatch:BXR",
+          "slug_mismatch:bitxor",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/orderly-network/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "my-neighbor-alice",
@@ -2409,13 +2805,25 @@
         "Infrastructure"
       ],
       "market_cap_usd": 13103422.8065502,
-      "cmcId": "27533",
+      "cmcId": "29676",
       "cmcSlug": "aevo",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:OSAK",
-        "slug_mismatch:osaka-protocol"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "27533",
+        "cmcSlug": "aevo",
+        "reasons": [
+          "symbol_mismatch:OSAK",
+          "slug_mismatch:osaka-protocol"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/aevo/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "aurora",
@@ -2437,12 +2845,24 @@
         "Infrastructure"
       ],
       "market_cap_usd": 13001536,
-      "cmcId": "28843",
+      "cmcId": "36510",
       "cmcSlug": "lagrange",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "quote_not_returned"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "28843",
+        "cmcSlug": "lagrange",
+        "reasons": [
+          "quote_not_returned"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/lagrange/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "storj",
@@ -2463,14 +2883,26 @@
         "DeSci"
       ],
       "market_cap_usd": 12228915,
-      "cmcId": "25455",
+      "cmcId": "24138",
       "cmcSlug": "hairdao",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:LFG",
-        "slug_mismatch:lfg-coin",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "25455",
+        "cmcSlug": "hairdao",
+        "reasons": [
+          "symbol_mismatch:LFG",
+          "slug_mismatch:lfg-coin",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/hairdao/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "loopring",
@@ -2491,14 +2923,26 @@
         "AI"
       ],
       "market_cap_usd": 11395384,
-      "cmcId": "23538",
+      "cmcId": "16876",
       "cmcSlug": "alethea-artificial-liquid-intelligence-token",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:HIFRIENDS",
-        "slug_mismatch:hifriends",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "23538",
+        "cmcSlug": "alethea-artificial-liquid-intelligence-token",
+        "reasons": [
+          "symbol_mismatch:HIFRIENDS",
+          "slug_mismatch:hifriends",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/alethea-artificial-liquid-intelligence-token/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "iagon",
@@ -2508,14 +2952,26 @@
         "DePIN"
       ],
       "market_cap_usd": 10395511,
-      "cmcId": "4278",
+      "cmcId": "11078",
       "cmcSlug": "iagon",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:XYZ",
-        "slug_mismatch:jetmint-token",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "4278",
+        "cmcSlug": "iagon",
+        "reasons": [
+          "symbol_mismatch:XYZ",
+          "slug_mismatch:jetmint-token",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/iagon/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "elysia",
@@ -2526,14 +2982,26 @@
         "DeFi"
       ],
       "market_cap_usd": 10300390,
-      "cmcId": "28345",
+      "cmcId": "5382",
       "cmcSlug": "elysia",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:PAWS",
-        "slug_mismatch:pawstars",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "28345",
+        "cmcSlug": "elysia",
+        "reasons": [
+          "symbol_mismatch:PAWS",
+          "slug_mismatch:pawstars",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/elysia/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "swarm",
@@ -2554,14 +3022,26 @@
         "Infrastructure"
       ],
       "market_cap_usd": 9709166,
-      "cmcId": "31250",
+      "cmcId": "37340",
       "cmcSlug": "chainbase",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:FATMICHI",
-        "slug_mismatch:fatmichi",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "31250",
+        "cmcSlug": "chainbase",
+        "reasons": [
+          "symbol_mismatch:FATMICHI",
+          "slug_mismatch:fatmichi",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/chainbase/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "boba",
@@ -2593,14 +3073,26 @@
         "RWA"
       ],
       "market_cap_usd": 9006488,
-      "cmcId": "29192",
+      "cmcId": "28299",
       "cmcSlug": "tokenfi",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:MEMEETF",
-        "slug_mismatch:meme-etf",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "29192",
+        "cmcSlug": "tokenfi",
+        "reasons": [
+          "symbol_mismatch:MEMEETF",
+          "slug_mismatch:meme-etf",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/tokenfi/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "hivemapper",
@@ -2610,14 +3102,26 @@
         "DePIN"
       ],
       "market_cap_usd": 8779274,
-      "cmcId": "17680",
+      "cmcId": "22850",
       "cmcSlug": "hivemapper",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:MVD",
-        "slug_mismatch:mvpad",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "17680",
+        "cmcSlug": "hivemapper",
+        "reasons": [
+          "symbol_mismatch:MVD",
+          "slug_mismatch:mvpad",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/hivemapper/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "brickken",
@@ -2627,14 +3131,26 @@
         "RWA"
       ],
       "market_cap_usd": 7883102,
-      "cmcId": "24750",
+      "cmcId": "21822",
       "cmcSlug": "brickken",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:DOGTIC",
-        "slug_mismatch:dogtick",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "24750",
+        "cmcSlug": "brickken",
+        "reasons": [
+          "symbol_mismatch:DOGTIC",
+          "slug_mismatch:dogtick",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/brickken/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "balancer",
@@ -2655,14 +3171,26 @@
         "AI"
       ],
       "market_cap_usd": 7444665,
-      "cmcId": "22154",
+      "cmcId": "28458",
       "cmcSlug": "autonolas",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SU",
-        "slug_mismatch:skyup",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "22154",
+        "cmcSlug": "autonolas",
+        "reasons": [
+          "symbol_mismatch:SU",
+          "slug_mismatch:skyup",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/autonolas/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "moonbeam",
@@ -2672,13 +3200,25 @@
         "Layer 2"
       ],
       "market_cap_usd": 7285912,
-      "cmcId": "9288",
+      "cmcId": "6836",
       "cmcSlug": "moonbeam",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:QI",
-        "slug_mismatch:benqi"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "9288",
+        "cmcSlug": "moonbeam",
+        "reasons": [
+          "symbol_mismatch:QI",
+          "slug_mismatch:benqi"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/moonbeam/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "origin-dollar",
@@ -2689,14 +3229,26 @@
         "RWA"
       ],
       "market_cap_usd": 6246074,
-      "cmcId": "8950",
+      "cmcId": "7189",
       "cmcSlug": "origin-dollar",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:CATE",
-        "slug_mismatch:cash-tech",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "8950",
+        "cmcSlug": "origin-dollar",
+        "reasons": [
+          "symbol_mismatch:CATE",
+          "slug_mismatch:cash-tech",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/origin-dollar/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "vita-dao",
@@ -2706,14 +3258,26 @@
         "DeSci"
       ],
       "market_cap_usd": 6189360,
-      "cmcId": "20788",
+      "cmcId": "19214",
       "cmcSlug": "vitadao",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:WBY",
-        "slug_mismatch:w3b-infinity",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "20788",
+        "cmcSlug": "vitadao",
+        "reasons": [
+          "symbol_mismatch:WBY",
+          "slug_mismatch:w3b-infinity",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/vitadao/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "paal-ai",
@@ -2723,14 +3287,26 @@
         "AI"
       ],
       "market_cap_usd": 6116477,
-      "cmcId": "24013",
+      "cmcId": "27178",
       "cmcSlug": "paal-ai",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:AI",
-        "slug_mismatch:gpt-ai",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "24013",
+        "cmcSlug": "paal-ai",
+        "reasons": [
+          "symbol_mismatch:AI",
+          "slug_mismatch:gpt-ai",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/paal-ai/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "quickswap",
@@ -2757,13 +3333,25 @@
         "DeFi"
       ],
       "market_cap_usd": 5718553,
-      "cmcId": "11156",
-      "cmcSlug": "dydx",
+      "cmcId": "28324",
+      "cmcSlug": "dydx-chain",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:ETHDYDX",
-        "slug_mismatch:dydx-ethdydx"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "11156",
+        "cmcSlug": "dydx",
+        "reasons": [
+          "symbol_mismatch:ETHDYDX",
+          "slug_mismatch:dydx-ethdydx"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/dydx-chain/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "beefy",
@@ -2784,14 +3372,26 @@
         "Layer 2"
       ],
       "market_cap_usd": 4168379,
-      "cmcId": "26971",
+      "cmcId": "26998",
       "cmcSlug": "scroll",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:NITE",
-        "slug_mismatch:nite-network",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "26971",
+        "cmcSlug": "scroll",
+        "reasons": [
+          "symbol_mismatch:NITE",
+          "slug_mismatch:nite-network",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/scroll/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "dimo",
@@ -2801,14 +3401,26 @@
         "DePIN"
       ],
       "market_cap_usd": 4061938,
-      "cmcId": "14793",
+      "cmcId": "22837",
       "cmcSlug": "dimo",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:MYRA",
-        "slug_mismatch:myra-ai",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "14793",
+        "cmcSlug": "dimo",
+        "reasons": [
+          "symbol_mismatch:MYRA",
+          "slug_mismatch:myra-ai",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/dimo/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "cess",
@@ -2829,14 +3441,26 @@
         "Gaming"
       ],
       "market_cap_usd": 3878829,
-      "cmcId": "29243",
+      "cmcId": "29335",
       "cmcSlug": "pixels",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:XD",
-        "slug_mismatch:lenx-finance",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "29243",
+        "cmcSlug": "pixels",
+        "reasons": [
+          "symbol_mismatch:XD",
+          "slug_mismatch:lenx-finance",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/pixels/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "star-atlas",
@@ -2846,14 +3470,26 @@
         "Gaming"
       ],
       "market_cap_usd": 3496033,
-      "cmcId": "11071",
+      "cmcId": "11212",
       "cmcSlug": "star-atlas",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SUNGLASSESDOGE",
-        "slug_mismatch:sunglassesdoge",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "11071",
+        "cmcSlug": "star-atlas",
+        "reasons": [
+          "symbol_mismatch:SUNGLASSESDOGE",
+          "slug_mismatch:sunglassesdoge",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/star-atlas/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "polytrade",
@@ -2863,14 +3499,26 @@
         "RWA"
       ],
       "market_cap_usd": 3413157,
-      "cmcId": "19099",
+      "cmcId": "10465",
       "cmcSlug": "polytrade",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:HOWL",
-        "slug_mismatch:howler",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "19099",
+        "cmcSlug": "polytrade",
+        "reasons": [
+          "symbol_mismatch:HOWL",
+          "slug_mismatch:howler",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/polytrade/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "mysterium",
@@ -2880,14 +3528,26 @@
         "DePIN"
       ],
       "market_cap_usd": 3331410,
-      "cmcId": "8321",
+      "cmcId": "1721",
       "cmcSlug": "mysterium",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:STN",
-        "slug_mismatch:sting",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "8321",
+        "cmcSlug": "mysterium",
+        "reasons": [
+          "symbol_mismatch:STN",
+          "slug_mismatch:sting",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/mysterium/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "zircuit",
@@ -2897,14 +3557,26 @@
         "Layer 2"
       ],
       "market_cap_usd": 3273000,
-      "cmcId": "25825",
+      "cmcId": "29711",
       "cmcSlug": "zircuit",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SGRAI",
-        "slug_mismatch:sugarland-token",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "25825",
+        "cmcSlug": "zircuit",
+        "reasons": [
+          "symbol_mismatch:SGRAI",
+          "slug_mismatch:sugarland-token",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/zircuit/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "netmind",
@@ -2914,14 +3586,26 @@
         "AI"
       ],
       "market_cap_usd": 3155668,
-      "cmcId": "23133",
+      "cmcId": "29447",
       "cmcSlug": "netmind-token",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:Y2B",
-        "slug_mismatch:y2b-finance",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "23133",
+        "cmcSlug": "netmind-token",
+        "reasons": [
+          "symbol_mismatch:Y2B",
+          "slug_mismatch:y2b-finance",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/netmind-token/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "goldfinch",
@@ -2932,14 +3616,26 @@
         "RWA"
       ],
       "market_cap_usd": 2804466,
-      "cmcId": "13956",
-      "cmcSlug": "goldfinch",
+      "cmcId": "13967",
+      "cmcSlug": "goldfinch-protocol",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SGT",
-        "slug_mismatch:squid-god-finance",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "13956",
+        "cmcSlug": "goldfinch",
+        "reasons": [
+          "symbol_mismatch:SGT",
+          "slug_mismatch:squid-god-finance",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/goldfinch-protocol/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "oasys",
@@ -2960,13 +3656,25 @@
         "AI"
       ],
       "market_cap_usd": 2032317,
-      "cmcId": "24050",
+      "cmcId": "14345",
       "cmcSlug": "botto",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:PMG",
-        "slug_mismatch:pomerium-ecosystem-token"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "24050",
+        "cmcSlug": "botto",
+        "reasons": [
+          "symbol_mismatch:PMG",
+          "slug_mismatch:pomerium-ecosystem-token"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/botto/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "cere-network",
@@ -2976,14 +3684,26 @@
         "DeSci"
       ],
       "market_cap_usd": 1861631,
-      "cmcId": "21941",
+      "cmcId": "4710",
       "cmcSlug": "cere-network",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:MT",
-        "slug_mismatch:mt-tower",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "21941",
+        "cmcSlug": "cere-network",
+        "reasons": [
+          "symbol_mismatch:MT",
+          "slug_mismatch:mt-tower",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/cere-network/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "kujira",
@@ -3087,14 +3807,26 @@
         "DeFi"
       ],
       "market_cap_usd": 1163210,
-      "cmcId": "7723",
-      "cmcSlug": "truefi",
+      "cmcId": "7725",
+      "cmcSlug": "truefi-token",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:JEM",
-        "slug_mismatch:itchiro-games",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "7723",
+        "cmcSlug": "truefi",
+        "reasons": [
+          "symbol_mismatch:JEM",
+          "slug_mismatch:itchiro-games",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/truefi-token/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "creditum",
@@ -3166,13 +3898,25 @@
         "DeSci"
       ],
       "market_cap_usd": 626610,
-      "cmcId": "25100",
+      "cmcId": "29633",
       "cmcSlug": "valleydao",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SUIP",
-        "slug_mismatch:suipad"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "25100",
+        "cmcSlug": "valleydao",
+        "reasons": [
+          "symbol_mismatch:SUIP",
+          "slug_mismatch:suipad"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/valleydao/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "playdapp",
@@ -3182,14 +3926,26 @@
         "Gaming"
       ],
       "market_cap_usd": 596334,
-      "cmcId": "7462",
+      "cmcId": "7461",
       "cmcSlug": "playdapp",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:UTED",
-        "slug_mismatch:united",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "7462",
+        "cmcSlug": "playdapp",
+        "reasons": [
+          "symbol_mismatch:UTED",
+          "slug_mismatch:united",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/playdapp/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "myria",
@@ -3199,14 +3955,26 @@
         "Gaming"
       ],
       "market_cap_usd": 573139,
-      "cmcId": "23728",
+      "cmcId": "22289",
       "cmcSlug": "myria",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:CATSHIRA",
-        "slug_mismatch:shira-cat",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "23728",
+        "cmcSlug": "myria",
+        "reasons": [
+          "symbol_mismatch:CATSHIRA",
+          "slug_mismatch:shira-cat",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/myria/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "cerebrumdao",
@@ -3233,12 +4001,24 @@
         "DeSci"
       ],
       "market_cap_usd": 504689,
-      "cmcId": "25024",
+      "cmcId": "30965",
       "cmcSlug": "cryodao",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "quote_not_returned"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "25024",
+        "cmcSlug": "cryodao",
+        "reasons": [
+          "quote_not_returned"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/cryodao/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "mode",
@@ -3248,14 +4028,26 @@
         "Layer 2"
       ],
       "market_cap_usd": 395919,
-      "cmcId": "29204",
+      "cmcId": "31016",
       "cmcSlug": "mode",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:BMICKEY",
-        "slug_mismatch:baby-mickey",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "29204",
+        "cmcSlug": "mode",
+        "reasons": [
+          "symbol_mismatch:BMICKEY",
+          "slug_mismatch:baby-mickey",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/mode/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "mobox",
@@ -3289,14 +4081,26 @@
         "DePIN"
       ],
       "market_cap_usd": 271641,
-      "cmcId": "10466",
-      "cmcSlug": "crust",
+      "cmcId": "6747",
+      "cmcSlug": "crustnetwork",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:BEE",
-        "slug_mismatch:bees",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "10466",
+        "cmcSlug": "crust",
+        "reasons": [
+          "symbol_mismatch:BEE",
+          "slug_mismatch:bees",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/crustnetwork/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "maple",
@@ -3458,14 +4262,26 @@
         "Gaming"
       ],
       "market_cap_usd": 40796,
-      "cmcId": "21666",
-      "cmcSlug": "xana",
+      "cmcId": "31543",
+      "cmcSlug": "xana-new",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:DD",
-        "slug_mismatch:dogedragon",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "21666",
+        "cmcSlug": "xana",
+        "reasons": [
+          "symbol_mismatch:DD",
+          "slug_mismatch:dogedragon",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/xana-new/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "stargate",
@@ -3598,14 +4414,26 @@
         "DePIN"
       ],
       "market_cap_usd": 0,
-      "cmcId": "8914",
+      "cmcId": "8894",
       "cmcSlug": "deeper-network",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:MAGI",
-        "slug_mismatch:magikarp-finance",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "8914",
+        "cmcSlug": "deeper-network",
+        "reasons": [
+          "symbol_mismatch:MAGI",
+          "slug_mismatch:magikarp-finance",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/deeper-network/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "dopex",
@@ -3685,14 +4513,26 @@
         "DeFi"
       ],
       "market_cap_usd": 0,
-      "cmcId": "18363",
-      "cmcSlug": "klima-dao",
+      "cmcId": "12873",
+      "cmcSlug": "klimadao",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:GCME",
-        "slug_mismatch:gocryptome",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "18363",
+        "cmcSlug": "klima-dao",
+        "reasons": [
+          "symbol_mismatch:GCME",
+          "slug_mismatch:gocryptome",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/klimadao/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "moss-carbon-credit",
@@ -3702,14 +4542,26 @@
         "RWA"
       ],
       "market_cap_usd": 0,
-      "cmcId": "18227",
+      "cmcId": "8826",
       "cmcSlug": "moss-carbon-credit",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:JAMON",
-        "slug_mismatch:jamonswap",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "18227",
+        "cmcSlug": "moss-carbon-credit",
+        "reasons": [
+          "symbol_mismatch:JAMON",
+          "slug_mismatch:jamonswap",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/moss-carbon-credit/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "maker",
@@ -3763,14 +4615,26 @@
         "RWA"
       ],
       "market_cap_usd": 0,
-      "cmcId": "12023",
+      "cmcId": "9638",
       "cmcSlug": "singularitydao",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:JED",
-        "slug_mismatch:jedstar",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "12023",
+        "cmcSlug": "singularitydao",
+        "reasons": [
+          "symbol_mismatch:JED",
+          "slug_mismatch:jedstar",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/singularitydao/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "matrixdock",
@@ -3864,14 +4728,26 @@
         "AI"
       ],
       "market_cap_usd": null,
-      "cmcId": "28556",
-      "cmcSlug": "0g",
+      "cmcId": "38337",
+      "cmcSlug": "zero-gravity",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:GROOOOOK",
-        "slug_mismatch:groooook",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "28556",
+        "cmcSlug": "0g",
+        "reasons": [
+          "symbol_mismatch:GROOOOOK",
+          "slug_mismatch:groooook",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/zero-gravity/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "aether",
@@ -3928,14 +4804,26 @@
         "AI"
       ],
       "market_cap_usd": null,
-      "cmcId": "5827",
-      "cmcSlug": "aleph",
+      "cmcId": "5821",
+      "cmcSlug": "aleph-im",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:AST",
-        "slug_mismatch:antiscamtoken",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "5827",
+        "cmcSlug": "aleph",
+        "reasons": [
+          "symbol_mismatch:AST",
+          "slug_mismatch:antiscamtoken",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/aleph-im/",
+        "reviewed_on": "2026-10-12"
+      }
     },
     {
       "id": "alienswap",
@@ -4784,14 +5672,26 @@
         "DePIN"
       ],
       "market_cap_usd": null,
-      "cmcId": "23161",
+      "cmcId": "33304",
       "cmcSlug": "weatherxm",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:JMZ",
-        "slug_mismatch:jimizz",
-        "invalid_price"
-      ]
+        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "23161",
+        "cmcSlug": "weatherxm",
+        "reasons": [
+          "symbol_mismatch:JMZ",
+          "slug_mismatch:jimizz",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/weatherxm/",
+        "reviewed_on": "2026-10-12"
+      }
     }
   ],
   "_classification": {
@@ -5532,32 +6432,32 @@
     },
     "linea": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "27633",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "27657",
       "cmcSlug": "linea",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "wormhole": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "29515",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "29587",
       "cmcSlug": "wormhole",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "allora": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "28907",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "38908",
       "cmcSlug": "allora",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "chainopera-ai": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "28911",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "38489",
       "cmcSlug": "chainopera-ai",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5577,8 +6477,8 @@
     },
     "venus": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "7281",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "7288",
       "cmcSlug": "venus",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5615,8 +6515,8 @@
     },
     "astar": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "12886",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "12885",
       "cmcSlug": "astar",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5662,17 +6562,17 @@
     },
     "subsquid": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "24455",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "12894",
       "cmcSlug": "subsquid",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "kamino": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "28688",
-      "cmcSlug": "kamino-2",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "30986",
+      "cmcSlug": "kamino-finance",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -5690,8 +6590,8 @@
     },
     "ronin": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "14131",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "14101",
       "cmcSlug": "ronin",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5716,8 +6616,8 @@
     },
     "siacoin": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "1925",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "1042",
       "cmcSlug": "siacoin",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5748,25 +6648,25 @@
     },
     "sahara-ai": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "28401",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "36671",
       "cmcSlug": "sahara-ai",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "api3": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "7733",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "7737",
       "cmcSlug": "api3",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "euler": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "14239",
-      "cmcSlug": "euler",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "14280",
+      "cmcSlug": "euler-finance",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -5778,8 +6678,8 @@
     },
     "manta": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "21965",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "13631",
       "cmcSlug": "manta-network",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5792,8 +6692,8 @@
     },
     "vana": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "27922",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "34619",
       "cmcSlug": "vana",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5819,9 +6719,9 @@
     },
     "chia": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "9261",
-      "cmcSlug": "chia",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "9258",
+      "cmcSlug": "chia-network",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -5833,16 +6733,16 @@
     },
     "gensyn": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "27092",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "39883",
       "cmcSlug": "gensyn",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "nillion": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "28333",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "35702",
       "cmcSlug": "nillion",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5855,16 +6755,16 @@
     },
     "aleo": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "24418",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "32193",
       "cmcSlug": "aleo",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "carv": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "26500",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "33372",
       "cmcSlug": "carv",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5890,8 +6790,8 @@
     },
     "yield-guild-games": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "10223",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "10688",
       "cmcSlug": "yield-guild-games",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5904,24 +6804,24 @@
     },
     "wax": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "1774",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "2300",
       "cmcSlug": "wax",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "chaingpt": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "24127",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "23756",
       "cmcSlug": "chaingpt",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "clearpool": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "17733",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "12573",
       "cmcSlug": "clearpool",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5934,40 +6834,40 @@
     },
     "blast": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "28452",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "28480",
       "cmcSlug": "blast",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "big-time": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "28257",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "28230",
       "cmcSlug": "big-time",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "cyber": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "24777",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "24781",
       "cmcSlug": "cyberconnect",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "pokt-network": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "12823",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "11823",
       "cmcSlug": "pocket-network",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "sophon": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "29430",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "32087",
       "cmcSlug": "sophon",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -5986,16 +6886,16 @@
     },
     "xai": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "24117",
-      "cmcSlug": "xai-blockchain",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "28933",
+      "cmcSlug": "xai-games",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "realio-network": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "24232",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "4166",
       "cmcSlug": "realio-network",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6014,9 +6914,9 @@
     },
     "sapien": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "26105",
-      "cmcSlug": "sapien-2",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "38117",
+      "cmcSlug": "sapien-io",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -6029,8 +6929,8 @@
     },
     "orderly": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "25144",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "32809",
       "cmcSlug": "orderly-network",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6044,8 +6944,8 @@
     },
     "aevo": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "27533",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "29676",
       "cmcSlug": "aevo",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6058,8 +6958,8 @@
     },
     "lagrange": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "28843",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "36510",
       "cmcSlug": "lagrange",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6072,8 +6972,8 @@
     },
     "hairdao": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "25455",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "24138",
       "cmcSlug": "hairdao",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6086,24 +6986,24 @@
     },
     "alethea-ai": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "23538",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "16876",
       "cmcSlug": "alethea-artificial-liquid-intelligence-token",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "iagon": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "4278",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "11078",
       "cmcSlug": "iagon",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "elysia": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "28345",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "5382",
       "cmcSlug": "elysia",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6116,8 +7016,8 @@
     },
     "chainbase": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "31250",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "37340",
       "cmcSlug": "chainbase",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6136,24 +7036,24 @@
     },
     "tokenfi": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "29192",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "28299",
       "cmcSlug": "tokenfi",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "hivemapper": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "17680",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "22850",
       "cmcSlug": "hivemapper",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "brickken": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "24750",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "21822",
       "cmcSlug": "brickken",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6166,40 +7066,40 @@
     },
     "autonolas": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "22154",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "28458",
       "cmcSlug": "autonolas",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "moonbeam": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "9288",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "6836",
       "cmcSlug": "moonbeam",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "origin-dollar": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "8950",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "7189",
       "cmcSlug": "origin-dollar",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "vita-dao": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "20788",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "19214",
       "cmcSlug": "vitadao",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "paal-ai": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "24013",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "27178",
       "cmcSlug": "paal-ai",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6214,9 +7114,9 @@
     },
     "dydx": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "11156",
-      "cmcSlug": "dydx",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "28324",
+      "cmcSlug": "dydx-chain",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -6228,16 +7128,16 @@
     },
     "scroll": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "26971",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "26998",
       "cmcSlug": "scroll",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "dimo": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "14793",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "22837",
       "cmcSlug": "dimo",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6250,57 +7150,57 @@
     },
     "pixels": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "29243",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "29335",
       "cmcSlug": "pixels",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "star-atlas": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "11071",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "11212",
       "cmcSlug": "star-atlas",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "polytrade": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "19099",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "10465",
       "cmcSlug": "polytrade",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "mysterium": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "8321",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "1721",
       "cmcSlug": "mysterium",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "zircuit": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "25825",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "29711",
       "cmcSlug": "zircuit",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "netmind": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "23133",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "29447",
       "cmcSlug": "netmind-token",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "goldfinch": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "13956",
-      "cmcSlug": "goldfinch",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "13967",
+      "cmcSlug": "goldfinch-protocol",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -6312,16 +7212,16 @@
     },
     "botto": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "24050",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "14345",
       "cmcSlug": "botto",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "cere-network": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "21941",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "4710",
       "cmcSlug": "cere-network",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6376,9 +7276,9 @@
     },
     "truefi": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "7723",
-      "cmcSlug": "truefi",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "7725",
+      "cmcSlug": "truefi-token",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -6415,24 +7315,24 @@
     },
     "valleyDAO": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "25100",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "29633",
       "cmcSlug": "valleydao",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "playdapp": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "7462",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "7461",
       "cmcSlug": "playdapp",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "myria": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "23728",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "22289",
       "cmcSlug": "myria",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6447,16 +7347,16 @@
     },
     "cryoDAO": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "25024",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "30965",
       "cmcSlug": "cryodao",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "mode": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "29204",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "31016",
       "cmcSlug": "mode",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6475,9 +7375,9 @@
     },
     "crust-network": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "10466",
-      "cmcSlug": "crust",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "6747",
+      "cmcSlug": "crustnetwork",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -6558,9 +7458,9 @@
     },
     "xana": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "21666",
-      "cmcSlug": "xana",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "31543",
+      "cmcSlug": "xana-new",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -6627,8 +7527,8 @@
     },
     "deeper-network": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "8914",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "8894",
       "cmcSlug": "deeper-network",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6671,16 +7571,16 @@
     },
     "klima-dao": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "18363",
-      "cmcSlug": "klima-dao",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "12873",
+      "cmcSlug": "klimadao",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "moss-carbon-credit": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "18227",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "8826",
       "cmcSlug": "moss-carbon-credit",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6709,8 +7609,8 @@
     },
     "singularitydao": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "12023",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "9638",
       "cmcSlug": "singularitydao",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -6757,9 +7657,9 @@
     },
     "zero-gravity": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "28556",
-      "cmcSlug": "0g",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "38337",
+      "cmcSlug": "zero-gravity",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -6787,9 +7687,9 @@
     },
     "aleph-im": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "5827",
-      "cmcSlug": "aleph",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "5821",
+      "cmcSlug": "aleph-im",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -7223,8 +8123,8 @@
     },
     "weatherxm": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "23161",
+      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "cmcId": "33304",
       "cmcSlug": "weatherxm",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -7238,12 +8138,18 @@
   },
   "_mapping_repair": {
     "stage": "5C",
-    "status": "LIVE_REAUDIT_REQUIRED",
+    "status": "ID_CORRECTIONS_PENDING_LIVE_REAUDIT",
     "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
     "source_audit_at": "2026-10-12T10:20:26.406Z",
     "slug_corrections": 22,
     "quarantined": 144,
     "quarantined_symbol_mismatches": 130,
-    "quarantined_market_data_failures": 14
+    "quarantined_market_data_failures": 14,
+    "id_corrections": 75,
+    "identity_review_remaining": 69,
+    "last_live_audit_at": "2026-10-12T11:27:51.478Z",
+    "last_live_audit_commit": "6ef72e33fa4cbd5795a0ae332ca7d8cb07dad8e3",
+    "last_live_audit_pass": 179,
+    "last_live_audit_fail": 144
   }
 }

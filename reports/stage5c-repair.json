@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "PARTIAL_BLOCKED_LIVE_REAUDIT",
+  "status": "PRIMARY_ID_REPAIRS_PENDING_LIVE_REAUDIT",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -32,10 +32,26 @@
     "eligible_for_runtime_request": 179
   },
   "live_reaudit": {
-    "performed": false,
-    "blocked_by": "Vercel account scope access rejected with HTTP 403",
-    "team": "realstrades-8509s-projects",
-    "project": "payd-cmc-backend"
+    "performed": true,
+    "execution": "user_browser",
+    "commit": "6ef72e33fa4cbd5795a0ae332ca7d8cb07dad8e3",
+    "dataset_sha256": "184d3bba63aecfca221dc1f278771d92096b211e997bba58c5fab4173aef3675",
+    "audit_at": "2026-10-12T11:27:51.478Z",
+    "counts": {
+      "dataset_total": 354,
+      "mapped_expected": 323,
+      "mapped_checked": 323,
+      "unmapped": 31,
+      "returned_quotes": 318,
+      "pass": 179,
+      "fail": 144,
+      "duplicate_cmc_ids": 0,
+      "duplicate_canonical_ids": 0,
+      "batches": 4
+    },
+    "mandatory_all_pass": true,
+    "strict_failures_all_quarantined": true,
+    "slug_only_failures": 0
   },
   "slug_corrections": [
     {
@@ -2163,5 +2179,1522 @@
     "tenderly",
     "wayru"
   ],
-  "taxonomy_status": "NOT_COMPLETED: classify token/stablecoin/wrapped/project_without_token only using verified project identity evidence; no-quote alone does not establish no-token."
+  "taxonomy_status": "NOT_COMPLETED: classify token/stablecoin/wrapped/project_without_token only using verified project identity evidence; no-quote alone does not establish no-token.",
+  "id_repairs": {
+    "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+    "applied": 75,
+    "unresolved_quarantined": 69,
+    "quarantine_retained": 144,
+    "canonical_symbols_changed": 0,
+    "collisions": 0,
+    "changes": [
+      {
+        "canonical_id": "linea",
+        "symbol": "LINEA",
+        "before": {
+          "cmcId": "27633",
+          "cmcSlug": "linea"
+        },
+        "after": {
+          "cmcId": "27657",
+          "cmcSlug": "linea"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/linea/",
+          "title": "Linea price today, LINEA to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/linea/)",
+          "ucid": "27657",
+          "symbol": "LINEA",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "wormhole",
+        "symbol": "W",
+        "before": {
+          "cmcId": "29515",
+          "cmcSlug": "wormhole"
+        },
+        "after": {
+          "cmcId": "29587",
+          "cmcSlug": "wormhole"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/wormhole/",
+          "title": "Wormhole price today, W to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/wormhole/)",
+          "ucid": "29587",
+          "symbol": "W",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "allora",
+        "symbol": "ALLO",
+        "before": {
+          "cmcId": "28907",
+          "cmcSlug": "allora"
+        },
+        "after": {
+          "cmcId": "38908",
+          "cmcSlug": "allora"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/allora/",
+          "title": "Allora price today, ALLO to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/allora/)",
+          "ucid": "38908",
+          "symbol": "ALLO",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "chainopera-ai",
+        "symbol": "COAI",
+        "before": {
+          "cmcId": "28911",
+          "cmcSlug": "chainopera-ai"
+        },
+        "after": {
+          "cmcId": "38489",
+          "cmcSlug": "chainopera-ai"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/chainopera-ai/",
+          "title": "ChainOpera AI price today, COAI to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/chainopera-ai/)",
+          "ucid": "38489",
+          "symbol": "COAI",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "venus",
+        "symbol": "XVS",
+        "before": {
+          "cmcId": "7281",
+          "cmcSlug": "venus"
+        },
+        "after": {
+          "cmcId": "7288",
+          "cmcSlug": "venus"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/venus/",
+          "title": "Venus price today, XVS to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/venus/)",
+          "ucid": "7288",
+          "symbol": "XVS",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "astar",
+        "symbol": "ASTR",
+        "before": {
+          "cmcId": "12886",
+          "cmcSlug": "astar"
+        },
+        "after": {
+          "cmcId": "12885",
+          "cmcSlug": "astar"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/astar/",
+          "title": "Astar price today, ASTR to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/astar/)",
+          "ucid": "12885",
+          "symbol": "ASTR",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "subsquid",
+        "symbol": "SQD",
+        "before": {
+          "cmcId": "24455",
+          "cmcSlug": "subsquid"
+        },
+        "after": {
+          "cmcId": "12894",
+          "cmcSlug": "subsquid"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/subsquid/",
+          "title": "Subsquid price today, SQD to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/subsquid/)",
+          "ucid": "12894",
+          "symbol": "SQD",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "kamino",
+        "symbol": "KMNO",
+        "before": {
+          "cmcId": "28688",
+          "cmcSlug": "kamino-2"
+        },
+        "after": {
+          "cmcId": "30986",
+          "cmcSlug": "kamino-finance"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/kamino-finance/",
+          "title": "Kamino price today, KMNO to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/kamino-finance/)",
+          "ucid": "30986",
+          "symbol": "KMNO",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "ronin",
+        "symbol": "RON",
+        "before": {
+          "cmcId": "14131",
+          "cmcSlug": "ronin"
+        },
+        "after": {
+          "cmcId": "14101",
+          "cmcSlug": "ronin"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/ronin/",
+          "title": "Ronin price today, RON to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/ronin/)",
+          "ucid": "14101",
+          "symbol": "RON",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "siacoin",
+        "symbol": "SC",
+        "before": {
+          "cmcId": "1925",
+          "cmcSlug": "siacoin"
+        },
+        "after": {
+          "cmcId": "1042",
+          "cmcSlug": "siacoin"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/siacoin/",
+          "title": "Siacoin price today, SC to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/siacoin/)",
+          "ucid": "1042",
+          "symbol": "SC",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "sahara-ai",
+        "symbol": "SAHARA",
+        "before": {
+          "cmcId": "28401",
+          "cmcSlug": "sahara-ai"
+        },
+        "after": {
+          "cmcId": "36671",
+          "cmcSlug": "sahara-ai"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/sahara-ai/",
+          "title": "Sahara AI price today, SAHARA to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/sahara-ai/)",
+          "ucid": "36671",
+          "symbol": "SAHARA",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "api3",
+        "symbol": "API3",
+        "before": {
+          "cmcId": "7733",
+          "cmcSlug": "api3"
+        },
+        "after": {
+          "cmcId": "7737",
+          "cmcSlug": "api3"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/api3/",
+          "title": "API3 price today, API3 to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/api3/)",
+          "ucid": "7737",
+          "symbol": "API3",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "euler",
+        "symbol": "EUL",
+        "before": {
+          "cmcId": "14239",
+          "cmcSlug": "euler"
+        },
+        "after": {
+          "cmcId": "14280",
+          "cmcSlug": "euler-finance"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/euler-finance/",
+          "title": "Euler price today, EUL to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/euler-finance/)",
+          "ucid": "14280",
+          "symbol": "EUL",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "manta",
+        "symbol": "MANTA",
+        "before": {
+          "cmcId": "21965",
+          "cmcSlug": "manta-network"
+        },
+        "after": {
+          "cmcId": "13631",
+          "cmcSlug": "manta-network"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/manta-network/",
+          "title": "Manta Network price today, MANTA to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/manta-network/)",
+          "ucid": "13631",
+          "symbol": "MANTA",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "vana",
+        "symbol": "VANA",
+        "before": {
+          "cmcId": "27922",
+          "cmcSlug": "vana"
+        },
+        "after": {
+          "cmcId": "34619",
+          "cmcSlug": "vana"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/vana/",
+          "title": "Vana price today, VANA to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/vana/)",
+          "ucid": "34619",
+          "symbol": "VANA",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "chia",
+        "symbol": "XCH",
+        "before": {
+          "cmcId": "9261",
+          "cmcSlug": "chia"
+        },
+        "after": {
+          "cmcId": "9258",
+          "cmcSlug": "chia-network"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/chia-network/",
+          "title": "Chia price today, XCH to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/chia-network/)",
+          "ucid": "9258",
+          "symbol": "XCH",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "gensyn",
+        "symbol": "AI",
+        "before": {
+          "cmcId": "27092",
+          "cmcSlug": "gensyn"
+        },
+        "after": {
+          "cmcId": "39883",
+          "cmcSlug": "gensyn"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/gensyn/",
+          "title": "Gensyn price today, AI to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/gensyn/)",
+          "ucid": "39883",
+          "symbol": "AI",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "nillion",
+        "symbol": "NIL",
+        "before": {
+          "cmcId": "28333",
+          "cmcSlug": "nillion"
+        },
+        "after": {
+          "cmcId": "35702",
+          "cmcSlug": "nillion"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/nillion/",
+          "title": "Nillion price today, NIL to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/nillion/)",
+          "ucid": "35702",
+          "symbol": "NIL",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "aleo",
+        "symbol": "ALEO",
+        "before": {
+          "cmcId": "24418",
+          "cmcSlug": "aleo"
+        },
+        "after": {
+          "cmcId": "32193",
+          "cmcSlug": "aleo"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/aleo/",
+          "title": "Aleo price today, ALEO to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/aleo/)",
+          "ucid": "32193",
+          "symbol": "ALEO",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "carv",
+        "symbol": "CARV",
+        "before": {
+          "cmcId": "26500",
+          "cmcSlug": "carv"
+        },
+        "after": {
+          "cmcId": "33372",
+          "cmcSlug": "carv"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/carv/",
+          "title": "CARV price today, CARV to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/carv/)",
+          "ucid": "33372",
+          "symbol": "CARV",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "yield-guild-games",
+        "symbol": "YGG",
+        "before": {
+          "cmcId": "10223",
+          "cmcSlug": "yield-guild-games"
+        },
+        "after": {
+          "cmcId": "10688",
+          "cmcSlug": "yield-guild-games"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/yield-guild-games/",
+          "title": "Yield Guild Games price today, YGG to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/yield-guild-games/)",
+          "ucid": "10688",
+          "symbol": "YGG",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "wax",
+        "symbol": "WAXP",
+        "before": {
+          "cmcId": "1774",
+          "cmcSlug": "wax"
+        },
+        "after": {
+          "cmcId": "2300",
+          "cmcSlug": "wax"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/wax/",
+          "title": "WAX price today, WAXP to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/wax/)",
+          "ucid": "2300",
+          "symbol": "WAXP",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "chaingpt",
+        "symbol": "CGPT",
+        "before": {
+          "cmcId": "24127",
+          "cmcSlug": "chaingpt"
+        },
+        "after": {
+          "cmcId": "23756",
+          "cmcSlug": "chaingpt"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/chaingpt/",
+          "title": "ChainGPT price today, CGPT to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/chaingpt/)",
+          "ucid": "23756",
+          "symbol": "CGPT",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "clearpool",
+        "symbol": "CPOOL",
+        "before": {
+          "cmcId": "17733",
+          "cmcSlug": "clearpool"
+        },
+        "after": {
+          "cmcId": "12573",
+          "cmcSlug": "clearpool"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/clearpool/",
+          "title": "Clearpool price today, CPOOL to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/clearpool/)",
+          "ucid": "12573",
+          "symbol": "CPOOL",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "blast",
+        "symbol": "BLAST",
+        "before": {
+          "cmcId": "28452",
+          "cmcSlug": "blast"
+        },
+        "after": {
+          "cmcId": "28480",
+          "cmcSlug": "blast"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/blast/",
+          "title": "Blast price today, BLAST to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/blast/)",
+          "ucid": "28480",
+          "symbol": "BLAST",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "big-time",
+        "symbol": "BIGTIME",
+        "before": {
+          "cmcId": "28257",
+          "cmcSlug": "big-time"
+        },
+        "after": {
+          "cmcId": "28230",
+          "cmcSlug": "big-time"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/big-time/",
+          "title": "Big Time price today, BIGTIME to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/big-time/)",
+          "ucid": "28230",
+          "symbol": "BIGTIME",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "cyber",
+        "symbol": "CYBER",
+        "before": {
+          "cmcId": "24777",
+          "cmcSlug": "cyberconnect"
+        },
+        "after": {
+          "cmcId": "24781",
+          "cmcSlug": "cyberconnect"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/cyberconnect/",
+          "title": "Cyber price today, CYBER to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/cyberconnect/)",
+          "ucid": "24781",
+          "symbol": "CYBER",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "pokt-network",
+        "symbol": "POKT",
+        "before": {
+          "cmcId": "12823",
+          "cmcSlug": "pocket-network"
+        },
+        "after": {
+          "cmcId": "11823",
+          "cmcSlug": "pocket-network"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/pocket-network/",
+          "title": "Pocket Network price today, POKT to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/pocket-network/)",
+          "ucid": "11823",
+          "symbol": "POKT",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "sophon",
+        "symbol": "SOPH",
+        "before": {
+          "cmcId": "29430",
+          "cmcSlug": "sophon"
+        },
+        "after": {
+          "cmcId": "32087",
+          "cmcSlug": "sophon"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/sophon/",
+          "title": "Sophon price today, SOPH to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/sophon/)",
+          "ucid": "32087",
+          "symbol": "SOPH",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "xai",
+        "symbol": "XAI",
+        "before": {
+          "cmcId": "24117",
+          "cmcSlug": "xai-blockchain"
+        },
+        "after": {
+          "cmcId": "28933",
+          "cmcSlug": "xai-games"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/xai-games/",
+          "title": "Xai price today, XAI to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/xai-games/)",
+          "ucid": "28933",
+          "symbol": "XAI",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "realio-network",
+        "symbol": "RIO",
+        "before": {
+          "cmcId": "24232",
+          "cmcSlug": "realio-network"
+        },
+        "after": {
+          "cmcId": "4166",
+          "cmcSlug": "realio-network"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/realio-network/",
+          "title": "Realio Network price today, RIO to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/realio-network/)",
+          "ucid": "4166",
+          "symbol": "RIO",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "sapien",
+        "symbol": "SAPIEN",
+        "before": {
+          "cmcId": "26105",
+          "cmcSlug": "sapien-2"
+        },
+        "after": {
+          "cmcId": "38117",
+          "cmcSlug": "sapien-io"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/sapien-io/",
+          "title": "Sapien price today, SAPIEN to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/sapien-io/)",
+          "ucid": "38117",
+          "symbol": "SAPIEN",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "orderly",
+        "symbol": "ORDER",
+        "before": {
+          "cmcId": "25144",
+          "cmcSlug": "orderly-network"
+        },
+        "after": {
+          "cmcId": "32809",
+          "cmcSlug": "orderly-network"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/orderly-network/",
+          "title": "Orderly price today, ORDER to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/orderly-network/)",
+          "ucid": "32809",
+          "symbol": "ORDER",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "aevo",
+        "symbol": "AEVO",
+        "before": {
+          "cmcId": "27533",
+          "cmcSlug": "aevo"
+        },
+        "after": {
+          "cmcId": "29676",
+          "cmcSlug": "aevo"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/aevo/",
+          "title": "Aevo price today, AEVO to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/aevo/)",
+          "ucid": "29676",
+          "symbol": "AEVO",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "lagrange",
+        "symbol": "LA",
+        "before": {
+          "cmcId": "28843",
+          "cmcSlug": "lagrange"
+        },
+        "after": {
+          "cmcId": "36510",
+          "cmcSlug": "lagrange"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/lagrange/",
+          "title": "Lagrange price today, LA to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/lagrange/)",
+          "ucid": "36510",
+          "symbol": "LA",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "hairdao",
+        "symbol": "HAIR",
+        "before": {
+          "cmcId": "25455",
+          "cmcSlug": "hairdao"
+        },
+        "after": {
+          "cmcId": "24138",
+          "cmcSlug": "hairdao"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/hairdao/",
+          "title": "HairDAO price today, HAIR to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/hairdao/)",
+          "ucid": "24138",
+          "symbol": "HAIR",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "alethea-ai",
+        "symbol": "ALI",
+        "before": {
+          "cmcId": "23538",
+          "cmcSlug": "alethea-artificial-liquid-intelligence-token"
+        },
+        "after": {
+          "cmcId": "16876",
+          "cmcSlug": "alethea-artificial-liquid-intelligence-token"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/alethea-artificial-liquid-intelligence-token/",
+          "title": "Artificial Liquid Intelligence price today, ALI to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/alethea-artificial-liquid-intelligence-token/)",
+          "ucid": "16876",
+          "symbol": "ALI",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "iagon",
+        "symbol": "IAG",
+        "before": {
+          "cmcId": "4278",
+          "cmcSlug": "iagon"
+        },
+        "after": {
+          "cmcId": "11078",
+          "cmcSlug": "iagon"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/iagon/",
+          "title": "IAGON price today, IAG to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/iagon/)",
+          "ucid": "11078",
+          "symbol": "IAG",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "elysia",
+        "symbol": "EL",
+        "before": {
+          "cmcId": "28345",
+          "cmcSlug": "elysia"
+        },
+        "after": {
+          "cmcId": "5382",
+          "cmcSlug": "elysia"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/elysia/",
+          "title": "ELYSIA price today, EL to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/elysia/)",
+          "ucid": "5382",
+          "symbol": "EL",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "chainbase",
+        "symbol": "C",
+        "before": {
+          "cmcId": "31250",
+          "cmcSlug": "chainbase"
+        },
+        "after": {
+          "cmcId": "37340",
+          "cmcSlug": "chainbase"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/chainbase/",
+          "title": "Chainbase price today, C to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/chainbase/)",
+          "ucid": "37340",
+          "symbol": "C",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "tokenfi",
+        "symbol": "TOKEN",
+        "before": {
+          "cmcId": "29192",
+          "cmcSlug": "tokenfi"
+        },
+        "after": {
+          "cmcId": "28299",
+          "cmcSlug": "tokenfi"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/tokenfi/",
+          "title": "TokenFi price today, TOKEN to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/tokenfi/)",
+          "ucid": "28299",
+          "symbol": "TOKEN",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "hivemapper",
+        "symbol": "HONEY",
+        "before": {
+          "cmcId": "17680",
+          "cmcSlug": "hivemapper"
+        },
+        "after": {
+          "cmcId": "22850",
+          "cmcSlug": "hivemapper"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/hivemapper/",
+          "title": "Hivemapper price today, HONEY to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/hivemapper/)",
+          "ucid": "22850",
+          "symbol": "HONEY",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "brickken",
+        "symbol": "BKN",
+        "before": {
+          "cmcId": "24750",
+          "cmcSlug": "brickken"
+        },
+        "after": {
+          "cmcId": "21822",
+          "cmcSlug": "brickken"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/brickken/",
+          "title": "Brickken price today, BKN to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/brickken/)",
+          "ucid": "21822",
+          "symbol": "BKN",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "autonolas",
+        "symbol": "OLAS",
+        "before": {
+          "cmcId": "22154",
+          "cmcSlug": "autonolas"
+        },
+        "after": {
+          "cmcId": "28458",
+          "cmcSlug": "autonolas"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/autonolas/",
+          "title": "Autonolas price today, OLAS to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/autonolas/)",
+          "ucid": "28458",
+          "symbol": "OLAS",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "moonbeam",
+        "symbol": "GLMR",
+        "before": {
+          "cmcId": "9288",
+          "cmcSlug": "moonbeam"
+        },
+        "after": {
+          "cmcId": "6836",
+          "cmcSlug": "moonbeam"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/moonbeam/",
+          "title": "Moonbeam price today, GLMR to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/moonbeam/)",
+          "ucid": "6836",
+          "symbol": "GLMR",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "origin-dollar",
+        "symbol": "OUSD",
+        "before": {
+          "cmcId": "8950",
+          "cmcSlug": "origin-dollar"
+        },
+        "after": {
+          "cmcId": "7189",
+          "cmcSlug": "origin-dollar"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/origin-dollar/",
+          "title": "Origin Dollar price today, OUSD to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/origin-dollar/)",
+          "ucid": "7189",
+          "symbol": "OUSD",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "vita-dao",
+        "symbol": "VITA",
+        "before": {
+          "cmcId": "20788",
+          "cmcSlug": "vitadao"
+        },
+        "after": {
+          "cmcId": "19214",
+          "cmcSlug": "vitadao"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/vitadao/",
+          "title": "VitaDAO price today, VITA to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/vitadao/)",
+          "ucid": "19214",
+          "symbol": "VITA",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "paal-ai",
+        "symbol": "PAAL",
+        "before": {
+          "cmcId": "24013",
+          "cmcSlug": "paal-ai"
+        },
+        "after": {
+          "cmcId": "27178",
+          "cmcSlug": "paal-ai"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/paal-ai/",
+          "title": "PAAL AI price today, PAAL to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/paal-ai/)",
+          "ucid": "27178",
+          "symbol": "PAAL",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "dydx",
+        "symbol": "DYDX",
+        "before": {
+          "cmcId": "11156",
+          "cmcSlug": "dydx"
+        },
+        "after": {
+          "cmcId": "28324",
+          "cmcSlug": "dydx-chain"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/dydx-chain/",
+          "title": "dYdX price today, DYDX to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/dydx-chain/)",
+          "ucid": "28324",
+          "symbol": "DYDX",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "scroll",
+        "symbol": "SCR",
+        "before": {
+          "cmcId": "26971",
+          "cmcSlug": "scroll"
+        },
+        "after": {
+          "cmcId": "26998",
+          "cmcSlug": "scroll"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/scroll/",
+          "title": "Scroll price today, SCR to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/scroll/)",
+          "ucid": "26998",
+          "symbol": "SCR",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "dimo",
+        "symbol": "DIMO",
+        "before": {
+          "cmcId": "14793",
+          "cmcSlug": "dimo"
+        },
+        "after": {
+          "cmcId": "22837",
+          "cmcSlug": "dimo"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/dimo/",
+          "title": "DIMO price today, DIMO to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/dimo/)",
+          "ucid": "22837",
+          "symbol": "DIMO",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "pixels",
+        "symbol": "PIXEL",
+        "before": {
+          "cmcId": "29243",
+          "cmcSlug": "pixels"
+        },
+        "after": {
+          "cmcId": "29335",
+          "cmcSlug": "pixels"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/pixels/",
+          "title": "Pixels price today, PIXEL to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/pixels/)",
+          "ucid": "29335",
+          "symbol": "PIXEL",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "star-atlas",
+        "symbol": "ATLAS",
+        "before": {
+          "cmcId": "11071",
+          "cmcSlug": "star-atlas"
+        },
+        "after": {
+          "cmcId": "11212",
+          "cmcSlug": "star-atlas"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/star-atlas/",
+          "title": "Star Atlas price today, ATLAS to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/star-atlas/)",
+          "ucid": "11212",
+          "symbol": "ATLAS",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "polytrade",
+        "symbol": "TRADE",
+        "before": {
+          "cmcId": "19099",
+          "cmcSlug": "polytrade"
+        },
+        "after": {
+          "cmcId": "10465",
+          "cmcSlug": "polytrade"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/polytrade/",
+          "title": "Polytrade price today, TRADE to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/polytrade/)",
+          "ucid": "10465",
+          "symbol": "TRADE",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "mysterium",
+        "symbol": "MYST",
+        "before": {
+          "cmcId": "8321",
+          "cmcSlug": "mysterium"
+        },
+        "after": {
+          "cmcId": "1721",
+          "cmcSlug": "mysterium"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/mysterium/",
+          "title": "Mysterium price today, MYST to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/mysterium/)",
+          "ucid": "1721",
+          "symbol": "MYST",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "zircuit",
+        "symbol": "ZRC",
+        "before": {
+          "cmcId": "25825",
+          "cmcSlug": "zircuit"
+        },
+        "after": {
+          "cmcId": "29711",
+          "cmcSlug": "zircuit"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/zircuit/",
+          "title": "Zircuit price today, ZRC to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/zircuit/)",
+          "ucid": "29711",
+          "symbol": "ZRC",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "netmind",
+        "symbol": "NMT",
+        "before": {
+          "cmcId": "23133",
+          "cmcSlug": "netmind-token"
+        },
+        "after": {
+          "cmcId": "29447",
+          "cmcSlug": "netmind-token"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/netmind-token/",
+          "title": "NetMind Token price today, NMT to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/netmind-token/)",
+          "ucid": "29447",
+          "symbol": "NMT",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "goldfinch",
+        "symbol": "GFI",
+        "before": {
+          "cmcId": "13956",
+          "cmcSlug": "goldfinch"
+        },
+        "after": {
+          "cmcId": "13967",
+          "cmcSlug": "goldfinch-protocol"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/goldfinch-protocol/",
+          "title": "Goldfinch price today, GFI to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/goldfinch-protocol/)",
+          "ucid": "13967",
+          "symbol": "GFI",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "botto",
+        "symbol": "BOTTO",
+        "before": {
+          "cmcId": "24050",
+          "cmcSlug": "botto"
+        },
+        "after": {
+          "cmcId": "14345",
+          "cmcSlug": "botto"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/botto/",
+          "title": "Botto price today, BOTTO to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/botto/)",
+          "ucid": "14345",
+          "symbol": "BOTTO",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "cere-network",
+        "symbol": "CERE",
+        "before": {
+          "cmcId": "21941",
+          "cmcSlug": "cere-network"
+        },
+        "after": {
+          "cmcId": "4710",
+          "cmcSlug": "cere-network"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/cere-network/",
+          "title": "Cere Network price today, CERE to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/cere-network/)",
+          "ucid": "4710",
+          "symbol": "CERE",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "truefi",
+        "symbol": "TRU",
+        "before": {
+          "cmcId": "7723",
+          "cmcSlug": "truefi"
+        },
+        "after": {
+          "cmcId": "7725",
+          "cmcSlug": "truefi-token"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/truefi-token/",
+          "title": "TrueFi price today, TRU to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/truefi-token/)",
+          "ucid": "7725",
+          "symbol": "TRU",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "valleyDAO",
+        "symbol": "GROW",
+        "before": {
+          "cmcId": "25100",
+          "cmcSlug": "valleydao"
+        },
+        "after": {
+          "cmcId": "29633",
+          "cmcSlug": "valleydao"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/valleydao/",
+          "title": "ValleyDAO price today, GROW to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/valleydao/)",
+          "ucid": "29633",
+          "symbol": "GROW",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "playdapp",
+        "symbol": "PDA",
+        "before": {
+          "cmcId": "7462",
+          "cmcSlug": "playdapp"
+        },
+        "after": {
+          "cmcId": "7461",
+          "cmcSlug": "playdapp"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/playdapp/",
+          "title": "PlayDapp price today, PDA to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/playdapp/)",
+          "ucid": "7461",
+          "symbol": "PDA",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "myria",
+        "symbol": "MYRIA",
+        "before": {
+          "cmcId": "23728",
+          "cmcSlug": "myria"
+        },
+        "after": {
+          "cmcId": "22289",
+          "cmcSlug": "myria"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/myria/",
+          "title": "Myria price today, MYRIA to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/myria/)",
+          "ucid": "22289",
+          "symbol": "MYRIA",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "cryoDAO",
+        "symbol": "CRYO",
+        "before": {
+          "cmcId": "25024",
+          "cmcSlug": "cryodao"
+        },
+        "after": {
+          "cmcId": "30965",
+          "cmcSlug": "cryodao"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/cryodao/",
+          "title": "CryoDAO price today, CRYO to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/cryodao/)",
+          "ucid": "30965",
+          "symbol": "CRYO",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "mode",
+        "symbol": "MODE",
+        "before": {
+          "cmcId": "29204",
+          "cmcSlug": "mode"
+        },
+        "after": {
+          "cmcId": "31016",
+          "cmcSlug": "mode"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/mode/",
+          "title": "Mode price today, MODE to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/mode/)",
+          "ucid": "31016",
+          "symbol": "MODE",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "crust-network",
+        "symbol": "CRU",
+        "before": {
+          "cmcId": "10466",
+          "cmcSlug": "crust"
+        },
+        "after": {
+          "cmcId": "6747",
+          "cmcSlug": "crustnetwork"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/crustnetwork/",
+          "title": "Crust Network price today, CRU to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/crustnetwork/)",
+          "ucid": "6747",
+          "symbol": "CRU",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "xana",
+        "symbol": "XETA",
+        "before": {
+          "cmcId": "21666",
+          "cmcSlug": "xana"
+        },
+        "after": {
+          "cmcId": "31543",
+          "cmcSlug": "xana-new"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/xana-new/",
+          "title": "XANA price today, XETA to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/xana-new/)",
+          "ucid": "31543",
+          "symbol": "XETA",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "deeper-network",
+        "symbol": "DPR",
+        "before": {
+          "cmcId": "8914",
+          "cmcSlug": "deeper-network"
+        },
+        "after": {
+          "cmcId": "8894",
+          "cmcSlug": "deeper-network"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/deeper-network/",
+          "title": "Deeper Network price today, DPR to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/deeper-network/)",
+          "ucid": "8894",
+          "symbol": "DPR",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "klima-dao",
+        "symbol": "KLIMA",
+        "before": {
+          "cmcId": "18363",
+          "cmcSlug": "klima-dao"
+        },
+        "after": {
+          "cmcId": "12873",
+          "cmcSlug": "klimadao"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/klimadao/",
+          "title": "KlimaDAO price today, KLIMA to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/klimadao/)",
+          "ucid": "12873",
+          "symbol": "KLIMA",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "moss-carbon-credit",
+        "symbol": "MCO2",
+        "before": {
+          "cmcId": "18227",
+          "cmcSlug": "moss-carbon-credit"
+        },
+        "after": {
+          "cmcId": "8826",
+          "cmcSlug": "moss-carbon-credit"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/moss-carbon-credit/",
+          "title": "Moss Carbon Credit price today, MCO2 to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/moss-carbon-credit/)",
+          "ucid": "8826",
+          "symbol": "MCO2",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "singularitydao",
+        "symbol": "SDAO",
+        "before": {
+          "cmcId": "12023",
+          "cmcSlug": "singularitydao"
+        },
+        "after": {
+          "cmcId": "9638",
+          "cmcSlug": "singularitydao"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/singularitydao/",
+          "title": "SingularityDAO price today, SDAO to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/singularitydao/)",
+          "ucid": "9638",
+          "symbol": "SDAO",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "zero-gravity",
+        "symbol": "0G",
+        "before": {
+          "cmcId": "28556",
+          "cmcSlug": "0g"
+        },
+        "after": {
+          "cmcId": "38337",
+          "cmcSlug": "zero-gravity"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/zero-gravity/",
+          "title": "0G price today, 0G to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/zero-gravity/)",
+          "ucid": "38337",
+          "symbol": "0G",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "aleph-im",
+        "symbol": "ALEPH",
+        "before": {
+          "cmcId": "5827",
+          "cmcSlug": "aleph"
+        },
+        "after": {
+          "cmcId": "5821",
+          "cmcSlug": "aleph-im"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/aleph-im/",
+          "title": "Aleph Cloud price today, ALEPH to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/aleph-im/)",
+          "ucid": "5821",
+          "symbol": "ALEPH",
+          "retrieved_on": "2026-10-12"
+        }
+      },
+      {
+        "canonical_id": "weatherxm",
+        "symbol": "WXM",
+        "before": {
+          "cmcId": "23161",
+          "cmcSlug": "weatherxm"
+        },
+        "after": {
+          "cmcId": "33304",
+          "cmcSlug": "weatherxm"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/weatherxm/",
+          "title": "WeatherXM price today, WXM to USD live price, marketcap and chart | CoinMarketCap (https://coinmarketcap.com/currencies/weatherxm/)",
+          "ucid": "33304",
+          "symbol": "WXM",
+          "retrieved_on": "2026-10-12"
+        }
+      }
+    ]
+  },
+  "migration_review": {
+    "canonical_id": "quickswap",
+    "status": "NOT_APPLIED",
+    "candidate_ucid": "8206",
+    "candidate_url": "https://coinmarketcap.com/currencies/quickswap/",
+    "reason": "Candidate listing explicitly identifies QuickSwap [Old]; Old/New token selection requires chain/contract evidence and current-asset policy."
+  }
 }
