@@ -1,0 +1,2167 @@
+{
+  "stage": "5C",
+  "status": "PARTIAL_BLOCKED_LIVE_REAUDIT",
+  "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
+  "source_audit_at": "2026-10-12T10:20:26.406Z",
+  "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
+  "baseline_counts": {
+    "dataset_total": 354,
+    "mapped_expected": 323,
+    "mapped_checked": 323,
+    "unmapped": 31,
+    "returned_quotes": 318,
+    "pass": 157,
+    "fail": 166,
+    "duplicate_cmc_ids": 0,
+    "duplicate_canonical_ids": 0,
+    "batches": 4
+  },
+  "baseline_pass_pct": 48.61,
+  "failure_categories": {
+    "slug_only": 22,
+    "symbol_mismatch": 130,
+    "quote_not_returned": 5,
+    "invalid_price_only": 9
+  },
+  "result_counts": {
+    "dataset_total": 354,
+    "cmc_ids_retained": 323,
+    "no_cmc_mapping": 31,
+    "slug_corrections": 22,
+    "quarantined": 144,
+    "eligible_for_runtime_request": 179
+  },
+  "live_reaudit": {
+    "performed": false,
+    "blocked_by": "Vercel account scope access rejected with HTTP 403",
+    "team": "realstrades-8509s-projects",
+    "project": "payd-cmc-backend"
+  },
+  "slug_corrections": [
+    {
+      "canonical_id": "near",
+      "cmc_id": "6535",
+      "old_slug": "near",
+      "new_slug": "near-protocol"
+    },
+    {
+      "canonical_id": "jupiter-exchange-solana",
+      "cmc_id": "29210",
+      "old_slug": "jupiter",
+      "new_slug": "jupiter-ag"
+    },
+    {
+      "canonical_id": "injective-protocol",
+      "cmc_id": "7226",
+      "old_slug": "injective-protocol",
+      "new_slug": "injective"
+    },
+    {
+      "canonical_id": "midnight-3",
+      "cmc_id": "39064",
+      "old_slug": "midnight",
+      "new_slug": "midnight-network"
+    },
+    {
+      "canonical_id": "sei-network",
+      "cmc_id": "23149",
+      "old_slug": "sei-network",
+      "new_slug": "sei"
+    },
+    {
+      "canonical_id": "gnosis",
+      "cmc_id": "1659",
+      "old_slug": "gnosis",
+      "new_slug": "gnosis-gno"
+    },
+    {
+      "canonical_id": "optimism",
+      "cmc_id": "11840",
+      "old_slug": "optimism",
+      "new_slug": "optimism-ethereum"
+    },
+    {
+      "canonical_id": "starknet",
+      "cmc_id": "22691",
+      "old_slug": "starknet",
+      "new_slug": "starknet-token"
+    },
+    {
+      "canonical_id": "theta",
+      "cmc_id": "2416",
+      "old_slug": "theta-token",
+      "new_slug": "theta-network"
+    },
+    {
+      "canonical_id": "apecoin",
+      "cmc_id": "18876",
+      "old_slug": "apecoin",
+      "new_slug": "apecoin-ape"
+    },
+    {
+      "canonical_id": "multiversx",
+      "cmc_id": "6892",
+      "old_slug": "multiversx",
+      "new_slug": "multiversx-egld"
+    },
+    {
+      "canonical_id": "mina-protocol",
+      "cmc_id": "8646",
+      "old_slug": "mina-protocol",
+      "new_slug": "mina"
+    },
+    {
+      "canonical_id": "sushi",
+      "cmc_id": "6758",
+      "old_slug": "sushi",
+      "new_slug": "sushiswap"
+    },
+    {
+      "canonical_id": "enjincoin",
+      "cmc_id": "2130",
+      "old_slug": "enjin",
+      "new_slug": "enjin-coin"
+    },
+    {
+      "canonical_id": "dusk-network",
+      "cmc_id": "4092",
+      "old_slug": "dusk-network",
+      "new_slug": "dusk"
+    },
+    {
+      "canonical_id": "iexec-rlc",
+      "cmc_id": "1637",
+      "old_slug": "iexec-rlc",
+      "new_slug": "rlc"
+    },
+    {
+      "canonical_id": "skale",
+      "cmc_id": "5691",
+      "old_slug": "skale",
+      "new_slug": "skale-network"
+    },
+    {
+      "canonical_id": "portal",
+      "cmc_id": "29555",
+      "old_slug": "portal-2",
+      "new_slug": "portal-gaming"
+    },
+    {
+      "canonical_id": "my-neighbor-alice",
+      "cmc_id": "8766",
+      "old_slug": "my-neighbor-alice",
+      "new_slug": "myneighboralice"
+    },
+    {
+      "canonical_id": "polymath",
+      "cmc_id": "2496",
+      "old_slug": "polymath",
+      "new_slug": "polymath-network"
+    },
+    {
+      "canonical_id": "flux",
+      "cmc_id": "3029",
+      "old_slug": "flux",
+      "new_slug": "zel"
+    },
+    {
+      "canonical_id": "stargate",
+      "cmc_id": "18934",
+      "old_slug": "stargate",
+      "new_slug": "stargate-finance"
+    }
+  ],
+  "quarantine": [
+    {
+      "canonical_id": "the-open-network",
+      "symbol": "TON",
+      "expected_cmc_id": "11419",
+      "expected_cmc_slug": "gram",
+      "returned_symbol": "GRAM",
+      "returned_slug": "gram",
+      "reasons": [
+        "symbol_mismatch:GRAM"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "frax",
+      "symbol": "FXS",
+      "expected_cmc_id": "6953",
+      "expected_cmc_slug": "frax",
+      "returned_symbol": "FRAX",
+      "returned_slug": "frax-share",
+      "reasons": [
+        "symbol_mismatch:FRAX",
+        "slug_mismatch:frax-share"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "iota",
+      "symbol": "MIOTA",
+      "expected_cmc_id": "1720",
+      "expected_cmc_slug": "iota",
+      "returned_symbol": "IOTA",
+      "returned_slug": "iota",
+      "reasons": [
+        "symbol_mismatch:IOTA"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "instadapp",
+      "symbol": "INST",
+      "expected_cmc_id": "6363",
+      "expected_cmc_slug": "instadapp",
+      "returned_symbol": "THETABEAR",
+      "returned_slug": "3x-short-theta-network-token",
+      "reasons": [
+        "symbol_mismatch:THETABEAR",
+        "slug_mismatch:3x-short-theta-network-token",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "story-protocol",
+      "symbol": "IP",
+      "expected_cmc_id": "29147",
+      "expected_cmc_slug": "story-2",
+      "returned_symbol": "MEMEMUSK",
+      "returned_slug": "meme-musk",
+      "reasons": [
+        "symbol_mismatch:MEMEMUSK",
+        "slug_mismatch:meme-musk",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "linea",
+      "symbol": "LINEA",
+      "expected_cmc_id": "27633",
+      "expected_cmc_slug": "linea",
+      "returned_symbol": "NCAT",
+      "returned_slug": "ncat",
+      "reasons": [
+        "symbol_mismatch:NCAT",
+        "slug_mismatch:ncat",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "wormhole",
+      "symbol": "W",
+      "expected_cmc_id": "29515",
+      "expected_cmc_slug": "wormhole",
+      "returned_symbol": "MDX",
+      "returned_slug": "multidex-ai",
+      "reasons": [
+        "symbol_mismatch:MDX",
+        "slug_mismatch:multidex-ai",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "allora",
+      "symbol": "ALLO",
+      "expected_cmc_id": "28907",
+      "expected_cmc_slug": "allora",
+      "returned_symbol": "BRGE",
+      "returned_slug": "ordbridge",
+      "reasons": [
+        "symbol_mismatch:BRGE",
+        "slug_mismatch:ordbridge",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "chainopera-ai",
+      "symbol": "COAI",
+      "expected_cmc_id": "28911",
+      "expected_cmc_slug": "chainopera-ai",
+      "returned_symbol": "BCX",
+      "returned_slug": "solanapepe",
+      "reasons": [
+        "symbol_mismatch:BCX",
+        "slug_mismatch:solanapepe",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "venus",
+      "symbol": "XVS",
+      "expected_cmc_id": "7281",
+      "expected_cmc_slug": "venus",
+      "returned_symbol": "XPRT",
+      "returned_slug": "persistence",
+      "reasons": [
+        "symbol_mismatch:XPRT",
+        "slug_mismatch:persistence"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "astar",
+      "symbol": "ASTR",
+      "expected_cmc_id": "12886",
+      "expected_cmc_slug": "astar",
+      "returned_symbol": "BLXM",
+      "returned_slug": "bloxmove",
+      "reasons": [
+        "symbol_mismatch:BLXM",
+        "slug_mismatch:bloxmove",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "fireblocks",
+      "symbol": "FB",
+      "expected_cmc_id": "24877",
+      "expected_cmc_slug": "fireblocks",
+      "returned_symbol": "BIM",
+      "returned_slug": "bim",
+      "reasons": [
+        "symbol_mismatch:BIM",
+        "slug_mismatch:bim"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "kamino",
+      "symbol": "KMNO",
+      "expected_cmc_id": "28688",
+      "expected_cmc_slug": "kamino-2",
+      "returned_symbol": "AIAT",
+      "returned_slug": "ai-analysis-token",
+      "reasons": [
+        "symbol_mismatch:AIAT",
+        "slug_mismatch:ai-analysis-token"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "ronin",
+      "symbol": "RON",
+      "expected_cmc_id": "14131",
+      "expected_cmc_slug": "ronin",
+      "returned_symbol": "LEAG",
+      "returned_slug": "leaguedao",
+      "reasons": [
+        "symbol_mismatch:LEAG",
+        "slug_mismatch:leaguedao",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "siacoin",
+      "symbol": "SC",
+      "expected_cmc_id": "1925",
+      "expected_cmc_slug": "siacoin",
+      "returned_symbol": "WTC",
+      "returned_slug": "waltonchain",
+      "reasons": [
+        "symbol_mismatch:WTC",
+        "slug_mismatch:waltonchain",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "sahara-ai",
+      "symbol": "SAHARA",
+      "expected_cmc_id": "28401",
+      "expected_cmc_slug": "sahara-ai",
+      "returned_symbol": "DAW",
+      "returned_slug": "daw-currency",
+      "reasons": [
+        "symbol_mismatch:DAW",
+        "slug_mismatch:daw-currency",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "api3",
+      "symbol": "API3",
+      "expected_cmc_id": "7733",
+      "expected_cmc_slug": "api3",
+      "returned_symbol": "LCT",
+      "returned_slug": "light-coin-exchange-token",
+      "reasons": [
+        "symbol_mismatch:LCT",
+        "slug_mismatch:light-coin-exchange-token",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "euler",
+      "symbol": "EUL",
+      "expected_cmc_id": "14239",
+      "expected_cmc_slug": "euler",
+      "returned_symbol": "SNK",
+      "returned_slug": "snake-token",
+      "reasons": [
+        "symbol_mismatch:SNK",
+        "slug_mismatch:snake-token",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "manta",
+      "symbol": "MANTA",
+      "expected_cmc_id": "21965",
+      "expected_cmc_slug": "manta-network",
+      "returned_symbol": "DST",
+      "returned_slug": "double-swap-token",
+      "reasons": [
+        "symbol_mismatch:DST",
+        "slug_mismatch:double-swap-token",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "vana",
+      "symbol": "VANA",
+      "expected_cmc_id": "27922",
+      "expected_cmc_slug": "vana",
+      "returned_symbol": "SHIA",
+      "returned_slug": "shiba-saga",
+      "reasons": [
+        "symbol_mismatch:SHIA",
+        "slug_mismatch:shiba-saga"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "chia",
+      "symbol": "XCH",
+      "expected_cmc_id": "9261",
+      "expected_cmc_slug": "chia",
+      "returned_symbol": "KEL",
+      "returned_slug": "kelvpn",
+      "reasons": [
+        "symbol_mismatch:KEL",
+        "slug_mismatch:kelvpn"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "gensyn",
+      "symbol": "AI",
+      "expected_cmc_id": "27092",
+      "expected_cmc_slug": "gensyn",
+      "returned_symbol": "TRY",
+      "returned_slug": "trinity-eth",
+      "reasons": [
+        "symbol_mismatch:TRY",
+        "slug_mismatch:trinity-eth",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "nillion",
+      "symbol": "NIL",
+      "expected_cmc_id": "28333",
+      "expected_cmc_slug": "nillion",
+      "returned_symbol": "XDOGE",
+      "returned_slug": "xdoge-eth",
+      "reasons": [
+        "symbol_mismatch:XDOGE",
+        "slug_mismatch:xdoge-eth",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "aleo",
+      "symbol": "ALEO",
+      "expected_cmc_id": "24418",
+      "expected_cmc_slug": "aleo",
+      "returned_symbol": "KARTB",
+      "returned_slug": "kartbox",
+      "reasons": [
+        "symbol_mismatch:KARTB",
+        "slug_mismatch:kartbox",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "carv",
+      "symbol": "CARV",
+      "expected_cmc_id": "26500",
+      "expected_cmc_slug": "carv",
+      "returned_symbol": "RFDAI",
+      "returned_slug": "refund-ai",
+      "reasons": [
+        "symbol_mismatch:RFDAI",
+        "slug_mismatch:refund-ai",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "yield-guild-games",
+      "symbol": "YGG",
+      "expected_cmc_id": "10223",
+      "expected_cmc_slug": "yield-guild-games",
+      "returned_symbol": "VEGA",
+      "returned_slug": "vegaprotocol",
+      "reasons": [
+        "symbol_mismatch:VEGA",
+        "slug_mismatch:vegaprotocol",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "wax",
+      "symbol": "WAXP",
+      "expected_cmc_id": "1774",
+      "expected_cmc_slug": "wax",
+      "returned_symbol": "SOCC",
+      "returned_slug": "socialcoin-socc",
+      "reasons": [
+        "symbol_mismatch:SOCC",
+        "slug_mismatch:socialcoin-socc"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "chaingpt",
+      "symbol": "CGPT",
+      "expected_cmc_id": "24127",
+      "expected_cmc_slug": "chaingpt",
+      "returned_symbol": "GDCC",
+      "returned_slug": "global-digital-cluster-coin",
+      "reasons": [
+        "symbol_mismatch:GDCC",
+        "slug_mismatch:global-digital-cluster-coin",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "clearpool",
+      "symbol": "CPOOL",
+      "expected_cmc_id": "17733",
+      "expected_cmc_slug": "clearpool",
+      "returned_symbol": "MORE",
+      "returned_slug": "moremoney-finance",
+      "reasons": [
+        "symbol_mismatch:MORE",
+        "slug_mismatch:moremoney-finance",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "blast",
+      "symbol": "BLAST",
+      "expected_cmc_id": "28452",
+      "expected_cmc_slug": "blast",
+      "returned_symbol": "rats",
+      "returned_slug": "rats-ordinals",
+      "reasons": [
+        "symbol_mismatch:rats",
+        "slug_mismatch:rats-ordinals"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "big-time",
+      "symbol": "BIGTIME",
+      "expected_cmc_id": "28257",
+      "expected_cmc_slug": "big-time",
+      "returned_symbol": "7",
+      "returned_slug": "lucky7",
+      "reasons": [
+        "symbol_mismatch:7",
+        "slug_mismatch:lucky7",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "cyber",
+      "symbol": "CYBER",
+      "expected_cmc_id": "24777",
+      "expected_cmc_slug": "cyberconnect",
+      "returned_symbol": "JEET",
+      "returned_slug": "jeet-token",
+      "reasons": [
+        "symbol_mismatch:JEET",
+        "slug_mismatch:jeet-token",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "pokt-network",
+      "symbol": "POKT",
+      "expected_cmc_id": "12823",
+      "expected_cmc_slug": "pocket-network",
+      "returned_symbol": "SHIBBCH",
+      "returned_slug": "shiba-bch",
+      "reasons": [
+        "symbol_mismatch:SHIBBCH",
+        "slug_mismatch:shiba-bch",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "sophon",
+      "symbol": "SOPH",
+      "expected_cmc_id": "29430",
+      "expected_cmc_slug": "sophon",
+      "returned_symbol": "SHIB",
+      "returned_slug": "shibwifhat",
+      "reasons": [
+        "symbol_mismatch:SHIB",
+        "slug_mismatch:shibwifhat"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "xai",
+      "symbol": "XAI",
+      "expected_cmc_id": "24117",
+      "expected_cmc_slug": "xai-blockchain",
+      "returned_symbol": "MINT",
+      "returned_slug": "musicn",
+      "reasons": [
+        "symbol_mismatch:MINT",
+        "slug_mismatch:musicn",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "realio-network",
+      "symbol": "RIO",
+      "expected_cmc_id": "24232",
+      "expected_cmc_slug": "realio-network",
+      "returned_symbol": "RMATIC",
+      "returned_slug": "stafi-staked-matic",
+      "reasons": [
+        "symbol_mismatch:RMATIC",
+        "slug_mismatch:stafi-staked-matic",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "sapien",
+      "symbol": "SAPIEN",
+      "expected_cmc_id": "26105",
+      "expected_cmc_slug": "sapien-2",
+      "returned_symbol": "PEPEGPT",
+      "returned_slug": "pepe-gpt",
+      "reasons": [
+        "symbol_mismatch:PEPEGPT",
+        "slug_mismatch:pepe-gpt",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "orderly",
+      "symbol": "ORDER",
+      "expected_cmc_id": "25144",
+      "expected_cmc_slug": "orderly-network",
+      "returned_symbol": "BXR",
+      "returned_slug": "bitxor",
+      "reasons": [
+        "symbol_mismatch:BXR",
+        "slug_mismatch:bitxor",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "aevo",
+      "symbol": "AEVO",
+      "expected_cmc_id": "27533",
+      "expected_cmc_slug": "aevo",
+      "returned_symbol": "OSAK",
+      "returned_slug": "osaka-protocol",
+      "reasons": [
+        "symbol_mismatch:OSAK",
+        "slug_mismatch:osaka-protocol"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "hairdao",
+      "symbol": "HAIR",
+      "expected_cmc_id": "25455",
+      "expected_cmc_slug": "hairdao",
+      "returned_symbol": "LFG",
+      "returned_slug": "lfg-coin",
+      "reasons": [
+        "symbol_mismatch:LFG",
+        "slug_mismatch:lfg-coin",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "alethea-ai",
+      "symbol": "ALI",
+      "expected_cmc_id": "23538",
+      "expected_cmc_slug": "alethea-artificial-liquid-intelligence-token",
+      "returned_symbol": "HIFRIENDS",
+      "returned_slug": "hifriends",
+      "reasons": [
+        "symbol_mismatch:HIFRIENDS",
+        "slug_mismatch:hifriends",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "iagon",
+      "symbol": "IAG",
+      "expected_cmc_id": "4278",
+      "expected_cmc_slug": "iagon",
+      "returned_symbol": "XYZ",
+      "returned_slug": "jetmint-token",
+      "reasons": [
+        "symbol_mismatch:XYZ",
+        "slug_mismatch:jetmint-token",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "elysia",
+      "symbol": "EL",
+      "expected_cmc_id": "28345",
+      "expected_cmc_slug": "elysia",
+      "returned_symbol": "PAWS",
+      "returned_slug": "pawstars",
+      "reasons": [
+        "symbol_mismatch:PAWS",
+        "slug_mismatch:pawstars",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "chainbase",
+      "symbol": "C",
+      "expected_cmc_id": "31250",
+      "expected_cmc_slug": "chainbase",
+      "returned_symbol": "FATMICHI",
+      "returned_slug": "fatmichi",
+      "reasons": [
+        "symbol_mismatch:FATMICHI",
+        "slug_mismatch:fatmichi",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "tokenfi",
+      "symbol": "TOKEN",
+      "expected_cmc_id": "29192",
+      "expected_cmc_slug": "tokenfi",
+      "returned_symbol": "MEMEETF",
+      "returned_slug": "meme-etf",
+      "reasons": [
+        "symbol_mismatch:MEMEETF",
+        "slug_mismatch:meme-etf",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "hivemapper",
+      "symbol": "HONEY",
+      "expected_cmc_id": "17680",
+      "expected_cmc_slug": "hivemapper",
+      "returned_symbol": "MVD",
+      "returned_slug": "mvpad",
+      "reasons": [
+        "symbol_mismatch:MVD",
+        "slug_mismatch:mvpad",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "brickken",
+      "symbol": "BKN",
+      "expected_cmc_id": "24750",
+      "expected_cmc_slug": "brickken",
+      "returned_symbol": "DOGTIC",
+      "returned_slug": "dogtick",
+      "reasons": [
+        "symbol_mismatch:DOGTIC",
+        "slug_mismatch:dogtick",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "autonolas",
+      "symbol": "OLAS",
+      "expected_cmc_id": "22154",
+      "expected_cmc_slug": "autonolas",
+      "returned_symbol": "SU",
+      "returned_slug": "skyup",
+      "reasons": [
+        "symbol_mismatch:SU",
+        "slug_mismatch:skyup",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "moonbeam",
+      "symbol": "GLMR",
+      "expected_cmc_id": "9288",
+      "expected_cmc_slug": "moonbeam",
+      "returned_symbol": "QI",
+      "returned_slug": "benqi",
+      "reasons": [
+        "symbol_mismatch:QI",
+        "slug_mismatch:benqi"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "origin-dollar",
+      "symbol": "OUSD",
+      "expected_cmc_id": "8950",
+      "expected_cmc_slug": "origin-dollar",
+      "returned_symbol": "CATE",
+      "returned_slug": "cash-tech",
+      "reasons": [
+        "symbol_mismatch:CATE",
+        "slug_mismatch:cash-tech",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "vita-dao",
+      "symbol": "VITA",
+      "expected_cmc_id": "20788",
+      "expected_cmc_slug": "vitadao",
+      "returned_symbol": "WBY",
+      "returned_slug": "w3b-infinity",
+      "reasons": [
+        "symbol_mismatch:WBY",
+        "slug_mismatch:w3b-infinity",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "paal-ai",
+      "symbol": "PAAL",
+      "expected_cmc_id": "24013",
+      "expected_cmc_slug": "paal-ai",
+      "returned_symbol": "AI",
+      "returned_slug": "gpt-ai",
+      "reasons": [
+        "symbol_mismatch:AI",
+        "slug_mismatch:gpt-ai",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "quickswap",
+      "symbol": "QUICK",
+      "expected_cmc_id": "10366",
+      "expected_cmc_slug": "quickswap",
+      "returned_symbol": "MONSTA",
+      "returned_slug": "cake-monster",
+      "reasons": [
+        "symbol_mismatch:MONSTA",
+        "slug_mismatch:cake-monster",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "dydx",
+      "symbol": "DYDX",
+      "expected_cmc_id": "11156",
+      "expected_cmc_slug": "dydx",
+      "returned_symbol": "ETHDYDX",
+      "returned_slug": "dydx-ethdydx",
+      "reasons": [
+        "symbol_mismatch:ETHDYDX",
+        "slug_mismatch:dydx-ethdydx"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "scroll",
+      "symbol": "SCR",
+      "expected_cmc_id": "26971",
+      "expected_cmc_slug": "scroll",
+      "returned_symbol": "NITE",
+      "returned_slug": "nite-network",
+      "reasons": [
+        "symbol_mismatch:NITE",
+        "slug_mismatch:nite-network",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "dimo",
+      "symbol": "DIMO",
+      "expected_cmc_id": "14793",
+      "expected_cmc_slug": "dimo",
+      "returned_symbol": "MYRA",
+      "returned_slug": "myra-ai",
+      "reasons": [
+        "symbol_mismatch:MYRA",
+        "slug_mismatch:myra-ai",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "pixels",
+      "symbol": "PIXEL",
+      "expected_cmc_id": "29243",
+      "expected_cmc_slug": "pixels",
+      "returned_symbol": "XD",
+      "returned_slug": "lenx-finance",
+      "reasons": [
+        "symbol_mismatch:XD",
+        "slug_mismatch:lenx-finance",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "star-atlas",
+      "symbol": "ATLAS",
+      "expected_cmc_id": "11071",
+      "expected_cmc_slug": "star-atlas",
+      "returned_symbol": "SUNGLASSESDOGE",
+      "returned_slug": "sunglassesdoge",
+      "reasons": [
+        "symbol_mismatch:SUNGLASSESDOGE",
+        "slug_mismatch:sunglassesdoge",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "polytrade",
+      "symbol": "TRADE",
+      "expected_cmc_id": "19099",
+      "expected_cmc_slug": "polytrade",
+      "returned_symbol": "HOWL",
+      "returned_slug": "howler",
+      "reasons": [
+        "symbol_mismatch:HOWL",
+        "slug_mismatch:howler",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "mysterium",
+      "symbol": "MYST",
+      "expected_cmc_id": "8321",
+      "expected_cmc_slug": "mysterium",
+      "returned_symbol": "STN",
+      "returned_slug": "sting",
+      "reasons": [
+        "symbol_mismatch:STN",
+        "slug_mismatch:sting",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "zircuit",
+      "symbol": "ZRC",
+      "expected_cmc_id": "25825",
+      "expected_cmc_slug": "zircuit",
+      "returned_symbol": "SGRAI",
+      "returned_slug": "sugarland-token",
+      "reasons": [
+        "symbol_mismatch:SGRAI",
+        "slug_mismatch:sugarland-token",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "netmind",
+      "symbol": "NMT",
+      "expected_cmc_id": "23133",
+      "expected_cmc_slug": "netmind-token",
+      "returned_symbol": "Y2B",
+      "returned_slug": "y2b-finance",
+      "reasons": [
+        "symbol_mismatch:Y2B",
+        "slug_mismatch:y2b-finance",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "goldfinch",
+      "symbol": "GFI",
+      "expected_cmc_id": "13956",
+      "expected_cmc_slug": "goldfinch",
+      "returned_symbol": "SGT",
+      "returned_slug": "squid-god-finance",
+      "reasons": [
+        "symbol_mismatch:SGT",
+        "slug_mismatch:squid-god-finance",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "botto",
+      "symbol": "BOTTO",
+      "expected_cmc_id": "24050",
+      "expected_cmc_slug": "botto",
+      "returned_symbol": "PMG",
+      "returned_slug": "pomerium-ecosystem-token",
+      "reasons": [
+        "symbol_mismatch:PMG",
+        "slug_mismatch:pomerium-ecosystem-token"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "cere-network",
+      "symbol": "CERE",
+      "expected_cmc_id": "21941",
+      "expected_cmc_slug": "cere-network",
+      "returned_symbol": "MT",
+      "returned_slug": "mt-tower",
+      "reasons": [
+        "symbol_mismatch:MT",
+        "slug_mismatch:mt-tower",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "sentinel",
+      "symbol": "DVPN",
+      "expected_cmc_id": "2643",
+      "expected_cmc_slug": "sentinel",
+      "returned_symbol": "P2P",
+      "returned_slug": "sentinel",
+      "reasons": [
+        "symbol_mismatch:P2P"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "mountain-protocol",
+      "symbol": "USDM",
+      "expected_cmc_id": "27788",
+      "expected_cmc_slug": "mountain-protocol-usdm",
+      "returned_symbol": "TEST",
+      "returned_slug": "test",
+      "reasons": [
+        "symbol_mismatch:TEST",
+        "slug_mismatch:test",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "gamefi",
+      "symbol": "GFI",
+      "expected_cmc_id": "18033",
+      "expected_cmc_slug": "gamefi",
+      "returned_symbol": "SOLI",
+      "returned_slug": "solana-ecosystem-index",
+      "reasons": [
+        "symbol_mismatch:SOLI",
+        "slug_mismatch:solana-ecosystem-index",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "truefi",
+      "symbol": "TRU",
+      "expected_cmc_id": "7723",
+      "expected_cmc_slug": "truefi",
+      "returned_symbol": "JEM",
+      "returned_slug": "itchiro-games",
+      "reasons": [
+        "symbol_mismatch:JEM",
+        "slug_mismatch:itchiro-games",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "creditum",
+      "symbol": "CREDIT",
+      "expected_cmc_id": "8992",
+      "expected_cmc_slug": "creditum",
+      "returned_symbol": "CELL",
+      "returned_slug": "cellframe",
+      "reasons": [
+        "symbol_mismatch:CELL",
+        "slug_mismatch:cellframe"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "mxc",
+      "symbol": "MXC",
+      "expected_cmc_id": "5733",
+      "expected_cmc_slug": "mxc",
+      "returned_symbol": "IOOX",
+      "returned_slug": "ioox-system",
+      "reasons": [
+        "symbol_mismatch:IOOX",
+        "slug_mismatch:ioox-system",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "backed-finance",
+      "symbol": "BPRO",
+      "expected_cmc_id": "28833",
+      "expected_cmc_slug": "backed",
+      "returned_symbol": "RAIT",
+      "returned_slug": "rabbitgame",
+      "reasons": [
+        "symbol_mismatch:RAIT",
+        "slug_mismatch:rabbitgame",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "valleyDAO",
+      "symbol": "GROW",
+      "expected_cmc_id": "25100",
+      "expected_cmc_slug": "valleydao",
+      "returned_symbol": "SUIP",
+      "returned_slug": "suipad",
+      "reasons": [
+        "symbol_mismatch:SUIP",
+        "slug_mismatch:suipad"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "playdapp",
+      "symbol": "PDA",
+      "expected_cmc_id": "7462",
+      "expected_cmc_slug": "playdapp",
+      "returned_symbol": "UTED",
+      "returned_slug": "united",
+      "reasons": [
+        "symbol_mismatch:UTED",
+        "slug_mismatch:united",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "myria",
+      "symbol": "MYRIA",
+      "expected_cmc_id": "23728",
+      "expected_cmc_slug": "myria",
+      "returned_symbol": "CATSHIRA",
+      "returned_slug": "shira-cat",
+      "reasons": [
+        "symbol_mismatch:CATSHIRA",
+        "slug_mismatch:shira-cat",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "cerebrumdao",
+      "symbol": "NEURO",
+      "expected_cmc_id": "25224",
+      "expected_cmc_slug": "cerebrum-dao",
+      "returned_symbol": "KARATE",
+      "returned_slug": "karate-combat",
+      "reasons": [
+        "symbol_mismatch:KARATE",
+        "slug_mismatch:karate-combat",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "mode",
+      "symbol": "MODE",
+      "expected_cmc_id": "29204",
+      "expected_cmc_slug": "mode",
+      "returned_symbol": "BMICKEY",
+      "returned_slug": "baby-mickey",
+      "reasons": [
+        "symbol_mismatch:BMICKEY",
+        "slug_mismatch:baby-mickey",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "crust-network",
+      "symbol": "CRU",
+      "expected_cmc_id": "10466",
+      "expected_cmc_slug": "crust",
+      "returned_symbol": "BEE",
+      "returned_slug": "bees",
+      "reasons": [
+        "symbol_mismatch:BEE",
+        "slug_mismatch:bees",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "maple",
+      "symbol": "MPL",
+      "expected_cmc_id": "13632",
+      "expected_cmc_slug": "maple",
+      "returned_symbol": "GENE",
+      "returned_slug": "genopets",
+      "reasons": [
+        "symbol_mismatch:GENE",
+        "slug_mismatch:genopets"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "spheron",
+      "symbol": "SPHN",
+      "expected_cmc_id": "24367",
+      "expected_cmc_slug": "spheron-network",
+      "returned_symbol": "GEORGE",
+      "returned_slug": "george-token",
+      "reasons": [
+        "symbol_mismatch:GEORGE",
+        "slug_mismatch:george-token",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "nubila",
+      "symbol": "NUB",
+      "expected_cmc_id": "29023",
+      "expected_cmc_slug": "nubila-network",
+      "returned_symbol": "GPT-1",
+      "returned_slug": "gpt-1-allbestico",
+      "reasons": [
+        "symbol_mismatch:GPT-1",
+        "slug_mismatch:gpt-1-allbestico",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "pollen-mobile",
+      "symbol": "PCN",
+      "expected_cmc_id": "22614",
+      "expected_cmc_slug": "pollen-mobile",
+      "returned_symbol": "MWC",
+      "returned_slug": "mafia-world-cup",
+      "reasons": [
+        "symbol_mismatch:MWC",
+        "slug_mismatch:mafia-world-cup",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "everclear",
+      "symbol": "CLEAR",
+      "expected_cmc_id": "29876",
+      "expected_cmc_slug": "everclear",
+      "returned_symbol": "KUNAI",
+      "returned_slug": "kunaikash",
+      "reasons": [
+        "symbol_mismatch:KUNAI",
+        "slug_mismatch:kunaikash",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "match-quest",
+      "symbol": "MQ",
+      "expected_cmc_id": "29811",
+      "expected_cmc_slug": "match-quest",
+      "returned_symbol": "ANDY",
+      "returned_slug": "andy-on-sol",
+      "reasons": [
+        "symbol_mismatch:ANDY",
+        "slug_mismatch:andy-on-sol"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "xana",
+      "symbol": "XETA",
+      "expected_cmc_id": "21666",
+      "expected_cmc_slug": "xana",
+      "returned_symbol": "DD",
+      "returned_slug": "dogedragon",
+      "reasons": [
+        "symbol_mismatch:DD",
+        "slug_mismatch:dogedragon",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "toucan-protocol",
+      "symbol": "BCT",
+      "expected_cmc_id": "23238",
+      "expected_cmc_slug": "toucan-protocol-base-carbon-tonne",
+      "returned_symbol": "HIMFERS",
+      "returned_slug": "himfers",
+      "reasons": [
+        "symbol_mismatch:HIMFERS",
+        "slug_mismatch:himfers",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "chainport",
+      "symbol": "PORT",
+      "expected_cmc_id": "22633",
+      "expected_cmc_slug": "chainport",
+      "returned_symbol": "C4E",
+      "returned_slug": "chain4energy",
+      "reasons": [
+        "symbol_mismatch:C4E",
+        "slug_mismatch:chain4energy"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "off-the-grid",
+      "symbol": "GUN",
+      "expected_cmc_id": "32200",
+      "expected_cmc_slug": "gunzilla",
+      "returned_symbol": "BUB",
+      "returned_slug": "goodjobbub",
+      "reasons": [
+        "symbol_mismatch:BUB",
+        "slug_mismatch:goodjobbub"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "bob",
+      "symbol": "BOB",
+      "expected_cmc_id": "31962",
+      "expected_cmc_slug": "bob-2",
+      "returned_symbol": "SHO",
+      "returned_slug": "shiro",
+      "reasons": [
+        "symbol_mismatch:SHO",
+        "slug_mismatch:shiro",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "lyra",
+      "symbol": "LYRA",
+      "expected_cmc_id": "27620",
+      "expected_cmc_slug": "lyra-3",
+      "returned_symbol": "THROG",
+      "returned_slug": "throg",
+      "reasons": [
+        "symbol_mismatch:THROG",
+        "slug_mismatch:throg",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "ceramic",
+      "symbol": "CERA",
+      "expected_cmc_id": "24022",
+      "expected_cmc_slug": "ceramic",
+      "returned_symbol": "CHT",
+      "returned_slug": "cyberharbor",
+      "reasons": [
+        "symbol_mismatch:CHT",
+        "slug_mismatch:cyberharbor"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "deeper-network",
+      "symbol": "DPR",
+      "expected_cmc_id": "8914",
+      "expected_cmc_slug": "deeper-network",
+      "returned_symbol": "MAGI",
+      "returned_slug": "magikarp-finance",
+      "reasons": [
+        "symbol_mismatch:MAGI",
+        "slug_mismatch:magikarp-finance",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "dopex",
+      "symbol": "DPX",
+      "expected_cmc_id": "19225",
+      "expected_cmc_slug": "dopex",
+      "returned_symbol": "HERA",
+      "returned_slug": "hera-finance",
+      "reasons": [
+        "symbol_mismatch:HERA",
+        "slug_mismatch:hera-finance"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "huddle01",
+      "symbol": "HUDL",
+      "expected_cmc_id": "23412",
+      "expected_cmc_slug": "huddle01",
+      "returned_symbol": "PSI",
+      "returned_slug": "tridentdao",
+      "reasons": [
+        "symbol_mismatch:PSI",
+        "slug_mismatch:tridentdao"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "klima-dao",
+      "symbol": "KLIMA",
+      "expected_cmc_id": "18363",
+      "expected_cmc_slug": "klima-dao",
+      "returned_symbol": "GCME",
+      "returned_slug": "gocryptome",
+      "reasons": [
+        "symbol_mismatch:GCME",
+        "slug_mismatch:gocryptome",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "moss-carbon-credit",
+      "symbol": "MCO2",
+      "expected_cmc_id": "18227",
+      "expected_cmc_slug": "moss-carbon-credit",
+      "returned_symbol": "JAMON",
+      "returned_slug": "jamonswap",
+      "reasons": [
+        "symbol_mismatch:JAMON",
+        "slug_mismatch:jamonswap",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "moralis",
+      "symbol": "MOR",
+      "expected_cmc_id": "24755",
+      "expected_cmc_slug": "moralis",
+      "returned_symbol": "WSB",
+      "returned_slug": "wall-street-bet",
+      "reasons": [
+        "symbol_mismatch:WSB",
+        "slug_mismatch:wall-street-bet"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "rom",
+      "symbol": "ROM",
+      "expected_cmc_id": "29211",
+      "expected_cmc_slug": "rom",
+      "returned_symbol": "EGG",
+      "returned_slug": "egg",
+      "reasons": [
+        "symbol_mismatch:EGG",
+        "slug_mismatch:egg"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "singularitydao",
+      "symbol": "SDAO",
+      "expected_cmc_id": "12023",
+      "expected_cmc_slug": "singularitydao",
+      "returned_symbol": "JED",
+      "returned_slug": "jedstar",
+      "reasons": [
+        "symbol_mismatch:JED",
+        "slug_mismatch:jedstar",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "matrixdock",
+      "symbol": "STBT",
+      "expected_cmc_id": "29096",
+      "expected_cmc_slug": "matrixdock",
+      "returned_symbol": "DOGE",
+      "returned_slug": "elon-doge-token",
+      "reasons": [
+        "symbol_mismatch:DOGE",
+        "slug_mismatch:elon-doge-token"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "openeden",
+      "symbol": "TBILL",
+      "expected_cmc_id": "28143",
+      "expected_cmc_slug": "openeden-tbill",
+      "returned_symbol": "MOB",
+      "returned_slug": "mobster",
+      "reasons": [
+        "symbol_mismatch:MOB",
+        "slug_mismatch:mobster",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "thingsix",
+      "symbol": "THIX",
+      "expected_cmc_id": "23967",
+      "expected_cmc_slug": "thingsix",
+      "returned_symbol": "VAPE",
+      "returned_slug": "vaporfi",
+      "reasons": [
+        "symbol_mismatch:VAPE",
+        "slug_mismatch:vaporfi",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "tangible",
+      "symbol": "TNGBL",
+      "expected_cmc_id": "22870",
+      "expected_cmc_slug": "tangible",
+      "returned_symbol": "DGH",
+      "returned_slug": "digihealth",
+      "reasons": [
+        "symbol_mismatch:DGH",
+        "slug_mismatch:digihealth",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "walletconnect",
+      "symbol": "WC",
+      "expected_cmc_id": "27319",
+      "expected_cmc_slug": "walletconnect",
+      "returned_symbol": "RAIN",
+      "returned_slug": "precipitate-ai",
+      "reasons": [
+        "symbol_mismatch:RAIN",
+        "slug_mismatch:precipitate-ai",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "zero-gravity",
+      "symbol": "0G",
+      "expected_cmc_id": "28556",
+      "expected_cmc_slug": "0g",
+      "returned_symbol": "GROOOOOK",
+      "returned_slug": "groooook",
+      "reasons": [
+        "symbol_mismatch:GROOOOOK",
+        "slug_mismatch:groooook",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "aether",
+      "symbol": "AET",
+      "expected_cmc_id": "25245",
+      "expected_cmc_slug": "aether",
+      "returned_symbol": "SMUDGE",
+      "returned_slug": "smudge-lord",
+      "reasons": [
+        "symbol_mismatch:SMUDGE",
+        "slug_mismatch:smudge-lord",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "agora-health",
+      "symbol": "AGORA",
+      "expected_cmc_id": "25567",
+      "expected_cmc_slug": "agora-health",
+      "returned_symbol": "AIM",
+      "returned_slug": "automated-income-machine",
+      "reasons": [
+        "symbol_mismatch:AIM",
+        "slug_mismatch:automated-income-machine",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "aleph-im",
+      "symbol": "ALEPH",
+      "expected_cmc_id": "5827",
+      "expected_cmc_slug": "aleph",
+      "returned_symbol": "AST",
+      "returned_slug": "antiscamtoken",
+      "reasons": [
+        "symbol_mismatch:AST",
+        "slug_mismatch:antiscamtoken",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "alienswap",
+      "symbol": "ALIEN",
+      "expected_cmc_id": "22664",
+      "expected_cmc_slug": "alienswap",
+      "returned_symbol": "UNF",
+      "returned_slug": "unofarm",
+      "reasons": [
+        "symbol_mismatch:UNF",
+        "slug_mismatch:unofarm",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "franklin-templeton",
+      "symbol": "BENJI",
+      "expected_cmc_id": "31581",
+      "expected_cmc_slug": "franklin-templeton",
+      "returned_symbol": "DSAI",
+      "returned_slug": "desend-ai",
+      "reasons": [
+        "symbol_mismatch:DSAI",
+        "slug_mismatch:desend-ai",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "biomapper",
+      "symbol": "BIO",
+      "expected_cmc_id": "25420",
+      "expected_cmc_slug": "biomapper",
+      "returned_symbol": "PEPEDONALDS",
+      "returned_slug": "pepe-donalds",
+      "reasons": [
+        "symbol_mismatch:PEPEDONALDS",
+        "slug_mismatch:pepe-donalds",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "biopset",
+      "symbol": "BIOPSET",
+      "expected_cmc_id": "25321",
+      "expected_cmc_slug": "biopset",
+      "returned_symbol": "AHE",
+      "returned_slug": "ai-hey",
+      "reasons": [
+        "symbol_mismatch:AHE",
+        "slug_mismatch:ai-hey",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "cryogenseed",
+      "symbol": "CGS",
+      "expected_cmc_id": "25522",
+      "expected_cmc_slug": "cryogenseed",
+      "returned_symbol": "YUKKY",
+      "returned_slug": "yukky",
+      "reasons": [
+        "symbol_mismatch:YUKKY",
+        "slug_mismatch:yukky",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "corusdao",
+      "symbol": "COR",
+      "expected_cmc_id": "25122",
+      "expected_cmc_slug": "corusdao",
+      "returned_symbol": "PATNUT",
+      "returned_slug": "patnut",
+      "reasons": [
+        "symbol_mismatch:PATNUT",
+        "slug_mismatch:patnut",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "credix",
+      "symbol": "CRED",
+      "expected_cmc_id": "27812",
+      "expected_cmc_slug": "credix-finance",
+      "returned_symbol": "PACMAN",
+      "returned_slug": "pac-man",
+      "reasons": [
+        "symbol_mismatch:PACMAN",
+        "slug_mismatch:pac-man",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "fasset",
+      "symbol": "FASSET",
+      "expected_cmc_id": "27555",
+      "expected_cmc_slug": "fasset",
+      "returned_symbol": "WBOB",
+      "returned_slug": "wrapped-bob",
+      "reasons": [
+        "symbol_mismatch:WBOB",
+        "slug_mismatch:wrapped-bob",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "genomesdao",
+      "symbol": "GENE",
+      "expected_cmc_id": "21634",
+      "expected_cmc_slug": "genomesdao",
+      "returned_symbol": "JUNI",
+      "returned_slug": "jackpot-universe",
+      "reasons": [
+        "symbol_mismatch:JUNI",
+        "slug_mismatch:jackpot-universe",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "junca-cash",
+      "symbol": "JCA",
+      "expected_cmc_id": "21587",
+      "expected_cmc_slug": "junca-cash",
+      "returned_symbol": "RAINSPIRIT",
+      "returned_slug": "rainspirit",
+      "reasons": [
+        "symbol_mismatch:RAINSPIRIT",
+        "slug_mismatch:rainspirit",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "lofty",
+      "symbol": "LOFTY",
+      "expected_cmc_id": "22617",
+      "expected_cmc_slug": "lofty-2",
+      "returned_symbol": "TFLOKI",
+      "returned_slug": "thanksgiving-floki",
+      "reasons": [
+        "symbol_mismatch:TFLOKI",
+        "slug_mismatch:thanksgiving-floki",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "mintchain",
+      "symbol": "MINT",
+      "expected_cmc_id": "31417",
+      "expected_cmc_slug": "mintchain-2",
+      "returned_symbol": "SEAT",
+      "returned_slug": "cris-hensan",
+      "reasons": [
+        "symbol_mismatch:SEAT",
+        "slug_mismatch:cris-hensan",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "nucleation",
+      "symbol": "NUCT",
+      "expected_cmc_id": "25600",
+      "expected_cmc_slug": "nucleation",
+      "returned_symbol": "RhinoMars",
+      "returned_slug": "rhinomars",
+      "reasons": [
+        "symbol_mismatch:RhinoMars",
+        "slug_mismatch:rhinomars",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "openlab",
+      "symbol": "OPENLAB",
+      "expected_cmc_id": "25443",
+      "expected_cmc_slug": "openlab",
+      "returned_symbol": "BITMOON",
+      "returned_slug": "bitmoon-token",
+      "reasons": [
+        "symbol_mismatch:BITMOON",
+        "slug_mismatch:bitmoon-token",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "polynomial",
+      "symbol": "POLY",
+      "expected_cmc_id": "27689",
+      "expected_cmc_slug": "polynomialfi",
+      "returned_symbol": "PROME",
+      "returned_slug": "prometheus-3",
+      "reasons": [
+        "symbol_mismatch:PROME",
+        "slug_mismatch:prometheus-3",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "psilocin",
+      "symbol": "PSIL",
+      "expected_cmc_id": "25333",
+      "expected_cmc_slug": "psilocin",
+      "returned_symbol": "MURATIAI",
+      "returned_slug": "muratiai",
+      "reasons": [
+        "symbol_mismatch:MURATIAI",
+        "slug_mismatch:muratiai",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "realt-coin",
+      "symbol": "REALT",
+      "expected_cmc_id": "11814",
+      "expected_cmc_slug": "realt",
+      "returned_symbol": "POTATO",
+      "returned_slug": "potato",
+      "reasons": [
+        "symbol_mismatch:POTATO",
+        "slug_mismatch:potato",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "rwa-x",
+      "symbol": "RWAX",
+      "expected_cmc_id": "28623",
+      "expected_cmc_slug": "rwa-x",
+      "returned_symbol": "PYPL.D",
+      "returned_slug": "dinari-pypl",
+      "reasons": [
+        "symbol_mismatch:PYPL.D",
+        "slug_mismatch:dinari-pypl",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "rxbio",
+      "symbol": "RXBIO",
+      "expected_cmc_id": "24999",
+      "expected_cmc_slug": "rxbio",
+      "returned_symbol": "GLI",
+      "returned_slug": "gli-token",
+      "reasons": [
+        "symbol_mismatch:GLI",
+        "slug_mismatch:gli-token",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "traditional-finance",
+      "symbol": "TRFI",
+      "expected_cmc_id": "28512",
+      "expected_cmc_slug": "traditional-finance",
+      "returned_symbol": "GME",
+      "returned_slug": "dumbmoney",
+      "reasons": [
+        "symbol_mismatch:GME",
+        "slug_mismatch:dumbmoney",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "superstate",
+      "symbol": "USTB",
+      "expected_cmc_id": "32188",
+      "expected_cmc_slug": "superstate",
+      "returned_symbol": "PONZIO",
+      "returned_slug": "ponzio-the-cat",
+      "reasons": [
+        "symbol_mismatch:PONZIO",
+        "slug_mismatch:ponzio-the-cat",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "weatherxm",
+      "symbol": "WXM",
+      "expected_cmc_id": "23161",
+      "expected_cmc_slug": "weatherxm",
+      "returned_symbol": "JMZ",
+      "returned_slug": "jimizz",
+      "reasons": [
+        "symbol_mismatch:JMZ",
+        "slug_mismatch:jimizz",
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "subsquid",
+      "symbol": "SQD",
+      "expected_cmc_id": "24455",
+      "expected_cmc_slug": "subsquid",
+      "returned_symbol": null,
+      "returned_slug": null,
+      "reasons": [
+        "quote_not_returned"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "lagrange",
+      "symbol": "LA",
+      "expected_cmc_id": "28843",
+      "expected_cmc_slug": "lagrange",
+      "returned_symbol": null,
+      "returned_slug": null,
+      "reasons": [
+        "quote_not_returned"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "cryoDAO",
+      "symbol": "CRYO",
+      "expected_cmc_id": "25024",
+      "expected_cmc_slug": "cryodao",
+      "returned_symbol": null,
+      "returned_slug": null,
+      "reasons": [
+        "quote_not_returned"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "genobank",
+      "symbol": "GENE",
+      "expected_cmc_id": "22555",
+      "expected_cmc_slug": "genobank",
+      "returned_symbol": null,
+      "returned_slug": null,
+      "reasons": [
+        "quote_not_returned"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "trademate",
+      "symbol": "TRDM",
+      "expected_cmc_id": "24033",
+      "expected_cmc_slug": "trademate",
+      "returned_symbol": null,
+      "returned_slug": null,
+      "reasons": [
+        "quote_not_returned"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "hashnote",
+      "symbol": "USYC",
+      "expected_cmc_id": "28558",
+      "expected_cmc_slug": "hashnote-usyc",
+      "returned_symbol": "USYC",
+      "returned_slug": "hashnote-usyc",
+      "reasons": [
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "wrapped-stx",
+      "symbol": "WSTX",
+      "expected_cmc_id": "22257",
+      "expected_cmc_slug": "wrapped-stacks",
+      "returned_symbol": "WSTX",
+      "returned_slug": "wrapped-stacks",
+      "reasons": [
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "cortex",
+      "symbol": "CTXC",
+      "expected_cmc_id": "2638",
+      "expected_cmc_slug": "cortex",
+      "returned_symbol": "CTXC",
+      "returned_slug": "cortex",
+      "reasons": [
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "fantom",
+      "symbol": "FTM",
+      "expected_cmc_id": "3513",
+      "expected_cmc_slug": "fantom",
+      "returned_symbol": "FTM",
+      "returned_slug": "fantom",
+      "reasons": [
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "bullieverse",
+      "symbol": "BULL",
+      "expected_cmc_id": "11687",
+      "expected_cmc_slug": "bullrise",
+      "returned_symbol": "BULL",
+      "returned_slug": "bullrise",
+      "reasons": [
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "covalent",
+      "symbol": "CQT",
+      "expected_cmc_id": "7411",
+      "expected_cmc_slug": "covalent",
+      "returned_symbol": "CQT",
+      "returned_slug": "covalent",
+      "reasons": [
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "digix-gold-token",
+      "symbol": "DGX",
+      "expected_cmc_id": "2739",
+      "expected_cmc_slug": "digix-gold-token",
+      "returned_symbol": "DGX",
+      "returned_slug": "digix-gold-token",
+      "reasons": [
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "molecule",
+      "symbol": "MOL",
+      "expected_cmc_id": "3502",
+      "expected_cmc_slug": "molecule",
+      "returned_symbol": "MOL",
+      "returned_slug": "molecule",
+      "reasons": [
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    },
+    {
+      "canonical_id": "seed-photo",
+      "symbol": "SEED",
+      "expected_cmc_id": "10895",
+      "expected_cmc_slug": "seed",
+      "returned_symbol": "SEED",
+      "returned_slug": "seed",
+      "reasons": [
+        "invalid_price"
+      ],
+      "mapping_status": "unverified"
+    }
+  ],
+  "remaining_unmapped": [
+    "ipfs",
+    "nexus-4",
+    "safe",
+    "movement",
+    "alchemy",
+    "antidote",
+    "biodao",
+    "bloxroute",
+    "blockscout",
+    "chainstack",
+    "data-union",
+    "eclipse",
+    "gravity",
+    "goldsky",
+    "infura",
+    "kakarot",
+    "koinly",
+    "matrixport-rwa",
+    "connext",
+    "nxyz",
+    "powerpod",
+    "quicknode",
+    "rari",
+    "redbelly-network",
+    "redstone-finance",
+    "securitize",
+    "synesis-one",
+    "sp-global",
+    "thirdweb",
+    "tenderly",
+    "wayru"
+  ],
+  "taxonomy_status": "NOT_COMPLETED: classify token/stablecoin/wrapped/project_without_token only using verified project identity evidence; no-quote alone does not establish no-token."
+}

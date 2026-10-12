@@ -30,7 +30,7 @@ const CMC_FIXTURE = {
   '1': {
     data: {
       '1': {
-        id: 1, name: 'Bitcoin', symbol: 'BTC', cmc_rank: 1,
+        id: 1, name: 'Bitcoin', symbol: 'BTC', slug: 'bitcoin', cmc_rank: 1,
         circulating_supply: 19800000, total_supply: 19800000, max_supply: 21000000,
         quote: {
           USD: {
