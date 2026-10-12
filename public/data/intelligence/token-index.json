@@ -1390,10 +1390,7 @@
       "market_cap_usd": 64534407,
       "cmcId": "27657",
       "cmcSlug": "linea",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "27633",
         "cmcSlug": "linea",
@@ -1404,9 +1401,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/linea/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1420,10 +1419,7 @@
       "market_cap_usd": 63620709,
       "cmcId": "29587",
       "cmcSlug": "wormhole",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "29515",
         "cmcSlug": "wormhole",
@@ -1434,9 +1430,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/wormhole/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1449,10 +1447,7 @@
       "market_cap_usd": 61238624,
       "cmcId": "38908",
       "cmcSlug": "allora",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "28907",
         "cmcSlug": "allora",
@@ -1463,9 +1458,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/allora/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1478,10 +1475,7 @@
       "market_cap_usd": 59601462,
       "cmcId": "38489",
       "cmcSlug": "chainopera-ai",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "28911",
         "cmcSlug": "chainopera-ai",
@@ -1492,9 +1486,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/chainopera-ai/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1529,10 +1525,7 @@
       "market_cap_usd": 55678470,
       "cmcId": "7288",
       "cmcSlug": "venus",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "7281",
         "cmcSlug": "venus",
@@ -1542,9 +1535,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/venus/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1613,10 +1608,7 @@
       "market_cap_usd": 51577317,
       "cmcId": "12885",
       "cmcSlug": "astar",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "12886",
         "cmcSlug": "astar",
@@ -1627,9 +1619,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/astar/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1714,10 +1708,7 @@
       "market_cap_usd": 46767369,
       "cmcId": "12894",
       "cmcSlug": "subsquid",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "24455",
         "cmcSlug": "subsquid",
@@ -1726,9 +1717,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/subsquid/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1741,10 +1734,7 @@
       "market_cap_usd": 43679727.45903181,
       "cmcId": "30986",
       "cmcSlug": "kamino-finance",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "28688",
         "cmcSlug": "kamino-2",
@@ -1754,9 +1744,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/kamino-finance/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1793,10 +1785,7 @@
       "market_cap_usd": 40693229,
       "cmcId": "14101",
       "cmcSlug": "ronin",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "14131",
         "cmcSlug": "ronin",
@@ -1807,9 +1796,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/ronin/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1855,10 +1846,7 @@
       "market_cap_usd": 36462565,
       "cmcId": "1042",
       "cmcSlug": "siacoin",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "1925",
         "cmcSlug": "siacoin",
@@ -1869,9 +1857,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/siacoin/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1930,10 +1920,7 @@
       "market_cap_usd": 34315525,
       "cmcId": "36671",
       "cmcSlug": "sahara-ai",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "28401",
         "cmcSlug": "sahara-ai",
@@ -1944,9 +1931,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/sahara-ai/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1959,10 +1948,7 @@
       "market_cap_usd": 34061133,
       "cmcId": "7737",
       "cmcSlug": "api3",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "7733",
         "cmcSlug": "api3",
@@ -1973,9 +1959,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/api3/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -1988,10 +1976,7 @@
       "market_cap_usd": 31674821,
       "cmcId": "14280",
       "cmcSlug": "euler-finance",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "14239",
         "cmcSlug": "euler",
@@ -2002,9 +1987,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/euler-finance/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2028,10 +2015,7 @@
       "market_cap_usd": 29384546,
       "cmcId": "13631",
       "cmcSlug": "manta-network",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "21965",
         "cmcSlug": "manta-network",
@@ -2042,9 +2026,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/manta-network/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2070,10 +2056,7 @@
       "market_cap_usd": 28737327,
       "cmcId": "34619",
       "cmcSlug": "vana",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "27922",
         "cmcSlug": "vana",
@@ -2083,9 +2066,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/vana/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2133,10 +2118,7 @@
       "market_cap_usd": 27197844,
       "cmcId": "9258",
       "cmcSlug": "chia-network",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "9261",
         "cmcSlug": "chia",
@@ -2146,9 +2128,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/chia-network/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2172,10 +2156,7 @@
       "market_cap_usd": 26069213,
       "cmcId": "39883",
       "cmcSlug": "gensyn",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "27092",
         "cmcSlug": "gensyn",
@@ -2186,9 +2167,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/gensyn/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2203,10 +2186,7 @@
       "market_cap_usd": 26016126,
       "cmcId": "35702",
       "cmcSlug": "nillion",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "28333",
         "cmcSlug": "nillion",
@@ -2217,9 +2197,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/nillion/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2244,10 +2226,7 @@
       "market_cap_usd": 23570940,
       "cmcId": "32193",
       "cmcSlug": "aleo",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "24418",
         "cmcSlug": "aleo",
@@ -2258,9 +2237,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/aleo/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2275,10 +2256,7 @@
       "market_cap_usd": 23382697,
       "cmcId": "33372",
       "cmcSlug": "carv",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "26500",
         "cmcSlug": "carv",
@@ -2289,9 +2267,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/carv/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2338,10 +2318,7 @@
       "market_cap_usd": 22160034,
       "cmcId": "10688",
       "cmcSlug": "yield-guild-games",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "10223",
         "cmcSlug": "yield-guild-games",
@@ -2352,9 +2329,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/yield-guild-games/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2380,10 +2359,7 @@
       "market_cap_usd": 20862039,
       "cmcId": "2300",
       "cmcSlug": "wax",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "1774",
         "cmcSlug": "wax",
@@ -2393,9 +2369,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/wax/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2408,10 +2386,7 @@
       "market_cap_usd": 20457237,
       "cmcId": "23756",
       "cmcSlug": "chaingpt",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "24127",
         "cmcSlug": "chaingpt",
@@ -2422,9 +2397,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/chaingpt/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2438,10 +2415,7 @@
       "market_cap_usd": 20376616,
       "cmcId": "12573",
       "cmcSlug": "clearpool",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "17733",
         "cmcSlug": "clearpool",
@@ -2452,9 +2426,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/clearpool/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2478,10 +2454,7 @@
       "market_cap_usd": 20097231,
       "cmcId": "28480",
       "cmcSlug": "blast",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "28452",
         "cmcSlug": "blast",
@@ -2491,9 +2464,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/blast/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2506,10 +2481,7 @@
       "market_cap_usd": 19433868,
       "cmcId": "28230",
       "cmcSlug": "big-time",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "28257",
         "cmcSlug": "big-time",
@@ -2520,9 +2492,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/big-time/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2535,10 +2509,7 @@
       "market_cap_usd": 18835751,
       "cmcId": "24781",
       "cmcSlug": "cyberconnect",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "24777",
         "cmcSlug": "cyberconnect",
@@ -2549,9 +2520,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/cyberconnect/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2564,10 +2537,7 @@
       "market_cap_usd": 18492623,
       "cmcId": "11823",
       "cmcSlug": "pocket-network",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "12823",
         "cmcSlug": "pocket-network",
@@ -2578,9 +2548,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/pocket-network/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2593,10 +2565,7 @@
       "market_cap_usd": 17168755,
       "cmcId": "32087",
       "cmcSlug": "sophon",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "29430",
         "cmcSlug": "sophon",
@@ -2606,9 +2575,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/sophon/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2644,10 +2615,7 @@
       "market_cap_usd": 15859781,
       "cmcId": "28933",
       "cmcSlug": "xai-games",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "24117",
         "cmcSlug": "xai-blockchain",
@@ -2658,9 +2626,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/xai-games/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2673,10 +2643,7 @@
       "market_cap_usd": 15700839,
       "cmcId": "4166",
       "cmcSlug": "realio-network",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "24232",
         "cmcSlug": "realio-network",
@@ -2687,9 +2654,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/realio-network/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2725,10 +2694,7 @@
       "market_cap_usd": 15334707,
       "cmcId": "38117",
       "cmcSlug": "sapien-io",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "26105",
         "cmcSlug": "sapien-2",
@@ -2739,9 +2705,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/sapien-io/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2765,10 +2733,7 @@
       "market_cap_usd": 14005138,
       "cmcId": "32809",
       "cmcSlug": "orderly-network",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "25144",
         "cmcSlug": "orderly-network",
@@ -2779,9 +2744,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/orderly-network/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2807,10 +2774,7 @@
       "market_cap_usd": 13103422.8065502,
       "cmcId": "29676",
       "cmcSlug": "aevo",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "27533",
         "cmcSlug": "aevo",
@@ -2820,9 +2784,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/aevo/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2847,10 +2813,7 @@
       "market_cap_usd": 13001536,
       "cmcId": "36510",
       "cmcSlug": "lagrange",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "28843",
         "cmcSlug": "lagrange",
@@ -2859,9 +2822,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/lagrange/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2885,10 +2850,7 @@
       "market_cap_usd": 12228915,
       "cmcId": "24138",
       "cmcSlug": "hairdao",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "25455",
         "cmcSlug": "hairdao",
@@ -2899,9 +2861,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/hairdao/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2925,10 +2889,7 @@
       "market_cap_usd": 11395384,
       "cmcId": "16876",
       "cmcSlug": "alethea-artificial-liquid-intelligence-token",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "23538",
         "cmcSlug": "alethea-artificial-liquid-intelligence-token",
@@ -2939,9 +2900,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/alethea-artificial-liquid-intelligence-token/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2954,10 +2917,7 @@
       "market_cap_usd": 10395511,
       "cmcId": "11078",
       "cmcSlug": "iagon",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "4278",
         "cmcSlug": "iagon",
@@ -2968,9 +2928,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/iagon/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -2984,10 +2946,7 @@
       "market_cap_usd": 10300390,
       "cmcId": "5382",
       "cmcSlug": "elysia",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "28345",
         "cmcSlug": "elysia",
@@ -2998,9 +2957,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/elysia/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3024,10 +2985,7 @@
       "market_cap_usd": 9709166,
       "cmcId": "37340",
       "cmcSlug": "chainbase",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "31250",
         "cmcSlug": "chainbase",
@@ -3038,9 +2996,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/chainbase/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3075,10 +3035,7 @@
       "market_cap_usd": 9006488,
       "cmcId": "28299",
       "cmcSlug": "tokenfi",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "29192",
         "cmcSlug": "tokenfi",
@@ -3089,9 +3046,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/tokenfi/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3104,10 +3063,7 @@
       "market_cap_usd": 8779274,
       "cmcId": "22850",
       "cmcSlug": "hivemapper",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "17680",
         "cmcSlug": "hivemapper",
@@ -3118,9 +3074,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/hivemapper/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3133,10 +3091,7 @@
       "market_cap_usd": 7883102,
       "cmcId": "21822",
       "cmcSlug": "brickken",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "24750",
         "cmcSlug": "brickken",
@@ -3147,9 +3102,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/brickken/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3173,10 +3130,7 @@
       "market_cap_usd": 7444665,
       "cmcId": "28458",
       "cmcSlug": "autonolas",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "22154",
         "cmcSlug": "autonolas",
@@ -3187,9 +3141,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/autonolas/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3202,10 +3158,7 @@
       "market_cap_usd": 7285912,
       "cmcId": "6836",
       "cmcSlug": "moonbeam",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "9288",
         "cmcSlug": "moonbeam",
@@ -3215,9 +3168,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/moonbeam/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3231,10 +3186,7 @@
       "market_cap_usd": 6246074,
       "cmcId": "7189",
       "cmcSlug": "origin-dollar",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "8950",
         "cmcSlug": "origin-dollar",
@@ -3245,9 +3197,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/origin-dollar/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3260,10 +3214,7 @@
       "market_cap_usd": 6189360,
       "cmcId": "19214",
       "cmcSlug": "vitadao",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "20788",
         "cmcSlug": "vitadao",
@@ -3274,9 +3225,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/vitadao/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3289,10 +3242,7 @@
       "market_cap_usd": 6116477,
       "cmcId": "27178",
       "cmcSlug": "paal-ai",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "24013",
         "cmcSlug": "paal-ai",
@@ -3303,9 +3253,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/paal-ai/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3335,10 +3287,7 @@
       "market_cap_usd": 5718553,
       "cmcId": "28324",
       "cmcSlug": "dydx-chain",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "11156",
         "cmcSlug": "dydx",
@@ -3348,9 +3297,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/dydx-chain/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3374,10 +3325,7 @@
       "market_cap_usd": 4168379,
       "cmcId": "26998",
       "cmcSlug": "scroll",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "26971",
         "cmcSlug": "scroll",
@@ -3388,9 +3336,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/scroll/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3403,10 +3353,7 @@
       "market_cap_usd": 4061938,
       "cmcId": "22837",
       "cmcSlug": "dimo",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "14793",
         "cmcSlug": "dimo",
@@ -3417,9 +3364,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/dimo/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3443,10 +3392,7 @@
       "market_cap_usd": 3878829,
       "cmcId": "29335",
       "cmcSlug": "pixels",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "29243",
         "cmcSlug": "pixels",
@@ -3457,9 +3403,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/pixels/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3472,10 +3420,7 @@
       "market_cap_usd": 3496033,
       "cmcId": "11212",
       "cmcSlug": "star-atlas",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "11071",
         "cmcSlug": "star-atlas",
@@ -3486,9 +3431,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/star-atlas/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3501,10 +3448,7 @@
       "market_cap_usd": 3413157,
       "cmcId": "10465",
       "cmcSlug": "polytrade",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "19099",
         "cmcSlug": "polytrade",
@@ -3515,9 +3459,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/polytrade/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3530,10 +3476,7 @@
       "market_cap_usd": 3331410,
       "cmcId": "1721",
       "cmcSlug": "mysterium",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "8321",
         "cmcSlug": "mysterium",
@@ -3544,9 +3487,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/mysterium/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3559,10 +3504,7 @@
       "market_cap_usd": 3273000,
       "cmcId": "29711",
       "cmcSlug": "zircuit",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "25825",
         "cmcSlug": "zircuit",
@@ -3573,9 +3515,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/zircuit/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3588,10 +3532,7 @@
       "market_cap_usd": 3155668,
       "cmcId": "29447",
       "cmcSlug": "netmind-token",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "23133",
         "cmcSlug": "netmind-token",
@@ -3602,9 +3543,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/netmind-token/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3618,10 +3561,7 @@
       "market_cap_usd": 2804466,
       "cmcId": "13967",
       "cmcSlug": "goldfinch-protocol",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "13956",
         "cmcSlug": "goldfinch",
@@ -3632,9 +3572,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/goldfinch-protocol/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3658,10 +3600,7 @@
       "market_cap_usd": 2032317,
       "cmcId": "14345",
       "cmcSlug": "botto",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "24050",
         "cmcSlug": "botto",
@@ -3671,9 +3610,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/botto/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3686,10 +3627,7 @@
       "market_cap_usd": 1861631,
       "cmcId": "4710",
       "cmcSlug": "cere-network",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "21941",
         "cmcSlug": "cere-network",
@@ -3700,9 +3638,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/cere-network/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3809,10 +3749,7 @@
       "market_cap_usd": 1163210,
       "cmcId": "7725",
       "cmcSlug": "truefi-token",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "7723",
         "cmcSlug": "truefi",
@@ -3823,9 +3760,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/truefi-token/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3900,10 +3839,7 @@
       "market_cap_usd": 626610,
       "cmcId": "29633",
       "cmcSlug": "valleydao",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "25100",
         "cmcSlug": "valleydao",
@@ -3913,9 +3849,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/valleydao/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3928,10 +3866,7 @@
       "market_cap_usd": 596334,
       "cmcId": "7461",
       "cmcSlug": "playdapp",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "7462",
         "cmcSlug": "playdapp",
@@ -3942,9 +3877,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/playdapp/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -3957,10 +3894,7 @@
       "market_cap_usd": 573139,
       "cmcId": "22289",
       "cmcSlug": "myria",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "23728",
         "cmcSlug": "myria",
@@ -3971,9 +3905,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/myria/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -4003,10 +3939,7 @@
       "market_cap_usd": 504689,
       "cmcId": "30965",
       "cmcSlug": "cryodao",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "25024",
         "cmcSlug": "cryodao",
@@ -4015,9 +3948,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/cryodao/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -4030,10 +3965,7 @@
       "market_cap_usd": 395919,
       "cmcId": "31016",
       "cmcSlug": "mode",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "29204",
         "cmcSlug": "mode",
@@ -4044,9 +3976,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/mode/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -4083,10 +4017,7 @@
       "market_cap_usd": 271641,
       "cmcId": "6747",
       "cmcSlug": "crustnetwork",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "10466",
         "cmcSlug": "crust",
@@ -4097,9 +4028,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/crustnetwork/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -4264,10 +4197,7 @@
       "market_cap_usd": 40796,
       "cmcId": "31543",
       "cmcSlug": "xana-new",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "21666",
         "cmcSlug": "xana",
@@ -4278,9 +4208,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/xana-new/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -4416,10 +4348,7 @@
       "market_cap_usd": 0,
       "cmcId": "8894",
       "cmcSlug": "deeper-network",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "8914",
         "cmcSlug": "deeper-network",
@@ -4430,9 +4359,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/deeper-network/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -4515,10 +4446,7 @@
       "market_cap_usd": 0,
       "cmcId": "12873",
       "cmcSlug": "klimadao",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "18363",
         "cmcSlug": "klima-dao",
@@ -4529,9 +4457,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/klimadao/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -4544,10 +4474,7 @@
       "market_cap_usd": 0,
       "cmcId": "8826",
       "cmcSlug": "moss-carbon-credit",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "18227",
         "cmcSlug": "moss-carbon-credit",
@@ -4558,9 +4485,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/moss-carbon-credit/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -4617,10 +4546,7 @@
       "market_cap_usd": 0,
       "cmcId": "9638",
       "cmcSlug": "singularitydao",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "12023",
         "cmcSlug": "singularitydao",
@@ -4631,9 +4557,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/singularitydao/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -4730,10 +4658,7 @@
       "market_cap_usd": null,
       "cmcId": "38337",
       "cmcSlug": "zero-gravity",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "28556",
         "cmcSlug": "0g",
@@ -4744,9 +4669,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/zero-gravity/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -4806,10 +4733,7 @@
       "market_cap_usd": null,
       "cmcId": "5821",
       "cmcSlug": "aleph-im",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "5827",
         "cmcSlug": "aleph",
@@ -4820,9 +4744,11 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/aleph-im/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     },
     {
@@ -5674,10 +5600,7 @@
       "market_cap_usd": null,
       "cmcId": "33304",
       "cmcSlug": "weatherxm",
-      "mapping_status": "unverified",
-      "mapping_reasons": [
-        "LIVE_REAUDIT_REQUIRED_AFTER_ID_REPAIR"
-      ],
+      "mapping_status": "verified",
       "previous_cmc_mapping": {
         "cmcId": "23161",
         "cmcSlug": "weatherxm",
@@ -5688,96 +5611,112 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source_url": "https://coinmarketcap.com/currencies/weatherxm/",
-        "reviewed_on": "2026-10-12"
+        "reviewed_on": "2026-10-12",
+        "audit_at": "2026-10-12T11:46:50.714Z",
+        "audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23"
       }
     }
   ],
   "_classification": {
     "bitcoin": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1",
-      "cmcSlug": "bitcoin"
+      "cmcSlug": "bitcoin",
+      "requires_live_reaudit": false
     },
     "ethereum": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1027",
-      "cmcSlug": "ethereum"
+      "cmcSlug": "ethereum",
+      "requires_live_reaudit": false
     },
     "binancecoin": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1839",
-      "cmcSlug": "bnb"
+      "cmcSlug": "bnb",
+      "requires_live_reaudit": false
     },
     "ripple": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "52",
-      "cmcSlug": "xrp"
+      "cmcSlug": "xrp",
+      "requires_live_reaudit": false
     },
     "solana": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5426",
-      "cmcSlug": "solana"
+      "cmcSlug": "solana",
+      "requires_live_reaudit": false
     },
     "tron": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1958",
-      "cmcSlug": "tron"
+      "cmcSlug": "tron",
+      "requires_live_reaudit": false
     },
     "hyperliquid": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "32196",
-      "cmcSlug": "hyperliquid"
+      "cmcSlug": "hyperliquid",
+      "requires_live_reaudit": false
     },
     "zcash": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1437",
-      "cmcSlug": "zcash"
+      "cmcSlug": "zcash",
+      "requires_live_reaudit": false
     },
     "dogecoin": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "74",
-      "cmcSlug": "dogecoin"
+      "cmcSlug": "dogecoin",
+      "requires_live_reaudit": false
     },
     "chainlink": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1975",
-      "cmcSlug": "chainlink"
+      "cmcSlug": "chainlink",
+      "requires_live_reaudit": false
     },
     "cardano": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2010",
-      "cmcSlug": "cardano"
+      "cmcSlug": "cardano",
+      "requires_live_reaudit": false
     },
     "stellar": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "512",
-      "cmcSlug": "stellar"
+      "cmcSlug": "stellar",
+      "requires_live_reaudit": false
     },
     "uniswap": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7083",
-      "cmcSlug": "uniswap"
+      "cmcSlug": "uniswap",
+      "requires_live_reaudit": false
     },
     "litecoin": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2",
-      "cmcSlug": "litecoin"
+      "cmcSlug": "litecoin",
+      "requires_live_reaudit": false
     },
     "the-open-network": {
       "final_status": "QUARANTINED",
@@ -5788,41 +5727,46 @@
       "requires_live_reaudit": true
     },
     "hedera-hashgraph": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "4642",
-      "cmcSlug": "hedera"
+      "cmcSlug": "hedera",
+      "requires_live_reaudit": false
     },
     "sui": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "20947",
-      "cmcSlug": "sui"
+      "cmcSlug": "sui",
+      "requires_live_reaudit": false
     },
     "avalanche-2": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5805",
-      "cmcSlug": "avalanche"
+      "cmcSlug": "avalanche",
+      "requires_live_reaudit": false
     },
     "near": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6535",
       "cmcSlug": "near-protocol",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "crypto-com-chain": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "3635",
-      "cmcSlug": "cronos"
+      "cmcSlug": "cronos",
+      "requires_live_reaudit": false
     },
     "tether-gold": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5176",
-      "cmcSlug": "tether-gold"
+      "cmcSlug": "tether-gold",
+      "requires_live_reaudit": false
     },
     "hashnote": {
       "final_status": "QUARANTINED",
@@ -5833,125 +5777,144 @@
       "requires_live_reaudit": true
     },
     "bittensor": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "22974",
-      "cmcSlug": "bittensor"
+      "cmcSlug": "bittensor",
+      "requires_live_reaudit": false
     },
     "aave": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7278",
-      "cmcSlug": "aave"
+      "cmcSlug": "aave",
+      "requires_live_reaudit": false
     },
     "mantle": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "27075",
-      "cmcSlug": "mantle"
+      "cmcSlug": "mantle",
+      "requires_live_reaudit": false
     },
     "pax-gold": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "4705",
-      "cmcSlug": "pax-gold"
+      "cmcSlug": "pax-gold",
+      "requires_live_reaudit": false
     },
     "ondo-finance": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "21159",
-      "cmcSlug": "ondo-finance"
+      "cmcSlug": "ondo-finance",
+      "requires_live_reaudit": false
     },
     "morpho": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=1.00, score=105 vs 75",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "34104",
-      "cmcSlug": "morpho"
+      "cmcSlug": "morpho",
+      "requires_live_reaudit": false
     },
     "internet-computer": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "8916",
-      "cmcSlug": "internet-computer"
+      "cmcSlug": "internet-computer",
+      "requires_live_reaudit": false
     },
     "ethena": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "30171",
-      "cmcSlug": "ethena"
+      "cmcSlug": "ethena",
+      "requires_live_reaudit": false
     },
     "polkadot": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6636",
-      "cmcSlug": "polkadot-new"
+      "cmcSlug": "polkadot-new",
+      "requires_live_reaudit": false
     },
     "polygon": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28321",
-      "cmcSlug": "polygon-ecosystem-token"
+      "cmcSlug": "polygon-ecosystem-token",
+      "requires_live_reaudit": false
     },
     "arbitrum": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "11841",
-      "cmcSlug": "arbitrum"
+      "cmcSlug": "arbitrum",
+      "requires_live_reaudit": false
     },
     "rocket-pool-eth": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2943",
-      "cmcSlug": "rocket-pool"
+      "cmcSlug": "rocket-pool",
+      "requires_live_reaudit": false
     },
     "algorand": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "4030",
-      "cmcSlug": "algorand"
+      "cmcSlug": "algorand",
+      "requires_live_reaudit": false
     },
     "kaspa": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "20396",
-      "cmcSlug": "kaspa"
+      "cmcSlug": "kaspa",
+      "requires_live_reaudit": false
     },
     "venice-token": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=1.00, score=105 vs 45",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "35509",
-      "cmcSlug": "venice-token"
+      "cmcSlug": "venice-token",
+      "requires_live_reaudit": false
     },
     "cosmos": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "3794",
-      "cmcSlug": "cosmos"
+      "cmcSlug": "cosmos",
+      "requires_live_reaudit": false
     },
     "render": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5690",
-      "cmcSlug": "render"
+      "cmcSlug": "render",
+      "requires_live_reaudit": false
     },
     "jupiter-exchange-solana": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "29210",
       "cmcSlug": "jupiter-ag",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "pancakeswap-token": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=0.85, score=105 vs 45",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7186",
-      "cmcSlug": "pancakeswap"
+      "cmcSlug": "pancakeswap",
+      "requires_live_reaudit": false
     },
     "filecoin": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2280",
-      "cmcSlug": "filecoin"
+      "cmcSlug": "filecoin",
+      "requires_live_reaudit": false
     },
     "ipfs": {
       "final_status": "MISSING",
@@ -5960,28 +5923,32 @@
       "cmcSlug": null
     },
     "vechain": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "3077",
-      "cmcSlug": "vechain"
+      "cmcSlug": "vechain",
+      "requires_live_reaudit": false
     },
     "flare": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7950",
-      "cmcSlug": "flare"
+      "cmcSlug": "flare",
+      "requires_live_reaudit": false
     },
     "curve-dao-token": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6538",
-      "cmcSlug": "curve-dao-token"
+      "cmcSlug": "curve-dao-token",
+      "requires_live_reaudit": false
     },
     "aptos": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "21794",
-      "cmcSlug": "aptos"
+      "cmcSlug": "aptos",
+      "requires_live_reaudit": false
     },
     "wrapped-stx": {
       "final_status": "QUARANTINED",
@@ -5992,117 +5959,130 @@
       "requires_live_reaudit": true
     },
     "injective-protocol": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7226",
       "cmcSlug": "injective",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "virtuals-protocol": {
-      "final_status": "PROMOTED",
-      "notes": "Single match: symbol+name (sim=1.00)",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "29420",
-      "cmcSlug": "virtual-protocol"
+      "cmcSlug": "virtual-protocol",
+      "requires_live_reaudit": false
     },
     "pyth-network": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28177",
-      "cmcSlug": "pyth-network"
+      "cmcSlug": "pyth-network",
+      "requires_live_reaudit": false
     },
     "fetch-ai": {
-      "final_status": "DRIFTED_VERIFIED",
-      "notes": "FET token migrated to ASI Alliance (Artificial Superintelligence Alliance). Same asset, new name.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "3773",
-      "cmcSlug": "artificial-superintelligence-alliance"
+      "cmcSlug": "artificial-superintelligence-alliance",
+      "requires_live_reaudit": false
     },
     "layerzero": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=1.00, score=105 vs 30",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "26997",
-      "cmcSlug": "layerzero"
+      "cmcSlug": "layerzero",
+      "requires_live_reaudit": false
     },
     "midnight-3": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "39064",
       "cmcSlug": "midnight-network",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "celestia": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "22861",
-      "cmcSlug": "celestia"
+      "cmcSlug": "celestia",
+      "requires_live_reaudit": false
     },
     "pendle": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "9481",
-      "cmcSlug": "pendle"
+      "cmcSlug": "pendle",
+      "requires_live_reaudit": false
     },
     "lido-dao": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "8000",
-      "cmcSlug": "lido-dao"
+      "cmcSlug": "lido-dao",
+      "requires_live_reaudit": false
     },
     "sei-network": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "23149",
       "cmcSlug": "sei",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "gnosis": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1659",
       "cmcSlug": "gnosis-gno",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "monad": {
-      "final_status": "PROMOTED",
-      "notes": "Top by name sim=1.00, but score gap=15",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "30495",
-      "cmcSlug": "monad"
+      "cmcSlug": "monad",
+      "requires_live_reaudit": false
     },
     "tezos": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2011",
-      "cmcSlug": "tezos"
+      "cmcSlug": "tezos",
+      "requires_live_reaudit": false
     },
     "conflux-token": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=0.85, score=105 vs 30",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7334",
-      "cmcSlug": "conflux-network"
+      "cmcSlug": "conflux-network",
+      "requires_live_reaudit": false
     },
     "grass": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=1.00, score=105 vs 75",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "32956",
-      "cmcSlug": "grass"
+      "cmcSlug": "grass",
+      "requires_live_reaudit": false
     },
     "optimism": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "11840",
       "cmcSlug": "optimism-ethereum",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "raydium": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "8526",
-      "cmcSlug": "raydium"
+      "cmcSlug": "raydium",
+      "requires_live_reaudit": false
     },
     "frax-finance": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6952",
-      "cmcSlug": "frax"
+      "cmcSlug": "frax",
+      "requires_live_reaudit": false
     },
     "frax": {
       "final_status": "QUARANTINED",
@@ -6113,35 +6093,39 @@
       "requires_live_reaudit": true
     },
     "convex-finance": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "9903",
-      "cmcSlug": "convex-finance"
+      "cmcSlug": "convex-finance",
+      "requires_live_reaudit": false
     },
     "starknet": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "22691",
       "cmcSlug": "starknet-token",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "compound-governance-token": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5692",
-      "cmcSlug": "compound"
+      "cmcSlug": "compound",
+      "requires_live_reaudit": false
     },
     "arweave": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5632",
-      "cmcSlug": "arweave"
+      "cmcSlug": "arweave",
+      "requires_live_reaudit": false
     },
     "the-graph": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6719",
-      "cmcSlug": "the-graph"
+      "cmcSlug": "the-graph",
+      "requires_live_reaudit": false
     },
     "iota": {
       "final_status": "QUARANTINED",
@@ -6152,152 +6136,172 @@
       "requires_live_reaudit": true
     },
     "eigenlayer": {
-      "final_status": "DRIFTED_VERIFIED",
-      "notes": "EigenLayer rebranded to EigenCloud. Same asset (cmcId=30494), updated slug.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "30494",
-      "cmcSlug": "eigencloud"
+      "cmcSlug": "eigencloud",
+      "requires_live_reaudit": false
     },
     "swissborg": {
-      "final_status": "PROMOTED",
-      "notes": "Single match: symbol+name (sim=1.00)",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2499",
-      "cmcSlug": "swissborg"
+      "cmcSlug": "swissborg",
+      "requires_live_reaudit": false
     },
     "theta": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2416",
       "cmcSlug": "theta-network",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "akash": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=1.00, score=105 vs 30",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7431",
-      "cmcSlug": "akash-network"
+      "cmcSlug": "akash-network",
+      "requires_live_reaudit": false
     },
     "axie-infinity": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6783",
-      "cmcSlug": "axie-infinity"
+      "cmcSlug": "axie-infinity",
+      "requires_live_reaudit": false
     },
     "thorchain": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "4157",
-      "cmcSlug": "thorchain"
+      "cmcSlug": "thorchain",
+      "requires_live_reaudit": false
     },
     "humanity": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "36922",
-      "cmcSlug": "humanity-protocol"
+      "cmcSlug": "humanity-protocol",
+      "requires_live_reaudit": false
     },
     "neo": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1376",
-      "cmcSlug": "neo"
+      "cmcSlug": "neo",
+      "requires_live_reaudit": false
     },
     "apecoin": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "18876",
       "cmcSlug": "apecoin-ape",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "decentraland": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1966",
-      "cmcSlug": "decentraland"
+      "cmcSlug": "decentraland",
+      "requires_live_reaudit": false
     },
     "origintrail": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2467",
-      "cmcSlug": "origintrail"
+      "cmcSlug": "origintrail",
+      "requires_live_reaudit": false
     },
     "multiversx": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6892",
       "cmcSlug": "multiversx-egld",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "1inch": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "8104",
-      "cmcSlug": "1inch"
+      "cmcSlug": "1inch",
+      "requires_live_reaudit": false
     },
     "zencash": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1698",
-      "cmcSlug": "horizen"
+      "cmcSlug": "horizen",
+      "requires_live_reaudit": false
     },
     "ozone-chain": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28076",
-      "cmcSlug": "ozone-chain"
+      "cmcSlug": "ozone-chain",
+      "requires_live_reaudit": false
     },
     "synthetix": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2586",
-      "cmcSlug": "synthetix"
+      "cmcSlug": "synthetix",
+      "requires_live_reaudit": false
     },
     "railgun": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "10854",
-      "cmcSlug": "railgun"
+      "cmcSlug": "railgun",
+      "requires_live_reaudit": false
     },
     "immutable": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "10603",
-      "cmcSlug": "immutable-x"
+      "cmcSlug": "immutable-x",
+      "requires_live_reaudit": false
     },
     "the-sandbox": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6210",
-      "cmcSlug": "the-sandbox"
+      "cmcSlug": "the-sandbox",
+      "requires_live_reaudit": false
     },
     "sonic-3": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=0.85, score=105 vs 75",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "32684",
-      "cmcSlug": "sonic"
+      "cmcSlug": "sonic",
+      "requires_live_reaudit": false
     },
     "helium": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5665",
-      "cmcSlug": "helium"
+      "cmcSlug": "helium",
+      "requires_live_reaudit": false
     },
     "golem": {
-      "final_status": "PROMOTED",
-      "notes": "Single match: symbol+name (sim=1.00)",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1455",
-      "cmcSlug": "golem-network-tokens"
+      "cmcSlug": "golem-network-tokens",
+      "requires_live_reaudit": false
     },
     "geodnet": {
-      "final_status": "PROMOTED",
-      "notes": "Single match: symbol+name (sim=1.00)",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "20969",
-      "cmcSlug": "geodnet"
+      "cmcSlug": "geodnet",
+      "requires_live_reaudit": false
     },
     "mina-protocol": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "8646",
       "cmcSlug": "mina",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "instadapp": {
       "final_status": "QUARANTINED",
@@ -6308,28 +6312,32 @@
       "requires_live_reaudit": true
     },
     "zksync": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "24091",
-      "cmcSlug": "zksync"
+      "cmcSlug": "zksync",
+      "requires_live_reaudit": false
     },
     "sentient": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=1.00, score=105 vs 60",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "38868",
-      "cmcSlug": "sentient"
+      "cmcSlug": "sentient",
+      "requires_live_reaudit": false
     },
     "aethir": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=1.00, score=105 vs 75",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "30083",
-      "cmcSlug": "aethir"
+      "cmcSlug": "aethir",
+      "requires_live_reaudit": false
     },
     "gala": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7080",
-      "cmcSlug": "gala"
+      "cmcSlug": "gala",
+      "requires_live_reaudit": false
     },
     "nexus-4": {
       "final_status": "MISSING",
@@ -6338,34 +6346,39 @@
       "cmcSlug": null
     },
     "plume-network": {
-      "final_status": "PROMOTED",
-      "notes": "Single match: symbol+name (sim=0.85)",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "35364",
-      "cmcSlug": "plume"
+      "cmcSlug": "plume",
+      "requires_live_reaudit": false
     },
     "yearn-finance": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5864",
-      "cmcSlug": "yearn-finance"
+      "cmcSlug": "yearn-finance",
+      "requires_live_reaudit": false
     },
     "beam": {
-      "final_status": "PROMOTED",
-      "notes": "Top by name sim=1.00, but score gap=15",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28298",
-      "cmcSlug": "onbeam"
+      "cmcSlug": "onbeam",
+      "requires_live_reaudit": false
     },
     "gmx": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "11857",
-      "cmcSlug": "gmx"
+      "cmcSlug": "gmx",
+      "requires_live_reaudit": false
     },
     "orca": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "11165",
-      "cmcSlug": "orca"
+      "cmcSlug": "orca",
+      "requires_live_reaudit": false
     },
     "safe": {
       "final_status": "MISSING",
@@ -6374,35 +6387,39 @@
       "cmcSlug": null
     },
     "kaito": {
-      "final_status": "PROMOTED",
-      "notes": "Single match: symbol+name (sim=1.00)",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "35763",
-      "cmcSlug": "kaito"
+      "cmcSlug": "kaito",
+      "requires_live_reaudit": false
     },
     "arkham": {
-      "final_status": "PROMOTED",
-      "notes": "Single match: symbol+name (sim=1.00)",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "27565",
-      "cmcSlug": "arkham"
+      "cmcSlug": "arkham",
+      "requires_live_reaudit": false
     },
     "sushi": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6758",
       "cmcSlug": "sushiswap",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "livepeer": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "3640",
-      "cmcSlug": "livepeer"
+      "cmcSlug": "livepeer",
+      "requires_live_reaudit": false
     },
     "aioz-network": {
-      "final_status": "PROMOTED",
-      "notes": "Single match: symbol+name (sim=1.00)",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "9104",
-      "cmcSlug": "aioz-network"
+      "cmcSlug": "aioz-network",
+      "requires_live_reaudit": false
     },
     "story-protocol": {
       "final_status": "QUARANTINED",
@@ -6413,119 +6430,129 @@
       "requires_live_reaudit": true
     },
     "spark": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=1.00, score=105 vs 75",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "36569",
-      "cmcSlug": "spark"
+      "cmcSlug": "spark",
+      "requires_live_reaudit": false
     },
     "numerai": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1732",
-      "cmcSlug": "numeraire"
+      "cmcSlug": "numeraire",
+      "requires_live_reaudit": false
     },
     "peaq": {
-      "final_status": "PROMOTED",
-      "notes": "Single match: symbol+name (sim=1.00)",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "14588",
-      "cmcSlug": "peaq"
+      "cmcSlug": "peaq",
+      "requires_live_reaudit": false
     },
     "linea": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "27657",
       "cmcSlug": "linea",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "wormhole": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "29587",
       "cmcSlug": "wormhole",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "allora": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "38908",
       "cmcSlug": "allora",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "chainopera-ai": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "38489",
       "cmcSlug": "chainopera-ai",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "berachain": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "24647",
-      "cmcSlug": "berachain"
+      "cmcSlug": "berachain",
+      "requires_live_reaudit": false
     },
     "enjincoin": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2130",
       "cmcSlug": "enjin-coin",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "venus": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7288",
       "cmcSlug": "venus",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "zetachain": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "21259",
-      "cmcSlug": "zetachain"
+      "cmcSlug": "zetachain",
+      "requires_live_reaudit": false
     },
     "kava": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "4846",
-      "cmcSlug": "kava"
+      "cmcSlug": "kava",
+      "requires_live_reaudit": false
     },
     "zilliqa": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2469",
-      "cmcSlug": "zilliqa"
+      "cmcSlug": "zilliqa",
+      "requires_live_reaudit": false
     },
     "axelar": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "17799",
-      "cmcSlug": "axelar"
+      "cmcSlug": "axelar",
+      "requires_live_reaudit": false
     },
     "oasis-network": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7653",
-      "cmcSlug": "oasis-network"
+      "cmcSlug": "oasis-network",
+      "requires_live_reaudit": false
     },
     "astar": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "12885",
       "cmcSlug": "astar",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "concordium": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "18031",
-      "cmcSlug": "concordium"
+      "cmcSlug": "concordium",
+      "requires_live_reaudit": false
     },
     "fireblocks": {
       "final_status": "QUARANTINED",
@@ -6536,65 +6563,70 @@
       "requires_live_reaudit": true
     },
     "flow": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "4558",
-      "cmcSlug": "flow"
+      "cmcSlug": "flow",
+      "requires_live_reaudit": false
     },
     "casper-network": {
-      "final_status": "INVALID_REMOVED",
-      "notes": "Old ID was wrong, no candidate found",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
+      "cmcId": "5899",
+      "cmcSlug": "casper",
+      "requires_live_reaudit": false
     },
     "dusk-network": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "4092",
       "cmcSlug": "dusk",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "celo": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5567",
-      "cmcSlug": "celo"
+      "cmcSlug": "celo",
+      "requires_live_reaudit": false
     },
     "subsquid": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "12894",
       "cmcSlug": "subsquid",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "kamino": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "30986",
       "cmcSlug": "kamino-finance",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "ankr-network": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "3783",
-      "cmcSlug": "ankr"
+      "cmcSlug": "ankr",
+      "requires_live_reaudit": false
     },
     "pirate-chain": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "3951",
-      "cmcSlug": "pirate-chain"
+      "cmcSlug": "pirate-chain",
+      "requires_live_reaudit": false
     },
     "ronin": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "14101",
       "cmcSlug": "ronin",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "movement": {
       "final_status": "MISSING",
@@ -6603,506 +6635,533 @@
       "cmcSlug": null
     },
     "propy": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1974",
-      "cmcSlug": "propy"
+      "cmcSlug": "propy",
+      "requires_live_reaudit": false
     },
     "cysic": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "39071",
-      "cmcSlug": "cysic"
+      "cmcSlug": "cysic",
+      "requires_live_reaudit": false
     },
     "siacoin": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1042",
       "cmcSlug": "siacoin",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "uma": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5617",
-      "cmcSlug": "uma"
+      "cmcSlug": "uma",
+      "requires_live_reaudit": false
     },
     "ocean-protocol": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "3911",
-      "cmcSlug": "ocean-protocol"
+      "cmcSlug": "ocean-protocol",
+      "requires_live_reaudit": false
     },
     "succinct": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "37593",
-      "cmcSlug": "succinct"
+      "cmcSlug": "succinct",
+      "requires_live_reaudit": false
     },
     "band-protocol": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "4679",
-      "cmcSlug": "band-protocol"
+      "cmcSlug": "band-protocol",
+      "requires_live_reaudit": false
     },
     "sahara-ai": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "36671",
       "cmcSlug": "sahara-ai",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "api3": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7737",
       "cmcSlug": "api3",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "euler": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "14280",
       "cmcSlug": "euler-finance",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "world-mobile-token": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "13769",
-      "cmcSlug": "world-mobile-token"
+      "cmcSlug": "world-mobile-token",
+      "requires_live_reaudit": false
     },
     "manta": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "13631",
       "cmcSlug": "manta-network",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "iotex": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2777",
-      "cmcSlug": "iotex"
+      "cmcSlug": "iotex",
+      "requires_live_reaudit": false
     },
     "vana": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "34619",
       "cmcSlug": "vana",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "nosana": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "16612",
-      "cmcSlug": "nosana"
+      "cmcSlug": "nosana",
+      "requires_live_reaudit": false
     },
     "iexec-rlc": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1637",
       "cmcSlug": "rlc",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "zerobase": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "38427",
-      "cmcSlug": "zerobase"
+      "cmcSlug": "zerobase",
+      "requires_live_reaudit": false
     },
     "chia": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "9258",
       "cmcSlug": "chia-network",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "illuvium": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "8719",
-      "cmcSlug": "illuvium"
+      "cmcSlug": "illuvium",
+      "requires_live_reaudit": false
     },
     "gensyn": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "39883",
       "cmcSlug": "gensyn",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "nillion": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "35702",
       "cmcSlug": "nillion",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "lisk": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1214",
-      "cmcSlug": "lisk"
+      "cmcSlug": "lisk",
+      "requires_live_reaudit": false
     },
     "aleo": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "32193",
       "cmcSlug": "aleo",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "carv": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "33372",
       "cmcSlug": "carv",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "smooth-love-potion": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5824",
-      "cmcSlug": "smooth-love-potion"
+      "cmcSlug": "smooth-love-potion",
+      "requires_live_reaudit": false
     },
     "skale": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5691",
       "cmcSlug": "skale-network",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "metis": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "9640",
-      "cmcSlug": "metisdao"
+      "cmcSlug": "metisdao",
+      "requires_live_reaudit": false
     },
     "yield-guild-games": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "10688",
       "cmcSlug": "yield-guild-games",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "phala": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6841",
-      "cmcSlug": "phala-network"
+      "cmcSlug": "phala-network",
+      "requires_live_reaudit": false
     },
     "wax": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2300",
       "cmcSlug": "wax",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "chaingpt": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "23756",
       "cmcSlug": "chaingpt",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "clearpool": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "12573",
       "cmcSlug": "clearpool",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "synapse": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "12147",
-      "cmcSlug": "synapse-2"
+      "cmcSlug": "synapse-2",
+      "requires_live_reaudit": false
     },
     "blast": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28480",
       "cmcSlug": "blast",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "big-time": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28230",
       "cmcSlug": "big-time",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "cyber": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "24781",
       "cmcSlug": "cyberconnect",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "pokt-network": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "11823",
       "cmcSlug": "pocket-network",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "sophon": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "32087",
       "cmcSlug": "sophon",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "morpheusai": {
-      "final_status": "INVALID_REMOVED",
-      "notes": "Old ID was wrong, no candidate found",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
+      "cmcId": "31656",
+      "cmcSlug": "morpheus",
+      "requires_live_reaudit": false
     },
     "singularitynet": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2424",
-      "cmcSlug": "singularitynet"
+      "cmcSlug": "singularitynet",
+      "requires_live_reaudit": false
     },
     "xai": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28933",
       "cmcSlug": "xai-games",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "realio-network": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "4166",
       "cmcSlug": "realio-network",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "magic": {
-      "final_status": "DRIFTED_VERIFIED",
-      "notes": "Magic rebranded to Treasure. Same asset (cmcId=14783), updated slug.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "14783",
-      "cmcSlug": "magic-token"
+      "cmcSlug": "magic-token",
+      "requires_live_reaudit": false
     },
     "chromia": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "3978",
-      "cmcSlug": "chromia"
+      "cmcSlug": "chromia",
+      "requires_live_reaudit": false
     },
     "sapien": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "38117",
       "cmcSlug": "sapien-io",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "portal": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "29555",
       "cmcSlug": "portal-gaming",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "orderly": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "32809",
       "cmcSlug": "orderly-network",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "my-neighbor-alice": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "8766",
       "cmcSlug": "myneighboralice",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "aevo": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "29676",
       "cmcSlug": "aevo",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "aurora": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "14803",
-      "cmcSlug": "aurora-near"
+      "cmcSlug": "aurora-near",
+      "requires_live_reaudit": false
     },
     "lagrange": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "36510",
       "cmcSlug": "lagrange",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "storj": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1772",
-      "cmcSlug": "storj"
+      "cmcSlug": "storj",
+      "requires_live_reaudit": false
     },
     "hairdao": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "24138",
       "cmcSlug": "hairdao",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "loopring": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1934",
-      "cmcSlug": "loopring"
+      "cmcSlug": "loopring",
+      "requires_live_reaudit": false
     },
     "alethea-ai": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "16876",
       "cmcSlug": "alethea-artificial-liquid-intelligence-token",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "iagon": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "11078",
       "cmcSlug": "iagon",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "elysia": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5382",
       "cmcSlug": "elysia",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "swarm": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "10293",
-      "cmcSlug": "ethereum-swarm"
+      "cmcSlug": "ethereum-swarm",
+      "requires_live_reaudit": false
     },
     "chainbase": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "37340",
       "cmcSlug": "chainbase",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "boba": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "14556",
-      "cmcSlug": "boba-network"
+      "cmcSlug": "boba-network",
+      "requires_live_reaudit": false
     },
     "drift-protocol": {
-      "final_status": "INVALID_REMOVED",
-      "notes": "Old ID was wrong, no candidate found",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
+      "cmcId": "31278",
+      "cmcSlug": "drift",
+      "requires_live_reaudit": false
     },
     "tokenfi": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28299",
       "cmcSlug": "tokenfi",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "hivemapper": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "22850",
       "cmcSlug": "hivemapper",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "brickken": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "21822",
       "cmcSlug": "brickken",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "balancer": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5728",
-      "cmcSlug": "balancer"
+      "cmcSlug": "balancer",
+      "requires_live_reaudit": false
     },
     "autonolas": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28458",
       "cmcSlug": "autonolas",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "moonbeam": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6836",
       "cmcSlug": "moonbeam",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "origin-dollar": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7189",
       "cmcSlug": "origin-dollar",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "vita-dao": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "19214",
       "cmcSlug": "vitadao",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "paal-ai": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "27178",
       "cmcSlug": "paal-ai",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "quickswap": {
       "final_status": "QUARANTINED",
@@ -7113,124 +7172,128 @@
       "requires_live_reaudit": true
     },
     "dydx": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28324",
       "cmcSlug": "dydx-chain",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "beefy": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7311",
-      "cmcSlug": "beefy-finance"
+      "cmcSlug": "beefy-finance",
+      "requires_live_reaudit": false
     },
     "scroll": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "26998",
       "cmcSlug": "scroll",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "dimo": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "22837",
       "cmcSlug": "dimo",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "cess": {
-      "final_status": "INVALID_REMOVED",
-      "notes": "Old ID was wrong, no candidate found",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
+      "cmcId": "36957",
+      "cmcSlug": "cess-network",
+      "requires_live_reaudit": false
     },
     "pixels": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "29335",
       "cmcSlug": "pixels",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "star-atlas": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "11212",
       "cmcSlug": "star-atlas",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "polytrade": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "10465",
       "cmcSlug": "polytrade",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "mysterium": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1721",
       "cmcSlug": "mysterium",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "zircuit": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "29711",
       "cmcSlug": "zircuit",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "netmind": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "29447",
       "cmcSlug": "netmind-token",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "goldfinch": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "13967",
       "cmcSlug": "goldfinch-protocol",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "oasys": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "22265",
-      "cmcSlug": "oasys"
+      "cmcSlug": "oasys",
+      "requires_live_reaudit": false
     },
     "botto": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "14345",
       "cmcSlug": "botto",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "cere-network": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "4710",
       "cmcSlug": "cere-network",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "kujira": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "15185",
-      "cmcSlug": "kujira"
+      "cmcSlug": "kujira",
+      "requires_live_reaudit": false
     },
     "sentinel": {
       "final_status": "QUARANTINED",
@@ -7241,16 +7304,18 @@
       "requires_live_reaudit": true
     },
     "nodle-network": {
-      "final_status": "INVALID_REMOVED",
-      "notes": "Old ID was wrong, no candidate found",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
+      "cmcId": "6837",
+      "cmcSlug": "nodleiot",
+      "requires_live_reaudit": false
     },
     "ribbon-finance": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "12387",
-      "cmcSlug": "ribbon-finance"
+      "cmcSlug": "ribbon-finance",
+      "requires_live_reaudit": false
     },
     "mountain-protocol": {
       "final_status": "QUARANTINED",
@@ -7269,18 +7334,19 @@
       "requires_live_reaudit": true
     },
     "kadena": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5647",
-      "cmcSlug": "kadena"
+      "cmcSlug": "kadena",
+      "requires_live_reaudit": false
     },
     "truefi": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7725",
       "cmcSlug": "truefi-token",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "creditum": {
       "final_status": "QUARANTINED",
@@ -7291,11 +7357,11 @@
       "requires_live_reaudit": true
     },
     "polymath": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2496",
       "cmcSlug": "polymath-network",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "mxc": {
       "final_status": "QUARANTINED",
@@ -7314,28 +7380,28 @@
       "requires_live_reaudit": true
     },
     "valleyDAO": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "29633",
       "cmcSlug": "valleydao",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "playdapp": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "7461",
       "cmcSlug": "playdapp",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "myria": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "22289",
       "cmcSlug": "myria",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "cerebrumdao": {
       "final_status": "QUARANTINED",
@@ -7346,40 +7412,42 @@
       "requires_live_reaudit": true
     },
     "cryoDAO": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "30965",
       "cmcSlug": "cryodao",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "mode": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "31016",
       "cmcSlug": "mode",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "mobox": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "9175",
-      "cmcSlug": "mobox"
+      "cmcSlug": "mobox",
+      "requires_live_reaudit": false
     },
     "streamr": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "2143",
-      "cmcSlug": "streamr"
+      "cmcSlug": "streamr",
+      "requires_live_reaudit": false
     },
     "crust-network": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6747",
       "cmcSlug": "crustnetwork",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "maple": {
       "final_status": "QUARANTINED",
@@ -7398,11 +7466,11 @@
       "requires_live_reaudit": true
     },
     "flux": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "3029",
       "cmcSlug": "zel",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "spheron": {
       "final_status": "QUARANTINED",
@@ -7429,16 +7497,18 @@
       "requires_live_reaudit": true
     },
     "idena": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5836",
-      "cmcSlug": "idena"
+      "cmcSlug": "idena",
+      "requires_live_reaudit": false
     },
     "karura": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "10042",
-      "cmcSlug": "karura"
+      "cmcSlug": "karura",
+      "requires_live_reaudit": false
     },
     "everclear": {
       "final_status": "QUARANTINED",
@@ -7457,19 +7527,19 @@
       "requires_live_reaudit": true
     },
     "xana": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "31543",
       "cmcSlug": "xana-new",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "stargate": {
-      "final_status": "VALID",
-      "notes": "Stage 5C: only slug changed to the exact returned slug in the 2026-10-12 audit; CMC ID and symbol preserved.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "18934",
       "cmcSlug": "stargate-finance",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "toucan-protocol": {
       "final_status": "QUARANTINED",
@@ -7520,18 +7590,19 @@
       "requires_live_reaudit": true
     },
     "centrifuge": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6748",
-      "cmcSlug": "centrifuge"
+      "cmcSlug": "centrifuge",
+      "requires_live_reaudit": false
     },
     "deeper-network": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "8894",
       "cmcSlug": "deeper-network",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "dopex": {
       "final_status": "QUARANTINED",
@@ -7542,10 +7613,11 @@
       "requires_live_reaudit": true
     },
     "eos": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1765",
-      "cmcSlug": "eos"
+      "cmcSlug": "eos",
+      "requires_live_reaudit": false
     },
     "fantom": {
       "final_status": "QUARANTINED",
@@ -7564,32 +7636,34 @@
       "requires_live_reaudit": true
     },
     "defi-kingdoms": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "12319",
-      "cmcSlug": "defi-kingdoms"
+      "cmcSlug": "defi-kingdoms",
+      "requires_live_reaudit": false
     },
     "klima-dao": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "12873",
       "cmcSlug": "klimadao",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "moss-carbon-credit": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "8826",
       "cmcSlug": "moss-carbon-credit",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "maker": {
-      "final_status": "VALID",
-      "notes": "Identity verified",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "1518",
-      "cmcSlug": "maker"
+      "cmcSlug": "maker",
+      "requires_live_reaudit": false
     },
     "moralis": {
       "final_status": "QUARANTINED",
@@ -7608,12 +7682,12 @@
       "requires_live_reaudit": true
     },
     "singularitydao": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "9638",
       "cmcSlug": "singularitydao",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "matrixdock": {
       "final_status": "QUARANTINED",
@@ -7656,12 +7730,12 @@
       "requires_live_reaudit": true
     },
     "zero-gravity": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "38337",
       "cmcSlug": "zero-gravity",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "aether": {
       "final_status": "QUARANTINED",
@@ -7686,12 +7760,12 @@
       "cmcSlug": null
     },
     "aleph-im": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "5821",
       "cmcSlug": "aleph-im",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     },
     "alienswap": {
       "final_status": "QUARANTINED",
@@ -7878,16 +7952,18 @@
       "cmcSlug": null
     },
     "labdao": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=0.85, score=105 vs 10",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "33223",
-      "cmcSlug": "lab"
+      "cmcSlug": "lab",
+      "requires_live_reaudit": false
     },
     "landx-finance": {
-      "final_status": "PROMOTED",
-      "notes": "Single match: symbol+name (sim=0.85)",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "29386",
-      "cmcSlug": "landx-finance"
+      "cmcSlug": "landx-finance",
+      "requires_live_reaudit": false
     },
     "lofty": {
       "final_status": "QUARANTINED",
@@ -7898,10 +7974,11 @@
       "requires_live_reaudit": true
     },
     "lyra-finance": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=0.85, score=90 vs 60",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "15447",
-      "cmcSlug": "lyra-finance"
+      "cmcSlug": "lyra-finance",
+      "requires_live_reaudit": false
     },
     "mintchain": {
       "final_status": "QUARANTINED",
@@ -7912,10 +7989,11 @@
       "requires_live_reaudit": true
     },
     "mango": {
-      "final_status": "PROMOTED",
-      "notes": "Single match: symbol+name (sim=1.00)",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "11171",
-      "cmcSlug": "mango-markets"
+      "cmcSlug": "mango-markets",
+      "requires_live_reaudit": false
     },
     "molecule": {
       "final_status": "QUARANTINED",
@@ -7952,10 +8030,11 @@
       "cmcSlug": null
     },
     "mantra-dao": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=0.85, score=75 vs 10",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "6536",
-      "cmcSlug": "mantra"
+      "cmcSlug": "mantra",
+      "requires_live_reaudit": false
     },
     "openlab": {
       "final_status": "QUARANTINED",
@@ -8020,10 +8099,11 @@
       "cmcSlug": null
     },
     "researchhub": {
-      "final_status": "AMBIGUOUS",
-      "notes": "Multiple candidates: Multiple matches with partial name similarity (top sim=0.71)",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
+      "cmcId": "27054",
+      "cmcSlug": "researchcoin",
+      "requires_live_reaudit": false
     },
     "rwa-x": {
       "final_status": "QUARANTINED",
@@ -8056,16 +8136,18 @@
       "requires_live_reaudit": true
     },
     "shrapnel": {
-      "final_status": "PROMOTED",
-      "notes": "Top by name sim=1.00, but score gap=15",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28363",
-      "cmcSlug": "shrapnel-com"
+      "cmcSlug": "shrapnel-com",
+      "requires_live_reaudit": false
     },
     "smart-coin": {
-      "final_status": "PROMOTED",
-      "notes": "Top candidate clear: name sim=0.85, score=105 vs 60",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "28340",
-      "cmcSlug": "smart-blockchain"
+      "cmcSlug": "smart-blockchain",
+      "requires_live_reaudit": false
     },
     "synesis-one": {
       "final_status": "MISSING",
@@ -8122,12 +8204,12 @@
       "cmcSlug": null
     },
     "weatherxm": {
-      "final_status": "QUARANTINED",
-      "notes": "Stage 5C: CMC listing UCID, symbol and slug reviewed; runtime quarantine retained until authenticated live quote passes.",
+      "final_status": "PASSED_STRICT_CMC_AUDIT",
+      "notes": "Passed the 2026-10-12 strict authenticated CMC audit for commit a389303. Runtime field verification is separately reported.",
       "cmcId": "33304",
       "cmcSlug": "weatherxm",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": false
     }
   },
   "_audit_meta": {
@@ -8138,18 +8220,20 @@
   },
   "_mapping_repair": {
     "stage": "5C",
-    "status": "ID_CORRECTIONS_PENDING_LIVE_REAUDIT",
+    "status": "PARTIAL_LIVE_VERIFIED",
     "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
     "source_audit_at": "2026-10-12T10:20:26.406Z",
     "slug_corrections": 22,
-    "quarantined": 144,
-    "quarantined_symbol_mismatches": 130,
-    "quarantined_market_data_failures": 14,
+    "quarantined": 69,
+    "quarantined_symbol_mismatches": 58,
+    "quarantined_market_data_failures": 11,
     "id_corrections": 75,
     "identity_review_remaining": 69,
-    "last_live_audit_at": "2026-10-12T11:27:51.478Z",
-    "last_live_audit_commit": "6ef72e33fa4cbd5795a0ae332ca7d8cb07dad8e3",
-    "last_live_audit_pass": 179,
-    "last_live_audit_fail": 144
+    "last_live_audit_at": "2026-10-12T11:46:50.714Z",
+    "last_live_audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23",
+    "last_live_audit_pass": 254,
+    "last_live_audit_fail": 69,
+    "released_after_live_audit": 75,
+    "last_live_audit_dataset_sha256": "ecd5469fe740e7b30c6e365947a2c971c7665aa1fec7a465c5dd3362beb541ef"
   }
 }
