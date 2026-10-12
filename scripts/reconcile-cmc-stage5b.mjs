@@ -1,5 +1,6 @@
 import fs from 'node:fs/promises';
 
+// Owner-approved V7 application trigger: 2026-10-12.
 const INDEX_PATH = 'public/data/intelligence/token-index.json';
 const REPORT_PATH = 'reports/cmc-reconcile-stage5b.json';
 
