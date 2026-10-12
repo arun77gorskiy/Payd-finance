@@ -1,0 +1,129 @@
+{
+  "$schema": "https://openapi.vercel.sh/vercel.json",
+  "version": 2,
+  "regions": [
+    "iad1"
+  ],
+  "functions": {
+    "api/healthz.js": {
+      "maxDuration": 10,
+      "memory": 256,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/intelligence/market.js": {
+      "maxDuration": 10,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/audit-stage5b.js": {
+      "maxDuration": 30,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/reconcile-stage5b.js": {
+      "maxDuration": 30,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/reconcile-stage5b-v2.js": {
+      "maxDuration": 30,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/reconcile-stage5b-v3.js": {
+      "maxDuration": 30,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/audit-reconcile-stage5b-v3.js": {
+      "maxDuration": 30,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/reconcile-stage5b-v4-discovery.js": {
+      "maxDuration": 30,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/reconcile-stage5b-v5-alias-discovery.js": {
+      "maxDuration": 30,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/reconcile-stage5b-v6-anchor-audit.js": {
+      "maxDuration": 30,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/reconcile-stage5b-v7-collision-guard.js": {
+      "maxDuration": 30,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
+    }
+  },
+  "rewrites": [
+    {
+      "source": "/healthz",
+      "destination": "/api/healthz"
+    },
+    {
+      "source": "/api/intelligence/market",
+      "destination": "/api/intelligence/market"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        }
+      ]
+    }
+  ],
+  "github": {
+    "silent": true
+  }
+}

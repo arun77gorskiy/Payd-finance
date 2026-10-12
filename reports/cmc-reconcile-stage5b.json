@@ -1,0 +1,21 @@
+{
+  "ok": true,
+  "mode": "approved_v7_collision_guard_remaps_only",
+  "generated_at": "2026-10-12T09:58:58.057Z",
+  "counts": {
+    "total": 354,
+    "mapped": 323,
+    "unmapped": 31,
+    "changed": 0,
+    "already_applied": 5,
+    "duplicate_cmc_ids": 0
+  },
+  "changes": [],
+  "already_applied": [
+    "casper-network",
+    "morpheusai",
+    "drift-protocol",
+    "cess",
+    "nodle-network"
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "name": "payd-cmc-backend",
+  "version": "1.0.0",
+  "private": true,
+  "description": "PAYD Finance CoinMarketCap serverless backend (Stage 5B)",
+  "scripts": {
+    "test": "node code/server/market/test/market_gateway.test.js && node api/_test/vercel_smoke.js"
+  },
+  "engines": {
+    "node": "22.x"
+  }
+}
