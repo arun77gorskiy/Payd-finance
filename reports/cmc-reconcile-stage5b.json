@@ -1,76 +1,21 @@
 {
   "ok": true,
   "mode": "approved_v7_collision_guard_remaps_only",
-  "generated_at": "2026-10-11T19:41:14.390Z",
+  "generated_at": "2026-10-12T09:58:58.057Z",
   "counts": {
     "total": 354,
     "mapped": 323,
     "unmapped": 31,
-    "changed": 5,
-    "already_applied": 0,
+    "changed": 0,
+    "already_applied": 5,
     "duplicate_cmc_ids": 0
   },
-  "changes": [
-    {
-      "canonical_id": "casper-network",
-      "symbol": "CSPR",
-      "before": {
-        "cmcId": "10784",
-        "cmcSlug": "casper-network"
-      },
-      "after": {
-        "cmcId": "5899",
-        "cmcSlug": "casper"
-      }
-    },
-    {
-      "canonical_id": "morpheusai",
-      "symbol": "MOR",
-      "before": {
-        "cmcId": "26712",
-        "cmcSlug": "morpheusai"
-      },
-      "after": {
-        "cmcId": "31656",
-        "cmcSlug": "morpheus"
-      }
-    },
-    {
-      "canonical_id": "drift-protocol",
-      "symbol": "DRIFT",
-      "before": {
-        "cmcId": "27962",
-        "cmcSlug": "drift-protocol"
-      },
-      "after": {
-        "cmcId": "31278",
-        "cmcSlug": "drift"
-      }
-    },
-    {
-      "canonical_id": "cess",
-      "symbol": "CESS",
-      "before": {
-        "cmcId": "20810",
-        "cmcSlug": "cess"
-      },
-      "after": {
-        "cmcId": "36957",
-        "cmcSlug": "cess-network"
-      }
-    },
-    {
-      "canonical_id": "nodle-network",
-      "symbol": "NODL",
-      "before": {
-        "cmcId": "16506",
-        "cmcSlug": "nodle-network"
-      },
-      "after": {
-        "cmcId": "6837",
-        "cmcSlug": "nodleiot"
-      }
-    }
-  ],
-  "already_applied": []
+  "changes": [],
+  "already_applied": [
+    "casper-network",
+    "morpheusai",
+    "drift-protocol",
+    "cess",
+    "nodle-network"
+  ]
 }
