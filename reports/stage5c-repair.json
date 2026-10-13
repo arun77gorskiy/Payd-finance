@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "RUNTIME_PARITY_PASSED_ADDITIONAL_IDS_PENDING_LIVE_REAUDIT",
+  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -28,24 +28,24 @@
     "cmc_ids_retained": 323,
     "no_cmc_mapping": 31,
     "slug_corrections": 22,
-    "quarantined": 67,
-    "eligible_for_runtime_request": 256
+    "quarantined": 65,
+    "eligible_for_runtime_request": 258
   },
   "live_reaudit": {
     "performed": true,
     "execution": "user_browser",
-    "commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22",
-    "dataset_sha256": "aca53d7134395f404b65b0485b57e7d4672625126b2b95bc55d96c05d8e06da3",
-    "audit_at": "2026-10-13T12:59:43.236Z",
-    "healthz_at": "2026-10-13T12:59:28.861Z",
+    "commit": "083861149fadfbdb4489fad294670d65509148d2",
+    "dataset_sha256": "02e2faaa0c512cac6eccebb78bb43b4ca75ed4aa0e538bff5468e0b121ae1d97",
+    "audit_at": "2026-10-13T18:38:55.920Z",
+    "healthz_at": "2026-10-13T18:38:39.980Z",
     "counts": {
       "dataset_total": 354,
       "mapped_expected": 323,
       "mapped_checked": 323,
       "unmapped": 31,
       "returned_quotes": 321,
-      "pass": 256,
-      "fail": 67,
+      "pass": 258,
+      "fail": 65,
       "duplicate_cmc_ids": 0,
       "duplicate_canonical_ids": 0,
       "batches": 4
@@ -53,11 +53,11 @@
     "mandatory_all_pass": true,
     "strict_failures_all_quarantined": true,
     "slug_only_failures": 0,
-    "report": "reports/stage5c-additional-id-audit-20261013.json",
-    "healthz_report": "reports/stage5c-additional-id-healthz-20261013.json",
+    "report": "reports/stage5c-third-id-audit-20261013.json",
+    "healthz_report": "reports/stage5c-third-id-healthz-20261013.json",
     "source_capture": {
-      "filename": "Вставленный Markdown(20261013-130000).md",
-      "sha256": "0c90fd7ba77e3beebe354c5138fccfd46d5655b929302207221ec7de6c70ff4b",
+      "filename": "Вставленный Markdown(20261013-183912).md",
+      "sha256": "32e95fd4a760324a5a01abeeaa87f33ae277dd587aabe51758832cdbf5e949bc",
       "complete_json": true,
       "recovery": null
     }
@@ -300,27 +300,6 @@
       "mapping_status": "unverified"
     },
     {
-      "canonical_id": "quickswap",
-      "symbol": "QUICK",
-      "expected_cmc_id": "10366",
-      "expected_cmc_slug": "quickswap",
-      "returned_symbol": "MONSTA",
-      "returned_slug": "cake-monster",
-      "reasons": [
-        "symbol_mismatch:MONSTA",
-        "slug_mismatch:cake-monster",
-        "invalid_price"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "19966",
-        "cmcSlug": "quickswap-new"
-      },
-      "current_mapping_reasons": [
-        "id_corrected_live_reaudit_required"
-      ]
-    },
-    {
       "canonical_id": "sentinel",
       "symbol": "DVPN",
       "expected_cmc_id": "2643",
@@ -485,23 +464,14 @@
     {
       "canonical_id": "everclear",
       "symbol": "CLEAR",
-      "expected_cmc_id": "29876",
+      "expected_cmc_id": "34512",
       "expected_cmc_slug": "everclear",
-      "returned_symbol": "KUNAI",
-      "returned_slug": "kunaikash",
+      "returned_symbol": "CLEAR",
+      "returned_slug": "everclear",
       "reasons": [
-        "symbol_mismatch:KUNAI",
-        "slug_mismatch:kunaikash",
         "invalid_price"
       ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "34512",
-        "cmcSlug": "everclear"
-      },
-      "current_mapping_reasons": [
-        "id_corrected_live_reaudit_required"
-      ]
+      "mapping_status": "unverified"
     },
     {
       "canonical_id": "match-quest",
@@ -650,23 +620,14 @@
     {
       "canonical_id": "openeden",
       "symbol": "TBILL",
-      "expected_cmc_id": "28143",
-      "expected_cmc_slug": "openeden-tbill",
-      "returned_symbol": "MOB",
-      "returned_slug": "mobster",
+      "expected_cmc_id": "25158",
+      "expected_cmc_slug": "openeden-tbill-vault",
+      "returned_symbol": "TBILL",
+      "returned_slug": "openeden-tbill-vault",
       "reasons": [
-        "symbol_mismatch:MOB",
-        "slug_mismatch:mobster",
         "invalid_price"
       ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "25158",
-        "cmcSlug": "openeden-tbill-vault"
-      },
-      "current_mapping_reasons": [
-        "id_corrected_live_reaudit_required"
-      ]
+      "mapping_status": "unverified"
     },
     {
       "canonical_id": "thingsix",
@@ -1063,25 +1024,6 @@
       "mapping_status": "unverified"
     },
     {
-      "canonical_id": "seed-photo",
-      "symbol": "SEED",
-      "expected_cmc_id": "10895",
-      "expected_cmc_slug": "seed",
-      "returned_symbol": "SEED",
-      "returned_slug": "seed",
-      "reasons": [
-        "invalid_price"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "25490",
-        "cmcSlug": "seed-photo"
-      },
-      "current_mapping_reasons": [
-        "id_corrected_live_reaudit_required"
-      ]
-    },
-    {
       "canonical_id": "trademate",
       "symbol": "TRDM",
       "expected_cmc_id": "24033",
@@ -1110,23 +1052,14 @@
     {
       "canonical_id": "superstate",
       "symbol": "USTB",
-      "expected_cmc_id": "32188",
-      "expected_cmc_slug": "superstate",
-      "returned_symbol": "PONZIO",
-      "returned_slug": "ponzio-the-cat",
+      "expected_cmc_id": "37086",
+      "expected_cmc_slug": "superstate-short-duration-us-government-securities-fund-ustb",
+      "returned_symbol": "USTB",
+      "returned_slug": "superstate-short-duration-us-government-securities-fund-ustb",
       "reasons": [
-        "symbol_mismatch:PONZIO",
-        "slug_mismatch:ponzio-the-cat",
         "invalid_price"
       ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "37086",
-        "cmcSlug": "superstate-short-duration-us-government-securities-fund-ustb"
-      },
-      "current_mapping_reasons": [
-        "id_corrected_live_reaudit_required"
-      ]
+      "mapping_status": "unverified"
     }
   ],
   "remaining_unmapped": [
@@ -1166,8 +1099,8 @@
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
     "applied": 83,
-    "unresolved_quarantined": 67,
-    "quarantine_retained": 67,
+    "unresolved_quarantined": 65,
+    "quarantine_retained": 65,
     "canonical_symbols_changed": 0,
     "collisions": 0,
     "changes": [
@@ -2835,7 +2768,7 @@
           "cmcId": "19966",
           "cmcSlug": "quickswap-new"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source": {
           "url": "https://coinmarketcap.com/currencies/quickswap-new/",
           "ucid": "19966",
@@ -2850,7 +2783,9 @@
         "contracts": {
           "ethereum": "0xd2ba23de8a19316a638dc1e7a9adda1d74233368",
           "polygon": "0xB5C064F955D8e7F38fE0460C556a72987494eE17"
-        }
+        },
+        "live_audit_at": "2026-10-13T18:38:55.920Z",
+        "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
       },
       {
         "canonical_id": "everclear",
@@ -2863,7 +2798,7 @@
           "cmcId": "34512",
           "cmcSlug": "everclear"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/everclear/",
           "ucid": "34512",
@@ -2876,7 +2811,12 @@
         },
         "contracts": {
           "ethereum": "0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8"
-        }
+        },
+        "live_audit_at": "2026-10-13T18:38:55.920Z",
+        "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+        "live_reasons": [
+          "invalid_price"
+        ]
       },
       {
         "canonical_id": "seed-photo",
@@ -2889,7 +2829,7 @@
           "cmcId": "25490",
           "cmcSlug": "seed-photo"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source": {
           "url": "https://coinmarketcap.com/currencies/seed-photo/",
           "ucid": "25490",
@@ -2903,7 +2843,9 @@
         "additional_source_url": "https://bscscan.com/token/0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7",
         "contracts": {
           "bnb_smart_chain": "0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7"
-        }
+        },
+        "live_audit_at": "2026-10-13T18:38:55.920Z",
+        "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
       },
       {
         "canonical_id": "openeden",
@@ -2916,7 +2858,7 @@
           "cmcId": "25158",
           "cmcSlug": "openeden-tbill-vault"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/openeden-tbill-vault/",
           "ucid": "25158",
@@ -2930,7 +2872,12 @@
         "contracts": {
           "ethereum": "0xdd50C053C096CB04A3e3362E2b622529EC5f2e8a"
         },
-        "proposed_asset_kind": "tokenized_treasury_fund"
+        "proposed_asset_kind": "tokenized_treasury_fund",
+        "live_audit_at": "2026-10-13T18:38:55.920Z",
+        "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+        "live_reasons": [
+          "invalid_price"
+        ]
       },
       {
         "canonical_id": "superstate",
@@ -2943,7 +2890,7 @@
           "cmcId": "37086",
           "cmcSlug": "superstate-short-duration-us-government-securities-fund-ustb"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/superstate-short-duration-us-government-securities-fund-ustb/",
           "ucid": "37086",
@@ -2958,16 +2905,21 @@
         "contract_reference": {
           "ethereum_display": "0x4341...d31C4e"
         },
-        "proposed_asset_kind": "tokenized_private_treasury_fund"
+        "proposed_asset_kind": "tokenized_private_treasury_fund",
+        "live_audit_at": "2026-10-13T18:38:55.920Z",
+        "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+        "live_reasons": [
+          "invalid_price"
+        ]
       }
     ],
-    "released_after_live_audit": 77,
-    "pending_live_reaudit": 5,
-    "corrected_ids_with_unavailable_market_data": 1
+    "released_after_live_audit": 79,
+    "pending_live_reaudit": 0,
+    "corrected_ids_with_unavailable_market_data": 4
   },
   "migration_review": {
     "canonical_id": "quickswap",
-    "status": "QUICK_NEW_METADATA_CONFIRMED_QUOTE_PENDING",
+    "status": "QUICK_NEW_LIVE_AUDIT_VERIFIED_RUNTIME_PENDING",
     "candidate_ucid": "8206",
     "candidate_url": "https://coinmarketcap.com/currencies/quickswap/",
     "reason": "Select issuer-documented New QUICK: current utility belongs to New holders, and issuer Ethereum contract matches the provider explorer target. Old UCID 8206 is not selected. Record the 1:1000 migration for provenance only; no price/supply/snapshot multiplication or wallet transaction is performed.",
@@ -2981,11 +2933,13 @@
       "ethereum": "0xd2ba23de8a19316a638dc1e7a9adda1d74233368",
       "polygon": "0xB5C064F955D8e7F38fE0460C556a72987494eE17"
     },
-    "old_candidate_applied": false
+    "old_candidate_applied": false,
+    "live_audit_at": "2026-10-13T18:38:55.920Z",
+    "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
   },
   "remaining_failure_categories": {
-    "symbol_mismatch": 55,
-    "invalid_price_only": 10,
+    "symbol_mismatch": 51,
+    "invalid_price_only": 12,
     "quote_not_returned": 2
   },
   "runtime_parity": {
@@ -3019,8 +2973,8 @@
       "recovery": null
     }
   },
-  "remaining_failure_categories_note": "Categories describe the complete 7bae33a live audit at 2026-10-13T12:59:43.236Z. Five later metadata repairs remain quarantined and have not been live reaudited.",
-  "quarantine_source_audit_at": "2026-10-13T12:59:43.236Z",
+  "remaining_failure_categories_note": "Categories describe the complete live audit of 0838611 at 2026-10-13T18:38:55.920Z.",
+  "quarantine_source_audit_at": "2026-10-13T18:38:55.920Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
     "applied": 3,
@@ -3120,29 +3074,18 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": true,
+    "performed": false,
     "route": "/api/audit-stage5c-runtime?run=1",
-    "expected_checked": 77,
-    "expected_field_comparisons": 616,
+    "expected_checked": 79,
+    "expected_field_comparisons": 632,
     "fields_per_record": 8,
     "provider_batches": 1,
     "newly_released_canonical_ids": [
-      "bob",
-      "off-the-grid"
+      "quickswap",
+      "seed-photo"
     ],
-    "previous_evidence_report": "reports/stage5c-runtime-audit-20261013.json",
-    "note": "All 77 releases, including BOB/GUN, passed exact runtime field parity; 616/616 comparisons true.",
-    "report": "reports/stage5c-runtime-77-audit-20261013.json",
-    "counts": {
-      "checked": 77,
-      "pass": 77,
-      "fail": 0,
-      "fields_per_record": 8,
-      "provider_batches": 1
-    },
-    "audit_at": "2026-10-13T16:42:12.997Z",
-    "commit": "d12ab3133504b30fbe7ef30f9bf214e489c13881",
-    "dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7"
+    "previous_evidence_report": "reports/stage5c-runtime-77-audit-20261013.json",
+    "note": "Prior runtime evidence verifies 77 releases on d12ab31. QuickSwap New/SEED Photo have strict quote-audit evidence; numeric runtime parity for these two and the new deployment is pending."
   },
   "runtime_parity_history": [
     {
@@ -3177,8 +3120,8 @@
   "next_id_repair": {
     "reviewed_on": "2026-10-13",
     "applied": 5,
-    "quote_audit_performed": false,
-    "all_quarantines_retained": true,
+    "quote_audit_performed": true,
+    "all_quarantines_retained": false,
     "previous_dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7",
     "dataset_sha256": "02e2faaa0c512cac6eccebb78bb43b4ca75ed4aa0e538bff5468e0b121ae1d97",
     "changes": [
@@ -3193,7 +3136,7 @@
           "cmcId": "19966",
           "cmcSlug": "quickswap-new"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source": {
           "url": "https://coinmarketcap.com/currencies/quickswap-new/",
           "ucid": "19966",
@@ -3208,7 +3151,9 @@
         "contracts": {
           "ethereum": "0xd2ba23de8a19316a638dc1e7a9adda1d74233368",
           "polygon": "0xB5C064F955D8e7F38fE0460C556a72987494eE17"
-        }
+        },
+        "live_audit_at": "2026-10-13T18:38:55.920Z",
+        "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
       },
       {
         "canonical_id": "everclear",
@@ -3221,7 +3166,7 @@
           "cmcId": "34512",
           "cmcSlug": "everclear"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/everclear/",
           "ucid": "34512",
@@ -3234,7 +3179,12 @@
         },
         "contracts": {
           "ethereum": "0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8"
-        }
+        },
+        "live_audit_at": "2026-10-13T18:38:55.920Z",
+        "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+        "live_reasons": [
+          "invalid_price"
+        ]
       },
       {
         "canonical_id": "seed-photo",
@@ -3247,7 +3197,7 @@
           "cmcId": "25490",
           "cmcSlug": "seed-photo"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source": {
           "url": "https://coinmarketcap.com/currencies/seed-photo/",
           "ucid": "25490",
@@ -3261,7 +3211,9 @@
         "additional_source_url": "https://bscscan.com/token/0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7",
         "contracts": {
           "bnb_smart_chain": "0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7"
-        }
+        },
+        "live_audit_at": "2026-10-13T18:38:55.920Z",
+        "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
       },
       {
         "canonical_id": "openeden",
@@ -3274,7 +3226,7 @@
           "cmcId": "25158",
           "cmcSlug": "openeden-tbill-vault"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/openeden-tbill-vault/",
           "ucid": "25158",
@@ -3288,7 +3240,12 @@
         "contracts": {
           "ethereum": "0xdd50C053C096CB04A3e3362E2b622529EC5f2e8a"
         },
-        "proposed_asset_kind": "tokenized_treasury_fund"
+        "proposed_asset_kind": "tokenized_treasury_fund",
+        "live_audit_at": "2026-10-13T18:38:55.920Z",
+        "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+        "live_reasons": [
+          "invalid_price"
+        ]
       },
       {
         "canonical_id": "superstate",
@@ -3301,7 +3258,7 @@
           "cmcId": "37086",
           "cmcSlug": "superstate-short-duration-us-government-securities-fund-ustb"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/superstate-short-duration-us-government-securities-fund-ustb/",
           "ucid": "37086",
@@ -3316,9 +3273,53 @@
         "contract_reference": {
           "ethereum_display": "0x4341...d31C4e"
         },
-        "proposed_asset_kind": "tokenized_private_treasury_fund"
+        "proposed_asset_kind": "tokenized_private_treasury_fund",
+        "live_audit_at": "2026-10-13T18:38:55.920Z",
+        "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+        "live_reasons": [
+          "invalid_price"
+        ]
       }
     ],
-    "review_report": "reports/stage5c-next-identity-review-20261013.json"
-  }
+    "review_report": "reports/stage5c-next-identity-review-20261013.json",
+    "released_after_live_audit": [
+      "quickswap",
+      "seed-photo"
+    ],
+    "still_quarantined": [
+      "everclear",
+      "openeden",
+      "superstate"
+    ],
+    "live_audit_at": "2026-10-13T18:38:55.920Z",
+    "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+    "release_dataset_sha256": "6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311"
+  },
+  "runtime_parity_extension_history": [
+    {
+      "performed": true,
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "expected_checked": 77,
+      "expected_field_comparisons": 616,
+      "fields_per_record": 8,
+      "provider_batches": 1,
+      "newly_released_canonical_ids": [
+        "bob",
+        "off-the-grid"
+      ],
+      "previous_evidence_report": "reports/stage5c-runtime-audit-20261013.json",
+      "note": "All 77 releases, including BOB/GUN, passed exact runtime field parity; 616/616 comparisons true.",
+      "report": "reports/stage5c-runtime-77-audit-20261013.json",
+      "counts": {
+        "checked": 77,
+        "pass": 77,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 1
+      },
+      "audit_at": "2026-10-13T16:42:12.997Z",
+      "commit": "d12ab3133504b30fbe7ef30f9bf214e489c13881",
+      "dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7"
+    }
+  ]
 }

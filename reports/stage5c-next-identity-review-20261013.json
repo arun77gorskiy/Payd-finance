@@ -20,7 +20,7 @@
         "cmcId": "19966",
         "cmcSlug": "quickswap-new"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "source": {
         "url": "https://coinmarketcap.com/currencies/quickswap-new/",
         "ucid": "19966",
@@ -35,7 +35,9 @@
       "contracts": {
         "ethereum": "0xd2ba23de8a19316a638dc1e7a9adda1d74233368",
         "polygon": "0xB5C064F955D8e7F38fE0460C556a72987494eE17"
-      }
+      },
+      "live_audit_at": "2026-10-13T18:38:55.920Z",
+      "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
     },
     {
       "canonical_id": "everclear",
@@ -48,7 +50,7 @@
         "cmcId": "34512",
         "cmcSlug": "everclear"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
       "source": {
         "url": "https://coinmarketcap.com/currencies/everclear/",
         "ucid": "34512",
@@ -61,7 +63,12 @@
       },
       "contracts": {
         "ethereum": "0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8"
-      }
+      },
+      "live_audit_at": "2026-10-13T18:38:55.920Z",
+      "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+      "live_reasons": [
+        "invalid_price"
+      ]
     },
     {
       "canonical_id": "seed-photo",
@@ -74,7 +81,7 @@
         "cmcId": "25490",
         "cmcSlug": "seed-photo"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "source": {
         "url": "https://coinmarketcap.com/currencies/seed-photo/",
         "ucid": "25490",
@@ -88,7 +95,9 @@
       "additional_source_url": "https://bscscan.com/token/0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7",
       "contracts": {
         "bnb_smart_chain": "0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7"
-      }
+      },
+      "live_audit_at": "2026-10-13T18:38:55.920Z",
+      "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
     },
     {
       "canonical_id": "openeden",
@@ -101,7 +110,7 @@
         "cmcId": "25158",
         "cmcSlug": "openeden-tbill-vault"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
       "source": {
         "url": "https://coinmarketcap.com/currencies/openeden-tbill-vault/",
         "ucid": "25158",
@@ -115,7 +124,12 @@
       "contracts": {
         "ethereum": "0xdd50C053C096CB04A3e3362E2b622529EC5f2e8a"
       },
-      "proposed_asset_kind": "tokenized_treasury_fund"
+      "proposed_asset_kind": "tokenized_treasury_fund",
+      "live_audit_at": "2026-10-13T18:38:55.920Z",
+      "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+      "live_reasons": [
+        "invalid_price"
+      ]
     },
     {
       "canonical_id": "superstate",
@@ -128,7 +142,7 @@
         "cmcId": "37086",
         "cmcSlug": "superstate-short-duration-us-government-securities-fund-ustb"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
       "source": {
         "url": "https://coinmarketcap.com/currencies/superstate-short-duration-us-government-securities-fund-ustb/",
         "ucid": "37086",
@@ -143,7 +157,12 @@
       "contract_reference": {
         "ethereum_display": "0x4341...d31C4e"
       },
-      "proposed_asset_kind": "tokenized_private_treasury_fund"
+      "proposed_asset_kind": "tokenized_private_treasury_fund",
+      "live_audit_at": "2026-10-13T18:38:55.920Z",
+      "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+      "live_reasons": [
+        "invalid_price"
+      ]
     }
   ],
   "held": [
@@ -199,7 +218,7 @@
       "notes": "Provider preview lists Polynomial as the symbol with zero reported supply, not canonical POLY. It does not establish a tradable POLY token or prove absence of a token."
     }
   ],
-  "strict_live_audit_pending": true,
+  "strict_live_audit_pending": false,
   "last_verified_runtime": {
     "commit": "d12ab3133504b30fbe7ef30f9bf214e489c13881",
     "dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7",
@@ -211,5 +230,37 @@
       "provider_batches": 1
     }
   },
-  "quote_policy": "Listing/issuer/contract evidence does not prove positive price, market cap or FDV. No provider fallback by ticker, fabricated zero or blanket release."
+  "quote_policy": "Listing/issuer/contract evidence does not prove positive price, market cap or FDV. No provider fallback by ticker, fabricated zero or blanket release.",
+  "followup_live_audit": {
+    "commit": "083861149fadfbdb4489fad294670d65509148d2",
+    "dataset_sha256": "02e2faaa0c512cac6eccebb78bb43b4ca75ed4aa0e538bff5468e0b121ae1d97",
+    "audit_at": "2026-10-13T18:38:55.920Z",
+    "pass": 258,
+    "fail": 65,
+    "released": [
+      "quickswap",
+      "seed-photo"
+    ],
+    "quarantined": [
+      {
+        "canonical_id": "everclear",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "openeden",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "superstate",
+        "reasons": [
+          "invalid_price"
+        ]
+      }
+    ],
+    "scope_note": "Review counts record metadata-review decisions. This follow-up records subsequent strict quotes and release results; numeric field parity remains pending for the two new releases."
+  }
 }
