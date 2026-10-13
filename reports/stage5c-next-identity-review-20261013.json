@@ -1,0 +1,215 @@
+{
+  "stage": "5C",
+  "reviewed_on": "2026-10-13",
+  "counts": {
+    "reviewed": 10,
+    "metadata_corrections_applied": 5,
+    "held": 5,
+    "quarantines_released": 0
+  },
+  "scope": "Ten remaining records; preserve all canonical IDs/symbols and quarantine gates. Asset-kind notes are scoped product evidence, not completed catalog taxonomy.",
+  "applied": [
+    {
+      "canonical_id": "quickswap",
+      "symbol": "QUICK",
+      "before": {
+        "cmcId": "10366",
+        "cmcSlug": "quickswap"
+      },
+      "after": {
+        "cmcId": "19966",
+        "cmcSlug": "quickswap-new"
+      },
+      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/quickswap-new/",
+        "ucid": "19966",
+        "symbol": "QUICK",
+        "retrieved_on": "2026-10-13"
+      },
+      "issuer_source": {
+        "url": "https://docs.quickswap.exchange/tokens/quick",
+        "note": "Select issuer-documented New QUICK: current utility belongs to New holders, and issuer Ethereum contract matches the provider explorer target. Old UCID 8206 is not selected. Record the 1:1000 migration for provenance only; no price/supply/snapshot multiplication or wallet transaction is performed."
+      },
+      "additional_source_url": "https://blog.quickswap.exchange/posts/convert-old-quick-to-new-quick",
+      "contracts": {
+        "ethereum": "0xd2ba23de8a19316a638dc1e7a9adda1d74233368",
+        "polygon": "0xB5C064F955D8e7F38fE0460C556a72987494eE17"
+      }
+    },
+    {
+      "canonical_id": "everclear",
+      "symbol": "CLEAR",
+      "before": {
+        "cmcId": "29876",
+        "cmcSlug": "everclear"
+      },
+      "after": {
+        "cmcId": "34512",
+        "cmcSlug": "everclear"
+      },
+      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/everclear/",
+        "ucid": "34512",
+        "symbol": "CLEAR",
+        "retrieved_on": "2026-10-13"
+      },
+      "issuer_source": {
+        "url": "https://docs.everclear.org/resources/contracts/mainnet",
+        "note": "Issuer mainnet registry names the CLEAR token and full contract, matching the provider explorer target. Do not merge the separate originally unmapped connext record by alias. Provider page is a preview; valid quote availability is pending."
+      },
+      "contracts": {
+        "ethereum": "0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8"
+      }
+    },
+    {
+      "canonical_id": "seed-photo",
+      "symbol": "SEED",
+      "before": {
+        "cmcId": "10895",
+        "cmcSlug": "seed"
+      },
+      "after": {
+        "cmcId": "25490",
+        "cmcSlug": "seed-photo"
+      },
+      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/seed-photo/",
+        "ucid": "25490",
+        "symbol": "SEED",
+        "retrieved_on": "2026-10-13"
+      },
+      "issuer_source": {
+        "url": "https://www.seed.photo/",
+        "note": "Provider listing explicitly names SEED NFT Marketplace and links Seed.Photo plus this BNB contract; provider-linked explorer identifies Seed.Photo. Issuer website fetch timed out, so do not claim independent issuer-contract confirmation or completed sector taxonomy. Retain quarantine until live validation."
+      },
+      "additional_source_url": "https://bscscan.com/token/0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7",
+      "contracts": {
+        "bnb_smart_chain": "0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7"
+      }
+    },
+    {
+      "canonical_id": "openeden",
+      "symbol": "TBILL",
+      "before": {
+        "cmcId": "28143",
+        "cmcSlug": "openeden-tbill"
+      },
+      "after": {
+        "cmcId": "25158",
+        "cmcSlug": "openeden-tbill-vault"
+      },
+      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/openeden-tbill-vault/",
+        "ucid": "25158",
+        "symbol": "TBILL",
+        "retrieved_on": "2026-10-13"
+      },
+      "issuer_source": {
+        "url": "https://docs.openeden.com/usdo/guides/usdo-instant-mint-via-etherscan",
+        "note": "Provider identifies OpenEden TBILL Vault; issuer documentation names TBILL and its Ethereum contract with the same provider contract prefix/suffix. Preserve the TBILL product identity; do not substitute EDEN governance or USDO. Preview listing does not establish a market price, NAV or FDV."
+      },
+      "contracts": {
+        "ethereum": "0xdd50C053C096CB04A3e3362E2b622529EC5f2e8a"
+      },
+      "proposed_asset_kind": "tokenized_treasury_fund"
+    },
+    {
+      "canonical_id": "superstate",
+      "symbol": "USTB",
+      "before": {
+        "cmcId": "32188",
+        "cmcSlug": "superstate"
+      },
+      "after": {
+        "cmcId": "37086",
+        "cmcSlug": "superstate-short-duration-us-government-securities-fund-ustb"
+      },
+      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/superstate-short-duration-us-government-securities-fund-ustb/",
+        "ucid": "37086",
+        "symbol": "USTB",
+        "retrieved_on": "2026-10-13"
+      },
+      "issuer_source": {
+        "url": "https://superstate.com/assets/ustb",
+        "note": "Current issuer asset page identifies Invesco USTB and the Ethereum contract prefix/suffix matching the provider. Primary Invesco release states that the manager/name transition maintains the USTB ticker, contracts and token address. Do not substitute USCC or assume a $1 price. Preview listing requires live quote validation."
+      },
+      "additional_source_url": "https://www.invesco.com/us-rest/contentdetail?contentId=e17441a5-aca9-4e00-a063-8ca1f74afef3",
+      "contract_reference": {
+        "ethereum_display": "0x4341...d31C4e"
+      },
+      "proposed_asset_kind": "tokenized_private_treasury_fund"
+    }
+  ],
+  "held": [
+    {
+      "canonical_id": "matrixdock",
+      "source_url": "https://www.matrixdock.com/stbt",
+      "decision": "HOLD_PROVIDER_ID_UNCONFIRMED",
+      "identified_asset": "STBT tokenized short-term Treasury product",
+      "notes": "Issuer establishes STBT product/token existence. No matching numeric CMC ID established in this search; XAUM gold and wSTBT wrapper are different products. No $1 market quote or zero valuation inferred."
+    },
+    {
+      "canonical_id": "bullieverse",
+      "source_url": "https://coinmarketcap.com/currencies/bullieverse/",
+      "candidate": {
+        "cmcId": "17343",
+        "symbol": "$BULL",
+        "slug": "bullieverse"
+      },
+      "decision": "HOLD_CANONICAL_SYMBOL_REVIEW",
+      "notes": "Provider symbol $BULL differs from stored BULL; current record points at bullrise. Do not strip the prefix or rewrite the canonical ticker automatically. Requires issuer/ticker review."
+    },
+    {
+      "canonical_id": "rom",
+      "source_url": "https://coinmarketcap.com/currencies/romcoin/",
+      "candidate": {
+        "cmcId": "30930",
+        "symbol": "ROM",
+        "slug": "romcoin"
+      },
+      "decision": "HOLD_PROJECT_IDENTITY_UNCONFIRMED",
+      "notes": "ROMCOIN describes a logistics/remittance project while the canonical record only names rom under Gaming. A matching ticker is insufficient to identify this sparse record; do not use ROM ETF or ROMCOIN by guess."
+    },
+    {
+      "canonical_id": "rwa-x",
+      "source_url": "https://coinmarketcap.com/currencies/moonapp/",
+      "candidate": {
+        "cmcId": "29020",
+        "symbol": "APP",
+        "slug": "moonapp"
+      },
+      "decision": "HOLD_CANONICAL_SYMBOL_REVIEW",
+      "notes": "Provider lists RWAX with APP, not canonical RWAX. Keep quarantine until issuer-backed symbol/contract review."
+    },
+    {
+      "canonical_id": "polynomial",
+      "source_url": "https://coinmarketcap.com/currencies/polynomial/",
+      "candidate": {
+        "cmcId": "41882",
+        "symbol": "Polynomial",
+        "slug": "polynomial"
+      },
+      "decision": "HOLD_PLACEHOLDER_IDENTITY_REVIEW",
+      "notes": "Provider preview lists Polynomial as the symbol with zero reported supply, not canonical POLY. It does not establish a tradable POLY token or prove absence of a token."
+    }
+  ],
+  "strict_live_audit_pending": true,
+  "last_verified_runtime": {
+    "commit": "d12ab3133504b30fbe7ef30f9bf214e489c13881",
+    "dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7",
+    "counts": {
+      "checked": 77,
+      "pass": 77,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    }
+  },
+  "quote_policy": "Listing/issuer/contract evidence does not prove positive price, market cap or FDV. No provider fallback by ticker, fabricated zero or blanket release."
+}

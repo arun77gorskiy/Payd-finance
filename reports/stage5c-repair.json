@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+  "status": "RUNTIME_PARITY_PASSED_ADDITIONAL_IDS_PENDING_LIVE_REAUDIT",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -311,7 +311,14 @@
         "slug_mismatch:cake-monster",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "19966",
+        "cmcSlug": "quickswap-new"
+      },
+      "current_mapping_reasons": [
+        "id_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "sentinel",
@@ -487,7 +494,14 @@
         "slug_mismatch:kunaikash",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "34512",
+        "cmcSlug": "everclear"
+      },
+      "current_mapping_reasons": [
+        "id_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "match-quest",
@@ -645,7 +659,14 @@
         "slug_mismatch:mobster",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "25158",
+        "cmcSlug": "openeden-tbill-vault"
+      },
+      "current_mapping_reasons": [
+        "id_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "thingsix",
@@ -1051,7 +1072,14 @@
       "reasons": [
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "25490",
+        "cmcSlug": "seed-photo"
+      },
+      "current_mapping_reasons": [
+        "id_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "trademate",
@@ -1091,7 +1119,14 @@
         "slug_mismatch:ponzio-the-cat",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "37086",
+        "cmcSlug": "superstate-short-duration-us-government-securities-fund-ustb"
+      },
+      "current_mapping_reasons": [
+        "id_corrected_live_reaudit_required"
+      ]
     }
   ],
   "remaining_unmapped": [
@@ -1130,7 +1165,7 @@
   "taxonomy_status": "NOT_COMPLETED: classify token/stablecoin/wrapped/project_without_token only using verified project identity evidence; no-quote alone does not establish no-token.",
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
-    "applied": 78,
+    "applied": 83,
     "unresolved_quarantined": 67,
     "quarantine_retained": 67,
     "canonical_symbols_changed": 0,
@@ -2788,18 +2823,165 @@
         "live_reasons": [
           "invalid_price"
         ]
+      },
+      {
+        "canonical_id": "quickswap",
+        "symbol": "QUICK",
+        "before": {
+          "cmcId": "10366",
+          "cmcSlug": "quickswap"
+        },
+        "after": {
+          "cmcId": "19966",
+          "cmcSlug": "quickswap-new"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/quickswap-new/",
+          "ucid": "19966",
+          "symbol": "QUICK",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://docs.quickswap.exchange/tokens/quick",
+          "note": "Select issuer-documented New QUICK: current utility belongs to New holders, and issuer Ethereum contract matches the provider explorer target. Old UCID 8206 is not selected. Record the 1:1000 migration for provenance only; no price/supply/snapshot multiplication or wallet transaction is performed."
+        },
+        "additional_source_url": "https://blog.quickswap.exchange/posts/convert-old-quick-to-new-quick",
+        "contracts": {
+          "ethereum": "0xd2ba23de8a19316a638dc1e7a9adda1d74233368",
+          "polygon": "0xB5C064F955D8e7F38fE0460C556a72987494eE17"
+        }
+      },
+      {
+        "canonical_id": "everclear",
+        "symbol": "CLEAR",
+        "before": {
+          "cmcId": "29876",
+          "cmcSlug": "everclear"
+        },
+        "after": {
+          "cmcId": "34512",
+          "cmcSlug": "everclear"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/everclear/",
+          "ucid": "34512",
+          "symbol": "CLEAR",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://docs.everclear.org/resources/contracts/mainnet",
+          "note": "Issuer mainnet registry names the CLEAR token and full contract, matching the provider explorer target. Do not merge the separate originally unmapped connext record by alias. Provider page is a preview; valid quote availability is pending."
+        },
+        "contracts": {
+          "ethereum": "0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8"
+        }
+      },
+      {
+        "canonical_id": "seed-photo",
+        "symbol": "SEED",
+        "before": {
+          "cmcId": "10895",
+          "cmcSlug": "seed"
+        },
+        "after": {
+          "cmcId": "25490",
+          "cmcSlug": "seed-photo"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/seed-photo/",
+          "ucid": "25490",
+          "symbol": "SEED",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://www.seed.photo/",
+          "note": "Provider listing explicitly names SEED NFT Marketplace and links Seed.Photo plus this BNB contract; provider-linked explorer identifies Seed.Photo. Issuer website fetch timed out, so do not claim independent issuer-contract confirmation or completed sector taxonomy. Retain quarantine until live validation."
+        },
+        "additional_source_url": "https://bscscan.com/token/0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7",
+        "contracts": {
+          "bnb_smart_chain": "0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7"
+        }
+      },
+      {
+        "canonical_id": "openeden",
+        "symbol": "TBILL",
+        "before": {
+          "cmcId": "28143",
+          "cmcSlug": "openeden-tbill"
+        },
+        "after": {
+          "cmcId": "25158",
+          "cmcSlug": "openeden-tbill-vault"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/openeden-tbill-vault/",
+          "ucid": "25158",
+          "symbol": "TBILL",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://docs.openeden.com/usdo/guides/usdo-instant-mint-via-etherscan",
+          "note": "Provider identifies OpenEden TBILL Vault; issuer documentation names TBILL and its Ethereum contract with the same provider contract prefix/suffix. Preserve the TBILL product identity; do not substitute EDEN governance or USDO. Preview listing does not establish a market price, NAV or FDV."
+        },
+        "contracts": {
+          "ethereum": "0xdd50C053C096CB04A3e3362E2b622529EC5f2e8a"
+        },
+        "proposed_asset_kind": "tokenized_treasury_fund"
+      },
+      {
+        "canonical_id": "superstate",
+        "symbol": "USTB",
+        "before": {
+          "cmcId": "32188",
+          "cmcSlug": "superstate"
+        },
+        "after": {
+          "cmcId": "37086",
+          "cmcSlug": "superstate-short-duration-us-government-securities-fund-ustb"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/superstate-short-duration-us-government-securities-fund-ustb/",
+          "ucid": "37086",
+          "symbol": "USTB",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://superstate.com/assets/ustb",
+          "note": "Current issuer asset page identifies Invesco USTB and the Ethereum contract prefix/suffix matching the provider. Primary Invesco release states that the manager/name transition maintains the USTB ticker, contracts and token address. Do not substitute USCC or assume a $1 price. Preview listing requires live quote validation."
+        },
+        "additional_source_url": "https://www.invesco.com/us-rest/contentdetail?contentId=e17441a5-aca9-4e00-a063-8ca1f74afef3",
+        "contract_reference": {
+          "ethereum_display": "0x4341...d31C4e"
+        },
+        "proposed_asset_kind": "tokenized_private_treasury_fund"
       }
     ],
     "released_after_live_audit": 77,
-    "pending_live_reaudit": 0,
+    "pending_live_reaudit": 5,
     "corrected_ids_with_unavailable_market_data": 1
   },
   "migration_review": {
     "canonical_id": "quickswap",
-    "status": "NOT_APPLIED",
+    "status": "QUICK_NEW_METADATA_CONFIRMED_QUOTE_PENDING",
     "candidate_ucid": "8206",
     "candidate_url": "https://coinmarketcap.com/currencies/quickswap/",
-    "reason": "Candidate listing explicitly identifies QuickSwap [Old]; Old/New token selection requires chain/contract evidence and current-asset policy."
+    "reason": "Select issuer-documented New QUICK: current utility belongs to New holders, and issuer Ethereum contract matches the provider explorer target. Old UCID 8206 is not selected. Record the 1:1000 migration for provenance only; no price/supply/snapshot multiplication or wallet transaction is performed.",
+    "applied_ucid": "19966",
+    "applied_slug": "quickswap-new",
+    "issuer_sources": [
+      "https://docs.quickswap.exchange/tokens/quick",
+      "https://blog.quickswap.exchange/posts/convert-old-quick-to-new-quick"
+    ],
+    "new_contracts": {
+      "ethereum": "0xd2ba23de8a19316a638dc1e7a9adda1d74233368",
+      "polygon": "0xB5C064F955D8e7F38fE0460C556a72987494eE17"
+    },
+    "old_candidate_applied": false
   },
   "remaining_failure_categories": {
     "symbol_mismatch": 55,
@@ -2808,33 +2990,36 @@
   },
   "runtime_parity": {
     "performed": true,
-    "route": "/api/audit-stage5c-runtime?run=1",
-    "scope": "75 repaired and released mappings",
-    "fields_per_record": 8,
-    "provider_batches": 1,
     "execution": "user_browser",
-    "commit": "5d11b1f16fa420ce564090600e01bec6367857ce",
-    "dataset_sha256": "69866b22c711d6e64d376fd97c5c6ae5b5894a22d2d8660f6925065602a963b5",
+    "route": "/api/audit-stage5c-runtime?run=1",
+    "scope": "77 corrected and released mappings",
+    "commit": "d12ab3133504b30fbe7ef30f9bf214e489c13881",
+    "dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7",
+    "audit_at": "2026-10-13T16:42:12.997Z",
     "counts": {
-      "checked": 75,
-      "pass": 75,
+      "checked": 77,
+      "pass": 77,
       "fail": 0,
       "fields_per_record": 8,
       "provider_batches": 1
     },
-    "exact_field_comparisons": 600,
+    "fields_per_record": 8,
+    "provider_batches": 1,
+    "exact_field_comparisons": 616,
     "all_exact_fields_true": true,
-    "report": "reports/stage5c-runtime-audit-20261013.json",
-    "provider_updated_at": "2026-10-13T12:35:03.000Z",
-    "audit_at": null,
-    "incomplete_timestamp_prefix": "2026-10-13T12:36:03",
-    "source_capture_note": "Discarded incomplete ts footer; no audit rows or counts altered.",
+    "report": "reports/stage5c-runtime-77-audit-20261013.json",
     "scope_limitations": [
       "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache.",
       "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
-    ]
+    ],
+    "source_capture": {
+      "filename": "Вставленный Markdown(20261013-164239).md",
+      "sha256": "dd9c3676cba726d4c5a7d98fdb7977ca606b11984686c8dce08a8d93df9e9a31",
+      "complete_json": true,
+      "recovery": null
+    }
   },
-  "remaining_failure_categories_note": "Categories describe the complete live audit of 7bae33a at 2026-10-13T12:59:43.236Z.",
+  "remaining_failure_categories_note": "Categories describe the complete 7bae33a live audit at 2026-10-13T12:59:43.236Z. Five later metadata repairs remain quarantined and have not been live reaudited.",
   "quarantine_source_audit_at": "2026-10-13T12:59:43.236Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
@@ -2935,7 +3120,7 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": false,
+    "performed": true,
     "route": "/api/audit-stage5c-runtime?run=1",
     "expected_checked": 77,
     "expected_field_comparisons": 616,
@@ -2946,6 +3131,194 @@
       "off-the-grid"
     ],
     "previous_evidence_report": "reports/stage5c-runtime-audit-20261013.json",
-    "note": "Prior runtime evidence verifies 75 releases on the recorded 5d11b1f dataset. BOB/GUN have only strict quote-audit evidence so far; the expanded runtime diagnostic must still verify all 77."
+    "note": "All 77 releases, including BOB/GUN, passed exact runtime field parity; 616/616 comparisons true.",
+    "report": "reports/stage5c-runtime-77-audit-20261013.json",
+    "counts": {
+      "checked": 77,
+      "pass": 77,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    },
+    "audit_at": "2026-10-13T16:42:12.997Z",
+    "commit": "d12ab3133504b30fbe7ef30f9bf214e489c13881",
+    "dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7"
+  },
+  "runtime_parity_history": [
+    {
+      "performed": true,
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "scope": "75 repaired and released mappings",
+      "fields_per_record": 8,
+      "provider_batches": 1,
+      "execution": "user_browser",
+      "commit": "5d11b1f16fa420ce564090600e01bec6367857ce",
+      "dataset_sha256": "69866b22c711d6e64d376fd97c5c6ae5b5894a22d2d8660f6925065602a963b5",
+      "counts": {
+        "checked": 75,
+        "pass": 75,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 1
+      },
+      "exact_field_comparisons": 600,
+      "all_exact_fields_true": true,
+      "report": "reports/stage5c-runtime-audit-20261013.json",
+      "provider_updated_at": "2026-10-13T12:35:03.000Z",
+      "audit_at": null,
+      "incomplete_timestamp_prefix": "2026-10-13T12:36:03",
+      "source_capture_note": "Discarded incomplete ts footer; no audit rows or counts altered.",
+      "scope_limitations": [
+        "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache.",
+        "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
+      ]
+    }
+  ],
+  "next_id_repair": {
+    "reviewed_on": "2026-10-13",
+    "applied": 5,
+    "quote_audit_performed": false,
+    "all_quarantines_retained": true,
+    "previous_dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7",
+    "dataset_sha256": "02e2faaa0c512cac6eccebb78bb43b4ca75ed4aa0e538bff5468e0b121ae1d97",
+    "changes": [
+      {
+        "canonical_id": "quickswap",
+        "symbol": "QUICK",
+        "before": {
+          "cmcId": "10366",
+          "cmcSlug": "quickswap"
+        },
+        "after": {
+          "cmcId": "19966",
+          "cmcSlug": "quickswap-new"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/quickswap-new/",
+          "ucid": "19966",
+          "symbol": "QUICK",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://docs.quickswap.exchange/tokens/quick",
+          "note": "Select issuer-documented New QUICK: current utility belongs to New holders, and issuer Ethereum contract matches the provider explorer target. Old UCID 8206 is not selected. Record the 1:1000 migration for provenance only; no price/supply/snapshot multiplication or wallet transaction is performed."
+        },
+        "additional_source_url": "https://blog.quickswap.exchange/posts/convert-old-quick-to-new-quick",
+        "contracts": {
+          "ethereum": "0xd2ba23de8a19316a638dc1e7a9adda1d74233368",
+          "polygon": "0xB5C064F955D8e7F38fE0460C556a72987494eE17"
+        }
+      },
+      {
+        "canonical_id": "everclear",
+        "symbol": "CLEAR",
+        "before": {
+          "cmcId": "29876",
+          "cmcSlug": "everclear"
+        },
+        "after": {
+          "cmcId": "34512",
+          "cmcSlug": "everclear"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/everclear/",
+          "ucid": "34512",
+          "symbol": "CLEAR",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://docs.everclear.org/resources/contracts/mainnet",
+          "note": "Issuer mainnet registry names the CLEAR token and full contract, matching the provider explorer target. Do not merge the separate originally unmapped connext record by alias. Provider page is a preview; valid quote availability is pending."
+        },
+        "contracts": {
+          "ethereum": "0x58b9cB810A68a7f3e1E4f8Cb45D1B9B3c79705E8"
+        }
+      },
+      {
+        "canonical_id": "seed-photo",
+        "symbol": "SEED",
+        "before": {
+          "cmcId": "10895",
+          "cmcSlug": "seed"
+        },
+        "after": {
+          "cmcId": "25490",
+          "cmcSlug": "seed-photo"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/seed-photo/",
+          "ucid": "25490",
+          "symbol": "SEED",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://www.seed.photo/",
+          "note": "Provider listing explicitly names SEED NFT Marketplace and links Seed.Photo plus this BNB contract; provider-linked explorer identifies Seed.Photo. Issuer website fetch timed out, so do not claim independent issuer-contract confirmation or completed sector taxonomy. Retain quarantine until live validation."
+        },
+        "additional_source_url": "https://bscscan.com/token/0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7",
+        "contracts": {
+          "bnb_smart_chain": "0x6730f7A6BbB7b9C8e60843948f7FEB4B6a17B7F7"
+        }
+      },
+      {
+        "canonical_id": "openeden",
+        "symbol": "TBILL",
+        "before": {
+          "cmcId": "28143",
+          "cmcSlug": "openeden-tbill"
+        },
+        "after": {
+          "cmcId": "25158",
+          "cmcSlug": "openeden-tbill-vault"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/openeden-tbill-vault/",
+          "ucid": "25158",
+          "symbol": "TBILL",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://docs.openeden.com/usdo/guides/usdo-instant-mint-via-etherscan",
+          "note": "Provider identifies OpenEden TBILL Vault; issuer documentation names TBILL and its Ethereum contract with the same provider contract prefix/suffix. Preserve the TBILL product identity; do not substitute EDEN governance or USDO. Preview listing does not establish a market price, NAV or FDV."
+        },
+        "contracts": {
+          "ethereum": "0xdd50C053C096CB04A3e3362E2b622529EC5f2e8a"
+        },
+        "proposed_asset_kind": "tokenized_treasury_fund"
+      },
+      {
+        "canonical_id": "superstate",
+        "symbol": "USTB",
+        "before": {
+          "cmcId": "32188",
+          "cmcSlug": "superstate"
+        },
+        "after": {
+          "cmcId": "37086",
+          "cmcSlug": "superstate-short-duration-us-government-securities-fund-ustb"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/superstate-short-duration-us-government-securities-fund-ustb/",
+          "ucid": "37086",
+          "symbol": "USTB",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://superstate.com/assets/ustb",
+          "note": "Current issuer asset page identifies Invesco USTB and the Ethereum contract prefix/suffix matching the provider. Primary Invesco release states that the manager/name transition maintains the USTB ticker, contracts and token address. Do not substitute USCC or assume a $1 price. Preview listing requires live quote validation."
+        },
+        "additional_source_url": "https://www.invesco.com/us-rest/contentdetail?contentId=e17441a5-aca9-4e00-a063-8ca1f74afef3",
+        "contract_reference": {
+          "ethereum_display": "0x4341...d31C4e"
+        },
+        "proposed_asset_kind": "tokenized_private_treasury_fund"
+      }
+    ],
+    "review_report": "reports/stage5c-next-identity-review-20261013.json"
   }
 }
