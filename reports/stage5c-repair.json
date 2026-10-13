@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_PARITY_PENDING",
+  "status": "RUNTIME_PARITY_PASSED_ADDITIONAL_IDS_PENDING_LIVE_REAUDIT",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -531,7 +531,14 @@
         "symbol_mismatch:BUB",
         "slug_mismatch:goodjobbub"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "36156",
+        "cmcSlug": "gunz"
+      },
+      "current_mapping_reasons": [
+        "id_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "bob",
@@ -545,7 +552,14 @@
         "slug_mismatch:shiro",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "38970",
+        "cmcSlug": "bob-build-on-bitcoin"
+      },
+      "current_mapping_reasons": [
+        "id_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "lyra",
@@ -949,7 +963,14 @@
         "slug_mismatch:cris-hensan",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "36005",
+        "cmcSlug": "mint-blockchain"
+      },
+      "current_mapping_reasons": [
+        "id_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "molecule",
@@ -1149,8 +1170,8 @@
   ],
   "taxonomy_status": "NOT_COMPLETED: classify token/stablecoin/wrapped/project_without_token only using verified project identity evidence; no-quote alone does not establish no-token.",
   "id_repairs": {
-    "status": "LIVE_AUDIT_VERIFIED",
-    "applied": 75,
+    "status": "PARTIALLY_LIVE_VERIFIED",
+    "applied": 78,
     "unresolved_quarantined": 69,
     "quarantine_retained": 69,
     "canonical_symbols_changed": 0,
@@ -2730,8 +2751,79 @@
           "retrieved_on": "2026-10-12"
         },
         "live_audit_at": "2026-10-12T11:46:50.714Z"
+      },
+      {
+        "canonical_id": "bob",
+        "symbol": "BOB",
+        "before": {
+          "cmcId": "31962",
+          "cmcSlug": "bob-2"
+        },
+        "after": {
+          "cmcId": "38970",
+          "cmcSlug": "bob-build-on-bitcoin"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/bob-build-on-bitcoin/",
+          "ucid": "38970",
+          "symbol": "BOB",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://static.gobob.xyz/BOB_Foundation_Token_Whitepaper_ATTR_V1.pdf",
+          "note": "BOB foundation token whitepaper and CMC listing identify the Build on Bitcoin L2 token."
+        }
+      },
+      {
+        "canonical_id": "off-the-grid",
+        "symbol": "GUN",
+        "before": {
+          "cmcId": "32200",
+          "cmcSlug": "gunzilla"
+        },
+        "after": {
+          "cmcId": "36156",
+          "cmcSlug": "gunz"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/gunz/",
+          "ucid": "36156",
+          "symbol": "GUN",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://gunbygunz.com/gun/",
+          "note": "Issuer identifies GUN as the native protocol token and the currency used by Off The Grid; CMC listing is GUNZ."
+        }
+      },
+      {
+        "canonical_id": "mintchain",
+        "symbol": "MINT",
+        "before": {
+          "cmcId": "31417",
+          "cmcSlug": "mintchain-2"
+        },
+        "after": {
+          "cmcId": "36005",
+          "cmcSlug": "mint-blockchain"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/mint-blockchain/",
+          "ucid": "36005",
+          "symbol": "MINT",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://www.mintchain.io/mint-token",
+          "note": "Issuer identifies MINT as the Mint Blockchain ecosystem token, with contract 0x8511138208529fe1b9a37b863c7EEE3Fe234b7Ab on Mint, OP Mainnet and Base. CMC has matching symbol and contract suffix; its page is a preview listing and does not prove live quote availability."
+        }
       }
-    ]
+    ],
+    "released_after_live_audit": 75,
+    "pending_live_reaudit": 3
   },
   "migration_review": {
     "canonical_id": "quickswap",
@@ -2746,10 +2838,113 @@
     "quote_not_returned": 2
   },
   "runtime_parity": {
-    "performed": false,
+    "performed": true,
     "route": "/api/audit-stage5c-runtime?run=1",
     "scope": "75 repaired and released mappings",
     "fields_per_record": 8,
-    "provider_batches": 1
+    "provider_batches": 1,
+    "execution": "user_browser",
+    "commit": "5d11b1f16fa420ce564090600e01bec6367857ce",
+    "dataset_sha256": "69866b22c711d6e64d376fd97c5c6ae5b5894a22d2d8660f6925065602a963b5",
+    "counts": {
+      "checked": 75,
+      "pass": 75,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    },
+    "exact_field_comparisons": 600,
+    "all_exact_fields_true": true,
+    "report": "reports/stage5c-runtime-audit-20261013.json",
+    "provider_updated_at": "2026-10-13T12:35:03.000Z",
+    "audit_at": null,
+    "incomplete_timestamp_prefix": "2026-10-13T12:36:03",
+    "source_capture_note": "Discarded incomplete ts footer; no audit rows or counts altered.",
+    "scope_limitations": [
+      "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache.",
+      "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
+    ]
+  },
+  "remaining_failure_categories_note": "Categories describe the last complete live audit of a389303; three later metadata-only corrections remain quarantined and have not been live reaudited.",
+  "quarantine_source_audit_at": "2026-10-12T11:46:50.714Z",
+  "additional_id_repair": {
+    "reviewed_on": "2026-10-13",
+    "applied": 3,
+    "quote_audit_performed": false,
+    "all_quarantines_retained": true,
+    "previous_dataset_sha256": "69866b22c711d6e64d376fd97c5c6ae5b5894a22d2d8660f6925065602a963b5",
+    "dataset_sha256": "aca53d7134395f404b65b0485b57e7d4672625126b2b95bc55d96c05d8e06da3",
+    "changes": [
+      {
+        "canonical_id": "bob",
+        "symbol": "BOB",
+        "before": {
+          "cmcId": "31962",
+          "cmcSlug": "bob-2"
+        },
+        "after": {
+          "cmcId": "38970",
+          "cmcSlug": "bob-build-on-bitcoin"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/bob-build-on-bitcoin/",
+          "ucid": "38970",
+          "symbol": "BOB",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://static.gobob.xyz/BOB_Foundation_Token_Whitepaper_ATTR_V1.pdf",
+          "note": "BOB foundation token whitepaper and CMC listing identify the Build on Bitcoin L2 token."
+        }
+      },
+      {
+        "canonical_id": "off-the-grid",
+        "symbol": "GUN",
+        "before": {
+          "cmcId": "32200",
+          "cmcSlug": "gunzilla"
+        },
+        "after": {
+          "cmcId": "36156",
+          "cmcSlug": "gunz"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/gunz/",
+          "ucid": "36156",
+          "symbol": "GUN",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://gunbygunz.com/gun/",
+          "note": "Issuer identifies GUN as the native protocol token and the currency used by Off The Grid; CMC listing is GUNZ."
+        }
+      },
+      {
+        "canonical_id": "mintchain",
+        "symbol": "MINT",
+        "before": {
+          "cmcId": "31417",
+          "cmcSlug": "mintchain-2"
+        },
+        "after": {
+          "cmcId": "36005",
+          "cmcSlug": "mint-blockchain"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/mint-blockchain/",
+          "ucid": "36005",
+          "symbol": "MINT",
+          "retrieved_on": "2026-10-13"
+        },
+        "issuer_source": {
+          "url": "https://www.mintchain.io/mint-token",
+          "note": "Issuer identifies MINT as the Mint Blockchain ecosystem token, with contract 0x8511138208529fe1b9a37b863c7EEE3Fe234b7Ab on Mint, OP Mainnet and Base. CMC has matching symbol and contract suffix; its page is a preview listing and does not prove live quote availability."
+        }
+      }
+    ],
+    "review_report": "reports/stage5c-identity-review-20261013.json"
   }
 }

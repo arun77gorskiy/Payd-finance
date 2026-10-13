@@ -4267,13 +4267,27 @@
         "Gaming"
       ],
       "market_cap_usd": 9923.705344652288,
-      "cmcId": "32200",
-      "cmcSlug": "gunzilla",
+      "cmcId": "36156",
+      "cmcSlug": "gunz",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:BUB",
-        "slug_mismatch:goodjobbub"
-      ]
+        "id_corrected_live_reaudit_required"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "32200",
+        "cmcSlug": "gunzilla",
+        "audit_reasons": [
+          "symbol_mismatch:BUB",
+          "slug_mismatch:goodjobbub"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/gunz/",
+        "issuer_url": "https://gunbygunz.com/gun/",
+        "reviewed_on": "2026-10-13",
+        "notes": "Issuer identifies GUN as the native protocol token and the currency used by Off The Grid; CMC listing is GUNZ."
+      }
     },
     {
       "id": "bob",
@@ -4283,14 +4297,28 @@
         "Layer 2"
       ],
       "market_cap_usd": 7035.49,
-      "cmcId": "31962",
-      "cmcSlug": "bob-2",
+      "cmcId": "38970",
+      "cmcSlug": "bob-build-on-bitcoin",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SHO",
-        "slug_mismatch:shiro",
-        "invalid_price"
-      ]
+        "id_corrected_live_reaudit_required"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "31962",
+        "cmcSlug": "bob-2",
+        "audit_reasons": [
+          "symbol_mismatch:SHO",
+          "slug_mismatch:shiro",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/bob-build-on-bitcoin/",
+        "issuer_url": "https://static.gobob.xyz/BOB_Foundation_Token_Whitepaper_ATTR_V1.pdf",
+        "reviewed_on": "2026-10-13",
+        "notes": "BOB foundation token whitepaper and CMC listing identify the Build on Bitcoin L2 token."
+      }
     },
     {
       "id": "lyra",
@@ -5173,14 +5201,28 @@
         "Layer 2"
       ],
       "market_cap_usd": null,
-      "cmcId": "31417",
-      "cmcSlug": "mintchain-2",
+      "cmcId": "36005",
+      "cmcSlug": "mint-blockchain",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SEAT",
-        "slug_mismatch:cris-hensan",
-        "invalid_price"
-      ]
+        "id_corrected_live_reaudit_required"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "31417",
+        "cmcSlug": "mintchain-2",
+        "audit_reasons": [
+          "symbol_mismatch:SEAT",
+          "slug_mismatch:cris-hensan",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/mint-blockchain/",
+        "issuer_url": "https://www.mintchain.io/mint-token",
+        "reviewed_on": "2026-10-13",
+        "notes": "Issuer identifies MINT as the Mint Blockchain ecosystem token, with contract 0x8511138208529fe1b9a37b863c7EEE3Fe234b7Ab on Mint, OP Mainnet and Base. CMC has matching symbol and contract suffix; its page is a preview listing and does not prove live quote availability."
+      }
     },
     {
       "id": "mango",
@@ -7559,17 +7601,17 @@
     },
     "off-the-grid": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "32200",
-      "cmcSlug": "gunzilla",
+      "notes": "Stage 5C: provider and issuer metadata reviewed 2026-10-13; ID corrected, quarantine retained until fresh strict quote audit.",
+      "cmcId": "36156",
+      "cmcSlug": "gunz",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "bob": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "31962",
-      "cmcSlug": "bob-2",
+      "notes": "Stage 5C: provider and issuer metadata reviewed 2026-10-13; ID corrected, quarantine retained until fresh strict quote audit.",
+      "cmcId": "38970",
+      "cmcSlug": "bob-build-on-bitcoin",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -7982,9 +8024,9 @@
     },
     "mintchain": {
       "final_status": "QUARANTINED",
-      "notes": "Stage 5C: failed 2026-10-12 strict audit; no market data until identity/quote is reverified.",
-      "cmcId": "31417",
-      "cmcSlug": "mintchain-2",
+      "notes": "Stage 5C: provider and issuer metadata reviewed 2026-10-13; ID corrected, quarantine retained until fresh strict quote audit.",
+      "cmcId": "36005",
+      "cmcSlug": "mint-blockchain",
       "previous_final_status": "AMBIGUOUS",
       "requires_live_reaudit": true
     },
@@ -8220,20 +8262,22 @@
   },
   "_mapping_repair": {
     "stage": "5C",
-    "status": "PARTIAL_LIVE_VERIFIED",
+    "status": "ADDITIONAL_ID_CORRECTIONS_PENDING_LIVE_REAUDIT",
     "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
     "source_audit_at": "2026-10-12T10:20:26.406Z",
     "slug_corrections": 22,
     "quarantined": 69,
-    "quarantined_symbol_mismatches": 58,
+    "quarantined_symbol_mismatches": 55,
     "quarantined_market_data_failures": 11,
-    "id_corrections": 75,
+    "id_corrections": 78,
     "identity_review_remaining": 69,
     "last_live_audit_at": "2026-10-12T11:46:50.714Z",
     "last_live_audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23",
     "last_live_audit_pass": 254,
     "last_live_audit_fail": 69,
     "released_after_live_audit": 75,
-    "last_live_audit_dataset_sha256": "ecd5469fe740e7b30c6e365947a2c971c7665aa1fec7a465c5dd3362beb541ef"
+    "last_live_audit_dataset_sha256": "ecd5469fe740e7b30c6e365947a2c971c7665aa1fec7a465c5dd3362beb541ef",
+    "pending_id_corrections": 3,
+    "quarantined_quote_pending": 3
   }
 }
