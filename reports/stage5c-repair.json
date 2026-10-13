@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "RUNTIME_PARITY_PASSED_ADDITIONAL_IDS_PENDING_LIVE_REAUDIT",
+  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -28,30 +28,39 @@
     "cmc_ids_retained": 323,
     "no_cmc_mapping": 31,
     "slug_corrections": 22,
-    "quarantined": 69,
-    "eligible_for_runtime_request": 254
+    "quarantined": 67,
+    "eligible_for_runtime_request": 256
   },
   "live_reaudit": {
     "performed": true,
     "execution": "user_browser",
-    "commit": "a389303318fdea3c979c86f5d82ce040f75bdf23",
-    "dataset_sha256": "ecd5469fe740e7b30c6e365947a2c971c7665aa1fec7a465c5dd3362beb541ef",
-    "audit_at": "2026-10-12T11:46:50.714Z",
+    "commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22",
+    "dataset_sha256": "aca53d7134395f404b65b0485b57e7d4672625126b2b95bc55d96c05d8e06da3",
+    "audit_at": "2026-10-13T12:59:43.236Z",
+    "healthz_at": "2026-10-13T12:59:28.861Z",
     "counts": {
       "dataset_total": 354,
       "mapped_expected": 323,
       "mapped_checked": 323,
       "unmapped": 31,
       "returned_quotes": 321,
-      "pass": 254,
-      "fail": 69,
+      "pass": 256,
+      "fail": 67,
       "duplicate_cmc_ids": 0,
       "duplicate_canonical_ids": 0,
       "batches": 4
     },
     "mandatory_all_pass": true,
     "strict_failures_all_quarantined": true,
-    "slug_only_failures": 0
+    "slug_only_failures": 0,
+    "report": "reports/stage5c-additional-id-audit-20261013.json",
+    "healthz_report": "reports/stage5c-additional-id-healthz-20261013.json",
+    "source_capture": {
+      "filename": "Вставленный Markdown(20261013-130000).md",
+      "sha256": "0c90fd7ba77e3beebe354c5138fccfd46d5655b929302207221ec7de6c70ff4b",
+      "complete_json": true,
+      "recovery": null
+    }
   },
   "slug_corrections": [
     {
@@ -521,47 +530,6 @@
       "mapping_status": "unverified"
     },
     {
-      "canonical_id": "off-the-grid",
-      "symbol": "GUN",
-      "expected_cmc_id": "32200",
-      "expected_cmc_slug": "gunzilla",
-      "returned_symbol": "BUB",
-      "returned_slug": "goodjobbub",
-      "reasons": [
-        "symbol_mismatch:BUB",
-        "slug_mismatch:goodjobbub"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "36156",
-        "cmcSlug": "gunz"
-      },
-      "current_mapping_reasons": [
-        "id_corrected_live_reaudit_required"
-      ]
-    },
-    {
-      "canonical_id": "bob",
-      "symbol": "BOB",
-      "expected_cmc_id": "31962",
-      "expected_cmc_slug": "bob-2",
-      "returned_symbol": "SHO",
-      "returned_slug": "shiro",
-      "reasons": [
-        "symbol_mismatch:SHO",
-        "slug_mismatch:shiro",
-        "invalid_price"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "38970",
-        "cmcSlug": "bob-build-on-bitcoin"
-      },
-      "current_mapping_reasons": [
-        "id_corrected_live_reaudit_required"
-      ]
-    },
-    {
       "canonical_id": "lyra",
       "symbol": "LYRA",
       "expected_cmc_id": "27620",
@@ -954,23 +922,14 @@
     {
       "canonical_id": "mintchain",
       "symbol": "MINT",
-      "expected_cmc_id": "31417",
-      "expected_cmc_slug": "mintchain-2",
-      "returned_symbol": "SEAT",
-      "returned_slug": "cris-hensan",
+      "expected_cmc_id": "36005",
+      "expected_cmc_slug": "mint-blockchain",
+      "returned_symbol": "MINT",
+      "returned_slug": "mint-blockchain",
       "reasons": [
-        "symbol_mismatch:SEAT",
-        "slug_mismatch:cris-hensan",
         "invalid_price"
       ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "36005",
-        "cmcSlug": "mint-blockchain"
-      },
-      "current_mapping_reasons": [
-        "id_corrected_live_reaudit_required"
-      ]
+      "mapping_status": "unverified"
     },
     {
       "canonical_id": "molecule",
@@ -1172,8 +1131,8 @@
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
     "applied": 78,
-    "unresolved_quarantined": 69,
-    "quarantine_retained": 69,
+    "unresolved_quarantined": 67,
+    "quarantine_retained": 67,
     "canonical_symbols_changed": 0,
     "collisions": 0,
     "changes": [
@@ -2763,7 +2722,7 @@
           "cmcId": "38970",
           "cmcSlug": "bob-build-on-bitcoin"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source": {
           "url": "https://coinmarketcap.com/currencies/bob-build-on-bitcoin/",
           "ucid": "38970",
@@ -2773,7 +2732,9 @@
         "issuer_source": {
           "url": "https://static.gobob.xyz/BOB_Foundation_Token_Whitepaper_ATTR_V1.pdf",
           "note": "BOB foundation token whitepaper and CMC listing identify the Build on Bitcoin L2 token."
-        }
+        },
+        "live_audit_at": "2026-10-13T12:59:43.236Z",
+        "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
       },
       {
         "canonical_id": "off-the-grid",
@@ -2786,7 +2747,7 @@
           "cmcId": "36156",
           "cmcSlug": "gunz"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source": {
           "url": "https://coinmarketcap.com/currencies/gunz/",
           "ucid": "36156",
@@ -2796,7 +2757,9 @@
         "issuer_source": {
           "url": "https://gunbygunz.com/gun/",
           "note": "Issuer identifies GUN as the native protocol token and the currency used by Off The Grid; CMC listing is GUNZ."
-        }
+        },
+        "live_audit_at": "2026-10-13T12:59:43.236Z",
+        "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
       },
       {
         "canonical_id": "mintchain",
@@ -2809,7 +2772,7 @@
           "cmcId": "36005",
           "cmcSlug": "mint-blockchain"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/mint-blockchain/",
           "ucid": "36005",
@@ -2819,11 +2782,17 @@
         "issuer_source": {
           "url": "https://www.mintchain.io/mint-token",
           "note": "Issuer identifies MINT as the Mint Blockchain ecosystem token, with contract 0x8511138208529fe1b9a37b863c7EEE3Fe234b7Ab on Mint, OP Mainnet and Base. CMC has matching symbol and contract suffix; its page is a preview listing and does not prove live quote availability."
-        }
+        },
+        "live_audit_at": "2026-10-13T12:59:43.236Z",
+        "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22",
+        "live_reasons": [
+          "invalid_price"
+        ]
       }
     ],
-    "released_after_live_audit": 75,
-    "pending_live_reaudit": 3
+    "released_after_live_audit": 77,
+    "pending_live_reaudit": 0,
+    "corrected_ids_with_unavailable_market_data": 1
   },
   "migration_review": {
     "canonical_id": "quickswap",
@@ -2833,8 +2802,8 @@
     "reason": "Candidate listing explicitly identifies QuickSwap [Old]; Old/New token selection requires chain/contract evidence and current-asset policy."
   },
   "remaining_failure_categories": {
-    "symbol_mismatch": 58,
-    "invalid_price_only": 9,
+    "symbol_mismatch": 55,
+    "invalid_price_only": 10,
     "quote_not_returned": 2
   },
   "runtime_parity": {
@@ -2865,13 +2834,13 @@
       "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
     ]
   },
-  "remaining_failure_categories_note": "Categories describe the last complete live audit of a389303; three later metadata-only corrections remain quarantined and have not been live reaudited.",
-  "quarantine_source_audit_at": "2026-10-12T11:46:50.714Z",
+  "remaining_failure_categories_note": "Categories describe the complete live audit of 7bae33a at 2026-10-13T12:59:43.236Z.",
+  "quarantine_source_audit_at": "2026-10-13T12:59:43.236Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
     "applied": 3,
-    "quote_audit_performed": false,
-    "all_quarantines_retained": true,
+    "quote_audit_performed": true,
+    "all_quarantines_retained": false,
     "previous_dataset_sha256": "69866b22c711d6e64d376fd97c5c6ae5b5894a22d2d8660f6925065602a963b5",
     "dataset_sha256": "aca53d7134395f404b65b0485b57e7d4672625126b2b95bc55d96c05d8e06da3",
     "changes": [
@@ -2886,7 +2855,7 @@
           "cmcId": "38970",
           "cmcSlug": "bob-build-on-bitcoin"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source": {
           "url": "https://coinmarketcap.com/currencies/bob-build-on-bitcoin/",
           "ucid": "38970",
@@ -2896,7 +2865,9 @@
         "issuer_source": {
           "url": "https://static.gobob.xyz/BOB_Foundation_Token_Whitepaper_ATTR_V1.pdf",
           "note": "BOB foundation token whitepaper and CMC listing identify the Build on Bitcoin L2 token."
-        }
+        },
+        "live_audit_at": "2026-10-13T12:59:43.236Z",
+        "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
       },
       {
         "canonical_id": "off-the-grid",
@@ -2909,7 +2880,7 @@
           "cmcId": "36156",
           "cmcSlug": "gunz"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source": {
           "url": "https://coinmarketcap.com/currencies/gunz/",
           "ucid": "36156",
@@ -2919,7 +2890,9 @@
         "issuer_source": {
           "url": "https://gunbygunz.com/gun/",
           "note": "Issuer identifies GUN as the native protocol token and the currency used by Off The Grid; CMC listing is GUNZ."
-        }
+        },
+        "live_audit_at": "2026-10-13T12:59:43.236Z",
+        "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
       },
       {
         "canonical_id": "mintchain",
@@ -2932,7 +2905,7 @@
           "cmcId": "36005",
           "cmcSlug": "mint-blockchain"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/mint-blockchain/",
           "ucid": "36005",
@@ -2942,9 +2915,37 @@
         "issuer_source": {
           "url": "https://www.mintchain.io/mint-token",
           "note": "Issuer identifies MINT as the Mint Blockchain ecosystem token, with contract 0x8511138208529fe1b9a37b863c7EEE3Fe234b7Ab on Mint, OP Mainnet and Base. CMC has matching symbol and contract suffix; its page is a preview listing and does not prove live quote availability."
-        }
+        },
+        "live_audit_at": "2026-10-13T12:59:43.236Z",
+        "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22",
+        "live_reasons": [
+          "invalid_price"
+        ]
       }
     ],
-    "review_report": "reports/stage5c-identity-review-20261013.json"
+    "review_report": "reports/stage5c-identity-review-20261013.json",
+    "released_after_live_audit": [
+      "bob",
+      "off-the-grid"
+    ],
+    "still_quarantined": [
+      "mintchain"
+    ],
+    "live_audit_at": "2026-10-13T12:59:43.236Z",
+    "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
+  },
+  "runtime_parity_extension": {
+    "performed": false,
+    "route": "/api/audit-stage5c-runtime?run=1",
+    "expected_checked": 77,
+    "expected_field_comparisons": 616,
+    "fields_per_record": 8,
+    "provider_batches": 1,
+    "newly_released_canonical_ids": [
+      "bob",
+      "off-the-grid"
+    ],
+    "previous_evidence_report": "reports/stage5c-runtime-audit-20261013.json",
+    "note": "Prior runtime evidence verifies 75 releases on the recorded 5d11b1f dataset. BOB/GUN have only strict quote-audit evidence so far; the expanded runtime diagnostic must still verify all 77."
   }
 }

@@ -21,7 +21,7 @@
         "cmcId": "38970",
         "cmcSlug": "bob-build-on-bitcoin"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "source": {
         "url": "https://coinmarketcap.com/currencies/bob-build-on-bitcoin/",
         "ucid": "38970",
@@ -31,7 +31,9 @@
       "issuer_source": {
         "url": "https://static.gobob.xyz/BOB_Foundation_Token_Whitepaper_ATTR_V1.pdf",
         "note": "BOB foundation token whitepaper and CMC listing identify the Build on Bitcoin L2 token."
-      }
+      },
+      "live_audit_at": "2026-10-13T12:59:43.236Z",
+      "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
     },
     {
       "canonical_id": "off-the-grid",
@@ -44,7 +46,7 @@
         "cmcId": "36156",
         "cmcSlug": "gunz"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "source": {
         "url": "https://coinmarketcap.com/currencies/gunz/",
         "ucid": "36156",
@@ -54,7 +56,9 @@
       "issuer_source": {
         "url": "https://gunbygunz.com/gun/",
         "note": "Issuer identifies GUN as the native protocol token and the currency used by Off The Grid; CMC listing is GUNZ."
-      }
+      },
+      "live_audit_at": "2026-10-13T12:59:43.236Z",
+      "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
     },
     {
       "canonical_id": "mintchain",
@@ -67,7 +71,7 @@
         "cmcId": "36005",
         "cmcSlug": "mint-blockchain"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
       "source": {
         "url": "https://coinmarketcap.com/currencies/mint-blockchain/",
         "ucid": "36005",
@@ -77,7 +81,12 @@
       "issuer_source": {
         "url": "https://www.mintchain.io/mint-token",
         "note": "Issuer identifies MINT as the Mint Blockchain ecosystem token, with contract 0x8511138208529fe1b9a37b863c7EEE3Fe234b7Ab on Mint, OP Mainnet and Base. CMC has matching symbol and contract suffix; its page is a preview listing and does not prove live quote availability."
-      }
+      },
+      "live_audit_at": "2026-10-13T12:59:43.236Z",
+      "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22",
+      "live_reasons": [
+        "invalid_price"
+      ]
     }
   ],
   "held": [
@@ -204,5 +213,25 @@
       "notes": "No primary CMC listing establishing canonical MQ/Match Quest identity found in this search. Similar Mecha Conquest/MCQ result is not used."
     }
   ],
-  "remaining_unreviewed_from_69": 53
+  "remaining_unreviewed_from_69": 53,
+  "followup_live_audit": {
+    "commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22",
+    "dataset_sha256": "aca53d7134395f404b65b0485b57e7d4672625126b2b95bc55d96c05d8e06da3",
+    "audit_at": "2026-10-13T12:59:43.236Z",
+    "pass": 256,
+    "fail": 67,
+    "released": [
+      "bob",
+      "off-the-grid"
+    ],
+    "quarantined": [
+      {
+        "canonical_id": "mintchain",
+        "reasons": [
+          "invalid_price"
+        ]
+      }
+    ],
+    "scope_note": "The 16-entry metadata review counts record the review-time decisions; this follow-up records subsequent quote-audit and release results."
+  }
 }
