@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+  "status": "RUNTIME_PARITY_PASSED_ID_AND_SYMBOL_CORRECTIONS_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -270,7 +270,15 @@
         "slug_mismatch:3x-short-theta-network-token",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "10508",
+        "cmcSlug": "instadapp",
+        "symbol": "FLUID"
+      },
+      "current_mapping_reasons": [
+        "identity_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "story-protocol",
@@ -350,7 +358,15 @@
         "symbol_mismatch:CELL",
         "slug_mismatch:cellframe"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "17132",
+        "cmcSlug": "creditum",
+        "symbol": "CREDIT"
+      },
+      "current_mapping_reasons": [
+        "identity_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "mxc",
@@ -392,7 +408,15 @@
         "slug_mismatch:karate-combat",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "31961",
+        "cmcSlug": "cerebrum-dao",
+        "symbol": "NEURON"
+      },
+      "current_mapping_reasons": [
+        "identity_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "maple",
@@ -459,7 +483,15 @@
         "slug_mismatch:mafia-world-cup",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "20267",
+        "cmcSlug": "pollen-coin",
+        "symbol": "PCN"
+      },
+      "current_mapping_reasons": [
+        "identity_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "everclear",
@@ -669,7 +701,15 @@
         "slug_mismatch:precipitate-ai",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "cmcId": "33152",
+        "cmcSlug": "walletconnect-token",
+        "symbol": "WCT"
+      },
+      "current_mapping_reasons": [
+        "identity_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "aether",
@@ -1098,10 +1138,10 @@
   "taxonomy_status": "NOT_COMPLETED: classify token/stablecoin/wrapped/project_without_token only using verified project identity evidence; no-quote alone does not establish no-token.",
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
-    "applied": 83,
+    "applied": 88,
     "unresolved_quarantined": 65,
     "quarantine_retained": 65,
-    "canonical_symbols_changed": 0,
+    "canonical_symbols_changed": 3,
     "collisions": 0,
     "changes": [
       {
@@ -2911,15 +2951,168 @@
         "live_reasons": [
           "invalid_price"
         ]
+      },
+      {
+        "canonical_id": "instadapp",
+        "symbol": "FLUID",
+        "before": {
+          "cmcId": "6363",
+          "cmcSlug": "instadapp",
+          "symbol": "INST"
+        },
+        "after": {
+          "cmcId": "10508",
+          "cmcSlug": "instadapp",
+          "symbol": "FLUID"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/instadapp/",
+          "ucid": "10508",
+          "symbol": "FLUID",
+          "retrieved_on": "2026-10-14"
+        },
+        "issuer_source": {
+          "url": "https://gov.fluid.io/t/rebranding-and-growth-plan-for-fluid-protocol/985",
+          "note": "Manual identity review: issuer documents INST-to-FLUID 1:1 rebrand with the same token address/supply; current issuer branding and provider FLUID listing agree. Provider explorer target matches the issuer Ethereum address. Preserve catalog INST as provenance; no multiplication of stored values and no wallet operation."
+        },
+        "correction_kind": "ISSUER_REBRAND_SAME_TOKEN_CONTRACT",
+        "contracts": {
+          "ethereum": "0x6f40d4A6237C257fff2dB00FA0510DeEECd303eb"
+        },
+        "additional_sources": [
+          "https://fluid.io/blog/inst",
+          "https://fluid.io/blog/general-a-new-era-new-logo-and-colors-the-liquidity-layer-for-all-finance"
+        ]
+      },
+      {
+        "canonical_id": "walletconnect",
+        "symbol": "WCT",
+        "before": {
+          "cmcId": "27319",
+          "cmcSlug": "walletconnect",
+          "symbol": "WC"
+        },
+        "after": {
+          "cmcId": "33152",
+          "cmcSlug": "walletconnect-token",
+          "symbol": "WCT"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/walletconnect-token/",
+          "ucid": "33152",
+          "symbol": "WCT",
+          "retrieved_on": "2026-10-14"
+        },
+        "issuer_source": {
+          "url": "https://walletconnect.com/blog/introducing-the-walletconnect-foundation",
+          "note": "Manual catalog correction: issuer names WalletConnect Token WCT, not WC. Issuer deployment repository and provider explorer target agree on this full Ethereum address. Preserve WC as the old catalog input; do not claim a real WC-to-WCT token migration."
+        },
+        "correction_kind": "CATALOG_SYMBOL_CORRECTION",
+        "contracts": {
+          "ethereum": "0xeF4461891DfB3AC8572cCf7C794664A8DD927945",
+          "optimism": "0xeF4461891DfB3AC8572cCf7C794664A8DD927945"
+        },
+        "issuer_source_blob_sha": "b2dddae0293caf965ce8274ef2c23a4a116dc4b8",
+        "additional_sources": [
+          "https://github.com/WalletConnect/contracts/blob/main/README.md"
+        ]
+      },
+      {
+        "canonical_id": "cerebrumdao",
+        "symbol": "NEURON",
+        "before": {
+          "cmcId": "25224",
+          "cmcSlug": "cerebrum-dao",
+          "symbol": "NEURO"
+        },
+        "after": {
+          "cmcId": "31961",
+          "cmcSlug": "cerebrum-dao",
+          "symbol": "NEURON"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/cerebrum-dao/",
+          "ucid": "31961",
+          "symbol": "NEURON",
+          "retrieved_on": "2026-10-14"
+        },
+        "issuer_source": {
+          "url": "https://www.cerebrumdao.com/neuron-token",
+          "note": "Manual catalog correction: issuer names NEURON and its purchase link identifies this Ethereum token. The provider explorer target has the identical full address. Preserve NEURO as the old catalog input; do not invent a historical NEURO token or rebrand."
+        },
+        "correction_kind": "CATALOG_SYMBOL_CORRECTION",
+        "contracts": {
+          "ethereum": "0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b"
+        },
+        "issuer_token_link": "https://app.uniswap.org/explore/tokens/ethereum/0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b"
+      },
+      {
+        "canonical_id": "creditum",
+        "symbol": "CREDIT",
+        "before": {
+          "cmcId": "8992",
+          "cmcSlug": "creditum",
+          "symbol": "CREDIT"
+        },
+        "after": {
+          "cmcId": "17132",
+          "cmcSlug": "creditum",
+          "symbol": "CREDIT"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/creditum/",
+          "ucid": "17132",
+          "symbol": "CREDIT",
+          "retrieved_on": "2026-10-14"
+        },
+        "issuer_source": {
+          "url": "https://creditum.gitbook.io/creditum",
+          "note": "Issuer documentation identifies the Revenant Finance/Fantom lending protocol and CREDIT rewards, matching provider Creditum/CREDIT metadata. This is not a similarly named consumer-credit business. Provider preview listing and archived protocol documentation do not establish current quote availability or lifecycle."
+        },
+        "correction_kind": "PROVIDER_ID_CORRECTION"
+      },
+      {
+        "canonical_id": "pollen-mobile",
+        "symbol": "PCN",
+        "before": {
+          "cmcId": "22614",
+          "cmcSlug": "pollen-mobile",
+          "symbol": "PCN"
+        },
+        "after": {
+          "cmcId": "20267",
+          "cmcSlug": "pollen-coin",
+          "symbol": "PCN"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/pollen-coin/",
+          "ucid": "20267",
+          "symbol": "PCN",
+          "retrieved_on": "2026-10-14"
+        },
+        "issuer_source": {
+          "url": "https://docs.pollenmobile.io/pollen-mobile-docs/white-paper/network-concepts",
+          "note": "Issuer identifies PollenCoin PCN and provider explicitly associates it with Pollen Mobile, not Pollen/PLN. Issuer internal-network $0.10 denomination has no cash value and is not a stablecoin peg; it must not become a spot quote, market cap or FDV. Keep quarantine until both a valid external quote and its market applicability are established; strict numeric PASS alone is insufficient for this special case."
+        },
+        "correction_kind": "PROVIDER_ID_CORRECTION",
+        "provider_contract_reference": {
+          "solana": "GWsZd8k85q2ie9SNycVSLeKkX7HLZfSsgx6Jdat9cjY1"
+        },
+        "additional_release_gate": "EXTERNAL_MARKET_VALIDITY_REQUIRED"
       }
     ],
     "released_after_live_audit": 79,
-    "pending_live_reaudit": 0,
+    "pending_live_reaudit": 5,
     "corrected_ids_with_unavailable_market_data": 4
   },
   "migration_review": {
     "canonical_id": "quickswap",
-    "status": "QUICK_NEW_LIVE_AUDIT_VERIFIED_RUNTIME_PENDING",
+    "status": "QUICK_NEW_LIVE_AND_RUNTIME_VERIFIED",
     "candidate_ucid": "8206",
     "candidate_url": "https://coinmarketcap.com/currencies/quickswap/",
     "reason": "Select issuer-documented New QUICK: current utility belongs to New holders, and issuer Ethereum contract matches the provider explorer target. Old UCID 8206 is not selected. Record the 1:1000 migration for provenance only; no price/supply/snapshot multiplication or wallet transaction is performed.",
@@ -2946,34 +3139,34 @@
     "performed": true,
     "execution": "user_browser",
     "route": "/api/audit-stage5c-runtime?run=1",
-    "scope": "77 corrected and released mappings",
-    "commit": "d12ab3133504b30fbe7ef30f9bf214e489c13881",
-    "dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7",
-    "audit_at": "2026-10-13T16:42:12.997Z",
+    "scope": "79 corrected and released mappings",
+    "commit": "743e1f6050d1876dc0be88bcf3abd6046667ee80",
+    "dataset_sha256": "6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311",
+    "audit_at": "2026-10-14T08:41:15.241Z",
     "counts": {
-      "checked": 77,
-      "pass": 77,
+      "checked": 79,
+      "pass": 79,
       "fail": 0,
       "fields_per_record": 8,
       "provider_batches": 1
     },
     "fields_per_record": 8,
     "provider_batches": 1,
-    "exact_field_comparisons": 616,
+    "exact_field_comparisons": 632,
     "all_exact_fields_true": true,
-    "report": "reports/stage5c-runtime-77-audit-20261013.json",
+    "report": "reports/stage5c-runtime-79-audit-20261014.json",
+    "source_capture": {
+      "filename": "Вставленный Markdown(20261014-084135).md",
+      "sha256": "8b86ece997efa75f8f79c1c86f32430e8ef30e170e32e9e8568c29cef665209b",
+      "complete_json": true,
+      "recovery": null
+    },
     "scope_limitations": [
       "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache.",
       "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
-    ],
-    "source_capture": {
-      "filename": "Вставленный Markdown(20261013-164239).md",
-      "sha256": "dd9c3676cba726d4c5a7d98fdb7977ca606b11984686c8dce08a8d93df9e9a31",
-      "complete_json": true,
-      "recovery": null
-    }
+    ]
   },
-  "remaining_failure_categories_note": "Categories describe the complete live audit of 0838611 at 2026-10-13T18:38:55.920Z.",
+  "remaining_failure_categories_note": "Categories describe the 0838611 full audit. Five later manually reviewed ID corrections, including three issuer-backed symbol corrections, remain quarantined and have not been live reaudited.",
   "quarantine_source_audit_at": "2026-10-13T18:38:55.920Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
@@ -3074,7 +3267,7 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": false,
+    "performed": true,
     "route": "/api/audit-stage5c-runtime?run=1",
     "expected_checked": 79,
     "expected_field_comparisons": 632,
@@ -3085,7 +3278,18 @@
       "seed-photo"
     ],
     "previous_evidence_report": "reports/stage5c-runtime-77-audit-20261013.json",
-    "note": "Prior runtime evidence verifies 77 releases on d12ab31. QuickSwap New/SEED Photo have strict quote-audit evidence; numeric runtime parity for these two and the new deployment is pending."
+    "note": "All 79 releases, including QuickSwap New and SEED Photo, passed exact runtime field parity; 632/632 comparisons true.",
+    "report": "reports/stage5c-runtime-79-audit-20261014.json",
+    "counts": {
+      "checked": 79,
+      "pass": 79,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    },
+    "audit_at": "2026-10-14T08:41:15.241Z",
+    "commit": "743e1f6050d1876dc0be88bcf3abd6046667ee80",
+    "dataset_sha256": "6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311"
   },
   "runtime_parity_history": [
     {
@@ -3115,6 +3319,37 @@
         "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache.",
         "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
       ]
+    },
+    {
+      "performed": true,
+      "execution": "user_browser",
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "scope": "77 corrected and released mappings",
+      "commit": "d12ab3133504b30fbe7ef30f9bf214e489c13881",
+      "dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7",
+      "audit_at": "2026-10-13T16:42:12.997Z",
+      "counts": {
+        "checked": 77,
+        "pass": 77,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 1
+      },
+      "fields_per_record": 8,
+      "provider_batches": 1,
+      "exact_field_comparisons": 616,
+      "all_exact_fields_true": true,
+      "report": "reports/stage5c-runtime-77-audit-20261013.json",
+      "scope_limitations": [
+        "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache.",
+        "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
+      ],
+      "source_capture": {
+        "filename": "Вставленный Markdown(20261013-164239).md",
+        "sha256": "dd9c3676cba726d4c5a7d98fdb7977ca606b11984686c8dce08a8d93df9e9a31",
+        "complete_json": true,
+        "recovery": null
+      }
     }
   ],
   "next_id_repair": {
@@ -3321,5 +3556,182 @@
       "commit": "d12ab3133504b30fbe7ef30f9bf214e489c13881",
       "dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7"
     }
-  ]
+  ],
+  "symbol_repairs": {
+    "reviewed_on": "2026-10-14",
+    "count": 3,
+    "changes": [
+      {
+        "before": "INST",
+        "after": "FLUID",
+        "kind": "ISSUER_REBRAND_SAME_TOKEN_CONTRACT",
+        "reviewed_on": "2026-10-14",
+        "issuer_url": "https://gov.fluid.io/t/rebranding-and-growth-plan-for-fluid-protocol/985",
+        "contracts": {
+          "ethereum": "0x6f40d4A6237C257fff2dB00FA0510DeEECd303eb"
+        },
+        "scope": "Explicit manual issuer/contract review; not an alias resolution rule or relaxed validator.",
+        "canonical_id": "instadapp"
+      },
+      {
+        "before": "WC",
+        "after": "WCT",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-14",
+        "issuer_url": "https://walletconnect.com/blog/introducing-the-walletconnect-foundation",
+        "contracts": {
+          "ethereum": "0xeF4461891DfB3AC8572cCf7C794664A8DD927945",
+          "optimism": "0xeF4461891DfB3AC8572cCf7C794664A8DD927945"
+        },
+        "scope": "Explicit manual issuer/contract review; not an alias resolution rule or relaxed validator.",
+        "canonical_id": "walletconnect"
+      },
+      {
+        "before": "NEURO",
+        "after": "NEURON",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-14",
+        "issuer_url": "https://www.cerebrumdao.com/neuron-token",
+        "contracts": {
+          "ethereum": "0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b"
+        },
+        "scope": "Explicit manual issuer/contract review; not an alias resolution rule or relaxed validator.",
+        "canonical_id": "cerebrumdao"
+      }
+    ],
+    "policy": "Permanent canonical IDs are unchanged; current symbols require primary issuer and matching-contract evidence. Keep previous catalog values, distinguish rebrand from catalog error, and retain quarantine until live quote verification."
+  },
+  "canonical_preservation": {
+    "canonical_ids_changed": 0,
+    "symbols_changed": 3,
+    "symbol_changes": [
+      {
+        "before": "INST",
+        "after": "FLUID",
+        "kind": "ISSUER_REBRAND_SAME_TOKEN_CONTRACT",
+        "reviewed_on": "2026-10-14",
+        "issuer_url": "https://gov.fluid.io/t/rebranding-and-growth-plan-for-fluid-protocol/985",
+        "contracts": {
+          "ethereum": "0x6f40d4A6237C257fff2dB00FA0510DeEECd303eb"
+        },
+        "scope": "Explicit manual issuer/contract review; not an alias resolution rule or relaxed validator.",
+        "canonical_id": "instadapp"
+      },
+      {
+        "before": "WC",
+        "after": "WCT",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-14",
+        "issuer_url": "https://walletconnect.com/blog/introducing-the-walletconnect-foundation",
+        "contracts": {
+          "ethereum": "0xeF4461891DfB3AC8572cCf7C794664A8DD927945",
+          "optimism": "0xeF4461891DfB3AC8572cCf7C794664A8DD927945"
+        },
+        "scope": "Explicit manual issuer/contract review; not an alias resolution rule or relaxed validator.",
+        "canonical_id": "walletconnect"
+      },
+      {
+        "before": "NEURO",
+        "after": "NEURON",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-14",
+        "issuer_url": "https://www.cerebrumdao.com/neuron-token",
+        "contracts": {
+          "ethereum": "0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b"
+        },
+        "scope": "Explicit manual issuer/contract review; not an alias resolution rule or relaxed validator.",
+        "canonical_id": "cerebrumdao"
+      }
+    ],
+    "names_changed": 0,
+    "sectors_changed": 0,
+    "snapshot_values_changed": 0
+  },
+  "issuer_reviewed_cohort": {
+    "reviewed_on": "2026-10-14",
+    "id_corrections_applied": 5,
+    "symbol_corrections_applied": 3,
+    "quote_audit_performed": false,
+    "all_quarantines_retained": true,
+    "changes": [
+      {
+        "canonical_id": "instadapp",
+        "before": {
+          "cmcId": "6363",
+          "cmcSlug": "instadapp",
+          "symbol": "INST"
+        },
+        "after": {
+          "cmcId": "10508",
+          "cmcSlug": "instadapp",
+          "symbol": "FLUID"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_REBRAND_SAME_TOKEN_CONTRACT"
+      },
+      {
+        "canonical_id": "walletconnect",
+        "before": {
+          "cmcId": "27319",
+          "cmcSlug": "walletconnect",
+          "symbol": "WC"
+        },
+        "after": {
+          "cmcId": "33152",
+          "cmcSlug": "walletconnect-token",
+          "symbol": "WCT"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "CATALOG_SYMBOL_CORRECTION"
+      },
+      {
+        "canonical_id": "cerebrumdao",
+        "before": {
+          "cmcId": "25224",
+          "cmcSlug": "cerebrum-dao",
+          "symbol": "NEURO"
+        },
+        "after": {
+          "cmcId": "31961",
+          "cmcSlug": "cerebrum-dao",
+          "symbol": "NEURON"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "CATALOG_SYMBOL_CORRECTION"
+      },
+      {
+        "canonical_id": "creditum",
+        "before": {
+          "cmcId": "8992",
+          "cmcSlug": "creditum",
+          "symbol": "CREDIT"
+        },
+        "after": {
+          "cmcId": "17132",
+          "cmcSlug": "creditum",
+          "symbol": "CREDIT"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "PROVIDER_ID_CORRECTION"
+      },
+      {
+        "canonical_id": "pollen-mobile",
+        "before": {
+          "cmcId": "22614",
+          "cmcSlug": "pollen-mobile",
+          "symbol": "PCN"
+        },
+        "after": {
+          "cmcId": "20267",
+          "cmcSlug": "pollen-coin",
+          "symbol": "PCN"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "PROVIDER_ID_CORRECTION"
+      }
+    ],
+    "previous_dataset_sha256": "6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311",
+    "dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+    "report": "reports/stage5c-issuer-identity-review-20261014.json"
+  }
 }

@@ -1,6 +1,6 @@
 # Stage 5C — CMC mapping repair
 
-Status: **258 strict PASS / 65 FAIL; 79 corrected mappings released; runtime parity verified for 77, with QuickSwap New/SEED Photo pending numeric validation**.
+Status: **last strict audit 258 PASS / 65 FAIL; 79/79 runtime PASS (632/632 fields); five issuer-reviewed ID corrections, including three symbol corrections, pending live audit**.
 
 ## Latest full audit
 
@@ -26,15 +26,15 @@ Latest raw evidence: reports/stage5c-third-id-audit-20261013.json and reports/st
 
 None of the 256 previously passing entries failed. BOB/GUN and QuickSwap New/SEED Photo release records retain the tested commit, dataset hash and audit timestamp. MINT's returned ID, symbol and slug match its corrected mapping, but the price fails validation; runtime market data stays unavailable. A strict PASS alone does not establish positive normalized price or numeric field parity: the runtime pipeline still applies its existing positive-price guard.
 
-The canonical table retains 354 records, 323 distinct CMC IDs and 31 originally unmapped records. Runtime-eligible count is now 258; quarantine count is 65. All 83 ID corrections preserve old mappings and evidence: 79 passed strict quotes (77 have numeric runtime proof, two await it), and four exact-identity mappings remain unavailable: MINT, Everclear, TBILL and USTB. All metadata corrections have now received a full strict live reaudit. Canonical IDs, symbols, sectors and snapshot market-cap values are unchanged.
+The canonical table retains 354 records, 323 distinct CMC IDs and 31 originally unmapped records. Runtime-eligible count is now 258; quarantine count is 65. All 88 ID corrections preserve old mappings and evidence: 79 passed strict quotes and numeric runtime parity, four exact-identity mappings remain unavailable (MINT, Everclear, TBILL and USTB), and five further issuer-reviewed corrections await live audit. Permanent canonical IDs, names, sectors and snapshot market-cap values are unchanged. Three current-symbol corrections are explicitly reviewed and preserve previous_catalog_symbol: INST→FLUID (issuer rebrand), WC→WCT and NEURO→NEURON (catalog errors). Other symbols are unchanged; no resolver alias fallback or relaxed validator is introduced.
 
 The latest complete strict audit reports 51 symbol mismatches, 12 invalid-price-only entries (including the four unavailable corrected IDs), and two absent quotes. Some symbol mismatches are rebrands; they are not automatically classified as wrong projects. Every quarantined or unmapped entry returns no market data and makes no provider call through the public service.
 
-QuickSwap New selection is now metadata-confirmed using issuer utility/migration documentation and matching token contracts; the Old listing remains excluded. Explicit rebrands including TON/GRAM, INST/FLUID, FXS/FRAX and IOTA/MIOTA remain under review. The 16-entry metadata review and live follow-up are in reports/stage5c-identity-review-20261013.json: three ID corrections, 13 held research leads, and two subsequent releases. Holds concern ticker differences, product/lifecycle or migration questions, and searches without a primary match; they are not final taxonomy. Toucan's issuer states that BCT admin control transferred to KlimaDAO and BCT is no longer its product. Missing quotes, preview listings, inaccessible websites and unsuccessful searches do not prove that no token exists.
+QuickSwap New selection is now metadata-confirmed using issuer utility/migration documentation and matching token contracts; the Old listing remains excluded. INST/FLUID is now issuer/contract-reviewed with metadata correction pending live quotes. TON/GRAM, FXS/FRAX and IOTA/MIOTA remain under review. The 16-entry metadata review and live follow-up are in reports/stage5c-identity-review-20261013.json: three ID corrections, 13 held research leads, and two subsequent releases. Holds concern ticker differences, product/lifecycle or migration questions, and searches without a primary match; they are not final taxonomy. Toucan's issuer states that BCT admin control transferred to KlimaDAO and BCT is no longer its product. Missing quotes, preview listings, inaccessible websites and unsuccessful searches do not prove that no token exists.
 
 ## Runtime field parity
 
-Preview-only GET /api/audit-stage5c-runtime?run=1 dynamically validates corrected mappings released after a live audit. It now selects 79 released entries, including QuickSwap New and SEED Photo. MINT, Everclear, TBILL and USTB remain quarantined and are excluded.
+Preview-only GET /api/audit-stage5c-runtime?run=1 dynamically validates corrected mappings released after a live audit. It selects the 79 released entries, including QuickSwap New and SEED Photo. MINT/CLEAR/TBILL/USTB and all five new pending corrections remain quarantined and are excluded.
 
 1. Fetch current authenticated CMC quotes through the existing adapter in one batch.
 2. Pass the fresh payload through the existing resolver, service and normalizer using an isolated audit cache.
@@ -49,9 +49,9 @@ The diagnostic verifies the server data pipeline with fresh real quotes. It does
 
 ## Validation and outstanding work
 
-79 offline tests pass: 48 core, 15 Vercel smoke and 16 mapping/runtime audit tests. Validate dataset collisions, unchanged canonical fields, complete audit coverage, release selection and quarantine consistency against the latest evidence.
+79 offline tests pass: 48 core, 15 Vercel smoke and 16 mapping/runtime audit tests. Validate dataset collisions, permanent-ID/name/sector/snapshot preservation, the three reviewed symbol changes and their archived prior values, complete audit coverage, release selection and quarantine consistency.
 
-Next, retrieve /api/audit-stage5c-runtime?run=1 on the new Preview. Require its new commit/dataset fingerprint, checked=79, pass=79, fail=0 and all 632 exact field comparisons true. The prior 77-entry evidence remains valid for the recorded d12ab31 version, but it does not validate the two new releases or this deployment. Continue evidence-based identity/data and token/stablecoin-wrapped/project_without_token/unverified taxonomy review for the 65 quarantined and 31 originally unmapped entries. Stage 5C remains incomplete. This draft PR targets stage5b/vercel-deployment; production promotion is not performed here.
+The complete runtime response at 2026-10-14T08:41:15.241Z matches commit 743e1f6050d1876dc0be88bcf3abd6046667ee80 and dataset SHA-256 6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311: all 79 LIVE/PASS, zero FAIL, 632/632 exact comparisons, all positive prices and exact canonical/CMC release identities. Evidence: reports/stage5c-runtime-79-audit-20261014.json; complete capture and timestamp, no recovery. Next, confirm the new commit/dataset fingerprint in /api/healthz and run /api/audit-stage5b?run=1 for the five new corrections. The 79-entry numeric evidence applies to the recorded tested version; those released records and the diagnostic implementation have not changed. Continue evidence-based identity/data and token/stablecoin-wrapped/project_without_token/unverified taxonomy review for the 65 quarantined and 31 originally unmapped entries. Stage 5C remains incomplete. This draft PR targets stage5b/vercel-deployment; production promotion is not performed here.
 
 ## Next metadata cohort, 2026-10-13
 
@@ -63,7 +63,7 @@ Next, retrieve /api/audit-stage5c-runtime?run=1 on the new Preview. Require its 
 | openeden | TBILL | 28143 | 25158 | openeden-tbill-vault |
 | superstate | USTB | 32188 | 37086 | superstate-short-duration-us-government-securities-fund-ustb |
 
-The full live audit confirms QuickSwap New and SEED Photo PASS; these two are released with numeric runtime validation pending. Everclear, OpenEden TBILL and Superstate USTB return the expected ID/symbol/slug but fail price validation, so remain quarantined. Preserve all canonical IDs, symbols, sectors and snapshot values, old mappings/reasons and collision protection. The source evidence, held research cases and live follow-up are in reports/stage5c-next-identity-review-20261013.json.
+The full live audit and subsequent 79-entry numeric diagnostic confirm QuickSwap New and SEED Photo PASS; both are released and numerically verified. Everclear, OpenEden TBILL and Superstate USTB return the expected ID/symbol/slug but fail price validation, so remain quarantined. Preserve all canonical IDs, sectors, snapshot values, old mappings/reasons and collision protection. Symbol exceptions require the explicit manual issuer/contract review described below and preservation of the old catalog values. The source evidence, held research cases and live follow-up are in reports/stage5c-next-identity-review-20261013.json.
 
 QuickSwap's issuer identifies New QUICK as the token with current utility and documents Ethereum/Polygon contracts plus the 1:1000 conversion from Old. The provider explorer target matches the documented New Ethereum contract. No stored price, supply or snapshot is multiplied by the conversion ratio. Everclear's issuer mainnet registry and provider target agree on CLEAR's contract; the unmapped connext record is not merged by alias.
 
@@ -75,10 +75,28 @@ Held cases: Matrixdock STBT has issuer product/token evidence but no confirmed n
 
 | Canonical ID | CMC ID | Returned identity | Price decision | Runtime release |
 | --- | ---: | --- | --- | --- |
-| quickswap | 19966 | Strict PASS | Passed strict audit; numeric runtime test pending | Released |
-| seed-photo | 25490 | Strict PASS | Passed strict audit; numeric runtime test pending | Released |
+| quickswap | 19966 | Strict PASS | Passed strict audit and exact runtime fields | Released |
+| seed-photo | 25490 | Strict PASS | Passed strict audit and exact runtime fields | Released |
 | everclear | 34512 | CLEAR / everclear match | invalid_price | Quarantined |
 | openeden | 25158 | TBILL / openeden-tbill-vault match | invalid_price | Quarantined |
 | superstate | 37086 | USTB / superstate-short-duration-us-government-securities-fund-ustb match | invalid_price | Quarantined |
 
-The complete strict audit provides no raw numeric price for its failure rows; do not infer that an invalid price is specifically zero. Issuer fund NAV and supply evidence are not substituted for CMC market quotes. The backend still rejects non-positive normalized prices and preserves unavailable fields as unavailable. The 79-entry runtime diagnostic checks positive prices and exact eight-field normalization on fresh quotes before numerical verification is considered complete.
+The complete strict audit provides no raw numeric price for its failure rows; do not infer that an invalid price is specifically zero. Issuer fund NAV and supply evidence are not substituted for CMC market quotes. The backend still rejects non-positive normalized prices and preserves unavailable fields as unavailable. The recorded 79-entry runtime diagnostic confirms positive prices and exact eight-field normalization on fresh quotes for those releases; it does not complete the unresolved catalog taxonomy.
+
+## Manual issuer/contract identity review, 2026-10-14
+
+| Permanent canonical ID | Previous catalog symbol | Current symbol | Old CMC ID | Reviewed CMC ID | Decision |
+| --- | --- | --- | ---: | ---: | --- |
+| instadapp | INST | FLUID | 6363 | 10508 | Issuer-documented same-contract rebrand; quote pending |
+| walletconnect | WC | WCT | 27319 | 33152 | Catalog ticker correction; quote pending |
+| cerebrumdao | NEURO | NEURON | 25224 | 31961 | Catalog ticker correction; quote pending |
+| creditum | CREDIT | CREDIT | 8992 | 17132 | Exact-symbol provider correction; quote pending |
+| pollen-mobile | PCN | PCN | 22614 | 20267 | Provider correction; quote and external market validity pending |
+
+This is an explicit source review, not an automatic ticker rewrite to fit a failed quote. Fluid issuer material preserves the token contract and a 1:1 unit relationship. WalletConnect's issuer announcement and deployment repository identify WCT at the provider-linked address. Cerebrum's NEURON page and linked Ethereum purchase token identify the same address as its provider listing. The permanent IDs remain stable; previous_catalog_symbol and symbol_repair distinguish historical INST from erroneous catalog WC/NEURO. Neither WC nor NEURO is invented as a formerly real token. Full evidence and contracts: reports/stage5c-issuer-identity-review-20261014.json.
+
+All five corrections remain mapping_status=unverified. Runtime eligibility stays 258, quarantine stays 65, retained provider IDs stay 323 and originally unmapped entries stay 31. The unchanged strict audit must verify the revised expected identity and valid quotes; no record is released just because the provider and issuer metadata match. The 79 previously released identities are unchanged.
+
+Creditum issuer documentation identifies the Fantom lending protocol and CREDIT, rather than similarly named consumer-credit businesses. Its historical documentation/provider preview do not establish current market availability. Pollen's issuer identifies PCN but describes its internal network denomination as non-cash value and explicitly excludes stablecoin status. The internal $0.10 number must not become a market price, market cap or FDV. PCN carries an additional external-market-validity release gate; a bare positive provider number is insufficient without establishing its market applicability.
+
+Huddle01 remains held: issuer materials describe HUDL and testnet tHUDL rewards, but no numeric provider mapping/currently tradable HUDL asset was established. Reward-calculator $1/FDV examples are not price evidence. Inaccessible or missing listing pages do not prove token absence. Review-time source dates are recorded; market/lifecycle and full token/stablecoin-wrapped/project_without_token/unverified taxonomy remain incomplete.
