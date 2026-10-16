@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+  "status": "RUNTIME_PARITY_PASSED_MIGRATION_IDENTITIES_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -342,7 +342,15 @@
         "symbol_mismatch:GENE",
         "slug_mismatch:genopets"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "symbol": "SYRUP",
+        "cmcId": "33824",
+        "cmcSlug": "maple-finance"
+      },
+      "current_mapping_reasons": [
+        "identity_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "cortex",
@@ -469,7 +477,15 @@
         "symbol_mismatch:HERA",
         "slug_mismatch:hera-finance"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "symbol": "SYK",
+        "cmcId": "32215",
+        "cmcSlug": "stryke"
+      },
+      "current_mapping_reasons": [
+        "identity_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "fantom",
@@ -709,7 +725,15 @@
       "reasons": [
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "symbol": "CXT",
+        "cmcId": "32526",
+        "cmcSlug": "covalent-x"
+      },
+      "current_mapping_reasons": [
+        "identity_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "credix",
@@ -1002,10 +1026,10 @@
   "taxonomy_status": "NOT_COMPLETED: classify token/stablecoin/wrapped/project_without_token only using verified project identity evidence; no-quote alone does not establish no-token.",
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
-    "applied": 92,
+    "applied": 95,
     "unresolved_quarantined": 57,
     "quarantine_retained": 57,
-    "canonical_symbols_changed": 10,
+    "canonical_symbols_changed": 13,
     "collisions": 0,
     "changes": [
       {
@@ -3152,12 +3176,127 @@
         "live_reasons": [
           "invalid_price"
         ]
+      },
+      {
+        "canonical_id": "maple",
+        "symbol": "SYRUP",
+        "before": {
+          "symbol": "MPL",
+          "cmcId": "13632",
+          "cmcSlug": "maple",
+          "audit_reasons": [
+            "symbol_mismatch:GENE",
+            "slug_mismatch:genopets"
+          ]
+        },
+        "after": {
+          "symbol": "SYRUP",
+          "cmcId": "33824",
+          "cmcSlug": "maple-finance"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_CURRENT_TOKEN_AFTER_MIGRATION_CLOSE",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/maple-finance/",
+          "ucid": "33824",
+          "symbol": "SYRUP",
+          "retrieved_on": "2026-10-16"
+        },
+        "issuer_source": {
+          "url": "https://docs.maple.finance/maple-for-token-holders/mpl-token/mpl-token-migration",
+          "note": "Issuer holder documentation identifies SYRUP as the current Maple utility/governance token and states the final MPL conversion extension closed on 2025-05-21. The historic holder conversion was 1 MPL to 100 SYRUP; it is not an open entitlement or a multiplier for any stored price/supply/snapshot. Issuer FAQ publishes this full SYRUP address, agreeing with the provider abbreviation at UCID 33824. Retain project canonical maple and archive MPL; current SYRUP quotes must never be described as legacy MPL quotes. Old UCID 9417/MPL is not selected; the existing 13632 was an unrelated GENE mapping. This is current-project asset selection after an enacted migration, not wallet/balance conversion."
+        },
+        "additional_sources": [
+          "https://docs.maple.finance/maple-for-token-holders/mpl-token/faqs",
+          "https://coinmarketcap.com/currencies/maple/"
+        ],
+        "contracts": {
+          "ethereum": "0x643C4E15d7d62Ad0aBeC4a9BD4b001aA3Ef52d66"
+        },
+        "provider_contract_display": "0x643C...f52d66"
+      },
+      {
+        "canonical_id": "covalent",
+        "symbol": "CXT",
+        "before": {
+          "symbol": "CQT",
+          "cmcId": "7411",
+          "cmcSlug": "covalent",
+          "audit_reasons": [
+            "invalid_price"
+          ]
+        },
+        "after": {
+          "symbol": "CXT",
+          "cmcId": "32526",
+          "cmcSlug": "covalent-x"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_TOKEN_MIGRATION_CURRENT_ASSET",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/covalent-x/",
+          "ucid": "32526",
+          "symbol": "CXT",
+          "retrieved_on": "2026-10-16"
+        },
+        "issuer_source": {
+          "url": "https://staking.covalenthq.com/blog/update-on-cxt-cqt-migration/",
+          "note": "Issuer migration update and completion announcement identify CXT as the replacement network token and CQT as deprecated. The snapshot-based 1:1 distribution was historical; post-snapshot CQT purchases do not imply a present CXT entitlement, and no swap portal/action is performed here. Issuer-hosted search text publishes the full CXT address, matching the abbreviation at provider UCID 32526. UCID 7411 remains the archived legacy CQT identity, not an arbitrary wrong-project ID. Keep canonical covalent while explicitly selecting current CXT; never relabel a CXT quote as CQT."
+        },
+        "additional_sources": [
+          "https://www.covalenthq.com/blog/covalent-announces-completion-of-token-migration-to-cxt/",
+          "https://coinmarketcap.com/currencies/covalent/"
+        ],
+        "contracts": {
+          "ethereum": "0x7ABc8A5768E6bE61A6c693a6e4EAcb5B60602C4D"
+        },
+        "provider_contract_display": "0x7abc...602c4d"
+      },
+      {
+        "canonical_id": "dopex",
+        "symbol": "SYK",
+        "before": {
+          "symbol": "DPX",
+          "cmcId": "19225",
+          "cmcSlug": "dopex",
+          "audit_reasons": [
+            "symbol_mismatch:HERA",
+            "slug_mismatch:hera-finance"
+          ]
+        },
+        "after": {
+          "symbol": "SYK",
+          "cmcId": "32215",
+          "cmcSlug": "stryke"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_PROJECT_AND_TOKEN_MIGRATION",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/stryke/",
+          "ucid": "32215",
+          "symbol": "SYK",
+          "retrieved_on": "2026-10-16"
+        },
+        "issuer_source": {
+          "url": "https://blog.stryke.xyz/articles/syk-is-here",
+          "note": "Issuer .xyz docs explicitly describe Dopex becoming Stryke and introducing SYK. Its official SYK-is-here article, linked by the provider migration notice and republished by the issuer, announces enacted DPX/rDPX-to-SYK migration and publishes this full address, agreeing with the abbreviation at UCID 32215. Select current SYK for the permanent project ID dopex; retain DPX and the unrelated HERA mapping as provenance. Legacy DPX UCID 11188 is not selected. No xSYK/rDPX substitution, conversion-ratio scaling, wallet transaction or assertion of an open migration window is introduced. Unverified similarly named domains are not issuer evidence."
+        },
+        "additional_sources": [
+          "https://docs.stryke.xyz/",
+          "https://www.stryke.xyz/en",
+          "https://paragraph.com/@stryke-blog/syk-is-here",
+          "https://coinmarketcap.com/currencies/dopex/"
+        ],
+        "contracts": {
+          "arbitrum": "0xACC51FFDeF63fB0c014c882267C3A17261A5eD50"
+        },
+        "provider_contract_display": "0xacc5...a5ed50"
       }
     ],
     "released_after_live_audit": 84,
-    "pending_live_reaudit": 0,
+    "pending_live_reaudit": 3,
     "corrected_ids_with_unavailable_market_data": 8,
-    "symbol_corrections_within_id_replacements": 7,
+    "symbol_corrections_within_id_replacements": 10,
     "symbol_corrections_with_retained_ids": 3
   },
   "migration_review": {
@@ -3189,26 +3328,26 @@
     "performed": true,
     "execution": "user_browser",
     "route": "/api/audit-stage5c-runtime?run=1",
-    "scope": "85 corrected and released mappings: 82 numeric-ID replacements and three retained-ID symbol corrections",
-    "commit": "00a1a12c57ae975eaac34e4750b90fb8bed3d613",
-    "dataset_sha256": "c8d017822b567608f2670a86c797f4edb52e5c8d5c138fe3b8b78cc71c1f55b4",
-    "audit_at": "2026-10-16T19:02:13.002Z",
+    "scope": "87 corrected and released mappings: 84 numeric-ID replacements and three retained-ID symbol corrections",
+    "commit": "7c36bfbb093fa6bbbab90726a6a908ede4b6a7df",
+    "dataset_sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3",
+    "audit_at": "2026-10-16T20:50:12.357Z",
     "counts": {
-      "checked": 85,
-      "pass": 85,
+      "checked": 87,
+      "pass": 87,
       "fail": 0,
       "fields_per_record": 8,
       "provider_batches": 1
     },
     "fields_per_record": 8,
     "provider_batches": 1,
-    "exact_field_comparisons": 680,
+    "exact_field_comparisons": 696,
     "all_exact_fields_true": true,
-    "report": "reports/stage5c-runtime-85-audit-20261016.json",
-    "healthz_report": "reports/stage5c-runtime-85-healthz-20261016.json",
+    "report": "reports/stage5c-runtime-87-audit-20261016.json",
+    "healthz_report": "reports/stage5c-runtime-87-healthz-20261016.json",
     "source_capture": {
-      "filename": "Вставленный Markdown(20261016-190230).md",
-      "sha256": "8b5ddd8f8c7b25eb8c211348b75fa01fc4cd960c06a92db5deceb022e3af86b4",
+      "filename": "Вставленный Markdown(20261016-205026).md",
+      "sha256": "1cfb4638528e32e99bad84739077bd6e93ce9c42c0a7478ceb720e3c6413a0af",
       "complete_json": true,
       "recovery": null
     },
@@ -3217,7 +3356,7 @@
       "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
     ]
   },
-  "remaining_failure_categories_note": "39 symbol mismatches, 16 invalid-price-only and two absent quotes describe the complete 38c3eb5 audit at 2026-10-16T20:33:41.731Z. GAFI/NB account for both gains; every prior 264 PASS remains passing. SPON/PORTX match expected identity but have invalid_price. No specific raw price value or supply is inferred.",
+  "remaining_failure_categories_note": "39 symbol mismatches, 16 invalid-price-only and two absent quotes describe the complete 38c3eb5 audit at 2026-10-16T20:33:41.731Z. Maple and Dopex were symbol failures; legacy Covalent CQT was invalid-price-only. Those three now have issuer-reviewed current-asset expectations but remain quarantined pending fresh strict quotes. Staged metadata is 37 unresolved symbol failures, 17 market-data failures and three pending quotes; no new PASS is inferred.",
   "quarantine_source_audit_at": "2026-10-16T20:33:41.731Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
@@ -3318,7 +3457,7 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": false,
+    "performed": true,
     "route": "/api/audit-stage5c-runtime?run=1",
     "expected_checked": 87,
     "expected_field_comparisons": 696,
@@ -3329,7 +3468,18 @@
       "nubila"
     ],
     "previous_evidence_report": "reports/stage5c-runtime-85-audit-20261016.json",
-    "note": "Prior numeric evidence verifies 85 corrected releases on 00a1a12. GAFI/NB now have strict quote-audit evidence; numeric field parity for these two and the new deployment is pending. SPON/PORTX remain excluded, and the separate PCN/PORTX validity gates remain uncleared."
+    "note": "All 87 corrected releases, including GAFI/NB, passed exact runtime field parity; 696/696 comparisons true.",
+    "counts": {
+      "checked": 87,
+      "pass": 87,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    },
+    "audit_at": "2026-10-16T20:50:12.357Z",
+    "commit": "7c36bfbb093fa6bbbab90726a6a908ede4b6a7df",
+    "dataset_sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3",
+    "report": "reports/stage5c-runtime-87-audit-20261016.json"
   },
   "runtime_parity_history": [
     {
@@ -3446,6 +3596,38 @@
       "source_capture": {
         "filename": "Вставленный Markdown(20261016-182046).md",
         "sha256": "e334b8e011c303a04e6263437348979ed8449cf1c0a6f9a7d8d969de73dd13ff",
+        "complete_json": true,
+        "recovery": null
+      },
+      "scope_limitations": [
+        "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache.",
+        "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
+      ]
+    },
+    {
+      "performed": true,
+      "execution": "user_browser",
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "scope": "85 corrected and released mappings: 82 numeric-ID replacements and three retained-ID symbol corrections",
+      "commit": "00a1a12c57ae975eaac34e4750b90fb8bed3d613",
+      "dataset_sha256": "c8d017822b567608f2670a86c797f4edb52e5c8d5c138fe3b8b78cc71c1f55b4",
+      "audit_at": "2026-10-16T19:02:13.002Z",
+      "counts": {
+        "checked": 85,
+        "pass": 85,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 1
+      },
+      "fields_per_record": 8,
+      "provider_batches": 1,
+      "exact_field_comparisons": 680,
+      "all_exact_fields_true": true,
+      "report": "reports/stage5c-runtime-85-audit-20261016.json",
+      "healthz_report": "reports/stage5c-runtime-85-healthz-20261016.json",
+      "source_capture": {
+        "filename": "Вставленный Markdown(20261016-190230).md",
+        "sha256": "8b5ddd8f8c7b25eb8c211348b75fa01fc4cd960c06a92db5deceb022e3af86b4",
         "complete_json": true,
         "recovery": null
       },
@@ -3739,7 +3921,7 @@
   ],
   "symbol_repairs": {
     "reviewed_on": "2026-10-16",
-    "count": 10,
+    "count": 13,
     "changes": [
       {
         "before": "INST",
@@ -3850,13 +4032,49 @@
           "ethereum": "0x104f3152d8ebfc3f679392977356962ff36566ac"
         },
         "canonical_id": "chainport"
+      },
+      {
+        "before": "MPL",
+        "after": "SYRUP",
+        "kind": "ISSUER_CURRENT_TOKEN_AFTER_MIGRATION_CLOSE",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://docs.maple.finance/maple-for-token-holders/mpl-token/mpl-token-migration",
+        "contracts": {
+          "ethereum": "0x643C4E15d7d62Ad0aBeC4a9BD4b001aA3Ef52d66"
+        },
+        "scope": "Explicit issuer-documented current project/token lineage; preserve the old asset identity. No price/history/balance conversion or relaxed validator.",
+        "canonical_id": "maple"
+      },
+      {
+        "before": "CQT",
+        "after": "CXT",
+        "kind": "ISSUER_TOKEN_MIGRATION_CURRENT_ASSET",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://staking.covalenthq.com/blog/update-on-cxt-cqt-migration/",
+        "contracts": {
+          "ethereum": "0x7ABc8A5768E6bE61A6c693a6e4EAcb5B60602C4D"
+        },
+        "scope": "Explicit issuer-documented current project/token lineage; preserve the old asset identity. No price/history/balance conversion or relaxed validator.",
+        "canonical_id": "covalent"
+      },
+      {
+        "before": "DPX",
+        "after": "SYK",
+        "kind": "ISSUER_PROJECT_AND_TOKEN_MIGRATION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://blog.stryke.xyz/articles/syk-is-here",
+        "contracts": {
+          "arbitrum": "0xACC51FFDeF63fB0c014c882267C3A17261A5eD50"
+        },
+        "scope": "Explicit issuer-documented current project/token lineage; preserve the old asset identity. No price/history/balance conversion or relaxed validator.",
+        "canonical_id": "dopex"
       }
     ],
     "policy": "Permanent canonical IDs, names, sectors and snapshot values remain stable. Numeric provider ID corrections require explicit provider UCID/project identity and retain old mappings. Current-symbol corrections require manual primary issuer token/lineage and exact provider project identity review. Record contract evidence and retrieval limits precisely; issuer documents alone do not prove a fresh valid quote. Preserve prior catalog symbols and retain quarantine until a fresh strict audit and any additional market-validity gate are satisfied. Never resolve by ticker, scale financial values or invent token migrations."
   },
   "canonical_preservation": {
     "canonical_ids_changed": 0,
-    "symbols_changed": 10,
+    "symbols_changed": 13,
     "symbol_changes": [
       {
         "before": "INST",
@@ -3967,6 +4185,42 @@
           "ethereum": "0x104f3152d8ebfc3f679392977356962ff36566ac"
         },
         "canonical_id": "chainport"
+      },
+      {
+        "before": "MPL",
+        "after": "SYRUP",
+        "kind": "ISSUER_CURRENT_TOKEN_AFTER_MIGRATION_CLOSE",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://docs.maple.finance/maple-for-token-holders/mpl-token/mpl-token-migration",
+        "contracts": {
+          "ethereum": "0x643C4E15d7d62Ad0aBeC4a9BD4b001aA3Ef52d66"
+        },
+        "scope": "Explicit issuer-documented current project/token lineage; preserve the old asset identity. No price/history/balance conversion or relaxed validator.",
+        "canonical_id": "maple"
+      },
+      {
+        "before": "CQT",
+        "after": "CXT",
+        "kind": "ISSUER_TOKEN_MIGRATION_CURRENT_ASSET",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://staking.covalenthq.com/blog/update-on-cxt-cqt-migration/",
+        "contracts": {
+          "ethereum": "0x7ABc8A5768E6bE61A6c693a6e4EAcb5B60602C4D"
+        },
+        "scope": "Explicit issuer-documented current project/token lineage; preserve the old asset identity. No price/history/balance conversion or relaxed validator.",
+        "canonical_id": "covalent"
+      },
+      {
+        "before": "DPX",
+        "after": "SYK",
+        "kind": "ISSUER_PROJECT_AND_TOKEN_MIGRATION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://blog.stryke.xyz/articles/syk-is-here",
+        "contracts": {
+          "arbitrum": "0xACC51FFDeF63fB0c014c882267C3A17261A5eD50"
+        },
+        "scope": "Explicit issuer-documented current project/token lineage; preserve the old asset identity. No price/history/balance conversion or relaxed validator.",
+        "canonical_id": "dopex"
       }
     ],
     "names_changed": 0,
@@ -4488,5 +4742,134 @@
     "live_audit_at": "2026-10-16T20:33:41.731Z",
     "live_audit_commit": "38c3eb5f579c92fb4ade2cbd01b359c324b1be71",
     "release_dataset_sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3"
+  },
+  "migration_identity_review": {
+    "reviewed_on": "2026-10-16",
+    "changes": [
+      {
+        "canonical_id": "maple",
+        "symbol": "SYRUP",
+        "before": {
+          "symbol": "MPL",
+          "cmcId": "13632",
+          "cmcSlug": "maple",
+          "audit_reasons": [
+            "symbol_mismatch:GENE",
+            "slug_mismatch:genopets"
+          ]
+        },
+        "after": {
+          "symbol": "SYRUP",
+          "cmcId": "33824",
+          "cmcSlug": "maple-finance"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_CURRENT_TOKEN_AFTER_MIGRATION_CLOSE",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/maple-finance/",
+          "ucid": "33824",
+          "symbol": "SYRUP",
+          "retrieved_on": "2026-10-16"
+        },
+        "issuer_source": {
+          "url": "https://docs.maple.finance/maple-for-token-holders/mpl-token/mpl-token-migration",
+          "note": "Issuer holder documentation identifies SYRUP as the current Maple utility/governance token and states the final MPL conversion extension closed on 2025-05-21. The historic holder conversion was 1 MPL to 100 SYRUP; it is not an open entitlement or a multiplier for any stored price/supply/snapshot. Issuer FAQ publishes this full SYRUP address, agreeing with the provider abbreviation at UCID 33824. Retain project canonical maple and archive MPL; current SYRUP quotes must never be described as legacy MPL quotes. Old UCID 9417/MPL is not selected; the existing 13632 was an unrelated GENE mapping. This is current-project asset selection after an enacted migration, not wallet/balance conversion."
+        },
+        "additional_sources": [
+          "https://docs.maple.finance/maple-for-token-holders/mpl-token/faqs",
+          "https://coinmarketcap.com/currencies/maple/"
+        ],
+        "contracts": {
+          "ethereum": "0x643C4E15d7d62Ad0aBeC4a9BD4b001aA3Ef52d66"
+        },
+        "provider_contract_display": "0x643C...f52d66"
+      },
+      {
+        "canonical_id": "covalent",
+        "symbol": "CXT",
+        "before": {
+          "symbol": "CQT",
+          "cmcId": "7411",
+          "cmcSlug": "covalent",
+          "audit_reasons": [
+            "invalid_price"
+          ]
+        },
+        "after": {
+          "symbol": "CXT",
+          "cmcId": "32526",
+          "cmcSlug": "covalent-x"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_TOKEN_MIGRATION_CURRENT_ASSET",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/covalent-x/",
+          "ucid": "32526",
+          "symbol": "CXT",
+          "retrieved_on": "2026-10-16"
+        },
+        "issuer_source": {
+          "url": "https://staking.covalenthq.com/blog/update-on-cxt-cqt-migration/",
+          "note": "Issuer migration update and completion announcement identify CXT as the replacement network token and CQT as deprecated. The snapshot-based 1:1 distribution was historical; post-snapshot CQT purchases do not imply a present CXT entitlement, and no swap portal/action is performed here. Issuer-hosted search text publishes the full CXT address, matching the abbreviation at provider UCID 32526. UCID 7411 remains the archived legacy CQT identity, not an arbitrary wrong-project ID. Keep canonical covalent while explicitly selecting current CXT; never relabel a CXT quote as CQT."
+        },
+        "additional_sources": [
+          "https://www.covalenthq.com/blog/covalent-announces-completion-of-token-migration-to-cxt/",
+          "https://coinmarketcap.com/currencies/covalent/"
+        ],
+        "contracts": {
+          "ethereum": "0x7ABc8A5768E6bE61A6c693a6e4EAcb5B60602C4D"
+        },
+        "provider_contract_display": "0x7abc...602c4d"
+      },
+      {
+        "canonical_id": "dopex",
+        "symbol": "SYK",
+        "before": {
+          "symbol": "DPX",
+          "cmcId": "19225",
+          "cmcSlug": "dopex",
+          "audit_reasons": [
+            "symbol_mismatch:HERA",
+            "slug_mismatch:hera-finance"
+          ]
+        },
+        "after": {
+          "symbol": "SYK",
+          "cmcId": "32215",
+          "cmcSlug": "stryke"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_PROJECT_AND_TOKEN_MIGRATION",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/stryke/",
+          "ucid": "32215",
+          "symbol": "SYK",
+          "retrieved_on": "2026-10-16"
+        },
+        "issuer_source": {
+          "url": "https://blog.stryke.xyz/articles/syk-is-here",
+          "note": "Issuer .xyz docs explicitly describe Dopex becoming Stryke and introducing SYK. Its official SYK-is-here article, linked by the provider migration notice and republished by the issuer, announces enacted DPX/rDPX-to-SYK migration and publishes this full address, agreeing with the abbreviation at UCID 32215. Select current SYK for the permanent project ID dopex; retain DPX and the unrelated HERA mapping as provenance. Legacy DPX UCID 11188 is not selected. No xSYK/rDPX substitution, conversion-ratio scaling, wallet transaction or assertion of an open migration window is introduced. Unverified similarly named domains are not issuer evidence."
+        },
+        "additional_sources": [
+          "https://docs.stryke.xyz/",
+          "https://www.stryke.xyz/en",
+          "https://paragraph.com/@stryke-blog/syk-is-here",
+          "https://coinmarketcap.com/currencies/dopex/"
+        ],
+        "contracts": {
+          "arbitrum": "0xACC51FFDeF63fB0c014c882267C3A17261A5eD50"
+        },
+        "provider_contract_display": "0xacc5...a5ed50"
+      }
+    ],
+    "numeric_ids_changed": 3,
+    "symbols_changed": 3,
+    "accompanying_slug_updates": 3,
+    "isolated_slug_corrections_added": 0,
+    "quote_audit_performed": false,
+    "all_quarantines_retained": true,
+    "previous_dataset_sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3",
+    "dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153",
+    "report": "reports/stage5c-migration-identity-review-20261016.json"
   }
 }
