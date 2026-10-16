@@ -25,14 +25,17 @@
         "cmcId": "1720",
         "cmcSlug": "iota"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "correction_kind": "ISSUER_NATIVE_UNIT_LABEL_CORRECTION",
       "issuer_url": "https://blog.iota.org/stardust-upgrade-iota-tokenomics/",
       "provider_url": "https://coinmarketcap.com/currencies/iota/",
       "additional_sources": [
         "https://blog.iota.org/rebased-mainnet-upgrade/"
       ],
-      "notes": "Issuer explicitly states that one old MIOTA is one current IOTA; 1,000,000 micros are one IOTA. The later Rebased issuer guide states no token migration is necessary for existing IOTA holders and links directly to the same provider /iota/ listing, UCID 1720. Correct the catalog unit label without multiplying price, supply or snapshot values. Do not treat an EVM placeholder as a verified ERC20 contract."
+      "notes": "Issuer explicitly states that one old MIOTA is one current IOTA; 1,000,000 micros are one IOTA. The later Rebased issuer guide states no token migration is necessary for existing IOTA holders and links directly to the same provider /iota/ listing, UCID 1720. Correct the catalog unit label without multiplying price, supply or snapshot values. Do not treat an EVM placeholder as a verified ERC20 contract.",
+      "live_audit_at": "2026-10-16T18:52:11.100Z",
+      "live_audit_commit": "d47234dbcbc4b67c1e949d1c6cc53338ae84df65",
+      "live_audit_dataset_sha256": "6dd6d064e7b7b2c86033e2030da70880a8a75120d76bfccf20176ba992fdcf1f"
     },
     {
       "canonical_id": "sentinel",
@@ -49,7 +52,7 @@
         "cmcId": "2643",
         "cmcSlug": "sentinel"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "correction_kind": "ISSUER_NATIVE_COIN_TICKER_REBRAND",
       "issuer_url": "https://docs.sentinel.co/get-started",
       "provider_url": "https://coinmarketcap.com/currencies/sentinel/",
@@ -57,7 +60,10 @@
         "https://docs.sentinel.co/p2p-coin",
         "https://docs.sentinel.co/networks/explorers"
       ],
-      "notes": "Issuer explicitly identifies P2P as the former DVPN native coin of the Sentinel blockchain. The provider has the same rebrand notice, Sentinel website and retained UCID 2643/slug sentinel. This is native-chain identity evidence, not an ERC20-contract assertion. No denomination conversion or IBC transfer is performed; the provider-linked Osmosis IBC representation is not mistaken for another project or merged with Sentinel Protocol UPP."
+      "notes": "Issuer explicitly identifies P2P as the former DVPN native coin of the Sentinel blockchain. The provider has the same rebrand notice, Sentinel website and retained UCID 2643/slug sentinel. This is native-chain identity evidence, not an ERC20-contract assertion. No denomination conversion or IBC transfer is performed; the provider-linked Osmosis IBC representation is not mistaken for another project or merged with Sentinel Protocol UPP.",
+      "live_audit_at": "2026-10-16T18:52:11.100Z",
+      "live_audit_commit": "d47234dbcbc4b67c1e949d1c6cc53338ae84df65",
+      "live_audit_dataset_sha256": "6dd6d064e7b7b2c86033e2030da70880a8a75120d76bfccf20176ba992fdcf1f"
     },
     {
       "canonical_id": "frax",
@@ -75,7 +81,7 @@
         "cmcId": "6953",
         "cmcSlug": "frax-share"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "correction_kind": "ISSUER_FXS_TO_NATIVE_FRAX_LINEAGE",
       "issuer_url": "https://docs.frax.com/protocol/frax/overview",
       "provider_url": "https://coinmarketcap.com/currencies/frax-share/",
@@ -89,10 +95,13 @@
       "contracts": {
         "ethereum_fxs_lineage": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
         "fraxtal_wfrax": "0xfc00000000000000000000000000000000000002"
-      }
+      },
+      "live_audit_at": "2026-10-16T18:52:11.100Z",
+      "live_audit_commit": "d47234dbcbc4b67c1e949d1c6cc53338ae84df65",
+      "live_audit_dataset_sha256": "6dd6d064e7b7b2c86033e2030da70880a8a75120d76bfccf20176ba992fdcf1f"
     }
   ],
-  "quote_audit_pending": true,
+  "quote_audit_pending": false,
   "taxonomy_complete": false,
   "runtime_evidence": {
     "commit": "c1f33ea8874e3fbf92b5e0ba7e6c2210b4c60926",
@@ -120,5 +129,21 @@
     "The Sentinel asset-info page rendered only a loading placeholder; do not invent on-chain denomination fields.",
     "Frax full issuer addresses were read; provider displays matching abbreviated FXS lineage contract, but its full explorer target could not be fetched.",
     "No wallet, chain or bridge execution has been audited or performed."
-  ]
+  ],
+  "followup_live_audit": {
+    "commit": "d47234dbcbc4b67c1e949d1c6cc53338ae84df65",
+    "dataset_sha256": "6dd6d064e7b7b2c86033e2030da70880a8a75120d76bfccf20176ba992fdcf1f",
+    "audit_at": "2026-10-16T18:52:11.100Z",
+    "pass_count": 264,
+    "fail_count": 59,
+    "released": [
+      "iota",
+      "sentinel",
+      "frax"
+    ],
+    "quarantined": [],
+    "report": "reports/stage5c-native-quote-audit-20261016.json",
+    "healthz_report": "reports/stage5c-native-healthz-20261016.json",
+    "scope_note": "Review-time counts remain historical. All three same-ID symbol corrections passed strict quotes and were released. Numeric runtime parity for all 85 corrected releases is pending; the separate Legacy Frax Dollar canonical record remains unchanged."
+  }
 }
