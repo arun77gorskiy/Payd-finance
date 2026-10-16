@@ -28,7 +28,7 @@
         "cmcId": "11783",
         "cmcSlug": "gamefi"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "correction_kind": "CATALOG_SYMBOL_AND_PROVIDER_ID_CORRECTION",
       "source": {
         "url": "https://coinmarketcap.com/currencies/gamefi/",
@@ -44,7 +44,10 @@
         "https://gamefi.org/",
         "https://gamefi.org/staking"
       ],
-      "provider_contract_display": "0x89Af...F4E27e"
+      "provider_contract_display": "0x89Af...F4E27e",
+      "live_audit_at": "2026-10-16T20:33:41.731Z",
+      "live_audit_commit": "38c3eb5f579c92fb4ade2cbd01b359c324b1be71",
+      "live_audit_dataset_sha256": "54f0ae2cf8f65482203fa69b3e63959f089657900882db336683c718a3566377"
     },
     {
       "canonical_id": "spheron",
@@ -64,7 +67,7 @@
         "cmcId": "37537",
         "cmcSlug": "spheron-network"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
       "correction_kind": "CATALOG_SYMBOL_AND_PROVIDER_ID_CORRECTION",
       "source": {
         "url": "https://coinmarketcap.com/currencies/spheron-network/",
@@ -80,7 +83,13 @@
         "https://www.spheron.network/",
         "https://docs.spheron.network/"
       ],
-      "provider_contract_display": "0x080D...aB5CA1"
+      "provider_contract_display": "0x080D...aB5CA1",
+      "live_audit_at": "2026-10-16T20:33:41.731Z",
+      "live_audit_commit": "38c3eb5f579c92fb4ade2cbd01b359c324b1be71",
+      "live_audit_dataset_sha256": "54f0ae2cf8f65482203fa69b3e63959f089657900882db336683c718a3566377",
+      "live_reasons": [
+        "invalid_price"
+      ]
     },
     {
       "canonical_id": "nubila",
@@ -100,7 +109,7 @@
         "cmcId": "38816",
         "cmcSlug": "nubila-network"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "correction_kind": "CATALOG_SYMBOL_AND_PROVIDER_ID_CORRECTION",
       "source": {
         "url": "https://coinmarketcap.com/currencies/nubila-network/",
@@ -116,7 +125,10 @@
         "https://www.nubila.ai/",
         "https://nubila.gitbook.io/nubila/nubila-network"
       ],
-      "provider_contract_display": "0xc2bD...99fCb1"
+      "provider_contract_display": "0xc2bD...99fCb1",
+      "live_audit_at": "2026-10-16T20:33:41.731Z",
+      "live_audit_commit": "38c3eb5f579c92fb4ade2cbd01b359c324b1be71",
+      "live_audit_dataset_sha256": "54f0ae2cf8f65482203fa69b3e63959f089657900882db336683c718a3566377"
     },
     {
       "canonical_id": "chainport",
@@ -135,7 +147,7 @@
         "cmcId": "17480",
         "cmcSlug": "chainport"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
       "correction_kind": "CATALOG_SYMBOL_AND_PROVIDER_ID_CORRECTION",
       "source": {
         "url": "https://coinmarketcap.com/currencies/chainport/",
@@ -153,10 +165,16 @@
         "ethereum": "0x104f3152d8ebfc3f679392977356962ff36566ac"
       },
       "additional_release_gate": "RAW_SUPPLY_VALIDITY_REVIEW_REQUIRED",
-      "observed_provider_supply_display": "679814605.44E PORTX"
+      "observed_provider_supply_display": "679814605.44E PORTX",
+      "live_audit_at": "2026-10-16T20:33:41.731Z",
+      "live_audit_commit": "38c3eb5f579c92fb4ade2cbd01b359c324b1be71",
+      "live_audit_dataset_sha256": "54f0ae2cf8f65482203fa69b3e63959f089657900882db336683c718a3566377",
+      "live_reasons": [
+        "invalid_price"
+      ]
     }
   ],
-  "quote_audit_pending": true,
+  "quote_audit_pending": false,
   "taxonomy_complete": false,
   "runtime_evidence": {
     "commit": "00a1a12c57ae975eaac34e4750b90fb8bed3d613",
@@ -185,5 +203,33 @@
     "Spheron SPON evidence is an issuer-hosted whitepaper search extract; direct PDF retrieval failed and the current commercial homepage omits the ticker. Token lifecycle/quote availability remain unverified.",
     "ChainPort full Ethereum contract is issuer-published; provider abbreviation agrees, but preview supply text is not a verified raw quote or reliable numeric supply.",
     "No old catalog symbol is asserted to have been an actual earlier token, and no token migration/quantity conversion is inferred."
-  ]
+  ],
+  "followup_live_audit": {
+    "commit": "38c3eb5f579c92fb4ade2cbd01b359c324b1be71",
+    "dataset_sha256": "54f0ae2cf8f65482203fa69b3e63959f089657900882db336683c718a3566377",
+    "audit_at": "2026-10-16T20:33:41.731Z",
+    "pass_count": 266,
+    "fail_count": 57,
+    "released": [
+      "gamefi",
+      "nubila"
+    ],
+    "quarantined": [
+      {
+        "canonical_id": "spheron",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "chainport",
+        "reasons": [
+          "invalid_price"
+        ]
+      }
+    ],
+    "report": "reports/stage5c-catalog-quote-audit-20261016.json",
+    "healthz_report": "reports/stage5c-catalog-healthz-20261016.json",
+    "scope_note": "Review-time counts remain historical. GAFI/NB passed strict quotes and were released; SPON/PORTX match symbol/slug but lack valid prices and remain blocked. No raw price value or supply can be inferred from invalid_price. Numeric runtime parity for all 87 corrected releases is pending, and PORTX raw-supply validity remains uncleared."
+  }
 }
