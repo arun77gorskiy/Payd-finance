@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "RUNTIME_PARITY_PASSED_ID_AND_SYMBOL_CORRECTIONS_PENDING",
+  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -28,24 +28,24 @@
     "cmc_ids_retained": 323,
     "no_cmc_mapping": 31,
     "slug_corrections": 22,
-    "quarantined": 65,
-    "eligible_for_runtime_request": 258
+    "quarantined": 62,
+    "eligible_for_runtime_request": 261
   },
   "live_reaudit": {
     "performed": true,
     "execution": "user_browser",
-    "commit": "083861149fadfbdb4489fad294670d65509148d2",
-    "dataset_sha256": "02e2faaa0c512cac6eccebb78bb43b4ca75ed4aa0e538bff5468e0b121ae1d97",
-    "audit_at": "2026-10-13T18:38:55.920Z",
-    "healthz_at": "2026-10-13T18:38:39.980Z",
+    "commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+    "dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+    "audit_at": "2026-10-16T18:02:03.345Z",
+    "healthz_at": "2026-10-16T18:01:43.685Z",
     "counts": {
       "dataset_total": 354,
       "mapped_expected": 323,
       "mapped_checked": 323,
       "unmapped": 31,
       "returned_quotes": 321,
-      "pass": 258,
-      "fail": 65,
+      "pass": 261,
+      "fail": 62,
       "duplicate_cmc_ids": 0,
       "duplicate_canonical_ids": 0,
       "batches": 4
@@ -53,14 +53,15 @@
     "mandatory_all_pass": true,
     "strict_failures_all_quarantined": true,
     "slug_only_failures": 0,
-    "report": "reports/stage5c-third-id-audit-20261013.json",
-    "healthz_report": "reports/stage5c-third-id-healthz-20261013.json",
+    "report": "reports/stage5c-issuer-quote-audit-20261016.json",
+    "healthz_report": "reports/stage5c-issuer-healthz-20261016.json",
     "source_capture": {
-      "filename": "Вставленный Markdown(20261013-183912).md",
-      "sha256": "32e95fd4a760324a5a01abeeaa87f33ae277dd587aabe51758832cdbf5e949bc",
+      "filename": "Вставленный Markdown(20261016-180228).md",
+      "sha256": "134a00d56712d1608bd64e9884c079b8bde71c5b549a74133c73e6d08f7bf365",
       "complete_json": true,
       "recovery": null
-    }
+    },
+    "provenance_note": "Audit endpoint has no embedded commit/hash. Pair the complete supplied audit with the user-supplied Preview health response, 20 seconds earlier; every failure expectation and the changed-cohort outcome match the tested canonical table."
   },
   "slug_corrections": [
     {
@@ -259,28 +260,6 @@
       "mapping_status": "unverified"
     },
     {
-      "canonical_id": "instadapp",
-      "symbol": "INST",
-      "expected_cmc_id": "6363",
-      "expected_cmc_slug": "instadapp",
-      "returned_symbol": "THETABEAR",
-      "returned_slug": "3x-short-theta-network-token",
-      "reasons": [
-        "symbol_mismatch:THETABEAR",
-        "slug_mismatch:3x-short-theta-network-token",
-        "invalid_price"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "10508",
-        "cmcSlug": "instadapp",
-        "symbol": "FLUID"
-      },
-      "current_mapping_reasons": [
-        "identity_corrected_live_reaudit_required"
-      ]
-    },
-    {
       "canonical_id": "story-protocol",
       "symbol": "IP",
       "expected_cmc_id": "29147",
@@ -350,23 +329,14 @@
     {
       "canonical_id": "creditum",
       "symbol": "CREDIT",
-      "expected_cmc_id": "8992",
+      "expected_cmc_id": "17132",
       "expected_cmc_slug": "creditum",
-      "returned_symbol": "CELL",
-      "returned_slug": "cellframe",
+      "returned_symbol": "CREDIT",
+      "returned_slug": "creditum",
       "reasons": [
-        "symbol_mismatch:CELL",
-        "slug_mismatch:cellframe"
+        "invalid_price"
       ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "17132",
-        "cmcSlug": "creditum",
-        "symbol": "CREDIT"
-      },
-      "current_mapping_reasons": [
-        "identity_corrected_live_reaudit_required"
-      ]
+      "mapping_status": "unverified"
     },
     {
       "canonical_id": "mxc",
@@ -395,28 +365,6 @@
         "invalid_price"
       ],
       "mapping_status": "unverified"
-    },
-    {
-      "canonical_id": "cerebrumdao",
-      "symbol": "NEURO",
-      "expected_cmc_id": "25224",
-      "expected_cmc_slug": "cerebrum-dao",
-      "returned_symbol": "KARATE",
-      "returned_slug": "karate-combat",
-      "reasons": [
-        "symbol_mismatch:KARATE",
-        "slug_mismatch:karate-combat",
-        "invalid_price"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "31961",
-        "cmcSlug": "cerebrum-dao",
-        "symbol": "NEURON"
-      },
-      "current_mapping_reasons": [
-        "identity_corrected_live_reaudit_required"
-      ]
     },
     {
       "canonical_id": "maple",
@@ -474,24 +422,14 @@
     {
       "canonical_id": "pollen-mobile",
       "symbol": "PCN",
-      "expected_cmc_id": "22614",
-      "expected_cmc_slug": "pollen-mobile",
-      "returned_symbol": "MWC",
-      "returned_slug": "mafia-world-cup",
+      "expected_cmc_id": "20267",
+      "expected_cmc_slug": "pollen-coin",
+      "returned_symbol": "PCN",
+      "returned_slug": "pollen-coin",
       "reasons": [
-        "symbol_mismatch:MWC",
-        "slug_mismatch:mafia-world-cup",
         "invalid_price"
       ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "20267",
-        "cmcSlug": "pollen-coin",
-        "symbol": "PCN"
-      },
-      "current_mapping_reasons": [
-        "identity_corrected_live_reaudit_required"
-      ]
+      "mapping_status": "unverified"
     },
     {
       "canonical_id": "everclear",
@@ -688,28 +626,6 @@
         "invalid_price"
       ],
       "mapping_status": "unverified"
-    },
-    {
-      "canonical_id": "walletconnect",
-      "symbol": "WC",
-      "expected_cmc_id": "27319",
-      "expected_cmc_slug": "walletconnect",
-      "returned_symbol": "RAIN",
-      "returned_slug": "precipitate-ai",
-      "reasons": [
-        "symbol_mismatch:RAIN",
-        "slug_mismatch:precipitate-ai",
-        "invalid_price"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "cmcId": "33152",
-        "cmcSlug": "walletconnect-token",
-        "symbol": "WCT"
-      },
-      "current_mapping_reasons": [
-        "identity_corrected_live_reaudit_required"
-      ]
     },
     {
       "canonical_id": "aether",
@@ -1139,8 +1055,8 @@
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
     "applied": 88,
-    "unresolved_quarantined": 65,
-    "quarantine_retained": 65,
+    "unresolved_quarantined": 62,
+    "quarantine_retained": 62,
     "canonical_symbols_changed": 3,
     "collisions": 0,
     "changes": [
@@ -2965,7 +2881,7 @@
           "cmcSlug": "instadapp",
           "symbol": "FLUID"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source": {
           "url": "https://coinmarketcap.com/currencies/instadapp/",
           "ucid": "10508",
@@ -2983,7 +2899,10 @@
         "additional_sources": [
           "https://fluid.io/blog/inst",
           "https://fluid.io/blog/general-a-new-era-new-logo-and-colors-the-liquidity-layer-for-all-finance"
-        ]
+        ],
+        "live_audit_at": "2026-10-16T18:02:03.345Z",
+        "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
       },
       {
         "canonical_id": "walletconnect",
@@ -2998,7 +2917,7 @@
           "cmcSlug": "walletconnect-token",
           "symbol": "WCT"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source": {
           "url": "https://coinmarketcap.com/currencies/walletconnect-token/",
           "ucid": "33152",
@@ -3017,7 +2936,10 @@
         "issuer_source_blob_sha": "b2dddae0293caf965ce8274ef2c23a4a116dc4b8",
         "additional_sources": [
           "https://github.com/WalletConnect/contracts/blob/main/README.md"
-        ]
+        ],
+        "live_audit_at": "2026-10-16T18:02:03.345Z",
+        "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
       },
       {
         "canonical_id": "cerebrumdao",
@@ -3032,7 +2954,7 @@
           "cmcSlug": "cerebrum-dao",
           "symbol": "NEURON"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "source": {
           "url": "https://coinmarketcap.com/currencies/cerebrum-dao/",
           "ucid": "31961",
@@ -3047,7 +2969,10 @@
         "contracts": {
           "ethereum": "0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b"
         },
-        "issuer_token_link": "https://app.uniswap.org/explore/tokens/ethereum/0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b"
+        "issuer_token_link": "https://app.uniswap.org/explore/tokens/ethereum/0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b",
+        "live_audit_at": "2026-10-16T18:02:03.345Z",
+        "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
       },
       {
         "canonical_id": "creditum",
@@ -3062,7 +2987,7 @@
           "cmcSlug": "creditum",
           "symbol": "CREDIT"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/creditum/",
           "ucid": "17132",
@@ -3073,7 +2998,13 @@
           "url": "https://creditum.gitbook.io/creditum",
           "note": "Issuer documentation identifies the Revenant Finance/Fantom lending protocol and CREDIT rewards, matching provider Creditum/CREDIT metadata. This is not a similarly named consumer-credit business. Provider preview listing and archived protocol documentation do not establish current quote availability or lifecycle."
         },
-        "correction_kind": "PROVIDER_ID_CORRECTION"
+        "correction_kind": "PROVIDER_ID_CORRECTION",
+        "live_audit_at": "2026-10-16T18:02:03.345Z",
+        "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+        "live_reasons": [
+          "invalid_price"
+        ]
       },
       {
         "canonical_id": "pollen-mobile",
@@ -3088,7 +3019,7 @@
           "cmcSlug": "pollen-coin",
           "symbol": "PCN"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/pollen-coin/",
           "ucid": "20267",
@@ -3103,12 +3034,18 @@
         "provider_contract_reference": {
           "solana": "GWsZd8k85q2ie9SNycVSLeKkX7HLZfSsgx6Jdat9cjY1"
         },
-        "additional_release_gate": "EXTERNAL_MARKET_VALIDITY_REQUIRED"
+        "additional_release_gate": "EXTERNAL_MARKET_VALIDITY_REQUIRED",
+        "live_audit_at": "2026-10-16T18:02:03.345Z",
+        "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+        "live_reasons": [
+          "invalid_price"
+        ]
       }
     ],
-    "released_after_live_audit": 79,
-    "pending_live_reaudit": 5,
-    "corrected_ids_with_unavailable_market_data": 4
+    "released_after_live_audit": 82,
+    "pending_live_reaudit": 0,
+    "corrected_ids_with_unavailable_market_data": 6
   },
   "migration_review": {
     "canonical_id": "quickswap",
@@ -3131,8 +3068,8 @@
     "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
   },
   "remaining_failure_categories": {
-    "symbol_mismatch": 51,
-    "invalid_price_only": 12,
+    "symbol_mismatch": 46,
+    "invalid_price_only": 14,
     "quote_not_returned": 2
   },
   "runtime_parity": {
@@ -3166,8 +3103,8 @@
       "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
     ]
   },
-  "remaining_failure_categories_note": "Categories describe the 0838611 full audit. Five later manually reviewed ID corrections, including three issuer-backed symbol corrections, remain quarantined and have not been live reaudited.",
-  "quarantine_source_audit_at": "2026-10-13T18:38:55.920Z",
+  "remaining_failure_categories_note": "Categories describe the complete live audit of 3cec2fe at 2026-10-16T18:02:03.345Z; the three released rows account for all gains, with no previously passing regressions.",
+  "quarantine_source_audit_at": "2026-10-16T18:02:03.345Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
     "applied": 3,
@@ -3267,29 +3204,19 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": true,
+    "performed": false,
     "route": "/api/audit-stage5c-runtime?run=1",
-    "expected_checked": 79,
-    "expected_field_comparisons": 632,
+    "expected_checked": 82,
+    "expected_field_comparisons": 656,
     "fields_per_record": 8,
     "provider_batches": 1,
     "newly_released_canonical_ids": [
-      "quickswap",
-      "seed-photo"
+      "instadapp",
+      "walletconnect",
+      "cerebrumdao"
     ],
-    "previous_evidence_report": "reports/stage5c-runtime-77-audit-20261013.json",
-    "note": "All 79 releases, including QuickSwap New and SEED Photo, passed exact runtime field parity; 632/632 comparisons true.",
-    "report": "reports/stage5c-runtime-79-audit-20261014.json",
-    "counts": {
-      "checked": 79,
-      "pass": 79,
-      "fail": 0,
-      "fields_per_record": 8,
-      "provider_batches": 1
-    },
-    "audit_at": "2026-10-14T08:41:15.241Z",
-    "commit": "743e1f6050d1876dc0be88bcf3abd6046667ee80",
-    "dataset_sha256": "6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311"
+    "previous_evidence_report": "reports/stage5c-runtime-79-audit-20261014.json",
+    "note": "Prior numeric evidence verifies 79 releases on 743e1f6. FLUID/WCT/NEURON have fresh strict quote-audit evidence; exact numeric parity for these three and the new deployment is pending."
   },
   "runtime_parity_history": [
     {
@@ -3555,6 +3482,31 @@
       "audit_at": "2026-10-13T16:42:12.997Z",
       "commit": "d12ab3133504b30fbe7ef30f9bf214e489c13881",
       "dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7"
+    },
+    {
+      "performed": true,
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "expected_checked": 79,
+      "expected_field_comparisons": 632,
+      "fields_per_record": 8,
+      "provider_batches": 1,
+      "newly_released_canonical_ids": [
+        "quickswap",
+        "seed-photo"
+      ],
+      "previous_evidence_report": "reports/stage5c-runtime-77-audit-20261013.json",
+      "note": "All 79 releases, including QuickSwap New and SEED Photo, passed exact runtime field parity; 632/632 comparisons true.",
+      "report": "reports/stage5c-runtime-79-audit-20261014.json",
+      "counts": {
+        "checked": 79,
+        "pass": 79,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 1
+      },
+      "audit_at": "2026-10-14T08:41:15.241Z",
+      "commit": "743e1f6050d1876dc0be88bcf3abd6046667ee80",
+      "dataset_sha256": "6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311"
     }
   ],
   "symbol_repairs": {
@@ -3651,8 +3603,8 @@
     "reviewed_on": "2026-10-14",
     "id_corrections_applied": 5,
     "symbol_corrections_applied": 3,
-    "quote_audit_performed": false,
-    "all_quarantines_retained": true,
+    "quote_audit_performed": true,
+    "all_quarantines_retained": false,
     "changes": [
       {
         "canonical_id": "instadapp",
@@ -3666,8 +3618,11 @@
           "cmcSlug": "instadapp",
           "symbol": "FLUID"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
-        "correction_kind": "ISSUER_REBRAND_SAME_TOKEN_CONTRACT"
+        "status": "LIVE_AUDIT_VERIFIED",
+        "correction_kind": "ISSUER_REBRAND_SAME_TOKEN_CONTRACT",
+        "live_audit_at": "2026-10-16T18:02:03.345Z",
+        "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
       },
       {
         "canonical_id": "walletconnect",
@@ -3681,8 +3636,11 @@
           "cmcSlug": "walletconnect-token",
           "symbol": "WCT"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
-        "correction_kind": "CATALOG_SYMBOL_CORRECTION"
+        "status": "LIVE_AUDIT_VERIFIED",
+        "correction_kind": "CATALOG_SYMBOL_CORRECTION",
+        "live_audit_at": "2026-10-16T18:02:03.345Z",
+        "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
       },
       {
         "canonical_id": "cerebrumdao",
@@ -3696,8 +3654,11 @@
           "cmcSlug": "cerebrum-dao",
           "symbol": "NEURON"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
-        "correction_kind": "CATALOG_SYMBOL_CORRECTION"
+        "status": "LIVE_AUDIT_VERIFIED",
+        "correction_kind": "CATALOG_SYMBOL_CORRECTION",
+        "live_audit_at": "2026-10-16T18:02:03.345Z",
+        "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
       },
       {
         "canonical_id": "creditum",
@@ -3711,8 +3672,14 @@
           "cmcSlug": "creditum",
           "symbol": "CREDIT"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
-        "correction_kind": "PROVIDER_ID_CORRECTION"
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+        "correction_kind": "PROVIDER_ID_CORRECTION",
+        "live_audit_at": "2026-10-16T18:02:03.345Z",
+        "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+        "live_reasons": [
+          "invalid_price"
+        ]
       },
       {
         "canonical_id": "pollen-mobile",
@@ -3726,12 +3693,63 @@
           "cmcSlug": "pollen-coin",
           "symbol": "PCN"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
-        "correction_kind": "PROVIDER_ID_CORRECTION"
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+        "correction_kind": "PROVIDER_ID_CORRECTION",
+        "live_audit_at": "2026-10-16T18:02:03.345Z",
+        "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+        "live_reasons": [
+          "invalid_price"
+        ]
       }
     ],
     "previous_dataset_sha256": "6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311",
     "dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
-    "report": "reports/stage5c-issuer-identity-review-20261014.json"
-  }
+    "report": "reports/stage5c-issuer-identity-review-20261014.json",
+    "released_after_live_audit": [
+      "instadapp",
+      "walletconnect",
+      "cerebrumdao"
+    ],
+    "still_quarantined": [
+      "creditum",
+      "pollen-mobile"
+    ],
+    "live_audit_at": "2026-10-16T18:02:03.345Z",
+    "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+    "release_dataset_sha256": "5ab467cf9daee464c05f2e34624e0a4a93a0855fe6959b5fbfe7eca75e7b2b52"
+  },
+  "live_reaudit_history": [
+    {
+      "performed": true,
+      "execution": "user_browser",
+      "commit": "083861149fadfbdb4489fad294670d65509148d2",
+      "dataset_sha256": "02e2faaa0c512cac6eccebb78bb43b4ca75ed4aa0e538bff5468e0b121ae1d97",
+      "audit_at": "2026-10-13T18:38:55.920Z",
+      "healthz_at": "2026-10-13T18:38:39.980Z",
+      "counts": {
+        "dataset_total": 354,
+        "mapped_expected": 323,
+        "mapped_checked": 323,
+        "unmapped": 31,
+        "returned_quotes": 321,
+        "pass": 258,
+        "fail": 65,
+        "duplicate_cmc_ids": 0,
+        "duplicate_canonical_ids": 0,
+        "batches": 4
+      },
+      "mandatory_all_pass": true,
+      "strict_failures_all_quarantined": true,
+      "slug_only_failures": 0,
+      "report": "reports/stage5c-third-id-audit-20261013.json",
+      "healthz_report": "reports/stage5c-third-id-healthz-20261013.json",
+      "source_capture": {
+        "filename": "Вставленный Markdown(20261013-183912).md",
+        "sha256": "32e95fd4a760324a5a01abeeaa87f33ae277dd587aabe51758832cdbf5e949bc",
+        "complete_json": true,
+        "recovery": null
+      }
+    }
+  ]
 }

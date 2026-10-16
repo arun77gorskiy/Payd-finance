@@ -23,7 +23,7 @@
         "cmcSlug": "instadapp",
         "symbol": "FLUID"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "source": {
         "url": "https://coinmarketcap.com/currencies/instadapp/",
         "ucid": "10508",
@@ -41,7 +41,10 @@
       "additional_sources": [
         "https://fluid.io/blog/inst",
         "https://fluid.io/blog/general-a-new-era-new-logo-and-colors-the-liquidity-layer-for-all-finance"
-      ]
+      ],
+      "live_audit_at": "2026-10-16T18:02:03.345Z",
+      "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+      "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
     },
     {
       "canonical_id": "walletconnect",
@@ -56,7 +59,7 @@
         "cmcSlug": "walletconnect-token",
         "symbol": "WCT"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "source": {
         "url": "https://coinmarketcap.com/currencies/walletconnect-token/",
         "ucid": "33152",
@@ -75,7 +78,10 @@
       "issuer_source_blob_sha": "b2dddae0293caf965ce8274ef2c23a4a116dc4b8",
       "additional_sources": [
         "https://github.com/WalletConnect/contracts/blob/main/README.md"
-      ]
+      ],
+      "live_audit_at": "2026-10-16T18:02:03.345Z",
+      "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+      "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
     },
     {
       "canonical_id": "cerebrumdao",
@@ -90,7 +96,7 @@
         "cmcSlug": "cerebrum-dao",
         "symbol": "NEURON"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "source": {
         "url": "https://coinmarketcap.com/currencies/cerebrum-dao/",
         "ucid": "31961",
@@ -105,7 +111,10 @@
       "contracts": {
         "ethereum": "0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b"
       },
-      "issuer_token_link": "https://app.uniswap.org/explore/tokens/ethereum/0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b"
+      "issuer_token_link": "https://app.uniswap.org/explore/tokens/ethereum/0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b",
+      "live_audit_at": "2026-10-16T18:02:03.345Z",
+      "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+      "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
     },
     {
       "canonical_id": "creditum",
@@ -120,7 +129,7 @@
         "cmcSlug": "creditum",
         "symbol": "CREDIT"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
       "source": {
         "url": "https://coinmarketcap.com/currencies/creditum/",
         "ucid": "17132",
@@ -131,7 +140,13 @@
         "url": "https://creditum.gitbook.io/creditum",
         "note": "Issuer documentation identifies the Revenant Finance/Fantom lending protocol and CREDIT rewards, matching provider Creditum/CREDIT metadata. This is not a similarly named consumer-credit business. Provider preview listing and archived protocol documentation do not establish current quote availability or lifecycle."
       },
-      "correction_kind": "PROVIDER_ID_CORRECTION"
+      "correction_kind": "PROVIDER_ID_CORRECTION",
+      "live_audit_at": "2026-10-16T18:02:03.345Z",
+      "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+      "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+      "live_reasons": [
+        "invalid_price"
+      ]
     },
     {
       "canonical_id": "pollen-mobile",
@@ -146,7 +161,7 @@
         "cmcSlug": "pollen-coin",
         "symbol": "PCN"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
       "source": {
         "url": "https://coinmarketcap.com/currencies/pollen-coin/",
         "ucid": "20267",
@@ -161,7 +176,13 @@
       "provider_contract_reference": {
         "solana": "GWsZd8k85q2ie9SNycVSLeKkX7HLZfSsgx6Jdat9cjY1"
       },
-      "additional_release_gate": "EXTERNAL_MARKET_VALIDITY_REQUIRED"
+      "additional_release_gate": "EXTERNAL_MARKET_VALIDITY_REQUIRED",
+      "live_audit_at": "2026-10-16T18:02:03.345Z",
+      "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+      "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+      "live_reasons": [
+        "invalid_price"
+      ]
     }
   ],
   "held": [
@@ -191,6 +212,35 @@
       "provider_batches": 1
     }
   },
-  "quote_audit_pending": true,
-  "taxonomy_complete": false
+  "quote_audit_pending": false,
+  "taxonomy_complete": false,
+  "followup_live_audit": {
+    "commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+    "dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+    "audit_at": "2026-10-16T18:02:03.345Z",
+    "pass_count": 261,
+    "fail_count": 62,
+    "released": [
+      "instadapp",
+      "walletconnect",
+      "cerebrumdao"
+    ],
+    "quarantined": [
+      {
+        "canonical_id": "creditum",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "pollen-mobile",
+        "reasons": [
+          "invalid_price"
+        ]
+      }
+    ],
+    "report": "reports/stage5c-issuer-quote-audit-20261016.json",
+    "healthz_report": "reports/stage5c-issuer-healthz-20261016.json",
+    "scope_note": "Review-time counts remain historical. Three identities passed strict quotes and were released; two have unavailable prices. Numeric runtime parity for all 82 releases is pending. PCN also retains its external-market-validity gate."
+  }
 }

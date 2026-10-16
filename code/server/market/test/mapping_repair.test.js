@@ -33,9 +33,9 @@ function serviceWith(response, records, cache) {
   return { service, calls: () => calls };
 }
 
-test('all 65 remaining quarantined entries return no market data and make zero provider calls', async () => {
+test('all 62 remaining quarantined entries return no market data and make zero provider calls', async () => {
   const rows = dataset.records.filter(r => r.mapping_status === 'unverified');
-  assert.equal(rows.length, 65);
+  assert.equal(rows.length, 62);
   const { service, calls } = serviceWith(payload(), dataset.records);
   for (const r of rows) {
     const result = await service.getMarket(r.id);
@@ -104,7 +104,7 @@ test('explicit project_without_token cannot fetch a quote even when an old CMC I
 test('dataset fingerprint records the exact bytes loaded by the resolver', () => {
   const resolver = new MarketResolver({ datasetPath });
   assert.equal(resolver.datasetSha256, createHash('sha256').update(fs.readFileSync(datasetPath)).digest('hex'));
-  assert.equal(dataset.records.filter(r => resolver.resolve(r.id).ok).length, 258);
+  assert.equal(dataset.records.filter(r => resolver.resolve(r.id).ok).length, 261);
 });
 
 test('legacy classification metadata agrees with all corrected and quarantined records', () => {
