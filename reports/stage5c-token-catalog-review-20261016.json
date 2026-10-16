@@ -1,0 +1,189 @@
+{
+  "stage": "5C",
+  "reviewed_on": "2026-10-16",
+  "counts": {
+    "reviewed": 4,
+    "numeric_ids_changed": 4,
+    "symbol_corrections_applied": 4,
+    "slug_corrections_applied": 0,
+    "quarantines_released": 0
+  },
+  "policy": "Permanent canonical IDs, names, sectors and snapshot values remain stable. Numeric provider ID corrections require explicit provider UCID/project identity and retain old mappings. Current-symbol corrections require manual primary issuer token/lineage and exact provider project identity review. Record contract evidence and retrieval limits precisely; issuer documents alone do not prove a fresh valid quote. Preserve prior catalog symbols and retain quarantine until a fresh strict audit and any additional market-validity gate are satisfied. Never resolve by ticker, scale financial values or invent token migrations.",
+  "applied": [
+    {
+      "canonical_id": "gamefi",
+      "symbol": "GAFI",
+      "before": {
+        "symbol": "GFI",
+        "cmcId": "18033",
+        "cmcSlug": "gamefi",
+        "audit_reasons": [
+          "symbol_mismatch:SOLI",
+          "slug_mismatch:solana-ecosystem-index",
+          "invalid_price"
+        ]
+      },
+      "after": {
+        "symbol": "GAFI",
+        "cmcId": "11783",
+        "cmcSlug": "gamefi"
+      },
+      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "correction_kind": "CATALOG_SYMBOL_AND_PROVIDER_ID_CORRECTION",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/gamefi/",
+        "ucid": "11783",
+        "symbol": "GAFI",
+        "retrieved_on": "2026-10-16"
+      },
+      "issuer_source": {
+        "url": "https://gamefi.org/terms-of-use",
+        "note": "Issuer terms explicitly define GAFI as the GameFi.org token; the current homepage/staking page use GAFI and identify BSC participation. Provider UCID 11783 is GameFi.org/GAFI, slug gamefi, linked to the same issuer domain. Correct the catalog input GFI and unrelated SOLI mapping; do not invent a historical GameFi GFI token or migration. No independent full issuer contract match was obtained."
+      },
+      "additional_sources": [
+        "https://gamefi.org/",
+        "https://gamefi.org/staking"
+      ],
+      "provider_contract_display": "0x89Af...F4E27e"
+    },
+    {
+      "canonical_id": "spheron",
+      "symbol": "SPON",
+      "before": {
+        "symbol": "SPHN",
+        "cmcId": "24367",
+        "cmcSlug": "spheron-network",
+        "audit_reasons": [
+          "symbol_mismatch:GEORGE",
+          "slug_mismatch:george-token",
+          "invalid_price"
+        ]
+      },
+      "after": {
+        "symbol": "SPON",
+        "cmcId": "37537",
+        "cmcSlug": "spheron-network"
+      },
+      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "correction_kind": "CATALOG_SYMBOL_AND_PROVIDER_ID_CORRECTION",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/spheron-network/",
+        "ucid": "37537",
+        "symbol": "SPON",
+        "retrieved_on": "2026-10-16"
+      },
+      "issuer_source": {
+        "url": "https://www.spheron.network/Spheron-Whitepaper.pdf",
+        "note": "Search-retrieved text from the issuer-hosted whitepaper explicitly uses SPON for compute-network payments/staking/rewards. Provider UCID 37537 is Spheron Network/SPON, slug spheron-network, with the matching issuer domain and Base explorer reference. The direct PDF fetch failed, and current commercial homepage does not mention SPON; current lifecycle/quote availability are not established. Correct the catalog input SPHN without inventing an enacted SPHN-to-SPON token migration. No independent full issuer contract match was obtained; the provider page is a preview."
+      },
+      "additional_sources": [
+        "https://www.spheron.network/",
+        "https://docs.spheron.network/"
+      ],
+      "provider_contract_display": "0x080D...aB5CA1"
+    },
+    {
+      "canonical_id": "nubila",
+      "symbol": "NB",
+      "before": {
+        "symbol": "NUB",
+        "cmcId": "29023",
+        "cmcSlug": "nubila-network",
+        "audit_reasons": [
+          "symbol_mismatch:GPT-1",
+          "slug_mismatch:gpt-1-allbestico",
+          "invalid_price"
+        ]
+      },
+      "after": {
+        "symbol": "NB",
+        "cmcId": "38816",
+        "cmcSlug": "nubila-network"
+      },
+      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "correction_kind": "CATALOG_SYMBOL_AND_PROVIDER_ID_CORRECTION",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/nubila-network/",
+        "ucid": "38816",
+        "symbol": "NB",
+        "retrieved_on": "2026-10-16"
+      },
+      "issuer_source": {
+        "url": "https://nubila.gitbook.io/nubila/nubila-network/usdnb-tokenomics",
+        "note": "Issuer homepage links the reviewed GitBook, whose tokenomics explicitly specify NB and BEP-20 for the physical/environmental data network. Provider UCID 38816 is Nubila Network/NB with the same issuer/docs links, slug nubila-network. Correct the catalog input NUB and unrelated GPT-1 ID; do not claim that NUB was an actual former Nubila token. Legacy presale NUBI language is not migration/contract proof. No independent full issuer contract match was obtained."
+      },
+      "additional_sources": [
+        "https://www.nubila.ai/",
+        "https://nubila.gitbook.io/nubila/nubila-network"
+      ],
+      "provider_contract_display": "0xc2bD...99fCb1"
+    },
+    {
+      "canonical_id": "chainport",
+      "symbol": "PORTX",
+      "before": {
+        "symbol": "PORT",
+        "cmcId": "22633",
+        "cmcSlug": "chainport",
+        "audit_reasons": [
+          "symbol_mismatch:C4E",
+          "slug_mismatch:chain4energy"
+        ]
+      },
+      "after": {
+        "symbol": "PORTX",
+        "cmcId": "17480",
+        "cmcSlug": "chainport"
+      },
+      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "correction_kind": "CATALOG_SYMBOL_AND_PROVIDER_ID_CORRECTION",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/chainport/",
+        "ucid": "17480",
+        "symbol": "PORTX",
+        "retrieved_on": "2026-10-16"
+      },
+      "issuer_source": {
+        "url": "https://www.chainport.io/portx-token",
+        "note": "Issuer explicitly names PORTX as ChainPort utility token and publishes the full Ethereum address. Provider UCID 17480 is ChainPort/PORTX, slug chainport, with matching issuer links and contract prefix/suffix; full provider explorer fetching failed, so no independently fetched full-contract match is claimed. Correct the catalog PORT input and unrelated C4E ID without claiming a token migration. Provider preview renders an unexplained total-supply string 679814605.44E PORTX. Do not interpret or scale that UI text into financial values; review fresh raw supply/units and associated MC/FDV validity before release even if the unchanged strict quote audit passes."
+      },
+      "additional_sources": [],
+      "provider_contract_display": "0x104f...6566ac",
+      "contracts": {
+        "ethereum": "0x104f3152d8ebfc3f679392977356962ff36566ac"
+      },
+      "additional_release_gate": "RAW_SUPPLY_VALIDITY_REVIEW_REQUIRED",
+      "observed_provider_supply_display": "679814605.44E PORTX"
+    }
+  ],
+  "quote_audit_pending": true,
+  "taxonomy_complete": false,
+  "runtime_evidence": {
+    "commit": "00a1a12c57ae975eaac34e4750b90fb8bed3d613",
+    "dataset_sha256": "c8d017822b567608f2670a86c797f4edb52e5c8d5c138fe3b8b78cc71c1f55b4",
+    "audit_at": "2026-10-16T19:02:13.002Z",
+    "counts": {
+      "checked": 85,
+      "pass": 85,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    },
+    "exact_field_comparisons": 680
+  },
+  "special_release_gates": [
+    {
+      "canonical_id": "chainport",
+      "gate": "RAW_SUPPLY_VALIDITY_REVIEW_REQUIRED",
+      "observed_provider_supply_display": "679814605.44E PORTX",
+      "reason": "Unexplained extreme-looking preview supply text requires raw supply/unit and associated market-metric validation. It is not proof of actual supply, and must never be scaled into a replacement value. Strict PASS alone does not clear this manual gate."
+    }
+  ],
+  "source_limitations": [
+    "Provider explorer clicks failed for all four candidates; do not claim independently fetched full provider contract matches.",
+    "GameFi/Nubila symbols are explicit in current issuer pages; independent full issuer contract addresses were not retrieved.",
+    "Spheron SPON evidence is an issuer-hosted whitepaper search extract; direct PDF retrieval failed and the current commercial homepage omits the ticker. Token lifecycle/quote availability remain unverified.",
+    "ChainPort full Ethereum contract is issuer-published; provider abbreviation agrees, but preview supply text is not a verified raw quote or reliable numeric supply.",
+    "No old catalog symbol is asserted to have been an actual earlier token, and no token migration/quantity conversion is inferred."
+  ]
+}

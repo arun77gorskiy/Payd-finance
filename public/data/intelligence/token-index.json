@@ -3832,20 +3832,44 @@
     },
     {
       "id": "gamefi",
-      "symbol": "GFI",
+      "symbol": "GAFI",
       "name": "gamefi",
       "sectors": [
         "Gaming"
       ],
       "market_cap_usd": 1296836,
-      "cmcId": "18033",
+      "cmcId": "11783",
       "cmcSlug": "gamefi",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:SOLI",
-        "slug_mismatch:solana-ecosystem-index",
-        "invalid_price"
-      ]
+        "identity_corrected_live_reaudit_required"
+      ],
+      "previous_catalog_symbol": "GFI",
+      "previous_cmc_mapping": {
+        "symbol": "GFI",
+        "cmcId": "18033",
+        "cmcSlug": "gamefi",
+        "audit_reasons": [
+          "symbol_mismatch:SOLI",
+          "slug_mismatch:solana-ecosystem-index",
+          "invalid_price"
+        ]
+      },
+      "symbol_repair": {
+        "before": "GFI",
+        "after": "GAFI",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://gamefi.org/terms-of-use",
+        "scope": "Manual primary-issuer token/project and provider-UCID review. Preserve the old catalog input without inventing a historical token migration. Contract limitations are in identity_review."
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/gamefi/",
+        "issuer_url": "https://gamefi.org/terms-of-use",
+        "reviewed_on": "2026-10-16",
+        "notes": "Issuer terms explicitly define GAFI as the GameFi.org token; the current homepage/staking page use GAFI and identify BSC participation. Provider UCID 11783 is GameFi.org/GAFI, slug gamefi, linked to the same issuer domain. Correct the catalog input GFI and unrelated SOLI mapping; do not invent a historical GameFi GFI token or migration. No independent full issuer contract match was obtained."
+      }
     },
     {
       "id": "kadena",
@@ -4248,7 +4272,7 @@
     },
     {
       "id": "spheron",
-      "symbol": "SPHN",
+      "symbol": "SPON",
       "name": "spheron",
       "sectors": [
         "DeSci",
@@ -4256,31 +4280,79 @@
         "Infrastructure"
       ],
       "market_cap_usd": 137748,
-      "cmcId": "24367",
+      "cmcId": "37537",
       "cmcSlug": "spheron-network",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:GEORGE",
-        "slug_mismatch:george-token",
-        "invalid_price"
-      ]
+        "identity_corrected_live_reaudit_required"
+      ],
+      "previous_catalog_symbol": "SPHN",
+      "previous_cmc_mapping": {
+        "symbol": "SPHN",
+        "cmcId": "24367",
+        "cmcSlug": "spheron-network",
+        "audit_reasons": [
+          "symbol_mismatch:GEORGE",
+          "slug_mismatch:george-token",
+          "invalid_price"
+        ]
+      },
+      "symbol_repair": {
+        "before": "SPHN",
+        "after": "SPON",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://www.spheron.network/Spheron-Whitepaper.pdf",
+        "scope": "Manual primary-issuer token/project and provider-UCID review. Preserve the old catalog input without inventing a historical token migration. Contract limitations are in identity_review."
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/spheron-network/",
+        "issuer_url": "https://www.spheron.network/Spheron-Whitepaper.pdf",
+        "reviewed_on": "2026-10-16",
+        "notes": "Search-retrieved text from the issuer-hosted whitepaper explicitly uses SPON for compute-network payments/staking/rewards. Provider UCID 37537 is Spheron Network/SPON, slug spheron-network, with the matching issuer domain and Base explorer reference. The direct PDF fetch failed, and current commercial homepage does not mention SPON; current lifecycle/quote availability are not established. Correct the catalog input SPHN without inventing an enacted SPHN-to-SPON token migration. No independent full issuer contract match was obtained; the provider page is a preview."
+      }
     },
     {
       "id": "nubila",
-      "symbol": "NUB",
+      "symbol": "NB",
       "name": "nubila",
       "sectors": [
         "DePIN"
       ],
       "market_cap_usd": 127122,
-      "cmcId": "29023",
+      "cmcId": "38816",
       "cmcSlug": "nubila-network",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:GPT-1",
-        "slug_mismatch:gpt-1-allbestico",
-        "invalid_price"
-      ]
+        "identity_corrected_live_reaudit_required"
+      ],
+      "previous_catalog_symbol": "NUB",
+      "previous_cmc_mapping": {
+        "symbol": "NUB",
+        "cmcId": "29023",
+        "cmcSlug": "nubila-network",
+        "audit_reasons": [
+          "symbol_mismatch:GPT-1",
+          "slug_mismatch:gpt-1-allbestico",
+          "invalid_price"
+        ]
+      },
+      "symbol_repair": {
+        "before": "NUB",
+        "after": "NB",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://nubila.gitbook.io/nubila/nubila-network/usdnb-tokenomics",
+        "scope": "Manual primary-issuer token/project and provider-UCID review. Preserve the old catalog input without inventing a historical token migration. Contract limitations are in identity_review."
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/nubila-network/",
+        "issuer_url": "https://nubila.gitbook.io/nubila/nubila-network/usdnb-tokenomics",
+        "reviewed_on": "2026-10-16",
+        "notes": "Issuer homepage links the reviewed GitBook, whose tokenomics explicitly specify NB and BEP-20 for the physical/environmental data network. Provider UCID 38816 is Nubila Network/NB with the same issuer/docs links, slug nubila-network. Correct the catalog input NUB and unrelated GPT-1 ID; do not claim that NUB was an actual former Nubila token. Legacy presale NUBI language is not migration/contract proof. No independent full issuer contract match was obtained."
+      }
     },
     {
       "id": "pollen-mobile",
@@ -4455,19 +4527,48 @@
     },
     {
       "id": "chainport",
-      "symbol": "PORT",
+      "symbol": "PORTX",
       "name": "chainport",
       "sectors": [
         "Infrastructure"
       ],
       "market_cap_usd": 17404.42,
-      "cmcId": "22633",
+      "cmcId": "17480",
       "cmcSlug": "chainport",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:C4E",
-        "slug_mismatch:chain4energy"
-      ]
+        "identity_corrected_live_reaudit_required"
+      ],
+      "previous_catalog_symbol": "PORT",
+      "previous_cmc_mapping": {
+        "symbol": "PORT",
+        "cmcId": "22633",
+        "cmcSlug": "chainport",
+        "audit_reasons": [
+          "symbol_mismatch:C4E",
+          "slug_mismatch:chain4energy"
+        ]
+      },
+      "symbol_repair": {
+        "before": "PORT",
+        "after": "PORTX",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://www.chainport.io/portx-token",
+        "scope": "Manual primary-issuer token/project and provider-UCID review. Preserve the old catalog input without inventing a historical token migration. Contract limitations are in identity_review.",
+        "contracts": {
+          "ethereum": "0x104f3152d8ebfc3f679392977356962ff36566ac"
+        }
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/chainport/",
+        "issuer_url": "https://www.chainport.io/portx-token",
+        "reviewed_on": "2026-10-16",
+        "notes": "Issuer explicitly names PORTX as ChainPort utility token and publishes the full Ethereum address. Provider UCID 17480 is ChainPort/PORTX, slug chainport, with matching issuer links and contract prefix/suffix; full provider explorer fetching failed, so no independently fetched full-contract match is claimed. Correct the catalog PORT input and unrelated C4E ID without claiming a token migration. Provider preview renders an unexplained total-supply string 679814605.44E PORTX. Do not interpret or scale that UI text into financial values; review fresh raw supply/units and associated MC/FDV validity before release even if the unchanged strict quote audit passes.",
+        "additional_release_gate": "RAW_SUPPLY_VALIDITY_REVIEW_REQUIRED",
+        "observed_provider_supply_display": "679814605.44E PORTX"
+      }
     },
     {
       "id": "off-the-grid",
@@ -7667,8 +7768,8 @@
     },
     "gamefi": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-16T18:52:11.100Z; runtime market data remains unavailable.",
-      "cmcId": "18033",
+      "notes": "Manual issuer token/project and provider UCID review on 2026-10-16. Corrected expected ID/symbol; fresh strict quote audit and any separate validity gate required before release.",
+      "cmcId": "11783",
       "cmcSlug": "gamefi",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -7814,16 +7915,16 @@
     },
     "spheron": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-16T18:52:11.100Z; runtime market data remains unavailable.",
-      "cmcId": "24367",
+      "notes": "Manual issuer token/project and provider UCID review on 2026-10-16. Corrected expected ID/symbol; fresh strict quote audit and any separate validity gate required before release.",
+      "cmcId": "37537",
       "cmcSlug": "spheron-network",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "nubila": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-16T18:52:11.100Z; runtime market data remains unavailable.",
-      "cmcId": "29023",
+      "notes": "Manual issuer token/project and provider UCID review on 2026-10-16. Corrected expected ID/symbol; fresh strict quote audit and any separate validity gate required before release.",
+      "cmcId": "38816",
       "cmcSlug": "nubila-network",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -7891,8 +7992,8 @@
     },
     "chainport": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-16T18:52:11.100Z; runtime market data remains unavailable.",
-      "cmcId": "22633",
+      "notes": "Manual issuer token/project and provider UCID review on 2026-10-16. Corrected expected ID/symbol; fresh strict quote audit and any separate validity gate required before release.",
+      "cmcId": "17480",
       "cmcSlug": "chainport",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -8560,14 +8661,14 @@
   },
   "_mapping_repair": {
     "stage": "5C",
-    "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+    "status": "ID_AND_SYMBOL_CORRECTIONS_PENDING_LIVE_REAUDIT",
     "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
     "source_audit_at": "2026-10-12T10:20:26.406Z",
     "slug_corrections": 23,
     "quarantined": 59,
-    "quarantined_symbol_mismatches": 43,
+    "quarantined_symbol_mismatches": 39,
     "quarantined_market_data_failures": 16,
-    "id_corrections": 88,
+    "id_corrections": 92,
     "identity_review_remaining": 59,
     "last_live_audit_at": "2026-10-16T18:52:11.100Z",
     "last_live_audit_commit": "d47234dbcbc4b67c1e949d1c6cc53338ae84df65",
@@ -8575,24 +8676,24 @@
     "last_live_audit_fail": 59,
     "released_after_live_audit": 85,
     "last_live_audit_dataset_sha256": "6dd6d064e7b7b2c86033e2030da70880a8a75120d76bfccf20176ba992fdcf1f",
-    "pending_id_corrections": 0,
-    "quarantined_quote_pending": 0,
+    "pending_id_corrections": 4,
+    "quarantined_quote_pending": 4,
     "corrected_ids_with_unavailable_market_data": 6,
-    "runtime_parity_checked_releases": 82,
-    "runtime_parity_pending_releases": 3,
-    "last_runtime_audit_at": "2026-10-16T18:20:29.592Z",
-    "last_runtime_audit_commit": "c1f33ea8874e3fbf92b5e0ba7e6c2210b4c60926",
-    "last_runtime_audit_dataset_sha256": "5ab467cf9daee464c05f2e34624e0a4a93a0855fe6959b5fbfe7eca75e7b2b52",
-    "last_runtime_audit_pass": 82,
+    "runtime_parity_checked_releases": 85,
+    "runtime_parity_pending_releases": 0,
+    "last_runtime_audit_at": "2026-10-16T19:02:13.002Z",
+    "last_runtime_audit_commit": "00a1a12c57ae975eaac34e4750b90fb8bed3d613",
+    "last_runtime_audit_dataset_sha256": "c8d017822b567608f2670a86c797f4edb52e5c8d5c138fe3b8b78cc71c1f55b4",
+    "last_runtime_audit_pass": 85,
     "last_runtime_audit_fail": 0,
-    "canonical_symbol_corrections": 6,
-    "pending_symbol_corrections": 0,
+    "canonical_symbol_corrections": 10,
+    "pending_symbol_corrections": 4,
     "released_id_corrections": 82,
     "released_symbol_only_corrections": 3
   },
   "_symbol_repair": {
     "reviewed_on": "2026-10-16",
-    "count": 6,
+    "count": 10,
     "changes": [
       {
         "before": "INST",
@@ -8664,8 +8765,47 @@
           "fraxtal_wfrax": "0xfc00000000000000000000000000000000000002"
         },
         "canonical_id": "frax"
+      },
+      {
+        "before": "GFI",
+        "after": "GAFI",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://gamefi.org/terms-of-use",
+        "scope": "Manual primary-issuer token/project and provider-UCID review. Preserve the old catalog input without inventing a historical token migration. Contract limitations are in identity_review.",
+        "canonical_id": "gamefi"
+      },
+      {
+        "before": "SPHN",
+        "after": "SPON",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://www.spheron.network/Spheron-Whitepaper.pdf",
+        "scope": "Manual primary-issuer token/project and provider-UCID review. Preserve the old catalog input without inventing a historical token migration. Contract limitations are in identity_review.",
+        "canonical_id": "spheron"
+      },
+      {
+        "before": "NUB",
+        "after": "NB",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://nubila.gitbook.io/nubila/nubila-network/usdnb-tokenomics",
+        "scope": "Manual primary-issuer token/project and provider-UCID review. Preserve the old catalog input without inventing a historical token migration. Contract limitations are in identity_review.",
+        "canonical_id": "nubila"
+      },
+      {
+        "before": "PORT",
+        "after": "PORTX",
+        "kind": "CATALOG_SYMBOL_CORRECTION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://www.chainport.io/portx-token",
+        "scope": "Manual primary-issuer token/project and provider-UCID review. Preserve the old catalog input without inventing a historical token migration. Contract limitations are in identity_review.",
+        "contracts": {
+          "ethereum": "0x104f3152d8ebfc3f679392977356962ff36566ac"
+        },
+        "canonical_id": "chainport"
       }
     ],
-    "policy": "Permanent canonical IDs, numeric provider IDs, names, sectors and snapshot values remain stable. Manually update current symbols only after explicit primary issuer lineage and exact provider identity review. For native coins use issuer network/denomination evidence; for token lineages record issuer contracts and their evidentiary scope. Preserve previous catalog symbols/mappings and retain quarantine until a fresh strict audit. Never resolve by ticker, apply a unit multiplier, transact, or infer a stablecoin peg."
+    "policy": "Permanent canonical IDs, names, sectors and snapshot values remain stable. Numeric provider ID corrections require explicit provider UCID/project identity and retain old mappings. Current-symbol corrections require manual primary issuer token/lineage and exact provider project identity review. Record contract evidence and retrieval limits precisely; issuer documents alone do not prove a fresh valid quote. Preserve prior catalog symbols and retain quarantine until a fresh strict audit and any additional market-validity gate are satisfied. Never resolve by ticker, scale financial values or invent token migrations."
   }
 }
