@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+  "status": "RUNTIME_PARITY_PASSED_NATIVE_SYMBOL_CORRECTIONS_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -27,7 +27,7 @@
     "dataset_total": 354,
     "cmc_ids_retained": 323,
     "no_cmc_mapping": 31,
-    "slug_corrections": 22,
+    "slug_corrections": 23,
     "quarantined": 62,
     "eligible_for_runtime_request": 261
   },
@@ -195,6 +195,16 @@
       "cmc_id": "18934",
       "old_slug": "stargate",
       "new_slug": "stargate-finance"
+    },
+    {
+      "canonical_id": "frax",
+      "cmc_id": "6953",
+      "old_slug": "frax",
+      "new_slug": "frax-share",
+      "reviewed_on": "2026-10-16",
+      "status": "LIVE_REAUDIT_REQUIRED",
+      "issuer_url": "https://docs.frax.com/protocol/frax/overview",
+      "source_url": "https://coinmarketcap.com/currencies/frax-share/"
     }
   ],
   "quarantine": [
@@ -245,7 +255,15 @@
         "symbol_mismatch:FRAX",
         "slug_mismatch:frax-share"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "symbol": "FRAX",
+        "cmcId": "6953",
+        "cmcSlug": "frax-share"
+      },
+      "current_mapping_reasons": [
+        "issuer_symbol_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "iota",
@@ -257,7 +275,15 @@
       "reasons": [
         "symbol_mismatch:IOTA"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "symbol": "IOTA",
+        "cmcId": "1720",
+        "cmcSlug": "iota"
+      },
+      "current_mapping_reasons": [
+        "issuer_symbol_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "story-protocol",
@@ -296,7 +322,15 @@
       "reasons": [
         "symbol_mismatch:P2P"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "symbol": "P2P",
+        "cmcId": "2643",
+        "cmcSlug": "sentinel"
+      },
+      "current_mapping_reasons": [
+        "issuer_symbol_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "mountain-protocol",
@@ -1057,7 +1091,7 @@
     "applied": 88,
     "unresolved_quarantined": 62,
     "quarantine_retained": 62,
-    "canonical_symbols_changed": 3,
+    "canonical_symbols_changed": 6,
     "collisions": 0,
     "changes": [
       {
@@ -3045,7 +3079,9 @@
     ],
     "released_after_live_audit": 82,
     "pending_live_reaudit": 0,
-    "corrected_ids_with_unavailable_market_data": 6
+    "corrected_ids_with_unavailable_market_data": 6,
+    "symbol_corrections_within_id_replacements": 3,
+    "symbol_corrections_with_retained_ids": 3
   },
   "migration_review": {
     "canonical_id": "quickswap",
@@ -3076,25 +3112,26 @@
     "performed": true,
     "execution": "user_browser",
     "route": "/api/audit-stage5c-runtime?run=1",
-    "scope": "79 corrected and released mappings",
-    "commit": "743e1f6050d1876dc0be88bcf3abd6046667ee80",
-    "dataset_sha256": "6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311",
-    "audit_at": "2026-10-14T08:41:15.241Z",
+    "scope": "82 corrected and released mappings",
+    "commit": "c1f33ea8874e3fbf92b5e0ba7e6c2210b4c60926",
+    "dataset_sha256": "5ab467cf9daee464c05f2e34624e0a4a93a0855fe6959b5fbfe7eca75e7b2b52",
+    "audit_at": "2026-10-16T18:20:29.592Z",
     "counts": {
-      "checked": 79,
-      "pass": 79,
+      "checked": 82,
+      "pass": 82,
       "fail": 0,
       "fields_per_record": 8,
       "provider_batches": 1
     },
     "fields_per_record": 8,
     "provider_batches": 1,
-    "exact_field_comparisons": 632,
+    "exact_field_comparisons": 656,
     "all_exact_fields_true": true,
-    "report": "reports/stage5c-runtime-79-audit-20261014.json",
+    "report": "reports/stage5c-runtime-82-audit-20261016.json",
+    "healthz_report": "reports/stage5c-runtime-82-healthz-20261016.json",
     "source_capture": {
-      "filename": "Вставленный Markdown(20261014-084135).md",
-      "sha256": "8b86ece997efa75f8f79c1c86f32430e8ef30e170e32e9e8568c29cef665209b",
+      "filename": "Вставленный Markdown(20261016-182046).md",
+      "sha256": "e334b8e011c303a04e6263437348979ed8449cf1c0a6f9a7d8d969de73dd13ff",
       "complete_json": true,
       "recovery": null
     },
@@ -3103,7 +3140,7 @@
       "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
     ]
   },
-  "remaining_failure_categories_note": "Categories describe the complete live audit of 3cec2fe at 2026-10-16T18:02:03.345Z; the three released rows account for all gains, with no previously passing regressions.",
+  "remaining_failure_categories_note": "46 symbol mismatches, 14 invalid-price-only and two absent quotes describe the complete 3cec2fe audit at 2026-10-16T18:02:03.345Z. Three of those symbol mismatches now have issuer-reviewed current-symbol corrections but remain quarantined pending a fresh strict audit; no new PASS is inferred.",
   "quarantine_source_audit_at": "2026-10-16T18:02:03.345Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
@@ -3204,7 +3241,7 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": false,
+    "performed": true,
     "route": "/api/audit-stage5c-runtime?run=1",
     "expected_checked": 82,
     "expected_field_comparisons": 656,
@@ -3216,7 +3253,18 @@
       "cerebrumdao"
     ],
     "previous_evidence_report": "reports/stage5c-runtime-79-audit-20261014.json",
-    "note": "Prior numeric evidence verifies 79 releases on 743e1f6. FLUID/WCT/NEURON have fresh strict quote-audit evidence; exact numeric parity for these three and the new deployment is pending."
+    "note": "All 82 releases, including FLUID/WCT/NEURON, passed exact runtime field parity; 656/656 comparisons true.",
+    "counts": {
+      "checked": 82,
+      "pass": 82,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    },
+    "audit_at": "2026-10-16T18:20:29.592Z",
+    "commit": "c1f33ea8874e3fbf92b5e0ba7e6c2210b4c60926",
+    "dataset_sha256": "5ab467cf9daee464c05f2e34624e0a4a93a0855fe6959b5fbfe7eca75e7b2b52",
+    "report": "reports/stage5c-runtime-82-audit-20261016.json"
   },
   "runtime_parity_history": [
     {
@@ -3277,6 +3325,37 @@
         "complete_json": true,
         "recovery": null
       }
+    },
+    {
+      "performed": true,
+      "execution": "user_browser",
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "scope": "79 corrected and released mappings",
+      "commit": "743e1f6050d1876dc0be88bcf3abd6046667ee80",
+      "dataset_sha256": "6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311",
+      "audit_at": "2026-10-14T08:41:15.241Z",
+      "counts": {
+        "checked": 79,
+        "pass": 79,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 1
+      },
+      "fields_per_record": 8,
+      "provider_batches": 1,
+      "exact_field_comparisons": 632,
+      "all_exact_fields_true": true,
+      "report": "reports/stage5c-runtime-79-audit-20261014.json",
+      "source_capture": {
+        "filename": "Вставленный Markdown(20261014-084135).md",
+        "sha256": "8b86ece997efa75f8f79c1c86f32430e8ef30e170e32e9e8568c29cef665209b",
+        "complete_json": true,
+        "recovery": null
+      },
+      "scope_limitations": [
+        "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache.",
+        "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
+      ]
     }
   ],
   "next_id_repair": {
@@ -3510,8 +3589,8 @@
     }
   ],
   "symbol_repairs": {
-    "reviewed_on": "2026-10-14",
-    "count": 3,
+    "reviewed_on": "2026-10-16",
+    "count": 6,
     "changes": [
       {
         "before": "INST",
@@ -3549,13 +3628,47 @@
         },
         "scope": "Explicit manual issuer/contract review; not an alias resolution rule or relaxed validator.",
         "canonical_id": "cerebrumdao"
+      },
+      {
+        "before": "MIOTA",
+        "after": "IOTA",
+        "kind": "ISSUER_NATIVE_UNIT_LABEL_CORRECTION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://blog.iota.org/stardust-upgrade-iota-tokenomics/",
+        "native_network": "IOTA native coin",
+        "scope": "Explicit manual issuer-lineage/provider-identity review; not an alias rule or relaxed validator.",
+        "canonical_id": "iota"
+      },
+      {
+        "before": "DVPN",
+        "after": "P2P",
+        "kind": "ISSUER_NATIVE_COIN_TICKER_REBRAND",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://docs.sentinel.co/get-started",
+        "native_network": "Sentinel native Cosmos coin",
+        "scope": "Explicit manual issuer-lineage/provider-identity review; not an alias rule or relaxed validator.",
+        "canonical_id": "sentinel"
+      },
+      {
+        "before": "FXS",
+        "after": "FRAX",
+        "kind": "ISSUER_FXS_TO_NATIVE_FRAX_LINEAGE",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://docs.frax.com/protocol/frax/overview",
+        "native_network": "FRAX native Fraxtal asset, formerly FXS; wrapped representations exist",
+        "scope": "Explicit manual issuer-lineage/provider-identity review; not an alias rule or relaxed validator.",
+        "contracts": {
+          "ethereum_fxs_lineage": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
+          "fraxtal_wfrax": "0xfc00000000000000000000000000000000000002"
+        },
+        "canonical_id": "frax"
       }
     ],
-    "policy": "Permanent canonical IDs are unchanged; current symbols require primary issuer and matching-contract evidence. Keep previous catalog values, distinguish rebrand from catalog error, and retain quarantine until live quote verification."
+    "policy": "Permanent canonical IDs, numeric provider IDs, names, sectors and snapshot values remain stable. Manually update current symbols only after explicit primary issuer lineage and exact provider identity review. For native coins use issuer network/denomination evidence; for token lineages record issuer contracts and their evidentiary scope. Preserve previous catalog symbols/mappings and retain quarantine until a fresh strict audit. Never resolve by ticker, apply a unit multiplier, transact, or infer a stablecoin peg."
   },
   "canonical_preservation": {
     "canonical_ids_changed": 0,
-    "symbols_changed": 3,
+    "symbols_changed": 6,
     "symbol_changes": [
       {
         "before": "INST",
@@ -3593,6 +3706,40 @@
         },
         "scope": "Explicit manual issuer/contract review; not an alias resolution rule or relaxed validator.",
         "canonical_id": "cerebrumdao"
+      },
+      {
+        "before": "MIOTA",
+        "after": "IOTA",
+        "kind": "ISSUER_NATIVE_UNIT_LABEL_CORRECTION",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://blog.iota.org/stardust-upgrade-iota-tokenomics/",
+        "native_network": "IOTA native coin",
+        "scope": "Explicit manual issuer-lineage/provider-identity review; not an alias rule or relaxed validator.",
+        "canonical_id": "iota"
+      },
+      {
+        "before": "DVPN",
+        "after": "P2P",
+        "kind": "ISSUER_NATIVE_COIN_TICKER_REBRAND",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://docs.sentinel.co/get-started",
+        "native_network": "Sentinel native Cosmos coin",
+        "scope": "Explicit manual issuer-lineage/provider-identity review; not an alias rule or relaxed validator.",
+        "canonical_id": "sentinel"
+      },
+      {
+        "before": "FXS",
+        "after": "FRAX",
+        "kind": "ISSUER_FXS_TO_NATIVE_FRAX_LINEAGE",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://docs.frax.com/protocol/frax/overview",
+        "native_network": "FRAX native Fraxtal asset, formerly FXS; wrapped representations exist",
+        "scope": "Explicit manual issuer-lineage/provider-identity review; not an alias rule or relaxed validator.",
+        "contracts": {
+          "ethereum_fxs_lineage": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
+          "fraxtal_wfrax": "0xfc00000000000000000000000000000000000002"
+        },
+        "canonical_id": "frax"
       }
     ],
     "names_changed": 0,
@@ -3751,5 +3898,99 @@
         "recovery": null
       }
     }
-  ]
+  ],
+  "native_symbol_review": {
+    "reviewed_on": "2026-10-16",
+    "changes": [
+      {
+        "canonical_id": "iota",
+        "before": {
+          "symbol": "MIOTA",
+          "cmcId": "1720",
+          "cmcSlug": "iota",
+          "audit_reasons": [
+            "symbol_mismatch:IOTA"
+          ]
+        },
+        "after": {
+          "symbol": "IOTA",
+          "cmcId": "1720",
+          "cmcSlug": "iota"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_NATIVE_UNIT_LABEL_CORRECTION",
+        "issuer_url": "https://blog.iota.org/stardust-upgrade-iota-tokenomics/",
+        "provider_url": "https://coinmarketcap.com/currencies/iota/",
+        "additional_sources": [
+          "https://blog.iota.org/rebased-mainnet-upgrade/"
+        ],
+        "notes": "Issuer explicitly states that one old MIOTA is one current IOTA; 1,000,000 micros are one IOTA. The later Rebased issuer guide states no token migration is necessary for existing IOTA holders and links directly to the same provider /iota/ listing, UCID 1720. Correct the catalog unit label without multiplying price, supply or snapshot values. Do not treat an EVM placeholder as a verified ERC20 contract."
+      },
+      {
+        "canonical_id": "sentinel",
+        "before": {
+          "symbol": "DVPN",
+          "cmcId": "2643",
+          "cmcSlug": "sentinel",
+          "audit_reasons": [
+            "symbol_mismatch:P2P"
+          ]
+        },
+        "after": {
+          "symbol": "P2P",
+          "cmcId": "2643",
+          "cmcSlug": "sentinel"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_NATIVE_COIN_TICKER_REBRAND",
+        "issuer_url": "https://docs.sentinel.co/get-started",
+        "provider_url": "https://coinmarketcap.com/currencies/sentinel/",
+        "additional_sources": [
+          "https://docs.sentinel.co/p2p-coin",
+          "https://docs.sentinel.co/networks/explorers"
+        ],
+        "notes": "Issuer explicitly identifies P2P as the former DVPN native coin of the Sentinel blockchain. The provider has the same rebrand notice, Sentinel website and retained UCID 2643/slug sentinel. This is native-chain identity evidence, not an ERC20-contract assertion. No denomination conversion or IBC transfer is performed; the provider-linked Osmosis IBC representation is not mistaken for another project or merged with Sentinel Protocol UPP."
+      },
+      {
+        "canonical_id": "frax",
+        "before": {
+          "symbol": "FXS",
+          "cmcId": "6953",
+          "cmcSlug": "frax",
+          "audit_reasons": [
+            "symbol_mismatch:FRAX",
+            "slug_mismatch:frax-share"
+          ]
+        },
+        "after": {
+          "symbol": "FRAX",
+          "cmcId": "6953",
+          "cmcSlug": "frax-share"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_FXS_TO_NATIVE_FRAX_LINEAGE",
+        "issuer_url": "https://docs.frax.com/protocol/frax/overview",
+        "provider_url": "https://coinmarketcap.com/currencies/frax-share/",
+        "additional_sources": [
+          "https://docs.frax.com/protocol/frax/addresses",
+          "https://docs.frax.com/fraxtal/addresses/frax-tokens",
+          "https://frax.com/upgrade-fxs",
+          "https://coinmarketcap.com/currencies/frax/"
+        ],
+        "notes": "Current issuer documentation describes the enacted 1:1 FXS-to-native-FRAX upgrade since 2025-04-28, and its address registry identifies the Ethereum FXS lineage and native/WFRAX representation. Provider UCID 6953 is explicitly Frax (prev. FXS), symbol FRAX, slug frax-share; its displayed 0x3432...c964d0 prefix/suffix agrees with the issuer address. Provider explorer fetching failed, so do not claim an independently fetched full provider contract match or chain execution audit. This is distinct from Legacy Frax Dollar UCID 6952/slug frax at canonical frax-finance, which is unchanged. No constant $1 quote, stablecoin classification, migration transaction, value scaling or ticker-based merge is introduced.",
+        "contracts": {
+          "ethereum_fxs_lineage": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
+          "fraxtal_wfrax": "0xfc00000000000000000000000000000000000002"
+        }
+      }
+    ],
+    "numeric_ids_changed": 0,
+    "symbols_changed": 3,
+    "slugs_changed": 1,
+    "quote_audit_performed": false,
+    "all_quarantines_retained": true,
+    "previous_dataset_sha256": "5ab467cf9daee464c05f2e34624e0a4a93a0855fe6959b5fbfe7eca75e7b2b52",
+    "dataset_sha256": "6dd6d064e7b7b2c86033e2030da70880a8a75120d76bfccf20176ba992fdcf1f",
+    "report": "reports/stage5c-native-symbol-review-20261016.json"
+  }
 }
