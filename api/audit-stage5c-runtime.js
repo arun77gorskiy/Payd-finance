@@ -1,7 +1,7 @@
 'use strict';
 
-// Preview-only numeric validation of the released mappings. Uses one
-// authenticated batch through the existing adapter, then the real resolver,
+// Preview-only numeric validation of the released mappings. Uses authenticated
+// batches of up to 90 quotes through the existing adapter, then the real resolver,
 // service and normalizer. Does not modify the dataset or production cache.
 const { getService } = require('./_lib/runtime');
 const { createPaydMarketService } = require('../code/server/market/payd_market_service');

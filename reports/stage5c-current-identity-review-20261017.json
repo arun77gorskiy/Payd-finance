@@ -29,7 +29,7 @@
         "cmcId": "35626",
         "cmcSlug": "data-network"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "correction_kind": "ISSUER_PROJECT_AND_NATIVE_TOKEN_REBRAND",
       "source": {
         "url": "https://coinmarketcap.com/currencies/data-network/",
@@ -47,7 +47,10 @@
         "https://coinmarketcap.com/currencies/story-protocol/"
       ],
       "contracts": {},
-      "provider_contract_display": "0xA37E...56aFB2"
+      "provider_contract_display": "0xA37E...56aFB2",
+      "live_audit_at": "2026-10-17T12:49:16.099Z",
+      "live_audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+      "live_audit_dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb"
     },
     {
       "canonical_id": "mxc",
@@ -67,7 +70,7 @@
         "cmcId": "3628",
         "cmcSlug": "mxc"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
       "correction_kind": "ISSUER_PROVIDER_ID_CORRECTION",
       "source": {
         "url": "https://coinmarketcap.com/currencies/mxc/",
@@ -86,7 +89,13 @@
       "contracts": {
         "arbitrum_new_mxc": "0xaedf7656fbb47c5b97dd529ac1d0e807e051f2dd"
       },
-      "provider_contract_display": "0xaedf...51f2dd"
+      "provider_contract_display": "0xaedf...51f2dd",
+      "live_audit_at": "2026-10-17T12:49:16.099Z",
+      "live_audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+      "live_audit_dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
+      "live_reasons": [
+        "invalid_price"
+      ]
     }
   ],
   "held": [
@@ -128,7 +137,7 @@
       "notes": "Provider 17343/$BULL links the current gaming/NFT issuer domain and displays contract prefix 0x9f95...5cc08d. The issuer homepage confirms the brand/games but does not identify its token in retrieved text; issuer whitepaper fetch failed. Neither the dollar-prefix normalization nor current token contract/lifecycle is independently resolved. Retain BULL and old failed provider mapping under quarantine; do not infer project_without_token from omissions or fetch failure."
     }
   ],
-  "quote_audit_pending": true,
+  "quote_audit_pending": false,
   "taxonomy_complete": false,
   "runtime_evidence": {
     "commit": "21d981ee5eca94d7ba1a64ca72af945544c642a3",
@@ -149,5 +158,26 @@
     "MXC issuer new-Arbitrum contract matches provider displayed prefix/suffix; full provider explorer retrieval and current bridge availability are not claimed.",
     "JUNCA current testnet JSEC is not historical JCC. Genomes.io NIOME alpha is not TAO. Bullieverse issuer token contract/current lifecycle remains incomplete.",
     "Provider preview pages, issuer omissions and retrieval failures do not establish that no token exists."
-  ]
+  ],
+  "followup_live_audit": {
+    "commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+    "dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
+    "audit_at": "2026-10-17T12:49:16.099Z",
+    "pass_count": 270,
+    "fail_count": 53,
+    "released": [
+      "story-protocol"
+    ],
+    "quarantined": [
+      {
+        "canonical_id": "mxc",
+        "reasons": [
+          "invalid_price"
+        ]
+      }
+    ],
+    "report": "reports/stage5c-current-identity-quote-audit-20261017.json",
+    "healthz_report": "reports/stage5c-current-identity-healthz-20261017.json",
+    "scope_note": "Review-time counts remain historical. Complete strict coverage establishes Story DATA PASS and release, preserving all earlier 269 PASS. MXC matches ID/symbol/slug but fails price validation and stays quarantined. The held GenomesDAO/Junca/Bullieverse decisions are unchanged. Numeric proof for all 91 releases is pending; no raw invalid-price number, bridge transaction or unit scaling is inferred."
+  }
 }

@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "RUNTIME_PARITY_PASSED_CURRENT_IDENTITIES_PENDING",
+  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -28,27 +28,27 @@
     "cmc_ids_retained": 323,
     "no_cmc_mapping": 31,
     "slug_corrections": 23,
-    "quarantined": 54,
-    "eligible_for_runtime_request": 269,
-    "corrected_released_mappings": 90,
-    "id_corrections_released": 87,
+    "quarantined": 53,
+    "eligible_for_runtime_request": 270,
+    "corrected_released_mappings": 91,
+    "id_corrections_released": 88,
     "symbol_only_corrections_released": 3
   },
   "live_reaudit": {
     "performed": true,
     "execution": "user_browser",
-    "commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
-    "dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153",
-    "audit_at": "2026-10-17T12:28:32.430Z",
-    "healthz_at": "2026-10-17T12:28:19.712Z",
+    "commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+    "dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
+    "audit_at": "2026-10-17T12:49:16.099Z",
+    "healthz_at": "2026-10-17T12:49:04.574Z",
     "counts": {
       "dataset_total": 354,
       "mapped_expected": 323,
       "mapped_checked": 323,
       "unmapped": 31,
       "returned_quotes": 321,
-      "pass": 269,
-      "fail": 54,
+      "pass": 270,
+      "fail": 53,
       "duplicate_cmc_ids": 0,
       "duplicate_canonical_ids": 0,
       "batches": 4
@@ -56,15 +56,16 @@
     "mandatory_all_pass": true,
     "strict_failures_all_quarantined": true,
     "slug_only_failures": 0,
-    "report": "reports/stage5c-migration-quote-audit-20261017.json",
-    "healthz_report": "reports/stage5c-migration-healthz-20261017.json",
+    "report": "reports/stage5c-current-identity-quote-audit-20261017.json",
+    "healthz_report": "reports/stage5c-current-identity-healthz-20261017.json",
     "source_capture": {
-      "filename": "Вставленный Markdown(20261017-122853).md",
-      "sha256": "b4c07f2a0b5c59515a417831ee0832c96f3f79bef09f096ea51be9672ea11959",
+      "filename": "Вставленный Markdown(20261017-124937).md",
+      "sha256": "87090c44f5fbc6e7da89d08ce12104a889eb79b737dd1542ba4ef45c1166e900",
       "complete_json": true,
       "recovery": null
     },
-    "provenance_note": "The unchanged full audit does not embed a commit/hash. Pair the complete supplied audit with Preview Health 13 seconds earlier; all failure expectations match the tested table. Complete 323-ID coverage, unique failures and zero structural errors establish the passing complement, including all three current-token migrations."
+    "healthz_capture_note": "The supplied Health message omits only its final closing brace. All field values are present; saved normalized JSON adds the closing delimiter without inferring any value.",
+    "provenance_note": "The unchanged strict route does not embed commit/hash. Pair complete 323-ID coverage with Preview Health about 12 seconds earlier. Unique failure IDs and zero structural errors establish the passing complement; every failure expectation matches the tested table."
   },
   "slug_corrections": [
     {
@@ -251,28 +252,6 @@
       "mapping_status": "unverified"
     },
     {
-      "canonical_id": "story-protocol",
-      "symbol": "IP",
-      "expected_cmc_id": "29147",
-      "expected_cmc_slug": "story-2",
-      "returned_symbol": "MEMEMUSK",
-      "returned_slug": "meme-musk",
-      "reasons": [
-        "symbol_mismatch:MEMEMUSK",
-        "slug_mismatch:meme-musk",
-        "invalid_price"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "symbol": "DATA",
-        "cmcId": "35626",
-        "cmcSlug": "data-network"
-      },
-      "current_mapping_reasons": [
-        "identity_corrected_live_reaudit_required"
-      ]
-    },
-    {
       "canonical_id": "fireblocks",
       "symbol": "FB",
       "expected_cmc_id": "24877",
@@ -314,24 +293,14 @@
     {
       "canonical_id": "mxc",
       "symbol": "MXC",
-      "expected_cmc_id": "5733",
+      "expected_cmc_id": "3628",
       "expected_cmc_slug": "mxc",
-      "returned_symbol": "IOOX",
-      "returned_slug": "ioox-system",
+      "returned_symbol": "MXC",
+      "returned_slug": "mxc",
       "reasons": [
-        "symbol_mismatch:IOOX",
-        "slug_mismatch:ioox-system",
         "invalid_price"
       ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "symbol": "MXC",
-        "cmcId": "3628",
-        "cmcSlug": "mxc"
-      },
-      "current_mapping_reasons": [
-        "identity_corrected_live_reaudit_required"
-      ]
+      "mapping_status": "unverified"
     },
     {
       "canonical_id": "backed-finance",
@@ -981,8 +950,8 @@
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
     "applied": 97,
-    "unresolved_quarantined": 54,
-    "quarantine_retained": 54,
+    "unresolved_quarantined": 53,
+    "quarantine_retained": 53,
     "canonical_symbols_changed": 14,
     "collisions": 0,
     "changes": [
@@ -3273,7 +3242,7 @@
           "cmcId": "35626",
           "cmcSlug": "data-network"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "correction_kind": "ISSUER_PROJECT_AND_NATIVE_TOKEN_REBRAND",
         "source": {
           "url": "https://coinmarketcap.com/currencies/data-network/",
@@ -3291,7 +3260,10 @@
           "https://coinmarketcap.com/currencies/story-protocol/"
         ],
         "contracts": {},
-        "provider_contract_display": "0xA37E...56aFB2"
+        "provider_contract_display": "0xA37E...56aFB2",
+        "live_audit_at": "2026-10-17T12:49:16.099Z",
+        "live_audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+        "live_audit_dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb"
       },
       {
         "canonical_id": "mxc",
@@ -3311,7 +3283,7 @@
           "cmcId": "3628",
           "cmcSlug": "mxc"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "correction_kind": "ISSUER_PROVIDER_ID_CORRECTION",
         "source": {
           "url": "https://coinmarketcap.com/currencies/mxc/",
@@ -3330,12 +3302,18 @@
         "contracts": {
           "arbitrum_new_mxc": "0xaedf7656fbb47c5b97dd529ac1d0e807e051f2dd"
         },
-        "provider_contract_display": "0xaedf...51f2dd"
+        "provider_contract_display": "0xaedf...51f2dd",
+        "live_audit_at": "2026-10-17T12:49:16.099Z",
+        "live_audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+        "live_audit_dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
+        "live_reasons": [
+          "invalid_price"
+        ]
       }
     ],
-    "released_after_live_audit": 87,
-    "pending_live_reaudit": 2,
-    "corrected_ids_with_unavailable_market_data": 8,
+    "released_after_live_audit": 88,
+    "pending_live_reaudit": 0,
+    "corrected_ids_with_unavailable_market_data": 9,
     "symbol_corrections_within_id_replacements": 11,
     "symbol_corrections_with_retained_ids": 3
   },
@@ -3360,8 +3338,8 @@
     "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
   },
   "remaining_failure_categories": {
-    "symbol_mismatch": 37,
-    "invalid_price_only": 15,
+    "symbol_mismatch": 35,
+    "invalid_price_only": 16,
     "quote_not_returned": 2
   },
   "runtime_parity": {
@@ -3397,8 +3375,8 @@
       "Observed IOTA provider circulating_supply exceeds total_supply; raw values are preserved, not repaired or independently certified."
     ]
   },
-  "remaining_failure_categories_note": "37 symbol mismatches, 15 invalid-price-only and two absent quotes describe the complete 6489716 strict audit. Story and MXC now have reviewed expected identities but remain quarantined pending new strict quotes. Staged categories are 35 unresolved symbol failures, 17 market-data failures and two pending quotes; no new PASS is inferred.",
-  "quarantine_source_audit_at": "2026-10-17T12:28:32.430Z",
+  "remaining_failure_categories_note": "The complete 101fb85 audit reports 35 symbol mismatches, 16 invalid-price-only and two absent quotes. Story DATA accounts for the only gain; all previous 269 PASS remain passing. MXC matches expected identity but has invalid_price, with no raw numeric price exposed by its failure row. Expanded numeric runtime proof for all 91 corrected releases remains pending.",
+  "quarantine_source_audit_at": "2026-10-17T12:49:16.099Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
     "applied": 3,
@@ -3498,30 +3476,17 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": true,
+    "performed": false,
     "route": "/api/audit-stage5c-runtime?run=1",
-    "expected_checked": 90,
-    "expected_field_comparisons": 720,
+    "expected_checked": 91,
+    "expected_field_comparisons": 728,
     "fields_per_record": 8,
-    "provider_batches": 1,
+    "provider_batches": 2,
     "newly_released_canonical_ids": [
-      "maple",
-      "covalent",
-      "dopex"
+      "story-protocol"
     ],
-    "previous_evidence_report": "reports/stage5c-runtime-87-audit-20261016.json",
-    "note": "All 90 corrected releases including SYRUP/CXT/SYK pass 720/720 exact comparisons with positive normalized prices; no recovery needed.",
-    "counts": {
-      "checked": 90,
-      "pass": 90,
-      "fail": 0,
-      "fields_per_record": 8,
-      "provider_batches": 1
-    },
-    "audit_at": "2026-10-17T12:33:17.251Z",
-    "commit": "21d981ee5eca94d7ba1a64ca72af945544c642a3",
-    "dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
-    "report": "reports/stage5c-runtime-90-audit-20261017.json"
+    "previous_evidence_report": "reports/stage5c-runtime-90-audit-20261017.json",
+    "note": "Prior numeric evidence verifies 90 releases on 21d981e. Story DATA now has strict quote evidence; all-91 positive prices and exact fields remain pending. The unchanged loop splits provider requests at 90 IDs, so 91 records require two batches. MXC and the other eight corrected-ID market-data holds remain excluded; PCN/PORTX validity gates remain uncleared."
   },
   "runtime_parity_history": [
     {
@@ -4016,6 +3981,32 @@
       "commit": "7c36bfbb093fa6bbbab90726a6a908ede4b6a7df",
       "dataset_sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3",
       "report": "reports/stage5c-runtime-87-audit-20261016.json"
+    },
+    {
+      "performed": true,
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "expected_checked": 90,
+      "expected_field_comparisons": 720,
+      "fields_per_record": 8,
+      "provider_batches": 1,
+      "newly_released_canonical_ids": [
+        "maple",
+        "covalent",
+        "dopex"
+      ],
+      "previous_evidence_report": "reports/stage5c-runtime-87-audit-20261016.json",
+      "note": "All 90 corrected releases including SYRUP/CXT/SYK pass 720/720 exact comparisons with positive normalized prices; no recovery needed.",
+      "counts": {
+        "checked": 90,
+        "pass": 90,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 1
+      },
+      "audit_at": "2026-10-17T12:33:17.251Z",
+      "commit": "21d981ee5eca94d7ba1a64ca72af945544c642a3",
+      "dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
+      "report": "reports/stage5c-runtime-90-audit-20261017.json"
     }
   ],
   "symbol_repairs": {
@@ -4593,6 +4584,38 @@
         "recovery": null
       },
       "provenance_note": "Audit endpoint has no embedded commit/hash. Pair the complete user-supplied audit with the Preview Health response 15 seconds earlier; every failure expectation and the changed-cohort result match the tested canonical table."
+    },
+    {
+      "performed": true,
+      "execution": "user_browser",
+      "commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+      "dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153",
+      "audit_at": "2026-10-17T12:28:32.430Z",
+      "healthz_at": "2026-10-17T12:28:19.712Z",
+      "counts": {
+        "dataset_total": 354,
+        "mapped_expected": 323,
+        "mapped_checked": 323,
+        "unmapped": 31,
+        "returned_quotes": 321,
+        "pass": 269,
+        "fail": 54,
+        "duplicate_cmc_ids": 0,
+        "duplicate_canonical_ids": 0,
+        "batches": 4
+      },
+      "mandatory_all_pass": true,
+      "strict_failures_all_quarantined": true,
+      "slug_only_failures": 0,
+      "report": "reports/stage5c-migration-quote-audit-20261017.json",
+      "healthz_report": "reports/stage5c-migration-healthz-20261017.json",
+      "source_capture": {
+        "filename": "Вставленный Markdown(20261017-122853).md",
+        "sha256": "b4c07f2a0b5c59515a417831ee0832c96f3f79bef09f096ea51be9672ea11959",
+        "complete_json": true,
+        "recovery": null
+      },
+      "provenance_note": "The unchanged full audit does not embed a commit/hash. Pair the complete supplied audit with Preview Health 13 seconds earlier; all failure expectations match the tested table. Complete 323-ID coverage, unique failures and zero structural errors establish the passing complement, including all three current-token migrations."
     }
   ],
   "native_symbol_review": {
@@ -5062,7 +5085,7 @@
           "cmcId": "35626",
           "cmcSlug": "data-network"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "correction_kind": "ISSUER_PROJECT_AND_NATIVE_TOKEN_REBRAND",
         "source": {
           "url": "https://coinmarketcap.com/currencies/data-network/",
@@ -5080,7 +5103,10 @@
           "https://coinmarketcap.com/currencies/story-protocol/"
         ],
         "contracts": {},
-        "provider_contract_display": "0xA37E...56aFB2"
+        "provider_contract_display": "0xA37E...56aFB2",
+        "live_audit_at": "2026-10-17T12:49:16.099Z",
+        "live_audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+        "live_audit_dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb"
       },
       {
         "canonical_id": "mxc",
@@ -5100,7 +5126,7 @@
           "cmcId": "3628",
           "cmcSlug": "mxc"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "correction_kind": "ISSUER_PROVIDER_ID_CORRECTION",
         "source": {
           "url": "https://coinmarketcap.com/currencies/mxc/",
@@ -5119,17 +5145,32 @@
         "contracts": {
           "arbitrum_new_mxc": "0xaedf7656fbb47c5b97dd529ac1d0e807e051f2dd"
         },
-        "provider_contract_display": "0xaedf...51f2dd"
+        "provider_contract_display": "0xaedf...51f2dd",
+        "live_audit_at": "2026-10-17T12:49:16.099Z",
+        "live_audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+        "live_audit_dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
+        "live_reasons": [
+          "invalid_price"
+        ]
       }
     ],
     "numeric_ids_changed": 2,
     "symbols_changed": 1,
     "accompanying_slug_updates": 1,
     "isolated_slug_corrections_added": 0,
-    "quote_audit_performed": false,
-    "all_quarantines_retained": true,
+    "quote_audit_performed": true,
+    "all_quarantines_retained": false,
     "previous_dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
     "dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
-    "report": "reports/stage5c-current-identity-review-20261017.json"
+    "report": "reports/stage5c-current-identity-review-20261017.json",
+    "released_after_live_audit": [
+      "story-protocol"
+    ],
+    "still_quarantined": [
+      "mxc"
+    ],
+    "live_audit_at": "2026-10-17T12:49:16.099Z",
+    "live_audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+    "release_dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b"
   }
 }

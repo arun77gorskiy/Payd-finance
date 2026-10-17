@@ -77,6 +77,62 @@ test('an omitted quote cannot be substituted with another asset from the batch',
   assert.equal(result.results[1].market.price_usd, 22);
 });
 
+test('91 releases retain every identity across two provider batches and report an omitted final quote', async () => {
+  const records = Array.from({ length: 91 }, (_, i) => ({
+    id: 'token-' + (i + 1), symbol: 'T' + (i + 1), cmcId: String(i + 1),
+    cmcSlug: 'token-' + (i + 1), mapping_status: 'verified',
+    identity_review: { status: 'LIVE_AUDIT_VERIFIED' },
+  }));
+  for (const omitFinalQuote of [false, true]) {
+    const resolver = new MarketResolver({ dataset: {
+      records, _mapping_repair: { released_after_live_audit: records.length },
+    } });
+    const requests = [];
+    const adapter = {
+      getAccessMode: () => 'PRO_API',
+      fetchQuoteById: async ids => {
+        const requested = ids.split(',');
+        requests.push(requested);
+        const data = {};
+        for (const id of requested) {
+          if (omitFinalQuote && id === '91') continue;
+          const n = Number(id);
+          data[id] = { id: n, symbol: 'T' + id, slug: 'token-' + id, cmc_rank: n,
+            quote: { USD: { price: n + 0.125, market_cap: null, volume_24h: 0,
+              fully_diluted_market_cap: 0, percent_change_24h: -n,
+              percent_change_7d: n, percent_change_30d: null } } };
+        }
+        return { payload: { data }, mode: 'PRO_API', rawUrl: 'https://example.test' };
+      },
+    };
+    const result = await handler.runAudit({ _internals: { resolver, adapter } });
+    assert.deepEqual(requests.map(batch => batch.length), [90, 1]);
+    assert.deepEqual(requests.flat(), records.map(record => record.cmcId));
+    assert.deepEqual(result.results.map(row => row.canonical_id), records.map(record => record.id));
+    assert.deepEqual(result.results.map(row => row.cmc_id), records.map(record => record.cmcId));
+    assert.deepEqual(result.counts, { checked: 91, pass: omitFinalQuote ? 90 : 91,
+      fail: omitFinalQuote ? 1 : 0, fields_per_record: 8, provider_batches: 2 });
+    assert.equal(result.ok, !omitFinalQuote);
+    for (const row of result.results.slice(0, 90)) {
+      assert.deepEqual(row.reasons, []);
+      assert.equal(Object.keys(row.exact_fields).length, 8);
+      assert.ok(Object.values(row.exact_fields).every(value => value === true));
+    }
+    const final = result.results[90];
+    if (omitFinalQuote) {
+      assert.equal(final.market, null);
+      assert.ok(final.reasons.length > 0);
+    } else {
+      assert.equal(final.market.price_usd, 91.125);
+      assert.equal(final.market.market_cap_usd, null);
+      assert.equal(final.market.volume_24h_usd, 0);
+      assert.equal(Object.keys(final.exact_fields).length, 8);
+      assert.ok(Object.values(final.exact_fields).every(value => value === true));
+      assert.deepEqual(final.reasons, []);
+    }
+  }
+});
+
 test('runtime audit requires authenticated PRO_API mode', async () => {
   const f = fixture({ mode: 'KEYLESS_PUBLIC' });
   await assert.rejects(handler.runAudit(f.service), /PRO_API_REQUIRED/);
