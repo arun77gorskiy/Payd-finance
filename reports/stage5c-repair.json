@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "RUNTIME_PARITY_PASSED_MIGRATION_IDENTITIES_PENDING",
+  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -28,27 +28,27 @@
     "cmc_ids_retained": 323,
     "no_cmc_mapping": 31,
     "slug_corrections": 23,
-    "quarantined": 57,
-    "eligible_for_runtime_request": 266,
-    "corrected_released_mappings": 87,
-    "id_corrections_released": 84,
+    "quarantined": 54,
+    "eligible_for_runtime_request": 269,
+    "corrected_released_mappings": 90,
+    "id_corrections_released": 87,
     "symbol_only_corrections_released": 3
   },
   "live_reaudit": {
     "performed": true,
     "execution": "user_browser",
-    "commit": "38c3eb5f579c92fb4ade2cbd01b359c324b1be71",
-    "dataset_sha256": "54f0ae2cf8f65482203fa69b3e63959f089657900882db336683c718a3566377",
-    "audit_at": "2026-10-16T20:33:41.731Z",
-    "healthz_at": "2026-10-16T20:33:27.042Z",
+    "commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+    "dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153",
+    "audit_at": "2026-10-17T12:28:32.430Z",
+    "healthz_at": "2026-10-17T12:28:19.712Z",
     "counts": {
       "dataset_total": 354,
       "mapped_expected": 323,
       "mapped_checked": 323,
       "unmapped": 31,
       "returned_quotes": 321,
-      "pass": 266,
-      "fail": 57,
+      "pass": 269,
+      "fail": 54,
       "duplicate_cmc_ids": 0,
       "duplicate_canonical_ids": 0,
       "batches": 4
@@ -56,15 +56,15 @@
     "mandatory_all_pass": true,
     "strict_failures_all_quarantined": true,
     "slug_only_failures": 0,
-    "report": "reports/stage5c-catalog-quote-audit-20261016.json",
-    "healthz_report": "reports/stage5c-catalog-healthz-20261016.json",
+    "report": "reports/stage5c-migration-quote-audit-20261017.json",
+    "healthz_report": "reports/stage5c-migration-healthz-20261017.json",
     "source_capture": {
-      "filename": "Вставленный Markdown(20261016-203357).md",
-      "sha256": "ad231c2fed50ac4520ee4c5f8f537b90565d895736eab8bacfa67d4aa2bf0a01",
+      "filename": "Вставленный Markdown(20261017-122853).md",
+      "sha256": "b4c07f2a0b5c59515a417831ee0832c96f3f79bef09f096ea51be9672ea11959",
       "complete_json": true,
       "recovery": null
     },
-    "provenance_note": "Audit endpoint has no embedded commit/hash. Pair the complete user-supplied audit with the Preview Health response 15 seconds earlier; every failure expectation and the changed-cohort result match the tested canonical table."
+    "provenance_note": "The unchanged full audit does not embed a commit/hash. Pair the complete supplied audit with Preview Health 13 seconds earlier; all failure expectations match the tested table. Complete 323-ID coverage, unique failures and zero structural errors establish the passing complement, including all three current-token migrations."
   },
   "slug_corrections": [
     {
@@ -332,27 +332,6 @@
       "mapping_status": "unverified"
     },
     {
-      "canonical_id": "maple",
-      "symbol": "MPL",
-      "expected_cmc_id": "13632",
-      "expected_cmc_slug": "maple",
-      "returned_symbol": "GENE",
-      "returned_slug": "genopets",
-      "reasons": [
-        "symbol_mismatch:GENE",
-        "slug_mismatch:genopets"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "symbol": "SYRUP",
-        "cmcId": "33824",
-        "cmcSlug": "maple-finance"
-      },
-      "current_mapping_reasons": [
-        "identity_corrected_live_reaudit_required"
-      ]
-    },
-    {
       "canonical_id": "cortex",
       "symbol": "CTXC",
       "expected_cmc_id": "2638",
@@ -465,27 +444,6 @@
         "slug_mismatch:cyberharbor"
       ],
       "mapping_status": "unverified"
-    },
-    {
-      "canonical_id": "dopex",
-      "symbol": "DPX",
-      "expected_cmc_id": "19225",
-      "expected_cmc_slug": "dopex",
-      "returned_symbol": "HERA",
-      "returned_slug": "hera-finance",
-      "reasons": [
-        "symbol_mismatch:HERA",
-        "slug_mismatch:hera-finance"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "symbol": "SYK",
-        "cmcId": "32215",
-        "cmcSlug": "stryke"
-      },
-      "current_mapping_reasons": [
-        "identity_corrected_live_reaudit_required"
-      ]
     },
     {
       "canonical_id": "fantom",
@@ -714,26 +672,6 @@
         "invalid_price"
       ],
       "mapping_status": "unverified"
-    },
-    {
-      "canonical_id": "covalent",
-      "symbol": "CQT",
-      "expected_cmc_id": "7411",
-      "expected_cmc_slug": "covalent",
-      "returned_symbol": "CQT",
-      "returned_slug": "covalent",
-      "reasons": [
-        "invalid_price"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "symbol": "CXT",
-        "cmcId": "32526",
-        "cmcSlug": "covalent-x"
-      },
-      "current_mapping_reasons": [
-        "identity_corrected_live_reaudit_required"
-      ]
     },
     {
       "canonical_id": "credix",
@@ -1027,8 +965,8 @@
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
     "applied": 95,
-    "unresolved_quarantined": 57,
-    "quarantine_retained": 57,
+    "unresolved_quarantined": 54,
+    "quarantine_retained": 54,
     "canonical_symbols_changed": 13,
     "collisions": 0,
     "changes": [
@@ -3194,7 +3132,7 @@
           "cmcId": "33824",
           "cmcSlug": "maple-finance"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "correction_kind": "ISSUER_CURRENT_TOKEN_AFTER_MIGRATION_CLOSE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/maple-finance/",
@@ -3213,7 +3151,10 @@
         "contracts": {
           "ethereum": "0x643C4E15d7d62Ad0aBeC4a9BD4b001aA3Ef52d66"
         },
-        "provider_contract_display": "0x643C...f52d66"
+        "provider_contract_display": "0x643C...f52d66",
+        "live_audit_at": "2026-10-17T12:28:32.430Z",
+        "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+        "live_audit_dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153"
       },
       {
         "canonical_id": "covalent",
@@ -3231,7 +3172,7 @@
           "cmcId": "32526",
           "cmcSlug": "covalent-x"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "correction_kind": "ISSUER_TOKEN_MIGRATION_CURRENT_ASSET",
         "source": {
           "url": "https://coinmarketcap.com/currencies/covalent-x/",
@@ -3250,7 +3191,10 @@
         "contracts": {
           "ethereum": "0x7ABc8A5768E6bE61A6c693a6e4EAcb5B60602C4D"
         },
-        "provider_contract_display": "0x7abc...602c4d"
+        "provider_contract_display": "0x7abc...602c4d",
+        "live_audit_at": "2026-10-17T12:28:32.430Z",
+        "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+        "live_audit_dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153"
       },
       {
         "canonical_id": "dopex",
@@ -3269,7 +3213,7 @@
           "cmcId": "32215",
           "cmcSlug": "stryke"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "correction_kind": "ISSUER_PROJECT_AND_TOKEN_MIGRATION",
         "source": {
           "url": "https://coinmarketcap.com/currencies/stryke/",
@@ -3290,11 +3234,14 @@
         "contracts": {
           "arbitrum": "0xACC51FFDeF63fB0c014c882267C3A17261A5eD50"
         },
-        "provider_contract_display": "0xacc5...a5ed50"
+        "provider_contract_display": "0xacc5...a5ed50",
+        "live_audit_at": "2026-10-17T12:28:32.430Z",
+        "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+        "live_audit_dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153"
       }
     ],
-    "released_after_live_audit": 84,
-    "pending_live_reaudit": 3,
+    "released_after_live_audit": 87,
+    "pending_live_reaudit": 0,
     "corrected_ids_with_unavailable_market_data": 8,
     "symbol_corrections_within_id_replacements": 10,
     "symbol_corrections_with_retained_ids": 3
@@ -3320,8 +3267,8 @@
     "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
   },
   "remaining_failure_categories": {
-    "symbol_mismatch": 39,
-    "invalid_price_only": 16,
+    "symbol_mismatch": 37,
+    "invalid_price_only": 15,
     "quote_not_returned": 2
   },
   "runtime_parity": {
@@ -3356,8 +3303,8 @@
       "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
     ]
   },
-  "remaining_failure_categories_note": "39 symbol mismatches, 16 invalid-price-only and two absent quotes describe the complete 38c3eb5 audit at 2026-10-16T20:33:41.731Z. Maple and Dopex were symbol failures; legacy Covalent CQT was invalid-price-only. Those three now have issuer-reviewed current-asset expectations but remain quarantined pending fresh strict quotes. Staged metadata is 37 unresolved symbol failures, 17 market-data failures and three pending quotes; no new PASS is inferred.",
-  "quarantine_source_audit_at": "2026-10-16T20:33:41.731Z",
+  "remaining_failure_categories_note": "The complete 6489716 audit reports 37 symbol mismatches, 15 invalid-price-only and two absent quotes. SYRUP/CXT/SYK account for all three gains; every previous 266 PASS remains passing. Strict PASS does not establish positive normalized price or exact runtime numeric fields; the 90-release diagnostic is pending.",
+  "quarantine_source_audit_at": "2026-10-17T12:28:32.430Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
     "applied": 3,
@@ -3457,29 +3404,19 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": true,
+    "performed": false,
     "route": "/api/audit-stage5c-runtime?run=1",
-    "expected_checked": 87,
-    "expected_field_comparisons": 696,
+    "expected_checked": 90,
+    "expected_field_comparisons": 720,
     "fields_per_record": 8,
     "provider_batches": 1,
     "newly_released_canonical_ids": [
-      "gamefi",
-      "nubila"
+      "maple",
+      "covalent",
+      "dopex"
     ],
-    "previous_evidence_report": "reports/stage5c-runtime-85-audit-20261016.json",
-    "note": "All 87 corrected releases, including GAFI/NB, passed exact runtime field parity; 696/696 comparisons true.",
-    "counts": {
-      "checked": 87,
-      "pass": 87,
-      "fail": 0,
-      "fields_per_record": 8,
-      "provider_batches": 1
-    },
-    "audit_at": "2026-10-16T20:50:12.357Z",
-    "commit": "7c36bfbb093fa6bbbab90726a6a908ede4b6a7df",
-    "dataset_sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3",
-    "report": "reports/stage5c-runtime-87-audit-20261016.json"
+    "previous_evidence_report": "reports/stage5c-runtime-87-audit-20261016.json",
+    "note": "Prior numeric proof verifies 87 corrected releases on 7c36bfb. SYRUP/CXT/SYK now have strict quote evidence; positive normalized prices and exact field parity for all 90 releases on the new version remain pending. The eight corrected-ID market-data holds and PCN/PORTX additional validity gates remain excluded."
   },
   "runtime_parity_history": [
     {
@@ -3917,6 +3854,31 @@
       "commit": "00a1a12c57ae975eaac34e4750b90fb8bed3d613",
       "dataset_sha256": "c8d017822b567608f2670a86c797f4edb52e5c8d5c138fe3b8b78cc71c1f55b4",
       "report": "reports/stage5c-runtime-85-audit-20261016.json"
+    },
+    {
+      "performed": true,
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "expected_checked": 87,
+      "expected_field_comparisons": 696,
+      "fields_per_record": 8,
+      "provider_batches": 1,
+      "newly_released_canonical_ids": [
+        "gamefi",
+        "nubila"
+      ],
+      "previous_evidence_report": "reports/stage5c-runtime-85-audit-20261016.json",
+      "note": "All 87 corrected releases, including GAFI/NB, passed exact runtime field parity; 696/696 comparisons true.",
+      "counts": {
+        "checked": 87,
+        "pass": 87,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 1
+      },
+      "audit_at": "2026-10-16T20:50:12.357Z",
+      "commit": "7c36bfbb093fa6bbbab90726a6a908ede4b6a7df",
+      "dataset_sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3",
+      "report": "reports/stage5c-runtime-87-audit-20261016.json"
     }
   ],
   "symbol_repairs": {
@@ -4442,6 +4404,38 @@
         "recovery": null
       },
       "provenance_note": "Audit endpoint has no embedded commit/hash. Pair the complete user-supplied audit with the Preview Health response 12 seconds earlier; every failure expectation and the changed-cohort result match the tested canonical table."
+    },
+    {
+      "performed": true,
+      "execution": "user_browser",
+      "commit": "38c3eb5f579c92fb4ade2cbd01b359c324b1be71",
+      "dataset_sha256": "54f0ae2cf8f65482203fa69b3e63959f089657900882db336683c718a3566377",
+      "audit_at": "2026-10-16T20:33:41.731Z",
+      "healthz_at": "2026-10-16T20:33:27.042Z",
+      "counts": {
+        "dataset_total": 354,
+        "mapped_expected": 323,
+        "mapped_checked": 323,
+        "unmapped": 31,
+        "returned_quotes": 321,
+        "pass": 266,
+        "fail": 57,
+        "duplicate_cmc_ids": 0,
+        "duplicate_canonical_ids": 0,
+        "batches": 4
+      },
+      "mandatory_all_pass": true,
+      "strict_failures_all_quarantined": true,
+      "slug_only_failures": 0,
+      "report": "reports/stage5c-catalog-quote-audit-20261016.json",
+      "healthz_report": "reports/stage5c-catalog-healthz-20261016.json",
+      "source_capture": {
+        "filename": "Вставленный Markdown(20261016-203357).md",
+        "sha256": "ad231c2fed50ac4520ee4c5f8f537b90565d895736eab8bacfa67d4aa2bf0a01",
+        "complete_json": true,
+        "recovery": null
+      },
+      "provenance_note": "Audit endpoint has no embedded commit/hash. Pair the complete user-supplied audit with the Preview Health response 15 seconds earlier; every failure expectation and the changed-cohort result match the tested canonical table."
     }
   ],
   "native_symbol_review": {
@@ -4763,7 +4757,7 @@
           "cmcId": "33824",
           "cmcSlug": "maple-finance"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "correction_kind": "ISSUER_CURRENT_TOKEN_AFTER_MIGRATION_CLOSE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/maple-finance/",
@@ -4782,7 +4776,10 @@
         "contracts": {
           "ethereum": "0x643C4E15d7d62Ad0aBeC4a9BD4b001aA3Ef52d66"
         },
-        "provider_contract_display": "0x643C...f52d66"
+        "provider_contract_display": "0x643C...f52d66",
+        "live_audit_at": "2026-10-17T12:28:32.430Z",
+        "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+        "live_audit_dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153"
       },
       {
         "canonical_id": "covalent",
@@ -4800,7 +4797,7 @@
           "cmcId": "32526",
           "cmcSlug": "covalent-x"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "correction_kind": "ISSUER_TOKEN_MIGRATION_CURRENT_ASSET",
         "source": {
           "url": "https://coinmarketcap.com/currencies/covalent-x/",
@@ -4819,7 +4816,10 @@
         "contracts": {
           "ethereum": "0x7ABc8A5768E6bE61A6c693a6e4EAcb5B60602C4D"
         },
-        "provider_contract_display": "0x7abc...602c4d"
+        "provider_contract_display": "0x7abc...602c4d",
+        "live_audit_at": "2026-10-17T12:28:32.430Z",
+        "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+        "live_audit_dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153"
       },
       {
         "canonical_id": "dopex",
@@ -4838,7 +4838,7 @@
           "cmcId": "32215",
           "cmcSlug": "stryke"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "correction_kind": "ISSUER_PROJECT_AND_TOKEN_MIGRATION",
         "source": {
           "url": "https://coinmarketcap.com/currencies/stryke/",
@@ -4859,17 +4859,29 @@
         "contracts": {
           "arbitrum": "0xACC51FFDeF63fB0c014c882267C3A17261A5eD50"
         },
-        "provider_contract_display": "0xacc5...a5ed50"
+        "provider_contract_display": "0xacc5...a5ed50",
+        "live_audit_at": "2026-10-17T12:28:32.430Z",
+        "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+        "live_audit_dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153"
       }
     ],
     "numeric_ids_changed": 3,
     "symbols_changed": 3,
     "accompanying_slug_updates": 3,
     "isolated_slug_corrections_added": 0,
-    "quote_audit_performed": false,
-    "all_quarantines_retained": true,
+    "quote_audit_performed": true,
+    "all_quarantines_retained": false,
     "previous_dataset_sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3",
     "dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153",
-    "report": "reports/stage5c-migration-identity-review-20261016.json"
+    "report": "reports/stage5c-migration-identity-review-20261016.json",
+    "released_after_live_audit": [
+      "maple",
+      "covalent",
+      "dopex"
+    ],
+    "still_quarantined": [],
+    "live_audit_at": "2026-10-17T12:28:32.430Z",
+    "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+    "release_dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6"
   }
 }

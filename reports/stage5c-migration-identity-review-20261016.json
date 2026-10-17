@@ -29,7 +29,7 @@
         "cmcId": "33824",
         "cmcSlug": "maple-finance"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "correction_kind": "ISSUER_CURRENT_TOKEN_AFTER_MIGRATION_CLOSE",
       "source": {
         "url": "https://coinmarketcap.com/currencies/maple-finance/",
@@ -48,7 +48,10 @@
       "contracts": {
         "ethereum": "0x643C4E15d7d62Ad0aBeC4a9BD4b001aA3Ef52d66"
       },
-      "provider_contract_display": "0x643C...f52d66"
+      "provider_contract_display": "0x643C...f52d66",
+      "live_audit_at": "2026-10-17T12:28:32.430Z",
+      "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+      "live_audit_dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153"
     },
     {
       "canonical_id": "covalent",
@@ -66,7 +69,7 @@
         "cmcId": "32526",
         "cmcSlug": "covalent-x"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "correction_kind": "ISSUER_TOKEN_MIGRATION_CURRENT_ASSET",
       "source": {
         "url": "https://coinmarketcap.com/currencies/covalent-x/",
@@ -85,7 +88,10 @@
       "contracts": {
         "ethereum": "0x7ABc8A5768E6bE61A6c693a6e4EAcb5B60602C4D"
       },
-      "provider_contract_display": "0x7abc...602c4d"
+      "provider_contract_display": "0x7abc...602c4d",
+      "live_audit_at": "2026-10-17T12:28:32.430Z",
+      "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+      "live_audit_dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153"
     },
     {
       "canonical_id": "dopex",
@@ -104,7 +110,7 @@
         "cmcId": "32215",
         "cmcSlug": "stryke"
       },
-      "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+      "status": "LIVE_AUDIT_VERIFIED",
       "correction_kind": "ISSUER_PROJECT_AND_TOKEN_MIGRATION",
       "source": {
         "url": "https://coinmarketcap.com/currencies/stryke/",
@@ -125,7 +131,10 @@
       "contracts": {
         "arbitrum": "0xACC51FFDeF63fB0c014c882267C3A17261A5eD50"
       },
-      "provider_contract_display": "0xacc5...a5ed50"
+      "provider_contract_display": "0xacc5...a5ed50",
+      "live_audit_at": "2026-10-17T12:28:32.430Z",
+      "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+      "live_audit_dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153"
     }
   ],
   "held": [
@@ -140,7 +149,7 @@
       "notes": "Issuer documents FTM-to-native-S migration and continuing legacy Opera operation. Current Sonic S is already tracked at canonical sonic-3/32684. Retain legacy Fantom FTM/3513 quarantine and existing invalid_price reason. This is a metadata reference only: no duplicate provider ID, alias resolution, canonical merging, price substitution or wallet migration is introduced. Token absence is not inferred."
     }
   ],
-  "quote_audit_pending": true,
+  "quote_audit_pending": false,
   "taxonomy_complete": false,
   "runtime_evidence": {
     "commit": "7c36bfbb093fa6bbbab90726a6a908ede4b6a7df",
@@ -161,5 +170,21 @@
     "Covalent contract/completion details were available in issuer-hosted search extracts; some directly fetched issuer pages expose reduced content.",
     "Stryke official .xyz docs/blog and its provider-linked announcement establish lineage; no claim is made that its historic migration window remains open.",
     "Fantom FTM and already-tracked Sonic S remain distinct canonical rows, with no automatic resolution between them."
-  ]
+  ],
+  "followup_live_audit": {
+    "commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
+    "dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153",
+    "audit_at": "2026-10-17T12:28:32.430Z",
+    "pass_count": 269,
+    "fail_count": 54,
+    "released": [
+      "maple",
+      "covalent",
+      "dopex"
+    ],
+    "quarantined": [],
+    "report": "reports/stage5c-migration-quote-audit-20261017.json",
+    "healthz_report": "reports/stage5c-migration-healthz-20261017.json",
+    "scope_note": "Review-time counts remain historical. All three reviewed current-token expectations passed the full strict audit and are released; no prior passing record regressed. The existing Fantom hold is unchanged. Strict PASS alone does not prove positive normalized prices or numeric field parity; all-90 runtime verification remains pending. No legacy price substitution or unit conversion."
+  }
 }
