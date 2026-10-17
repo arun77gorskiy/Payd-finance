@@ -1,0 +1,246 @@
+{
+  "stage": "5C",
+  "reviewed_on": "2026-10-14",
+  "counts": {
+    "reviewed": 6,
+    "id_corrections_applied": 5,
+    "symbol_corrections_applied": 3,
+    "held_without_correction": 1,
+    "quarantines_released": 0
+  },
+  "policy": "Permanent canonical IDs are unchanged; current symbols require primary issuer and matching-contract evidence. Keep previous catalog values, distinguish rebrand from catalog error, and retain quarantine until live quote verification.",
+  "applied": [
+    {
+      "canonical_id": "instadapp",
+      "symbol": "FLUID",
+      "before": {
+        "cmcId": "6363",
+        "cmcSlug": "instadapp",
+        "symbol": "INST"
+      },
+      "after": {
+        "cmcId": "10508",
+        "cmcSlug": "instadapp",
+        "symbol": "FLUID"
+      },
+      "status": "LIVE_AUDIT_VERIFIED",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/instadapp/",
+        "ucid": "10508",
+        "symbol": "FLUID",
+        "retrieved_on": "2026-10-14"
+      },
+      "issuer_source": {
+        "url": "https://gov.fluid.io/t/rebranding-and-growth-plan-for-fluid-protocol/985",
+        "note": "Manual identity review: issuer documents INST-to-FLUID 1:1 rebrand with the same token address/supply; current issuer branding and provider FLUID listing agree. Provider explorer target matches the issuer Ethereum address. Preserve catalog INST as provenance; no multiplication of stored values and no wallet operation."
+      },
+      "correction_kind": "ISSUER_REBRAND_SAME_TOKEN_CONTRACT",
+      "contracts": {
+        "ethereum": "0x6f40d4A6237C257fff2dB00FA0510DeEECd303eb"
+      },
+      "additional_sources": [
+        "https://fluid.io/blog/inst",
+        "https://fluid.io/blog/general-a-new-era-new-logo-and-colors-the-liquidity-layer-for-all-finance"
+      ],
+      "live_audit_at": "2026-10-16T18:02:03.345Z",
+      "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+      "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
+    },
+    {
+      "canonical_id": "walletconnect",
+      "symbol": "WCT",
+      "before": {
+        "cmcId": "27319",
+        "cmcSlug": "walletconnect",
+        "symbol": "WC"
+      },
+      "after": {
+        "cmcId": "33152",
+        "cmcSlug": "walletconnect-token",
+        "symbol": "WCT"
+      },
+      "status": "LIVE_AUDIT_VERIFIED",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/walletconnect-token/",
+        "ucid": "33152",
+        "symbol": "WCT",
+        "retrieved_on": "2026-10-14"
+      },
+      "issuer_source": {
+        "url": "https://walletconnect.com/blog/introducing-the-walletconnect-foundation",
+        "note": "Manual catalog correction: issuer names WalletConnect Token WCT, not WC. Issuer deployment repository and provider explorer target agree on this full Ethereum address. Preserve WC as the old catalog input; do not claim a real WC-to-WCT token migration."
+      },
+      "correction_kind": "CATALOG_SYMBOL_CORRECTION",
+      "contracts": {
+        "ethereum": "0xeF4461891DfB3AC8572cCf7C794664A8DD927945",
+        "optimism": "0xeF4461891DfB3AC8572cCf7C794664A8DD927945"
+      },
+      "issuer_source_blob_sha": "b2dddae0293caf965ce8274ef2c23a4a116dc4b8",
+      "additional_sources": [
+        "https://github.com/WalletConnect/contracts/blob/main/README.md"
+      ],
+      "live_audit_at": "2026-10-16T18:02:03.345Z",
+      "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+      "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
+    },
+    {
+      "canonical_id": "cerebrumdao",
+      "symbol": "NEURON",
+      "before": {
+        "cmcId": "25224",
+        "cmcSlug": "cerebrum-dao",
+        "symbol": "NEURO"
+      },
+      "after": {
+        "cmcId": "31961",
+        "cmcSlug": "cerebrum-dao",
+        "symbol": "NEURON"
+      },
+      "status": "LIVE_AUDIT_VERIFIED",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/cerebrum-dao/",
+        "ucid": "31961",
+        "symbol": "NEURON",
+        "retrieved_on": "2026-10-14"
+      },
+      "issuer_source": {
+        "url": "https://www.cerebrumdao.com/neuron-token",
+        "note": "Manual catalog correction: issuer names NEURON and its purchase link identifies this Ethereum token. The provider explorer target has the identical full address. Preserve NEURO as the old catalog input; do not invent a historical NEURO token or rebrand."
+      },
+      "correction_kind": "CATALOG_SYMBOL_CORRECTION",
+      "contracts": {
+        "ethereum": "0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b"
+      },
+      "issuer_token_link": "https://app.uniswap.org/explore/tokens/ethereum/0xab814ce69e15f6b9660a3b184c0b0c97b9394a6b",
+      "live_audit_at": "2026-10-16T18:02:03.345Z",
+      "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+      "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5"
+    },
+    {
+      "canonical_id": "creditum",
+      "symbol": "CREDIT",
+      "before": {
+        "cmcId": "8992",
+        "cmcSlug": "creditum",
+        "symbol": "CREDIT"
+      },
+      "after": {
+        "cmcId": "17132",
+        "cmcSlug": "creditum",
+        "symbol": "CREDIT"
+      },
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/creditum/",
+        "ucid": "17132",
+        "symbol": "CREDIT",
+        "retrieved_on": "2026-10-14"
+      },
+      "issuer_source": {
+        "url": "https://creditum.gitbook.io/creditum",
+        "note": "Issuer documentation identifies the Revenant Finance/Fantom lending protocol and CREDIT rewards, matching provider Creditum/CREDIT metadata. This is not a similarly named consumer-credit business. Provider preview listing and archived protocol documentation do not establish current quote availability or lifecycle."
+      },
+      "correction_kind": "PROVIDER_ID_CORRECTION",
+      "live_audit_at": "2026-10-16T18:02:03.345Z",
+      "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+      "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+      "live_reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "pollen-mobile",
+      "symbol": "PCN",
+      "before": {
+        "cmcId": "22614",
+        "cmcSlug": "pollen-mobile",
+        "symbol": "PCN"
+      },
+      "after": {
+        "cmcId": "20267",
+        "cmcSlug": "pollen-coin",
+        "symbol": "PCN"
+      },
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/pollen-coin/",
+        "ucid": "20267",
+        "symbol": "PCN",
+        "retrieved_on": "2026-10-14"
+      },
+      "issuer_source": {
+        "url": "https://docs.pollenmobile.io/pollen-mobile-docs/white-paper/network-concepts",
+        "note": "Issuer identifies PollenCoin PCN and provider explicitly associates it with Pollen Mobile, not Pollen/PLN. Issuer internal-network $0.10 denomination has no cash value and is not a stablecoin peg; it must not become a spot quote, market cap or FDV. Keep quarantine until both a valid external quote and its market applicability are established; strict numeric PASS alone is insufficient for this special case."
+      },
+      "correction_kind": "PROVIDER_ID_CORRECTION",
+      "provider_contract_reference": {
+        "solana": "GWsZd8k85q2ie9SNycVSLeKkX7HLZfSsgx6Jdat9cjY1"
+      },
+      "additional_release_gate": "EXTERNAL_MARKET_VALIDITY_REQUIRED",
+      "live_audit_at": "2026-10-16T18:02:03.345Z",
+      "live_audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+      "live_audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+      "live_reasons": [
+        "invalid_price"
+      ]
+    }
+  ],
+  "held": [
+    {
+      "canonical_id": "huddle01",
+      "decision": "HOLD_PROVIDER_ID_AND_MARKET_IDENTITY_UNCONFIRMED",
+      "issuer_url": "https://node.huddle01.com/",
+      "whitepaper_url": "https://huddle01.mypinata.cloud/ipfs/QmQ9stKqLZoRdXHSmhrNm5N1fbzCznaZBvMEPZ6QcoVnGo",
+      "notes": "Issuer whitepaper describes a HUDL protocol token, and current node page describes tHUDL testnet rewards and TGE-dependent unlocks. No numeric CMC mapping or currently tradable HUDL asset established. Reward-calculator $1/FDV examples are not market quotes. An inaccessible candidate page does not prove absence of a token."
+    }
+  ],
+  "special_release_gates": [
+    {
+      "canonical_id": "pollen-mobile",
+      "gate": "EXTERNAL_MARKET_VALIDITY_REQUIRED",
+      "reason": "Issuer internal-network PCN denomination is non-cash value and not a stablecoin peg. Do not substitute it for market price/MC/FDV or release solely because a positive provider number appears."
+    }
+  ],
+  "last_runtime_evidence": {
+    "commit": "743e1f6050d1876dc0be88bcf3abd6046667ee80",
+    "dataset_sha256": "6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311",
+    "counts": {
+      "checked": 79,
+      "pass": 79,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    }
+  },
+  "quote_audit_pending": false,
+  "taxonomy_complete": false,
+  "followup_live_audit": {
+    "commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+    "dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+    "audit_at": "2026-10-16T18:02:03.345Z",
+    "pass_count": 261,
+    "fail_count": 62,
+    "released": [
+      "instadapp",
+      "walletconnect",
+      "cerebrumdao"
+    ],
+    "quarantined": [
+      {
+        "canonical_id": "creditum",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "pollen-mobile",
+        "reasons": [
+          "invalid_price"
+        ]
+      }
+    ],
+    "report": "reports/stage5c-issuer-quote-audit-20261016.json",
+    "healthz_report": "reports/stage5c-issuer-healthz-20261016.json",
+    "scope_note": "Review-time counts remain historical. Three identities passed strict quotes and were released; two have unavailable prices. Numeric runtime parity for all 82 releases is pending. PCN also retains its external-market-validity gate."
+  }
+}

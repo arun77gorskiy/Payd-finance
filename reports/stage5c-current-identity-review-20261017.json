@@ -1,0 +1,183 @@
+{
+  "stage": "5C",
+  "reviewed_on": "2026-10-17",
+  "review_timezone": "UTC",
+  "counts": {
+    "reviewed": 5,
+    "numeric_ids_changed": 2,
+    "symbols_changed": 1,
+    "accompanying_slug_updates": 1,
+    "held_without_provider_id_change": 3,
+    "quarantines_released": 0
+  },
+  "applied": [
+    {
+      "canonical_id": "story-protocol",
+      "symbol": "DATA",
+      "before": {
+        "symbol": "IP",
+        "cmcId": "29147",
+        "cmcSlug": "story-2",
+        "audit_reasons": [
+          "symbol_mismatch:MEMEMUSK",
+          "slug_mismatch:meme-musk",
+          "invalid_price"
+        ]
+      },
+      "after": {
+        "symbol": "DATA",
+        "cmcId": "35626",
+        "cmcSlug": "data-network"
+      },
+      "status": "LIVE_AUDIT_VERIFIED",
+      "correction_kind": "ISSUER_PROJECT_AND_NATIVE_TOKEN_REBRAND",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/data-network/",
+        "ucid": "35626",
+        "symbol": "DATA",
+        "retrieved_on": "2026-10-17"
+      },
+      "issuer_source": {
+        "url": "https://www.datafdn.org/blog/were-becoming-the-data-foundation",
+        "note": "Issuer announcement dated 2026-06-25 explicitly changes Story to The DATA Foundation, IP to DATA and Story Network to DATA Network. Provider story-protocol URL now redirects to data-network, UCID 35626/DATA, and links the same issuer/docs. The old 29147 mapping returned unrelated MEMEMUSK. Current issuer docs say DATA remains the protocol token during a planned Sui upgrade, while the independent chain continues until completion; do not claim the upgrade is complete. Select current DATA for permanent project ID story-protocol and archive IP. Current DATA quotes must not be labelled as IP. Provider contract abbreviation is recorded only; no independently fetched full issuer/provider contract match or chain execution is claimed. Separate canonical streamr/DATA 2143 remains unchanged; never merge by ticker."
+      },
+      "additional_sources": [
+        "https://docs.datafdn.org/introduction",
+        "https://docs.datafdn.org/network/overview",
+        "https://coinmarketcap.com/currencies/story-protocol/"
+      ],
+      "contracts": {},
+      "provider_contract_display": "0xA37E...56aFB2",
+      "live_audit_at": "2026-10-17T12:49:16.099Z",
+      "live_audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+      "live_audit_dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb"
+    },
+    {
+      "canonical_id": "mxc",
+      "symbol": "MXC",
+      "before": {
+        "symbol": "MXC",
+        "cmcId": "5733",
+        "cmcSlug": "mxc",
+        "audit_reasons": [
+          "symbol_mismatch:IOOX",
+          "slug_mismatch:ioox-system",
+          "invalid_price"
+        ]
+      },
+      "after": {
+        "symbol": "MXC",
+        "cmcId": "3628",
+        "cmcSlug": "mxc"
+      },
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+      "correction_kind": "ISSUER_PROVIDER_ID_CORRECTION",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/mxc/",
+        "ucid": "3628",
+        "symbol": "MXC",
+        "retrieved_on": "2026-10-17"
+      },
+      "issuer_source": {
+        "url": "https://doc.mxc.com/docs/Mainnet-Tutorials/Jannowitz-Tutorial-Old-New/",
+        "note": "Issuer Moonchain mainnet configuration identifies MXC as native symbol on chain 18686. Its old-to-new bridge documentation publishes the new Arbitrum MXC address, agreeing with the displayed provider prefix/suffix at UCID 3628/MXC/mxc. The provider links mxc.com/doc.mxc.com and records L1-to-L3 migration; the old 5733 mapping returned unrelated IOOX. Retain symbol MXC and permanent project ID. Provider is a preview listing, current quote availability is not established, and the old ERC20 bridge is marked discontinued; no bridge action, current conversion window, ratio or financial scaling is inferred. No independent full provider-explorer retrieval is claimed."
+      },
+      "additional_sources": [
+        "https://doc.mxc.com/docs/Moonchain-Design/Chains-and-Testnets/",
+        "https://doc.mxc.com/docs/Mainnet-Tutorials/Using-The-L3-Bridge/"
+      ],
+      "contracts": {
+        "arbitrum_new_mxc": "0xaedf7656fbb47c5b97dd529ac1d0e807e051f2dd"
+      },
+      "provider_contract_display": "0xaedf...51f2dd",
+      "live_audit_at": "2026-10-17T12:49:16.099Z",
+      "live_audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+      "live_audit_dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
+      "live_reasons": [
+        "invalid_price"
+      ]
+    }
+  ],
+  "held": [
+    {
+      "canonical_id": "genomesdao",
+      "status": "CURRENT_SUBNET_ASSET_LINEAGE_REVIEW_REQUIRED",
+      "issuer_url": "https://niome.genomes.io/how-to-buy.html",
+      "additional_sources": [
+        "https://niome.genomes.io/"
+      ],
+      "candidate_symbols": [
+        "GENOME",
+        "NIOME"
+      ],
+      "notes": "Current Genomes.io issuer guide identifies NIOME as Subnet 55 alpha, distinct from TAO used to acquire/stake it. Legacy GENE/GENOME lineage and provider selection need further review. Do not auto-replace GENE with GENOME or TAO; Bittensor TAO/22974 is already a separate canonical row. No confirmed numeric NIOME mapping or complete migration entitlement is established here; keep original failed mapping and quarantine."
+    },
+    {
+      "canonical_id": "junca-cash",
+      "status": "LEGACY_TOKEN_AND_TESTNET_NATIVE_ASSET_REVIEW_REQUIRED",
+      "issuer_url": "https://docs.jaios-governance.org/current-identity/",
+      "additional_sources": [
+        "https://junca-global.group/",
+        "https://coinmarketcap.com/currencies/junca-cash/"
+      ],
+      "candidate_cmc_id": "6914",
+      "candidate_symbol": "JCC",
+      "notes": "The corporate issuer site links JAIOS technical documentation. Its 2026-10-09 current-identity record distinguishes historical JCC from JSEC, the specified native token of the currently public-testnet SE BASE network. Provider 6914 is legacy JCC, not evidence for a current JCA or JSEC market asset. Do not automatically select JCC, assign a JSEC numeric ID or treat testnet units as tradable coins. Historical candidate identity is recorded only; original failed mapping/quarantine remain."
+    },
+    {
+      "canonical_id": "bullieverse",
+      "status": "ISSUER_TOKEN_CONTRACT_REVIEW_INCOMPLETE",
+      "issuer_url": "https://www.bullieverse.com/",
+      "additional_sources": [
+        "https://coinmarketcap.com/currencies/bullieverse/",
+        "https://docs.bullieverse.com/"
+      ],
+      "candidate_cmc_id": "17343",
+      "candidate_symbol": "$BULL",
+      "notes": "Provider 17343/$BULL links the current gaming/NFT issuer domain and displays contract prefix 0x9f95...5cc08d. The issuer homepage confirms the brand/games but does not identify its token in retrieved text; issuer whitepaper fetch failed. Neither the dollar-prefix normalization nor current token contract/lifecycle is independently resolved. Retain BULL and old failed provider mapping under quarantine; do not infer project_without_token from omissions or fetch failure."
+    }
+  ],
+  "quote_audit_pending": false,
+  "taxonomy_complete": false,
+  "runtime_evidence": {
+    "commit": "21d981ee5eca94d7ba1a64ca72af945544c642a3",
+    "dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
+    "audit_at": "2026-10-17T12:33:17.251Z",
+    "counts": {
+      "checked": 90,
+      "pass": 90,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    },
+    "exact_field_comparisons": 720
+  },
+  "policy": "Keep permanent project IDs and prior mappings. Apply only explicit issuer/provider lineage; do not map by ticker or substitute subnet/testnet/legacy assets. All new expectations remain quarantined pending strict quotes. No wallet actions, historical price joining, conversion entitlement or financial scaling.",
+  "source_limitations": [
+    "Story native rebrand has explicit issuer announcement; Sui migration is planned/in progress, not claimed complete. Provider displayed contract was not independently matched to a full issuer contract.",
+    "MXC issuer new-Arbitrum contract matches provider displayed prefix/suffix; full provider explorer retrieval and current bridge availability are not claimed.",
+    "JUNCA current testnet JSEC is not historical JCC. Genomes.io NIOME alpha is not TAO. Bullieverse issuer token contract/current lifecycle remains incomplete.",
+    "Provider preview pages, issuer omissions and retrieval failures do not establish that no token exists."
+  ],
+  "followup_live_audit": {
+    "commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+    "dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
+    "audit_at": "2026-10-17T12:49:16.099Z",
+    "pass_count": 270,
+    "fail_count": 53,
+    "released": [
+      "story-protocol"
+    ],
+    "quarantined": [
+      {
+        "canonical_id": "mxc",
+        "reasons": [
+          "invalid_price"
+        ]
+      }
+    ],
+    "report": "reports/stage5c-current-identity-quote-audit-20261017.json",
+    "healthz_report": "reports/stage5c-current-identity-healthz-20261017.json",
+    "scope_note": "Review-time counts remain historical. Complete strict coverage establishes Story DATA PASS and release, preserving all earlier 269 PASS. MXC matches ID/symbol/slug but fails price validation and stays quarantined. The held GenomesDAO/Junca/Bullieverse decisions are unchanged. Numeric proof for all 91 releases is pending; no raw invalid-price number, bridge transaction or unit scaling is inferred."
+  }
+}

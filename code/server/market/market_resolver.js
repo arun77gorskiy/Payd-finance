@@ -27,6 +27,7 @@
 
 const path = require('path');
 const fs = require('fs');
+const { createHash } = require('crypto');
 
 const {
   InvalidIdError,
@@ -135,13 +136,16 @@ class MarketResolver {
   constructor({ datasetPath, dataset, format } = {}) {
     if (dataset) {
       this.dataset = dataset;
+      this.datasetSha256 = createHash('sha256').update(JSON.stringify(dataset)).digest('hex');
     } else if (datasetPath) {
       // Try token-index (Stage 4 source) first, fall back to projects_enriched
       const abs = path.resolve(datasetPath);
       if (!fs.existsSync(abs)) {
         throw new Error(`Market resolver dataset not found at ${abs}`);
       }
-      const raw = JSON.parse(fs.readFileSync(abs, 'utf-8'));
+      const bytes = fs.readFileSync(abs);
+      this.datasetSha256 = createHash('sha256').update(bytes).digest('hex');
+      const raw = JSON.parse(bytes.toString('utf-8'));
       if (Array.isArray(raw.records)) {
         this.dataset = raw;
       } else if (Array.isArray(raw.projects)) {
@@ -189,9 +193,11 @@ class MarketResolver {
 
     const hasPrimary = _present(cmcId);
 
-    // UNKNOWN_MAPPING — record exists in dataset but has no verified CMC id.
+    // UNKNOWN_MAPPING — absent, quarantined, or explicitly non-token identity.
     // Resolver MUST NOT guess by symbol/name/slug.
-    if (!hasPrimary) {
+    if (!hasPrimary || project.mapping_status === 'unverified' ||
+        project.mapping_status === 'quarantined' || project.asset_type === 'project_without_token' ||
+        project.asset_type === 'unverified') {
       return {
         ok: false,
         error: new UnknownMappingError(id),

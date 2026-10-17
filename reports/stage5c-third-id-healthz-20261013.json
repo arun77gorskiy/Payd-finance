@@ -1,0 +1,60 @@
+{
+  "ok": true,
+  "status": "UP",
+  "stats": {
+    "cache": {
+      "size": 0,
+      "inflight": 0,
+      "ttlMs": 60000
+    },
+    "adapterAuthAvailable": true,
+    "accessMode": "PRO_API",
+    "resolverSize": 354
+  },
+  "resolver": {
+    "total": 354,
+    "cmc_mapped": 323,
+    "no_cmc_mapping": 31
+  },
+  "canonical_dataset": {
+    "sha256": "02e2faaa0c512cac6eccebb78bb43b4ca75ed4aa0e538bff5468e0b121ae1d97",
+    "git_commit": "083861149fadfbdb4489fad294670d65509148d2",
+    "mapping_repair": {
+      "stage": "5C",
+      "status": "ADDITIONAL_ID_CORRECTIONS_PENDING_LIVE_REAUDIT",
+      "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
+      "source_audit_at": "2026-10-12T10:20:26.406Z",
+      "slug_corrections": 22,
+      "quarantined": 67,
+      "quarantined_symbol_mismatches": 51,
+      "quarantined_market_data_failures": 11,
+      "id_corrections": 83,
+      "identity_review_remaining": 67,
+      "last_live_audit_at": "2026-10-13T12:59:43.236Z",
+      "last_live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22",
+      "last_live_audit_pass": 256,
+      "last_live_audit_fail": 67,
+      "released_after_live_audit": 77,
+      "last_live_audit_dataset_sha256": "aca53d7134395f404b65b0485b57e7d4672625126b2b95bc55d96c05d8e06da3",
+      "pending_id_corrections": 5,
+      "quarantined_quote_pending": 5,
+      "corrected_ids_with_unavailable_market_data": 1,
+      "runtime_parity_checked_releases": 77,
+      "runtime_parity_pending_releases": 0,
+      "last_runtime_audit_at": "2026-10-13T16:42:12.997Z",
+      "last_runtime_audit_commit": "d12ab3133504b30fbe7ef30f9bf214e489c13881",
+      "last_runtime_audit_dataset_sha256": "4184694a8bc16d80c82a5279837679b7b803409f2d68e337a5cc28f502ba97a7",
+      "last_runtime_audit_pass": 77,
+      "last_runtime_audit_fail": 0
+    },
+    "eligible": 256,
+    "quarantined": 67
+  },
+  "uptime_seconds": 0,
+  "node_version": "v22.23.2",
+  "vercel_region": "iad1",
+  "vercel_env": "preview",
+  "cmc_api_key_present": true,
+  "ts": "2026-10-13T18:38:39.980Z",
+  "elapsed_ms": 8
+}

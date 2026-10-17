@@ -1,0 +1,752 @@
+{
+  "ok": false,
+  "audit": "stage5b_cmc_full_mapping",
+  "environment": "preview",
+  "access_mode": "PRO_API",
+  "counts": {
+    "dataset_total": 354,
+    "mapped_expected": 323,
+    "mapped_checked": 323,
+    "unmapped": 31,
+    "returned_quotes": 321,
+    "pass": 269,
+    "fail": 54,
+    "duplicate_cmc_ids": 0,
+    "duplicate_canonical_ids": 0,
+    "batches": 4
+  },
+  "mandatory": [
+    {
+      "canonical_id": "bitcoin",
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "canonical_id": "ethereum",
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "canonical_id": "chainlink",
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "canonical_id": "ondo-finance",
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "canonical_id": "bittensor",
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "canonical_id": "aave",
+      "status": "PASS",
+      "reasons": []
+    },
+    {
+      "canonical_id": "decentraland",
+      "status": "PASS",
+      "reasons": []
+    }
+  ],
+  "structural_failures": [],
+  "failures": [
+    {
+      "canonical_id": "the-open-network",
+      "symbol": "TON",
+      "expected_cmc_id": "11419",
+      "expected_cmc_slug": "gram",
+      "returned_symbol": "GRAM",
+      "returned_slug": "gram",
+      "reasons": [
+        "symbol_mismatch:GRAM"
+      ]
+    },
+    {
+      "canonical_id": "hashnote",
+      "symbol": "USYC",
+      "expected_cmc_id": "28558",
+      "expected_cmc_slug": "hashnote-usyc",
+      "returned_symbol": "USYC",
+      "returned_slug": "hashnote-usyc",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "wrapped-stx",
+      "symbol": "WSTX",
+      "expected_cmc_id": "22257",
+      "expected_cmc_slug": "wrapped-stacks",
+      "returned_symbol": "WSTX",
+      "returned_slug": "wrapped-stacks",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "story-protocol",
+      "symbol": "IP",
+      "expected_cmc_id": "29147",
+      "expected_cmc_slug": "story-2",
+      "returned_symbol": "MEMEMUSK",
+      "returned_slug": "meme-musk",
+      "reasons": [
+        "symbol_mismatch:MEMEMUSK",
+        "slug_mismatch:meme-musk",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "fireblocks",
+      "symbol": "FB",
+      "expected_cmc_id": "24877",
+      "expected_cmc_slug": "fireblocks",
+      "returned_symbol": "BIM",
+      "returned_slug": "bim",
+      "reasons": [
+        "symbol_mismatch:BIM",
+        "slug_mismatch:bim"
+      ]
+    },
+    {
+      "canonical_id": "mountain-protocol",
+      "symbol": "USDM",
+      "expected_cmc_id": "27788",
+      "expected_cmc_slug": "mountain-protocol-usdm",
+      "returned_symbol": "TEST",
+      "returned_slug": "test",
+      "reasons": [
+        "symbol_mismatch:TEST",
+        "slug_mismatch:test",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "creditum",
+      "symbol": "CREDIT",
+      "expected_cmc_id": "17132",
+      "expected_cmc_slug": "creditum",
+      "returned_symbol": "CREDIT",
+      "returned_slug": "creditum",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "mxc",
+      "symbol": "MXC",
+      "expected_cmc_id": "5733",
+      "expected_cmc_slug": "mxc",
+      "returned_symbol": "IOOX",
+      "returned_slug": "ioox-system",
+      "reasons": [
+        "symbol_mismatch:IOOX",
+        "slug_mismatch:ioox-system",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "backed-finance",
+      "symbol": "BPRO",
+      "expected_cmc_id": "28833",
+      "expected_cmc_slug": "backed",
+      "returned_symbol": "RAIT",
+      "returned_slug": "rabbitgame",
+      "reasons": [
+        "symbol_mismatch:RAIT",
+        "slug_mismatch:rabbitgame",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "cortex",
+      "symbol": "CTXC",
+      "expected_cmc_id": "2638",
+      "expected_cmc_slug": "cortex",
+      "returned_symbol": "CTXC",
+      "returned_slug": "cortex",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "spheron",
+      "symbol": "SPON",
+      "expected_cmc_id": "37537",
+      "expected_cmc_slug": "spheron-network",
+      "returned_symbol": "SPON",
+      "returned_slug": "spheron-network",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "pollen-mobile",
+      "symbol": "PCN",
+      "expected_cmc_id": "20267",
+      "expected_cmc_slug": "pollen-coin",
+      "returned_symbol": "PCN",
+      "returned_slug": "pollen-coin",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "everclear",
+      "symbol": "CLEAR",
+      "expected_cmc_id": "34512",
+      "expected_cmc_slug": "everclear",
+      "returned_symbol": "CLEAR",
+      "returned_slug": "everclear",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "match-quest",
+      "symbol": "MQ",
+      "expected_cmc_id": "29811",
+      "expected_cmc_slug": "match-quest",
+      "returned_symbol": "ANDY",
+      "returned_slug": "andy-on-sol",
+      "reasons": [
+        "symbol_mismatch:ANDY",
+        "slug_mismatch:andy-on-sol"
+      ]
+    },
+    {
+      "canonical_id": "toucan-protocol",
+      "symbol": "BCT",
+      "expected_cmc_id": "23238",
+      "expected_cmc_slug": "toucan-protocol-base-carbon-tonne",
+      "returned_symbol": "HIMFERS",
+      "returned_slug": "himfers",
+      "reasons": [
+        "symbol_mismatch:HIMFERS",
+        "slug_mismatch:himfers",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "chainport",
+      "symbol": "PORTX",
+      "expected_cmc_id": "17480",
+      "expected_cmc_slug": "chainport",
+      "returned_symbol": "PORTX",
+      "returned_slug": "chainport",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "lyra",
+      "symbol": "LYRA",
+      "expected_cmc_id": "27620",
+      "expected_cmc_slug": "lyra-3",
+      "returned_symbol": "THROG",
+      "returned_slug": "throg",
+      "reasons": [
+        "symbol_mismatch:THROG",
+        "slug_mismatch:throg",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "ceramic",
+      "symbol": "CERA",
+      "expected_cmc_id": "24022",
+      "expected_cmc_slug": "ceramic",
+      "returned_symbol": "CHT",
+      "returned_slug": "cyberharbor",
+      "reasons": [
+        "symbol_mismatch:CHT",
+        "slug_mismatch:cyberharbor"
+      ]
+    },
+    {
+      "canonical_id": "fantom",
+      "symbol": "FTM",
+      "expected_cmc_id": "3513",
+      "expected_cmc_slug": "fantom",
+      "returned_symbol": "FTM",
+      "returned_slug": "fantom",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "huddle01",
+      "symbol": "HUDL",
+      "expected_cmc_id": "23412",
+      "expected_cmc_slug": "huddle01",
+      "returned_symbol": "PSI",
+      "returned_slug": "tridentdao",
+      "reasons": [
+        "symbol_mismatch:PSI",
+        "slug_mismatch:tridentdao"
+      ]
+    },
+    {
+      "canonical_id": "moralis",
+      "symbol": "MOR",
+      "expected_cmc_id": "24755",
+      "expected_cmc_slug": "moralis",
+      "returned_symbol": "WSB",
+      "returned_slug": "wall-street-bet",
+      "reasons": [
+        "symbol_mismatch:WSB",
+        "slug_mismatch:wall-street-bet"
+      ]
+    },
+    {
+      "canonical_id": "rom",
+      "symbol": "ROM",
+      "expected_cmc_id": "29211",
+      "expected_cmc_slug": "rom",
+      "returned_symbol": "EGG",
+      "returned_slug": "egg",
+      "reasons": [
+        "symbol_mismatch:EGG",
+        "slug_mismatch:egg"
+      ]
+    },
+    {
+      "canonical_id": "matrixdock",
+      "symbol": "STBT",
+      "expected_cmc_id": "29096",
+      "expected_cmc_slug": "matrixdock",
+      "returned_symbol": "DOGE",
+      "returned_slug": "elon-doge-token",
+      "reasons": [
+        "symbol_mismatch:DOGE",
+        "slug_mismatch:elon-doge-token"
+      ]
+    },
+    {
+      "canonical_id": "openeden",
+      "symbol": "TBILL",
+      "expected_cmc_id": "25158",
+      "expected_cmc_slug": "openeden-tbill-vault",
+      "returned_symbol": "TBILL",
+      "returned_slug": "openeden-tbill-vault",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "thingsix",
+      "symbol": "THIX",
+      "expected_cmc_id": "23967",
+      "expected_cmc_slug": "thingsix",
+      "returned_symbol": "VAPE",
+      "returned_slug": "vaporfi",
+      "reasons": [
+        "symbol_mismatch:VAPE",
+        "slug_mismatch:vaporfi",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "tangible",
+      "symbol": "TNGBL",
+      "expected_cmc_id": "22870",
+      "expected_cmc_slug": "tangible",
+      "returned_symbol": "DGH",
+      "returned_slug": "digihealth",
+      "reasons": [
+        "symbol_mismatch:DGH",
+        "slug_mismatch:digihealth",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "aether",
+      "symbol": "AET",
+      "expected_cmc_id": "25245",
+      "expected_cmc_slug": "aether",
+      "returned_symbol": "SMUDGE",
+      "returned_slug": "smudge-lord",
+      "reasons": [
+        "symbol_mismatch:SMUDGE",
+        "slug_mismatch:smudge-lord",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "agora-health",
+      "symbol": "AGORA",
+      "expected_cmc_id": "25567",
+      "expected_cmc_slug": "agora-health",
+      "returned_symbol": "AIM",
+      "returned_slug": "automated-income-machine",
+      "reasons": [
+        "symbol_mismatch:AIM",
+        "slug_mismatch:automated-income-machine",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "alienswap",
+      "symbol": "ALIEN",
+      "expected_cmc_id": "22664",
+      "expected_cmc_slug": "alienswap",
+      "returned_symbol": "UNF",
+      "returned_slug": "unofarm",
+      "reasons": [
+        "symbol_mismatch:UNF",
+        "slug_mismatch:unofarm",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "franklin-templeton",
+      "symbol": "BENJI",
+      "expected_cmc_id": "31581",
+      "expected_cmc_slug": "franklin-templeton",
+      "returned_symbol": "DSAI",
+      "returned_slug": "desend-ai",
+      "reasons": [
+        "symbol_mismatch:DSAI",
+        "slug_mismatch:desend-ai",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "biomapper",
+      "symbol": "BIO",
+      "expected_cmc_id": "25420",
+      "expected_cmc_slug": "biomapper",
+      "returned_symbol": "PEPEDONALDS",
+      "returned_slug": "pepe-donalds",
+      "reasons": [
+        "symbol_mismatch:PEPEDONALDS",
+        "slug_mismatch:pepe-donalds",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "biopset",
+      "symbol": "BIOPSET",
+      "expected_cmc_id": "25321",
+      "expected_cmc_slug": "biopset",
+      "returned_symbol": "AHE",
+      "returned_slug": "ai-hey",
+      "reasons": [
+        "symbol_mismatch:AHE",
+        "slug_mismatch:ai-hey",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "bullieverse",
+      "symbol": "BULL",
+      "expected_cmc_id": "11687",
+      "expected_cmc_slug": "bullrise",
+      "returned_symbol": "BULL",
+      "returned_slug": "bullrise",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "cryogenseed",
+      "symbol": "CGS",
+      "expected_cmc_id": "25522",
+      "expected_cmc_slug": "cryogenseed",
+      "returned_symbol": "YUKKY",
+      "returned_slug": "yukky",
+      "reasons": [
+        "symbol_mismatch:YUKKY",
+        "slug_mismatch:yukky",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "corusdao",
+      "symbol": "COR",
+      "expected_cmc_id": "25122",
+      "expected_cmc_slug": "corusdao",
+      "returned_symbol": "PATNUT",
+      "returned_slug": "patnut",
+      "reasons": [
+        "symbol_mismatch:PATNUT",
+        "slug_mismatch:patnut",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "credix",
+      "symbol": "CRED",
+      "expected_cmc_id": "27812",
+      "expected_cmc_slug": "credix-finance",
+      "returned_symbol": "PACMAN",
+      "returned_slug": "pac-man",
+      "reasons": [
+        "symbol_mismatch:PACMAN",
+        "slug_mismatch:pac-man",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "digix-gold-token",
+      "symbol": "DGX",
+      "expected_cmc_id": "2739",
+      "expected_cmc_slug": "digix-gold-token",
+      "returned_symbol": "DGX",
+      "returned_slug": "digix-gold-token",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "fasset",
+      "symbol": "FASSET",
+      "expected_cmc_id": "27555",
+      "expected_cmc_slug": "fasset",
+      "returned_symbol": "WBOB",
+      "returned_slug": "wrapped-bob",
+      "reasons": [
+        "symbol_mismatch:WBOB",
+        "slug_mismatch:wrapped-bob",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "genobank",
+      "symbol": "GENE",
+      "expected_cmc_id": "22555",
+      "expected_cmc_slug": "genobank",
+      "returned_symbol": null,
+      "returned_slug": null,
+      "reasons": [
+        "quote_not_returned"
+      ]
+    },
+    {
+      "canonical_id": "genomesdao",
+      "symbol": "GENE",
+      "expected_cmc_id": "21634",
+      "expected_cmc_slug": "genomesdao",
+      "returned_symbol": "JUNI",
+      "returned_slug": "jackpot-universe",
+      "reasons": [
+        "symbol_mismatch:JUNI",
+        "slug_mismatch:jackpot-universe",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "junca-cash",
+      "symbol": "JCA",
+      "expected_cmc_id": "21587",
+      "expected_cmc_slug": "junca-cash",
+      "returned_symbol": "RAINSPIRIT",
+      "returned_slug": "rainspirit",
+      "reasons": [
+        "symbol_mismatch:RAINSPIRIT",
+        "slug_mismatch:rainspirit",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "lofty",
+      "symbol": "LOFTY",
+      "expected_cmc_id": "22617",
+      "expected_cmc_slug": "lofty-2",
+      "returned_symbol": "TFLOKI",
+      "returned_slug": "thanksgiving-floki",
+      "reasons": [
+        "symbol_mismatch:TFLOKI",
+        "slug_mismatch:thanksgiving-floki",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "mintchain",
+      "symbol": "MINT",
+      "expected_cmc_id": "36005",
+      "expected_cmc_slug": "mint-blockchain",
+      "returned_symbol": "MINT",
+      "returned_slug": "mint-blockchain",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "molecule",
+      "symbol": "MOL",
+      "expected_cmc_id": "3502",
+      "expected_cmc_slug": "molecule",
+      "returned_symbol": "MOL",
+      "returned_slug": "molecule",
+      "reasons": [
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "nucleation",
+      "symbol": "NUCT",
+      "expected_cmc_id": "25600",
+      "expected_cmc_slug": "nucleation",
+      "returned_symbol": "RhinoMars",
+      "returned_slug": "rhinomars",
+      "reasons": [
+        "symbol_mismatch:RhinoMars",
+        "slug_mismatch:rhinomars",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "openlab",
+      "symbol": "OPENLAB",
+      "expected_cmc_id": "25443",
+      "expected_cmc_slug": "openlab",
+      "returned_symbol": "BITMOON",
+      "returned_slug": "bitmoon-token",
+      "reasons": [
+        "symbol_mismatch:BITMOON",
+        "slug_mismatch:bitmoon-token",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "polynomial",
+      "symbol": "POLY",
+      "expected_cmc_id": "27689",
+      "expected_cmc_slug": "polynomialfi",
+      "returned_symbol": "PROME",
+      "returned_slug": "prometheus-3",
+      "reasons": [
+        "symbol_mismatch:PROME",
+        "slug_mismatch:prometheus-3",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "psilocin",
+      "symbol": "PSIL",
+      "expected_cmc_id": "25333",
+      "expected_cmc_slug": "psilocin",
+      "returned_symbol": "MURATIAI",
+      "returned_slug": "muratiai",
+      "reasons": [
+        "symbol_mismatch:MURATIAI",
+        "slug_mismatch:muratiai",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "realt-coin",
+      "symbol": "REALT",
+      "expected_cmc_id": "11814",
+      "expected_cmc_slug": "realt",
+      "returned_symbol": "POTATO",
+      "returned_slug": "potato",
+      "reasons": [
+        "symbol_mismatch:POTATO",
+        "slug_mismatch:potato",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "rwa-x",
+      "symbol": "RWAX",
+      "expected_cmc_id": "28623",
+      "expected_cmc_slug": "rwa-x",
+      "returned_symbol": "PYPL.D",
+      "returned_slug": "dinari-pypl",
+      "reasons": [
+        "symbol_mismatch:PYPL.D",
+        "slug_mismatch:dinari-pypl",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "rxbio",
+      "symbol": "RXBIO",
+      "expected_cmc_id": "24999",
+      "expected_cmc_slug": "rxbio",
+      "returned_symbol": "GLI",
+      "returned_slug": "gli-token",
+      "reasons": [
+        "symbol_mismatch:GLI",
+        "slug_mismatch:gli-token",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "trademate",
+      "symbol": "TRDM",
+      "expected_cmc_id": "24033",
+      "expected_cmc_slug": "trademate",
+      "returned_symbol": null,
+      "returned_slug": null,
+      "reasons": [
+        "quote_not_returned"
+      ]
+    },
+    {
+      "canonical_id": "traditional-finance",
+      "symbol": "TRFI",
+      "expected_cmc_id": "28512",
+      "expected_cmc_slug": "traditional-finance",
+      "returned_symbol": "GME",
+      "returned_slug": "dumbmoney",
+      "reasons": [
+        "symbol_mismatch:GME",
+        "slug_mismatch:dumbmoney",
+        "invalid_price"
+      ]
+    },
+    {
+      "canonical_id": "superstate",
+      "symbol": "USTB",
+      "expected_cmc_id": "37086",
+      "expected_cmc_slug": "superstate-short-duration-us-government-securities-fund-ustb",
+      "returned_symbol": "USTB",
+      "returned_slug": "superstate-short-duration-us-government-securities-fund-ustb",
+      "reasons": [
+        "invalid_price"
+      ]
+    }
+  ],
+  "unmapped_canonical_ids": [
+    "ipfs",
+    "nexus-4",
+    "safe",
+    "movement",
+    "alchemy",
+    "antidote",
+    "biodao",
+    "bloxroute",
+    "blockscout",
+    "chainstack",
+    "data-union",
+    "eclipse",
+    "gravity",
+    "goldsky",
+    "infura",
+    "kakarot",
+    "koinly",
+    "matrixport-rwa",
+    "connext",
+    "nxyz",
+    "powerpod",
+    "quicknode",
+    "rari",
+    "redbelly-network",
+    "redstone-finance",
+    "securitize",
+    "synesis-one",
+    "sp-global",
+    "thirdweb",
+    "tenderly",
+    "wayru"
+  ],
+  "elapsed_ms": 190,
+  "ts": "2026-10-17T12:28:32.430Z"
+}

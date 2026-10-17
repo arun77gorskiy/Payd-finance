@@ -220,6 +220,13 @@ function normalizeCMCQuotes(payload, context, retrievedAt) {
     throw err;
   }
 
+  if ((context.symbol && String(rawCoin.symbol || '').toUpperCase() !== String(context.symbol).toUpperCase()) ||
+      (context.cmcSlug && String(rawCoin.slug || '') !== String(context.cmcSlug))) {
+    const err = new Error('CMC symbol or slug does not match the resolved canonical mapping');
+    err.code = 'WRONG_IDENTITY';
+    throw err;
+  }
+
   const market = buildMarket(quote, rawCoin);
 
   if (market.price_usd === null || market.price_usd === undefined || market.price_usd <= 0) {

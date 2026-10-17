@@ -92,6 +92,14 @@
         "iad1"
       ],
       "includeFiles": "public/data/intelligence/token-index.json"
+    },
+    "api/audit-stage5c-runtime.js": {
+      "maxDuration": 30,
+      "memory": 512,
+      "regions": [
+        "iad1"
+      ],
+      "includeFiles": "public/data/intelligence/token-index.json"
     }
   },
   "rewrites": [
