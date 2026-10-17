@@ -1413,20 +1413,45 @@
     },
     {
       "id": "story-protocol",
-      "symbol": "IP",
+      "symbol": "DATA",
       "name": "story-protocol",
       "sectors": [
         "AI"
       ],
       "market_cap_usd": 68214210,
-      "cmcId": "29147",
-      "cmcSlug": "story-2",
+      "cmcId": "35626",
+      "cmcSlug": "data-network",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:MEMEMUSK",
-        "slug_mismatch:meme-musk",
-        "invalid_price"
-      ]
+        "identity_corrected_live_reaudit_required"
+      ],
+      "previous_cmc_mapping": {
+        "symbol": "IP",
+        "cmcId": "29147",
+        "cmcSlug": "story-2",
+        "audit_reasons": [
+          "symbol_mismatch:MEMEMUSK",
+          "slug_mismatch:meme-musk",
+          "invalid_price"
+        ]
+      },
+      "previous_catalog_symbol": "IP",
+      "symbol_repair": {
+        "before": "IP",
+        "after": "DATA",
+        "kind": "ISSUER_PROJECT_AND_NATIVE_TOKEN_REBRAND",
+        "reviewed_on": "2026-10-17",
+        "issuer_url": "https://www.datafdn.org/blog/were-becoming-the-data-foundation",
+        "contracts": {},
+        "scope": "Explicit issuer-documented current native-token rebrand; preserve historical label and stable project ID. No financial scaling or alias fallback."
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/data-network/",
+        "issuer_url": "https://www.datafdn.org/blog/were-becoming-the-data-foundation",
+        "reviewed_on": "2026-10-17",
+        "notes": "Issuer announcement dated 2026-06-25 explicitly changes Story to The DATA Foundation, IP to DATA and Story Network to DATA Network. Provider story-protocol URL now redirects to data-network, UCID 35626/DATA, and links the same issuer/docs. The old 29147 mapping returned unrelated MEMEMUSK. Current issuer docs say DATA remains the protocol token during a planned Sui upgrade, while the independent chain continues until completion; do not claim the upgrade is complete. Select current DATA for permanent project ID story-protocol and archive IP. Current DATA quotes must not be labelled as IP. Provider contract abbreviation is recorded only; no independently fetched full issuer/provider contract match or chain execution is claimed. Separate canonical streamr/DATA 2143 remains unchanged; never merge by ticker."
+      }
     },
     {
       "id": "spark",
@@ -3968,14 +3993,29 @@
         "DePIN"
       ],
       "market_cap_usd": 966298,
-      "cmcId": "5733",
+      "cmcId": "3628",
       "cmcSlug": "mxc",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:IOOX",
-        "slug_mismatch:ioox-system",
-        "invalid_price"
-      ]
+        "identity_corrected_live_reaudit_required"
+      ],
+      "previous_cmc_mapping": {
+        "symbol": "MXC",
+        "cmcId": "5733",
+        "cmcSlug": "mxc",
+        "audit_reasons": [
+          "symbol_mismatch:IOOX",
+          "slug_mismatch:ioox-system",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/mxc/",
+        "issuer_url": "https://doc.mxc.com/docs/Mainnet-Tutorials/Jannowitz-Tutorial-Old-New/",
+        "reviewed_on": "2026-10-17",
+        "notes": "Issuer Moonchain mainnet configuration identifies MXC as native symbol on chain 18686. Its old-to-new bridge documentation publishes the new Arbitrum MXC address, agreeing with the displayed provider prefix/suffix at UCID 3628/MXC/mxc. The provider links mxc.com/doc.mxc.com and records L1-to-L3 migration; the old 5733 mapping returned unrelated IOOX. Retain symbol MXC and permanent project ID. Provider is a preview listing, current quote availability is not established, and the old ERC20 bridge is marked discontinued; no bridge action, current conversion window, ratio or financial scaling is inferred. No independent full provider-explorer retrieval is claimed."
+      }
     },
     {
       "id": "backed-finance",
@@ -5339,7 +5379,18 @@
       "mapping_status": "unverified",
       "mapping_reasons": [
         "invalid_price"
-      ]
+      ],
+      "identity_review": {
+        "status": "ISSUER_TOKEN_CONTRACT_REVIEW_INCOMPLETE",
+        "issuer_url": "https://www.bullieverse.com/",
+        "additional_sources": [
+          "https://coinmarketcap.com/currencies/bullieverse/",
+          "https://docs.bullieverse.com/"
+        ],
+        "candidate_cmc_id": "17343",
+        "candidate_symbol": "$BULL",
+        "notes": "Provider 17343/$BULL links the current gaming/NFT issuer domain and displays contract prefix 0x9f95...5cc08d. The issuer homepage confirms the brand/games but does not identify its token in retrieved text; issuer whitepaper fetch failed. Neither the dollar-prefix normalization nor current token contract/lifecycle is independently resolved. Retain BULL and old failed provider mapping under quarantine; do not infer project_without_token from omissions or fetch failure."
+      }
     },
     {
       "id": "cryogenseed",
@@ -5541,7 +5592,19 @@
         "symbol_mismatch:JUNI",
         "slug_mismatch:jackpot-universe",
         "invalid_price"
-      ]
+      ],
+      "identity_review": {
+        "status": "CURRENT_SUBNET_ASSET_LINEAGE_REVIEW_REQUIRED",
+        "issuer_url": "https://niome.genomes.io/how-to-buy.html",
+        "additional_sources": [
+          "https://niome.genomes.io/"
+        ],
+        "candidate_symbols": [
+          "GENOME",
+          "NIOME"
+        ],
+        "notes": "Current Genomes.io issuer guide identifies NIOME as Subnet 55 alpha, distinct from TAO used to acquire/stake it. Legacy GENE/GENOME lineage and provider selection need further review. Do not auto-replace GENE with GENOME or TAO; Bittensor TAO/22974 is already a separate canonical row. No confirmed numeric NIOME mapping or complete migration entitlement is established here; keep original failed mapping and quarantine."
+      }
     },
     {
       "id": "goldsky",
@@ -5580,7 +5643,18 @@
         "symbol_mismatch:RAINSPIRIT",
         "slug_mismatch:rainspirit",
         "invalid_price"
-      ]
+      ],
+      "identity_review": {
+        "status": "LEGACY_TOKEN_AND_TESTNET_NATIVE_ASSET_REVIEW_REQUIRED",
+        "issuer_url": "https://docs.jaios-governance.org/current-identity/",
+        "additional_sources": [
+          "https://junca-global.group/",
+          "https://coinmarketcap.com/currencies/junca-cash/"
+        ],
+        "candidate_cmc_id": "6914",
+        "candidate_symbol": "JCC",
+        "notes": "The corporate issuer site links JAIOS technical documentation. Its 2026-10-09 current-identity record distinguishes historical JCC from JSEC, the specified native token of the currently public-testnet SE BASE network. Provider 6914 is legacy JCC, not evidence for a current JCA or JSEC market asset. Do not automatically select JCC, assign a JSEC numeric ID or treat testnet units as tradable coins. Historical candidate identity is recorded only; original failed mapping/quarantine remain."
+      }
     },
     {
       "id": "kakarot",
@@ -6967,9 +7041,9 @@
     },
     "story-protocol": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-17T12:28:32.430Z; runtime market data remains unavailable.",
-      "cmcId": "29147",
-      "cmcSlug": "story-2",
+      "notes": "Issuer/provider lineage reviewed 2026-10-17; revised expectations require fresh strict quotes before release.",
+      "cmcId": "35626",
+      "cmcSlug": "data-network",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -7909,8 +7983,8 @@
     },
     "mxc": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-17T12:28:32.430Z; runtime market data remains unavailable.",
-      "cmcId": "5733",
+      "notes": "Issuer/provider lineage reviewed 2026-10-17; revised expectations require fresh strict quotes before release.",
+      "cmcId": "3628",
       "cmcSlug": "mxc",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
@@ -8369,7 +8443,7 @@
     },
     "bullieverse": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-17T12:28:32.430Z; runtime market data remains unavailable.",
+      "notes": "Identity/lifecycle reviewed 2026-10-17; held without changing symbol/provider mapping. See reports/stage5c-current-identity-review-20261017.json.",
       "cmcId": "11687",
       "cmcSlug": "bullrise",
       "previous_final_status": "PROMOTED",
@@ -8457,7 +8531,7 @@
     },
     "genomesdao": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-17T12:28:32.430Z; runtime market data remains unavailable.",
+      "notes": "Identity/lifecycle reviewed 2026-10-17; held without changing symbol/provider mapping. See reports/stage5c-current-identity-review-20261017.json.",
       "cmcId": "21634",
       "cmcSlug": "genomesdao",
       "previous_final_status": "AMBIGUOUS",
@@ -8477,7 +8551,7 @@
     },
     "junca-cash": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-17T12:28:32.430Z; runtime market data remains unavailable.",
+      "notes": "Identity/lifecycle reviewed 2026-10-17; held without changing symbol/provider mapping. See reports/stage5c-current-identity-review-20261017.json.",
       "cmcId": "21587",
       "cmcSlug": "junca-cash",
       "previous_final_status": "INVALID_REMOVED",
@@ -8764,14 +8838,14 @@
   },
   "_mapping_repair": {
     "stage": "5C",
-    "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+    "status": "ID_AND_SYMBOL_CORRECTIONS_PENDING_LIVE_REAUDIT",
     "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
     "source_audit_at": "2026-10-12T10:20:26.406Z",
     "slug_corrections": 23,
     "quarantined": 54,
-    "quarantined_symbol_mismatches": 37,
+    "quarantined_symbol_mismatches": 35,
     "quarantined_market_data_failures": 17,
-    "id_corrections": 95,
+    "id_corrections": 97,
     "identity_review_remaining": 54,
     "last_live_audit_at": "2026-10-17T12:28:32.430Z",
     "last_live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
@@ -8779,24 +8853,24 @@
     "last_live_audit_fail": 54,
     "released_after_live_audit": 90,
     "last_live_audit_dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153",
-    "pending_id_corrections": 0,
-    "quarantined_quote_pending": 0,
+    "pending_id_corrections": 2,
+    "quarantined_quote_pending": 2,
     "corrected_ids_with_unavailable_market_data": 8,
-    "runtime_parity_checked_releases": 87,
-    "runtime_parity_pending_releases": 3,
-    "last_runtime_audit_at": "2026-10-16T20:50:12.357Z",
-    "last_runtime_audit_commit": "7c36bfbb093fa6bbbab90726a6a908ede4b6a7df",
-    "last_runtime_audit_dataset_sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3",
-    "last_runtime_audit_pass": 87,
+    "runtime_parity_checked_releases": 90,
+    "runtime_parity_pending_releases": 0,
+    "last_runtime_audit_at": "2026-10-17T12:33:17.251Z",
+    "last_runtime_audit_commit": "21d981ee5eca94d7ba1a64ca72af945544c642a3",
+    "last_runtime_audit_dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
+    "last_runtime_audit_pass": 90,
     "last_runtime_audit_fail": 0,
-    "canonical_symbol_corrections": 13,
-    "pending_symbol_corrections": 0,
+    "canonical_symbol_corrections": 14,
+    "pending_symbol_corrections": 1,
     "released_id_corrections": 87,
     "released_symbol_only_corrections": 3
   },
   "_symbol_repair": {
-    "reviewed_on": "2026-10-16",
-    "count": 13,
+    "reviewed_on": "2026-10-17",
+    "count": 14,
     "changes": [
       {
         "before": "INST",
@@ -8943,6 +9017,16 @@
         },
         "scope": "Explicit issuer-documented current project/token lineage; preserve the old asset identity. No price/history/balance conversion or relaxed validator.",
         "canonical_id": "dopex"
+      },
+      {
+        "before": "IP",
+        "after": "DATA",
+        "kind": "ISSUER_PROJECT_AND_NATIVE_TOKEN_REBRAND",
+        "reviewed_on": "2026-10-17",
+        "issuer_url": "https://www.datafdn.org/blog/were-becoming-the-data-foundation",
+        "contracts": {},
+        "scope": "Explicit issuer-documented current native-token rebrand; preserve historical label and stable project ID. No financial scaling or alias fallback.",
+        "canonical_id": "story-protocol"
       }
     ],
     "policy": "Permanent canonical IDs, names, sectors and snapshot values remain stable. Numeric provider ID corrections require explicit provider UCID/project identity and retain old mappings. Current-symbol corrections require manual primary issuer token/lineage and exact provider project identity review. Record contract evidence and retrieval limits precisely; issuer documents alone do not prove a fresh valid quote. Preserve prior catalog symbols and retain quarantine until a fresh strict audit and any additional market-validity gate are satisfied. Never resolve by ticker, scale financial values or invent token migrations."

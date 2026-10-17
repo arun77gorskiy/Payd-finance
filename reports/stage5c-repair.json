@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+  "status": "RUNTIME_PARITY_PASSED_CURRENT_IDENTITIES_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -262,7 +262,15 @@
         "slug_mismatch:meme-musk",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "symbol": "DATA",
+        "cmcId": "35626",
+        "cmcSlug": "data-network"
+      },
+      "current_mapping_reasons": [
+        "identity_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "fireblocks",
@@ -315,7 +323,15 @@
         "slug_mismatch:ioox-system",
         "invalid_price"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "symbol": "MXC",
+        "cmcId": "3628",
+        "cmcSlug": "mxc"
+      },
+      "current_mapping_reasons": [
+        "identity_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "backed-finance",
@@ -964,10 +980,10 @@
   "taxonomy_status": "NOT_COMPLETED: classify token/stablecoin/wrapped/project_without_token only using verified project identity evidence; no-quote alone does not establish no-token.",
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
-    "applied": 95,
+    "applied": 97,
     "unresolved_quarantined": 54,
     "quarantine_retained": 54,
-    "canonical_symbols_changed": 13,
+    "canonical_symbols_changed": 14,
     "collisions": 0,
     "changes": [
       {
@@ -3238,12 +3254,89 @@
         "live_audit_at": "2026-10-17T12:28:32.430Z",
         "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
         "live_audit_dataset_sha256": "e5ebfac8e56ff8b5d6f409d7b1226dced500a5674644ea26cc287fbb6c8b3153"
+      },
+      {
+        "canonical_id": "story-protocol",
+        "symbol": "DATA",
+        "before": {
+          "symbol": "IP",
+          "cmcId": "29147",
+          "cmcSlug": "story-2",
+          "audit_reasons": [
+            "symbol_mismatch:MEMEMUSK",
+            "slug_mismatch:meme-musk",
+            "invalid_price"
+          ]
+        },
+        "after": {
+          "symbol": "DATA",
+          "cmcId": "35626",
+          "cmcSlug": "data-network"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_PROJECT_AND_NATIVE_TOKEN_REBRAND",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/data-network/",
+          "ucid": "35626",
+          "symbol": "DATA",
+          "retrieved_on": "2026-10-17"
+        },
+        "issuer_source": {
+          "url": "https://www.datafdn.org/blog/were-becoming-the-data-foundation",
+          "note": "Issuer announcement dated 2026-06-25 explicitly changes Story to The DATA Foundation, IP to DATA and Story Network to DATA Network. Provider story-protocol URL now redirects to data-network, UCID 35626/DATA, and links the same issuer/docs. The old 29147 mapping returned unrelated MEMEMUSK. Current issuer docs say DATA remains the protocol token during a planned Sui upgrade, while the independent chain continues until completion; do not claim the upgrade is complete. Select current DATA for permanent project ID story-protocol and archive IP. Current DATA quotes must not be labelled as IP. Provider contract abbreviation is recorded only; no independently fetched full issuer/provider contract match or chain execution is claimed. Separate canonical streamr/DATA 2143 remains unchanged; never merge by ticker."
+        },
+        "additional_sources": [
+          "https://docs.datafdn.org/introduction",
+          "https://docs.datafdn.org/network/overview",
+          "https://coinmarketcap.com/currencies/story-protocol/"
+        ],
+        "contracts": {},
+        "provider_contract_display": "0xA37E...56aFB2"
+      },
+      {
+        "canonical_id": "mxc",
+        "symbol": "MXC",
+        "before": {
+          "symbol": "MXC",
+          "cmcId": "5733",
+          "cmcSlug": "mxc",
+          "audit_reasons": [
+            "symbol_mismatch:IOOX",
+            "slug_mismatch:ioox-system",
+            "invalid_price"
+          ]
+        },
+        "after": {
+          "symbol": "MXC",
+          "cmcId": "3628",
+          "cmcSlug": "mxc"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_PROVIDER_ID_CORRECTION",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/mxc/",
+          "ucid": "3628",
+          "symbol": "MXC",
+          "retrieved_on": "2026-10-17"
+        },
+        "issuer_source": {
+          "url": "https://doc.mxc.com/docs/Mainnet-Tutorials/Jannowitz-Tutorial-Old-New/",
+          "note": "Issuer Moonchain mainnet configuration identifies MXC as native symbol on chain 18686. Its old-to-new bridge documentation publishes the new Arbitrum MXC address, agreeing with the displayed provider prefix/suffix at UCID 3628/MXC/mxc. The provider links mxc.com/doc.mxc.com and records L1-to-L3 migration; the old 5733 mapping returned unrelated IOOX. Retain symbol MXC and permanent project ID. Provider is a preview listing, current quote availability is not established, and the old ERC20 bridge is marked discontinued; no bridge action, current conversion window, ratio or financial scaling is inferred. No independent full provider-explorer retrieval is claimed."
+        },
+        "additional_sources": [
+          "https://doc.mxc.com/docs/Moonchain-Design/Chains-and-Testnets/",
+          "https://doc.mxc.com/docs/Mainnet-Tutorials/Using-The-L3-Bridge/"
+        ],
+        "contracts": {
+          "arbitrum_new_mxc": "0xaedf7656fbb47c5b97dd529ac1d0e807e051f2dd"
+        },
+        "provider_contract_display": "0xaedf...51f2dd"
       }
     ],
     "released_after_live_audit": 87,
-    "pending_live_reaudit": 0,
+    "pending_live_reaudit": 2,
     "corrected_ids_with_unavailable_market_data": 8,
-    "symbol_corrections_within_id_replacements": 10,
+    "symbol_corrections_within_id_replacements": 11,
     "symbol_corrections_with_retained_ids": 3
   },
   "migration_review": {
@@ -3275,35 +3368,36 @@
     "performed": true,
     "execution": "user_browser",
     "route": "/api/audit-stage5c-runtime?run=1",
-    "scope": "87 corrected and released mappings: 84 numeric-ID replacements and three retained-ID symbol corrections",
-    "commit": "7c36bfbb093fa6bbbab90726a6a908ede4b6a7df",
-    "dataset_sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3",
-    "audit_at": "2026-10-16T20:50:12.357Z",
+    "scope": "90 corrected releases: 87 numeric-ID replacements and three retained-ID symbol corrections",
+    "commit": "21d981ee5eca94d7ba1a64ca72af945544c642a3",
+    "dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
+    "audit_at": "2026-10-17T12:33:17.251Z",
     "counts": {
-      "checked": 87,
-      "pass": 87,
+      "checked": 90,
+      "pass": 90,
       "fail": 0,
       "fields_per_record": 8,
       "provider_batches": 1
     },
     "fields_per_record": 8,
     "provider_batches": 1,
-    "exact_field_comparisons": 696,
+    "exact_field_comparisons": 720,
     "all_exact_fields_true": true,
-    "report": "reports/stage5c-runtime-87-audit-20261016.json",
-    "healthz_report": "reports/stage5c-runtime-87-healthz-20261016.json",
+    "report": "reports/stage5c-runtime-90-audit-20261017.json",
+    "healthz_report": "reports/stage5c-runtime-90-healthz-20261017.json",
     "source_capture": {
-      "filename": "Вставленный Markdown(20261016-205026).md",
-      "sha256": "1cfb4638528e32e99bad84739077bd6e93ce9c42c0a7478ceb720e3c6413a0af",
+      "filename": "Вставленный Markdown(20261017-123334).md",
+      "sha256": "4e4e735923cf3c75b7f48c4248d809685250d39dc25abe22a8dc2fb3c0bd0c60",
       "complete_json": true,
       "recovery": null
     },
     "scope_limitations": [
-      "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache.",
-      "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
+      "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache; not public HTTP/cache/CORS or frontend verification.",
+      "Exact provider parity does not independently prove financial data quality, tradability, supply consistency or real-world zero optional values.",
+      "Observed IOTA provider circulating_supply exceeds total_supply; raw values are preserved, not repaired or independently certified."
     ]
   },
-  "remaining_failure_categories_note": "The complete 6489716 audit reports 37 symbol mismatches, 15 invalid-price-only and two absent quotes. SYRUP/CXT/SYK account for all three gains; every previous 266 PASS remains passing. Strict PASS does not establish positive normalized price or exact runtime numeric fields; the 90-release diagnostic is pending.",
+  "remaining_failure_categories_note": "37 symbol mismatches, 15 invalid-price-only and two absent quotes describe the complete 6489716 strict audit. Story and MXC now have reviewed expected identities but remain quarantined pending new strict quotes. Staged categories are 35 unresolved symbol failures, 17 market-data failures and two pending quotes; no new PASS is inferred.",
   "quarantine_source_audit_at": "2026-10-17T12:28:32.430Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
@@ -3404,7 +3498,7 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": false,
+    "performed": true,
     "route": "/api/audit-stage5c-runtime?run=1",
     "expected_checked": 90,
     "expected_field_comparisons": 720,
@@ -3416,7 +3510,18 @@
       "dopex"
     ],
     "previous_evidence_report": "reports/stage5c-runtime-87-audit-20261016.json",
-    "note": "Prior numeric proof verifies 87 corrected releases on 7c36bfb. SYRUP/CXT/SYK now have strict quote evidence; positive normalized prices and exact field parity for all 90 releases on the new version remain pending. The eight corrected-ID market-data holds and PCN/PORTX additional validity gates remain excluded."
+    "note": "All 90 corrected releases including SYRUP/CXT/SYK pass 720/720 exact comparisons with positive normalized prices; no recovery needed.",
+    "counts": {
+      "checked": 90,
+      "pass": 90,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    },
+    "audit_at": "2026-10-17T12:33:17.251Z",
+    "commit": "21d981ee5eca94d7ba1a64ca72af945544c642a3",
+    "dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
+    "report": "reports/stage5c-runtime-90-audit-20261017.json"
   },
   "runtime_parity_history": [
     {
@@ -3565,6 +3670,38 @@
       "source_capture": {
         "filename": "Вставленный Markdown(20261016-190230).md",
         "sha256": "8b5ddd8f8c7b25eb8c211348b75fa01fc4cd960c06a92db5deceb022e3af86b4",
+        "complete_json": true,
+        "recovery": null
+      },
+      "scope_limitations": [
+        "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache.",
+        "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
+      ]
+    },
+    {
+      "performed": true,
+      "execution": "user_browser",
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "scope": "87 corrected and released mappings: 84 numeric-ID replacements and three retained-ID symbol corrections",
+      "commit": "7c36bfbb093fa6bbbab90726a6a908ede4b6a7df",
+      "dataset_sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3",
+      "audit_at": "2026-10-16T20:50:12.357Z",
+      "counts": {
+        "checked": 87,
+        "pass": 87,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 1
+      },
+      "fields_per_record": 8,
+      "provider_batches": 1,
+      "exact_field_comparisons": 696,
+      "all_exact_fields_true": true,
+      "report": "reports/stage5c-runtime-87-audit-20261016.json",
+      "healthz_report": "reports/stage5c-runtime-87-healthz-20261016.json",
+      "source_capture": {
+        "filename": "Вставленный Markdown(20261016-205026).md",
+        "sha256": "1cfb4638528e32e99bad84739077bd6e93ce9c42c0a7478ceb720e3c6413a0af",
         "complete_json": true,
         "recovery": null
       },
@@ -3882,8 +4019,8 @@
     }
   ],
   "symbol_repairs": {
-    "reviewed_on": "2026-10-16",
-    "count": 13,
+    "reviewed_on": "2026-10-17",
+    "count": 14,
     "changes": [
       {
         "before": "INST",
@@ -4030,13 +4167,23 @@
         },
         "scope": "Explicit issuer-documented current project/token lineage; preserve the old asset identity. No price/history/balance conversion or relaxed validator.",
         "canonical_id": "dopex"
+      },
+      {
+        "before": "IP",
+        "after": "DATA",
+        "kind": "ISSUER_PROJECT_AND_NATIVE_TOKEN_REBRAND",
+        "reviewed_on": "2026-10-17",
+        "issuer_url": "https://www.datafdn.org/blog/were-becoming-the-data-foundation",
+        "contracts": {},
+        "scope": "Explicit issuer-documented current native-token rebrand; preserve historical label and stable project ID. No financial scaling or alias fallback.",
+        "canonical_id": "story-protocol"
       }
     ],
     "policy": "Permanent canonical IDs, names, sectors and snapshot values remain stable. Numeric provider ID corrections require explicit provider UCID/project identity and retain old mappings. Current-symbol corrections require manual primary issuer token/lineage and exact provider project identity review. Record contract evidence and retrieval limits precisely; issuer documents alone do not prove a fresh valid quote. Preserve prior catalog symbols and retain quarantine until a fresh strict audit and any additional market-validity gate are satisfied. Never resolve by ticker, scale financial values or invent token migrations."
   },
   "canonical_preservation": {
     "canonical_ids_changed": 0,
-    "symbols_changed": 13,
+    "symbols_changed": 14,
     "symbol_changes": [
       {
         "before": "INST",
@@ -4183,6 +4330,16 @@
         },
         "scope": "Explicit issuer-documented current project/token lineage; preserve the old asset identity. No price/history/balance conversion or relaxed validator.",
         "canonical_id": "dopex"
+      },
+      {
+        "before": "IP",
+        "after": "DATA",
+        "kind": "ISSUER_PROJECT_AND_NATIVE_TOKEN_REBRAND",
+        "reviewed_on": "2026-10-17",
+        "issuer_url": "https://www.datafdn.org/blog/were-becoming-the-data-foundation",
+        "contracts": {},
+        "scope": "Explicit issuer-documented current native-token rebrand; preserve historical label and stable project ID. No financial scaling or alias fallback.",
+        "canonical_id": "story-protocol"
       }
     ],
     "names_changed": 0,
@@ -4883,5 +5040,96 @@
     "live_audit_at": "2026-10-17T12:28:32.430Z",
     "live_audit_commit": "648971653499ecc49fb1a60458c0399c5bf926f9",
     "release_dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6"
+  },
+  "current_identity_review": {
+    "reviewed_on": "2026-10-17",
+    "changes": [
+      {
+        "canonical_id": "story-protocol",
+        "symbol": "DATA",
+        "before": {
+          "symbol": "IP",
+          "cmcId": "29147",
+          "cmcSlug": "story-2",
+          "audit_reasons": [
+            "symbol_mismatch:MEMEMUSK",
+            "slug_mismatch:meme-musk",
+            "invalid_price"
+          ]
+        },
+        "after": {
+          "symbol": "DATA",
+          "cmcId": "35626",
+          "cmcSlug": "data-network"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_PROJECT_AND_NATIVE_TOKEN_REBRAND",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/data-network/",
+          "ucid": "35626",
+          "symbol": "DATA",
+          "retrieved_on": "2026-10-17"
+        },
+        "issuer_source": {
+          "url": "https://www.datafdn.org/blog/were-becoming-the-data-foundation",
+          "note": "Issuer announcement dated 2026-06-25 explicitly changes Story to The DATA Foundation, IP to DATA and Story Network to DATA Network. Provider story-protocol URL now redirects to data-network, UCID 35626/DATA, and links the same issuer/docs. The old 29147 mapping returned unrelated MEMEMUSK. Current issuer docs say DATA remains the protocol token during a planned Sui upgrade, while the independent chain continues until completion; do not claim the upgrade is complete. Select current DATA for permanent project ID story-protocol and archive IP. Current DATA quotes must not be labelled as IP. Provider contract abbreviation is recorded only; no independently fetched full issuer/provider contract match or chain execution is claimed. Separate canonical streamr/DATA 2143 remains unchanged; never merge by ticker."
+        },
+        "additional_sources": [
+          "https://docs.datafdn.org/introduction",
+          "https://docs.datafdn.org/network/overview",
+          "https://coinmarketcap.com/currencies/story-protocol/"
+        ],
+        "contracts": {},
+        "provider_contract_display": "0xA37E...56aFB2"
+      },
+      {
+        "canonical_id": "mxc",
+        "symbol": "MXC",
+        "before": {
+          "symbol": "MXC",
+          "cmcId": "5733",
+          "cmcSlug": "mxc",
+          "audit_reasons": [
+            "symbol_mismatch:IOOX",
+            "slug_mismatch:ioox-system",
+            "invalid_price"
+          ]
+        },
+        "after": {
+          "symbol": "MXC",
+          "cmcId": "3628",
+          "cmcSlug": "mxc"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_PROVIDER_ID_CORRECTION",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/mxc/",
+          "ucid": "3628",
+          "symbol": "MXC",
+          "retrieved_on": "2026-10-17"
+        },
+        "issuer_source": {
+          "url": "https://doc.mxc.com/docs/Mainnet-Tutorials/Jannowitz-Tutorial-Old-New/",
+          "note": "Issuer Moonchain mainnet configuration identifies MXC as native symbol on chain 18686. Its old-to-new bridge documentation publishes the new Arbitrum MXC address, agreeing with the displayed provider prefix/suffix at UCID 3628/MXC/mxc. The provider links mxc.com/doc.mxc.com and records L1-to-L3 migration; the old 5733 mapping returned unrelated IOOX. Retain symbol MXC and permanent project ID. Provider is a preview listing, current quote availability is not established, and the old ERC20 bridge is marked discontinued; no bridge action, current conversion window, ratio or financial scaling is inferred. No independent full provider-explorer retrieval is claimed."
+        },
+        "additional_sources": [
+          "https://doc.mxc.com/docs/Moonchain-Design/Chains-and-Testnets/",
+          "https://doc.mxc.com/docs/Mainnet-Tutorials/Using-The-L3-Bridge/"
+        ],
+        "contracts": {
+          "arbitrum_new_mxc": "0xaedf7656fbb47c5b97dd529ac1d0e807e051f2dd"
+        },
+        "provider_contract_display": "0xaedf...51f2dd"
+      }
+    ],
+    "numeric_ids_changed": 2,
+    "symbols_changed": 1,
+    "accompanying_slug_updates": 1,
+    "isolated_slug_corrections_added": 0,
+    "quote_audit_performed": false,
+    "all_quarantines_retained": true,
+    "previous_dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
+    "dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
+    "report": "reports/stage5c-current-identity-review-20261017.json"
   }
 }
