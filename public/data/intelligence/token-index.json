@@ -171,7 +171,7 @@
     },
     {
       "id": "the-open-network",
-      "symbol": "TON",
+      "symbol": "GRAM",
       "name": "the-open-network",
       "sectors": [
         "Layer 1"
@@ -181,8 +181,27 @@
       "cmcSlug": "gram",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:GRAM"
-      ]
+        "symbol_corrected_live_reaudit_required"
+      ],
+      "previous_catalog_symbol": "TON",
+      "symbol_repair": {
+        "before": "TON",
+        "after": "GRAM",
+        "kind": "ISSUER_NATIVE_COIN_TICKER_REBRAND",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://ton.org/media/",
+        "original_mapping_reasons": [
+          "symbol_mismatch:GRAM"
+        ],
+        "scope": "Explicit native-token ticker continuity; numeric ID and slug retained. No migration, unit scaling or ticker fallback."
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/gram/",
+        "issuer_url": "https://ton.org/media/",
+        "reviewed_on": "2026-10-18",
+        "notes": "Issuer ton.org/media explicitly names Gram/GRAM as formerly Toncoin/TON while The Open Network remains the blockchain name. Provider UCID 11419 is Gram (prev. Toncoin), symbol GRAM, slug gram, with the same issuer link. This is native-asset ticker continuity, not an unrelated GRAM token or a swap. Retain numeric ID, slug, permanent canonical ID, legacy symbol, names and snapshots; no units, balance, price or supply conversion. Native-chain lineage is the evidence; no ERC20 contract identity or chain execution is claimed. Strict quote verification under GRAM remains pending."
+      }
     },
     {
       "id": "hedera-hashgraph",
@@ -4602,7 +4621,21 @@
         "symbol_mismatch:HIMFERS",
         "slug_mismatch:himfers",
         "invalid_price"
-      ]
+      ],
+      "identity_review": {
+        "status": "LEGACY_CARBON_POOL_PRODUCT_AND_MARKET_REVIEW_REQUIRED",
+        "candidate_cmc_id": "12949",
+        "candidate_symbol": "BCT",
+        "candidate_slug": "toucan-protocol-base-carbon-tonne",
+        "issuer_url": "https://docs.toucan.earth/resources/frequently-asked-questions/faq-for-transition-to-open-source",
+        "additional_sources": [
+          "https://docs.klimadao.finance/developers/deployment-addresses",
+          "https://docs.klimadao.finance/ecosystem/carbon-pools",
+          "https://coinmarketcap.com/currencies/toucan-protocol-base-carbon-tonne/"
+        ],
+        "documented_polygon_contract": "0x2F800Db0fdb5223b3C3f354886d907A671414A7F",
+        "notes": "Toucan confirms admin control transferred to KlimaDAO in 2024 and BCT is no longer its product. KlimaDAO registry identifies the Polygon BCT address, matching provider 12949 abbreviation, but its carbon-pools page marks pools deprecated after the protocol relaunch. This identifies a historical BCT candidate, not a current Toucan project quote or verified market applicability. Preserve BCT/old failed mapping quarantine until project-versus-pool and current lifecycle/market review resolves; do not substitute KLIMA, assume carbon-credit redemption or infer token absence."
+      }
     },
     {
       "id": "chainport",
@@ -5033,13 +5066,28 @@
         "RWA"
       ],
       "market_cap_usd": 0,
-      "cmcId": "29096",
-      "cmcSlug": "matrixdock",
+      "cmcId": "28055",
+      "cmcSlug": "short-term-t-bill-token",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:DOGE",
-        "slug_mismatch:elon-doge-token"
-      ]
+        "identity_corrected_live_reaudit_required"
+      ],
+      "previous_cmc_mapping": {
+        "symbol": "STBT",
+        "cmcId": "29096",
+        "cmcSlug": "matrixdock",
+        "audit_reasons": [
+          "symbol_mismatch:DOGE",
+          "slug_mismatch:elon-doge-token"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "source_url": "https://coinmarketcap.com/currencies/short-term-t-bill-token/",
+        "issuer_url": "https://www.matrixdock.com/stbt",
+        "reviewed_on": "2026-10-18",
+        "notes": "Current Matrixdock homepage/product and issuer token-features documentation explicitly identify STBT as its rebasing short-term US Treasury/repo token, distinct from wSTBT and gold/silver products. Provider UCID 28055 is STBT/short-term-t-bill-token and links stbt.matrixdock.com. Its displayed contract 0x5308...45b44a agrees with the provider-linked Ethereum explorer target 0x530824da86689c9c17cdc2871ff29b058345b44a. Explorer retrieval returned 403 and a full issuer contract was not retrieved; do not claim independent full-address matching. Archive the unrelated DOGE mapping. Issuer describes whitelisting/accredited-investor restrictions and rebasing; no fixed $1 spot quote, NAV substitution, redemption eligibility or unrestricted tradability is inferred. Strict quotes remain pending."
+      }
     },
     {
       "id": "openeden",
@@ -5093,7 +5141,16 @@
         "symbol_mismatch:VAPE",
         "slug_mismatch:vaporfi",
         "invalid_price"
-      ]
+      ],
+      "identity_review": {
+        "status": "NUMERIC_PROVIDER_IDENTITY_UNCONFIRMED",
+        "issuer_url": "https://thingsix.com/",
+        "additional_sources": [
+          "https://docs.thingsix.com/",
+          "https://things-ix.webflow.io/"
+        ],
+        "notes": "ThingsIX/THIX remains a research lead. Direct current-domain/docs retrieval failed; a branded Webflow page describes the IoT network but does not establish a current numeric CMC identity or verified token contract. Search results about similarly named THING are unrelated. Keep original failed mapping and quarantine; retrieval failure is not evidence of no token."
+      }
     },
     {
       "id": "tangible",
@@ -6344,7 +6401,7 @@
     },
     "the-open-network": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-17T12:49:16.099Z; runtime market data remains unavailable.",
+      "notes": "Issuer-confirmed native TON-to-GRAM ticker rebrand; retained UCID 11419/gram. Fresh strict quotes required before release.",
       "cmcId": "11419",
       "cmcSlug": "gram",
       "previous_final_status": "AMBIGUOUS",
@@ -8167,7 +8224,7 @@
     },
     "toucan-protocol": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-17T12:49:16.099Z; runtime market data remains unavailable.",
+      "notes": "Held after issuer/lifecycle review 2026-10-18; symbol/provider mapping unchanged. See reports/stage5c-native-treasury-review-20261018.json.",
       "cmcId": "23238",
       "cmcSlug": "toucan-protocol-base-carbon-tonne",
       "previous_final_status": "INVALID_REMOVED",
@@ -8315,9 +8372,9 @@
     },
     "matrixdock": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-17T12:49:16.099Z; runtime market data remains unavailable.",
-      "cmcId": "29096",
-      "cmcSlug": "matrixdock",
+      "notes": "Issuer/product and provider STBT identity reviewed 2026-10-18. Fresh strict quotes required; no $1 price or wrapper substitution.",
+      "cmcId": "28055",
+      "cmcSlug": "short-term-t-bill-token",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -8331,7 +8388,7 @@
     },
     "thingsix": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-17T12:49:16.099Z; runtime market data remains unavailable.",
+      "notes": "Held after issuer/lifecycle review 2026-10-18; symbol/provider mapping unchanged. See reports/stage5c-native-treasury-review-20261018.json.",
       "cmcId": "23967",
       "cmcSlug": "thingsix",
       "previous_final_status": "INVALID_REMOVED",
@@ -8844,14 +8901,14 @@
   },
   "_mapping_repair": {
     "stage": "5C",
-    "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+    "status": "ID_AND_SYMBOL_CORRECTIONS_PENDING_LIVE_REAUDIT",
     "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
     "source_audit_at": "2026-10-12T10:20:26.406Z",
     "slug_corrections": 23,
     "quarantined": 53,
-    "quarantined_symbol_mismatches": 35,
+    "quarantined_symbol_mismatches": 33,
     "quarantined_market_data_failures": 18,
-    "id_corrections": 97,
+    "id_corrections": 98,
     "identity_review_remaining": 53,
     "last_live_audit_at": "2026-10-17T12:49:16.099Z",
     "last_live_audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
@@ -8859,24 +8916,24 @@
     "last_live_audit_fail": 53,
     "released_after_live_audit": 91,
     "last_live_audit_dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
-    "pending_id_corrections": 0,
-    "quarantined_quote_pending": 0,
+    "pending_id_corrections": 1,
+    "quarantined_quote_pending": 2,
     "corrected_ids_with_unavailable_market_data": 9,
-    "runtime_parity_checked_releases": 90,
-    "runtime_parity_pending_releases": 1,
-    "last_runtime_audit_at": "2026-10-17T12:33:17.251Z",
-    "last_runtime_audit_commit": "21d981ee5eca94d7ba1a64ca72af945544c642a3",
-    "last_runtime_audit_dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
-    "last_runtime_audit_pass": 90,
+    "runtime_parity_checked_releases": 91,
+    "runtime_parity_pending_releases": 0,
+    "last_runtime_audit_at": "2026-10-18T13:34:32.382Z",
+    "last_runtime_audit_commit": "baed82cc9083cf7d07fa8d5efbcd33b9d20fa023",
+    "last_runtime_audit_dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
+    "last_runtime_audit_pass": 91,
     "last_runtime_audit_fail": 0,
-    "canonical_symbol_corrections": 14,
-    "pending_symbol_corrections": 0,
+    "canonical_symbol_corrections": 15,
+    "pending_symbol_corrections": 1,
     "released_id_corrections": 88,
     "released_symbol_only_corrections": 3
   },
   "_symbol_repair": {
-    "reviewed_on": "2026-10-17",
-    "count": 14,
+    "reviewed_on": "2026-10-18",
+    "count": 15,
     "changes": [
       {
         "before": "INST",
@@ -9033,6 +9090,18 @@
         "contracts": {},
         "scope": "Explicit issuer-documented current native-token rebrand; preserve historical label and stable project ID. No financial scaling or alias fallback.",
         "canonical_id": "story-protocol"
+      },
+      {
+        "before": "TON",
+        "after": "GRAM",
+        "kind": "ISSUER_NATIVE_COIN_TICKER_REBRAND",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://ton.org/media/",
+        "original_mapping_reasons": [
+          "symbol_mismatch:GRAM"
+        ],
+        "scope": "Explicit native-token ticker continuity; numeric ID and slug retained. No migration, unit scaling or ticker fallback.",
+        "canonical_id": "the-open-network"
       }
     ],
     "policy": "Permanent canonical IDs, names, sectors and snapshot values remain stable. Numeric provider ID corrections require explicit provider UCID/project identity and retain old mappings. Current-symbol corrections require manual primary issuer token/lineage and exact provider project identity review. Record contract evidence and retrieval limits precisely; issuer documents alone do not prove a fresh valid quote. Preserve prior catalog symbols and retain quarantine until a fresh strict audit and any additional market-validity gate are satisfied. Never resolve by ticker, scale financial values or invent token migrations."

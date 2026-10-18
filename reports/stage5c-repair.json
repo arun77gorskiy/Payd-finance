@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+  "status": "RUNTIME_PARITY_PASSED_NATIVE_AND_TREASURY_IDENTITIES_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -225,7 +225,15 @@
       "reasons": [
         "symbol_mismatch:GRAM"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "symbol": "GRAM",
+        "cmcId": "11419",
+        "cmcSlug": "gram"
+      },
+      "current_mapping_reasons": [
+        "symbol_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "hashnote",
@@ -492,7 +500,15 @@
         "symbol_mismatch:DOGE",
         "slug_mismatch:elon-doge-token"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "current_mapping": {
+        "symbol": "STBT",
+        "cmcId": "28055",
+        "cmcSlug": "short-term-t-bill-token"
+      },
+      "current_mapping_reasons": [
+        "identity_corrected_live_reaudit_required"
+      ]
     },
     {
       "canonical_id": "openeden",
@@ -949,10 +965,10 @@
   "taxonomy_status": "NOT_COMPLETED: classify token/stablecoin/wrapped/project_without_token only using verified project identity evidence; no-quote alone does not establish no-token.",
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
-    "applied": 97,
+    "applied": 98,
     "unresolved_quarantined": 53,
     "quarantine_retained": 53,
-    "canonical_symbols_changed": 14,
+    "canonical_symbols_changed": 15,
     "collisions": 0,
     "changes": [
       {
@@ -3309,13 +3325,51 @@
         "live_reasons": [
           "invalid_price"
         ]
+      },
+      {
+        "canonical_id": "matrixdock",
+        "symbol": "STBT",
+        "before": {
+          "symbol": "STBT",
+          "cmcId": "29096",
+          "cmcSlug": "matrixdock",
+          "audit_reasons": [
+            "symbol_mismatch:DOGE",
+            "slug_mismatch:elon-doge-token"
+          ]
+        },
+        "after": {
+          "symbol": "STBT",
+          "cmcId": "28055",
+          "cmcSlug": "short-term-t-bill-token"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_TREASURY_PRODUCT_PROVIDER_ID_CORRECTION",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/short-term-t-bill-token/",
+          "ucid": "28055",
+          "symbol": "STBT",
+          "retrieved_on": "2026-10-18"
+        },
+        "issuer_source": {
+          "url": "https://www.matrixdock.com/stbt",
+          "note": "Current Matrixdock homepage/product and issuer token-features documentation explicitly identify STBT as its rebasing short-term US Treasury/repo token, distinct from wSTBT and gold/silver products. Provider UCID 28055 is STBT/short-term-t-bill-token and links stbt.matrixdock.com. Its displayed contract 0x5308...45b44a agrees with the provider-linked Ethereum explorer target 0x530824da86689c9c17cdc2871ff29b058345b44a. Explorer retrieval returned 403 and a full issuer contract was not retrieved; do not claim independent full-address matching. Archive the unrelated DOGE mapping. Issuer describes whitelisting/accredited-investor restrictions and rebasing; no fixed $1 spot quote, NAV substitution, redemption eligibility or unrestricted tradability is inferred. Strict quotes remain pending."
+        },
+        "additional_sources": [
+          "https://www.matrixdock.com/",
+          "https://matrixdock.gitbook.io/matrixdock-docs/english/treasury-bill-token-stbt/token-features.md"
+        ],
+        "provider_contract_display": "0x5308...45b44a",
+        "provider_explorer_target": "https://etherscan.io/token/0x530824da86689c9c17cdc2871ff29b058345b44a",
+        "issuer_full_contract_retrieved": false,
+        "provider_explorer_fetch_succeeded": false
       }
     ],
     "released_after_live_audit": 88,
-    "pending_live_reaudit": 0,
+    "pending_live_reaudit": 1,
     "corrected_ids_with_unavailable_market_data": 9,
     "symbol_corrections_within_id_replacements": 11,
-    "symbol_corrections_with_retained_ids": 3
+    "symbol_corrections_with_retained_ids": 4
   },
   "migration_review": {
     "canonical_id": "quickswap",
@@ -3346,36 +3400,35 @@
     "performed": true,
     "execution": "user_browser",
     "route": "/api/audit-stage5c-runtime?run=1",
-    "scope": "90 corrected releases: 87 numeric-ID replacements and three retained-ID symbol corrections",
-    "commit": "21d981ee5eca94d7ba1a64ca72af945544c642a3",
-    "dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
-    "audit_at": "2026-10-17T12:33:17.251Z",
+    "scope": "91 corrected releases: 88 numeric-ID replacements and three retained-ID symbol corrections",
+    "commit": "baed82cc9083cf7d07fa8d5efbcd33b9d20fa023",
+    "dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
+    "audit_at": "2026-10-18T13:34:32.382Z",
     "counts": {
-      "checked": 90,
-      "pass": 90,
+      "checked": 91,
+      "pass": 91,
       "fail": 0,
       "fields_per_record": 8,
-      "provider_batches": 1
+      "provider_batches": 2
     },
     "fields_per_record": 8,
-    "provider_batches": 1,
-    "exact_field_comparisons": 720,
+    "provider_batches": 2,
+    "exact_field_comparisons": 728,
     "all_exact_fields_true": true,
-    "report": "reports/stage5c-runtime-90-audit-20261017.json",
-    "healthz_report": "reports/stage5c-runtime-90-healthz-20261017.json",
+    "report": "reports/stage5c-runtime-91-audit-20261018.json",
+    "healthz_report": "reports/stage5c-runtime-91-healthz-20261018.json",
     "source_capture": {
-      "filename": "Вставленный Markdown(20261017-123334).md",
-      "sha256": "4e4e735923cf3c75b7f48c4248d809685250d39dc25abe22a8dc2fb3c0bd0c60",
+      "filename": "Вставленный Markdown(20261018-133456).md",
+      "sha256": "889cdc92a18eb8955f9a1d6f71f2f5ddc2e9de319684a8551d6e323523edc3f3",
       "complete_json": true,
       "recovery": null
     },
     "scope_limitations": [
-      "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache; not public HTTP/cache/CORS or frontend verification.",
-      "Exact provider parity does not independently prove financial data quality, tradability, supply consistency or real-world zero optional values.",
-      "Observed IOTA provider circulating_supply exceeds total_supply; raw values are preserved, not repaired or independently certified."
+      "Fresh raw batches through actual resolver/service/normalizer with isolated audit caches; not public HTTP/cache/CORS or frontend verification.",
+      "Exact provider parity does not independently establish financial data quality, tradability, supply consistency or real-world zeros."
     ]
   },
-  "remaining_failure_categories_note": "The complete 101fb85 audit reports 35 symbol mismatches, 16 invalid-price-only and two absent quotes. Story DATA accounts for the only gain; all previous 269 PASS remain passing. MXC matches expected identity but has invalid_price, with no raw numeric price exposed by its failure row. Expanded numeric runtime proof for all 91 corrected releases remains pending.",
+  "remaining_failure_categories_note": "35 symbol mismatches, 16 invalid-price-only and two absent quotes describe the complete 101fb85 strict audit. Native GRAM and Matrixdock STBT now have reviewed expectations but remain quarantined pending fresh strict quotes. Staged metadata is 33 unresolved symbol failures, 18 market-data failures and two pending quotes; no new PASS is inferred.",
   "quarantine_source_audit_at": "2026-10-17T12:49:16.099Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
@@ -3476,7 +3529,7 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": false,
+    "performed": true,
     "route": "/api/audit-stage5c-runtime?run=1",
     "expected_checked": 91,
     "expected_field_comparisons": 728,
@@ -3486,7 +3539,18 @@
       "story-protocol"
     ],
     "previous_evidence_report": "reports/stage5c-runtime-90-audit-20261017.json",
-    "note": "Prior numeric evidence verifies 90 releases on 21d981e. Story DATA now has strict quote evidence; all-91 positive prices and exact fields remain pending. The unchanged loop splits provider requests at 90 IDs, so 91 records require two batches. MXC and the other eight corrected-ID market-data holds remain excluded; PCN/PORTX validity gates remain uncleared."
+    "note": "All 91 corrected releases, including Story DATA, pass 728/728 exact fields with positive normalized prices across two PRO batches; complete JSON and timestamps need no recovery.",
+    "counts": {
+      "checked": 91,
+      "pass": 91,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 2
+    },
+    "audit_at": "2026-10-18T13:34:32.382Z",
+    "commit": "baed82cc9083cf7d07fa8d5efbcd33b9d20fa023",
+    "dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
+    "report": "reports/stage5c-runtime-91-audit-20261018.json"
   },
   "runtime_parity_history": [
     {
@@ -3673,6 +3737,39 @@
       "scope_limitations": [
         "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache.",
         "Does not independently exercise the public market HTTP route, its cache, CORS, or the frontend."
+      ]
+    },
+    {
+      "performed": true,
+      "execution": "user_browser",
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "scope": "90 corrected releases: 87 numeric-ID replacements and three retained-ID symbol corrections",
+      "commit": "21d981ee5eca94d7ba1a64ca72af945544c642a3",
+      "dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
+      "audit_at": "2026-10-17T12:33:17.251Z",
+      "counts": {
+        "checked": 90,
+        "pass": 90,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 1
+      },
+      "fields_per_record": 8,
+      "provider_batches": 1,
+      "exact_field_comparisons": 720,
+      "all_exact_fields_true": true,
+      "report": "reports/stage5c-runtime-90-audit-20261017.json",
+      "healthz_report": "reports/stage5c-runtime-90-healthz-20261017.json",
+      "source_capture": {
+        "filename": "Вставленный Markdown(20261017-123334).md",
+        "sha256": "4e4e735923cf3c75b7f48c4248d809685250d39dc25abe22a8dc2fb3c0bd0c60",
+        "complete_json": true,
+        "recovery": null
+      },
+      "scope_limitations": [
+        "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache; not public HTTP/cache/CORS or frontend verification.",
+        "Exact provider parity does not independently prove financial data quality, tradability, supply consistency or real-world zero optional values.",
+        "Observed IOTA provider circulating_supply exceeds total_supply; raw values are preserved, not repaired or independently certified."
       ]
     }
   ],
@@ -4010,8 +4107,8 @@
     }
   ],
   "symbol_repairs": {
-    "reviewed_on": "2026-10-17",
-    "count": 14,
+    "reviewed_on": "2026-10-18",
+    "count": 15,
     "changes": [
       {
         "before": "INST",
@@ -4168,13 +4265,25 @@
         "contracts": {},
         "scope": "Explicit issuer-documented current native-token rebrand; preserve historical label and stable project ID. No financial scaling or alias fallback.",
         "canonical_id": "story-protocol"
+      },
+      {
+        "before": "TON",
+        "after": "GRAM",
+        "kind": "ISSUER_NATIVE_COIN_TICKER_REBRAND",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://ton.org/media/",
+        "original_mapping_reasons": [
+          "symbol_mismatch:GRAM"
+        ],
+        "scope": "Explicit native-token ticker continuity; numeric ID and slug retained. No migration, unit scaling or ticker fallback.",
+        "canonical_id": "the-open-network"
       }
     ],
     "policy": "Permanent canonical IDs, names, sectors and snapshot values remain stable. Numeric provider ID corrections require explicit provider UCID/project identity and retain old mappings. Current-symbol corrections require manual primary issuer token/lineage and exact provider project identity review. Record contract evidence and retrieval limits precisely; issuer documents alone do not prove a fresh valid quote. Preserve prior catalog symbols and retain quarantine until a fresh strict audit and any additional market-validity gate are satisfied. Never resolve by ticker, scale financial values or invent token migrations."
   },
   "canonical_preservation": {
     "canonical_ids_changed": 0,
-    "symbols_changed": 14,
+    "symbols_changed": 15,
     "symbol_changes": [
       {
         "before": "INST",
@@ -4331,6 +4440,18 @@
         "contracts": {},
         "scope": "Explicit issuer-documented current native-token rebrand; preserve historical label and stable project ID. No financial scaling or alias fallback.",
         "canonical_id": "story-protocol"
+      },
+      {
+        "before": "TON",
+        "after": "GRAM",
+        "kind": "ISSUER_NATIVE_COIN_TICKER_REBRAND",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://ton.org/media/",
+        "original_mapping_reasons": [
+          "symbol_mismatch:GRAM"
+        ],
+        "scope": "Explicit native-token ticker continuity; numeric ID and slug retained. No migration, unit scaling or ticker fallback.",
+        "canonical_id": "the-open-network"
       }
     ],
     "names_changed": 0,
@@ -5172,5 +5293,79 @@
     "live_audit_at": "2026-10-17T12:49:16.099Z",
     "live_audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
     "release_dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b"
+  },
+  "native_treasury_review": {
+    "reviewed_on": "2026-10-18",
+    "changes": [
+      {
+        "canonical_id": "the-open-network",
+        "before": {
+          "symbol": "TON",
+          "cmcId": "11419",
+          "cmcSlug": "gram",
+          "audit_reasons": [
+            "symbol_mismatch:GRAM"
+          ]
+        },
+        "after": {
+          "symbol": "GRAM",
+          "cmcId": "11419",
+          "cmcSlug": "gram"
+        },
+        "numeric_id_changed": false,
+        "slug_changed": false,
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "issuer_url": "https://ton.org/media/",
+        "provider_url": "https://coinmarketcap.com/currencies/gram/",
+        "notes": "Issuer ton.org/media explicitly names Gram/GRAM as formerly Toncoin/TON while The Open Network remains the blockchain name. Provider UCID 11419 is Gram (prev. Toncoin), symbol GRAM, slug gram, with the same issuer link. This is native-asset ticker continuity, not an unrelated GRAM token or a swap. Retain numeric ID, slug, permanent canonical ID, legacy symbol, names and snapshots; no units, balance, price or supply conversion. Native-chain lineage is the evidence; no ERC20 contract identity or chain execution is claimed. Strict quote verification under GRAM remains pending."
+      },
+      {
+        "canonical_id": "matrixdock",
+        "symbol": "STBT",
+        "before": {
+          "symbol": "STBT",
+          "cmcId": "29096",
+          "cmcSlug": "matrixdock",
+          "audit_reasons": [
+            "symbol_mismatch:DOGE",
+            "slug_mismatch:elon-doge-token"
+          ]
+        },
+        "after": {
+          "symbol": "STBT",
+          "cmcId": "28055",
+          "cmcSlug": "short-term-t-bill-token"
+        },
+        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "correction_kind": "ISSUER_TREASURY_PRODUCT_PROVIDER_ID_CORRECTION",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/short-term-t-bill-token/",
+          "ucid": "28055",
+          "symbol": "STBT",
+          "retrieved_on": "2026-10-18"
+        },
+        "issuer_source": {
+          "url": "https://www.matrixdock.com/stbt",
+          "note": "Current Matrixdock homepage/product and issuer token-features documentation explicitly identify STBT as its rebasing short-term US Treasury/repo token, distinct from wSTBT and gold/silver products. Provider UCID 28055 is STBT/short-term-t-bill-token and links stbt.matrixdock.com. Its displayed contract 0x5308...45b44a agrees with the provider-linked Ethereum explorer target 0x530824da86689c9c17cdc2871ff29b058345b44a. Explorer retrieval returned 403 and a full issuer contract was not retrieved; do not claim independent full-address matching. Archive the unrelated DOGE mapping. Issuer describes whitelisting/accredited-investor restrictions and rebasing; no fixed $1 spot quote, NAV substitution, redemption eligibility or unrestricted tradability is inferred. Strict quotes remain pending."
+        },
+        "additional_sources": [
+          "https://www.matrixdock.com/",
+          "https://matrixdock.gitbook.io/matrixdock-docs/english/treasury-bill-token-stbt/token-features.md"
+        ],
+        "provider_contract_display": "0x5308...45b44a",
+        "provider_explorer_target": "https://etherscan.io/token/0x530824da86689c9c17cdc2871ff29b058345b44a",
+        "issuer_full_contract_retrieved": false,
+        "provider_explorer_fetch_succeeded": false
+      }
+    ],
+    "numeric_ids_changed": 1,
+    "symbols_changed": 1,
+    "accompanying_slug_updates": 1,
+    "isolated_slug_corrections_added": 0,
+    "quote_audit_performed": false,
+    "all_quarantines_retained": true,
+    "previous_dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
+    "dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385",
+    "report": "reports/stage5c-native-treasury-review-20261018.json"
   }
 }
