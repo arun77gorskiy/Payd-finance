@@ -1,0 +1,81 @@
+{
+  "stage": "5C",
+  "capture_source": "User-pasted responses from their authenticated browser",
+  "source_date": "2026-10-18",
+  "source_api_origin": "https://payd-cmc-backend-git-stage5c-4066a2-realstrades-8509s-projects.vercel.app",
+  "nearby_health_subset": {
+    "status": "UP",
+    "git_commit": "e82508e447c1fc869d5d84ab15141a76c03c3ff7",
+    "dataset_sha256": "30299813414d75d1e55579660a3ee23eb1f8d15e7cb4d732db20172e3c357ed0",
+    "total": 354,
+    "mapped": 330,
+    "unmapped": 24,
+    "eligible": 279,
+    "quarantined": 51,
+    "access_mode": "PRO_API",
+    "vercel_env": "preview",
+    "ts": "2026-10-18T18:04:23.236Z"
+  },
+  "responses": [
+    {
+      "ok": true,
+      "envelope": {
+        "canonical_id": "safe",
+        "symbol": "SAFE",
+        "name": "safe",
+        "market": {
+          "price_usd": 0.100884049818316,
+          "market_cap_usd": 79008873.11829346,
+          "fdv_usd": 100884049.82,
+          "volume_24h_usd": 1050480.40655704,
+          "change_1h_pct": -0.10344755,
+          "change_24h_pct": -7.85310542,
+          "change_7d_pct": -14.11141399,
+          "change_30d_pct": 1.60581714,
+          "market_cap_rank": 271,
+          "circulating_supply": 783165161,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "provider": "coinmarketcap",
+        "provider_id": "21585",
+        "provider_shape": "PRO_API",
+        "provider_updated_at": "2026-10-18T18:04:54.000Z",
+        "retrieved_at": "2026-10-18T18:06:16.256Z",
+        "status": "LIVE",
+        "access_mode": "PRO_API",
+        "provider_url": "https://pro-api.coinmarketcap.com/v1/cryptocurrency/quotes/latest?id=21585&aux=num_market_pairs%2Ccmc_rank%2Cdate_added%2Ctags%2Cplatform%2Cmax_supply%2Ccirculating_supply%2Ctotal_supply%2Cis_active%2Cis_fiat"
+      }
+    },
+    {
+      "ok": true,
+      "envelope": {
+        "canonical_id": "ceramic",
+        "symbol": "CERA",
+        "name": "ceramic",
+        "market": null,
+        "provider": "coinmarketcap",
+        "provider_id": null,
+        "provider_updated_at": null,
+        "retrieved_at": "2026-10-18T18:06:28.541Z",
+        "status": "UNKNOWN_MAPPING"
+      }
+    }
+  ],
+  "assessment": {
+    "safe_identity": "SAFE / CMC 21585",
+    "safe_status": "LIVE",
+    "safe_price_positive_finite": true,
+    "ceramic_status": "UNKNOWN_MAPPING",
+    "ceramic_market": null,
+    "two_expected_body_cases_pass": true,
+    "all_279_live_quotes_verified": false,
+    "http_status_and_headers": "NOT_SUPPLIED",
+    "cors": "NOT_VERIFIED",
+    "cache": "NOT_VERIFIED",
+    "frontend_connection": "NOT_ENABLED",
+    "version_attribution": "Nearby Health identifies e82508e and the expected dataset; market envelopes do not independently embed commit or dataset hash.",
+    "independent_network_verification": false,
+    "full_token_reaudit_required": false
+  }
+}
