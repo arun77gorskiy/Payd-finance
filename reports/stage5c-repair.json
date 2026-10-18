@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "RUNTIME_PARITY_PASSED_NATIVE_AND_TREASURY_IDENTITIES_PENDING",
+  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -28,27 +28,27 @@
     "cmc_ids_retained": 323,
     "no_cmc_mapping": 31,
     "slug_corrections": 23,
-    "quarantined": 53,
-    "eligible_for_runtime_request": 270,
-    "corrected_released_mappings": 91,
-    "id_corrections_released": 88,
-    "symbol_only_corrections_released": 3
+    "quarantined": 51,
+    "eligible_for_runtime_request": 272,
+    "corrected_released_mappings": 93,
+    "id_corrections_released": 89,
+    "symbol_only_corrections_released": 4
   },
   "live_reaudit": {
     "performed": true,
     "execution": "user_browser",
-    "commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
-    "dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
-    "audit_at": "2026-10-17T12:49:16.099Z",
-    "healthz_at": "2026-10-17T12:49:04.574Z",
+    "commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+    "dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385",
+    "audit_at": "2026-10-18T13:54:06.103Z",
+    "healthz_at": "2026-10-18T13:52:24.197Z",
     "counts": {
       "dataset_total": 354,
       "mapped_expected": 323,
       "mapped_checked": 323,
       "unmapped": 31,
       "returned_quotes": 321,
-      "pass": 270,
-      "fail": 53,
+      "pass": 272,
+      "fail": 51,
       "duplicate_cmc_ids": 0,
       "duplicate_canonical_ids": 0,
       "batches": 4
@@ -56,16 +56,15 @@
     "mandatory_all_pass": true,
     "strict_failures_all_quarantined": true,
     "slug_only_failures": 0,
-    "report": "reports/stage5c-current-identity-quote-audit-20261017.json",
-    "healthz_report": "reports/stage5c-current-identity-healthz-20261017.json",
+    "report": "reports/stage5c-native-treasury-quote-audit-20261018.json",
+    "healthz_report": "reports/stage5c-native-treasury-healthz-20261018.json",
     "source_capture": {
-      "filename": "Вставленный Markdown(20261017-124937).md",
-      "sha256": "87090c44f5fbc6e7da89d08ce12104a889eb79b737dd1542ba4ef45c1166e900",
+      "filename": "Вставленный Markdown(20261018-135424).md",
+      "sha256": "3235462604c6e0719938655ad0d5d4c84f28d7b273ba13213531e24b8062664f",
       "complete_json": true,
       "recovery": null
     },
-    "healthz_capture_note": "The supplied Health message omits only its final closing brace. All field values are present; saved normalized JSON adds the closing delimiter without inferring any value.",
-    "provenance_note": "The unchanged strict route does not embed commit/hash. Pair complete 323-ID coverage with Preview Health about 12 seconds earlier. Unique failure IDs and zero structural errors establish the passing complement; every failure expectation matches the tested table."
+    "provenance_note": "The unchanged full audit does not embed commit/hash. Pair complete 323-ID coverage with supplied Preview Health about 102 seconds earlier; all failure expectations match the tested table. Unique failures and zero structural errors establish the passing complement, including GRAM and STBT. All previous 270 PASS remain passing."
   },
   "slug_corrections": [
     {
@@ -215,26 +214,6 @@
     }
   ],
   "quarantine": [
-    {
-      "canonical_id": "the-open-network",
-      "symbol": "TON",
-      "expected_cmc_id": "11419",
-      "expected_cmc_slug": "gram",
-      "returned_symbol": "GRAM",
-      "returned_slug": "gram",
-      "reasons": [
-        "symbol_mismatch:GRAM"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "symbol": "GRAM",
-        "cmcId": "11419",
-        "cmcSlug": "gram"
-      },
-      "current_mapping_reasons": [
-        "symbol_corrected_live_reaudit_required"
-      ]
-    },
     {
       "canonical_id": "hashnote",
       "symbol": "USYC",
@@ -488,27 +467,6 @@
         "slug_mismatch:egg"
       ],
       "mapping_status": "unverified"
-    },
-    {
-      "canonical_id": "matrixdock",
-      "symbol": "STBT",
-      "expected_cmc_id": "29096",
-      "expected_cmc_slug": "matrixdock",
-      "returned_symbol": "DOGE",
-      "returned_slug": "elon-doge-token",
-      "reasons": [
-        "symbol_mismatch:DOGE",
-        "slug_mismatch:elon-doge-token"
-      ],
-      "mapping_status": "unverified",
-      "current_mapping": {
-        "symbol": "STBT",
-        "cmcId": "28055",
-        "cmcSlug": "short-term-t-bill-token"
-      },
-      "current_mapping_reasons": [
-        "identity_corrected_live_reaudit_required"
-      ]
     },
     {
       "canonical_id": "openeden",
@@ -966,8 +924,8 @@
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
     "applied": 98,
-    "unresolved_quarantined": 53,
-    "quarantine_retained": 53,
+    "unresolved_quarantined": 51,
+    "quarantine_retained": 51,
     "canonical_symbols_changed": 15,
     "collisions": 0,
     "changes": [
@@ -3343,7 +3301,7 @@
           "cmcId": "28055",
           "cmcSlug": "short-term-t-bill-token"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "correction_kind": "ISSUER_TREASURY_PRODUCT_PROVIDER_ID_CORRECTION",
         "source": {
           "url": "https://coinmarketcap.com/currencies/short-term-t-bill-token/",
@@ -3362,11 +3320,14 @@
         "provider_contract_display": "0x5308...45b44a",
         "provider_explorer_target": "https://etherscan.io/token/0x530824da86689c9c17cdc2871ff29b058345b44a",
         "issuer_full_contract_retrieved": false,
-        "provider_explorer_fetch_succeeded": false
+        "provider_explorer_fetch_succeeded": false,
+        "live_audit_at": "2026-10-18T13:54:06.103Z",
+        "live_audit_commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+        "live_audit_dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385"
       }
     ],
-    "released_after_live_audit": 88,
-    "pending_live_reaudit": 1,
+    "released_after_live_audit": 89,
+    "pending_live_reaudit": 0,
     "corrected_ids_with_unavailable_market_data": 9,
     "symbol_corrections_within_id_replacements": 11,
     "symbol_corrections_with_retained_ids": 4
@@ -3392,7 +3353,7 @@
     "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
   },
   "remaining_failure_categories": {
-    "symbol_mismatch": 35,
+    "symbol_mismatch": 33,
     "invalid_price_only": 16,
     "quote_not_returned": 2
   },
@@ -3428,8 +3389,8 @@
       "Exact provider parity does not independently establish financial data quality, tradability, supply consistency or real-world zeros."
     ]
   },
-  "remaining_failure_categories_note": "35 symbol mismatches, 16 invalid-price-only and two absent quotes describe the complete 101fb85 strict audit. Native GRAM and Matrixdock STBT now have reviewed expectations but remain quarantined pending fresh strict quotes. Staged metadata is 33 unresolved symbol failures, 18 market-data failures and two pending quotes; no new PASS is inferred.",
-  "quarantine_source_audit_at": "2026-10-17T12:49:16.099Z",
+  "remaining_failure_categories_note": "The complete 5eb56bb audit reports 33 symbol mismatches, 16 invalid-price-only and two absent quotes. GRAM/STBT account for both gains; no prior passing record regressed. Strict PASS alone does not prove positive normalized price or numeric runtime parity. Corrected-ID market-data holds remain nine, and all-93 numeric proof is pending.",
+  "quarantine_source_audit_at": "2026-10-18T13:54:06.103Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
     "applied": 3,
@@ -3529,28 +3490,18 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": true,
+    "performed": false,
     "route": "/api/audit-stage5c-runtime?run=1",
-    "expected_checked": 91,
-    "expected_field_comparisons": 728,
+    "expected_checked": 93,
+    "expected_field_comparisons": 744,
     "fields_per_record": 8,
     "provider_batches": 2,
     "newly_released_canonical_ids": [
-      "story-protocol"
+      "the-open-network",
+      "matrixdock"
     ],
-    "previous_evidence_report": "reports/stage5c-runtime-90-audit-20261017.json",
-    "note": "All 91 corrected releases, including Story DATA, pass 728/728 exact fields with positive normalized prices across two PRO batches; complete JSON and timestamps need no recovery.",
-    "counts": {
-      "checked": 91,
-      "pass": 91,
-      "fail": 0,
-      "fields_per_record": 8,
-      "provider_batches": 2
-    },
-    "audit_at": "2026-10-18T13:34:32.382Z",
-    "commit": "baed82cc9083cf7d07fa8d5efbcd33b9d20fa023",
-    "dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
-    "report": "reports/stage5c-runtime-91-audit-20261018.json"
+    "previous_evidence_report": "reports/stage5c-runtime-91-audit-20261018.json",
+    "note": "Prior numeric proof verifies 91 releases on baed82c. GRAM and STBT now have strict quote evidence; all-93 positive normalized prices and exact fields remain pending. The existing loop uses two batches (90+3); the nine corrected-ID market-data holds and PCN/PORTX extra gates remain excluded."
   },
   "runtime_parity_history": [
     {
@@ -4104,6 +4055,30 @@
       "commit": "21d981ee5eca94d7ba1a64ca72af945544c642a3",
       "dataset_sha256": "0be6c1bbe8ba390976c16146d80e308f0a5923ef0382fa69d288a586df0fada6",
       "report": "reports/stage5c-runtime-90-audit-20261017.json"
+    },
+    {
+      "performed": true,
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "expected_checked": 91,
+      "expected_field_comparisons": 728,
+      "fields_per_record": 8,
+      "provider_batches": 2,
+      "newly_released_canonical_ids": [
+        "story-protocol"
+      ],
+      "previous_evidence_report": "reports/stage5c-runtime-90-audit-20261017.json",
+      "note": "All 91 corrected releases, including Story DATA, pass 728/728 exact fields with positive normalized prices across two PRO batches; complete JSON and timestamps need no recovery.",
+      "counts": {
+        "checked": 91,
+        "pass": 91,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 2
+      },
+      "audit_at": "2026-10-18T13:34:32.382Z",
+      "commit": "baed82cc9083cf7d07fa8d5efbcd33b9d20fa023",
+      "dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
+      "report": "reports/stage5c-runtime-91-audit-20261018.json"
     }
   ],
   "symbol_repairs": {
@@ -4737,6 +4712,39 @@
         "recovery": null
       },
       "provenance_note": "The unchanged full audit does not embed a commit/hash. Pair the complete supplied audit with Preview Health 13 seconds earlier; all failure expectations match the tested table. Complete 323-ID coverage, unique failures and zero structural errors establish the passing complement, including all three current-token migrations."
+    },
+    {
+      "performed": true,
+      "execution": "user_browser",
+      "commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+      "dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
+      "audit_at": "2026-10-17T12:49:16.099Z",
+      "healthz_at": "2026-10-17T12:49:04.574Z",
+      "counts": {
+        "dataset_total": 354,
+        "mapped_expected": 323,
+        "mapped_checked": 323,
+        "unmapped": 31,
+        "returned_quotes": 321,
+        "pass": 270,
+        "fail": 53,
+        "duplicate_cmc_ids": 0,
+        "duplicate_canonical_ids": 0,
+        "batches": 4
+      },
+      "mandatory_all_pass": true,
+      "strict_failures_all_quarantined": true,
+      "slug_only_failures": 0,
+      "report": "reports/stage5c-current-identity-quote-audit-20261017.json",
+      "healthz_report": "reports/stage5c-current-identity-healthz-20261017.json",
+      "source_capture": {
+        "filename": "Вставленный Markdown(20261017-124937).md",
+        "sha256": "87090c44f5fbc6e7da89d08ce12104a889eb79b737dd1542ba4ef45c1166e900",
+        "complete_json": true,
+        "recovery": null
+      },
+      "healthz_capture_note": "The supplied Health message omits only its final closing brace. All field values are present; saved normalized JSON adds the closing delimiter without inferring any value.",
+      "provenance_note": "The unchanged strict route does not embed commit/hash. Pair complete 323-ID coverage with Preview Health about 12 seconds earlier. Unique failure IDs and zero structural errors establish the passing complement; every failure expectation matches the tested table."
     }
   ],
   "native_symbol_review": {
@@ -5314,10 +5322,13 @@
         },
         "numeric_id_changed": false,
         "slug_changed": false,
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "issuer_url": "https://ton.org/media/",
         "provider_url": "https://coinmarketcap.com/currencies/gram/",
-        "notes": "Issuer ton.org/media explicitly names Gram/GRAM as formerly Toncoin/TON while The Open Network remains the blockchain name. Provider UCID 11419 is Gram (prev. Toncoin), symbol GRAM, slug gram, with the same issuer link. This is native-asset ticker continuity, not an unrelated GRAM token or a swap. Retain numeric ID, slug, permanent canonical ID, legacy symbol, names and snapshots; no units, balance, price or supply conversion. Native-chain lineage is the evidence; no ERC20 contract identity or chain execution is claimed. Strict quote verification under GRAM remains pending."
+        "notes": "Issuer ton.org/media explicitly names Gram/GRAM as formerly Toncoin/TON while The Open Network remains the blockchain name. Provider UCID 11419 is Gram (prev. Toncoin), symbol GRAM, slug gram, with the same issuer link. This is native-asset ticker continuity, not an unrelated GRAM token or a swap. Retain numeric ID, slug, permanent canonical ID, legacy symbol, names and snapshots; no units, balance, price or supply conversion. Native-chain lineage is the evidence; no ERC20 contract identity or chain execution is claimed. Strict quote verification under GRAM remains pending.",
+        "live_audit_at": "2026-10-18T13:54:06.103Z",
+        "live_audit_commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+        "live_audit_dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385"
       },
       {
         "canonical_id": "matrixdock",
@@ -5336,7 +5347,7 @@
           "cmcId": "28055",
           "cmcSlug": "short-term-t-bill-token"
         },
-        "status": "PROVIDER_METADATA_CONFIRMED_QUOTE_PENDING",
+        "status": "LIVE_AUDIT_VERIFIED",
         "correction_kind": "ISSUER_TREASURY_PRODUCT_PROVIDER_ID_CORRECTION",
         "source": {
           "url": "https://coinmarketcap.com/currencies/short-term-t-bill-token/",
@@ -5355,17 +5366,28 @@
         "provider_contract_display": "0x5308...45b44a",
         "provider_explorer_target": "https://etherscan.io/token/0x530824da86689c9c17cdc2871ff29b058345b44a",
         "issuer_full_contract_retrieved": false,
-        "provider_explorer_fetch_succeeded": false
+        "provider_explorer_fetch_succeeded": false,
+        "live_audit_at": "2026-10-18T13:54:06.103Z",
+        "live_audit_commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+        "live_audit_dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385"
       }
     ],
     "numeric_ids_changed": 1,
     "symbols_changed": 1,
     "accompanying_slug_updates": 1,
     "isolated_slug_corrections_added": 0,
-    "quote_audit_performed": false,
-    "all_quarantines_retained": true,
+    "quote_audit_performed": true,
+    "all_quarantines_retained": false,
     "previous_dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
     "dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385",
-    "report": "reports/stage5c-native-treasury-review-20261018.json"
+    "report": "reports/stage5c-native-treasury-review-20261018.json",
+    "released_after_live_audit": [
+      "the-open-network",
+      "matrixdock"
+    ],
+    "still_quarantined": [],
+    "live_audit_at": "2026-10-18T13:54:06.103Z",
+    "live_audit_commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+    "release_dataset_sha256": "351257826449d1c3f067a354b980fb48d6601044350b9c27d39a37460d82e9bd"
   }
 }
