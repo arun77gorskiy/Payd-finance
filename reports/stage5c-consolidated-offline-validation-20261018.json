@@ -1,0 +1,23 @@
+{
+  "validation": "OFFLINE_ONLY",
+  "tests": {
+    "pass_count": 86,
+    "fail_count": 0,
+    "network_calls": 0
+  },
+  "reviewed": 82,
+  "dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+  "changed_canonical_records": [
+    "mountain-protocol",
+    "ceramic"
+  ],
+  "public_eligible": 272,
+  "quarantined": 51,
+  "unmapped": 31,
+  "new_candidates": 10,
+  "candidates_not_applied": true,
+  "snapshots_names_symbols_sectors_ids_preserved": true,
+  "strict_stage5b_sha256": "304facd562956f7b712dee704fe86531c94a98dd504406b81b4b79e3f23aeb55",
+  "live_validation_pending": true,
+  "production_promoted": false
+}

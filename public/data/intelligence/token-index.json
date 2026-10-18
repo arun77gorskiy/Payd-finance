@@ -3865,14 +3865,35 @@
         "RWA"
       ],
       "market_cap_usd": 1414053,
-      "cmcId": "27788",
-      "cmcSlug": "mountain-protocol-usdm",
+      "cmcId": "29569",
+      "cmcSlug": "mountain-protocol",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "symbol_mismatch:TEST",
-        "slug_mismatch:test",
-        "invalid_price"
-      ]
+        "quote_verification_pending",
+        "wind_down_market_validity_review_required"
+      ],
+      "previous_cmc_mapping": {
+        "cmcId": "27788",
+        "cmcSlug": "mountain-protocol-usdm",
+        "audit_reasons": [
+          "symbol_mismatch:TEST",
+          "slug_mismatch:test",
+          "invalid_price"
+        ]
+      },
+      "identity_review": {
+        "status": "PROVIDER_IDENTITY_CONFIRMED_LIFECYCLE_HOLD",
+        "reviewed_on": "2026-10-18",
+        "source_url": "https://coinmarketcap.com/currencies/mountain-protocol/",
+        "issuer_url": "https://docs.mountainprotocol.com/legacy-docs/usdm-token",
+        "additional_sources": [
+          "https://docs.mountainprotocol.com/wind-down-documentation/usdm-wind-down-overview",
+          "https://docs.mountainprotocol.com/wind-down-legal/terms-and-conditions"
+        ],
+        "issuer_ethereum_contract": "0x59D9356E565Ab3A36dD77763Fc0d87fEaf85508C",
+        "additional_release_gate": "WIND_DOWN_EXTERNAL_MARKET_VALIDITY_REQUIRED",
+        "notes": "Issuer USDM contract and provider abbreviation agree; UCID 29569 links the same issuer and its wind-down notice. Old 27788 returned TEST. Phase-3 terms effective 2025-08-22 supersede legacy mint/redeem and yield descriptions: issuer platform is decommissioned and no price, liquidity or peg is guaranteed. Correct identity but retain quarantine, with a lifecycle gate beyond numeric PASS. Do not substitute USDC, wUSDM, a redemption value or a fixed $1 spot price. No current full provider explorer-address retrieval is claimed."
+      }
     },
     {
       "id": "gamefi",
@@ -4781,7 +4802,17 @@
       "mapping_reasons": [
         "symbol_mismatch:CHT",
         "slug_mismatch:cyberharbor"
-      ]
+      ],
+      "asset_type": "project_without_token",
+      "identity_review": {
+        "status": "ISSUER_DOCUMENTS_NO_NATIVE_TOKEN",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://blog.ceramic.network/faq-ceramic-network/",
+        "additional_sources": [
+          "https://developers.ceramic.network/docs/introduction/why-ceramic"
+        ],
+        "notes": "Issuer FAQ explicitly says Ceramic has no native token; developer documentation says there are no tokenized node incentives. Scope is the documented Ceramic network, not every future product. CERA is not established as a token. Keep historical failed CMC 24022/CHT under quarantine for provenance and strict-audit coverage; it must never be used as a Ceramic quote. Reconsider only on a new issuer token announcement and independently matched identity."
+      }
     },
     {
       "id": "centrifuge",
@@ -8000,9 +8031,9 @@
     },
     "mountain-protocol": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
-      "cmcId": "27788",
-      "cmcSlug": "mountain-protocol-usdm",
+      "notes": "Issuer USDM contract and provider abbreviation agree; UCID 29569 links the same issuer and its wind-down notice. Old 27788 returned TEST. Phase-3 terms effective 2025-08-22 supersede legacy mint/redeem and yield descriptions: issuer platform is decommissioned and no price, liquidity or peg is guaranteed. Correct identity but retain quarantine, with a lifecycle gate beyond numeric PASS. Do not substitute USDC, wUSDM, a redemption value or a fixed $1 spot price. No current full provider explorer-address retrieval is claimed.",
+      "cmcId": "29569",
+      "cmcSlug": "mountain-protocol",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
@@ -8264,11 +8295,12 @@
     },
     "ceramic": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Issuer FAQ explicitly says Ceramic has no native token; developer documentation says there are no tokenized node incentives. Scope is the documented Ceramic network, not every future product. CERA is not established as a token. Keep historical failed CMC 24022/CHT under quarantine for provenance and strict-audit coverage; it must never be used as a Ceramic quote. Reconsider only on a new issuer token announcement and independently matched identity.",
       "cmcId": "24022",
       "cmcSlug": "ceramic",
       "previous_final_status": "INVALID_REMOVED",
-      "requires_live_reaudit": true
+      "requires_live_reaudit": true,
+      "asset_type": "project_without_token"
     },
     "centrifuge": {
       "final_status": "PASSED_STRICT_CMC_AUDIT",
@@ -8901,14 +8933,14 @@
   },
   "_mapping_repair": {
     "stage": "5C",
-    "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+    "status": "CONSOLIDATED_REVIEW_PENDING_BATCH_AUDIT",
     "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
     "source_audit_at": "2026-10-12T10:20:26.406Z",
     "slug_corrections": 23,
     "quarantined": 51,
-    "quarantined_symbol_mismatches": 33,
+    "quarantined_symbol_mismatches": 32,
     "quarantined_market_data_failures": 18,
-    "id_corrections": 98,
+    "id_corrections": 99,
     "identity_review_remaining": 51,
     "last_live_audit_at": "2026-10-18T13:54:06.103Z",
     "last_live_audit_commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
@@ -8916,8 +8948,8 @@
     "last_live_audit_fail": 51,
     "released_after_live_audit": 93,
     "last_live_audit_dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385",
-    "pending_id_corrections": 0,
-    "quarantined_quote_pending": 0,
+    "pending_id_corrections": 1,
+    "quarantined_quote_pending": 1,
     "corrected_ids_with_unavailable_market_data": 9,
     "runtime_parity_checked_releases": 91,
     "runtime_parity_pending_releases": 2,
@@ -8929,7 +8961,11 @@
     "canonical_symbol_corrections": 15,
     "pending_symbol_corrections": 0,
     "released_id_corrections": 89,
-    "released_symbol_only_corrections": 4
+    "released_symbol_only_corrections": 4,
+    "consolidated_review_report": "reports/stage5c-consolidated-review-20261018.json",
+    "consolidated_review_records": 82,
+    "new_unmapped_candidates": 10,
+    "issuer_documented_no_native_token": 1
   },
   "_symbol_repair": {
     "reviewed_on": "2026-10-18",

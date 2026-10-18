@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+  "status": "CONSOLIDATED_REVIEW_PENDING_BATCH_AUDIT",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -254,16 +254,38 @@
     {
       "canonical_id": "mountain-protocol",
       "symbol": "USDM",
-      "expected_cmc_id": "27788",
-      "expected_cmc_slug": "mountain-protocol-usdm",
-      "returned_symbol": "TEST",
-      "returned_slug": "test",
+      "expected_cmc_id": "29569",
+      "expected_cmc_slug": "mountain-protocol",
+      "returned_symbol": null,
+      "returned_slug": null,
       "reasons": [
-        "symbol_mismatch:TEST",
-        "slug_mismatch:test",
-        "invalid_price"
+        "quote_verification_pending",
+        "wind_down_market_validity_review_required"
       ],
-      "mapping_status": "unverified"
+      "mapping_status": "unverified",
+      "last_observed_before_correction": {
+        "symbol": "USDM",
+        "cmcId": "27788",
+        "cmcSlug": "mountain-protocol-usdm",
+        "mapping_reasons": [
+          "symbol_mismatch:TEST",
+          "slug_mismatch:test",
+          "invalid_price"
+        ]
+      },
+      "last_observed_audit_failure": {
+        "canonical_id": "mountain-protocol",
+        "symbol": "USDM",
+        "expected_cmc_id": "27788",
+        "expected_cmc_slug": "mountain-protocol-usdm",
+        "returned_symbol": "TEST",
+        "returned_slug": "test",
+        "reasons": [
+          "symbol_mismatch:TEST",
+          "slug_mismatch:test",
+          "invalid_price"
+        ]
+      }
     },
     {
       "canonical_id": "creditum",
@@ -923,7 +945,7 @@
   "taxonomy_status": "NOT_COMPLETED: classify token/stablecoin/wrapped/project_without_token only using verified project identity evidence; no-quote alone does not establish no-token.",
   "id_repairs": {
     "status": "PARTIALLY_LIVE_VERIFIED",
-    "applied": 98,
+    "applied": 99,
     "unresolved_quarantined": 51,
     "quarantine_retained": 51,
     "canonical_symbols_changed": 15,
@@ -3324,10 +3346,33 @@
         "live_audit_at": "2026-10-18T13:54:06.103Z",
         "live_audit_commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
         "live_audit_dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385"
+      },
+      {
+        "canonical_id": "mountain-protocol",
+        "symbol": "USDM",
+        "before": {
+          "cmcId": "27788",
+          "cmcSlug": "mountain-protocol-usdm"
+        },
+        "after": {
+          "cmcId": "29569",
+          "cmcSlug": "mountain-protocol"
+        },
+        "status": "LIFECYCLE_HOLD_PENDING_QUOTE_AUDIT",
+        "source": {
+          "url": "https://coinmarketcap.com/currencies/mountain-protocol/",
+          "ucid": "29569",
+          "symbol": "USDM",
+          "retrieved_on": "2026-10-18"
+        },
+        "issuer_source": {
+          "url": "https://docs.mountainprotocol.com/legacy-docs/usdm-token",
+          "note": "Issuer USDM contract and provider abbreviation agree; UCID 29569 links the same issuer and its wind-down notice. Old 27788 returned TEST. Phase-3 terms effective 2025-08-22 supersede legacy mint/redeem and yield descriptions: issuer platform is decommissioned and no price, liquidity or peg is guaranteed. Correct identity but retain quarantine, with a lifecycle gate beyond numeric PASS. Do not substitute USDC, wUSDM, a redemption value or a fixed $1 spot price. No current full provider explorer-address retrieval is claimed."
+        }
       }
     ],
     "released_after_live_audit": 89,
-    "pending_live_reaudit": 0,
+    "pending_live_reaudit": 1,
     "corrected_ids_with_unavailable_market_data": 9,
     "symbol_corrections_within_id_replacements": 11,
     "symbol_corrections_with_retained_ids": 4
@@ -3389,7 +3434,7 @@
       "Exact provider parity does not independently establish financial data quality, tradability, supply consistency or real-world zeros."
     ]
   },
-  "remaining_failure_categories_note": "The complete 5eb56bb audit reports 33 symbol mismatches, 16 invalid-price-only and two absent quotes. GRAM/STBT account for both gains; no prior passing record regressed. Strict PASS alone does not prove positive normalized price or numeric runtime parity. Corrected-ID market-data holds remain nine, and all-93 numeric proof is pending.",
+  "remaining_failure_categories_note": "Last observed full-audit categories remain historical (33 symbol mismatches,16 invalid-price-only,2 absent). Current expectations add one USDM identity correction pending quote/lifecycle review; do not represent its new quote as observed.",
   "quarantine_source_audit_at": "2026-10-18T13:54:06.103Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
@@ -5389,5 +5434,16 @@
     "live_audit_at": "2026-10-18T13:54:06.103Z",
     "live_audit_commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
     "release_dataset_sha256": "351257826449d1c3f067a354b980fb48d6601044350b9c27d39a37460d82e9bd"
+  },
+  "consolidated_review": {
+    "report": "reports/stage5c-consolidated-review-20261018.json",
+    "candidate_manifest": "reports/stage5c-candidates-20261018.json",
+    "reviewed": 82,
+    "diagnostic_only_candidates": 10,
+    "identity_corrections": 1,
+    "taxonomy_corrections": 1,
+    "quarantines_released": 0,
+    "status": "LIVE_BATCH_PENDING",
+    "dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f"
   }
 }
