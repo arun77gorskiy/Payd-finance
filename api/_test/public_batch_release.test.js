@@ -9,6 +9,7 @@ const decision = require('../../reports/stage5c-consolidated-release-20261018.js
 const capture = require('../../reports/stage5c-consolidated-live-audit-20261018.json');
 const { createPaydMarketService } = require('../../code/server/market/payd_market_service');
 const marketHandler = require('../intelligence/market');
+const { createClient, toMarketView, FIELDS } = require('../../code/client/market/payd_market_client');
 
 test('local public HTTP serves seven applied identities, caches them, preserves CORS and blocks all 75 held/unmapped rows', async () => {
   // Offline reconstruction from the observed normalized capture. This tests
@@ -41,6 +42,7 @@ test('local public HTTP serves seven applied identities, caches them, preserves 
   const server = http.createServer((req, res) => marketHandler(req, res));
   await new Promise(resolve => server.listen(0, '127.0.0.1', resolve));
   const base = 'http://127.0.0.1:' + server.address().port + '/api/intelligence/market';
+  const client = createClient({ enabled: true, baseUrl: new URL(base).origin, records: dataset.records });
   try {
     for (const c of decision.applied) {
       const expected = capture.candidate_diagnostic.results.find(r => r.canonical_id === c.canonical_id);
@@ -58,9 +60,19 @@ test('local public HTTP serves seven applied identities, caches them, preserves 
       }
     }
     assert.equal(calls, 7);
+    for (const c of decision.applied) {
+      const expected = capture.candidate_diagnostic.results.find(r => r.canonical_id === c.canonical_id);
+      const result = await client.getMarket(c.canonical_id);
+      assert.equal(result.status, 'LIVE');
+      assert.deepEqual(result.market, expected.market);
+    }
+    assert.equal(calls, 7);
     const blocked = dataset.records.filter(r => !service._internals.resolver.resolve(r.id).ok);
     assert.equal(blocked.length, 75);
     for (const record of blocked) {
+      const view = toMarketView(await client.getMarket(record.id));
+      assert.equal(view.status, 'UNKNOWN_MAPPING');
+      assert.ok(FIELDS.every(key => view.market[key] === null));
       const response = await fetch(base + '?id=' + record.id);
       assert.equal(response.status, 200);
       assert.equal(response.headers.get('cache-control'), 'no-store');
