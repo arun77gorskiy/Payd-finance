@@ -101,6 +101,11 @@ module.exports = async function handler(req, res) {
   if (String(req.query?.run || '') !== '1') {
     return send(res, 400, { ok: false, error: 'AUDIT_CONFIRMATION_REQUIRED' });
   }
+  // Reuse this deployed function for the consolidated capture; the default
+  // runtime audit and its verification logic remain unchanged.
+  if (String(req.query?.review || '') === '1') {
+    return require('./_lib/stage5c-review')(req, res);
+  }
   try {
     const result = await runAudit(getService());
     return send(res, result.ok ? 200 : 500, result);

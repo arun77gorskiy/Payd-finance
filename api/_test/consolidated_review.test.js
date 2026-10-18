@@ -5,7 +5,8 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const path = require('node:path');
 const { createPaydMarketService } = require('../../code/server/market/payd_market_service');
-const handler = require('../audit-stage5c-review');
+const handler = require('../_lib/stage5c-review');
+const runtimeHandler = require('../audit-stage5c-runtime');
 const manifest = require('../../reports/stage5c-candidates-20261018.json');
 const datasetPath = path.resolve(__dirname, '../../public/data/intelligence/token-index.json');
 const dataset = JSON.parse(fs.readFileSync(datasetPath));
@@ -60,7 +61,7 @@ test('one Preview request runs unchanged 323-ID audit, 93 released rows and 10 i
   globalThis.__PAYD_MARKET_SERVICE__ = f.service;
   try {
     const res = response();
-    await handler({ method: 'GET', query: { run: '1' } }, res);
+    await runtimeHandler({ method: 'GET', query: { run: '1', review: '1' } }, res);
     assert.equal(res.statusCode, 200);
     const b = res.body;
     assert.equal(b.audit_completed, true);

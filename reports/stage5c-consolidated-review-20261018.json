@@ -98,7 +98,7 @@
     }
   },
   "completion_policy": {
-    "next_run": "/api/audit-stage5c-review?run=1",
+    "next_run": "/api/audit-stage5c-runtime?run=1&review=1",
     "fixed_baseline_strict_validator_unchanged": true,
     "new_candidate_ids_not_in_public_dataset": true,
     "maximum_provider_batches": 7,

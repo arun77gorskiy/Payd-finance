@@ -4,11 +4,11 @@
 // parity and isolated candidate diagnostics. Candidate expectations never enter
 // the public resolver or its cache, and a diagnostic PASS is not a release.
 const { createHash } = require('node:crypto');
-const baselineHandler = require('./audit-stage5b');
-const { runAudit } = require('./audit-stage5c-runtime');
-const { getService, getHealthSnapshot } = require('./_lib/runtime');
-const { createPaydMarketService } = require('../code/server/market/payd_market_service');
-const candidateManifest = require('../reports/stage5c-candidates-20261018.json');
+const baselineHandler = require('../audit-stage5b');
+const { runAudit } = require('../audit-stage5c-runtime');
+const { getService, getHealthSnapshot } = require('./runtime');
+const { createPaydMarketService } = require('../../code/server/market/payd_market_service');
+const candidateManifest = require('../../reports/stage5c-candidates-20261018.json');
 
 function send(res, code, body) {
   res.statusCode = code;
