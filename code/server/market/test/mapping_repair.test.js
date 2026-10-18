@@ -45,9 +45,9 @@ test('all 51 remaining quarantined entries return no market data and make zero p
   assert.equal(calls(), 0);
 });
 
-test('all 31 originally unmapped entries stay blocked without a ticker fallback', async () => {
+test('all 24 remaining unmapped entries stay blocked without a ticker fallback', async () => {
   const rows = dataset.records.filter(r => !r.cmcId);
-  assert.equal(rows.length, 31);
+  assert.equal(rows.length, 24);
   const { service, calls } = serviceWith(payload(), dataset.records);
   for (const r of rows) {
     const result = await service.getMarket(r.id);
@@ -104,7 +104,7 @@ test('explicit project_without_token cannot fetch a quote even when an old CMC I
 test('dataset fingerprint records the exact bytes loaded by the resolver', () => {
   const resolver = new MarketResolver({ datasetPath });
   assert.equal(resolver.datasetSha256, createHash('sha256').update(fs.readFileSync(datasetPath)).digest('hex'));
-  assert.equal(dataset.records.filter(r => resolver.resolve(r.id).ok).length, 272);
+  assert.equal(dataset.records.filter(r => resolver.resolve(r.id).ok).length, 279);
 });
 
 test('legacy classification metadata agrees with all corrected and quarantined records', () => {

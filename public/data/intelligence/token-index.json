@@ -1367,8 +1367,32 @@
         "Infrastructure"
       ],
       "market_cap_usd": 75382018,
-      "cmcId": null,
-      "cmcSlug": null
+      "cmcId": "21585",
+      "cmcSlug": "safe1",
+      "previous_cmc_mapping": {
+        "symbol": "SAFE",
+        "cmcId": null,
+        "cmcSlug": null,
+        "mapping_was_absent": true
+      },
+      "mapping_status": "verified",
+      "asset_type": "token",
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://safefoundation.org/token",
+        "source_url": "https://coinmarketcap.com/currencies/safe1/",
+        "notes": "Foundation identifies SAFE on Ethereum at 0x5aFE3855358E112B5647B952709E6165e1c1eEEe. Provider 21585/safe1 links safe.global and displays the same address abbreviation. The /safe listing 3918 is a different Anwang project; reject it. Full provider explorer-address retrieval is not claimed.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      }
     },
     {
       "id": "kaito",
@@ -1936,8 +1960,32 @@
         "ZK"
       ],
       "market_cap_usd": 38804225,
-      "cmcId": null,
-      "cmcSlug": null
+      "cmcId": "32452",
+      "cmcSlug": "movement",
+      "previous_cmc_mapping": {
+        "symbol": "MOVE",
+        "cmcId": null,
+        "cmcSlug": null,
+        "mapping_was_absent": true
+      },
+      "mapping_status": "verified",
+      "asset_type": "token",
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://docs.movementnetwork.xyz/general/usingmovement/connect_to_movement",
+        "source_url": "https://coinmarketcap.com/currencies/movement/",
+        "notes": "Current issuer documentation identifies MOVE in its official wallet and distinguishes live M1 mainnet from testnet. Provider 32452/MOVE/movement links the issuer and shows 0x3073...1a3073. No independently retrieved full issuer/provider ERC20-address match; no testnet-unit pricing.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      }
     },
     {
       "id": "propy",
@@ -3869,8 +3917,7 @@
       "cmcSlug": "mountain-protocol",
       "mapping_status": "unverified",
       "mapping_reasons": [
-        "quote_verification_pending",
-        "wind_down_market_validity_review_required"
+        "invalid_price"
       ],
       "previous_cmc_mapping": {
         "cmcId": "27788",
@@ -3882,7 +3929,7 @@
         ]
       },
       "identity_review": {
-        "status": "PROVIDER_IDENTITY_CONFIRMED_LIFECYCLE_HOLD",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "reviewed_on": "2026-10-18",
         "source_url": "https://coinmarketcap.com/currencies/mountain-protocol/",
         "issuer_url": "https://docs.mountainprotocol.com/legacy-docs/usdm-token",
@@ -3892,7 +3939,13 @@
         ],
         "issuer_ethereum_contract": "0x59D9356E565Ab3A36dD77763Fc0d87fEaf85508C",
         "additional_release_gate": "WIND_DOWN_EXTERNAL_MARKET_VALIDITY_REQUIRED",
-        "notes": "Issuer USDM contract and provider abbreviation agree; UCID 29569 links the same issuer and its wind-down notice. Old 27788 returned TEST. Phase-3 terms effective 2025-08-22 supersede legacy mint/redeem and yield descriptions: issuer platform is decommissioned and no price, liquidity or peg is guaranteed. Correct identity but retain quarantine, with a lifecycle gate beyond numeric PASS. Do not substitute USDC, wUSDM, a redemption value or a fixed $1 spot price. No current full provider explorer-address retrieval is claimed."
+        "notes": "Issuer USDM contract and provider abbreviation agree; UCID 29569 links the same issuer and its wind-down notice. Old 27788 returned TEST. Phase-3 terms effective 2025-08-22 supersede legacy mint/redeem and yield descriptions: issuer platform is decommissioned and no price, liquidity or peg is guaranteed. Correct identity but retain quarantine, with a lifecycle gate beyond numeric PASS. Do not substitute USDC, wUSDM, a redemption value or a fixed $1 spot price. No current full provider explorer-address retrieval is claimed.",
+        "audit_at": "2026-10-18T16:44:29.513Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "live_reasons": [
+          "invalid_price"
+        ]
       }
     },
     {
@@ -5619,14 +5672,47 @@
     },
     {
       "id": "eclipse",
-      "symbol": "ECLIPSE",
+      "symbol": "ES",
       "name": "eclipse",
       "sectors": [
         "Layer 2"
       ],
       "market_cap_usd": null,
-      "cmcId": null,
-      "cmcSlug": null
+      "cmcId": "36174",
+      "cmcSlug": "eclipse-xyz",
+      "previous_cmc_mapping": {
+        "symbol": "ECLIPSE",
+        "cmcId": null,
+        "cmcSlug": null,
+        "mapping_was_absent": true
+      },
+      "mapping_status": "verified",
+      "asset_type": "token",
+      "previous_catalog_symbol": "ECLIPSE",
+      "symbol_repair": {
+        "before": "ECLIPSE",
+        "after": "ES",
+        "kind": "CATALOG_SYMBOL_CORRECTION_NEW_MAPPING",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://www.eclipse.xyz/articles/updated-es-tokenomics",
+        "scope": "Issuer identifies ES; ECLIPSE was a catalog label, not a verified previously issued ticker. No token migration, scaling or financial-value conversion."
+      },
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://www.eclipse.xyz/articles/updated-es-tokenomics",
+        "source_url": "https://coinmarketcap.com/currencies/eclipse-xyz/",
+        "notes": "Current issuer update identifies ES as its only token, now aligned with Human API, while the chain still uses ETH for gas. Provider 36174/ES/eclipse-xyz links the same project. ECLIPSE is a catalog label, not a verified historical token ticker; no conversion or renamed-token migration is inferred.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      }
     },
     {
       "id": "fasset",
@@ -5653,8 +5739,32 @@
         "Layer 2"
       ],
       "market_cap_usd": null,
-      "cmcId": null,
-      "cmcSlug": null
+      "cmcId": "32120",
+      "cmcSlug": "gravity-token",
+      "previous_cmc_mapping": {
+        "symbol": "G",
+        "cmcId": null,
+        "cmcSlug": null,
+        "mapping_was_absent": true
+      },
+      "mapping_status": "verified",
+      "asset_type": "token",
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://www.galxe.com/blog/gal-g",
+        "source_url": "https://coinmarketcap.com/currencies/gravity-token/",
+        "notes": "Galxe issuer announcement identifies Gravity G, native gas and ERC20 representations, with 0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649. Provider 32120/G/gravity-token links gravity.xyz and agrees with the abbreviation. Historical GAL migration is context only; no balance conversion or duplicate GAL quote.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      }
     },
     {
       "id": "genobank",
@@ -6029,8 +6139,32 @@
         "DeFi"
       ],
       "market_cap_usd": null,
-      "cmcId": null,
-      "cmcSlug": null
+      "cmcId": "5877",
+      "cmcSlug": "rarible",
+      "previous_cmc_mapping": {
+        "symbol": "RARI",
+        "cmcId": null,
+        "cmcSlug": null,
+        "mapping_was_absent": true
+      },
+      "mapping_status": "verified",
+      "asset_type": "token",
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://rari.foundation/faq",
+        "source_url": "https://coinmarketcap.com/currencies/rarible/",
+        "notes": "Foundation identifies RARI governance across RARI Chain, Arbitrum and Ethereum. Issuer governance proposal gives Ethereum 0xfca59cd816ab1ead66534d82bc21e7515ce441cf; provider 5877/RARI/rarible links the Foundation and agrees with that abbreviation. This is the ecosystem governance token, not an L2 gas-token assumption.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      }
     },
     {
       "id": "redbelly-network",
@@ -6040,8 +6174,32 @@
         "Infrastructure"
       ],
       "market_cap_usd": null,
-      "cmcId": null,
-      "cmcSlug": null
+      "cmcId": "34849",
+      "cmcSlug": "redbelly-network",
+      "previous_cmc_mapping": {
+        "symbol": "RBNT",
+        "cmcId": null,
+        "cmcSlug": null,
+        "mapping_was_absent": true
+      },
+      "mapping_status": "verified",
+      "asset_type": "token",
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://vine.redbelly.network/native-currency/",
+        "source_url": "https://coinmarketcap.com/currencies/redbelly-network/",
+        "notes": "Issuer identifies mainnet native RBNT and distinguishes it from testnet faucet coins. Provider 34849/RBNT links redbelly.network. No full cross-chain token-contract match was retrieved; do not select an arbitrary same-ticker Base token.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      }
     },
     {
       "id": "realt-coin",
@@ -6068,8 +6226,32 @@
         "Infrastructure"
       ],
       "market_cap_usd": null,
-      "cmcId": null,
-      "cmcSlug": null
+      "cmcId": "21707",
+      "cmcSlug": "redstone",
+      "previous_cmc_mapping": {
+        "symbol": "RED",
+        "cmcId": null,
+        "cmcSlug": null,
+        "mapping_was_absent": true
+      },
+      "mapping_status": "verified",
+      "asset_type": "token",
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://www.redstone.finance/red-token",
+        "source_url": "https://coinmarketcap.com/currencies/redstone/",
+        "notes": "Issuer identifies RED as the RedStone oracle utility token; issuer tokenomics identifies Ethereum ERC20. Provider 21707/RED/redstone links redstone.finance. No full issuer/provider contract match was obtained; the failed guessed /redstone-oracles URL is not the listing.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      }
     },
     {
       "id": "researchhub",
@@ -6482,7 +6664,7 @@
     },
     "hashnote": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "28558",
       "cmcSlug": "hashnote-usyc",
       "previous_final_status": "PROMOTED",
@@ -6664,7 +6846,7 @@
     },
     "wrapped-stx": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "22257",
       "cmcSlug": "wrapped-stacks",
       "previous_final_status": "PROMOTED",
@@ -7093,10 +7275,12 @@
       "requires_live_reaudit": false
     },
     "safe": {
-      "final_status": "MISSING",
-      "notes": "No CMC candidate for symbol",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "LIVE_VERIFIED_NEW_CMC_MAPPING",
+      "notes": "Issuer-reviewed identity and positive normalized price/eight exact fields passed isolated candidate pipeline on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. Public-route behavior on the new version is not claimed verified.",
+      "cmcId": "21585",
+      "cmcSlug": "safe1",
+      "previous_final_status": "MISSING",
+      "requires_live_reaudit": false
     },
     "kaito": {
       "final_status": "PASSED_STRICT_CMC_AUDIT",
@@ -7268,7 +7452,7 @@
     },
     "fireblocks": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "24877",
       "cmcSlug": "fireblocks",
       "previous_final_status": "INVALID_REMOVED",
@@ -7341,10 +7525,12 @@
       "requires_live_reaudit": false
     },
     "movement": {
-      "final_status": "MISSING",
-      "notes": "No CMC candidate for symbol",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "LIVE_VERIFIED_NEW_CMC_MAPPING",
+      "notes": "Issuer-reviewed identity and positive normalized price/eight exact fields passed isolated candidate pipeline on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. Public-route behavior on the new version is not claimed verified.",
+      "cmcId": "32452",
+      "cmcSlug": "movement",
+      "previous_final_status": "MISSING",
+      "requires_live_reaudit": false
     },
     "propy": {
       "final_status": "PASSED_STRICT_CMC_AUDIT",
@@ -8031,7 +8217,7 @@
     },
     "mountain-protocol": {
       "final_status": "QUARANTINED",
-      "notes": "Issuer USDM contract and provider abbreviation agree; UCID 29569 links the same issuer and its wind-down notice. Old 27788 returned TEST. Phase-3 terms effective 2025-08-22 supersede legacy mint/redeem and yield descriptions: issuer platform is decommissioned and no price, liquidity or peg is guaranteed. Correct identity but retain quarantine, with a lifecycle gate beyond numeric PASS. Do not substitute USDC, wUSDM, a redemption value or a fixed $1 spot price. No current full provider explorer-address retrieval is claimed.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "29569",
       "cmcSlug": "mountain-protocol",
       "previous_final_status": "INVALID_REMOVED",
@@ -8062,7 +8248,7 @@
     },
     "creditum": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "17132",
       "cmcSlug": "creditum",
       "previous_final_status": "INVALID_REMOVED",
@@ -8077,7 +8263,7 @@
     },
     "mxc": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "3628",
       "cmcSlug": "mxc",
       "previous_final_status": "INVALID_REMOVED",
@@ -8085,7 +8271,7 @@
     },
     "backed-finance": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "28833",
       "cmcSlug": "backed",
       "previous_final_status": "INVALID_REMOVED",
@@ -8171,7 +8357,7 @@
     },
     "cortex": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "2638",
       "cmcSlug": "cortex",
       "previous_final_status": "VALID",
@@ -8186,7 +8372,7 @@
     },
     "spheron": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "37537",
       "cmcSlug": "spheron-network",
       "previous_final_status": "INVALID_REMOVED",
@@ -8202,7 +8388,7 @@
     },
     "pollen-mobile": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "20267",
       "cmcSlug": "pollen-coin",
       "previous_final_status": "INVALID_REMOVED",
@@ -8224,7 +8410,7 @@
     },
     "everclear": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "34512",
       "cmcSlug": "everclear",
       "previous_final_status": "INVALID_REMOVED",
@@ -8232,7 +8418,7 @@
     },
     "match-quest": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "29811",
       "cmcSlug": "match-quest",
       "previous_final_status": "INVALID_REMOVED",
@@ -8255,7 +8441,7 @@
     },
     "toucan-protocol": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "23238",
       "cmcSlug": "toucan-protocol-base-carbon-tonne",
       "previous_final_status": "INVALID_REMOVED",
@@ -8263,7 +8449,7 @@
     },
     "chainport": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "17480",
       "cmcSlug": "chainport",
       "previous_final_status": "INVALID_REMOVED",
@@ -8287,7 +8473,7 @@
     },
     "lyra": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "27620",
       "cmcSlug": "lyra-3",
       "previous_final_status": "INVALID_REMOVED",
@@ -8295,7 +8481,7 @@
     },
     "ceramic": {
       "final_status": "QUARANTINED",
-      "notes": "Issuer FAQ explicitly says Ceramic has no native token; developer documentation says there are no tokenized node incentives. Scope is the documented Ceramic network, not every future product. CERA is not established as a token. Keep historical failed CMC 24022/CHT under quarantine for provenance and strict-audit coverage; it must never be used as a Ceramic quote. Reconsider only on a new issuer token announcement and independently matched identity.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "24022",
       "cmcSlug": "ceramic",
       "previous_final_status": "INVALID_REMOVED",
@@ -8334,7 +8520,7 @@
     },
     "fantom": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "3513",
       "cmcSlug": "fantom",
       "previous_final_status": "VALID",
@@ -8342,7 +8528,7 @@
     },
     "huddle01": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "23412",
       "cmcSlug": "huddle01",
       "previous_final_status": "INVALID_REMOVED",
@@ -8380,7 +8566,7 @@
     },
     "moralis": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "24755",
       "cmcSlug": "moralis",
       "previous_final_status": "INVALID_REMOVED",
@@ -8388,7 +8574,7 @@
     },
     "rom": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "29211",
       "cmcSlug": "rom",
       "previous_final_status": "INVALID_REMOVED",
@@ -8412,7 +8598,7 @@
     },
     "openeden": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "25158",
       "cmcSlug": "openeden-tbill-vault",
       "previous_final_status": "INVALID_REMOVED",
@@ -8420,7 +8606,7 @@
     },
     "thingsix": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "23967",
       "cmcSlug": "thingsix",
       "previous_final_status": "INVALID_REMOVED",
@@ -8428,7 +8614,7 @@
     },
     "tangible": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "22870",
       "cmcSlug": "tangible",
       "previous_final_status": "INVALID_REMOVED",
@@ -8452,7 +8638,7 @@
     },
     "aether": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "25245",
       "cmcSlug": "aether",
       "previous_final_status": "INVALID_REMOVED",
@@ -8460,7 +8646,7 @@
     },
     "agora-health": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "25567",
       "cmcSlug": "agora-health",
       "previous_final_status": "INVALID_REMOVED",
@@ -8482,7 +8668,7 @@
     },
     "alienswap": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "22664",
       "cmcSlug": "alienswap",
       "previous_final_status": "INVALID_REMOVED",
@@ -8496,7 +8682,7 @@
     },
     "franklin-templeton": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "31581",
       "cmcSlug": "franklin-templeton",
       "previous_final_status": "INVALID_REMOVED",
@@ -8504,7 +8690,7 @@
     },
     "biomapper": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "25420",
       "cmcSlug": "biomapper",
       "previous_final_status": "INVALID_REMOVED",
@@ -8512,7 +8698,7 @@
     },
     "biopset": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "25321",
       "cmcSlug": "biopset",
       "previous_final_status": "INVALID_REMOVED",
@@ -8538,7 +8724,7 @@
     },
     "bullieverse": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "11687",
       "cmcSlug": "bullrise",
       "previous_final_status": "PROMOTED",
@@ -8546,7 +8732,7 @@
     },
     "cryogenseed": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "25522",
       "cmcSlug": "cryogenseed",
       "previous_final_status": "INVALID_REMOVED",
@@ -8554,7 +8740,7 @@
     },
     "corusdao": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "25122",
       "cmcSlug": "corusdao",
       "previous_final_status": "AMBIGUOUS",
@@ -8570,7 +8756,7 @@
     },
     "credix": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "27812",
       "cmcSlug": "credix-finance",
       "previous_final_status": "AMBIGUOUS",
@@ -8584,7 +8770,7 @@
     },
     "digix-gold-token": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "2739",
       "cmcSlug": "digix-gold-token",
       "previous_final_status": "PROMOTED",
@@ -8597,28 +8783,32 @@
       "cmcSlug": null
     },
     "eclipse": {
-      "final_status": "MISSING",
-      "notes": "No CMC candidate for symbol",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "LIVE_VERIFIED_NEW_CMC_MAPPING",
+      "notes": "Issuer-reviewed identity and positive normalized price/eight exact fields passed isolated candidate pipeline on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. Public-route behavior on the new version is not claimed verified.",
+      "cmcId": "36174",
+      "cmcSlug": "eclipse-xyz",
+      "previous_final_status": "MISSING",
+      "requires_live_reaudit": false
     },
     "fasset": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "27555",
       "cmcSlug": "fasset",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "gravity": {
-      "final_status": "MISSING",
-      "notes": "No CMC candidate for symbol",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "LIVE_VERIFIED_NEW_CMC_MAPPING",
+      "notes": "Issuer-reviewed identity and positive normalized price/eight exact fields passed isolated candidate pipeline on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. Public-route behavior on the new version is not claimed verified.",
+      "cmcId": "32120",
+      "cmcSlug": "gravity-token",
+      "previous_final_status": "MISSING",
+      "requires_live_reaudit": false
     },
     "genobank": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "22555",
       "cmcSlug": "genobank",
       "previous_final_status": "AMBIGUOUS",
@@ -8626,7 +8816,7 @@
     },
     "genomesdao": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "21634",
       "cmcSlug": "genomesdao",
       "previous_final_status": "AMBIGUOUS",
@@ -8646,7 +8836,7 @@
     },
     "junca-cash": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "21587",
       "cmcSlug": "junca-cash",
       "previous_final_status": "INVALID_REMOVED",
@@ -8680,7 +8870,7 @@
     },
     "lofty": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "22617",
       "cmcSlug": "lofty-2",
       "previous_final_status": "INVALID_REMOVED",
@@ -8695,7 +8885,7 @@
     },
     "mintchain": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "36005",
       "cmcSlug": "mint-blockchain",
       "previous_final_status": "AMBIGUOUS",
@@ -8710,7 +8900,7 @@
     },
     "molecule": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "3502",
       "cmcSlug": "molecule",
       "previous_final_status": "PROMOTED",
@@ -8730,7 +8920,7 @@
     },
     "nucleation": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "25600",
       "cmcSlug": "nucleation",
       "previous_final_status": "INVALID_REMOVED",
@@ -8751,7 +8941,7 @@
     },
     "openlab": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "25443",
       "cmcSlug": "openlab",
       "previous_final_status": "INVALID_REMOVED",
@@ -8765,7 +8955,7 @@
     },
     "polynomial": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "27689",
       "cmcSlug": "polynomialfi",
       "previous_final_status": "AMBIGUOUS",
@@ -8773,7 +8963,7 @@
     },
     "psilocin": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "25333",
       "cmcSlug": "psilocin",
       "previous_final_status": "INVALID_REMOVED",
@@ -8786,30 +8976,36 @@
       "cmcSlug": null
     },
     "rari": {
-      "final_status": "MISSING",
-      "notes": "No CMC candidate for symbol",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "LIVE_VERIFIED_NEW_CMC_MAPPING",
+      "notes": "Issuer-reviewed identity and positive normalized price/eight exact fields passed isolated candidate pipeline on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. Public-route behavior on the new version is not claimed verified.",
+      "cmcId": "5877",
+      "cmcSlug": "rarible",
+      "previous_final_status": "MISSING",
+      "requires_live_reaudit": false
     },
     "redbelly-network": {
-      "final_status": "MISSING",
-      "notes": "No CMC candidate for symbol",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "LIVE_VERIFIED_NEW_CMC_MAPPING",
+      "notes": "Issuer-reviewed identity and positive normalized price/eight exact fields passed isolated candidate pipeline on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. Public-route behavior on the new version is not claimed verified.",
+      "cmcId": "34849",
+      "cmcSlug": "redbelly-network",
+      "previous_final_status": "MISSING",
+      "requires_live_reaudit": false
     },
     "realt-coin": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "11814",
       "cmcSlug": "realt",
       "previous_final_status": "INVALID_REMOVED",
       "requires_live_reaudit": true
     },
     "redstone-finance": {
-      "final_status": "MISSING",
-      "notes": "No CMC candidate for symbol",
-      "cmcId": null,
-      "cmcSlug": null
+      "final_status": "LIVE_VERIFIED_NEW_CMC_MAPPING",
+      "notes": "Issuer-reviewed identity and positive normalized price/eight exact fields passed isolated candidate pipeline on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. Public-route behavior on the new version is not claimed verified.",
+      "cmcId": "21707",
+      "cmcSlug": "redstone",
+      "previous_final_status": "MISSING",
+      "requires_live_reaudit": false
     },
     "researchhub": {
       "final_status": "PASSED_STRICT_CMC_AUDIT",
@@ -8820,7 +9016,7 @@
     },
     "rwa-x": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "28623",
       "cmcSlug": "rwa-x",
       "previous_final_status": "INVALID_REMOVED",
@@ -8828,7 +9024,7 @@
     },
     "rxbio": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "24999",
       "cmcSlug": "rxbio",
       "previous_final_status": "INVALID_REMOVED",
@@ -8888,7 +9084,7 @@
     },
     "trademate": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "24033",
       "cmcSlug": "trademate",
       "previous_final_status": "INVALID_REMOVED",
@@ -8896,7 +9092,7 @@
     },
     "traditional-finance": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "28512",
       "cmcSlug": "traditional-finance",
       "previous_final_status": "INVALID_REMOVED",
@@ -8904,7 +9100,7 @@
     },
     "superstate": {
       "final_status": "QUARANTINED",
-      "notes": "Failed strict CMC quote audit at 2026-10-18T13:54:06.103Z; runtime market data remains unavailable.",
+      "notes": "Failed complete quote audit at 2026-10-18T16:44:29.513Z on d32205cf1c1bae2d3747f794d5fe6c988de59d7f. See identity/lifecycle gates; public market data remains blocked.",
       "cmcId": "37086",
       "cmcSlug": "superstate-short-duration-us-government-securities-fund-ustb",
       "previous_final_status": "INVALID_REMOVED",
@@ -8933,43 +9129,53 @@
   },
   "_mapping_repair": {
     "stage": "5C",
-    "status": "CONSOLIDATED_REVIEW_PENDING_BATCH_AUDIT",
+    "status": "CONSOLIDATED_BATCH_APPLIED_PUBLIC_HTTP_PENDING",
     "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
     "source_audit_at": "2026-10-12T10:20:26.406Z",
     "slug_corrections": 23,
     "quarantined": 51,
     "quarantined_symbol_mismatches": 32,
-    "quarantined_market_data_failures": 18,
+    "quarantined_market_data_failures": 19,
     "id_corrections": 99,
     "identity_review_remaining": 51,
-    "last_live_audit_at": "2026-10-18T13:54:06.103Z",
-    "last_live_audit_commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+    "last_live_audit_at": "2026-10-18T16:44:29.513Z",
+    "last_live_audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
     "last_live_audit_pass": 272,
     "last_live_audit_fail": 51,
-    "released_after_live_audit": 93,
-    "last_live_audit_dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385",
-    "pending_id_corrections": 1,
-    "quarantined_quote_pending": 1,
-    "corrected_ids_with_unavailable_market_data": 9,
-    "runtime_parity_checked_releases": 91,
-    "runtime_parity_pending_releases": 2,
-    "last_runtime_audit_at": "2026-10-18T13:34:32.382Z",
-    "last_runtime_audit_commit": "baed82cc9083cf7d07fa8d5efbcd33b9d20fa023",
-    "last_runtime_audit_dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
-    "last_runtime_audit_pass": 91,
+    "released_after_live_audit": 100,
+    "last_live_audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+    "pending_id_corrections": 0,
+    "quarantined_quote_pending": 0,
+    "corrected_ids_with_unavailable_market_data": 10,
+    "runtime_parity_checked_releases": 100,
+    "runtime_parity_pending_releases": 0,
+    "last_runtime_audit_at": "2026-10-18T16:44:29.552Z",
+    "last_runtime_audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+    "last_runtime_audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+    "last_runtime_audit_pass": 93,
     "last_runtime_audit_fail": 0,
-    "canonical_symbol_corrections": 15,
+    "canonical_symbol_corrections": 16,
     "pending_symbol_corrections": 0,
     "released_id_corrections": 89,
     "released_symbol_only_corrections": 4,
     "consolidated_review_report": "reports/stage5c-consolidated-review-20261018.json",
     "consolidated_review_records": 82,
-    "new_unmapped_candidates": 10,
-    "issuer_documented_no_native_token": 1
+    "new_unmapped_candidates": 3,
+    "issuer_documented_no_native_token": 1,
+    "last_live_audit_mapped_checked": 323,
+    "released_new_mappings": 7,
+    "new_cmc_mappings": 7,
+    "originally_unmapped_remaining": 24,
+    "last_candidate_audit_pass": 9,
+    "last_candidate_audit_fail": 1,
+    "new_mapping_runtime_checked": 7,
+    "runtime_parity_proof_scope": "93 released rows plus 7 isolated candidate rows in the same capture; not a single 100-row public-route audit",
+    "consolidated_live_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+    "consolidated_release_report": "reports/stage5c-consolidated-release-20261018.json"
   },
   "_symbol_repair": {
     "reviewed_on": "2026-10-18",
-    "count": 15,
+    "count": 16,
     "changes": [
       {
         "before": "INST",
@@ -9138,6 +9344,15 @@
         ],
         "scope": "Explicit native-token ticker continuity; numeric ID and slug retained. No migration, unit scaling or ticker fallback.",
         "canonical_id": "the-open-network"
+      },
+      {
+        "canonical_id": "eclipse",
+        "before": "ECLIPSE",
+        "after": "ES",
+        "kind": "CATALOG_SYMBOL_CORRECTION_NEW_MAPPING",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://www.eclipse.xyz/articles/updated-es-tokenomics",
+        "scope": "Issuer identifies ES; ECLIPSE was a catalog label, not a verified previously issued ticker. No token migration, scaling or financial-value conversion."
       }
     ],
     "policy": "Permanent canonical IDs, names, sectors and snapshot values remain stable. Numeric provider ID corrections require explicit provider UCID/project identity and retain old mappings. Current-symbol corrections require manual primary issuer token/lineage and exact provider project identity review. Record contract evidence and retrieval limits precisely; issuer documents alone do not prove a fresh valid quote. Preserve prior catalog symbols and retain quarantine until a fresh strict audit and any additional market-validity gate are satisfied. Never resolve by ticker, scale financial values or invent token migrations."

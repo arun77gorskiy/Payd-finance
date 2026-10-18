@@ -2,7 +2,7 @@
   "stage": "5C",
   "reviewed_on": "2026-10-18",
   "diagnostic_only": true,
-  "canonical_dataset_changes": 0,
+  "canonical_dataset_changes": 7,
   "automatic_release": false,
   "candidates": [
     {
@@ -15,8 +15,12 @@
       "reviewed_on": "2026-10-18",
       "evidence_note": "Foundation identifies SAFE on Ethereum at 0x5aFE3855358E112B5647B952709E6165e1c1eEEe. Provider 21585/safe1 links safe.global and displays the same address abbreviation. The /safe listing 3918 is a different Anwang project; reject it. Full provider explorer-address retrieval is not claimed.",
       "identity_gate": null,
-      "applied_to_canonical_dataset": false,
-      "release_authorized": false
+      "applied_to_canonical_dataset": true,
+      "release_authorized": true,
+      "release_decision": "MANUAL_BATCH_RELEASE_AFTER_ISSUER_REVIEW_AND_NUMERIC_PROOF",
+      "quote_audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+      "quote_audit_at": "2026-10-18T16:44:29.478Z",
+      "quote_audit_report": "reports/stage5c-consolidated-live-audit-20261018.json"
     },
     {
       "canonical_id": "movement",
@@ -28,8 +32,12 @@
       "reviewed_on": "2026-10-18",
       "evidence_note": "Current issuer documentation identifies MOVE in its official wallet and distinguishes live M1 mainnet from testnet. Provider 32452/MOVE/movement links the issuer and shows 0x3073...1a3073. No independently retrieved full issuer/provider ERC20-address match; no testnet-unit pricing.",
       "identity_gate": null,
-      "applied_to_canonical_dataset": false,
-      "release_authorized": false
+      "applied_to_canonical_dataset": true,
+      "release_authorized": true,
+      "release_decision": "MANUAL_BATCH_RELEASE_AFTER_ISSUER_REVIEW_AND_NUMERIC_PROOF",
+      "quote_audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+      "quote_audit_at": "2026-10-18T16:44:29.478Z",
+      "quote_audit_report": "reports/stage5c-consolidated-live-audit-20261018.json"
     },
     {
       "canonical_id": "gravity",
@@ -41,8 +49,12 @@
       "reviewed_on": "2026-10-18",
       "evidence_note": "Galxe issuer announcement identifies Gravity G, native gas and ERC20 representations, with 0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649. Provider 32120/G/gravity-token links gravity.xyz and agrees with the abbreviation. Historical GAL migration is context only; no balance conversion or duplicate GAL quote.",
       "identity_gate": null,
-      "applied_to_canonical_dataset": false,
-      "release_authorized": false
+      "applied_to_canonical_dataset": true,
+      "release_authorized": true,
+      "release_decision": "MANUAL_BATCH_RELEASE_AFTER_ISSUER_REVIEW_AND_NUMERIC_PROOF",
+      "quote_audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+      "quote_audit_at": "2026-10-18T16:44:29.478Z",
+      "quote_audit_report": "reports/stage5c-consolidated-live-audit-20261018.json"
     },
     {
       "canonical_id": "redstone-finance",
@@ -54,8 +66,12 @@
       "reviewed_on": "2026-10-18",
       "evidence_note": "Issuer identifies RED as the RedStone oracle utility token; issuer tokenomics identifies Ethereum ERC20. Provider 21707/RED/redstone links redstone.finance. No full issuer/provider contract match was obtained; the failed guessed /redstone-oracles URL is not the listing.",
       "identity_gate": null,
-      "applied_to_canonical_dataset": false,
-      "release_authorized": false
+      "applied_to_canonical_dataset": true,
+      "release_authorized": true,
+      "release_decision": "MANUAL_BATCH_RELEASE_AFTER_ISSUER_REVIEW_AND_NUMERIC_PROOF",
+      "quote_audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+      "quote_audit_at": "2026-10-18T16:44:29.478Z",
+      "quote_audit_report": "reports/stage5c-consolidated-live-audit-20261018.json"
     },
     {
       "canonical_id": "redbelly-network",
@@ -67,8 +83,12 @@
       "reviewed_on": "2026-10-18",
       "evidence_note": "Issuer identifies mainnet native RBNT and distinguishes it from testnet faucet coins. Provider 34849/RBNT links redbelly.network. No full cross-chain token-contract match was retrieved; do not select an arbitrary same-ticker Base token.",
       "identity_gate": null,
-      "applied_to_canonical_dataset": false,
-      "release_authorized": false
+      "applied_to_canonical_dataset": true,
+      "release_authorized": true,
+      "release_decision": "MANUAL_BATCH_RELEASE_AFTER_ISSUER_REVIEW_AND_NUMERIC_PROOF",
+      "quote_audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+      "quote_audit_at": "2026-10-18T16:44:29.478Z",
+      "quote_audit_report": "reports/stage5c-consolidated-live-audit-20261018.json"
     },
     {
       "canonical_id": "rari",
@@ -80,8 +100,12 @@
       "reviewed_on": "2026-10-18",
       "evidence_note": "Foundation identifies RARI governance across RARI Chain, Arbitrum and Ethereum. Issuer governance proposal gives Ethereum 0xfca59cd816ab1ead66534d82bc21e7515ce441cf; provider 5877/RARI/rarible links the Foundation and agrees with that abbreviation. This is the ecosystem governance token, not an L2 gas-token assumption.",
       "identity_gate": null,
-      "applied_to_canonical_dataset": false,
-      "release_authorized": false
+      "applied_to_canonical_dataset": true,
+      "release_authorized": true,
+      "release_decision": "MANUAL_BATCH_RELEASE_AFTER_ISSUER_REVIEW_AND_NUMERIC_PROOF",
+      "quote_audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+      "quote_audit_at": "2026-10-18T16:44:29.478Z",
+      "quote_audit_report": "reports/stage5c-consolidated-live-audit-20261018.json"
     },
     {
       "canonical_id": "eclipse",
@@ -93,8 +117,12 @@
       "reviewed_on": "2026-10-18",
       "evidence_note": "Current issuer update identifies ES as its only token, now aligned with Human API, while the chain still uses ETH for gas. Provider 36174/ES/eclipse-xyz links the same project. ECLIPSE is a catalog label, not a verified historical token ticker; no conversion or renamed-token migration is inferred.",
       "identity_gate": null,
-      "applied_to_canonical_dataset": false,
-      "release_authorized": false
+      "applied_to_canonical_dataset": true,
+      "release_authorized": true,
+      "release_decision": "MANUAL_BATCH_RELEASE_AFTER_ISSUER_REVIEW_AND_NUMERIC_PROOF",
+      "quote_audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+      "quote_audit_at": "2026-10-18T16:44:29.478Z",
+      "quote_audit_report": "reports/stage5c-consolidated-live-audit-20261018.json"
     },
     {
       "canonical_id": "synesis-one",
@@ -107,7 +135,14 @@
       "evidence_note": "Issuer whitepaper identifies SNS governance; provider 17231/SNS links synesis.one and displays Solana mint SNSNkV...CDvdMd. Current homepage text was not available. Full current issuer mint/lifecycle confirmation remains required even if the diagnostic quote passes.",
       "identity_gate": "CURRENT_ISSUER_MINT_AND_LIFECYCLE_REQUIRED",
       "applied_to_canonical_dataset": false,
-      "release_authorized": false
+      "release_authorized": false,
+      "latest_diagnostic": {
+        "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "at": "2026-10-18T16:44:29.478Z",
+        "status": "LIVE",
+        "reasons": [],
+        "report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
     },
     {
       "canonical_id": "wayru",
@@ -120,7 +155,25 @@
       "evidence_note": "Issuer project repository describes WAYRU staking/rewards on Solana; issuer docs describe rewards, while provider 36316 is a preview linking wayru.io/docs.wayru.io and mint WAYRUy...zdrAV3. Direct homepage/docs-root retrieval failed; current full issuer mint and live external market remain unconfirmed.",
       "identity_gate": "CURRENT_ISSUER_MINT_AND_MARKET_REQUIRED",
       "applied_to_canonical_dataset": false,
-      "release_authorized": false
+      "release_authorized": false,
+      "latest_diagnostic": {
+        "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "at": "2026-10-18T16:44:29.478Z",
+        "status": "INVALID_RESPONSE",
+        "reasons": [
+          "INVALID_RESPONSE",
+          "INVALID_RUNTIME_PRICE",
+          "FIELD_VALUE_MISMATCH:price_usd",
+          "FIELD_VALUE_MISMATCH:change_24h_pct",
+          "FIELD_VALUE_MISMATCH:change_7d_pct",
+          "FIELD_VALUE_MISMATCH:change_30d_pct",
+          "FIELD_VALUE_MISMATCH:market_cap_usd",
+          "FIELD_VALUE_MISMATCH:fdv_usd",
+          "FIELD_VALUE_MISMATCH:volume_24h_usd",
+          "FIELD_VALUE_MISMATCH:market_cap_rank"
+        ],
+        "report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
     },
     {
       "canonical_id": "nexus-4",
@@ -133,7 +186,17 @@
       "evidence_note": "Provider 39965/NEX/nexus-labs links nexus.xyz and docs.nexus.xyz. Current issuer homepage describes an exchange and testnet APIs but did not establish a current NEX contract in retrieved content. Same-name/ticker projects exist. Provider metadata alone is a research lead; diagnostic PASS cannot authorize mapping.",
       "identity_gate": "CURRENT_ISSUER_TOKEN_CONTRACT_REQUIRED",
       "applied_to_canonical_dataset": false,
-      "release_authorized": false
+      "release_authorized": false,
+      "latest_diagnostic": {
+        "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "at": "2026-10-18T16:44:29.478Z",
+        "status": "LIVE",
+        "reasons": [],
+        "report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
     }
-  ]
+  ],
+  "published_count": 7,
+  "pending_count": 3,
+  "scope_note": "The original ten expectations are retained. Seven were manually released after combined quote evidence and issuer review; only the three unapplied expectations remain active for diagnostics. Diagnostic success never automatically releases a row."
 }

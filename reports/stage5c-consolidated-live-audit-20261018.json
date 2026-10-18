@@ -1,0 +1,4047 @@
+{
+  "ok": true,
+  "audit": "stage5c_consolidated_review",
+  "audit_completed": true,
+  "stage_complete": false,
+  "release_authorized": false,
+  "environment": "preview",
+  "git_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+  "dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+  "note": "ok means all review sections completed, existing eligible mappings have no new strict failures and released runtime parity passed. It does not mean every candidate passed or Stage 5C is complete.",
+  "baseline_assessment": {
+    "complete": true,
+    "expected_quarantined_count": 51,
+    "unexpected_failures": [],
+    "passing_quarantines": [],
+    "note": "Expected quarantines remain visible in the unchanged strict audit. A passing quarantine still needs its release gates reviewed."
+  },
+  "baseline_strict": {
+    "ok": false,
+    "audit": "stage5b_cmc_full_mapping",
+    "environment": "preview",
+    "access_mode": "PRO_API",
+    "counts": {
+      "dataset_total": 354,
+      "mapped_expected": 323,
+      "mapped_checked": 323,
+      "unmapped": 31,
+      "returned_quotes": 321,
+      "pass": 272,
+      "fail": 51,
+      "duplicate_cmc_ids": 0,
+      "duplicate_canonical_ids": 0,
+      "batches": 4
+    },
+    "mandatory": [
+      {
+        "canonical_id": "bitcoin",
+        "status": "PASS",
+        "reasons": []
+      },
+      {
+        "canonical_id": "ethereum",
+        "status": "PASS",
+        "reasons": []
+      },
+      {
+        "canonical_id": "chainlink",
+        "status": "PASS",
+        "reasons": []
+      },
+      {
+        "canonical_id": "ondo-finance",
+        "status": "PASS",
+        "reasons": []
+      },
+      {
+        "canonical_id": "bittensor",
+        "status": "PASS",
+        "reasons": []
+      },
+      {
+        "canonical_id": "aave",
+        "status": "PASS",
+        "reasons": []
+      },
+      {
+        "canonical_id": "decentraland",
+        "status": "PASS",
+        "reasons": []
+      }
+    ],
+    "structural_failures": [],
+    "failures": [
+      {
+        "canonical_id": "hashnote",
+        "symbol": "USYC",
+        "expected_cmc_id": "28558",
+        "expected_cmc_slug": "hashnote-usyc",
+        "returned_symbol": "USYC",
+        "returned_slug": "hashnote-usyc",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "wrapped-stx",
+        "symbol": "WSTX",
+        "expected_cmc_id": "22257",
+        "expected_cmc_slug": "wrapped-stacks",
+        "returned_symbol": "WSTX",
+        "returned_slug": "wrapped-stacks",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "fireblocks",
+        "symbol": "FB",
+        "expected_cmc_id": "24877",
+        "expected_cmc_slug": "fireblocks",
+        "returned_symbol": "BIM",
+        "returned_slug": "bim",
+        "reasons": [
+          "symbol_mismatch:BIM",
+          "slug_mismatch:bim"
+        ]
+      },
+      {
+        "canonical_id": "mountain-protocol",
+        "symbol": "USDM",
+        "expected_cmc_id": "29569",
+        "expected_cmc_slug": "mountain-protocol",
+        "returned_symbol": "USDM",
+        "returned_slug": "mountain-protocol",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "creditum",
+        "symbol": "CREDIT",
+        "expected_cmc_id": "17132",
+        "expected_cmc_slug": "creditum",
+        "returned_symbol": "CREDIT",
+        "returned_slug": "creditum",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "mxc",
+        "symbol": "MXC",
+        "expected_cmc_id": "3628",
+        "expected_cmc_slug": "mxc",
+        "returned_symbol": "MXC",
+        "returned_slug": "mxc",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "backed-finance",
+        "symbol": "BPRO",
+        "expected_cmc_id": "28833",
+        "expected_cmc_slug": "backed",
+        "returned_symbol": "RAIT",
+        "returned_slug": "rabbitgame",
+        "reasons": [
+          "symbol_mismatch:RAIT",
+          "slug_mismatch:rabbitgame",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "cortex",
+        "symbol": "CTXC",
+        "expected_cmc_id": "2638",
+        "expected_cmc_slug": "cortex",
+        "returned_symbol": "CTXC",
+        "returned_slug": "cortex",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "spheron",
+        "symbol": "SPON",
+        "expected_cmc_id": "37537",
+        "expected_cmc_slug": "spheron-network",
+        "returned_symbol": "SPON",
+        "returned_slug": "spheron-network",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "pollen-mobile",
+        "symbol": "PCN",
+        "expected_cmc_id": "20267",
+        "expected_cmc_slug": "pollen-coin",
+        "returned_symbol": "PCN",
+        "returned_slug": "pollen-coin",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "everclear",
+        "symbol": "CLEAR",
+        "expected_cmc_id": "34512",
+        "expected_cmc_slug": "everclear",
+        "returned_symbol": "CLEAR",
+        "returned_slug": "everclear",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "match-quest",
+        "symbol": "MQ",
+        "expected_cmc_id": "29811",
+        "expected_cmc_slug": "match-quest",
+        "returned_symbol": "ANDY",
+        "returned_slug": "andy-on-sol",
+        "reasons": [
+          "symbol_mismatch:ANDY",
+          "slug_mismatch:andy-on-sol"
+        ]
+      },
+      {
+        "canonical_id": "toucan-protocol",
+        "symbol": "BCT",
+        "expected_cmc_id": "23238",
+        "expected_cmc_slug": "toucan-protocol-base-carbon-tonne",
+        "returned_symbol": "HIMFERS",
+        "returned_slug": "himfers",
+        "reasons": [
+          "symbol_mismatch:HIMFERS",
+          "slug_mismatch:himfers",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "chainport",
+        "symbol": "PORTX",
+        "expected_cmc_id": "17480",
+        "expected_cmc_slug": "chainport",
+        "returned_symbol": "PORTX",
+        "returned_slug": "chainport",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "lyra",
+        "symbol": "LYRA",
+        "expected_cmc_id": "27620",
+        "expected_cmc_slug": "lyra-3",
+        "returned_symbol": "THROG",
+        "returned_slug": "throg",
+        "reasons": [
+          "symbol_mismatch:THROG",
+          "slug_mismatch:throg",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "ceramic",
+        "symbol": "CERA",
+        "expected_cmc_id": "24022",
+        "expected_cmc_slug": "ceramic",
+        "returned_symbol": "CHT",
+        "returned_slug": "cyberharbor",
+        "reasons": [
+          "symbol_mismatch:CHT",
+          "slug_mismatch:cyberharbor"
+        ]
+      },
+      {
+        "canonical_id": "fantom",
+        "symbol": "FTM",
+        "expected_cmc_id": "3513",
+        "expected_cmc_slug": "fantom",
+        "returned_symbol": "FTM",
+        "returned_slug": "fantom",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "huddle01",
+        "symbol": "HUDL",
+        "expected_cmc_id": "23412",
+        "expected_cmc_slug": "huddle01",
+        "returned_symbol": "PSI",
+        "returned_slug": "tridentdao",
+        "reasons": [
+          "symbol_mismatch:PSI",
+          "slug_mismatch:tridentdao"
+        ]
+      },
+      {
+        "canonical_id": "moralis",
+        "symbol": "MOR",
+        "expected_cmc_id": "24755",
+        "expected_cmc_slug": "moralis",
+        "returned_symbol": "WSB",
+        "returned_slug": "wall-street-bet",
+        "reasons": [
+          "symbol_mismatch:WSB",
+          "slug_mismatch:wall-street-bet"
+        ]
+      },
+      {
+        "canonical_id": "rom",
+        "symbol": "ROM",
+        "expected_cmc_id": "29211",
+        "expected_cmc_slug": "rom",
+        "returned_symbol": "EGG",
+        "returned_slug": "egg",
+        "reasons": [
+          "symbol_mismatch:EGG",
+          "slug_mismatch:egg"
+        ]
+      },
+      {
+        "canonical_id": "openeden",
+        "symbol": "TBILL",
+        "expected_cmc_id": "25158",
+        "expected_cmc_slug": "openeden-tbill-vault",
+        "returned_symbol": "TBILL",
+        "returned_slug": "openeden-tbill-vault",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "thingsix",
+        "symbol": "THIX",
+        "expected_cmc_id": "23967",
+        "expected_cmc_slug": "thingsix",
+        "returned_symbol": "VAPE",
+        "returned_slug": "vaporfi",
+        "reasons": [
+          "symbol_mismatch:VAPE",
+          "slug_mismatch:vaporfi",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "tangible",
+        "symbol": "TNGBL",
+        "expected_cmc_id": "22870",
+        "expected_cmc_slug": "tangible",
+        "returned_symbol": "DGH",
+        "returned_slug": "digihealth",
+        "reasons": [
+          "symbol_mismatch:DGH",
+          "slug_mismatch:digihealth",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "aether",
+        "symbol": "AET",
+        "expected_cmc_id": "25245",
+        "expected_cmc_slug": "aether",
+        "returned_symbol": "SMUDGE",
+        "returned_slug": "smudge-lord",
+        "reasons": [
+          "symbol_mismatch:SMUDGE",
+          "slug_mismatch:smudge-lord",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "agora-health",
+        "symbol": "AGORA",
+        "expected_cmc_id": "25567",
+        "expected_cmc_slug": "agora-health",
+        "returned_symbol": "AIM",
+        "returned_slug": "automated-income-machine",
+        "reasons": [
+          "symbol_mismatch:AIM",
+          "slug_mismatch:automated-income-machine",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "alienswap",
+        "symbol": "ALIEN",
+        "expected_cmc_id": "22664",
+        "expected_cmc_slug": "alienswap",
+        "returned_symbol": "UNF",
+        "returned_slug": "unofarm",
+        "reasons": [
+          "symbol_mismatch:UNF",
+          "slug_mismatch:unofarm",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "franklin-templeton",
+        "symbol": "BENJI",
+        "expected_cmc_id": "31581",
+        "expected_cmc_slug": "franklin-templeton",
+        "returned_symbol": "DSAI",
+        "returned_slug": "desend-ai",
+        "reasons": [
+          "symbol_mismatch:DSAI",
+          "slug_mismatch:desend-ai",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "biomapper",
+        "symbol": "BIO",
+        "expected_cmc_id": "25420",
+        "expected_cmc_slug": "biomapper",
+        "returned_symbol": "PEPEDONALDS",
+        "returned_slug": "pepe-donalds",
+        "reasons": [
+          "symbol_mismatch:PEPEDONALDS",
+          "slug_mismatch:pepe-donalds",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "biopset",
+        "symbol": "BIOPSET",
+        "expected_cmc_id": "25321",
+        "expected_cmc_slug": "biopset",
+        "returned_symbol": "AHE",
+        "returned_slug": "ai-hey",
+        "reasons": [
+          "symbol_mismatch:AHE",
+          "slug_mismatch:ai-hey",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "bullieverse",
+        "symbol": "BULL",
+        "expected_cmc_id": "11687",
+        "expected_cmc_slug": "bullrise",
+        "returned_symbol": "BULL",
+        "returned_slug": "bullrise",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "cryogenseed",
+        "symbol": "CGS",
+        "expected_cmc_id": "25522",
+        "expected_cmc_slug": "cryogenseed",
+        "returned_symbol": "YUKKY",
+        "returned_slug": "yukky",
+        "reasons": [
+          "symbol_mismatch:YUKKY",
+          "slug_mismatch:yukky",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "corusdao",
+        "symbol": "COR",
+        "expected_cmc_id": "25122",
+        "expected_cmc_slug": "corusdao",
+        "returned_symbol": "PATNUT",
+        "returned_slug": "patnut",
+        "reasons": [
+          "symbol_mismatch:PATNUT",
+          "slug_mismatch:patnut",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "credix",
+        "symbol": "CRED",
+        "expected_cmc_id": "27812",
+        "expected_cmc_slug": "credix-finance",
+        "returned_symbol": "PACMAN",
+        "returned_slug": "pac-man",
+        "reasons": [
+          "symbol_mismatch:PACMAN",
+          "slug_mismatch:pac-man",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "digix-gold-token",
+        "symbol": "DGX",
+        "expected_cmc_id": "2739",
+        "expected_cmc_slug": "digix-gold-token",
+        "returned_symbol": "DGX",
+        "returned_slug": "digix-gold-token",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "fasset",
+        "symbol": "FASSET",
+        "expected_cmc_id": "27555",
+        "expected_cmc_slug": "fasset",
+        "returned_symbol": "WBOB",
+        "returned_slug": "wrapped-bob",
+        "reasons": [
+          "symbol_mismatch:WBOB",
+          "slug_mismatch:wrapped-bob",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "genobank",
+        "symbol": "GENE",
+        "expected_cmc_id": "22555",
+        "expected_cmc_slug": "genobank",
+        "returned_symbol": null,
+        "returned_slug": null,
+        "reasons": [
+          "quote_not_returned"
+        ]
+      },
+      {
+        "canonical_id": "genomesdao",
+        "symbol": "GENE",
+        "expected_cmc_id": "21634",
+        "expected_cmc_slug": "genomesdao",
+        "returned_symbol": "JUNI",
+        "returned_slug": "jackpot-universe",
+        "reasons": [
+          "symbol_mismatch:JUNI",
+          "slug_mismatch:jackpot-universe",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "junca-cash",
+        "symbol": "JCA",
+        "expected_cmc_id": "21587",
+        "expected_cmc_slug": "junca-cash",
+        "returned_symbol": "RAINSPIRIT",
+        "returned_slug": "rainspirit",
+        "reasons": [
+          "symbol_mismatch:RAINSPIRIT",
+          "slug_mismatch:rainspirit",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "lofty",
+        "symbol": "LOFTY",
+        "expected_cmc_id": "22617",
+        "expected_cmc_slug": "lofty-2",
+        "returned_symbol": "TFLOKI",
+        "returned_slug": "thanksgiving-floki",
+        "reasons": [
+          "symbol_mismatch:TFLOKI",
+          "slug_mismatch:thanksgiving-floki",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "mintchain",
+        "symbol": "MINT",
+        "expected_cmc_id": "36005",
+        "expected_cmc_slug": "mint-blockchain",
+        "returned_symbol": "MINT",
+        "returned_slug": "mint-blockchain",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "molecule",
+        "symbol": "MOL",
+        "expected_cmc_id": "3502",
+        "expected_cmc_slug": "molecule",
+        "returned_symbol": "MOL",
+        "returned_slug": "molecule",
+        "reasons": [
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "nucleation",
+        "symbol": "NUCT",
+        "expected_cmc_id": "25600",
+        "expected_cmc_slug": "nucleation",
+        "returned_symbol": "RhinoMars",
+        "returned_slug": "rhinomars",
+        "reasons": [
+          "symbol_mismatch:RhinoMars",
+          "slug_mismatch:rhinomars",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "openlab",
+        "symbol": "OPENLAB",
+        "expected_cmc_id": "25443",
+        "expected_cmc_slug": "openlab",
+        "returned_symbol": "BITMOON",
+        "returned_slug": "bitmoon-token",
+        "reasons": [
+          "symbol_mismatch:BITMOON",
+          "slug_mismatch:bitmoon-token",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "polynomial",
+        "symbol": "POLY",
+        "expected_cmc_id": "27689",
+        "expected_cmc_slug": "polynomialfi",
+        "returned_symbol": "PROME",
+        "returned_slug": "prometheus-3",
+        "reasons": [
+          "symbol_mismatch:PROME",
+          "slug_mismatch:prometheus-3",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "psilocin",
+        "symbol": "PSIL",
+        "expected_cmc_id": "25333",
+        "expected_cmc_slug": "psilocin",
+        "returned_symbol": "MURATIAI",
+        "returned_slug": "muratiai",
+        "reasons": [
+          "symbol_mismatch:MURATIAI",
+          "slug_mismatch:muratiai",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "realt-coin",
+        "symbol": "REALT",
+        "expected_cmc_id": "11814",
+        "expected_cmc_slug": "realt",
+        "returned_symbol": "POTATO",
+        "returned_slug": "potato",
+        "reasons": [
+          "symbol_mismatch:POTATO",
+          "slug_mismatch:potato",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "rwa-x",
+        "symbol": "RWAX",
+        "expected_cmc_id": "28623",
+        "expected_cmc_slug": "rwa-x",
+        "returned_symbol": "PYPL.D",
+        "returned_slug": "dinari-pypl",
+        "reasons": [
+          "symbol_mismatch:PYPL.D",
+          "slug_mismatch:dinari-pypl",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "rxbio",
+        "symbol": "RXBIO",
+        "expected_cmc_id": "24999",
+        "expected_cmc_slug": "rxbio",
+        "returned_symbol": "GLI",
+        "returned_slug": "gli-token",
+        "reasons": [
+          "symbol_mismatch:GLI",
+          "slug_mismatch:gli-token",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "trademate",
+        "symbol": "TRDM",
+        "expected_cmc_id": "24033",
+        "expected_cmc_slug": "trademate",
+        "returned_symbol": null,
+        "returned_slug": null,
+        "reasons": [
+          "quote_not_returned"
+        ]
+      },
+      {
+        "canonical_id": "traditional-finance",
+        "symbol": "TRFI",
+        "expected_cmc_id": "28512",
+        "expected_cmc_slug": "traditional-finance",
+        "returned_symbol": "GME",
+        "returned_slug": "dumbmoney",
+        "reasons": [
+          "symbol_mismatch:GME",
+          "slug_mismatch:dumbmoney",
+          "invalid_price"
+        ]
+      },
+      {
+        "canonical_id": "superstate",
+        "symbol": "USTB",
+        "expected_cmc_id": "37086",
+        "expected_cmc_slug": "superstate-short-duration-us-government-securities-fund-ustb",
+        "returned_symbol": "USTB",
+        "returned_slug": "superstate-short-duration-us-government-securities-fund-ustb",
+        "reasons": [
+          "invalid_price"
+        ]
+      }
+    ],
+    "unmapped_canonical_ids": [
+      "ipfs",
+      "nexus-4",
+      "safe",
+      "movement",
+      "alchemy",
+      "antidote",
+      "biodao",
+      "bloxroute",
+      "blockscout",
+      "chainstack",
+      "data-union",
+      "eclipse",
+      "gravity",
+      "goldsky",
+      "infura",
+      "kakarot",
+      "koinly",
+      "matrixport-rwa",
+      "connext",
+      "nxyz",
+      "powerpod",
+      "quicknode",
+      "rari",
+      "redbelly-network",
+      "redstone-finance",
+      "securitize",
+      "synesis-one",
+      "sp-global",
+      "thirdweb",
+      "tenderly",
+      "wayru"
+    ],
+    "elapsed_ms": 202,
+    "ts": "2026-10-18T16:44:29.513Z"
+  },
+  "released_runtime": {
+    "ok": true,
+    "audit": "stage5c_runtime_field_parity",
+    "environment": "preview",
+    "git_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+    "dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+    "access_mode": "PRO_API",
+    "counts": {
+      "checked": 93,
+      "pass": 93,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 2
+    },
+    "results": [
+      {
+        "canonical_id": "the-open-network",
+        "cmc_id": "11419",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 1.3348057650409861,
+          "market_cap_usd": 3777345273.4467506,
+          "fdv_usd": 7032389593.12,
+          "volume_24h_usd": 36117578.96693916,
+          "change_1h_pct": -0.38344768,
+          "change_24h_pct": -1.1793619,
+          "change_7d_pct": -9.044104,
+          "change_30d_pct": -2.88018864,
+          "market_cap_rank": 28,
+          "circulating_supply": 2829883847.0560284,
+          "total_supply": 5268474093.610591,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "frax",
+        "cmc_id": "6953",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.2601716733550759,
+          "market_cap_usd": 24359355.025391098,
+          "fdv_usd": 25934301.51,
+          "volume_24h_usd": 578477.63622736,
+          "change_1h_pct": -0.83661564,
+          "change_24h_pct": -8.59177299,
+          "change_7d_pct": -23.39800476,
+          "change_30d_pct": -6.33437767,
+          "market_cap_rank": 601,
+          "circulating_supply": 93628006.12096632,
+          "total_supply": 99681495.59113361,
+          "max_supply": 99681495.59113361
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "iota",
+        "cmc_id": "1720",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.04397805174587073,
+          "market_cap_usd": 206605790.60747728,
+          "fdv_usd": 202299038.03,
+          "volume_24h_usd": 5423173.67232276,
+          "change_1h_pct": 0.05513428,
+          "change_24h_pct": -4.83752572,
+          "change_7d_pct": -18.325007,
+          "change_30d_pct": 0.27618522,
+          "market_cap_rank": 131,
+          "circulating_supply": 4697929590,
+          "total_supply": 4600000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "instadapp",
+        "cmc_id": "10508",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 2.224819203150392,
+          "market_cap_usd": 186210685.77192393,
+          "fdv_usd": 222481920.32,
+          "volume_24h_usd": 1908305.2668907,
+          "change_1h_pct": -0.24780404,
+          "change_24h_pct": -3.86449576,
+          "change_7d_pct": 0.13904991,
+          "change_30d_pct": 83.457633,
+          "market_cap_rank": 140,
+          "circulating_supply": 83696996.82034639,
+          "total_supply": 100000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "story-protocol",
+        "cmc_id": "35626",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.16047762682606123,
+          "market_cap_usd": 57804638.31999668,
+          "fdv_usd": 165890666.84,
+          "volume_24h_usd": 11523669.01501146,
+          "change_1h_pct": -0.35030032,
+          "change_24h_pct": -8.08045915,
+          "change_7d_pct": -18.97709054,
+          "change_30d_pct": -14.30457402,
+          "market_cap_rank": 341,
+          "circulating_supply": 360203721,
+          "total_supply": 1033730808,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "linea",
+        "cmc_id": "27657",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.002620911286634175,
+          "market_cap_usd": 58686506.00202116,
+          "fdv_usd": 188731795.54,
+          "volume_24h_usd": 7716828.95804069,
+          "change_1h_pct": -0.55123116,
+          "change_24h_pct": -4.47323742,
+          "change_7d_pct": -11.5697775,
+          "change_30d_pct": -4.14644933,
+          "market_cap_rank": 334,
+          "circulating_supply": 22391641526.09969,
+          "total_supply": 69458356502.72618,
+          "max_supply": 72009990000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "wormhole",
+        "cmc_id": "29587",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.012910471392292,
+          "market_cap_usd": 85960296.05773938,
+          "fdv_usd": 129104713.92,
+          "volume_24h_usd": 86566331.30926779,
+          "change_1h_pct": -0.01054032,
+          "change_24h_pct": -5.70779843,
+          "change_7d_pct": -27.89075078,
+          "change_30d_pct": 14.59325869,
+          "market_cap_rank": 262,
+          "circulating_supply": 6658184155,
+          "total_supply": 10000000000,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "allora",
+        "cmc_id": "38908",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.20590143338610514,
+          "market_cap_usd": 41283237.39391408,
+          "fdv_usd": 205901433.39,
+          "volume_24h_usd": 4094341.78039607,
+          "change_1h_pct": -0.24458207,
+          "change_24h_pct": -4.49854293,
+          "change_7d_pct": -16.55652767,
+          "change_30d_pct": -2.46649418,
+          "market_cap_rank": 417,
+          "circulating_supply": 200500000,
+          "total_supply": 785499999,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "chainopera-ai",
+        "cmc_id": "38489",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.25334843469673035,
+          "market_cap_usd": 47629530.551131904,
+          "fdv_usd": 253348434.7,
+          "volume_24h_usd": 3287883.3993234,
+          "change_1h_pct": 0.65682635,
+          "change_24h_pct": 0.66089836,
+          "change_7d_pct": -15.35940358,
+          "change_30d_pct": -18.71267169,
+          "market_cap_rank": 377,
+          "circulating_supply": 188000098,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "venus",
+        "cmc_id": "7288",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 2.895582246111012,
+          "market_cap_usd": 47626557.38299001,
+          "fdv_usd": 86867467.38,
+          "volume_24h_usd": 2162423.03786094,
+          "change_1h_pct": -0.09582473,
+          "change_24h_pct": -2.40218484,
+          "change_7d_pct": -9.24799292,
+          "change_30d_pct": -7.95759992,
+          "market_cap_rank": 376,
+          "circulating_supply": 16448007.1139254,
+          "total_supply": 30000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "astar",
+        "cmc_id": "12885",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.005772470560532764,
+          "market_cap_usd": 50728508.32790551,
+          "fdv_usd": 57724705.61,
+          "volume_24h_usd": 1018309.80920936,
+          "change_1h_pct": -0.1816635,
+          "change_24h_pct": -4.66534742,
+          "change_7d_pct": -18.50483023,
+          "change_30d_pct": -13.46539707,
+          "market_cap_rank": 365,
+          "circulating_supply": 8788006417,
+          "total_supply": 8788784615,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "subsquid",
+        "cmc_id": "12894",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.01783379350404844,
+          "market_cap_usd": 20433022.184394643,
+          "fdv_usd": 23843781.91,
+          "volume_24h_usd": 1905723.78250242,
+          "change_1h_pct": -1.9555462,
+          "change_24h_pct": -13.10628589,
+          "change_7d_pct": -32.97546512,
+          "change_30d_pct": -37.47020408,
+          "market_cap_rank": 661,
+          "circulating_supply": 1145747380.0936494,
+          "total_supply": 1336997644.8069928,
+          "max_supply": 1337000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "kamino",
+        "cmc_id": "30986",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.03785647714970208,
+          "market_cap_usd": 219126786.5608479,
+          "fdv_usd": 378564771.5,
+          "volume_24h_usd": 11189528.12576489,
+          "change_1h_pct": 0.71701802,
+          "change_24h_pct": -5.99056711,
+          "change_7d_pct": 3.82890617,
+          "change_30d_pct": 34.62213216,
+          "market_cap_rank": 128,
+          "circulating_supply": 5788356526,
+          "total_supply": 9999956631.577095,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "ronin",
+        "cmc_id": "14101",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.057026249259311435,
+          "market_cap_usd": 44047170.69970158,
+          "fdv_usd": 57026249.26,
+          "volume_24h_usd": 715150.64714482,
+          "change_1h_pct": -0.44469014,
+          "change_24h_pct": -4.74877003,
+          "change_7d_pct": -19.64933363,
+          "change_30d_pct": 6.7989581,
+          "market_cap_rank": 401,
+          "circulating_supply": 772401679.4337813,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "siacoin",
+        "cmc_id": "1042",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.000782003318990082,
+          "market_cap_usd": 43812233.70879477,
+          "fdv_usd": 48654311.58,
+          "volume_24h_usd": 2410187.08367217,
+          "change_1h_pct": 0.33410485,
+          "change_24h_pct": -6.2590552,
+          "change_7d_pct": -21.85877121,
+          "change_30d_pct": -15.71944625,
+          "market_cap_rank": 404,
+          "circulating_supply": 56025636522.075195,
+          "total_supply": 62217525676.30304,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "sahara-ai",
+        "cmc_id": "36671",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.00738377580728918,
+          "market_cap_usd": 31291057.413327675,
+          "fdv_usd": 73837758.07,
+          "volume_24h_usd": 5523857.60593385,
+          "change_1h_pct": 0.01010232,
+          "change_24h_pct": -3.0844,
+          "change_7d_pct": -17.92748183,
+          "change_30d_pct": -17.80986826,
+          "market_cap_rank": 507,
+          "circulating_supply": 4237812500,
+          "total_supply": 10000000000,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "api3",
+        "cmc_id": "7737",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.2610321086376419,
+          "market_cap_usd": 22558911.1499759,
+          "fdv_usd": 49118693.49,
+          "volume_24h_usd": 7297023.81295447,
+          "change_1h_pct": 0.42732686,
+          "change_24h_pct": -6.2435086,
+          "change_7d_pct": -14.94825316,
+          "change_30d_pct": 7.03363369,
+          "market_cap_rank": 622,
+          "circulating_supply": 86421978,
+          "total_supply": 188171078.8407214,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "euler",
+        "cmc_id": "14280",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 1.1242893791792772,
+          "market_cap_usd": 28000836.13447759,
+          "fdv_usd": 30561353.89,
+          "volume_24h_usd": 2063653.99325728,
+          "change_1h_pct": -0.11696806,
+          "change_24h_pct": -4.01136216,
+          "change_7d_pct": -21.85421304,
+          "change_30d_pct": -16.14765086,
+          "market_cap_rank": 544,
+          "circulating_supply": 24905363.91522082,
+          "total_supply": 27182818.28459045,
+          "max_supply": 27182818.28459045
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "manta",
+        "cmc_id": "13631",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.06517526947099501,
+          "market_cap_usd": 31415580.80271355,
+          "fdv_usd": 65175269.47,
+          "volume_24h_usd": 3069109.8909698,
+          "change_1h_pct": -0.22699639,
+          "change_24h_pct": -4.38699035,
+          "change_7d_pct": -12.05890496,
+          "change_30d_pct": 5.61376786,
+          "market_cap_rank": 506,
+          "circulating_supply": 482016891.6477506,
+          "total_supply": 1000000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "vana",
+        "cmc_id": "34619",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.8914571047161635,
+          "market_cap_usd": 26818595.538281064,
+          "fdv_usd": 106974852.57,
+          "volume_24h_usd": 853061.83628278,
+          "change_1h_pct": -0.39826395,
+          "change_24h_pct": -6.22595525,
+          "change_7d_pct": -18.83818737,
+          "change_30d_pct": -13.21005854,
+          "market_cap_rank": 563,
+          "circulating_supply": 30084000,
+          "total_supply": 112641600,
+          "max_supply": 120000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "chia",
+        "cmc_id": "9258",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 1.5941328545530042,
+          "market_cap_usd": 22974205.907415748,
+          "fdv_usd": 52912444.96,
+          "volume_24h_usd": 640555.00563917,
+          "change_1h_pct": 0.029532,
+          "change_24h_pct": -0.29131203,
+          "change_7d_pct": -0.61740867,
+          "change_30d_pct": 5.17406895,
+          "market_cap_rank": 616,
+          "circulating_supply": 14411726,
+          "total_supply": 33191992,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "gensyn",
+        "cmc_id": "39883",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.016776919894930475,
+          "market_cap_usd": 21888433.215094343,
+          "fdv_usd": 167769198.95,
+          "volume_24h_usd": 1834296.68405121,
+          "change_1h_pct": -0.6999475,
+          "change_24h_pct": -4.23552,
+          "change_7d_pct": -19.40114381,
+          "change_30d_pct": -15.17849069,
+          "market_cap_rank": 632,
+          "circulating_supply": 1304675313,
+          "total_supply": 10000000000,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "nillion",
+        "cmc_id": "35702",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.076942929054891,
+          "market_cap_usd": 39102187.70822976,
+          "fdv_usd": 77783562.58,
+          "volume_24h_usd": 20591336.62872306,
+          "change_1h_pct": -0.29822624,
+          "change_24h_pct": -6.03515552,
+          "change_7d_pct": -17.22184436,
+          "change_30d_pct": 73.78704067,
+          "market_cap_rank": 436,
+          "circulating_supply": 508197285.813415,
+          "total_supply": 1010925416.202125,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "aleo",
+        "cmc_id": "32193",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.06157985888701592,
+          "market_cap_usd": 92493295.66492063,
+          "fdv_usd": 307899294.44,
+          "volume_24h_usd": 3915289.43717991,
+          "change_1h_pct": 4.98676816,
+          "change_24h_pct": 10.64012166,
+          "change_7d_pct": 79.60656251,
+          "change_30d_pct": 303.318236,
+          "market_cap_rank": 256,
+          "circulating_supply": 1502005644.972707,
+          "total_supply": 2092148066.390515,
+          "max_supply": 5000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "carv",
+        "cmc_id": "33372",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.03335859379612844,
+          "market_cap_usd": 24295639.831200827,
+          "fdv_usd": 33358593.8,
+          "volume_24h_usd": 3932996.68942249,
+          "change_1h_pct": -0.78241777,
+          "change_24h_pct": -5.40113048,
+          "change_7d_pct": -20.41799263,
+          "change_30d_pct": -11.18326565,
+          "market_cap_rank": 602,
+          "circulating_supply": 728317266,
+          "total_supply": 1000000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "yield-guild-games",
+        "cmc_id": "10688",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.023600738911844134,
+          "market_cap_usd": 22074585.330586188,
+          "fdv_usd": 23600738.91,
+          "volume_24h_usd": 5899331.30585405,
+          "change_1h_pct": -0.21122562,
+          "change_24h_pct": -5.48354049,
+          "change_7d_pct": -15.67171641,
+          "change_30d_pct": -4.00119345,
+          "market_cap_rank": 630,
+          "circulating_supply": 935334500.0358427,
+          "total_supply": 999716389.322777,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "wax",
+        "cmc_id": "2300",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.004664441146208357,
+          "market_cap_usd": 21486732.82856983,
+          "fdv_usd": 21495766.66,
+          "volume_24h_usd": 623424.65780113,
+          "change_1h_pct": -0.00565067,
+          "change_24h_pct": -3.26834046,
+          "change_7d_pct": -20.42323801,
+          "change_30d_pct": -10.27721753,
+          "market_cap_rank": 638,
+          "circulating_supply": 4606496717.411907,
+          "total_supply": 4608433461.251633,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "chaingpt",
+        "cmc_id": "23756",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.021042852528807214,
+          "market_cap_usd": 19631581.55395359,
+          "fdv_usd": 21042852.53,
+          "volume_24h_usd": 3940589.5893792,
+          "change_1h_pct": 0.1017076,
+          "change_24h_pct": -4.57810423,
+          "change_7d_pct": -10.70118024,
+          "change_30d_pct": 4.04891063,
+          "market_cap_rank": 676,
+          "circulating_supply": 932933475.9666437,
+          "total_supply": 997765349.2511225,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "clearpool",
+        "cmc_id": "12573",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.027427779485924036,
+          "market_cap_usd": 27042664.40937347,
+          "fdv_usd": 27427779.49,
+          "volume_24h_usd": 1270395.36401275,
+          "change_1h_pct": -0.12552583,
+          "change_24h_pct": -6.40511065,
+          "change_7d_pct": -14.26199062,
+          "change_30d_pct": 14.85919549,
+          "market_cap_rank": 556,
+          "circulating_supply": 985958940.7612014,
+          "total_supply": 993627634.645902,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "blast",
+        "cmc_id": "28480",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.000111832376901928,
+          "market_cap_usd": 7997300.516707719,
+          "fdv_usd": 11183237.69,
+          "volume_24h_usd": 8529000.16736083,
+          "change_1h_pct": -2.29672708,
+          "change_24h_pct": -15.30588649,
+          "change_7d_pct": -35.67981805,
+          "change_30d_pct": -67.37465378,
+          "market_cap_rank": 1048,
+          "circulating_supply": 71511495492.23111,
+          "total_supply": 100000000000,
+          "max_supply": 100000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "big-time",
+        "cmc_id": "28230",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.00650162862713525,
+          "market_cap_usd": 18854536.522976875,
+          "fdv_usd": 32508143.14,
+          "volume_24h_usd": 10365777.77979847,
+          "change_1h_pct": -0.72122671,
+          "change_24h_pct": -5.80606325,
+          "change_7d_pct": -23.21190027,
+          "change_30d_pct": -14.04413005,
+          "market_cap_rank": 693,
+          "circulating_supply": 2899971315.538606,
+          "total_supply": 5000000000,
+          "max_supply": 5000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "cyber",
+        "cmc_id": "24781",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.30612346204726015,
+          "market_cap_usd": 23971640.554881006,
+          "fdv_usd": 30612346.2,
+          "volume_24h_usd": 7272246.66004129,
+          "change_1h_pct": -0.20994707,
+          "change_24h_pct": -3.66318748,
+          "change_7d_pct": -14.07666147,
+          "change_30d_pct": 1.12561153,
+          "market_cap_rank": 606,
+          "circulating_supply": 78307100,
+          "total_supply": 100000000,
+          "max_supply": 100000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "pokt-network",
+        "cmc_id": "11823",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.007325190549748519,
+          "market_cap_usd": 17400218.235883847,
+          "fdv_usd": 17400218.24,
+          "volume_24h_usd": 118416.35232201,
+          "change_1h_pct": -0.09647996,
+          "change_24h_pct": -2.08102734,
+          "change_7d_pct": -14.42196666,
+          "change_30d_pct": -10.06667675,
+          "market_cap_rank": 728,
+          "circulating_supply": 2375394621.847921,
+          "total_supply": 2375394621.847921,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "sophon",
+        "cmc_id": "32087",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.002180578891856158,
+          "market_cap_usd": 11590785.629558612,
+          "fdv_usd": 21805788.92,
+          "volume_24h_usd": 14024123.64699668,
+          "change_1h_pct": 3.91627329,
+          "change_24h_pct": 0.85903012,
+          "change_7d_pct": -39.52503919,
+          "change_30d_pct": -45.91178974,
+          "market_cap_rank": 906,
+          "circulating_supply": 5315462638.314486,
+          "total_supply": 9953500000,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "xai",
+        "cmc_id": "28933",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.007863439597277642,
+          "market_cap_usd": 16675332.39623444,
+          "fdv_usd": 19658598.99,
+          "volume_24h_usd": 3666763.26059578,
+          "change_1h_pct": 0.16596738,
+          "change_24h_pct": -5.52118271,
+          "change_7d_pct": -15.48515818,
+          "change_30d_pct": 4.07725885,
+          "market_cap_rank": 747,
+          "circulating_supply": 2120615563.958489,
+          "total_supply": 2221202704.889111,
+          "max_supply": 2500000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "realio-network",
+        "cmc_id": "4166",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.05035842973523451,
+          "market_cap_usd": 11400041.090073574,
+          "fdv_usd": 11407024.98,
+          "volume_24h_usd": 181140.58258629,
+          "change_1h_pct": 0.62949562,
+          "change_24h_pct": -2.4023214,
+          "change_7d_pct": -17.52645523,
+          "change_30d_pct": -1.3464601,
+          "market_cap_rank": 892,
+          "circulating_supply": 226378009.6005904,
+          "total_supply": 226378009.6005904,
+          "max_supply": 226516693.3199546
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "sapien",
+        "cmc_id": "38117",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.0585876513276045,
+          "market_cap_usd": 14646912.831901126,
+          "fdv_usd": 58587651.33,
+          "volume_24h_usd": 2094948.54241267,
+          "change_1h_pct": -1.02675675,
+          "change_24h_pct": -5.64086452,
+          "change_7d_pct": -17.79233263,
+          "change_30d_pct": -21.17795681,
+          "market_cap_rank": 791,
+          "circulating_supply": 250000000,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "orderly",
+        "cmc_id": "32809",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.029377670162969,
+          "market_cap_usd": 11939201.657956172,
+          "fdv_usd": 29377670.16,
+          "volume_24h_usd": 1913123.86464803,
+          "change_1h_pct": -0.15532124,
+          "change_24h_pct": -5.59114091,
+          "change_7d_pct": -22.54394417,
+          "change_30d_pct": -18.43631687,
+          "market_cap_rank": 876,
+          "circulating_supply": 406403965.72379375,
+          "total_supply": 994579864.3574206,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "aevo",
+        "cmc_id": "29676",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.022143074267186105,
+          "market_cap_usd": 20652885.38002132,
+          "fdv_usd": 22143074.27,
+          "volume_24h_usd": 2429379.76364161,
+          "change_1h_pct": 0.34006177,
+          "change_24h_pct": -2.70447697,
+          "change_7d_pct": -16.62792766,
+          "change_30d_pct": -7.23519499,
+          "market_cap_rank": 658,
+          "circulating_supply": 932701806.9314295,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "lagrange",
+        "cmc_id": "36510",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.051476418773244985,
+          "market_cap_usd": 16899139.211446792,
+          "fdv_usd": 51476418.77,
+          "volume_24h_usd": 3564550.62695421,
+          "change_1h_pct": -0.26318673,
+          "change_24h_pct": -7.49326269,
+          "change_7d_pct": -24.37621188,
+          "change_30d_pct": -27.13086881,
+          "market_cap_rank": 740,
+          "circulating_supply": 328288945,
+          "total_supply": 1000000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "hairdao",
+        "cmc_id": "24138",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 17.967680063176257,
+          "market_cap_usd": 0,
+          "fdv_usd": 27550523.72,
+          "volume_24h_usd": 0,
+          "change_1h_pct": 0,
+          "change_24h_pct": -3.14638637,
+          "change_7d_pct": 5.08578441,
+          "change_30d_pct": 7.64094644,
+          "market_cap_rank": 6307,
+          "circulating_supply": 0,
+          "total_supply": 1533337.839114,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "alethea-ai",
+        "cmc_id": "16876",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.001166670042760042,
+          "market_cap_usd": 11515926.20342373,
+          "fdv_usd": 11516087.68,
+          "volume_24h_usd": 98873.46270245,
+          "change_1h_pct": -0.48259452,
+          "change_24h_pct": 1.26361385,
+          "change_7d_pct": -2.16407453,
+          "change_30d_pct": -0.57883059,
+          "market_cap_rank": 887,
+          "circulating_supply": 9870765324.684261,
+          "total_supply": 9870765324.684261,
+          "max_supply": 9870903732.81426
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "iagon",
+        "cmc_id": "11078",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.02100608787487066,
+          "market_cap_usd": 10523058.543829592,
+          "fdv_usd": 21006087.87,
+          "volume_24h_usd": 24966.64604321,
+          "change_1h_pct": -0.01971028,
+          "change_24h_pct": -4.34790177,
+          "change_7d_pct": -7.64222702,
+          "change_30d_pct": 0.53080206,
+          "market_cap_rank": 921,
+          "circulating_supply": 500952800.279304,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "elysia",
+        "cmc_id": "5382",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.001543225518518386,
+          "market_cap_usd": 7872551.061832195,
+          "fdv_usd": 10802578.63,
+          "volume_24h_usd": 304842.73917449,
+          "change_1h_pct": 0.13076046,
+          "change_24h_pct": -4.38694744,
+          "change_7d_pct": -13.40586249,
+          "change_30d_pct": -11.31919643,
+          "market_cap_rank": 1057,
+          "circulating_supply": 5101361380.668745,
+          "total_supply": 6802300704.688,
+          "max_supply": 7000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "chainbase",
+        "cmc_id": "37340",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.07766519080653679,
+          "market_cap_usd": 35762971.07315521,
+          "fdv_usd": 77665190.81,
+          "volume_24h_usd": 3737686.81615076,
+          "change_1h_pct": -0.03755438,
+          "change_24h_pct": -4.86528934,
+          "change_7d_pct": -23.92468641,
+          "change_30d_pct": 1.10406409,
+          "market_cap_rank": 464,
+          "circulating_supply": 460476188.9047619,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "tokenfi",
+        "cmc_id": "28299",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.001874338697768313,
+          "market_cap_usd": 7407807.015226476,
+          "fdv_usd": 18743386.98,
+          "volume_24h_usd": 960711.28745264,
+          "change_1h_pct": -0.38801614,
+          "change_24h_pct": -0.62368708,
+          "change_7d_pct": -14.89718865,
+          "change_30d_pct": -9.59574794,
+          "market_cap_rank": 1086,
+          "circulating_supply": 3952224336,
+          "total_supply": 10000000000,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "hivemapper",
+        "cmc_id": "22850",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.002065014833254272,
+          "market_cap_usd": 12616165.440147737,
+          "fdv_usd": 20650148.33,
+          "volume_24h_usd": 412479.63671171,
+          "change_1h_pct": 1.47831136,
+          "change_24h_pct": -5.29543554,
+          "change_7d_pct": -20.70002318,
+          "change_30d_pct": 94.8034735,
+          "market_cap_rank": 844,
+          "circulating_supply": 6109479330.114946,
+          "total_supply": 6574602827.431451,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "brickken",
+        "cmc_id": "21822",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.09361014521802918,
+          "market_cap_usd": 4930176.342166516,
+          "fdv_usd": 14041521.78,
+          "volume_24h_usd": 185564.67607677,
+          "change_1h_pct": 1.07835407,
+          "change_24h_pct": -5.54206174,
+          "change_7d_pct": -11.65439881,
+          "change_30d_pct": -30.46874074,
+          "market_cap_rank": 1243,
+          "circulating_supply": 52667115.62815705,
+          "total_supply": 150000000,
+          "max_supply": 150000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "autonolas",
+        "cmc_id": "28458",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.05297502543856703,
+          "market_cap_usd": 15854330.637428736,
+          "fdv_usd": 25093741.19,
+          "volume_24h_usd": 159037.48367741,
+          "change_1h_pct": -0.4063675,
+          "change_24h_pct": 2.32327726,
+          "change_7d_pct": 7.67923669,
+          "change_30d_pct": 83.58741106,
+          "market_cap_rank": 762,
+          "circulating_supply": 299279339.76764876,
+          "total_supply": 473690026.153825,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "moonbeam",
+        "cmc_id": "6836",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.010353827228262785,
+          "market_cap_usd": 12632125.418949995,
+          "fdv_usd": 12808130.13,
+          "volume_24h_usd": 10590713.31964379,
+          "change_1h_pct": -0.23485853,
+          "change_24h_pct": 6.5959235,
+          "change_7d_pct": -3.30097996,
+          "change_30d_pct": 70.95525969,
+          "market_cap_rank": 840,
+          "circulating_supply": 1220044061.047122,
+          "total_supply": 1237043061.047122,
+          "max_supply": 1237043061
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "origin-dollar",
+        "cmc_id": "7189",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.9997054420413338,
+          "market_cap_usd": 6820235.405995699,
+          "fdv_usd": 6820235.41,
+          "volume_24h_usd": 53280.31518985,
+          "change_1h_pct": -0.00818269,
+          "change_24h_pct": -0.00551251,
+          "change_7d_pct": -0.01341394,
+          "change_30d_pct": 0.0054842,
+          "market_cap_rank": 1123,
+          "circulating_supply": 6822244.95254244,
+          "total_supply": 6822244.95254244,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "vita-dao",
+        "cmc_id": "19214",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.19911343068056822,
+          "market_cap_usd": 2874364.7698555444,
+          "fdv_usd": 12802770.59,
+          "volume_24h_usd": 9189.72145613,
+          "change_1h_pct": -0.00064917,
+          "change_24h_pct": -1.61230178,
+          "change_7d_pct": -76.90263523,
+          "change_30d_pct": -11.01956828,
+          "market_cap_rank": 1490,
+          "circulating_supply": 14435815.60536116,
+          "total_supply": 27219552,
+          "max_supply": 64298880
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "paal-ai",
+        "cmc_id": "27178",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.008197337140638824,
+          "market_cap_usd": 8187792.359674833,
+          "fdv_usd": 8197337.14,
+          "volume_24h_usd": 255327.44839533,
+          "change_1h_pct": -0.4637929,
+          "change_24h_pct": -2.2831335,
+          "change_7d_pct": -14.0240784,
+          "change_30d_pct": 32.28180487,
+          "market_cap_rank": 1042,
+          "circulating_supply": 998835624.203295,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "quickswap",
+        "cmc_id": "19966",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.00656440963259073,
+          "market_cap_usd": 4299552.023597882,
+          "fdv_usd": 6564409.63,
+          "volume_24h_usd": 1658100.77509932,
+          "change_1h_pct": 1.12540115,
+          "change_24h_pct": -6.60056527,
+          "change_7d_pct": -36.00813397,
+          "change_30d_pct": -30.9001485,
+          "market_cap_rank": 1314,
+          "circulating_supply": 654979238.6891322,
+          "total_supply": 892739869.4963157,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "dydx",
+        "cmc_id": "28324",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.11222282684590708,
+          "market_cap_usd": 94951084.74614856,
+          "fdv_usd": 112222826.85,
+          "volume_24h_usd": 2888921.66593688,
+          "change_1h_pct": -0.21680453,
+          "change_24h_pct": -5.35054851,
+          "change_7d_pct": -20.78641285,
+          "change_30d_pct": -11.16436018,
+          "market_cap_rank": 191,
+          "circulating_supply": 846094216.4335754,
+          "total_supply": 958342962.317931,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "scroll",
+        "cmc_id": "26998",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.019353353174723455,
+          "market_cap_usd": 3677137.1031974563,
+          "fdv_usd": 19353353.17,
+          "volume_24h_usd": 1899976.94170356,
+          "change_1h_pct": -0.72560142,
+          "change_24h_pct": -5.76544723,
+          "change_7d_pct": -24.11183337,
+          "change_30d_pct": -11.74127427,
+          "market_cap_rank": 1381,
+          "circulating_supply": 190000000,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "dimo",
+        "cmc_id": "22837",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.01917931639139376,
+          "market_cap_usd": 8374701.2797441175,
+          "fdv_usd": 19179316.39,
+          "volume_24h_usd": 94462.20462148,
+          "change_1h_pct": 2.14874806,
+          "change_24h_pct": 3.47022375,
+          "change_7d_pct": -23.47405896,
+          "change_30d_pct": 138.25283656,
+          "market_cap_rank": 1029,
+          "circulating_supply": 436652751.7895297,
+          "total_supply": 848893318.6414026,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "pixels",
+        "cmc_id": "29335",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.005029490682102077,
+          "market_cap_usd": 17609746.435271762,
+          "fdv_usd": 25147453.41,
+          "volume_24h_usd": 4808191.11083503,
+          "change_1h_pct": -0.25794831,
+          "change_24h_pct": -4.62383468,
+          "change_7d_pct": -18.72503674,
+          "change_30d_pct": -1.87412754,
+          "market_cap_rank": 723,
+          "circulating_supply": 3501298152.9,
+          "total_supply": 5000000000,
+          "max_supply": 5000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "star-atlas",
+        "cmc_id": "11212",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.00013324012201944,
+          "market_cap_usd": 3439004.9215778545,
+          "fdv_usd": 4796644.39,
+          "volume_24h_usd": 66667.19633637,
+          "change_1h_pct": -0.06009642,
+          "change_24h_pct": -5.85172662,
+          "change_7d_pct": -12.2970381,
+          "change_30d_pct": -3.17801403,
+          "market_cap_rank": 1409,
+          "circulating_supply": 25810580697.878,
+          "total_supply": 36000000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "polytrade",
+        "cmc_id": "10465",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.04848620389359084,
+          "market_cap_usd": 2001940.8117869855,
+          "fdv_usd": 4848620.39,
+          "volume_24h_usd": 58490.73946807,
+          "change_1h_pct": -0.06917525,
+          "change_24h_pct": -1.74528596,
+          "change_7d_pct": -15.5773706,
+          "change_30d_pct": 11.17718156,
+          "market_cap_rank": 1638,
+          "circulating_supply": 41288875,
+          "total_supply": 100000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "mysterium",
+        "cmc_id": "1721",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.07796937349459829,
+          "market_cap_usd": 1562009.4239838421,
+          "fdv_usd": 2528809.15,
+          "volume_24h_usd": 12318.09994982,
+          "change_1h_pct": 0.38538366,
+          "change_24h_pct": -1.81360063,
+          "change_7d_pct": -1.92381578,
+          "change_30d_pct": -26.40222429,
+          "market_cap_rank": 1751,
+          "circulating_supply": 20033628,
+          "total_supply": 32433365,
+          "max_supply": 32433365
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "zircuit",
+        "cmc_id": "29711",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.001384445119857927,
+          "market_cap_usd": 9467451.228968779,
+          "fdv_usd": 13844451.2,
+          "volume_24h_usd": 301953.03770152,
+          "change_1h_pct": 0.46131669,
+          "change_24h_pct": -4.83483385,
+          "change_7d_pct": -1.7059651,
+          "change_30d_pct": 60.89344117,
+          "market_cap_rank": 971,
+          "circulating_supply": 6838444582,
+          "total_supply": 10000000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "netmind",
+        "cmc_id": "29447",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.04212032831137136,
+          "market_cap_usd": 1408933.7430436607,
+          "fdv_usd": 6215745.83,
+          "volume_24h_usd": 822.22519783,
+          "change_1h_pct": -2.90340151,
+          "change_24h_pct": -2.22520139,
+          "change_7d_pct": -9.40700708,
+          "change_30d_pct": -12.9444226,
+          "market_cap_rank": 1793,
+          "circulating_supply": 33450208,
+          "total_supply": 143450511.2,
+          "max_supply": 147571163
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "goldfinch",
+        "cmc_id": "13967",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.038526612030352035,
+          "market_cap_usd": 3375894.7340819594,
+          "fdv_usd": 4403041.36,
+          "volume_24h_usd": 71545.42281452,
+          "change_1h_pct": -1.10591695,
+          "change_24h_pct": 1.90789844,
+          "change_7d_pct": -4.74224242,
+          "change_30d_pct": 32.93329444,
+          "market_cap_rank": 1418,
+          "circulating_supply": 87625009.21239485,
+          "total_supply": 114285714,
+          "max_supply": 114285714
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "botto",
+        "cmc_id": "14345",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.03194637699242802,
+          "market_cap_usd": 1507444.442110919,
+          "fdv_usd": 3194637.7,
+          "volume_24h_usd": 2192.64478631,
+          "change_1h_pct": -2.65575444,
+          "change_24h_pct": -6.0150829,
+          "change_7d_pct": -14.70917122,
+          "change_30d_pct": -19.85251927,
+          "market_cap_rank": 1764,
+          "circulating_supply": 47186710.48263832,
+          "total_supply": 93767165.05517098,
+          "max_supply": 100000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "cere-network",
+        "cmc_id": "4710",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.000185057601469833,
+          "market_cap_usd": 1284285.6809401647,
+          "fdv_usd": 1850576.01,
+          "volume_24h_usd": 140205.07171072,
+          "change_1h_pct": -0.74392348,
+          "change_24h_pct": 0.71272299,
+          "change_7d_pct": -1.86041739,
+          "change_30d_pct": -8.87059415,
+          "market_cap_rank": 1837,
+          "circulating_supply": 6939923952,
+          "total_supply": 10000000000,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "sentinel",
+        "cmc_id": "2643",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 6.4782016450629e-05,
+          "market_cap_usd": 2275724.2268993147,
+          "fdv_usd": 2281922.62,
+          "volume_24h_usd": 18063.74866336,
+          "change_1h_pct": -0.22199516,
+          "change_24h_pct": -16.20522717,
+          "change_7d_pct": -31.993018,
+          "change_30d_pct": 5.86651302,
+          "market_cap_rank": 1585,
+          "circulating_supply": 35128950156,
+          "total_supply": 35224630988,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "gamefi",
+        "cmc_id": "11783",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.08250633645089676,
+          "market_cap_usd": 1233879.8015152258,
+          "fdv_usd": 1233879.81,
+          "volume_24h_usd": 20.97690973,
+          "change_1h_pct": -0.03556492,
+          "change_24h_pct": 0.33629706,
+          "change_7d_pct": -6.53879673,
+          "change_30d_pct": -5.28660031,
+          "market_cap_rank": 1860,
+          "circulating_supply": 14954970.1828,
+          "total_supply": 14954970.323,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "truefi",
+        "cmc_id": "7725",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.000909246717767384,
+          "market_cap_usd": 1130717.5519358264,
+          "fdv_usd": 1318407.74,
+          "volume_24h_usd": 2250.75532435,
+          "change_1h_pct": 2.39617719,
+          "change_24h_pct": 3.46658942,
+          "change_7d_pct": 0.39230284,
+          "change_30d_pct": 8.14454109,
+          "market_cap_rank": 1910,
+          "circulating_supply": 1243576171.17635,
+          "total_supply": 1257020975.20003,
+          "max_supply": 1450000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "valleyDAO",
+        "cmc_id": "29633",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.004604449708732048,
+          "market_cap_usd": 48923.65949019063,
+          "fdv_usd": 460444.97,
+          "volume_24h_usd": 0,
+          "change_1h_pct": 0,
+          "change_24h_pct": 0,
+          "change_7d_pct": -23.71983177,
+          "change_30d_pct": -89.89209528,
+          "market_cap_rank": 3344,
+          "circulating_supply": 10625300,
+          "total_supply": 30050000,
+          "max_supply": 100000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "playdapp",
+        "cmc_id": "7461",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.000878561299726468,
+          "market_cap_usd": 583045.2133231679,
+          "fdv_usd": 614992.91,
+          "volume_24h_usd": 0,
+          "change_1h_pct": -0.68391954,
+          "change_24h_pct": -4.18302096,
+          "change_7d_pct": -8.76807423,
+          "change_30d_pct": -5.59356661,
+          "market_cap_rank": 2244,
+          "circulating_supply": 663636349,
+          "total_supply": 700000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "myria",
+        "cmc_id": "22289",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 2.7930889879146e-05,
+          "market_cap_usd": 1353069.8526190878,
+          "fdv_usd": 1396544.49,
+          "volume_24h_usd": 12062.19773663,
+          "change_1h_pct": -2.12184854,
+          "change_24h_pct": 4.3635901,
+          "change_7d_pct": -16.09693067,
+          "change_30d_pct": 111.29137091,
+          "market_cap_rank": 1815,
+          "circulating_supply": 48443492437,
+          "total_supply": 50000000000,
+          "max_supply": 50000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "cerebrumdao",
+        "cmc_id": "31961",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 1.4366700107405e-05,
+          "market_cap_usd": 0,
+          "fdv_usd": 1235536.21,
+          "volume_24h_usd": 0,
+          "change_1h_pct": 0.01698381,
+          "change_24h_pct": -3.24857794,
+          "change_7d_pct": -15.64799206,
+          "change_30d_pct": -15.98161146,
+          "market_cap_rank": 6812,
+          "circulating_supply": 0,
+          "total_supply": 86000000000,
+          "max_supply": 86000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "cryoDAO",
+        "cmc_id": "30965",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.1489516979948909,
+          "market_cap_usd": 0,
+          "fdv_usd": 658766.74,
+          "volume_24h_usd": 0,
+          "change_1h_pct": -0.0010725,
+          "change_24h_pct": -3.62495919,
+          "change_7d_pct": -19.86470512,
+          "change_30d_pct": -13.13418868,
+          "market_cap_rank": 6690,
+          "circulating_supply": 0,
+          "total_supply": 4422687,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "mode",
+        "cmc_id": "31016",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.000105523618993604,
+          "market_cap_usd": 263809.04843372176,
+          "fdv_usd": 1055236.19,
+          "volume_24h_usd": 7421.78399418,
+          "change_1h_pct": -1.12679723,
+          "change_24h_pct": -5.43815028,
+          "change_7d_pct": -27.49266738,
+          "change_30d_pct": 99.79861285,
+          "market_cap_rank": 2614,
+          "circulating_supply": 2500000009,
+          "total_supply": 10000000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "crust-network",
+        "cmc_id": "6747",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.008156765654817712,
+          "market_cap_usd": 115324.9940274704,
+          "fdv_usd": 285691.26,
+          "volume_24h_usd": 5212.4191466,
+          "change_1h_pct": 0.0106747,
+          "change_24h_pct": 0.66178103,
+          "change_7d_pct": -6.52068083,
+          "change_30d_pct": -18.93994293,
+          "market_cap_rank": 2982,
+          "circulating_supply": 14138569,
+          "total_supply": 35025067.043,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "maple",
+        "cmc_id": "33824",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.19127511552474336,
+          "market_cap_usd": 227810442.75898248,
+          "fdv_usd": 238075831.17,
+          "volume_24h_usd": 7364486.22825428,
+          "change_1h_pct": -1.50524837,
+          "change_24h_pct": -4.21302926,
+          "change_7d_pct": -21.65981695,
+          "change_30d_pct": -14.18523896,
+          "market_cap_rank": 124,
+          "circulating_supply": 1191009306.8510675,
+          "total_supply": 1244677492.5110993,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "nubila",
+        "cmc_id": "38816",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.001086199752096954,
+          "market_cap_usd": 325282.5498230916,
+          "fdv_usd": 1086199.75,
+          "volume_24h_usd": 52144.22438057,
+          "change_1h_pct": -1.26348111,
+          "change_24h_pct": -9.31674584,
+          "change_7d_pct": -24.66765714,
+          "change_30d_pct": 75.58943088,
+          "market_cap_rank": 2524,
+          "circulating_supply": 299468444.174398,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "xana",
+        "cmc_id": "31543",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 1.8503614827696e-05,
+          "market_cap_usd": 91143.29086167707,
+          "fdv_usd": 91143.29,
+          "volume_24h_usd": 0,
+          "change_1h_pct": 0,
+          "change_24h_pct": -4.188706,
+          "change_7d_pct": -7.75443331,
+          "change_30d_pct": -22.41902227,
+          "market_cap_rank": 3116,
+          "circulating_supply": 4925701908,
+          "total_supply": 4925701908,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "off-the-grid",
+        "cmc_id": "36156",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.002206130808834216,
+          "market_cap_usd": 8310954.957971346,
+          "fdv_usd": 22061308.09,
+          "volume_24h_usd": 3359699.57976328,
+          "change_1h_pct": -0.4654732,
+          "change_24h_pct": -6.10206452,
+          "change_7d_pct": -25.64986398,
+          "change_30d_pct": -20.22893644,
+          "market_cap_rank": 1034,
+          "circulating_supply": 3767208601,
+          "total_supply": 10000000000,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "bob",
+        "cmc_id": "38970",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.004503983715263409,
+          "market_cap_usd": 9998843.847884769,
+          "fdv_usd": 45039837.15,
+          "volume_24h_usd": 755704.61250438,
+          "change_1h_pct": -1.38557797,
+          "change_24h_pct": -0.57716161,
+          "change_7d_pct": -2.98877962,
+          "change_30d_pct": -0.6835187,
+          "market_cap_rank": 944,
+          "circulating_supply": 2220000000,
+          "total_supply": 10000000000,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "deeper-network",
+        "cmc_id": "8894",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 8.4801547353528e-05,
+          "market_cap_usd": 293318.71514435153,
+          "fdv_usd": 848015.47,
+          "volume_24h_usd": 1688.08017897,
+          "change_1h_pct": 0.3508325,
+          "change_24h_pct": -0.39083314,
+          "change_7d_pct": 0.19236864,
+          "change_30d_pct": -20.69820204,
+          "market_cap_rank": 2568,
+          "circulating_supply": 3458883997.97165,
+          "total_supply": 9967141302.00769,
+          "max_supply": 10000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "dopex",
+        "cmc_id": "32215",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.031761197047113304,
+          "market_cap_usd": 0,
+          "fdv_usd": 3176119.7,
+          "volume_24h_usd": 0,
+          "change_1h_pct": 0,
+          "change_24h_pct": 0,
+          "change_7d_pct": -26.12540322,
+          "change_30d_pct": 71.03961132,
+          "market_cap_rank": 6838,
+          "circulating_supply": 0,
+          "total_supply": 100000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "klima-dao",
+        "cmc_id": "12873",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.001680504061546566,
+          "market_cap_usd": 13439.604364170349,
+          "fdv_usd": 23024.3,
+          "volume_24h_usd": 0,
+          "change_1h_pct": 0.00646039,
+          "change_24h_pct": 1.72769931,
+          "change_7d_pct": -0.86216266,
+          "change_30d_pct": 3.50178895,
+          "market_cap_rank": 3730,
+          "circulating_supply": 7997365,
+          "total_supply": 13700832.45335561,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "moss-carbon-credit",
+        "cmc_id": "8826",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.009599999999999958,
+          "market_cap_usd": 0,
+          "fdv_usd": 0,
+          "volume_24h_usd": 4.575792,
+          "change_1h_pct": -4.52786743,
+          "change_24h_pct": -33.73584513,
+          "change_7d_pct": -20.204,
+          "change_30d_pct": -83.5056,
+          "market_cap_rank": 5474,
+          "circulating_supply": 0,
+          "total_supply": 0,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "singularitydao",
+        "cmc_id": "9638",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.004076900814959573,
+          "market_cap_usd": 337295.06583336036,
+          "fdv_usd": 407690.08,
+          "volume_24h_usd": 0,
+          "change_1h_pct": -0.00108471,
+          "change_24h_pct": 1.1868977,
+          "change_7d_pct": -1.46498121,
+          "change_30d_pct": -5.67899223,
+          "market_cap_rank": 2509,
+          "circulating_supply": 82733203.76,
+          "total_supply": 100000000,
+          "max_supply": 100000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "matrixdock",
+        "cmc_id": "28055",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.9720526598970004,
+          "market_cap_usd": 0,
+          "fdv_usd": 83420510.43,
+          "volume_24h_usd": 0,
+          "change_1h_pct": 0,
+          "change_24h_pct": -0.47568582,
+          "change_7d_pct": -1.81740577,
+          "change_30d_pct": -4.20109955,
+          "market_cap_rank": 6415,
+          "circulating_supply": 0,
+          "total_supply": 85818921,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "walletconnect",
+        "cmc_id": "33152",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.03453699939795948,
+          "market_cap_usd": 16215378.759746486,
+          "fdv_usd": 34536999.4,
+          "volume_24h_usd": 5860522.51681797,
+          "change_1h_pct": 0.01150049,
+          "change_24h_pct": -4.69034,
+          "change_7d_pct": -17.90788077,
+          "change_30d_pct": -10.58683636,
+          "market_cap_rank": 753,
+          "circulating_supply": 469507457,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "zero-gravity",
+        "cmc_id": "38337",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.22310048944012648,
+          "market_cap_usd": 133876728.14076102,
+          "fdv_usd": 243179533.49,
+          "volume_24h_usd": 13520552.15374371,
+          "change_1h_pct": 0.26471132,
+          "change_24h_pct": -4.90667969,
+          "change_7d_pct": -19.05690297,
+          "change_30d_pct": 3.9522322,
+          "market_cap_rank": 165,
+          "circulating_supply": 600073664.01,
+          "total_supply": 1090000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "aleph-im",
+        "cmc_id": "5821",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.01513021130997612,
+          "market_cap_usd": 3740498.135005207,
+          "fdv_usd": 7565105.65,
+          "volume_24h_usd": 199073.9697051,
+          "change_1h_pct": -0.52027013,
+          "change_24h_pct": -1.33203256,
+          "change_7d_pct": -7.62158143,
+          "change_30d_pct": 38.44024401,
+          "market_cap_rank": 1378,
+          "circulating_supply": 247220482.1448135,
+          "total_supply": 500000000,
+          "max_supply": 500000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "covalent",
+        "cmc_id": "32526",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.001843088050991664,
+          "market_cap_usd": 1791951.7524246764,
+          "fdv_usd": 1843088.05,
+          "volume_24h_usd": 197672.85760095,
+          "change_1h_pct": -1.73838836,
+          "change_24h_pct": -4.11112703,
+          "change_7d_pct": -10.71690333,
+          "change_30d_pct": 45.61571048,
+          "market_cap_rank": 1689,
+          "circulating_supply": 972255097.3408602,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "seed-photo",
+        "cmc_id": "25490",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.002191043859535911,
+          "market_cap_usd": 0,
+          "fdv_usd": 4000846.09,
+          "volume_24h_usd": 0,
+          "change_1h_pct": 0,
+          "change_24h_pct": 0,
+          "change_7d_pct": -12.4326747,
+          "change_30d_pct": -96.63845772,
+          "market_cap_rank": 6357,
+          "circulating_supply": 0,
+          "total_supply": 1826000000,
+          "max_supply": null
+        },
+        "reasons": []
+      },
+      {
+        "canonical_id": "weatherxm",
+        "cmc_id": "33304",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.012295124268752915,
+          "market_cap_usd": 0,
+          "fdv_usd": 1229512.43,
+          "volume_24h_usd": 1239.1580166,
+          "change_1h_pct": -2.46802511,
+          "change_24h_pct": 24.95640817,
+          "change_7d_pct": 39.60858508,
+          "change_30d_pct": 35.06446308,
+          "market_cap_rank": 4910,
+          "circulating_supply": 0,
+          "total_supply": 100000000,
+          "max_supply": 100000000
+        },
+        "reasons": []
+      }
+    ],
+    "ts": "2026-10-18T16:44:29.552Z"
+  },
+  "candidate_diagnostic": {
+    "ok": false,
+    "audit": "stage5c_isolated_candidate_diagnostic",
+    "environment": "preview",
+    "git_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+    "access_mode": "PRO_API",
+    "counts": {
+      "checked": 10,
+      "pass": 9,
+      "fail": 1,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    },
+    "results": [
+      {
+        "canonical_id": "safe",
+        "cmc_id": "21585",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.10125988144881194,
+          "market_cap_usd": 79303211.35769972,
+          "fdv_usd": 101259881.45,
+          "volume_24h_usd": 1181668.06191348,
+          "change_1h_pct": -2.10027101,
+          "change_24h_pct": -7.81812184,
+          "change_7d_pct": -13.85861439,
+          "change_30d_pct": 1.84320142,
+          "market_cap_rank": 270,
+          "circulating_supply": 783165161,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      },
+      {
+        "canonical_id": "movement",
+        "cmc_id": "32452",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.007193880064620102,
+          "market_cap_usd": 33526478.553554557,
+          "fdv_usd": 71938800.65,
+          "volume_24h_usd": 57501745.3678276,
+          "change_1h_pct": -0.01182763,
+          "change_24h_pct": -3.99235344,
+          "change_7d_pct": -23.39128923,
+          "change_30d_pct": -17.28180088,
+          "market_cap_rank": 489,
+          "circulating_supply": 4660416667,
+          "total_supply": 10000000000,
+          "max_supply": 10000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      },
+      {
+        "canonical_id": "gravity",
+        "cmc_id": "32120",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.003585841044429891,
+          "market_cap_usd": 39958461.09450004,
+          "fdv_usd": 43030092.53,
+          "volume_24h_usd": 4374203.08027761,
+          "change_1h_pct": 0.1944747,
+          "change_24h_pct": -3.46959829,
+          "change_7d_pct": -17.57950564,
+          "change_30d_pct": -58.64386995,
+          "market_cap_rank": 427,
+          "circulating_supply": 11143400000,
+          "total_supply": 12000000000,
+          "max_supply": 12000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      },
+      {
+        "canonical_id": "redstone-finance",
+        "cmc_id": "21707",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.1346400366770437,
+          "market_cap_usd": 73720239.65543431,
+          "fdv_usd": 134640036.68,
+          "volume_24h_usd": 2316325.7871646,
+          "change_1h_pct": 0.07703781,
+          "change_24h_pct": -3.59162279,
+          "change_7d_pct": -11.86364188,
+          "change_30d_pct": -7.3723875,
+          "market_cap_rank": 286,
+          "circulating_supply": 547535796,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      },
+      {
+        "canonical_id": "redbelly-network",
+        "cmc_id": "34849",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.001656661837229497,
+          "market_cap_usd": 4995525.468485814,
+          "fdv_usd": 16566618.37,
+          "volume_24h_usd": 172495.84849862,
+          "change_1h_pct": -2.6291274,
+          "change_24h_pct": -7.97067074,
+          "change_7d_pct": -23.64477852,
+          "change_30d_pct": -29.95539397,
+          "market_cap_rank": 1239,
+          "circulating_supply": 3015416517.8574,
+          "total_supply": 10000000000,
+          "max_supply": 10000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      },
+      {
+        "canonical_id": "rari",
+        "cmc_id": "5877",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.15260974904943933,
+          "market_cap_usd": 2974200.379568286,
+          "fdv_usd": 3815243.73,
+          "volume_24h_usd": 150765.97571083,
+          "change_1h_pct": -0.61087851,
+          "change_24h_pct": -3.81679444,
+          "change_7d_pct": -9.90960672,
+          "change_30d_pct": 72.43995608,
+          "market_cap_rank": 1474,
+          "circulating_supply": 19488927.79192479,
+          "total_supply": 25000000,
+          "max_supply": 25000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      },
+      {
+        "canonical_id": "eclipse",
+        "cmc_id": "36174",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.000887455460317855,
+          "market_cap_usd": 117719.06765647834,
+          "fdv_usd": 887455.46,
+          "volume_24h_usd": 1110603.60727824,
+          "change_1h_pct": -3.08998858,
+          "change_24h_pct": -13.15885263,
+          "change_7d_pct": -1.39518119,
+          "change_30d_pct": -26.56352164,
+          "market_cap_rank": 2973,
+          "circulating_supply": 132647860,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      },
+      {
+        "canonical_id": "synesis-one",
+        "cmc_id": "17231",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 1.246743570227e-05,
+          "market_cap_usd": 5688.301925096172,
+          "fdv_usd": 12467.39,
+          "volume_24h_usd": 306.4851396,
+          "change_1h_pct": -1.46946168,
+          "change_24h_pct": 14.00153915,
+          "change_7d_pct": -15.77650046,
+          "change_30d_pct": 5.63267321,
+          "market_cap_rank": 3861,
+          "circulating_supply": 456252758.06,
+          "total_supply": 999996689,
+          "max_supply": null
+        },
+        "reasons": [],
+        "identity_research_gate": "CURRENT_ISSUER_MINT_AND_LIFECYCLE_REQUIRED",
+        "release_authorized": false
+      },
+      {
+        "canonical_id": "wayru",
+        "cmc_id": "36316",
+        "status": "INVALID_RESPONSE",
+        "provider_updated_at": null,
+        "exact_fields": {
+          "price_usd": false,
+          "change_24h_pct": false,
+          "change_7d_pct": false,
+          "change_30d_pct": false,
+          "market_cap_usd": false,
+          "fdv_usd": false,
+          "volume_24h_usd": false,
+          "market_cap_rank": false
+        },
+        "market": null,
+        "reasons": [
+          "INVALID_RESPONSE",
+          "INVALID_RUNTIME_PRICE",
+          "FIELD_VALUE_MISMATCH:price_usd",
+          "FIELD_VALUE_MISMATCH:change_24h_pct",
+          "FIELD_VALUE_MISMATCH:change_7d_pct",
+          "FIELD_VALUE_MISMATCH:change_30d_pct",
+          "FIELD_VALUE_MISMATCH:market_cap_usd",
+          "FIELD_VALUE_MISMATCH:fdv_usd",
+          "FIELD_VALUE_MISMATCH:volume_24h_usd",
+          "FIELD_VALUE_MISMATCH:market_cap_rank"
+        ],
+        "identity_research_gate": "CURRENT_ISSUER_MINT_AND_MARKET_REQUIRED",
+        "release_authorized": false
+      },
+      {
+        "canonical_id": "nexus-4",
+        "cmc_id": "39965",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 7.051407412684983e-07,
+          "market_cap_usd": 42308444.4761099,
+          "fdv_usd": 70514074.13,
+          "volume_24h_usd": 1135255.5506776,
+          "change_1h_pct": -0.21493121,
+          "change_24h_pct": 0.33104643,
+          "change_7d_pct": -13.17745021,
+          "change_30d_pct": -32.9847938,
+          "market_cap_rank": 409,
+          "circulating_supply": 60000000000000,
+          "total_supply": 100000000000000,
+          "max_supply": 100000000000000
+        },
+        "reasons": [],
+        "identity_research_gate": "CURRENT_ISSUER_TOKEN_CONTRACT_REQUIRED",
+        "release_authorized": false
+      }
+    ],
+    "ts": "2026-10-18T16:44:29.478Z",
+    "manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+    "manifest_hash_encoding": "SHA256 of JSON.stringify(parsed manifest)",
+    "public_mapping_changes": 0,
+    "automatic_release": false
+  },
+  "elapsed_ms": 243,
+  "ts": "2026-10-18T16:44:29.553Z",
+  "health": {
+    "stats": {
+      "cache": {
+        "size": 0,
+        "inflight": 0,
+        "ttlMs": 60000
+      },
+      "adapterAuthAvailable": true,
+      "accessMode": "PRO_API",
+      "resolverSize": 354
+    },
+    "resolver": {
+      "total": 354,
+      "cmc_mapped": 323,
+      "no_cmc_mapping": 31
+    },
+    "canonical_dataset": {
+      "sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+      "git_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+      "mapping_repair": {
+        "stage": "5C",
+        "status": "CONSOLIDATED_REVIEW_PENDING_BATCH_AUDIT",
+        "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
+        "source_audit_at": "2026-10-12T10:20:26.406Z",
+        "slug_corrections": 23,
+        "quarantined": 51,
+        "quarantined_symbol_mismatches": 32,
+        "quarantined_market_data_failures": 18,
+        "id_corrections": 99,
+        "identity_review_remaining": 51,
+        "last_live_audit_at": "2026-10-18T13:54:06.103Z",
+        "last_live_audit_commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+        "last_live_audit_pass": 272,
+        "last_live_audit_fail": 51,
+        "released_after_live_audit": 93,
+        "last_live_audit_dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385",
+        "pending_id_corrections": 1,
+        "quarantined_quote_pending": 1,
+        "corrected_ids_with_unavailable_market_data": 9,
+        "runtime_parity_checked_releases": 91,
+        "runtime_parity_pending_releases": 2,
+        "last_runtime_audit_at": "2026-10-18T13:34:32.382Z",
+        "last_runtime_audit_commit": "baed82cc9083cf7d07fa8d5efbcd33b9d20fa023",
+        "last_runtime_audit_dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
+        "last_runtime_audit_pass": 91,
+        "last_runtime_audit_fail": 0,
+        "canonical_symbol_corrections": 15,
+        "pending_symbol_corrections": 0,
+        "released_id_corrections": 89,
+        "released_symbol_only_corrections": 4,
+        "consolidated_review_report": "reports/stage5c-consolidated-review-20261018.json",
+        "consolidated_review_records": 82,
+        "new_unmapped_candidates": 10,
+        "issuer_documented_no_native_token": 1
+      },
+      "eligible": 272,
+      "quarantined": 51
+    },
+    "uptime_seconds": 0,
+    "node_version": "v22.23.2",
+    "vercel_region": "iad1",
+    "vercel_env": "preview",
+    "cmc_api_key_present": true,
+    "ts": "2026-10-18T16:44:29.307Z"
+  }
+}

@@ -3,7 +3,7 @@
   "reviewed_on": "2026-10-18",
   "source_commit": "765db595248796953f2fb94f348a872e61b2d9dd",
   "source_dataset_sha256": "351257826449d1c3f067a354b980fb48d6601044350b9c27d39a37460d82e9bd",
-  "status": "CONSOLIDATED_TRIAGE_COMPLETE_LIVE_BATCH_PENDING",
+  "status": "TRIAGE_COMPLETE_SEVEN_MAPPINGS_APPLIED_REMAINDER_BLOCKED",
   "scope_note": "All 82 pending rows have a disposition, not 82 verified token identities. Uncertainty is retained explicitly. No website omission, failed fetch or search miss is treated as proof of no token.",
   "counts": {
     "reviewed": 82,
@@ -202,7 +202,44 @@
         "cmc_slug": "nexus-labs",
         "identity_gate": "CURRENT_ISSUER_TOKEN_CONTRACT_REQUIRED"
       },
-      "ru_summary": "Кандидат NEX/39965 — исследовательская зацепка. Сайт эмитента не подтвердил контракт; одна котировка не разрешает привязку."
+      "ru_summary": "Кандидат NEX/39965 — исследовательская зацепка. Сайт эмитента не подтвердил контракт; одна котировка не разрешает привязку.",
+      "followup": {
+        "status": "HELD",
+        "diagnostic": {
+          "canonical_id": "nexus-4",
+          "cmc_id": "39965",
+          "status": "LIVE",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_fields": {
+            "price_usd": true,
+            "change_24h_pct": true,
+            "change_7d_pct": true,
+            "change_30d_pct": true,
+            "market_cap_usd": true,
+            "fdv_usd": true,
+            "volume_24h_usd": true,
+            "market_cap_rank": true
+          },
+          "market": {
+            "price_usd": 7.051407412684983e-07,
+            "market_cap_usd": 42308444.4761099,
+            "fdv_usd": 70514074.13,
+            "volume_24h_usd": 1135255.5506776,
+            "change_1h_pct": -0.21493121,
+            "change_24h_pct": 0.33104643,
+            "change_7d_pct": -13.17745021,
+            "change_30d_pct": -32.9847938,
+            "market_cap_rank": 409,
+            "circulating_supply": 60000000000000,
+            "total_supply": 100000000000000,
+            "max_supply": 100000000000000
+          },
+          "reasons": [],
+          "identity_research_gate": "CURRENT_ISSUER_TOKEN_CONTRACT_REQUIRED",
+          "release_authorized": false
+        },
+        "identity_gate": "CURRENT_ISSUER_TOKEN_CONTRACT_REQUIRED"
+      }
     },
     {
       "canonical_id": "safe",
@@ -212,7 +249,7 @@
       "current_cmc_id": null,
       "current_cmc_slug": null,
       "last_observed_reasons": [],
-      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
       "category": "NEW_MAPPING_CANDIDATE",
       "reviewed_on": "2026-10-18",
       "proposed_taxonomy": "token",
@@ -229,7 +266,16 @@
         "cmc_slug": "safe1",
         "identity_gate": null
       },
-      "ru_summary": "Подтверждён кандидат 21585/safe1. Листинг 3918/safe относится к другому проекту."
+      "ru_summary": "Подтверждён кандидат 21585/safe1. Листинг 3918/safe относится к другому проекту.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "SAFE",
+          "cmcId": "21585",
+          "cmcSlug": "safe1"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
     },
     {
       "canonical_id": "fireblocks",
@@ -262,7 +308,7 @@
       "current_cmc_id": null,
       "current_cmc_slug": null,
       "last_observed_reasons": [],
-      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
       "category": "NEW_MAPPING_CANDIDATE",
       "reviewed_on": "2026-10-18",
       "proposed_taxonomy": "token",
@@ -279,7 +325,16 @@
         "cmc_slug": "movement",
         "identity_gate": null
       },
-      "ru_summary": "Кандидат MOVE/32452; mainnet отделён от тестовых монет. Полное сопоставление ERC20-контракта не заявлено."
+      "ru_summary": "Кандидат MOVE/32452; mainnet отделён от тестовых монет. Полное сопоставление ERC20-контракта не заявлено.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "MOVE",
+          "cmcId": "32452",
+          "cmcSlug": "movement"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
     },
     {
       "canonical_id": "mountain-protocol",
@@ -306,7 +361,15 @@
       ],
       "unblock_condition": "One batch quote check plus WIND_DOWN_EXTERNAL_MARKET_VALIDITY_REQUIRED; numeric PASS alone cannot release.",
       "repeat_full_audit_without_new_evidence": false,
-      "ru_summary": "Исправлено 27788/TEST → 29569/USDM. Блокировка сохранена: после wind-down эмитент не гарантирует прежний выкуп, цену или ликвидность."
+      "ru_summary": "Исправлено 27788/TEST → 29569/USDM. Блокировка сохранена: после wind-down эмитент не гарантирует прежний выкуп, цену или ликвидность.",
+      "followup": {
+        "status": "HELD",
+        "observed_reasons": [
+          "invalid_price"
+        ],
+        "additional_gate": "WIND_DOWN_EXTERNAL_MARKET_VALIDITY_REQUIRED",
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
     },
     {
       "canonical_id": "creditum",
@@ -1313,7 +1376,7 @@
       "current_cmc_id": null,
       "current_cmc_slug": null,
       "last_observed_reasons": [],
-      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
       "category": "NEW_MAPPING_CANDIDATE",
       "reviewed_on": "2026-10-18",
       "proposed_taxonomy": "token",
@@ -1330,7 +1393,16 @@
         "cmc_slug": "eclipse-xyz",
         "identity_gate": null
       },
-      "ru_summary": "Кандидат ES/36174. Эмитент связывает ES с Human API; газ сети оплачивается ETH. ECLIPSE не подтверждён как прежний тикер токена."
+      "ru_summary": "Кандидат ES/36174. Эмитент связывает ES с Human API; газ сети оплачивается ETH. ECLIPSE не подтверждён как прежний тикер токена.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "ES",
+          "cmcId": "36174",
+          "cmcSlug": "eclipse-xyz"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
     },
     {
       "canonical_id": "fasset",
@@ -1364,7 +1436,7 @@
       "current_cmc_id": null,
       "current_cmc_slug": null,
       "last_observed_reasons": [],
-      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
       "category": "NEW_MAPPING_CANDIDATE",
       "reviewed_on": "2026-10-18",
       "proposed_taxonomy": "token",
@@ -1381,7 +1453,16 @@
         "cmc_slug": "gravity-token",
         "identity_gate": null
       },
-      "ru_summary": "Кандидат G/32120; эмитент указывает тот же адрес токена. GAL и G не объединяются по тикеру."
+      "ru_summary": "Кандидат G/32120; эмитент указывает тот же адрес токена. GAL и G не объединяются по тикеру.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "G",
+          "cmcId": "32120",
+          "cmcSlug": "gravity-token"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
     },
     {
       "canonical_id": "genobank",
@@ -1850,7 +1931,7 @@
       "current_cmc_id": null,
       "current_cmc_slug": null,
       "last_observed_reasons": [],
-      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
       "category": "NEW_MAPPING_CANDIDATE",
       "reviewed_on": "2026-10-18",
       "proposed_taxonomy": "token",
@@ -1867,7 +1948,16 @@
         "cmc_slug": "rarible",
         "identity_gate": null
       },
-      "ru_summary": "Кандидат RARI/5877/rarible — токен управления экосистемой, с подтверждением Foundation."
+      "ru_summary": "Кандидат RARI/5877/rarible — токен управления экосистемой, с подтверждением Foundation.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "RARI",
+          "cmcId": "5877",
+          "cmcSlug": "rarible"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
     },
     {
       "canonical_id": "redbelly-network",
@@ -1877,7 +1967,7 @@
       "current_cmc_id": null,
       "current_cmc_slug": null,
       "last_observed_reasons": [],
-      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
       "category": "NEW_MAPPING_CANDIDATE",
       "reviewed_on": "2026-10-18",
       "proposed_taxonomy": "token",
@@ -1894,7 +1984,16 @@
         "cmc_slug": "redbelly-network",
         "identity_gate": null
       },
-      "ru_summary": "Кандидат RBNT/34849 — mainnet-актив. Тестовые RBNT и случайный токен с тем же тикером исключены."
+      "ru_summary": "Кандидат RBNT/34849 — mainnet-актив. Тестовые RBNT и случайный токен с тем же тикером исключены.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "RBNT",
+          "cmcId": "34849",
+          "cmcSlug": "redbelly-network"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
     },
     {
       "canonical_id": "realt-coin",
@@ -1929,7 +2028,7 @@
       "current_cmc_id": null,
       "current_cmc_slug": null,
       "last_observed_reasons": [],
-      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
       "category": "NEW_MAPPING_CANDIDATE",
       "reviewed_on": "2026-10-18",
       "proposed_taxonomy": "token",
@@ -1946,7 +2045,16 @@
         "cmc_slug": "redstone",
         "identity_gate": null
       },
-      "ru_summary": "Кандидат RED/21707 подтверждён названием и доменом эмитента; полного сопоставления контрактов пока нет."
+      "ru_summary": "Кандидат RED/21707 подтверждён названием и доменом эмитента; полного сопоставления контрактов пока нет.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "RED",
+          "cmcId": "21707",
+          "cmcSlug": "redstone"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
     },
     {
       "canonical_id": "rwa-x",
@@ -2042,7 +2150,44 @@
         "cmc_slug": "synesis-one",
         "identity_gate": "CURRENT_ISSUER_MINT_AND_LIFECYCLE_REQUIRED"
       },
-      "ru_summary": "Кандидат SNS/17231. Даже после успешной котировки нужны актуальные подтверждения mint и жизненного цикла от эмитента."
+      "ru_summary": "Кандидат SNS/17231. Даже после успешной котировки нужны актуальные подтверждения mint и жизненного цикла от эмитента.",
+      "followup": {
+        "status": "HELD",
+        "diagnostic": {
+          "canonical_id": "synesis-one",
+          "cmc_id": "17231",
+          "status": "LIVE",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_fields": {
+            "price_usd": true,
+            "change_24h_pct": true,
+            "change_7d_pct": true,
+            "change_30d_pct": true,
+            "market_cap_usd": true,
+            "fdv_usd": true,
+            "volume_24h_usd": true,
+            "market_cap_rank": true
+          },
+          "market": {
+            "price_usd": 1.246743570227e-05,
+            "market_cap_usd": 5688.301925096172,
+            "fdv_usd": 12467.39,
+            "volume_24h_usd": 306.4851396,
+            "change_1h_pct": -1.46946168,
+            "change_24h_pct": 14.00153915,
+            "change_7d_pct": -15.77650046,
+            "change_30d_pct": 5.63267321,
+            "market_cap_rank": 3861,
+            "circulating_supply": 456252758.06,
+            "total_supply": 999996689,
+            "max_supply": null
+          },
+          "reasons": [],
+          "identity_research_gate": "CURRENT_ISSUER_MINT_AND_LIFECYCLE_REQUIRED",
+          "release_authorized": false
+        },
+        "identity_gate": "CURRENT_ISSUER_MINT_AND_LIFECYCLE_REQUIRED"
+      }
     },
     {
       "canonical_id": "sp-global",
@@ -2214,7 +2359,64 @@
         "cmc_slug": "wayru",
         "identity_gate": "CURRENT_ISSUER_MINT_AND_MARKET_REQUIRED"
       },
-      "ru_summary": "Кандидат WAYRU/36316 — preview-листинг. Нужны актуальный mint эмитента и пригодный внешний рынок."
+      "ru_summary": "Кандидат WAYRU/36316 — preview-листинг. Нужны актуальный mint эмитента и пригодный внешний рынок.",
+      "followup": {
+        "status": "HELD",
+        "diagnostic": {
+          "canonical_id": "wayru",
+          "cmc_id": "36316",
+          "status": "INVALID_RESPONSE",
+          "provider_updated_at": null,
+          "exact_fields": {
+            "price_usd": false,
+            "change_24h_pct": false,
+            "change_7d_pct": false,
+            "change_30d_pct": false,
+            "market_cap_usd": false,
+            "fdv_usd": false,
+            "volume_24h_usd": false,
+            "market_cap_rank": false
+          },
+          "market": null,
+          "reasons": [
+            "INVALID_RESPONSE",
+            "INVALID_RUNTIME_PRICE",
+            "FIELD_VALUE_MISMATCH:price_usd",
+            "FIELD_VALUE_MISMATCH:change_24h_pct",
+            "FIELD_VALUE_MISMATCH:change_7d_pct",
+            "FIELD_VALUE_MISMATCH:change_30d_pct",
+            "FIELD_VALUE_MISMATCH:market_cap_usd",
+            "FIELD_VALUE_MISMATCH:fdv_usd",
+            "FIELD_VALUE_MISMATCH:volume_24h_usd",
+            "FIELD_VALUE_MISMATCH:market_cap_rank"
+          ],
+          "identity_research_gate": "CURRENT_ISSUER_MINT_AND_MARKET_REQUIRED",
+          "release_authorized": false
+        },
+        "identity_gate": "CURRENT_ISSUER_MINT_AND_MARKET_REQUIRED"
+      }
     }
-  ]
+  ],
+  "followup": {
+    "live_capture": "reports/stage5c-consolidated-live-audit-20261018.json",
+    "decision_report": "reports/stage5c-consolidated-release-20261018.json",
+    "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+    "existing_runtime_pass": 93,
+    "existing_exact_fields": 744,
+    "candidate_pass": 9,
+    "candidate_fail": 1,
+    "applied": [
+      "safe",
+      "movement",
+      "gravity",
+      "redstone-finance",
+      "redbelly-network",
+      "rari",
+      "eclipse"
+    ],
+    "eligible_after": 279,
+    "quarantined_after": 51,
+    "unmapped_after": 24,
+    "stage_complete": false
+  }
 }

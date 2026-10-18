@@ -1,10 +1,10 @@
 'use strict';
 
-// One read-only Preview capture: unchanged baseline audit, released runtime
+// One read-only Preview capture: explicit expanded catalog, released runtime
 // parity and isolated candidate diagnostics. Candidate expectations never enter
 // the public resolver or its cache, and a diagnostic PASS is not a release.
 const { createHash } = require('node:crypto');
-const baselineHandler = require('../audit-stage5b');
+const { runCatalogAudit, catalogContract, structuralChecks } = require('./stage5c-catalog-audit');
 const { runAudit } = require('../audit-stage5c-runtime');
 const { getService, getHealthSnapshot } = require('./runtime');
 const { createPaydMarketService } = require('../../code/server/market/payd_market_service');
@@ -18,23 +18,24 @@ function send(res, code, body) {
   res.end(JSON.stringify(body));
 }
 
-async function captureBaseline(handler = baselineHandler) {
-  const response = { setHeader() {}, end(body) { this.body = JSON.parse(body); } };
-  await handler({ method: 'GET', query: { run: '1' } }, response);
-  if (!response.body?.counts) throw new Error('BASELINE_AUDIT_FAILED');
-  return response.body;
-}
-
 function candidateRecords(base, manifest) {
   if (manifest.diagnostic_only !== true || manifest.automatic_release !== false ||
-      !Array.isArray(manifest.candidates) || manifest.candidates.length !== 10) {
+      !Array.isArray(manifest.candidates) || manifest.candidates.length !== 10 ||
+      manifest.published_count !== 7 || manifest.pending_count !== 3) {
     throw new Error('CANDIDATE_MANIFEST_INVALID');
   }
   const index = base._internals.resolver.index;
   const occupied = new Set([...index.values()].filter(r => r.cmcId).map(r => String(r.cmcId)));
   const ids = new Set();
   const providers = new Set();
-  return manifest.candidates.map(c => {
+  const published = manifest.candidates.filter(c => c.applied_to_canonical_dataset === true);
+  if (published.length !== 7 || published.some(c => {
+    const r = index.get(c.canonical_id);
+    return !r || r.cmcId !== c.cmc_id || r.cmcSlug !== c.cmc_slug || r.symbol !== c.symbol;
+  })) throw new Error('PUBLISHED_CANDIDATE_MANIFEST_MISMATCH');
+  const pending = manifest.candidates.filter(c => c.applied_to_canonical_dataset === false);
+  if (pending.length !== 3) throw new Error('CANDIDATE_MANIFEST_INVALID');
+  return pending.map(c => {
     const original = index.get(c.canonical_id);
     if (!original || original.cmcId || !/^\d+$/.test(c.cmc_id) || !c.symbol || !c.cmc_slug ||
         c.applied_to_canonical_dataset !== false || c.release_authorized !== false ||
@@ -71,7 +72,7 @@ async function runCandidates(base, manifest = candidateManifest) {
   return result;
 }
 
-function assessBaseline(base, strict) {
+function assessCatalog(base, strict) {
   const records = [...base._internals.resolver.index.values()];
   const mapped = records.filter(r => r.cmcId);
   const blocked = new Set(records.filter(r => r.mapping_status === 'unverified' ||
@@ -87,10 +88,11 @@ function assessBaseline(base, strict) {
       Array.isArray(row.reasons) && row.reasons.length > 0;
   });
   const mandatory = ['bitcoin', 'ethereum', 'chainlink', 'ondo-finance', 'bittensor', 'aave', 'decentraland'];
-  const complete = records.length === 354 && mapped.length === 323 &&
-    counts?.dataset_total === 354 && counts?.mapped_expected === 323 &&
-    counts?.mapped_checked === 323 && counts?.unmapped === 31 &&
-    counts?.pass + counts?.fail === 323 && counts?.fail === failures.length &&
+  const complete = structuralChecks(records).length === 0 &&
+    records.length === catalogContract.dataset_total && mapped.length === catalogContract.mapped &&
+    counts?.dataset_total === catalogContract.dataset_total && counts?.mapped_expected === catalogContract.mapped &&
+    counts?.mapped_checked === catalogContract.mapped && counts?.unmapped === catalogContract.unmapped &&
+    counts?.pass + counts?.fail === catalogContract.mapped && counts?.fail === failures.length &&
     counts?.duplicate_cmc_ids === 0 && counts?.duplicate_canonical_ids === 0 &&
     Array.isArray(strict.structural_failures) && strict.structural_failures.length === 0 &&
     unique.size === failures.length && attributed &&
@@ -100,7 +102,7 @@ function assessBaseline(base, strict) {
     complete, expected_quarantined_count: blocked.size,
     unexpected_failures: failures.filter(row => !blocked.has(row.canonical_id)),
     passing_quarantines: complete ? [...blocked].filter(id => !unique.has(id)) : [],
-    note: 'Expected quarantines remain visible in the unchanged strict audit. A passing quarantine still needs its release gates reviewed.',
+    note: 'Expected quarantines remain visible in the expanded strict audit. A passing quarantine still needs its release gates reviewed.',
   };
 }
 
@@ -109,9 +111,9 @@ async function runReview(base, operations = {}) {
   const resolver = base._internals.resolver;
   if (base._internals.adapter.getAccessMode() !== 'PRO_API') throw new Error('PRO_API_REQUIRED');
   // Independent sections run together; errors do not erase successful evidence.
-  const names = ['baseline_strict', 'released_runtime', 'candidate_diagnostic'];
+  const names = ['catalog_strict', 'released_runtime', 'candidate_diagnostic'];
   const settled = await Promise.allSettled([
-    (operations.baseline || captureBaseline)(),
+    (operations.catalog || runCatalogAudit)(base),
     (operations.runtime || runAudit)(base),
     (operations.candidates || runCandidates)(base),
   ]);
@@ -120,14 +122,14 @@ async function runReview(base, operations = {}) {
     sections[names[i]] = settled[i].status === 'fulfilled' ? settled[i].value :
       { ok: false, error: names[i].toUpperCase() + '_FAILED' };
   }
-  const strict = sections.baseline_strict;
-  const assessment = strict.counts ? assessBaseline(base, strict) :
+  const strict = sections.catalog_strict;
+  const assessment = strict.counts ? assessCatalog(base, strict) :
     { complete: false, unexpected_failures: [], passing_quarantines: [] };
   const runtime = sections.released_runtime;
   const candidates = sections.candidate_diagnostic;
   const completed = assessment.complete &&
     runtime.counts?.checked === resolver.dataset._mapping_repair.released_after_live_audit &&
-    candidates.counts?.checked === candidateManifest.candidates.length;
+    candidates.counts?.checked === candidateManifest.pending_count;
   return {
     ok: completed && assessment.unexpected_failures.length === 0 && runtime.ok === true,
     audit: 'stage5c_consolidated_review', audit_completed: completed,
@@ -136,7 +138,10 @@ async function runReview(base, operations = {}) {
     git_commit: process.env.VERCEL_GIT_COMMIT_SHA || null,
     dataset_sha256: resolver.datasetSha256,
     note: 'ok means all review sections completed, existing eligible mappings have no new strict failures and released runtime parity passed. It does not mean every candidate passed or Stage 5C is complete.',
-    baseline_assessment: assessment, ...sections,
+    catalog_assessment: assessment,
+    legacy_validator: { unchanged: true, original_mapped: 323, original_unmapped: 31,
+      note: 'The historical Stage 5B endpoint retains its 323/31 count contract; this expanded catalog uses its own explicit 330/24 contract and strict identity/positive-price validation.' },
+    ...sections,
     elapsed_ms: Date.now() - started, ts: new Date().toISOString(),
   };
 }
@@ -162,4 +167,4 @@ module.exports = async function handler(req, res) {
 
 module.exports.runReview = runReview;
 module.exports.runCandidates = runCandidates;
-module.exports.assessBaseline = assessBaseline;
+module.exports.assessCatalog = assessCatalog;

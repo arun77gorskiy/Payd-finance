@@ -146,10 +146,10 @@ function json(res) {
     assert.ok(typeof j.cmc_api_key_present === 'boolean', 'expected cmc_api_key_present flag');
   });
 
-  await test('GET /api/healthz reports 354/323/31 canonical mapping stats', async () => {
+  await test('GET /api/healthz reports 354/330/24 canonical mapping stats', async () => {
     const res = await call(healthz, makeReq({ url: '/api/healthz' }));
     assert.strictEqual(res.statusCode, 200);
-    assert.deepStrictEqual(json(res).resolver, { total: 354, cmc_mapped: 323, no_cmc_mapping: 31 });
+    assert.deepStrictEqual(json(res).resolver, { total: 354, cmc_mapped: 330, no_cmc_mapping: 24 });
   });
 
   await test('GET /api/healthz headers: Content-Type + no-store + x-content-type-options', async () => {
@@ -203,7 +203,7 @@ function json(res) {
   });
 
   await test('GET /api/intelligence/market?id=ipfs -> 200 UNKNOWN_MAPPING (no fake CMC id)', async () => {
-    // ipfs is in token-index.json with no cmcId (the 31 known unmapped tokens).
+    // ipfs is in token-index.json with no cmcId (the 24 remaining unmapped records).
     const res = await call(market, makeReq({ url: '/api/intelligence/market?id=ipfs' }));
     assert.strictEqual(res.statusCode, 200);
     const j = json(res);

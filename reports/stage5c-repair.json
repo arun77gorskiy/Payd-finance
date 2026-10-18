@@ -1,6 +1,6 @@
 {
   "stage": "5C",
-  "status": "CONSOLIDATED_REVIEW_PENDING_BATCH_AUDIT",
+  "status": "CONSOLIDATED_BATCH_APPLIED_PUBLIC_HTTP_PENDING",
   "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
   "source_audit_at": "2026-10-12T10:20:26.406Z",
   "source_audit_format_note": "The pasted audit was missing its final timestamp quote and closing brace. Only this JSON footer was restored for parsing; all reported entries and counts were preserved.",
@@ -25,22 +25,23 @@
   },
   "result_counts": {
     "dataset_total": 354,
-    "cmc_ids_retained": 323,
-    "no_cmc_mapping": 31,
+    "cmc_ids_retained": 330,
+    "no_cmc_mapping": 24,
     "slug_corrections": 23,
     "quarantined": 51,
-    "eligible_for_runtime_request": 272,
-    "corrected_released_mappings": 93,
+    "eligible_for_runtime_request": 279,
+    "corrected_released_mappings": 100,
     "id_corrections_released": 89,
-    "symbol_only_corrections_released": 4
+    "symbol_only_corrections_released": 4,
+    "new_mappings_released": 7
   },
   "live_reaudit": {
     "performed": true,
     "execution": "user_browser",
-    "commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
-    "dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385",
-    "audit_at": "2026-10-18T13:54:06.103Z",
-    "healthz_at": "2026-10-18T13:52:24.197Z",
+    "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+    "dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+    "audit_at": "2026-10-18T16:44:29.513Z",
+    "healthz_at": "2026-10-18T16:44:29.307Z",
     "counts": {
       "dataset_total": 354,
       "mapped_expected": 323,
@@ -55,16 +56,15 @@
     },
     "mandatory_all_pass": true,
     "strict_failures_all_quarantined": true,
-    "slug_only_failures": 0,
-    "report": "reports/stage5c-native-treasury-quote-audit-20261018.json",
-    "healthz_report": "reports/stage5c-native-treasury-healthz-20261018.json",
+    "report": "reports/stage5c-consolidated-live-audit-20261018.json",
     "source_capture": {
-      "filename": "Вставленный Markdown(20261018-135424).md",
-      "sha256": "3235462604c6e0719938655ad0d5d4c84f28d7b273ba13213531e24b8062664f",
+      "filename": "Вставленный Markdown(20261018-164447).md",
+      "sha256": "85e02b138e8b0b9b080aee6c4439d1dc46341cea71cd825103f046e400135664",
       "complete_json": true,
-      "recovery": null
+      "recovery": null,
+      "execution": "user_browser"
     },
-    "provenance_note": "The unchanged full audit does not embed commit/hash. Pair complete 323-ID coverage with supplied Preview Health about 102 seconds earlier; all failure expectations match the tested table. Unique failures and zero structural errors establish the passing complement, including GRAM and STBT. All previous 270 PASS remain passing."
+    "provenance_note": "Version and dataset hash are embedded in the consolidated parent and Health; exact 323-record baseline coverage, unique failures and source expectations verified. 7 new candidate expectations are separately documented, not counted as a 330-row baseline execution."
   },
   "slug_corrections": [
     {
@@ -256,11 +256,10 @@
       "symbol": "USDM",
       "expected_cmc_id": "29569",
       "expected_cmc_slug": "mountain-protocol",
-      "returned_symbol": null,
-      "returned_slug": null,
+      "returned_symbol": "USDM",
+      "returned_slug": "mountain-protocol",
       "reasons": [
-        "quote_verification_pending",
-        "wind_down_market_validity_review_required"
+        "invalid_price"
       ],
       "mapping_status": "unverified",
       "last_observed_before_correction": {
@@ -912,8 +911,6 @@
   "remaining_unmapped": [
     "ipfs",
     "nexus-4",
-    "safe",
-    "movement",
     "alchemy",
     "antidote",
     "biodao",
@@ -921,8 +918,6 @@
     "blockscout",
     "chainstack",
     "data-union",
-    "eclipse",
-    "gravity",
     "goldsky",
     "infura",
     "kakarot",
@@ -932,9 +927,6 @@
     "nxyz",
     "powerpod",
     "quicknode",
-    "rari",
-    "redbelly-network",
-    "redstone-finance",
     "securitize",
     "synesis-one",
     "sp-global",
@@ -948,7 +940,7 @@
     "applied": 99,
     "unresolved_quarantined": 51,
     "quarantine_retained": 51,
-    "canonical_symbols_changed": 15,
+    "canonical_symbols_changed": 16,
     "collisions": 0,
     "changes": [
       {
@@ -3358,7 +3350,7 @@
           "cmcId": "29569",
           "cmcSlug": "mountain-protocol"
         },
-        "status": "LIFECYCLE_HOLD_PENDING_QUOTE_AUDIT",
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
         "source": {
           "url": "https://coinmarketcap.com/currencies/mountain-protocol/",
           "ucid": "29569",
@@ -3368,12 +3360,15 @@
         "issuer_source": {
           "url": "https://docs.mountainprotocol.com/legacy-docs/usdm-token",
           "note": "Issuer USDM contract and provider abbreviation agree; UCID 29569 links the same issuer and its wind-down notice. Old 27788 returned TEST. Phase-3 terms effective 2025-08-22 supersede legacy mint/redeem and yield descriptions: issuer platform is decommissioned and no price, liquidity or peg is guaranteed. Correct identity but retain quarantine, with a lifecycle gate beyond numeric PASS. Do not substitute USDC, wUSDM, a redemption value or a fixed $1 spot price. No current full provider explorer-address retrieval is claimed."
-        }
+        },
+        "live_audit_at": "2026-10-18T16:44:29.513Z",
+        "live_audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "live_audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f"
       }
     ],
     "released_after_live_audit": 89,
-    "pending_live_reaudit": 1,
-    "corrected_ids_with_unavailable_market_data": 9,
+    "pending_live_reaudit": 0,
+    "corrected_ids_with_unavailable_market_data": 10,
     "symbol_corrections_within_id_replacements": 11,
     "symbol_corrections_with_retained_ids": 4
   },
@@ -3398,44 +3393,42 @@
     "live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2"
   },
   "remaining_failure_categories": {
-    "symbol_mismatch": 33,
-    "invalid_price_only": 16,
+    "symbol_mismatch": 32,
+    "invalid_price_only": 17,
     "quote_not_returned": 2
   },
   "runtime_parity": {
     "performed": true,
     "execution": "user_browser",
-    "route": "/api/audit-stage5c-runtime?run=1",
-    "scope": "91 corrected releases: 88 numeric-ID replacements and three retained-ID symbol corrections",
-    "commit": "baed82cc9083cf7d07fa8d5efbcd33b9d20fa023",
-    "dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
-    "audit_at": "2026-10-18T13:34:32.382Z",
+    "route": "/api/audit-stage5c-runtime?run=1&review=1",
+    "scope": "93 already released mappings; separate selected candidate proof covers seven additions",
+    "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+    "dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+    "audit_at": "2026-10-18T16:44:29.552Z",
     "counts": {
-      "checked": 91,
-      "pass": 91,
+      "checked": 93,
+      "pass": 93,
       "fail": 0,
       "fields_per_record": 8,
       "provider_batches": 2
     },
-    "fields_per_record": 8,
-    "provider_batches": 2,
-    "exact_field_comparisons": 728,
+    "exact_field_comparisons": 744,
     "all_exact_fields_true": true,
-    "report": "reports/stage5c-runtime-91-audit-20261018.json",
-    "healthz_report": "reports/stage5c-runtime-91-healthz-20261018.json",
+    "report": "reports/stage5c-consolidated-live-audit-20261018.json",
     "source_capture": {
-      "filename": "Вставленный Markdown(20261018-133456).md",
-      "sha256": "889cdc92a18eb8955f9a1d6f71f2f5ddc2e9de319684a8551d6e323523edc3f3",
+      "filename": "Вставленный Markdown(20261018-164447).md",
+      "sha256": "85e02b138e8b0b9b080aee6c4439d1dc46341cea71cd825103f046e400135664",
       "complete_json": true,
-      "recovery": null
+      "recovery": null,
+      "execution": "user_browser"
     },
     "scope_limitations": [
       "Fresh raw batches through actual resolver/service/normalizer with isolated audit caches; not public HTTP/cache/CORS or frontend verification.",
       "Exact provider parity does not independently establish financial data quality, tradability, supply consistency or real-world zeros."
     ]
   },
-  "remaining_failure_categories_note": "Last observed full-audit categories remain historical (33 symbol mismatches,16 invalid-price-only,2 absent). Current expectations add one USDM identity correction pending quote/lifecycle review; do not represent its new quote as observed.",
-  "quarantine_source_audit_at": "2026-10-18T13:54:06.103Z",
+  "remaining_failure_categories_note": "Observed baseline categories at 2026-10-18T16:44:29.513Z. Seven new mappings have additional isolated numeric proof; they do not alter the 51 quarantine failures.",
+  "quarantine_source_audit_at": "2026-10-18T16:44:29.513Z",
   "additional_id_repair": {
     "reviewed_on": "2026-10-13",
     "applied": 3,
@@ -3535,18 +3528,25 @@
     "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
   },
   "runtime_parity_extension": {
-    "performed": false,
-    "route": "/api/audit-stage5c-runtime?run=1",
-    "expected_checked": 93,
-    "expected_field_comparisons": 744,
-    "fields_per_record": 8,
-    "provider_batches": 2,
+    "performed": true,
+    "scope": "7 selected new identities through isolated actual resolver/service/normalizer",
+    "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+    "dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+    "report": "reports/stage5c-consolidated-live-audit-20261018.json",
+    "checked": 7,
+    "pass_count": 7,
+    "fail_count": 0,
+    "exact_field_comparisons": 56,
     "newly_released_canonical_ids": [
-      "the-open-network",
-      "matrixdock"
+      "safe",
+      "movement",
+      "gravity",
+      "redstone-finance",
+      "redbelly-network",
+      "rari",
+      "eclipse"
     ],
-    "previous_evidence_report": "reports/stage5c-runtime-91-audit-20261018.json",
-    "note": "Prior numeric proof verifies 91 releases on baed82c. GRAM and STBT now have strict quote evidence; all-93 positive normalized prices and exact fields remain pending. The existing loop uses two batches (90+3); the nine corrected-ID market-data holds and PCN/PORTX extra gates remain excluded."
+    "note": "Together with the 93-row section this captures all 100 released expectations; not an all-100 public HTTP execution."
   },
   "runtime_parity_history": [
     {
@@ -3766,6 +3766,38 @@
         "Fresh raw batch through actual resolver/service/normalizer with an isolated audit cache; not public HTTP/cache/CORS or frontend verification.",
         "Exact provider parity does not independently prove financial data quality, tradability, supply consistency or real-world zero optional values.",
         "Observed IOTA provider circulating_supply exceeds total_supply; raw values are preserved, not repaired or independently certified."
+      ]
+    },
+    {
+      "performed": true,
+      "execution": "user_browser",
+      "route": "/api/audit-stage5c-runtime?run=1",
+      "scope": "91 corrected releases: 88 numeric-ID replacements and three retained-ID symbol corrections",
+      "commit": "baed82cc9083cf7d07fa8d5efbcd33b9d20fa023",
+      "dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
+      "audit_at": "2026-10-18T13:34:32.382Z",
+      "counts": {
+        "checked": 91,
+        "pass": 91,
+        "fail": 0,
+        "fields_per_record": 8,
+        "provider_batches": 2
+      },
+      "fields_per_record": 8,
+      "provider_batches": 2,
+      "exact_field_comparisons": 728,
+      "all_exact_fields_true": true,
+      "report": "reports/stage5c-runtime-91-audit-20261018.json",
+      "healthz_report": "reports/stage5c-runtime-91-healthz-20261018.json",
+      "source_capture": {
+        "filename": "Вставленный Markdown(20261018-133456).md",
+        "sha256": "889cdc92a18eb8955f9a1d6f71f2f5ddc2e9de319684a8551d6e323523edc3f3",
+        "complete_json": true,
+        "recovery": null
+      },
+      "scope_limitations": [
+        "Fresh raw batches through actual resolver/service/normalizer with isolated audit caches; not public HTTP/cache/CORS or frontend verification.",
+        "Exact provider parity does not independently establish financial data quality, tradability, supply consistency or real-world zeros."
       ]
     }
   ],
@@ -4128,7 +4160,7 @@
   ],
   "symbol_repairs": {
     "reviewed_on": "2026-10-18",
-    "count": 15,
+    "count": 16,
     "changes": [
       {
         "before": "INST",
@@ -4297,6 +4329,15 @@
         ],
         "scope": "Explicit native-token ticker continuity; numeric ID and slug retained. No migration, unit scaling or ticker fallback.",
         "canonical_id": "the-open-network"
+      },
+      {
+        "canonical_id": "eclipse",
+        "before": "ECLIPSE",
+        "after": "ES",
+        "kind": "CATALOG_SYMBOL_CORRECTION_NEW_MAPPING",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://www.eclipse.xyz/articles/updated-es-tokenomics",
+        "scope": "Issuer identifies ES; ECLIPSE was a catalog label, not a verified previously issued ticker. No token migration, scaling or financial-value conversion."
       }
     ],
     "policy": "Permanent canonical IDs, names, sectors and snapshot values remain stable. Numeric provider ID corrections require explicit provider UCID/project identity and retain old mappings. Current-symbol corrections require manual primary issuer token/lineage and exact provider project identity review. Record contract evidence and retrieval limits precisely; issuer documents alone do not prove a fresh valid quote. Preserve prior catalog symbols and retain quarantine until a fresh strict audit and any additional market-validity gate are satisfied. Never resolve by ticker, scale financial values or invent token migrations."
@@ -4790,6 +4831,38 @@
       },
       "healthz_capture_note": "The supplied Health message omits only its final closing brace. All field values are present; saved normalized JSON adds the closing delimiter without inferring any value.",
       "provenance_note": "The unchanged strict route does not embed commit/hash. Pair complete 323-ID coverage with Preview Health about 12 seconds earlier. Unique failure IDs and zero structural errors establish the passing complement; every failure expectation matches the tested table."
+    },
+    {
+      "performed": true,
+      "execution": "user_browser",
+      "commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+      "dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385",
+      "audit_at": "2026-10-18T13:54:06.103Z",
+      "healthz_at": "2026-10-18T13:52:24.197Z",
+      "counts": {
+        "dataset_total": 354,
+        "mapped_expected": 323,
+        "mapped_checked": 323,
+        "unmapped": 31,
+        "returned_quotes": 321,
+        "pass": 272,
+        "fail": 51,
+        "duplicate_cmc_ids": 0,
+        "duplicate_canonical_ids": 0,
+        "batches": 4
+      },
+      "mandatory_all_pass": true,
+      "strict_failures_all_quarantined": true,
+      "slug_only_failures": 0,
+      "report": "reports/stage5c-native-treasury-quote-audit-20261018.json",
+      "healthz_report": "reports/stage5c-native-treasury-healthz-20261018.json",
+      "source_capture": {
+        "filename": "Вставленный Markdown(20261018-135424).md",
+        "sha256": "3235462604c6e0719938655ad0d5d4c84f28d7b273ba13213531e24b8062664f",
+        "complete_json": true,
+        "recovery": null
+      },
+      "provenance_note": "The unchanged full audit does not embed commit/hash. Pair complete 323-ID coverage with supplied Preview Health about 102 seconds earlier; all failure expectations match the tested table. Unique failures and zero structural errors establish the passing complement, including GRAM and STBT. All previous 270 PASS remain passing."
     }
   ],
   "native_symbol_review": {
@@ -5439,11 +5512,462 @@
     "report": "reports/stage5c-consolidated-review-20261018.json",
     "candidate_manifest": "reports/stage5c-candidates-20261018.json",
     "reviewed": 82,
-    "diagnostic_only_candidates": 10,
+    "diagnostic_only_candidates": 3,
     "identity_corrections": 1,
     "taxonomy_corrections": 1,
     "quarantines_released": 0,
-    "status": "LIVE_BATCH_PENDING",
-    "dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f"
+    "status": "SEVEN_APPLIED_THREE_CANDIDATES_HELD",
+    "dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+    "new_mappings_applied": 7,
+    "live_capture_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+    "release_report": "reports/stage5c-consolidated-release-20261018.json",
+    "current_dataset_sha256": "30299813414d75d1e55579660a3ee23eb1f8d15e7cb4d732db20172e3c357ed0"
+  },
+  "new_mapping_release": {
+    "applied": 7,
+    "changes": [
+      {
+        "canonical_id": "safe",
+        "before": {
+          "symbol": "SAFE",
+          "cmcId": null,
+          "cmcSlug": null
+        },
+        "after": {
+          "symbol": "SAFE",
+          "cmcId": "21585",
+          "cmcSlug": "safe1"
+        },
+        "identity_review": {
+          "status": "LIVE_AUDIT_VERIFIED",
+          "reviewed_on": "2026-10-18",
+          "issuer_url": "https://safefoundation.org/token",
+          "source_url": "https://coinmarketcap.com/currencies/safe1/",
+          "notes": "Foundation identifies SAFE on Ethereum at 0x5aFE3855358E112B5647B952709E6165e1c1eEEe. Provider 21585/safe1 links safe.global and displays the same address abbreviation. The /safe listing 3918 is a different Anwang project; reject it. Full provider explorer-address retrieval is not claimed.",
+          "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+          "audit_at": "2026-10-18T16:44:29.478Z",
+          "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+          "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+          "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+          "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_field_comparisons": 8,
+          "public_http_verified": false
+        },
+        "numeric_proof": {
+          "canonical_id": "safe",
+          "cmc_id": "21585",
+          "status": "LIVE",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_fields": {
+            "price_usd": true,
+            "change_24h_pct": true,
+            "change_7d_pct": true,
+            "change_30d_pct": true,
+            "market_cap_usd": true,
+            "fdv_usd": true,
+            "volume_24h_usd": true,
+            "market_cap_rank": true
+          },
+          "market": {
+            "price_usd": 0.10125988144881194,
+            "market_cap_usd": 79303211.35769972,
+            "fdv_usd": 101259881.45,
+            "volume_24h_usd": 1181668.06191348,
+            "change_1h_pct": -2.10027101,
+            "change_24h_pct": -7.81812184,
+            "change_7d_pct": -13.85861439,
+            "change_30d_pct": 1.84320142,
+            "market_cap_rank": 270,
+            "circulating_supply": 783165161,
+            "total_supply": 1000000000,
+            "max_supply": 1000000000
+          },
+          "reasons": [],
+          "identity_research_gate": null,
+          "release_authorized": false
+        }
+      },
+      {
+        "canonical_id": "movement",
+        "before": {
+          "symbol": "MOVE",
+          "cmcId": null,
+          "cmcSlug": null
+        },
+        "after": {
+          "symbol": "MOVE",
+          "cmcId": "32452",
+          "cmcSlug": "movement"
+        },
+        "identity_review": {
+          "status": "LIVE_AUDIT_VERIFIED",
+          "reviewed_on": "2026-10-18",
+          "issuer_url": "https://docs.movementnetwork.xyz/general/usingmovement/connect_to_movement",
+          "source_url": "https://coinmarketcap.com/currencies/movement/",
+          "notes": "Current issuer documentation identifies MOVE in its official wallet and distinguishes live M1 mainnet from testnet. Provider 32452/MOVE/movement links the issuer and shows 0x3073...1a3073. No independently retrieved full issuer/provider ERC20-address match; no testnet-unit pricing.",
+          "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+          "audit_at": "2026-10-18T16:44:29.478Z",
+          "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+          "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+          "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+          "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_field_comparisons": 8,
+          "public_http_verified": false
+        },
+        "numeric_proof": {
+          "canonical_id": "movement",
+          "cmc_id": "32452",
+          "status": "LIVE",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_fields": {
+            "price_usd": true,
+            "change_24h_pct": true,
+            "change_7d_pct": true,
+            "change_30d_pct": true,
+            "market_cap_usd": true,
+            "fdv_usd": true,
+            "volume_24h_usd": true,
+            "market_cap_rank": true
+          },
+          "market": {
+            "price_usd": 0.007193880064620102,
+            "market_cap_usd": 33526478.553554557,
+            "fdv_usd": 71938800.65,
+            "volume_24h_usd": 57501745.3678276,
+            "change_1h_pct": -0.01182763,
+            "change_24h_pct": -3.99235344,
+            "change_7d_pct": -23.39128923,
+            "change_30d_pct": -17.28180088,
+            "market_cap_rank": 489,
+            "circulating_supply": 4660416667,
+            "total_supply": 10000000000,
+            "max_supply": 10000000000
+          },
+          "reasons": [],
+          "identity_research_gate": null,
+          "release_authorized": false
+        }
+      },
+      {
+        "canonical_id": "gravity",
+        "before": {
+          "symbol": "G",
+          "cmcId": null,
+          "cmcSlug": null
+        },
+        "after": {
+          "symbol": "G",
+          "cmcId": "32120",
+          "cmcSlug": "gravity-token"
+        },
+        "identity_review": {
+          "status": "LIVE_AUDIT_VERIFIED",
+          "reviewed_on": "2026-10-18",
+          "issuer_url": "https://www.galxe.com/blog/gal-g",
+          "source_url": "https://coinmarketcap.com/currencies/gravity-token/",
+          "notes": "Galxe issuer announcement identifies Gravity G, native gas and ERC20 representations, with 0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649. Provider 32120/G/gravity-token links gravity.xyz and agrees with the abbreviation. Historical GAL migration is context only; no balance conversion or duplicate GAL quote.",
+          "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+          "audit_at": "2026-10-18T16:44:29.478Z",
+          "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+          "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+          "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+          "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_field_comparisons": 8,
+          "public_http_verified": false
+        },
+        "numeric_proof": {
+          "canonical_id": "gravity",
+          "cmc_id": "32120",
+          "status": "LIVE",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_fields": {
+            "price_usd": true,
+            "change_24h_pct": true,
+            "change_7d_pct": true,
+            "change_30d_pct": true,
+            "market_cap_usd": true,
+            "fdv_usd": true,
+            "volume_24h_usd": true,
+            "market_cap_rank": true
+          },
+          "market": {
+            "price_usd": 0.003585841044429891,
+            "market_cap_usd": 39958461.09450004,
+            "fdv_usd": 43030092.53,
+            "volume_24h_usd": 4374203.08027761,
+            "change_1h_pct": 0.1944747,
+            "change_24h_pct": -3.46959829,
+            "change_7d_pct": -17.57950564,
+            "change_30d_pct": -58.64386995,
+            "market_cap_rank": 427,
+            "circulating_supply": 11143400000,
+            "total_supply": 12000000000,
+            "max_supply": 12000000000
+          },
+          "reasons": [],
+          "identity_research_gate": null,
+          "release_authorized": false
+        }
+      },
+      {
+        "canonical_id": "redstone-finance",
+        "before": {
+          "symbol": "RED",
+          "cmcId": null,
+          "cmcSlug": null
+        },
+        "after": {
+          "symbol": "RED",
+          "cmcId": "21707",
+          "cmcSlug": "redstone"
+        },
+        "identity_review": {
+          "status": "LIVE_AUDIT_VERIFIED",
+          "reviewed_on": "2026-10-18",
+          "issuer_url": "https://www.redstone.finance/red-token",
+          "source_url": "https://coinmarketcap.com/currencies/redstone/",
+          "notes": "Issuer identifies RED as the RedStone oracle utility token; issuer tokenomics identifies Ethereum ERC20. Provider 21707/RED/redstone links redstone.finance. No full issuer/provider contract match was obtained; the failed guessed /redstone-oracles URL is not the listing.",
+          "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+          "audit_at": "2026-10-18T16:44:29.478Z",
+          "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+          "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+          "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+          "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_field_comparisons": 8,
+          "public_http_verified": false
+        },
+        "numeric_proof": {
+          "canonical_id": "redstone-finance",
+          "cmc_id": "21707",
+          "status": "LIVE",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_fields": {
+            "price_usd": true,
+            "change_24h_pct": true,
+            "change_7d_pct": true,
+            "change_30d_pct": true,
+            "market_cap_usd": true,
+            "fdv_usd": true,
+            "volume_24h_usd": true,
+            "market_cap_rank": true
+          },
+          "market": {
+            "price_usd": 0.1346400366770437,
+            "market_cap_usd": 73720239.65543431,
+            "fdv_usd": 134640036.68,
+            "volume_24h_usd": 2316325.7871646,
+            "change_1h_pct": 0.07703781,
+            "change_24h_pct": -3.59162279,
+            "change_7d_pct": -11.86364188,
+            "change_30d_pct": -7.3723875,
+            "market_cap_rank": 286,
+            "circulating_supply": 547535796,
+            "total_supply": 1000000000,
+            "max_supply": 1000000000
+          },
+          "reasons": [],
+          "identity_research_gate": null,
+          "release_authorized": false
+        }
+      },
+      {
+        "canonical_id": "redbelly-network",
+        "before": {
+          "symbol": "RBNT",
+          "cmcId": null,
+          "cmcSlug": null
+        },
+        "after": {
+          "symbol": "RBNT",
+          "cmcId": "34849",
+          "cmcSlug": "redbelly-network"
+        },
+        "identity_review": {
+          "status": "LIVE_AUDIT_VERIFIED",
+          "reviewed_on": "2026-10-18",
+          "issuer_url": "https://vine.redbelly.network/native-currency/",
+          "source_url": "https://coinmarketcap.com/currencies/redbelly-network/",
+          "notes": "Issuer identifies mainnet native RBNT and distinguishes it from testnet faucet coins. Provider 34849/RBNT links redbelly.network. No full cross-chain token-contract match was retrieved; do not select an arbitrary same-ticker Base token.",
+          "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+          "audit_at": "2026-10-18T16:44:29.478Z",
+          "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+          "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+          "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+          "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_field_comparisons": 8,
+          "public_http_verified": false
+        },
+        "numeric_proof": {
+          "canonical_id": "redbelly-network",
+          "cmc_id": "34849",
+          "status": "LIVE",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_fields": {
+            "price_usd": true,
+            "change_24h_pct": true,
+            "change_7d_pct": true,
+            "change_30d_pct": true,
+            "market_cap_usd": true,
+            "fdv_usd": true,
+            "volume_24h_usd": true,
+            "market_cap_rank": true
+          },
+          "market": {
+            "price_usd": 0.001656661837229497,
+            "market_cap_usd": 4995525.468485814,
+            "fdv_usd": 16566618.37,
+            "volume_24h_usd": 172495.84849862,
+            "change_1h_pct": -2.6291274,
+            "change_24h_pct": -7.97067074,
+            "change_7d_pct": -23.64477852,
+            "change_30d_pct": -29.95539397,
+            "market_cap_rank": 1239,
+            "circulating_supply": 3015416517.8574,
+            "total_supply": 10000000000,
+            "max_supply": 10000000000
+          },
+          "reasons": [],
+          "identity_research_gate": null,
+          "release_authorized": false
+        }
+      },
+      {
+        "canonical_id": "rari",
+        "before": {
+          "symbol": "RARI",
+          "cmcId": null,
+          "cmcSlug": null
+        },
+        "after": {
+          "symbol": "RARI",
+          "cmcId": "5877",
+          "cmcSlug": "rarible"
+        },
+        "identity_review": {
+          "status": "LIVE_AUDIT_VERIFIED",
+          "reviewed_on": "2026-10-18",
+          "issuer_url": "https://rari.foundation/faq",
+          "source_url": "https://coinmarketcap.com/currencies/rarible/",
+          "notes": "Foundation identifies RARI governance across RARI Chain, Arbitrum and Ethereum. Issuer governance proposal gives Ethereum 0xfca59cd816ab1ead66534d82bc21e7515ce441cf; provider 5877/RARI/rarible links the Foundation and agrees with that abbreviation. This is the ecosystem governance token, not an L2 gas-token assumption.",
+          "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+          "audit_at": "2026-10-18T16:44:29.478Z",
+          "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+          "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+          "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+          "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_field_comparisons": 8,
+          "public_http_verified": false
+        },
+        "numeric_proof": {
+          "canonical_id": "rari",
+          "cmc_id": "5877",
+          "status": "LIVE",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_fields": {
+            "price_usd": true,
+            "change_24h_pct": true,
+            "change_7d_pct": true,
+            "change_30d_pct": true,
+            "market_cap_usd": true,
+            "fdv_usd": true,
+            "volume_24h_usd": true,
+            "market_cap_rank": true
+          },
+          "market": {
+            "price_usd": 0.15260974904943933,
+            "market_cap_usd": 2974200.379568286,
+            "fdv_usd": 3815243.73,
+            "volume_24h_usd": 150765.97571083,
+            "change_1h_pct": -0.61087851,
+            "change_24h_pct": -3.81679444,
+            "change_7d_pct": -9.90960672,
+            "change_30d_pct": 72.43995608,
+            "market_cap_rank": 1474,
+            "circulating_supply": 19488927.79192479,
+            "total_supply": 25000000,
+            "max_supply": 25000000
+          },
+          "reasons": [],
+          "identity_research_gate": null,
+          "release_authorized": false
+        }
+      },
+      {
+        "canonical_id": "eclipse",
+        "before": {
+          "symbol": "ECLIPSE",
+          "cmcId": null,
+          "cmcSlug": null
+        },
+        "after": {
+          "symbol": "ES",
+          "cmcId": "36174",
+          "cmcSlug": "eclipse-xyz"
+        },
+        "identity_review": {
+          "status": "LIVE_AUDIT_VERIFIED",
+          "reviewed_on": "2026-10-18",
+          "issuer_url": "https://www.eclipse.xyz/articles/updated-es-tokenomics",
+          "source_url": "https://coinmarketcap.com/currencies/eclipse-xyz/",
+          "notes": "Current issuer update identifies ES as its only token, now aligned with Human API, while the chain still uses ETH for gas. Provider 36174/ES/eclipse-xyz links the same project. ECLIPSE is a catalog label, not a verified historical token ticker; no conversion or renamed-token migration is inferred.",
+          "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+          "audit_at": "2026-10-18T16:44:29.478Z",
+          "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+          "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+          "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+          "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_field_comparisons": 8,
+          "public_http_verified": false
+        },
+        "numeric_proof": {
+          "canonical_id": "eclipse",
+          "cmc_id": "36174",
+          "status": "LIVE",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_fields": {
+            "price_usd": true,
+            "change_24h_pct": true,
+            "change_7d_pct": true,
+            "change_30d_pct": true,
+            "market_cap_usd": true,
+            "fdv_usd": true,
+            "volume_24h_usd": true,
+            "market_cap_rank": true
+          },
+          "market": {
+            "price_usd": 0.000887455460317855,
+            "market_cap_usd": 117719.06765647834,
+            "fdv_usd": 887455.46,
+            "volume_24h_usd": 1110603.60727824,
+            "change_1h_pct": -3.08998858,
+            "change_24h_pct": -13.15885263,
+            "change_7d_pct": -1.39518119,
+            "change_30d_pct": -26.56352164,
+            "market_cap_rank": 2973,
+            "circulating_supply": 132647860,
+            "total_supply": 1000000000,
+            "max_supply": 1000000000
+          },
+          "reasons": [],
+          "identity_research_gate": null,
+          "release_authorized": false
+        }
+      }
+    ],
+    "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+    "source_capture": {
+      "filename": "Вставленный Markdown(20261018-164447).md",
+      "sha256": "85e02b138e8b0b9b080aee6c4439d1dc46341cea71cd825103f046e400135664",
+      "complete_json": true,
+      "recovery": null,
+      "execution": "user_browser"
+    }
   }
 }
