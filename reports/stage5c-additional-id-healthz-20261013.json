@@ -1,0 +1,52 @@
+{
+  "ok": true,
+  "status": "UP",
+  "stats": {
+    "cache": {
+      "size": 0,
+      "inflight": 0,
+      "ttlMs": 60000
+    },
+    "adapterAuthAvailable": true,
+    "accessMode": "PRO_API",
+    "resolverSize": 354
+  },
+  "resolver": {
+    "total": 354,
+    "cmc_mapped": 323,
+    "no_cmc_mapping": 31
+  },
+  "canonical_dataset": {
+    "sha256": "aca53d7134395f404b65b0485b57e7d4672625126b2b95bc55d96c05d8e06da3",
+    "git_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22",
+    "mapping_repair": {
+      "stage": "5C",
+      "status": "ADDITIONAL_ID_CORRECTIONS_PENDING_LIVE_REAUDIT",
+      "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
+      "source_audit_at": "2026-10-12T10:20:26.406Z",
+      "slug_corrections": 22,
+      "quarantined": 69,
+      "quarantined_symbol_mismatches": 55,
+      "quarantined_market_data_failures": 11,
+      "id_corrections": 78,
+      "identity_review_remaining": 69,
+      "last_live_audit_at": "2026-10-12T11:46:50.714Z",
+      "last_live_audit_commit": "a389303318fdea3c979c86f5d82ce040f75bdf23",
+      "last_live_audit_pass": 254,
+      "last_live_audit_fail": 69,
+      "released_after_live_audit": 75,
+      "last_live_audit_dataset_sha256": "ecd5469fe740e7b30c6e365947a2c971c7665aa1fec7a465c5dd3362beb541ef",
+      "pending_id_corrections": 3,
+      "quarantined_quote_pending": 3
+    },
+    "eligible": 254,
+    "quarantined": 69
+  },
+  "uptime_seconds": 0,
+  "node_version": "v22.23.2",
+  "vercel_region": "iad1",
+  "vercel_env": "preview",
+  "cmc_api_key_present": true,
+  "ts": "2026-10-13T12:59:28.861Z",
+  "elapsed_ms": 11
+}

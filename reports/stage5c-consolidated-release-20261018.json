@@ -1,0 +1,655 @@
+{
+  "stage": "5C",
+  "status": "SEVEN_REVIEWED_MAPPINGS_APPLIED_PUBLIC_HTTP_PENDING",
+  "reviewed_on": "2026-10-18",
+  "source_capture": {
+    "filename": "Вставленный Markdown(20261018-164447).md",
+    "sha256": "85e02b138e8b0b9b080aee6c4439d1dc46341cea71cd825103f046e400135664",
+    "complete_json": true,
+    "recovery": null,
+    "execution": "user_browser"
+  },
+  "tested_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+  "tested_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+  "new_dataset_sha256": "30299813414d75d1e55579660a3ee23eb1f8d15e7cb4d732db20172e3c357ed0",
+  "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+  "counts": {
+    "previous_eligible": 272,
+    "current_eligible": 279,
+    "previous_mapped": 323,
+    "current_mapped": 330,
+    "previous_unmapped": 31,
+    "current_unmapped": 24,
+    "quarantined": 51,
+    "released_existing_runtime_pass": 93,
+    "released_existing_exact_fields": 744,
+    "candidate_pass": 9,
+    "candidate_fail": 1,
+    "new_mappings_applied": 7,
+    "new_mapping_exact_fields": 56
+  },
+  "applied": [
+    {
+      "canonical_id": "safe",
+      "before": {
+        "symbol": "SAFE",
+        "cmcId": null,
+        "cmcSlug": null
+      },
+      "after": {
+        "symbol": "SAFE",
+        "cmcId": "21585",
+        "cmcSlug": "safe1"
+      },
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://safefoundation.org/token",
+        "source_url": "https://coinmarketcap.com/currencies/safe1/",
+        "notes": "Foundation identifies SAFE on Ethereum at 0x5aFE3855358E112B5647B952709E6165e1c1eEEe. Provider 21585/safe1 links safe.global and displays the same address abbreviation. The /safe listing 3918 is a different Anwang project; reject it. Full provider explorer-address retrieval is not claimed.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      },
+      "numeric_proof": {
+        "canonical_id": "safe",
+        "cmc_id": "21585",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.10125988144881194,
+          "market_cap_usd": 79303211.35769972,
+          "fdv_usd": 101259881.45,
+          "volume_24h_usd": 1181668.06191348,
+          "change_1h_pct": -2.10027101,
+          "change_24h_pct": -7.81812184,
+          "change_7d_pct": -13.85861439,
+          "change_30d_pct": 1.84320142,
+          "market_cap_rank": 270,
+          "circulating_supply": 783165161,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      }
+    },
+    {
+      "canonical_id": "movement",
+      "before": {
+        "symbol": "MOVE",
+        "cmcId": null,
+        "cmcSlug": null
+      },
+      "after": {
+        "symbol": "MOVE",
+        "cmcId": "32452",
+        "cmcSlug": "movement"
+      },
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://docs.movementnetwork.xyz/general/usingmovement/connect_to_movement",
+        "source_url": "https://coinmarketcap.com/currencies/movement/",
+        "notes": "Current issuer documentation identifies MOVE in its official wallet and distinguishes live M1 mainnet from testnet. Provider 32452/MOVE/movement links the issuer and shows 0x3073...1a3073. No independently retrieved full issuer/provider ERC20-address match; no testnet-unit pricing.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      },
+      "numeric_proof": {
+        "canonical_id": "movement",
+        "cmc_id": "32452",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.007193880064620102,
+          "market_cap_usd": 33526478.553554557,
+          "fdv_usd": 71938800.65,
+          "volume_24h_usd": 57501745.3678276,
+          "change_1h_pct": -0.01182763,
+          "change_24h_pct": -3.99235344,
+          "change_7d_pct": -23.39128923,
+          "change_30d_pct": -17.28180088,
+          "market_cap_rank": 489,
+          "circulating_supply": 4660416667,
+          "total_supply": 10000000000,
+          "max_supply": 10000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      }
+    },
+    {
+      "canonical_id": "gravity",
+      "before": {
+        "symbol": "G",
+        "cmcId": null,
+        "cmcSlug": null
+      },
+      "after": {
+        "symbol": "G",
+        "cmcId": "32120",
+        "cmcSlug": "gravity-token"
+      },
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://www.galxe.com/blog/gal-g",
+        "source_url": "https://coinmarketcap.com/currencies/gravity-token/",
+        "notes": "Galxe issuer announcement identifies Gravity G, native gas and ERC20 representations, with 0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649. Provider 32120/G/gravity-token links gravity.xyz and agrees with the abbreviation. Historical GAL migration is context only; no balance conversion or duplicate GAL quote.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      },
+      "numeric_proof": {
+        "canonical_id": "gravity",
+        "cmc_id": "32120",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.003585841044429891,
+          "market_cap_usd": 39958461.09450004,
+          "fdv_usd": 43030092.53,
+          "volume_24h_usd": 4374203.08027761,
+          "change_1h_pct": 0.1944747,
+          "change_24h_pct": -3.46959829,
+          "change_7d_pct": -17.57950564,
+          "change_30d_pct": -58.64386995,
+          "market_cap_rank": 427,
+          "circulating_supply": 11143400000,
+          "total_supply": 12000000000,
+          "max_supply": 12000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      }
+    },
+    {
+      "canonical_id": "redstone-finance",
+      "before": {
+        "symbol": "RED",
+        "cmcId": null,
+        "cmcSlug": null
+      },
+      "after": {
+        "symbol": "RED",
+        "cmcId": "21707",
+        "cmcSlug": "redstone"
+      },
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://www.redstone.finance/red-token",
+        "source_url": "https://coinmarketcap.com/currencies/redstone/",
+        "notes": "Issuer identifies RED as the RedStone oracle utility token; issuer tokenomics identifies Ethereum ERC20. Provider 21707/RED/redstone links redstone.finance. No full issuer/provider contract match was obtained; the failed guessed /redstone-oracles URL is not the listing.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      },
+      "numeric_proof": {
+        "canonical_id": "redstone-finance",
+        "cmc_id": "21707",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.1346400366770437,
+          "market_cap_usd": 73720239.65543431,
+          "fdv_usd": 134640036.68,
+          "volume_24h_usd": 2316325.7871646,
+          "change_1h_pct": 0.07703781,
+          "change_24h_pct": -3.59162279,
+          "change_7d_pct": -11.86364188,
+          "change_30d_pct": -7.3723875,
+          "market_cap_rank": 286,
+          "circulating_supply": 547535796,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      }
+    },
+    {
+      "canonical_id": "redbelly-network",
+      "before": {
+        "symbol": "RBNT",
+        "cmcId": null,
+        "cmcSlug": null
+      },
+      "after": {
+        "symbol": "RBNT",
+        "cmcId": "34849",
+        "cmcSlug": "redbelly-network"
+      },
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://vine.redbelly.network/native-currency/",
+        "source_url": "https://coinmarketcap.com/currencies/redbelly-network/",
+        "notes": "Issuer identifies mainnet native RBNT and distinguishes it from testnet faucet coins. Provider 34849/RBNT links redbelly.network. No full cross-chain token-contract match was retrieved; do not select an arbitrary same-ticker Base token.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      },
+      "numeric_proof": {
+        "canonical_id": "redbelly-network",
+        "cmc_id": "34849",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.001656661837229497,
+          "market_cap_usd": 4995525.468485814,
+          "fdv_usd": 16566618.37,
+          "volume_24h_usd": 172495.84849862,
+          "change_1h_pct": -2.6291274,
+          "change_24h_pct": -7.97067074,
+          "change_7d_pct": -23.64477852,
+          "change_30d_pct": -29.95539397,
+          "market_cap_rank": 1239,
+          "circulating_supply": 3015416517.8574,
+          "total_supply": 10000000000,
+          "max_supply": 10000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      }
+    },
+    {
+      "canonical_id": "rari",
+      "before": {
+        "symbol": "RARI",
+        "cmcId": null,
+        "cmcSlug": null
+      },
+      "after": {
+        "symbol": "RARI",
+        "cmcId": "5877",
+        "cmcSlug": "rarible"
+      },
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://rari.foundation/faq",
+        "source_url": "https://coinmarketcap.com/currencies/rarible/",
+        "notes": "Foundation identifies RARI governance across RARI Chain, Arbitrum and Ethereum. Issuer governance proposal gives Ethereum 0xfca59cd816ab1ead66534d82bc21e7515ce441cf; provider 5877/RARI/rarible links the Foundation and agrees with that abbreviation. This is the ecosystem governance token, not an L2 gas-token assumption.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      },
+      "numeric_proof": {
+        "canonical_id": "rari",
+        "cmc_id": "5877",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.15260974904943933,
+          "market_cap_usd": 2974200.379568286,
+          "fdv_usd": 3815243.73,
+          "volume_24h_usd": 150765.97571083,
+          "change_1h_pct": -0.61087851,
+          "change_24h_pct": -3.81679444,
+          "change_7d_pct": -9.90960672,
+          "change_30d_pct": 72.43995608,
+          "market_cap_rank": 1474,
+          "circulating_supply": 19488927.79192479,
+          "total_supply": 25000000,
+          "max_supply": 25000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      }
+    },
+    {
+      "canonical_id": "eclipse",
+      "before": {
+        "symbol": "ECLIPSE",
+        "cmcId": null,
+        "cmcSlug": null
+      },
+      "after": {
+        "symbol": "ES",
+        "cmcId": "36174",
+        "cmcSlug": "eclipse-xyz"
+      },
+      "identity_review": {
+        "status": "LIVE_AUDIT_VERIFIED",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://www.eclipse.xyz/articles/updated-es-tokenomics",
+        "source_url": "https://coinmarketcap.com/currencies/eclipse-xyz/",
+        "notes": "Current issuer update identifies ES as its only token, now aligned with Human API, while the chain still uses ETH for gas. Provider 36174/ES/eclipse-xyz links the same project. ECLIPSE is a catalog label, not a verified historical token ticker; no conversion or renamed-token migration is inferred.",
+        "audit_kind": "ISOLATED_CANDIDATE_RUNTIME_PARITY",
+        "audit_at": "2026-10-18T16:44:29.478Z",
+        "audit_commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+        "audit_dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+        "candidate_manifest_sha256": "d035c659d61c7456a5baed451e7e509ecb2e15b567b84f934ef92ebb7777ac91",
+        "audit_report": "reports/stage5c-consolidated-live-audit-20261018.json",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_field_comparisons": 8,
+        "public_http_verified": false
+      },
+      "numeric_proof": {
+        "canonical_id": "eclipse",
+        "cmc_id": "36174",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 0.000887455460317855,
+          "market_cap_usd": 117719.06765647834,
+          "fdv_usd": 887455.46,
+          "volume_24h_usd": 1110603.60727824,
+          "change_1h_pct": -3.08998858,
+          "change_24h_pct": -13.15885263,
+          "change_7d_pct": -1.39518119,
+          "change_30d_pct": -26.56352164,
+          "market_cap_rank": 2973,
+          "circulating_supply": 132647860,
+          "total_supply": 1000000000,
+          "max_supply": 1000000000
+        },
+        "reasons": [],
+        "identity_research_gate": null,
+        "release_authorized": false
+      }
+    }
+  ],
+  "held": [
+    {
+      "candidate": {
+        "canonical_id": "synesis-one",
+        "symbol": "SNS",
+        "cmc_id": "17231",
+        "cmc_slug": "synesis-one",
+        "issuer_url": "https://synesis.gitbook.io/synesisone/12.-anatomy-of-dual-token-model/12.2-on-synesis-usdsns",
+        "provider_url": "https://coinmarketcap.com/currencies/synesis-one/",
+        "reviewed_on": "2026-10-18",
+        "evidence_note": "Issuer whitepaper identifies SNS governance; provider 17231/SNS links synesis.one and displays Solana mint SNSNkV...CDvdMd. Current homepage text was not available. Full current issuer mint/lifecycle confirmation remains required even if the diagnostic quote passes.",
+        "identity_gate": "CURRENT_ISSUER_MINT_AND_LIFECYCLE_REQUIRED",
+        "applied_to_canonical_dataset": false,
+        "release_authorized": false,
+        "latest_diagnostic": {
+          "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+          "at": "2026-10-18T16:44:29.478Z",
+          "status": "LIVE",
+          "reasons": [],
+          "report": "reports/stage5c-consolidated-live-audit-20261018.json"
+        }
+      },
+      "diagnostic": {
+        "canonical_id": "synesis-one",
+        "cmc_id": "17231",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 1.246743570227e-05,
+          "market_cap_usd": 5688.301925096172,
+          "fdv_usd": 12467.39,
+          "volume_24h_usd": 306.4851396,
+          "change_1h_pct": -1.46946168,
+          "change_24h_pct": 14.00153915,
+          "change_7d_pct": -15.77650046,
+          "change_30d_pct": 5.63267321,
+          "market_cap_rank": 3861,
+          "circulating_supply": 456252758.06,
+          "total_supply": 999996689,
+          "max_supply": null
+        },
+        "reasons": [],
+        "identity_research_gate": "CURRENT_ISSUER_MINT_AND_LIFECYCLE_REQUIRED",
+        "release_authorized": false
+      }
+    },
+    {
+      "candidate": {
+        "canonical_id": "wayru",
+        "symbol": "WAYRU",
+        "cmc_id": "36316",
+        "cmc_slug": "wayru",
+        "issuer_url": "https://github.com/Wayru-Network/explorer-web",
+        "provider_url": "https://coinmarketcap.com/currencies/wayru/",
+        "reviewed_on": "2026-10-18",
+        "evidence_note": "Issuer project repository describes WAYRU staking/rewards on Solana; issuer docs describe rewards, while provider 36316 is a preview linking wayru.io/docs.wayru.io and mint WAYRUy...zdrAV3. Direct homepage/docs-root retrieval failed; current full issuer mint and live external market remain unconfirmed.",
+        "identity_gate": "CURRENT_ISSUER_MINT_AND_MARKET_REQUIRED",
+        "applied_to_canonical_dataset": false,
+        "release_authorized": false,
+        "latest_diagnostic": {
+          "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+          "at": "2026-10-18T16:44:29.478Z",
+          "status": "INVALID_RESPONSE",
+          "reasons": [
+            "INVALID_RESPONSE",
+            "INVALID_RUNTIME_PRICE",
+            "FIELD_VALUE_MISMATCH:price_usd",
+            "FIELD_VALUE_MISMATCH:change_24h_pct",
+            "FIELD_VALUE_MISMATCH:change_7d_pct",
+            "FIELD_VALUE_MISMATCH:change_30d_pct",
+            "FIELD_VALUE_MISMATCH:market_cap_usd",
+            "FIELD_VALUE_MISMATCH:fdv_usd",
+            "FIELD_VALUE_MISMATCH:volume_24h_usd",
+            "FIELD_VALUE_MISMATCH:market_cap_rank"
+          ],
+          "report": "reports/stage5c-consolidated-live-audit-20261018.json"
+        }
+      },
+      "diagnostic": {
+        "canonical_id": "wayru",
+        "cmc_id": "36316",
+        "status": "INVALID_RESPONSE",
+        "provider_updated_at": null,
+        "exact_fields": {
+          "price_usd": false,
+          "change_24h_pct": false,
+          "change_7d_pct": false,
+          "change_30d_pct": false,
+          "market_cap_usd": false,
+          "fdv_usd": false,
+          "volume_24h_usd": false,
+          "market_cap_rank": false
+        },
+        "market": null,
+        "reasons": [
+          "INVALID_RESPONSE",
+          "INVALID_RUNTIME_PRICE",
+          "FIELD_VALUE_MISMATCH:price_usd",
+          "FIELD_VALUE_MISMATCH:change_24h_pct",
+          "FIELD_VALUE_MISMATCH:change_7d_pct",
+          "FIELD_VALUE_MISMATCH:change_30d_pct",
+          "FIELD_VALUE_MISMATCH:market_cap_usd",
+          "FIELD_VALUE_MISMATCH:fdv_usd",
+          "FIELD_VALUE_MISMATCH:volume_24h_usd",
+          "FIELD_VALUE_MISMATCH:market_cap_rank"
+        ],
+        "identity_research_gate": "CURRENT_ISSUER_MINT_AND_MARKET_REQUIRED",
+        "release_authorized": false
+      }
+    },
+    {
+      "candidate": {
+        "canonical_id": "nexus-4",
+        "symbol": "NEX",
+        "cmc_id": "39965",
+        "cmc_slug": "nexus-labs",
+        "issuer_url": "https://nexus.xyz/",
+        "provider_url": "https://coinmarketcap.com/currencies/nexus-labs/",
+        "reviewed_on": "2026-10-18",
+        "evidence_note": "Provider 39965/NEX/nexus-labs links nexus.xyz and docs.nexus.xyz. Current issuer homepage describes an exchange and testnet APIs but did not establish a current NEX contract in retrieved content. Same-name/ticker projects exist. Provider metadata alone is a research lead; diagnostic PASS cannot authorize mapping.",
+        "identity_gate": "CURRENT_ISSUER_TOKEN_CONTRACT_REQUIRED",
+        "applied_to_canonical_dataset": false,
+        "release_authorized": false,
+        "latest_diagnostic": {
+          "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+          "at": "2026-10-18T16:44:29.478Z",
+          "status": "LIVE",
+          "reasons": [],
+          "report": "reports/stage5c-consolidated-live-audit-20261018.json"
+        }
+      },
+      "diagnostic": {
+        "canonical_id": "nexus-4",
+        "cmc_id": "39965",
+        "status": "LIVE",
+        "provider_updated_at": "2026-10-18T16:43:03.000Z",
+        "exact_fields": {
+          "price_usd": true,
+          "change_24h_pct": true,
+          "change_7d_pct": true,
+          "change_30d_pct": true,
+          "market_cap_usd": true,
+          "fdv_usd": true,
+          "volume_24h_usd": true,
+          "market_cap_rank": true
+        },
+        "market": {
+          "price_usd": 7.051407412684983e-07,
+          "market_cap_usd": 42308444.4761099,
+          "fdv_usd": 70514074.13,
+          "volume_24h_usd": 1135255.5506776,
+          "change_1h_pct": -0.21493121,
+          "change_24h_pct": 0.33104643,
+          "change_7d_pct": -13.17745021,
+          "change_30d_pct": -32.9847938,
+          "market_cap_rank": 409,
+          "circulating_supply": 60000000000000,
+          "total_supply": 100000000000000,
+          "max_supply": 100000000000000
+        },
+        "reasons": [],
+        "identity_research_gate": "CURRENT_ISSUER_TOKEN_CONTRACT_REQUIRED",
+        "release_authorized": false
+      }
+    }
+  ],
+  "limits": [
+    "The full baseline audit checked 323 existing IDs; the seven additions passed a separate isolated pipeline in the same version-stamped capture.",
+    "744 existing plus 56 selected candidate exact fields provide numeric proof for 100 released expectations across two sections, not one public HTTP run.",
+    "SNS and NEX positive quotes do not resolve their issuer gates. WAYRU has no usable normalized price; zero/null raw values cannot be inferred from its failure envelope.",
+    "No quarantine is released. USDM now matches expected identity but fails price and retains WIND_DOWN_EXTERNAL_MARKET_VALIDITY_REQUIRED. PCN/PORTX gates remain.",
+    "Exact provider parity does not independently certify financial validity, tradability or supply consistency. Public HTTP/cache/CORS/frontend checks remain pending."
+  ],
+  "catalog_contract": "reports/stage5c-catalog-contract-20261018.json",
+  "production_promoted": false,
+  "stage_complete": false,
+  "tested_candidate_manifest": "reports/stage5c-candidate-expectations-tested-20261018.json",
+  "offline_validation_report": "reports/stage5c-seven-release-validation-20261018.json"
+}

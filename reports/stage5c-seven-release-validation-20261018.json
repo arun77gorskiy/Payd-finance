@@ -1,0 +1,43 @@
+{
+  "validation": "OFFLINE_TESTS_PLUS_SUPPLIED_LIVE_EVIDENCE",
+  "tests": {
+    "pass_count": 90,
+    "fail_count": 0,
+    "provider_network_calls": 0,
+    "local_http_integration": true
+  },
+  "supplied_live_evidence": {
+    "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+    "dataset_sha256": "e30c0ccb9774be718020eb96d7015aeed34c6c336cde2e0430475a8d76d4eb3f",
+    "runtime_rows": 93,
+    "runtime_exact_fields": 744,
+    "selected_candidates": 7,
+    "selected_exact_fields": 56,
+    "capture_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+  },
+  "dataset_sha256": "30299813414d75d1e55579660a3ee23eb1f8d15e7cb4d732db20172e3c357ed0",
+  "applied": [
+    "eclipse",
+    "gravity",
+    "movement",
+    "rari",
+    "redbelly-network",
+    "redstone-finance",
+    "safe"
+  ],
+  "mapped": 330,
+  "eligible": 279,
+  "quarantined": 51,
+  "unmapped": 24,
+  "retained_old_release_rows": 93,
+  "previous_releases_unchanged": true,
+  "snapshots_names_sectors_canonical_ids_preserved": true,
+  "only_symbol_change": "ECLIPSE catalog label -> ES",
+  "no_new_public_http_live_proof": true,
+  "strict_stage5b_sha256": "304facd562956f7b712dee704fe86531c94a98dd504406b81b4b79e3f23aeb55",
+  "explicit_catalog_contract": "STAGE5C_CATALOG_330_V1",
+  "function_count": 12,
+  "production_promoted": false,
+  "frontend_enabled": false,
+  "stage_complete": false
+}

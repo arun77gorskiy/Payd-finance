@@ -1,0 +1,64 @@
+{
+  "ok": true,
+  "status": "UP",
+  "stats": {
+    "cache": {
+      "size": 0,
+      "inflight": 0,
+      "ttlMs": 60000
+    },
+    "adapterAuthAvailable": true,
+    "accessMode": "PRO_API",
+    "resolverSize": 354
+  },
+  "resolver": {
+    "total": 354,
+    "cmc_mapped": 323,
+    "no_cmc_mapping": 31
+  },
+  "canonical_dataset": {
+    "sha256": "6b935555baac280532325169f0916ef8a7c751bfab30b68e51bf4c62ed844da3",
+    "git_commit": "7c36bfbb093fa6bbbab90726a6a908ede4b6a7df",
+    "mapping_repair": {
+      "stage": "5C",
+      "status": "PARTIAL_LIVE_VERIFIED_RUNTIME_EXTENSION_PENDING",
+      "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
+      "source_audit_at": "2026-10-12T10:20:26.406Z",
+      "slug_corrections": 23,
+      "quarantined": 57,
+      "quarantined_symbol_mismatches": 39,
+      "quarantined_market_data_failures": 18,
+      "id_corrections": 92,
+      "identity_review_remaining": 57,
+      "last_live_audit_at": "2026-10-16T20:33:41.731Z",
+      "last_live_audit_commit": "38c3eb5f579c92fb4ade2cbd01b359c324b1be71",
+      "last_live_audit_pass": 266,
+      "last_live_audit_fail": 57,
+      "released_after_live_audit": 87,
+      "last_live_audit_dataset_sha256": "54f0ae2cf8f65482203fa69b3e63959f089657900882db336683c718a3566377",
+      "pending_id_corrections": 0,
+      "quarantined_quote_pending": 0,
+      "corrected_ids_with_unavailable_market_data": 8,
+      "runtime_parity_checked_releases": 85,
+      "runtime_parity_pending_releases": 2,
+      "last_runtime_audit_at": "2026-10-16T19:02:13.002Z",
+      "last_runtime_audit_commit": "00a1a12c57ae975eaac34e4750b90fb8bed3d613",
+      "last_runtime_audit_dataset_sha256": "c8d017822b567608f2670a86c797f4edb52e5c8d5c138fe3b8b78cc71c1f55b4",
+      "last_runtime_audit_pass": 85,
+      "last_runtime_audit_fail": 0,
+      "canonical_symbol_corrections": 10,
+      "pending_symbol_corrections": 0,
+      "released_id_corrections": 84,
+      "released_symbol_only_corrections": 3
+    },
+    "eligible": 266,
+    "quarantined": 57
+  },
+  "uptime_seconds": 0,
+  "node_version": "v22.23.2",
+  "vercel_region": "iad1",
+  "vercel_env": "preview",
+  "cmc_api_key_present": true,
+  "ts": "2026-10-16T20:50:01.705Z",
+  "elapsed_ms": 14
+}

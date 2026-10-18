@@ -1,0 +1,123 @@
+{
+  "stage": "5C",
+  "status": "FRONTEND_CLIENT_PREPARED_NOT_ENABLED",
+  "captured_at": "2026-10-18T17:36:55.470579+00:00",
+  "backend_base_commit": "ea4de7ad0036adb311045d3fd77d2b00bd1701f5",
+  "dataset_sha256": "30299813414d75d1e55579660a3ee23eb1f8d15e7cb4d732db20172e3c357ed0",
+  "counts": {
+    "total": 354,
+    "mapped": 330,
+    "eligible": 279,
+    "quarantined": 51,
+    "unmapped": 24
+  },
+  "frontend": {
+    "origin": "https://hksp6x4kqtxs.space.mcode.io",
+    "http_status": 200,
+    "title": "Payd_Finance | AI Crypto Trading & Education",
+    "archive_branch": "payd-v2-step4-boot-optimization",
+    "archive_commit": "e96342141127118bdae89d8073a040bc56045b14",
+    "captured_at": "2026-10-18T17:36:55.470579+00:00",
+    "files": [
+      {
+        "path": "public/js/intelligence/canonical-normalizer.js",
+        "bytes": 18199,
+        "sha256": "1c79b425588c224ae1589494b5cc7d3fd1a57b3675309c346a1573c13a1e919e",
+        "git_blob_sha1": "53d0a2d8e1b34bd11085b1bb21d4afff92a6935e",
+        "archived_blob_sha1": null,
+        "archive_comparison": "ABSENT"
+      },
+      {
+        "path": "public/js/intelligence/intelligence-data-preloader.js",
+        "bytes": 17241,
+        "sha256": "a41c4bb40802631956e70eeed57b07d841c1c9922b32c275fd3be66553f6706e",
+        "git_blob_sha1": "c46bd3148d4705015a56af18b152b5a801931b89",
+        "archived_blob_sha1": "c46bd3148d4705015a56af18b152b5a801931b89",
+        "archive_comparison": "EXACT_MATCH"
+      },
+      {
+        "path": "public/js/intelligence/intelligence-data.js",
+        "bytes": 71853,
+        "sha256": "2f1bcb2779e31c01d8f3a6ab62541bfb836609edd2d456162834b051c2cc5e42",
+        "git_blob_sha1": "9056946c8f28d21664a017d6a9a3c994e514cf1b",
+        "archived_blob_sha1": "9056946c8f28d21664a017d6a9a3c994e514cf1b",
+        "archive_comparison": "EXACT_MATCH"
+      },
+      {
+        "path": "public/js/intelligence/intelligence-v2-render.js",
+        "bytes": 46301,
+        "sha256": "4812c234b2328e07682b072d0177814aaf4c69b273c6111da0a9dd28c4154236",
+        "git_blob_sha1": "ef3ae4c9ed5faa5f02bee77fa9b403e78dd2ce2b",
+        "archived_blob_sha1": "ef3ae4c9ed5faa5f02bee77fa9b403e78dd2ce2b",
+        "archive_comparison": "EXACT_MATCH"
+      }
+    ],
+    "html": {
+      "path": "public/index.html",
+      "bytes": 6094206,
+      "sha256": "a38b62828f4b1b291c398b60a1a305ca68103e77b400c1988892c0716e8c5345",
+      "git_blob_sha1": "fe17ff32743ac1f112c0ac6dea2ec1a72202436c",
+      "archived_blob_sha1": "29c21c0af239db2a326126b479fcb9b0438f50cb",
+      "archive_comparison": "DIFFERENT"
+    },
+    "flow": [
+      "CoinGecko client overlay and JSON snapshots",
+      "canonical runtime market",
+      "precomputed _display",
+      "canonical project cards"
+    ],
+    "payd_api_client_in_observed_html": false,
+    "source_was_modified": false,
+    "browser_rendering_verified": false,
+    "archive_is_complete_current_site": false
+  },
+  "preview_boundary": {
+    "url": "https://payd-cmc-backend-git-stage5c-4066a2-realstrades-8509s-projects.vercel.app/api/healthz",
+    "http_status": 302,
+    "redirect_target_origin": "https://vercel.com",
+    "response_kind": "Vercel Authentication / SSO",
+    "body_marker": "Protected by Vercel Authentication",
+    "cache_control": "no-store, max-age=0",
+    "api_function_was_reached": false,
+    "connector_access": "Earlier Vercel connector requests returned 403 for the project team; no repeated request in this check",
+    "cli_available": false,
+    "default_cors_contains_frontend_origin": false,
+    "runtime_allowed_origins": "UNKNOWN"
+  },
+  "prepared_client": {
+    "path": "code/client/market/payd_market_client.js",
+    "default_enabled": false,
+    "active_html_or_loader_changes": 0,
+    "canonical_id_exact_match": true,
+    "checks_provider_identity_and_pro_api": true,
+    "credentials": "omit",
+    "redirect": "error",
+    "timeout_ms": 8000,
+    "completed_client_cache": false,
+    "coalesces_inflight_ids": true,
+    "snapshot_fallback": false,
+    "provider_direct_calls": false
+  },
+  "validation": {
+    "offline_total": 98,
+    "pass": 98,
+    "fail": 0,
+    "core": 48,
+    "smoke": 15,
+    "node_tests": 35,
+    "new_client_tests": 8,
+    "extended_local_http": "Actual browser-client module through Node HTTP and real market handler, seven observed capture-derived records and all 75 blocked records",
+    "fixture_source": "Supplied d32205c capture, not a new CMC response",
+    "deployed_public_http_verified": false,
+    "real_browser_cors_verified": false,
+    "frontend_enabled": false,
+    "production_promoted": false
+  },
+  "next_boundaries": [
+    "Authenticated deployed API HTTP verification",
+    "Actual MiniMax origin CORS verification",
+    "Review and apply isolated frontend market overlay to current source",
+    "Deploy a reviewed publicly accessible backend before public frontend enablement"
+  ],
+  "no_full_token_reaudit_required_for_these_boundaries": true
+}

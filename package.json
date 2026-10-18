@@ -4,7 +4,7 @@
   "private": true,
   "description": "PAYD Finance CoinMarketCap serverless backend (Stage 5B)",
   "scripts": {
-    "test": "node code/server/market/test/market_gateway.test.js && node api/_test/vercel_smoke.js"
+    "test": "node code/server/market/test/market_gateway.test.js && node api/_test/vercel_smoke.js && node --test code/server/market/test/mapping_repair.test.js api/_test/runtime_audit.test.js api/_test/consolidated_review.test.js api/_test/public_batch_release.test.js code/client/market/test/payd_market_client.test.js code/client/market/test/payd_market_binding.test.js"
   },
   "engines": {
     "node": "22.x"

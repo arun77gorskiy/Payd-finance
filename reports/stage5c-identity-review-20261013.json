@@ -1,0 +1,237 @@
+{
+  "stage": "5C",
+  "reviewed_on": "2026-10-13",
+  "scope": "16 remaining entries; 3 metadata repairs and 13 held research leads",
+  "counts": {
+    "reviewed": 16,
+    "metadata_corrections_applied": 3,
+    "held": 13,
+    "quarantines_released": 0
+  },
+  "policy": "Use primary provider/issuer identity evidence, preserve canonical IDs/symbols and snapshot values, reject numeric ID collisions, and require fresh live quotes before release. Holds are research decisions, not final taxonomy or proof of project_without_token.",
+  "applied": [
+    {
+      "canonical_id": "bob",
+      "symbol": "BOB",
+      "before": {
+        "cmcId": "31962",
+        "cmcSlug": "bob-2"
+      },
+      "after": {
+        "cmcId": "38970",
+        "cmcSlug": "bob-build-on-bitcoin"
+      },
+      "status": "LIVE_AUDIT_VERIFIED",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/bob-build-on-bitcoin/",
+        "ucid": "38970",
+        "symbol": "BOB",
+        "retrieved_on": "2026-10-13"
+      },
+      "issuer_source": {
+        "url": "https://static.gobob.xyz/BOB_Foundation_Token_Whitepaper_ATTR_V1.pdf",
+        "note": "BOB foundation token whitepaper and CMC listing identify the Build on Bitcoin L2 token."
+      },
+      "live_audit_at": "2026-10-13T12:59:43.236Z",
+      "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
+    },
+    {
+      "canonical_id": "off-the-grid",
+      "symbol": "GUN",
+      "before": {
+        "cmcId": "32200",
+        "cmcSlug": "gunzilla"
+      },
+      "after": {
+        "cmcId": "36156",
+        "cmcSlug": "gunz"
+      },
+      "status": "LIVE_AUDIT_VERIFIED",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/gunz/",
+        "ucid": "36156",
+        "symbol": "GUN",
+        "retrieved_on": "2026-10-13"
+      },
+      "issuer_source": {
+        "url": "https://gunbygunz.com/gun/",
+        "note": "Issuer identifies GUN as the native protocol token and the currency used by Off The Grid; CMC listing is GUNZ."
+      },
+      "live_audit_at": "2026-10-13T12:59:43.236Z",
+      "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22"
+    },
+    {
+      "canonical_id": "mintchain",
+      "symbol": "MINT",
+      "before": {
+        "cmcId": "31417",
+        "cmcSlug": "mintchain-2"
+      },
+      "after": {
+        "cmcId": "36005",
+        "cmcSlug": "mint-blockchain"
+      },
+      "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/mint-blockchain/",
+        "ucid": "36005",
+        "symbol": "MINT",
+        "retrieved_on": "2026-10-13"
+      },
+      "issuer_source": {
+        "url": "https://www.mintchain.io/mint-token",
+        "note": "Issuer identifies MINT as the Mint Blockchain ecosystem token, with contract 0x8511138208529fe1b9a37b863c7EEE3Fe234b7Ab on Mint, OP Mainnet and Base. CMC has matching symbol and contract suffix; its page is a preview listing and does not prove live quote availability."
+      },
+      "live_audit_at": "2026-10-13T12:59:43.236Z",
+      "live_audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22",
+      "live_reasons": [
+        "invalid_price"
+      ]
+    }
+  ],
+  "held": [
+    {
+      "canonical_id": "creditum",
+      "candidate": {
+        "cmcId": "17132",
+        "symbol": "CREDIT",
+        "slug": "creditum"
+      },
+      "source_url": "https://coinmarketcap.com/currencies/creditum/",
+      "decision": "HOLD_CURRENT_AVAILABILITY_REVIEW",
+      "notes": "Exact symbol listing found, but provider page is a preview and the issuer documentation link could not be retrieved. Does not establish positive current quotes or absence of a token."
+    },
+    {
+      "canonical_id": "pollen-mobile",
+      "candidate": {
+        "cmcId": "20267",
+        "symbol": "PCN",
+        "slug": "pollen-coin"
+      },
+      "source_url": "https://coinmarketcap.com/currencies/pollen-coin/",
+      "decision": "HOLD_CURRENT_AVAILABILITY_REVIEW",
+      "notes": "Provider explicitly associates PCN with Pollen Mobile, but listing is a preview; linked issuer site returned 404. No current quote or lifecycle claim inferred."
+    },
+    {
+      "canonical_id": "toucan-protocol",
+      "candidate": {
+        "cmcId": "12949",
+        "symbol": "BCT",
+        "slug": "toucan-protocol-base-carbon-tonne"
+      },
+      "source_url": "https://coinmarketcap.com/currencies/toucan-protocol-base-carbon-tonne/",
+      "issuer_url": "https://docs.toucan.earth/resources/frequently-asked-questions/faq-for-transition-to-open-source",
+      "decision": "HOLD_PRODUCT_IDENTITY_REVIEW",
+      "notes": "Issuer says BCT is no longer a Toucan product; admin control transitioned to KlimaDAO in 2024. Preserve quarantine until canonical project-versus-carbon-pool identity is resolved."
+    },
+    {
+      "canonical_id": "mxc",
+      "candidate": {
+        "cmcId": "3628",
+        "symbol": "MXC",
+        "slug": "mxc"
+      },
+      "source_url": "https://coinmarketcap.com/currencies/mxc/",
+      "decision": "HOLD_MIGRATION_CONTRACT_REVIEW",
+      "notes": "Provider displays an L1-to-MXC-L3 migration notice; current chain/contract selection still needs issuer evidence."
+    },
+    {
+      "canonical_id": "tangible",
+      "candidate": {
+        "cmcId": "20271",
+        "symbol": "TNGBL",
+        "slug": "tangible"
+      },
+      "source_url": "https://coinmarketcap.com/currencies/tangible/",
+      "decision": "HOLD_LIFECYCLE_REVIEW",
+      "notes": "Provider has a preview listing and describes a rebrand to re.al. Treat this as a review lead; issuer confirmation and legacy/current asset selection remain outstanding."
+    },
+    {
+      "canonical_id": "mountain-protocol",
+      "source_url": "https://coinmarketcap.com/currencies/mountain-protocol/",
+      "decision": "HOLD_WINDDOWN_REVIEW",
+      "notes": "Provider flags USDM as winding down and links an issuer announcement; current redemption/quote state requires issuer review. No stablecoin price or zero value is fabricated."
+    },
+    {
+      "canonical_id": "cerebrumdao",
+      "candidate": {
+        "cmcId": "31961",
+        "symbol": "NEURON",
+        "slug": "cerebrum-dao"
+      },
+      "source_url": "https://coinmarketcap.com/currencies/cerebrum-dao/",
+      "decision": "HOLD_CANONICAL_SYMBOL_REVIEW",
+      "notes": "Provider token NEURON differs from canonical NEURO. Do not rewrite canonical symbol automatically."
+    },
+    {
+      "canonical_id": "spheron",
+      "candidate": {
+        "cmcId": "37537",
+        "symbol": "SPON",
+        "slug": "spheron-network"
+      },
+      "source_url": "https://coinmarketcap.com/currencies/spheron-network/",
+      "decision": "HOLD_CANONICAL_SYMBOL_REVIEW",
+      "notes": "Provider SPON differs from canonical SPHN; listing is a preview. Issuer token/contract review required."
+    },
+    {
+      "canonical_id": "nubila",
+      "source_url": "https://coinmarketcap.com/currencies/nubila-network/",
+      "decision": "HOLD_CANONICAL_SYMBOL_REVIEW",
+      "notes": "Provider symbol NB differs from canonical NUB. A similar project name does not authorize an automatic symbol rewrite."
+    },
+    {
+      "canonical_id": "junca-cash",
+      "candidate": {
+        "cmcId": "6914",
+        "symbol": "JCC",
+        "slug": "junca-cash"
+      },
+      "source_url": "https://coinmarketcap.com/currencies/junca-cash/",
+      "decision": "HOLD_CANONICAL_SYMBOL_REVIEW",
+      "notes": "Provider JCC differs from canonical JCA; token identity and contract need issuer review."
+    },
+    {
+      "canonical_id": "alienswap",
+      "rejected_candidate": {
+        "cmcId": "23631",
+        "symbol": "ALIEN",
+        "slug": "alien-fi"
+      },
+      "source_url": "https://coinmarketcap.com/nl/currencies/alien-fi/",
+      "decision": "HOLD_NO_IDENTIFIED_MATCH",
+      "notes": "Search result is Alien/AlienFi, which does not establish AlienSwap identity. Matching ticker ALIEN is insufficient."
+    },
+    {
+      "canonical_id": "thingsix",
+      "decision": "HOLD_NO_IDENTIFIED_MATCH",
+      "notes": "No primary CMC listing establishing the canonical THIX identity found in this search. Secondary price pages are excluded as mapping evidence. This is not evidence that no token exists."
+    },
+    {
+      "canonical_id": "match-quest",
+      "decision": "HOLD_NO_IDENTIFIED_MATCH",
+      "notes": "No primary CMC listing establishing canonical MQ/Match Quest identity found in this search. Similar Mecha Conquest/MCQ result is not used."
+    }
+  ],
+  "remaining_unreviewed_from_69": 53,
+  "followup_live_audit": {
+    "commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22",
+    "dataset_sha256": "aca53d7134395f404b65b0485b57e7d4672625126b2b95bc55d96c05d8e06da3",
+    "audit_at": "2026-10-13T12:59:43.236Z",
+    "pass": 256,
+    "fail": 67,
+    "released": [
+      "bob",
+      "off-the-grid"
+    ],
+    "quarantined": [
+      {
+        "canonical_id": "mintchain",
+        "reasons": [
+          "invalid_price"
+        ]
+      }
+    ],
+    "scope_note": "The 16-entry metadata review counts record the review-time decisions; this follow-up records subsequent quote-audit and release results."
+  }
+}

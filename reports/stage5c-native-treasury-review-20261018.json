@@ -1,0 +1,145 @@
+{
+  "stage": "5C",
+  "reviewed_on": "2026-10-18",
+  "review_timezone": "UTC",
+  "counts": {
+    "reviewed": 4,
+    "numeric_ids_changed": 1,
+    "symbols_changed": 1,
+    "accompanying_slug_updates": 1,
+    "held_without_provider_id_change": 2,
+    "quarantines_released": 0
+  },
+  "applied": [
+    {
+      "canonical_id": "the-open-network",
+      "before": {
+        "symbol": "TON",
+        "cmcId": "11419",
+        "cmcSlug": "gram",
+        "audit_reasons": [
+          "symbol_mismatch:GRAM"
+        ]
+      },
+      "after": {
+        "symbol": "GRAM",
+        "cmcId": "11419",
+        "cmcSlug": "gram"
+      },
+      "numeric_id_changed": false,
+      "slug_changed": false,
+      "status": "LIVE_AUDIT_VERIFIED",
+      "issuer_url": "https://ton.org/media/",
+      "provider_url": "https://coinmarketcap.com/currencies/gram/",
+      "notes": "Issuer ton.org/media explicitly names Gram/GRAM as formerly Toncoin/TON while The Open Network remains the blockchain name. Provider UCID 11419 is Gram (prev. Toncoin), symbol GRAM, slug gram, with the same issuer link. This is native-asset ticker continuity, not an unrelated GRAM token or a swap. Retain numeric ID, slug, permanent canonical ID, legacy symbol, names and snapshots; no units, balance, price or supply conversion. Native-chain lineage is the evidence; no ERC20 contract identity or chain execution is claimed. Strict quote verification under GRAM remains pending.",
+      "live_audit_at": "2026-10-18T13:54:06.103Z",
+      "live_audit_commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+      "live_audit_dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385"
+    },
+    {
+      "canonical_id": "matrixdock",
+      "symbol": "STBT",
+      "before": {
+        "symbol": "STBT",
+        "cmcId": "29096",
+        "cmcSlug": "matrixdock",
+        "audit_reasons": [
+          "symbol_mismatch:DOGE",
+          "slug_mismatch:elon-doge-token"
+        ]
+      },
+      "after": {
+        "symbol": "STBT",
+        "cmcId": "28055",
+        "cmcSlug": "short-term-t-bill-token"
+      },
+      "status": "LIVE_AUDIT_VERIFIED",
+      "correction_kind": "ISSUER_TREASURY_PRODUCT_PROVIDER_ID_CORRECTION",
+      "source": {
+        "url": "https://coinmarketcap.com/currencies/short-term-t-bill-token/",
+        "ucid": "28055",
+        "symbol": "STBT",
+        "retrieved_on": "2026-10-18"
+      },
+      "issuer_source": {
+        "url": "https://www.matrixdock.com/stbt",
+        "note": "Current Matrixdock homepage/product and issuer token-features documentation explicitly identify STBT as its rebasing short-term US Treasury/repo token, distinct from wSTBT and gold/silver products. Provider UCID 28055 is STBT/short-term-t-bill-token and links stbt.matrixdock.com. Its displayed contract 0x5308...45b44a agrees with the provider-linked Ethereum explorer target 0x530824da86689c9c17cdc2871ff29b058345b44a. Explorer retrieval returned 403 and a full issuer contract was not retrieved; do not claim independent full-address matching. Archive the unrelated DOGE mapping. Issuer describes whitelisting/accredited-investor restrictions and rebasing; no fixed $1 spot quote, NAV substitution, redemption eligibility or unrestricted tradability is inferred. Strict quotes remain pending."
+      },
+      "additional_sources": [
+        "https://www.matrixdock.com/",
+        "https://matrixdock.gitbook.io/matrixdock-docs/english/treasury-bill-token-stbt/token-features.md"
+      ],
+      "provider_contract_display": "0x5308...45b44a",
+      "provider_explorer_target": "https://etherscan.io/token/0x530824da86689c9c17cdc2871ff29b058345b44a",
+      "issuer_full_contract_retrieved": false,
+      "provider_explorer_fetch_succeeded": false,
+      "live_audit_at": "2026-10-18T13:54:06.103Z",
+      "live_audit_commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+      "live_audit_dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385"
+    }
+  ],
+  "held": [
+    {
+      "canonical_id": "toucan-protocol",
+      "status": "LEGACY_CARBON_POOL_PRODUCT_AND_MARKET_REVIEW_REQUIRED",
+      "candidate_cmc_id": "12949",
+      "candidate_symbol": "BCT",
+      "candidate_slug": "toucan-protocol-base-carbon-tonne",
+      "issuer_url": "https://docs.toucan.earth/resources/frequently-asked-questions/faq-for-transition-to-open-source",
+      "additional_sources": [
+        "https://docs.klimadao.finance/developers/deployment-addresses",
+        "https://docs.klimadao.finance/ecosystem/carbon-pools",
+        "https://coinmarketcap.com/currencies/toucan-protocol-base-carbon-tonne/"
+      ],
+      "documented_polygon_contract": "0x2F800Db0fdb5223b3C3f354886d907A671414A7F",
+      "notes": "Toucan confirms admin control transferred to KlimaDAO in 2024 and BCT is no longer its product. KlimaDAO registry identifies the Polygon BCT address, matching provider 12949 abbreviation, but its carbon-pools page marks pools deprecated after the protocol relaunch. This identifies a historical BCT candidate, not a current Toucan project quote or verified market applicability. Preserve BCT/old failed mapping quarantine until project-versus-pool and current lifecycle/market review resolves; do not substitute KLIMA, assume carbon-credit redemption or infer token absence."
+    },
+    {
+      "canonical_id": "thingsix",
+      "status": "NUMERIC_PROVIDER_IDENTITY_UNCONFIRMED",
+      "issuer_url": "https://thingsix.com/",
+      "additional_sources": [
+        "https://docs.thingsix.com/",
+        "https://things-ix.webflow.io/"
+      ],
+      "notes": "ThingsIX/THIX remains a research lead. Direct current-domain/docs retrieval failed; a branded Webflow page describes the IoT network but does not establish a current numeric CMC identity or verified token contract. Search results about similarly named THING are unrelated. Keep original failed mapping and quarantine; retrieval failure is not evidence of no token."
+    }
+  ],
+  "quote_audit_pending": false,
+  "taxonomy_complete": false,
+  "runtime_evidence": {
+    "commit": "baed82cc9083cf7d07fa8d5efbcd33b9d20fa023",
+    "dataset_sha256": "ccd0890b986d188a16a960c4d1e811544c449a50f193682dc00d8d85dc6d072b",
+    "audit_at": "2026-10-18T13:34:32.382Z",
+    "counts": {
+      "checked": 91,
+      "pass": 91,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 2
+    },
+    "exact_field_comparisons": 728
+  },
+  "policy": "Stable project IDs, names, sectors and snapshots remain unchanged. Explicit issuer/native lineage and provider metadata are required; all new expectations stay quarantined until strict quotes. No aliases, market-value substitution, unit conversion or transaction is introduced.",
+  "source_limitations": [
+    "GRAM uses native-chain identity continuity, not ERC20-contract matching. No blanket claim of synchronized exchange ticker adoption is made.",
+    "STBT issuer product identity is explicit; the provider-linked full explorer target is known, but explorer retrieval failed and a full issuer contract was not independently retrieved. Restricted rebasing STBT is distinct from wSTBT; no $1 spot price or unrestricted tradability is inferred.",
+    "BCT historical pool contract/ownership is documented, while deprecation and current project/market applicability remain unresolved; candidate 12949 is not applied.",
+    "ThingsIX current-domain/docs fetching failed and no numeric provider ID was established. No token-absence conclusion follows."
+  ],
+  "followup_live_audit": {
+    "commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+    "dataset_sha256": "283c0ff24f65e80656c83fa70ef010e7ef303246269fd32e89047acff2eb5385",
+    "audit_at": "2026-10-18T13:54:06.103Z",
+    "pass_count": 272,
+    "fail_count": 51,
+    "released": [
+      "the-open-network",
+      "matrixdock"
+    ],
+    "quarantined": [],
+    "report": "reports/stage5c-native-treasury-quote-audit-20261018.json",
+    "healthz_report": "reports/stage5c-native-treasury-healthz-20261018.json",
+    "scope_note": "Review-time counts/source notes remain historical. Complete strict coverage establishes both GRAM and STBT PASS and release, preserving every prior 270 PASS. BCT/ThingsIX holds remain unchanged. Exact numeric runtime proof for all 93 releases remains pending; no financial scaling, NAV substitution or unrestricted STBT tradability is inferred."
+  }
+}

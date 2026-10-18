@@ -1,0 +1,2422 @@
+{
+  "stage": "5C",
+  "reviewed_on": "2026-10-18",
+  "source_commit": "765db595248796953f2fb94f348a872e61b2d9dd",
+  "source_dataset_sha256": "351257826449d1c3f067a354b980fb48d6601044350b9c27d39a37460d82e9bd",
+  "status": "TRIAGE_COMPLETE_SEVEN_MAPPINGS_APPLIED_REMAINDER_BLOCKED",
+  "scope_note": "All 82 pending rows have a disposition, not 82 verified token identities. Uncertainty is retained explicitly. No website omission, failed fetch or search miss is treated as proof of no token.",
+  "counts": {
+    "reviewed": 82,
+    "input_quarantined": 51,
+    "input_originally_unmapped": 31,
+    "runtime_eligible_before": 272,
+    "runtime_eligible_after": 272,
+    "mapping_corrections_applied": 1,
+    "taxonomy_corrections_applied": 1,
+    "quarantines_released": 0,
+    "new_candidates_diagnostic_only": 10,
+    "by_category": {
+      "CORPORATE_EQUITY_OUTSIDE_CMC": 1,
+      "IDENTITY_CORRECTED_LIFECYCLE_HOLD": 1,
+      "IDENTITY_OR_LIFECYCLE_HOLD": 12,
+      "ISSUER_DOCUMENTED_NO_NATIVE_TOKEN": 1,
+      "KNOWN_IDENTITY_QUOTE_UNAVAILABLE": 11,
+      "LEGACY_ASSET_LIFECYCLE_REVIEW": 3,
+      "NEW_MAPPING_CANDIDATE": 10,
+      "ORIGINAL_ISSUER_REQUIRED": 12,
+      "PRODUCT_SELECTION_REQUIRED": 7,
+      "PROJECT_ASSET_SEPARATION": 7,
+      "PROJECT_NATIVE_ASSET_UNCONFIRMED": 16,
+      "WRAPPED_ASSET_IDENTITY_REVIEW": 1
+    }
+  },
+  "applied": [
+    {
+      "canonical_id": "mountain-protocol",
+      "before": {
+        "symbol": "USDM",
+        "cmcId": "27788",
+        "cmcSlug": "mountain-protocol-usdm",
+        "mapping_reasons": [
+          "symbol_mismatch:TEST",
+          "slug_mismatch:test",
+          "invalid_price"
+        ]
+      },
+      "after": {
+        "symbol": "USDM",
+        "cmcId": "29569",
+        "cmcSlug": "mountain-protocol",
+        "mapping_reasons": [
+          "quote_verification_pending",
+          "wind_down_market_validity_review_required"
+        ]
+      },
+      "review": {
+        "status": "PROVIDER_IDENTITY_CONFIRMED_LIFECYCLE_HOLD",
+        "reviewed_on": "2026-10-18",
+        "source_url": "https://coinmarketcap.com/currencies/mountain-protocol/",
+        "issuer_url": "https://docs.mountainprotocol.com/legacy-docs/usdm-token",
+        "additional_sources": [
+          "https://docs.mountainprotocol.com/wind-down-documentation/usdm-wind-down-overview",
+          "https://docs.mountainprotocol.com/wind-down-legal/terms-and-conditions"
+        ],
+        "issuer_ethereum_contract": "0x59D9356E565Ab3A36dD77763Fc0d87fEaf85508C",
+        "additional_release_gate": "WIND_DOWN_EXTERNAL_MARKET_VALIDITY_REQUIRED",
+        "notes": "Issuer USDM contract and provider abbreviation agree; UCID 29569 links the same issuer and its wind-down notice. Old 27788 returned TEST. Phase-3 terms effective 2025-08-22 supersede legacy mint/redeem and yield descriptions: issuer platform is decommissioned and no price, liquidity or peg is guaranteed. Correct identity but retain quarantine, with a lifecycle gate beyond numeric PASS. Do not substitute USDC, wUSDM, a redemption value or a fixed $1 spot price. No current full provider explorer-address retrieval is claimed."
+      }
+    },
+    {
+      "canonical_id": "ceramic",
+      "asset_type": "project_without_token",
+      "review": {
+        "status": "ISSUER_DOCUMENTS_NO_NATIVE_TOKEN",
+        "reviewed_on": "2026-10-18",
+        "issuer_url": "https://blog.ceramic.network/faq-ceramic-network/",
+        "additional_sources": [
+          "https://developers.ceramic.network/docs/introduction/why-ceramic"
+        ],
+        "notes": "Issuer FAQ explicitly says Ceramic has no native token; developer documentation says there are no tokenized node incentives. Scope is the documented Ceramic network, not every future product. CERA is not established as a token. Keep historical failed CMC 24022/CHT under quarantine for provenance and strict-audit coverage; it must never be used as a Ceramic quote. Reconsider only on a new issuer token announcement and independently matched identity."
+      }
+    }
+  ],
+  "candidate_manifest": "reports/stage5c-candidates-20261018.json",
+  "last_observed_evidence": {
+    "strict": {
+      "commit": "5eb56bbc50b9e8b0c80c49ddaf4d41cb251c6871",
+      "pass_count": 272,
+      "fail_count": 51,
+      "report": "reports/stage5c-native-treasury-quote-audit-20261018.json"
+    },
+    "runtime": {
+      "commit": "baed82cc9083cf7d07fa8d5efbcd33b9d20fa023",
+      "pass_count": 91,
+      "fields": 728,
+      "current_released": 93,
+      "pending": 2,
+      "report": "reports/stage5c-runtime-91-audit-20261018.json"
+    }
+  },
+  "completion_policy": {
+    "next_run": "/api/audit-stage5c-runtime?run=1&review=1",
+    "fixed_baseline_strict_validator_unchanged": true,
+    "new_candidate_ids_not_in_public_dataset": true,
+    "maximum_provider_batches": 7,
+    "release_policy": "One subsequent reviewed batch of passing corrections; no per-token commit/audit cycles.",
+    "unresolved_policy": "Keep blocked with a specific evidence gate. Resume only for new issuer identity/lifecycle evidence or changed usable provider data.",
+    "stage_complete": false,
+    "production_promotion": false,
+    "frontend_enabled": false
+  },
+  "records": [
+    {
+      "canonical_id": "hashnote",
+      "name": "hashnote",
+      "symbol": "USYC",
+      "input_group": "quarantined",
+      "current_cmc_id": "28558",
+      "current_cmc_slug": "hashnote-usyc",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "KNOWN_IDENTITY_QUOTE_UNAVAILABLE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Last complete audit returned expected USYC/hashnote-usyc but invalid_price. Circle describes tokenized fund shares with onboarding restrictions; AUM and fund/oracle NAV must not replace CMC spot-market fields.",
+      "sources": [
+        "https://www.circle.com/usyc",
+        "https://help.circle.com/support/en/usyc-subscription-redemption-and-functionality-explained?id=kb_article_view&sysparm_article=KB0010561"
+      ],
+      "unblock_condition": "Positive usable CMC quote, exact runtime fields and correct fund-share/market labeling.",
+      "repeat_full_audit_without_new_evidence": false,
+      "asset_subtype": "tokenized_fund_share",
+      "ru_summary": "USYC — доля токенизированного фонда. API не дал пригодной цены; AUM и NAV нельзя подставлять вместо рыночной котировки."
+    },
+    {
+      "canonical_id": "ipfs",
+      "name": "IPFS",
+      "symbol": "FIL",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_ASSET_SEPARATION",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer FAQ says IPFS and Filecoin are separate complementary protocols. FIL already belongs to canonical filecoin/2280. Do not clone FIL quote or snapshot into IPFS. No separate native IPFS CMC identity established.",
+      "sources": [
+        "https://docs.ipfs.tech/concepts/faq/"
+      ],
+      "unblock_condition": "Explicit issuer evidence for an independently issued IPFS asset; otherwise retain project-only display and no market quote.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "IPFS и Filecoin — разные протоколы. FIL уже учтён отдельно; переносить его котировку в IPFS нельзя."
+    },
+    {
+      "canonical_id": "wrapped-stx",
+      "name": "wrapped-stx",
+      "symbol": "WSTX",
+      "input_group": "quarantined",
+      "current_cmc_id": "22257",
+      "current_cmc_slug": "wrapped-stacks",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "WRAPPED_ASSET_IDENTITY_REVIEW",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "CMC 22257 names Wrapped Stacks/WSTX, but last quote has invalid_price. Stacks issuer documentation establishes native STX, not this wrapper; wrappedfi Stacks repository lists xBTC/xUSD, which do not establish WSTX. No underlying STX price substitution.",
+      "sources": [
+        "https://coinmarketcap.com/nl/currencies/wrapped-stacks/",
+        "https://www.stacks.co/stx",
+        "https://github.com/wrappedfi/wrapped_token_stacks"
+      ],
+      "unblock_condition": "Specific wrapper issuer, chain, contract and backing semantics, then a usable quote.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Нужны эмитент, контракт и обеспечение именно WSTX. Котировка native STX не заменяет цену обёртки."
+    },
+    {
+      "canonical_id": "nexus-4",
+      "name": "Nexus",
+      "symbol": "NEX",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "NEW_MAPPING_CANDIDATE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Provider 39965/NEX/nexus-labs links nexus.xyz and docs.nexus.xyz. Current issuer homepage describes an exchange and testnet APIs but did not establish a current NEX contract in retrieved content. Same-name/ticker projects exist. Provider metadata alone is a research lead; diagnostic PASS cannot authorize mapping.",
+      "sources": [
+        "https://nexus.xyz/",
+        "https://coinmarketcap.com/currencies/nexus-labs/"
+      ],
+      "unblock_condition": "One batch diagnostic; satisfy any identity_gate, then apply passing reviewed mappings together. No automatic release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "candidate": {
+        "symbol": "NEX",
+        "cmc_id": "39965",
+        "cmc_slug": "nexus-labs",
+        "identity_gate": "CURRENT_ISSUER_TOKEN_CONTRACT_REQUIRED"
+      },
+      "ru_summary": "Кандидат NEX/39965 — исследовательская зацепка. Сайт эмитента не подтвердил контракт; одна котировка не разрешает привязку.",
+      "followup": {
+        "status": "HELD",
+        "diagnostic": {
+          "canonical_id": "nexus-4",
+          "cmc_id": "39965",
+          "status": "LIVE",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_fields": {
+            "price_usd": true,
+            "change_24h_pct": true,
+            "change_7d_pct": true,
+            "change_30d_pct": true,
+            "market_cap_usd": true,
+            "fdv_usd": true,
+            "volume_24h_usd": true,
+            "market_cap_rank": true
+          },
+          "market": {
+            "price_usd": 7.051407412684983e-07,
+            "market_cap_usd": 42308444.4761099,
+            "fdv_usd": 70514074.13,
+            "volume_24h_usd": 1135255.5506776,
+            "change_1h_pct": -0.21493121,
+            "change_24h_pct": 0.33104643,
+            "change_7d_pct": -13.17745021,
+            "change_30d_pct": -32.9847938,
+            "market_cap_rank": 409,
+            "circulating_supply": 60000000000000,
+            "total_supply": 100000000000000,
+            "max_supply": 100000000000000
+          },
+          "reasons": [],
+          "identity_research_gate": "CURRENT_ISSUER_TOKEN_CONTRACT_REQUIRED",
+          "release_authorized": false
+        },
+        "identity_gate": "CURRENT_ISSUER_TOKEN_CONTRACT_REQUIRED"
+      }
+    },
+    {
+      "canonical_id": "safe",
+      "name": "safe",
+      "symbol": "SAFE",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
+      "category": "NEW_MAPPING_CANDIDATE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Foundation identifies SAFE on Ethereum at 0x5aFE3855358E112B5647B952709E6165e1c1eEEe. Provider 21585/safe1 links safe.global and displays the same address abbreviation. The /safe listing 3918 is a different Anwang project; reject it. Full provider explorer-address retrieval is not claimed.",
+      "sources": [
+        "https://safefoundation.org/token",
+        "https://coinmarketcap.com/currencies/safe1/"
+      ],
+      "unblock_condition": "One batch diagnostic; satisfy any identity_gate, then apply passing reviewed mappings together. No automatic release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "candidate": {
+        "symbol": "SAFE",
+        "cmc_id": "21585",
+        "cmc_slug": "safe1",
+        "identity_gate": null
+      },
+      "ru_summary": "Подтверждён кандидат 21585/safe1. Листинг 3918/safe относится к другому проекту.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "SAFE",
+          "cmcId": "21585",
+          "cmcSlug": "safe1"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
+    },
+    {
+      "canonical_id": "fireblocks",
+      "name": "fireblocks",
+      "symbol": "FB",
+      "input_group": "quarantined",
+      "current_cmc_id": "24877",
+      "current_cmc_slug": "fireblocks",
+      "last_observed_reasons": [
+        "symbol_mismatch:BIM",
+        "slug_mismatch:bim"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Token issuance/custody infrastructure does not establish native FB. Old ID returns BIM. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://fireblocks.readme.io/docs/issue-new-tokens"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "movement",
+      "name": "Movement",
+      "symbol": "MOVE",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
+      "category": "NEW_MAPPING_CANDIDATE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Current issuer documentation identifies MOVE in its official wallet and distinguishes live M1 mainnet from testnet. Provider 32452/MOVE/movement links the issuer and shows 0x3073...1a3073. No independently retrieved full issuer/provider ERC20-address match; no testnet-unit pricing.",
+      "sources": [
+        "https://docs.movementnetwork.xyz/general/usingmovement/connect_to_movement",
+        "https://coinmarketcap.com/currencies/movement/"
+      ],
+      "unblock_condition": "One batch diagnostic; satisfy any identity_gate, then apply passing reviewed mappings together. No automatic release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "candidate": {
+        "symbol": "MOVE",
+        "cmc_id": "32452",
+        "cmc_slug": "movement",
+        "identity_gate": null
+      },
+      "ru_summary": "Кандидат MOVE/32452; mainnet отделён от тестовых монет. Полное сопоставление ERC20-контракта не заявлено.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "MOVE",
+          "cmcId": "32452",
+          "cmcSlug": "movement"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
+    },
+    {
+      "canonical_id": "mountain-protocol",
+      "name": "mountain-protocol",
+      "symbol": "USDM",
+      "input_group": "quarantined",
+      "current_cmc_id": "29569",
+      "current_cmc_slug": "mountain-protocol",
+      "last_observed_reasons": [
+        "symbol_mismatch:TEST",
+        "slug_mismatch:test",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_CORRECTED_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "stablecoin-wrapped",
+      "reason": "Issuer USDM contract and provider abbreviation agree; UCID 29569 links the same issuer and its wind-down notice. Old 27788 returned TEST. Phase-3 terms effective 2025-08-22 supersede legacy mint/redeem and yield descriptions: issuer platform is decommissioned and no price, liquidity or peg is guaranteed. Correct identity but retain quarantine, with a lifecycle gate beyond numeric PASS. Do not substitute USDC, wUSDM, a redemption value or a fixed $1 spot price. No current full provider explorer-address retrieval is claimed.",
+      "sources": [
+        "https://docs.mountainprotocol.com/legacy-docs/usdm-token",
+        "https://coinmarketcap.com/currencies/mountain-protocol/",
+        "https://docs.mountainprotocol.com/wind-down-documentation/usdm-wind-down-overview",
+        "https://docs.mountainprotocol.com/wind-down-legal/terms-and-conditions"
+      ],
+      "unblock_condition": "One batch quote check plus WIND_DOWN_EXTERNAL_MARKET_VALIDITY_REQUIRED; numeric PASS alone cannot release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Исправлено 27788/TEST → 29569/USDM. Блокировка сохранена: после wind-down эмитент не гарантирует прежний выкуп, цену или ликвидность.",
+      "followup": {
+        "status": "HELD",
+        "observed_reasons": [
+          "invalid_price"
+        ],
+        "additional_gate": "WIND_DOWN_EXTERNAL_MARKET_VALIDITY_REQUIRED",
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
+    },
+    {
+      "canonical_id": "creditum",
+      "name": "creditum",
+      "symbol": "CREDIT",
+      "input_group": "quarantined",
+      "current_cmc_id": "17132",
+      "current_cmc_slug": "creditum",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "KNOWN_IDENTITY_QUOTE_UNAVAILABLE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Issuer documentation identifies the Revenant Finance/Fantom lending protocol and CREDIT rewards, matching provider Creditum/CREDIT metadata. This is not a similarly named consumer-credit business. Provider preview listing and archived protocol documentation do not establish current quote availability or lifecycle.",
+      "sources": [
+        "https://creditum.gitbook.io/creditum",
+        "https://coinmarketcap.com/currencies/creditum/"
+      ],
+      "unblock_condition": "A changed provider quote with positive price and exact fields; also satisfy any documented lifecycle/market restrictions.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+        "source_url": "https://coinmarketcap.com/currencies/creditum/",
+        "issuer_url": "https://creditum.gitbook.io/creditum",
+        "reviewed_on": "2026-10-14",
+        "notes": "Issuer documentation identifies the Revenant Finance/Fantom lending protocol and CREDIT rewards, matching provider Creditum/CREDIT metadata. This is not a similarly named consumer-credit business. Provider preview listing and archived protocol documentation do not establish current quote availability or lifecycle.",
+        "audit_at": "2026-10-16T18:02:03.345Z",
+        "audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+        "live_reasons": [
+          "invalid_price"
+        ]
+      },
+      "ru_summary": "Идентичность CREDIT ранее сопоставлена, но цена API непригодна. Повторять после изменения данных провайдера."
+    },
+    {
+      "canonical_id": "mxc",
+      "name": "mxc",
+      "symbol": "MXC",
+      "input_group": "quarantined",
+      "current_cmc_id": "3628",
+      "current_cmc_slug": "mxc",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "KNOWN_IDENTITY_QUOTE_UNAVAILABLE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Issuer Moonchain mainnet configuration identifies MXC as native symbol on chain 18686. Its old-to-new bridge documentation publishes the new Arbitrum MXC address, agreeing with the displayed provider prefix/suffix at UCID 3628/MXC/mxc. The provider links mxc.com/doc.mxc.com and records L1-to-L3 migration; the old 5733 mapping returned unrelated IOOX. Retain symbol MXC and permanent project ID. Provider is a preview listing, current quote availability is not established, and the old ERC20 bridge is marked discontinued; no bridge action, current conversion window, ratio or financial scaling is inferred. No independent full provider-explorer retrieval is claimed.",
+      "sources": [
+        "https://doc.mxc.com/docs/Mainnet-Tutorials/Jannowitz-Tutorial-Old-New/",
+        "https://coinmarketcap.com/currencies/mxc/"
+      ],
+      "unblock_condition": "A changed provider quote with positive price and exact fields; also satisfy any documented lifecycle/market restrictions.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+        "source_url": "https://coinmarketcap.com/currencies/mxc/",
+        "issuer_url": "https://doc.mxc.com/docs/Mainnet-Tutorials/Jannowitz-Tutorial-Old-New/",
+        "reviewed_on": "2026-10-17",
+        "notes": "Issuer Moonchain mainnet configuration identifies MXC as native symbol on chain 18686. Its old-to-new bridge documentation publishes the new Arbitrum MXC address, agreeing with the displayed provider prefix/suffix at UCID 3628/MXC/mxc. The provider links mxc.com/doc.mxc.com and records L1-to-L3 migration; the old 5733 mapping returned unrelated IOOX. Retain symbol MXC and permanent project ID. Provider is a preview listing, current quote availability is not established, and the old ERC20 bridge is marked discontinued; no bridge action, current conversion window, ratio or financial scaling is inferred. No independent full provider-explorer retrieval is claimed.",
+        "audit_at": "2026-10-17T12:49:16.099Z",
+        "audit_commit": "101fb855c47849f9725924bab2ee18b7aefd0a84",
+        "audit_dataset_sha256": "107157b36f430cf4292fc8e9c779759e20c9d3592f8279d7f6a149654209e8fb",
+        "live_reasons": [
+          "invalid_price"
+        ]
+      },
+      "ru_summary": "Идентичность MXC ранее сопоставлена, но цена API непригодна. Повторять после изменения данных провайдера."
+    },
+    {
+      "canonical_id": "backed-finance",
+      "name": "backed-finance",
+      "symbol": "BPRO",
+      "input_group": "quarantined",
+      "current_cmc_id": "28833",
+      "current_cmc_slug": "backed",
+      "last_observed_reasons": [
+        "symbol_mismatch:RAIT",
+        "slug_mismatch:rabbitgame",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PRODUCT_SELECTION_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Backed issuer database describes multiple xStocks/bTokens as distinct underlying tracker certificates. BPRO is not established as one universal Backed asset. Current 28833 returns RAIT; choosing another product would change the asset.",
+      "sources": [
+        "https://assets.backed.fi/legal-documentation"
+      ],
+      "unblock_condition": "Specify exact Backed product, chain/contract and numeric provider identity.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "У Backed много отдельных продуктов. Универсальный BPRO не подтверждён; нужен конкретный сертификат и контракт."
+    },
+    {
+      "canonical_id": "cortex",
+      "name": "cortex",
+      "symbol": "CTXC",
+      "input_group": "quarantined",
+      "current_cmc_id": "2638",
+      "current_cmc_slug": "cortex",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "KNOWN_IDENTITY_QUOTE_UNAVAILABLE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Last complete audit returned CTXC/cortex but invalid_price. Issuer technical documentation identifies CTXC as the native compute-resource coin. Provider failure does not imply no token.",
+      "sources": [
+        "https://github.com/CortexFoundation/tech-doc/blob/master/ctxc.md"
+      ],
+      "unblock_condition": "Changed provider quote with a positive normalized price and exact identity/fields.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "CTXC подтверждён документацией эмитента; текущая цена API не проходит проверку."
+    },
+    {
+      "canonical_id": "spheron",
+      "name": "spheron",
+      "symbol": "SPON",
+      "input_group": "quarantined",
+      "current_cmc_id": "37537",
+      "current_cmc_slug": "spheron-network",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "KNOWN_IDENTITY_QUOTE_UNAVAILABLE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Search-retrieved text from the issuer-hosted whitepaper explicitly uses SPON for compute-network payments/staking/rewards. Provider UCID 37537 is Spheron Network/SPON, slug spheron-network, with the matching issuer domain and Base explorer reference. The direct PDF fetch failed, and current commercial homepage does not mention SPON; current lifecycle/quote availability are not established. Correct the catalog input SPHN without inventing an enacted SPHN-to-SPON token migration. No independent full issuer contract match was obtained; the provider page is a preview.",
+      "sources": [
+        "https://www.spheron.network/Spheron-Whitepaper.pdf",
+        "https://coinmarketcap.com/currencies/spheron-network/"
+      ],
+      "unblock_condition": "A changed provider quote with positive price and exact fields; also satisfy any documented lifecycle/market restrictions.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+        "source_url": "https://coinmarketcap.com/currencies/spheron-network/",
+        "issuer_url": "https://www.spheron.network/Spheron-Whitepaper.pdf",
+        "reviewed_on": "2026-10-16",
+        "notes": "Search-retrieved text from the issuer-hosted whitepaper explicitly uses SPON for compute-network payments/staking/rewards. Provider UCID 37537 is Spheron Network/SPON, slug spheron-network, with the matching issuer domain and Base explorer reference. The direct PDF fetch failed, and current commercial homepage does not mention SPON; current lifecycle/quote availability are not established. Correct the catalog input SPHN without inventing an enacted SPHN-to-SPON token migration. No independent full issuer contract match was obtained; the provider page is a preview.",
+        "audit_at": "2026-10-16T20:33:41.731Z",
+        "audit_commit": "38c3eb5f579c92fb4ade2cbd01b359c324b1be71",
+        "audit_dataset_sha256": "54f0ae2cf8f65482203fa69b3e63959f089657900882db336683c718a3566377",
+        "live_reasons": [
+          "invalid_price"
+        ]
+      },
+      "ru_summary": "Идентичность SPON ранее сопоставлена, но цена API непригодна. Повторять после изменения данных провайдера."
+    },
+    {
+      "canonical_id": "pollen-mobile",
+      "name": "pollen-mobile",
+      "symbol": "PCN",
+      "input_group": "quarantined",
+      "current_cmc_id": "20267",
+      "current_cmc_slug": "pollen-coin",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "KNOWN_IDENTITY_QUOTE_UNAVAILABLE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Issuer identifies PollenCoin PCN and provider explicitly associates it with Pollen Mobile, not Pollen/PLN. Issuer internal-network $0.10 denomination has no cash value and is not a stablecoin peg; it must not become a spot quote, market cap or FDV. Keep quarantine until both a valid external quote and its market applicability are established; strict numeric PASS alone is insufficient for this special case.",
+      "sources": [
+        "https://docs.pollenmobile.io/pollen-mobile-docs/white-paper/network-concepts",
+        "https://coinmarketcap.com/currencies/pollen-coin/"
+      ],
+      "unblock_condition": "A changed provider quote with positive price and exact fields; also satisfy EXTERNAL_MARKET_VALIDITY_REQUIRED.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+        "source_url": "https://coinmarketcap.com/currencies/pollen-coin/",
+        "issuer_url": "https://docs.pollenmobile.io/pollen-mobile-docs/white-paper/network-concepts",
+        "reviewed_on": "2026-10-14",
+        "notes": "Issuer identifies PollenCoin PCN and provider explicitly associates it with Pollen Mobile, not Pollen/PLN. Issuer internal-network $0.10 denomination has no cash value and is not a stablecoin peg; it must not become a spot quote, market cap or FDV. Keep quarantine until both a valid external quote and its market applicability are established; strict numeric PASS alone is insufficient for this special case.",
+        "additional_release_gate": "EXTERNAL_MARKET_VALIDITY_REQUIRED",
+        "audit_at": "2026-10-16T18:02:03.345Z",
+        "audit_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+        "audit_dataset_sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+        "live_reasons": [
+          "invalid_price"
+        ]
+      },
+      "ru_summary": "Идентичность PCN ранее сопоставлена, но цена API непригодна. Повторять после изменения данных провайдера. Отдельно нужен внешний рынок: внутренняя номинальная стоимость PCN не является котировкой."
+    },
+    {
+      "canonical_id": "everclear",
+      "name": "everclear",
+      "symbol": "CLEAR",
+      "input_group": "quarantined",
+      "current_cmc_id": "34512",
+      "current_cmc_slug": "everclear",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "KNOWN_IDENTITY_QUOTE_UNAVAILABLE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Issuer mainnet registry names the CLEAR token and full contract, matching the provider explorer target. Do not merge the separate originally unmapped connext record by alias. Provider page is a preview; valid quote availability is pending.",
+      "sources": [
+        "https://docs.everclear.org/resources/contracts/mainnet",
+        "https://coinmarketcap.com/currencies/everclear/"
+      ],
+      "unblock_condition": "A changed provider quote with positive price and exact fields; also satisfy any documented lifecycle/market restrictions.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+        "source_url": "https://coinmarketcap.com/currencies/everclear/",
+        "issuer_url": "https://docs.everclear.org/resources/contracts/mainnet",
+        "reviewed_on": "2026-10-13",
+        "notes": "Issuer mainnet registry names the CLEAR token and full contract, matching the provider explorer target. Do not merge the separate originally unmapped connext record by alias. Provider page is a preview; valid quote availability is pending.",
+        "audit_at": "2026-10-13T18:38:55.920Z",
+        "audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+        "audit_dataset_sha256": "02e2faaa0c512cac6eccebb78bb43b4ca75ed4aa0e538bff5468e0b121ae1d97",
+        "live_reasons": [
+          "invalid_price"
+        ]
+      },
+      "ru_summary": "Идентичность CLEAR ранее сопоставлена, но цена API непригодна. Повторять после изменения данных провайдера."
+    },
+    {
+      "canonical_id": "match-quest",
+      "name": "match-quest",
+      "symbol": "MQ",
+      "input_group": "quarantined",
+      "current_cmc_id": "29811",
+      "current_cmc_slug": "match-quest",
+      "last_observed_reasons": [
+        "symbol_mismatch:ANDY",
+        "slug_mismatch:andy-on-sol"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_ASSET_SEPARATION",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Matchain issuer blog describes Match Quest engagement points MP. This does not establish a separate fungible MQ token or authorize adopting MATCH. Current 29811 returns ANDY.",
+      "sources": [
+        "https://www.matchain.io/blog/matchain-mid-year-report-2024"
+      ],
+      "unblock_condition": "Original MQ issuer/contract and independently matching provider; points are not a coin quote.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Документация Matchain описывает баллы MP, а не подтверждённый токен MQ. ANDY относится к другому активу."
+    },
+    {
+      "canonical_id": "toucan-protocol",
+      "name": "toucan-protocol",
+      "symbol": "BCT",
+      "input_group": "quarantined",
+      "current_cmc_id": "23238",
+      "current_cmc_slug": "toucan-protocol-base-carbon-tonne",
+      "last_observed_reasons": [
+        "symbol_mismatch:HIMFERS",
+        "slug_mismatch:himfers",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Toucan confirms admin control transferred to KlimaDAO in 2024 and BCT is no longer its product. KlimaDAO registry identifies the Polygon BCT address, matching provider 12949 abbreviation, but its carbon-pools page marks pools deprecated after the protocol relaunch. This identifies a historical BCT candidate, not a current Toucan project quote or verified market applicability. Preserve BCT/old failed mapping quarantine until project-versus-pool and current lifecycle/market review resolves; do not substitute KLIMA, assume carbon-credit redemption or infer token absence.",
+      "sources": [
+        "https://docs.toucan.earth/resources/frequently-asked-questions/faq-for-transition-to-open-source",
+        "https://docs.klimadao.finance/developers/deployment-addresses",
+        "https://docs.klimadao.finance/ecosystem/carbon-pools",
+        "https://coinmarketcap.com/currencies/toucan-protocol-base-carbon-tonne/"
+      ],
+      "unblock_condition": "Resolve the documented identity/lifecycle issue with new primary evidence before any release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "LEGACY_CARBON_POOL_PRODUCT_AND_MARKET_REVIEW_REQUIRED",
+        "candidate_cmc_id": "12949",
+        "candidate_symbol": "BCT",
+        "candidate_slug": "toucan-protocol-base-carbon-tonne",
+        "issuer_url": "https://docs.toucan.earth/resources/frequently-asked-questions/faq-for-transition-to-open-source",
+        "additional_sources": [
+          "https://docs.klimadao.finance/developers/deployment-addresses",
+          "https://docs.klimadao.finance/ecosystem/carbon-pools",
+          "https://coinmarketcap.com/currencies/toucan-protocol-base-carbon-tonne/"
+        ],
+        "documented_polygon_contract": "0x2F800Db0fdb5223b3C3f354886d907A671414A7F",
+        "notes": "Toucan confirms admin control transferred to KlimaDAO in 2024 and BCT is no longer its product. KlimaDAO registry identifies the Polygon BCT address, matching provider 12949 abbreviation, but its carbon-pools page marks pools deprecated after the protocol relaunch. This identifies a historical BCT candidate, not a current Toucan project quote or verified market applicability. Preserve BCT/old failed mapping quarantine until project-versus-pool and current lifecycle/market review resolves; do not substitute KLIMA, assume carbon-credit redemption or infer token absence."
+      },
+      "ru_summary": "Исторический BCT передан KlimaDAO, пулы помечены deprecated. Кандидат 12949 не доказывает текущую котировку проекта Toucan."
+    },
+    {
+      "canonical_id": "chainport",
+      "name": "chainport",
+      "symbol": "PORTX",
+      "input_group": "quarantined",
+      "current_cmc_id": "17480",
+      "current_cmc_slug": "chainport",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "KNOWN_IDENTITY_QUOTE_UNAVAILABLE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Issuer explicitly names PORTX as ChainPort utility token and publishes the full Ethereum address. Provider UCID 17480 is ChainPort/PORTX, slug chainport, with matching issuer links and contract prefix/suffix; full provider explorer fetching failed, so no independently fetched full-contract match is claimed. Correct the catalog PORT input and unrelated C4E ID without claiming a token migration. Provider preview renders an unexplained total-supply string 679814605.44E PORTX. Do not interpret or scale that UI text into financial values; review fresh raw supply/units and associated MC/FDV validity before release even if the unchanged strict quote audit passes.",
+      "sources": [
+        "https://www.chainport.io/portx-token",
+        "https://coinmarketcap.com/currencies/chainport/"
+      ],
+      "unblock_condition": "A changed provider quote with positive price and exact fields; also satisfy RAW_SUPPLY_VALIDITY_REVIEW_REQUIRED.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+        "source_url": "https://coinmarketcap.com/currencies/chainport/",
+        "issuer_url": "https://www.chainport.io/portx-token",
+        "reviewed_on": "2026-10-16",
+        "notes": "Issuer explicitly names PORTX as ChainPort utility token and publishes the full Ethereum address. Provider UCID 17480 is ChainPort/PORTX, slug chainport, with matching issuer links and contract prefix/suffix; full provider explorer fetching failed, so no independently fetched full-contract match is claimed. Correct the catalog PORT input and unrelated C4E ID without claiming a token migration. Provider preview renders an unexplained total-supply string 679814605.44E PORTX. Do not interpret or scale that UI text into financial values; review fresh raw supply/units and associated MC/FDV validity before release even if the unchanged strict quote audit passes.",
+        "additional_release_gate": "RAW_SUPPLY_VALIDITY_REVIEW_REQUIRED",
+        "observed_provider_supply_display": "679814605.44E PORTX",
+        "audit_at": "2026-10-16T20:33:41.731Z",
+        "audit_commit": "38c3eb5f579c92fb4ade2cbd01b359c324b1be71",
+        "audit_dataset_sha256": "54f0ae2cf8f65482203fa69b3e63959f089657900882db336683c718a3566377",
+        "live_reasons": [
+          "invalid_price"
+        ]
+      },
+      "ru_summary": "Идентичность PORTX ранее сопоставлена, но цена API непригодна. Повторять после изменения данных провайдера. Отдельно нужно разобраться с сырыми единицами supply; неоднозначная строка интерфейса не даёт числового доказательства."
+    },
+    {
+      "canonical_id": "lyra",
+      "name": "lyra",
+      "symbol": "LYRA",
+      "input_group": "quarantined",
+      "current_cmc_id": "27620",
+      "current_cmc_slug": "lyra-3",
+      "last_observed_reasons": [
+        "symbol_mismatch:THROG",
+        "slug_mismatch:throg",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_ASSET_SEPARATION",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Old 27620 returns THROG. Candidate LYRA/15447 is already held by canonical lyra-finance, so copying it would create an identity collision. Sparse name lyra/lyra-3 does not establish a second asset.",
+      "sources": [],
+      "unblock_condition": "Original row issuer/chain/contract or a deliberate catalog duplicate decision; never duplicate 15447.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "LYRA/15447 уже принадлежит lyra-finance. Для второй записи нужен исходный эмитент, а не дубликат ID."
+    },
+    {
+      "canonical_id": "ceramic",
+      "name": "ceramic",
+      "symbol": "CERA",
+      "input_group": "quarantined",
+      "current_cmc_id": "24022",
+      "current_cmc_slug": "ceramic",
+      "last_observed_reasons": [
+        "symbol_mismatch:CHT",
+        "slug_mismatch:cyberharbor"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ISSUER_DOCUMENTED_NO_NATIVE_TOKEN",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "project_without_token",
+      "reason": "Issuer FAQ explicitly says Ceramic has no native token; developer documentation says there are no tokenized node incentives. Scope is the documented Ceramic network, not every future product. CERA is not established as a token. Keep historical failed CMC 24022/CHT under quarantine for provenance and strict-audit coverage; it must never be used as a Ceramic quote. Reconsider only on a new issuer token announcement and independently matched identity.",
+      "sources": [
+        "https://blog.ceramic.network/faq-ceramic-network/",
+        "https://developers.ceramic.network/docs/introduction/why-ceramic"
+      ],
+      "unblock_condition": "New issuer native-token announcement with independently verified identity. No routine quote retries.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Документация прямо говорит, что native-токена нет. CERA не подтверждён; чужой CHT остаётся заблокирован."
+    },
+    {
+      "canonical_id": "fantom",
+      "name": "fantom",
+      "symbol": "FTM",
+      "input_group": "quarantined",
+      "current_cmc_id": "3513",
+      "current_cmc_slug": "fantom",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer documents FTM-to-native-S migration and continuing legacy Opera operation. Current Sonic S is already tracked at canonical sonic-3/32684. Retain legacy Fantom FTM/3513 quarantine and existing invalid_price reason. This is a metadata reference only: no duplicate provider ID, alias resolution, canonical merging, price substitution or wallet migration is introduced. Token absence is not inferred.",
+      "sources": [
+        "https://docs.soniclabs.com/migration/overview",
+        "https://docs.soniclabs.com/migration/app-token-migration"
+      ],
+      "unblock_condition": "Resolve the documented identity/lifecycle issue with new primary evidence before any release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "LEGACY_ASSET_SUCCESSOR_ALREADY_TRACKED",
+        "reviewed_on": "2026-10-16",
+        "issuer_url": "https://docs.soniclabs.com/migration/overview",
+        "additional_source": "https://docs.soniclabs.com/migration/app-token-migration",
+        "successor_canonical_id": "sonic-3",
+        "successor_cmc_id": "32684",
+        "successor_symbol": "S",
+        "notes": "Issuer documents FTM-to-native-S migration and continuing legacy Opera operation. Current Sonic S is already tracked at canonical sonic-3/32684. Retain legacy Fantom FTM/3513 quarantine and existing invalid_price reason. This is a metadata reference only: no duplicate provider ID, alias resolution, canonical merging, price substitution or wallet migration is introduced. Token absence is not inferred."
+      },
+      "ru_summary": "Исторический FTM сохранён отдельно. Его преемник Sonic/S уже учтён; дублировать S или подменять цену нельзя."
+    },
+    {
+      "canonical_id": "huddle01",
+      "name": "huddle01",
+      "symbol": "HUDL",
+      "input_group": "quarantined",
+      "current_cmc_id": "23412",
+      "current_cmc_slug": "huddle01",
+      "last_observed_reasons": [
+        "symbol_mismatch:PSI",
+        "slug_mismatch:tridentdao"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Prior issuer review identified HUDL and testnet tHUDL but no numeric current mainnet identity. Two third-party contract leads on different chains do not independently resolve the issuer asset. Calculator examples are not price proof.",
+      "sources": [
+        "https://huddle01.com/"
+      ],
+      "unblock_condition": "Current issuer mainnet HUDL contract and a matching numeric CMC record, then quotes.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Нужен актуальный mainnet HUDL и точный CMC ID. tHUDL и примеры из калькулятора не являются котировкой."
+    },
+    {
+      "canonical_id": "moralis",
+      "name": "moralis",
+      "symbol": "MOR",
+      "input_group": "quarantined",
+      "current_cmc_id": "24755",
+      "current_cmc_slug": "moralis",
+      "last_observed_reasons": [
+        "symbol_mismatch:WSB",
+        "slug_mismatch:wall-street-bet"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Token-data API service does not establish native MOR. Morpheus MOR is already a different canonical asset; old ID returns WSB. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://moralis.com/api/token/"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "rom",
+      "name": "rom",
+      "symbol": "ROM",
+      "input_group": "quarantined",
+      "current_cmc_id": "29211",
+      "current_cmc_slug": "rom",
+      "last_observed_reasons": [
+        "symbol_mismatch:EGG",
+        "slug_mismatch:egg"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Sparse Gaming ROM row lacks issuer/contract provenance. ROMCOIN, ROM game assets and unrelated same-name projects cannot be selected by ticker. Existing 29211 returns EGG.",
+      "sources": [],
+      "unblock_condition": "Original game issuer and exact asset contract; no same-name ROMCOIN or ROMx assumption.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Не установлен исходный игровой эмитент ROM. ROMCOIN и ROMx нельзя выбирать только по похожему имени."
+    },
+    {
+      "canonical_id": "openeden",
+      "name": "openeden",
+      "symbol": "TBILL",
+      "input_group": "quarantined",
+      "current_cmc_id": "25158",
+      "current_cmc_slug": "openeden-tbill-vault",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "KNOWN_IDENTITY_QUOTE_UNAVAILABLE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Provider identifies OpenEden TBILL Vault; issuer documentation names TBILL and its Ethereum contract with the same provider contract prefix/suffix. Preserve the TBILL product identity; do not substitute EDEN governance or USDO. Preview listing does not establish a market price, NAV or FDV.",
+      "sources": [
+        "https://docs.openeden.com/usdo/guides/usdo-instant-mint-via-etherscan",
+        "https://coinmarketcap.com/currencies/openeden-tbill-vault/"
+      ],
+      "unblock_condition": "A changed provider quote with positive price and exact fields; also satisfy any documented lifecycle/market restrictions.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+        "source_url": "https://coinmarketcap.com/currencies/openeden-tbill-vault/",
+        "issuer_url": "https://docs.openeden.com/usdo/guides/usdo-instant-mint-via-etherscan",
+        "reviewed_on": "2026-10-13",
+        "notes": "Provider identifies OpenEden TBILL Vault; issuer documentation names TBILL and its Ethereum contract with the same provider contract prefix/suffix. Preserve the TBILL product identity; do not substitute EDEN governance or USDO. Preview listing does not establish a market price, NAV or FDV.",
+        "audit_at": "2026-10-13T18:38:55.920Z",
+        "audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+        "audit_dataset_sha256": "02e2faaa0c512cac6eccebb78bb43b4ca75ed4aa0e538bff5468e0b121ae1d97",
+        "live_reasons": [
+          "invalid_price"
+        ]
+      },
+      "asset_subtype": "tokenized_fund_share",
+      "ru_summary": "Идентичность TBILL ранее сопоставлена, но цена API непригодна. Повторять после изменения данных провайдера."
+    },
+    {
+      "canonical_id": "thingsix",
+      "name": "thingsix",
+      "symbol": "THIX",
+      "input_group": "quarantined",
+      "current_cmc_id": "23967",
+      "current_cmc_slug": "thingsix",
+      "last_observed_reasons": [
+        "symbol_mismatch:VAPE",
+        "slug_mismatch:vaporfi",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "ThingsIX/THIX remains a research lead. Direct current-domain/docs retrieval failed; a branded Webflow page describes the IoT network but does not establish a current numeric CMC identity or verified token contract. Search results about similarly named THING are unrelated. Keep original failed mapping and quarantine; retrieval failure is not evidence of no token.",
+      "sources": [
+        "https://thingsix.com/",
+        "https://docs.thingsix.com/",
+        "https://things-ix.webflow.io/"
+      ],
+      "unblock_condition": "Resolve the documented identity/lifecycle issue with new primary evidence before any release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "NUMERIC_PROVIDER_IDENTITY_UNCONFIRMED",
+        "issuer_url": "https://thingsix.com/",
+        "additional_sources": [
+          "https://docs.thingsix.com/",
+          "https://things-ix.webflow.io/"
+        ],
+        "notes": "ThingsIX/THIX remains a research lead. Direct current-domain/docs retrieval failed; a branded Webflow page describes the IoT network but does not establish a current numeric CMC identity or verified token contract. Search results about similarly named THING are unrelated. Keep original failed mapping and quarantine; retrieval failure is not evidence of no token."
+      },
+      "ru_summary": "Для THIX не установлен числовой CMC ID. Недоступные сайты не доказывают отсутствие токена."
+    },
+    {
+      "canonical_id": "tangible",
+      "name": "tangible",
+      "symbol": "TNGBL",
+      "input_group": "quarantined",
+      "current_cmc_id": "22870",
+      "current_cmc_slug": "tangible",
+      "last_observed_reasons": [
+        "symbol_mismatch:DGH",
+        "slug_mismatch:digihealth",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "LEGACY_ASSET_LIFECYCLE_REVIEW",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer Tangible/re.al documentation describes TNGBL to RWA migration and distinguishes unlocked tokens from veRWA. Migration closure after April 2026 is governance-dependent; archived text is not proof of a currently open window. Keep wrong DGH mapping blocked.",
+      "sources": [
+        "https://docs.tangible.store/protocol-overview/rwa-tngbl-token",
+        "https://docs.re.al/rwa-token/overview"
+      ],
+      "unblock_condition": "Current successor contract, governance/migration lifecycle and provider identity; no 1:1 financial-value substitution.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Документирована миграция TNGBL → RWA/veRWA. Нужны актуальные контракт и статус; доступность старого окна обмена не подтверждена."
+    },
+    {
+      "canonical_id": "aether",
+      "name": "aether",
+      "symbol": "AET",
+      "input_group": "quarantined",
+      "current_cmc_id": "25245",
+      "current_cmc_slug": "aether",
+      "last_observed_reasons": [
+        "symbol_mismatch:SMUDGE",
+        "slug_mismatch:smudge-lord",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Multiple Aether projects exist; no evidence joins this DeSci row to a specific issuer/contract. Do not choose current same-ticker Aether Network.",
+      "sources": [],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"Aether\" \"AET\" \"DeSci\""
+      ],
+      "ru_summary": "Несколько проектов Aether/AET; связь исходной DeSci-записи с конкретным эмитентом не установлена."
+    },
+    {
+      "canonical_id": "agora-health",
+      "name": "agora-health",
+      "symbol": "AGORA",
+      "input_group": "quarantined",
+      "current_cmc_id": "25567",
+      "current_cmc_slug": "agora-health",
+      "last_observed_reasons": [
+        "symbol_mismatch:AIM",
+        "slug_mismatch:automated-income-machine",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "A similarly named healthcare subscription business is not sufficient issuer provenance for AGORA/DeSci.",
+      "sources": [],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"Agora Health\" crypto token"
+      ],
+      "ru_summary": "Одноимённый медицинский бизнес не подтверждает токен AGORA этой записи."
+    },
+    {
+      "canonical_id": "alchemy",
+      "name": "alchemy",
+      "symbol": "ALCH",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Infrastructure company and token APIs do not establish ALCH. AlchemyDAO and Alchemist AI are distinct projects. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://www.alchemy.com/"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "alienswap",
+      "name": "alienswap",
+      "symbol": "ALIEN",
+      "input_group": "quarantined",
+      "current_cmc_id": "22664",
+      "current_cmc_slug": "alienswap",
+      "last_observed_reasons": [
+        "symbol_mismatch:UNF",
+        "slug_mismatch:unofarm",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Project-branded profile describes NFT marketplace loyalty before an ALIEN airdrop. Current mainnet issuance, contract and numeric CMC identity are not established. AlienFi and ALIENX are not automatic replacements for this sparse ALIEN row; old 22664 returns UNF.",
+      "sources": [
+        "https://link3.to/alienswap"
+      ],
+      "unblock_condition": "Current original issuer token announcement and contract lineage; no same-ticker or successor assumption.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Ранние материалы описывают NFT и ожидаемый airdrop. Нужны контракт и подтверждение выпуска ALIEN; AlienFi/ALIENX не подставляются."
+    },
+    {
+      "canonical_id": "antidote",
+      "name": "antidote",
+      "symbol": "ANTIDOTE",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_ASSET_SEPARATION",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "DeSciWorld issuer-partner article describes AntidoteDAO fundraising/membership NFTs. It does not establish a fungible ANTIDOTE token or a CMC identity.",
+      "sources": [
+        "https://medium.com/desciworld/desciworld-implements-chainlink-price-feeds-34202075b658"
+      ],
+      "unblock_condition": "Issuer fungible-token evidence; do not price membership NFTs as a coin.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Найдены fundraising/membership NFT AntidoteDAO. Отдельный fungible ANTIDOTE не установлен."
+    },
+    {
+      "canonical_id": "franklin-templeton",
+      "name": "benji",
+      "symbol": "BENJI",
+      "input_group": "quarantined",
+      "current_cmc_id": "31581",
+      "current_cmc_slug": "franklin-templeton",
+      "last_observed_reasons": [
+        "symbol_mismatch:DSAI",
+        "slug_mismatch:desend-ai",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PRODUCT_SELECTION_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer identifies BENJI as one share of FOBXX, a tokenized regulated fund. BENJI ticker also names unrelated crypto assets such as Basenji. No matching numeric CMC crypto identity established; fund NAV is not a spot-market quote.",
+      "sources": [
+        "https://www.franklintempleton.com/about-us/digital-assets/digital-assets-technology",
+        "https://coinmarketcap.com/currencies/basenjibase/"
+      ],
+      "unblock_condition": "A specifically matched fund-share provider record and suitable data model; never Basenji/30193 or fixed NAV.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "BENJI — доля FOBXX, а не мем-токен Basenji. Нужны отдельный подходящий источник фондовых данных и точная идентичность."
+    },
+    {
+      "canonical_id": "biomapper",
+      "name": "biomapper",
+      "symbol": "BIO",
+      "input_group": "quarantined",
+      "current_cmc_id": "25420",
+      "current_cmc_slug": "biomapper",
+      "last_observed_reasons": [
+        "symbol_mismatch:PEPEDONALDS",
+        "slug_mismatch:pepe-donalds",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Search finds Humanode biometrics SDK and unrelated biological mapping software; neither establishes canonical DeSci BIO as a fungible asset. Existing 25420 returns PEPEDONALDS.",
+      "sources": [
+        "https://github.com/humanode-network/biomapper-sdk"
+      ],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"Biomapper\" \"BIO\" token"
+      ],
+      "ru_summary": "Найдены одноимённые SDK/научные инструменты. Они не подтверждают токен BIO этой записи."
+    },
+    {
+      "canonical_id": "biopset",
+      "name": "biopset",
+      "symbol": "BIOPSET",
+      "input_group": "quarantined",
+      "current_cmc_id": "25321",
+      "current_cmc_slug": "biopset",
+      "last_observed_reasons": [
+        "symbol_mismatch:AHE",
+        "slug_mismatch:ai-hey",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Historical BIOPset leads concern BIOP/options, not established BIOPSET/DeSci. Current canonical origin, contract and numeric provider identity remain unconfirmed; wrong AHE mapping stays blocked.",
+      "sources": [
+        "https://www.omniscia.io/index"
+      ],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"Biopset\" \"BIOPSET\""
+      ],
+      "ru_summary": "Исторические материалы относятся к BIOP/options. Связь с исходным BIOPSET/DeSci и актуальным контрактом не установлена."
+    },
+    {
+      "canonical_id": "biodao",
+      "name": "biodao",
+      "symbol": "BIOT",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "BioDAO-branded documentation describes planned BIO contributor rewards, rather than BIOT. It does not independently tie this sparse row to BioPassport BIOT or the separate Bio Protocol asset.",
+      "sources": [
+        "https://biodao.notion.site/About-how-BioDAO-works-9d6c67b0ac4048819e294c3cc35c495d"
+      ],
+      "unblock_condition": "Original issuer, contract and issuance/lifecycle evidence; no BIOT/BIO ticker substitution.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Материалы говорят о планируемых BIO-наградах, а не подтверждённом BIOT. BioPassport/Bio Protocol автоматически не выбираются."
+    },
+    {
+      "canonical_id": "bloxroute",
+      "name": "bloxroute",
+      "symbol": "BLXR",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "LEGACY_ASSET_LIFECYCLE_REVIEW",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer 2018/2019 whitepapers and 2019 issuer post describe BLXR as a capped security/dividend token. This defeats a blanket no-token assumption but does not establish current public token trading or a numeric CMC quote.",
+      "sources": [
+        "https://bloxroute.com/wp-content/uploads/2019/11/bloXrouteWhitepaper.pdf",
+        "https://medium.com/bloxroute/blxr-and-white-paper-update-40ebc5317b00"
+      ],
+      "unblock_condition": "Current issuer security-token status, contract and appropriate market-data availability; never infer values from BDN revenue.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Старые документы описывают BLXR как security/dividend token. Это не доказательство актуальной публичной торговли или CMC-котировки."
+    },
+    {
+      "canonical_id": "blockscout",
+      "name": "blockscout",
+      "symbol": "BSCT",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Open-source block-explorer product does not establish a native BSCT token. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://www.blockscout.com/"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "bullieverse",
+      "name": "bullieverse",
+      "symbol": "BULL",
+      "input_group": "quarantined",
+      "current_cmc_id": "11687",
+      "current_cmc_slug": "bullrise",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Provider 17343/$BULL links the current gaming/NFT issuer domain and displays contract prefix 0x9f95...5cc08d. The issuer homepage confirms the brand/games but does not identify its token in retrieved text; issuer whitepaper fetch failed. Neither the dollar-prefix normalization nor current token contract/lifecycle is independently resolved. Retain BULL and old failed provider mapping under quarantine; do not infer project_without_token from omissions or fetch failure.",
+      "sources": [
+        "https://www.bullieverse.com/",
+        "https://coinmarketcap.com/currencies/bullieverse/",
+        "https://docs.bullieverse.com/"
+      ],
+      "unblock_condition": "Resolve the documented identity/lifecycle issue with new primary evidence before any release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "ISSUER_TOKEN_CONTRACT_REVIEW_INCOMPLETE",
+        "issuer_url": "https://www.bullieverse.com/",
+        "additional_sources": [
+          "https://coinmarketcap.com/currencies/bullieverse/",
+          "https://docs.bullieverse.com/"
+        ],
+        "candidate_cmc_id": "17343",
+        "candidate_symbol": "$BULL",
+        "notes": "Provider 17343/$BULL links the current gaming/NFT issuer domain and displays contract prefix 0x9f95...5cc08d. The issuer homepage confirms the brand/games but does not identify its token in retrieved text; issuer whitepaper fetch failed. Neither the dollar-prefix normalization nor current token contract/lifecycle is independently resolved. Retain BULL and old failed provider mapping under quarantine; do not infer project_without_token from omissions or fetch failure."
+      },
+      "ru_summary": "CMC-кандидат 17343/$BULL найден, но актуальный контракт и связь с BULL требуют подтверждения эмитента."
+    },
+    {
+      "canonical_id": "cryogenseed",
+      "name": "cryogenseed",
+      "symbol": "CGS",
+      "input_group": "quarantined",
+      "current_cmc_id": "25522",
+      "current_cmc_slug": "cryogenseed",
+      "last_observed_reasons": [
+        "symbol_mismatch:YUKKY",
+        "slug_mismatch:yukky",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "No sufficient primary issuer/contract identity established; retain YUKKY failure quarantine.",
+      "sources": [],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"Cryogenseed\" \"CGS\""
+      ],
+      "ru_summary": "Первичный эмитент и контракт CGS не установлены. Чужой YUKKY остаётся заблокирован."
+    },
+    {
+      "canonical_id": "corusdao",
+      "name": "corusdao",
+      "symbol": "COR",
+      "input_group": "quarantined",
+      "current_cmc_id": "25122",
+      "current_cmc_slug": "corusdao",
+      "last_observed_reasons": [
+        "symbol_mismatch:PATNUT",
+        "slug_mismatch:patnut",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "No sufficient primary issuer/contract identity established; retain PATNUT failure quarantine.",
+      "sources": [],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"CorusDAO\" \"COR\""
+      ],
+      "ru_summary": "Первичный эмитент и контракт COR не установлены. Чужой PATNUT остаётся заблокирован."
+    },
+    {
+      "canonical_id": "credix",
+      "name": "credix",
+      "symbol": "CRED",
+      "input_group": "quarantined",
+      "current_cmc_id": "27812",
+      "current_cmc_slug": "credix-finance",
+      "last_observed_reasons": [
+        "symbol_mismatch:PACMAN",
+        "slug_mismatch:pac-man",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer describes credit infrastructure and permissioned lending products, which do not establish a CRED token. Old ID returns PACMAN. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://credix.finance/"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "chainstack",
+      "name": "chainstack",
+      "symbol": "CSX",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "RPC/node infrastructure service does not establish CSX. Same-ticker Chainstation is a different project. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://chainstack.com/"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "digix-gold-token",
+      "name": "digix-gold-token",
+      "symbol": "DGX",
+      "input_group": "quarantined",
+      "current_cmc_id": "2739",
+      "current_cmc_slug": "digix-gold-token",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "LEGACY_ASSET_LIFECYCLE_REVIEW",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "stablecoin-wrapped",
+      "reason": "DGX quote currently fails price validation. Issuer 2020 DigixDAO dissolution post explicitly distinguishes DGD governance wind-down from DGX, so it cannot prove DGX closure or current redeemability.",
+      "sources": [
+        "https://medium.com/digix/digixdaos-dissolution-655be3110196"
+      ],
+      "unblock_condition": "Current DGX issuer/contract, redemption/market lifecycle and usable quote; never substitute DGD or gold spot.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Нужен актуальный статус DGX. Закрытие DigixDAO/DGD не доказывает закрытие DGX; цена золота тоже не является его котировкой."
+    },
+    {
+      "canonical_id": "data-union",
+      "name": "data-union",
+      "symbol": "DUCAT",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Data Union DAO issuer GitHub describes its framework and UNION implementation. No evidence ties canonical DeSci DUCAT to that asset; Streamr DATA is also separately tracked.",
+      "sources": [
+        "https://github.com/dataunions"
+      ],
+      "unblock_condition": "Original DUCAT issuer/contract or a catalog identity decision; no UNION/DATA substitution.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Найдены Data Union/UNION, но связь с исходным DUCAT не доказана. Streamr DATA не подставляется."
+    },
+    {
+      "canonical_id": "eclipse",
+      "name": "eclipse",
+      "symbol": "ECLIPSE",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
+      "category": "NEW_MAPPING_CANDIDATE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Current issuer update identifies ES as its only token, now aligned with Human API, while the chain still uses ETH for gas. Provider 36174/ES/eclipse-xyz links the same project. ECLIPSE is a catalog label, not a verified historical token ticker; no conversion or renamed-token migration is inferred.",
+      "sources": [
+        "https://www.eclipse.xyz/articles/updated-es-tokenomics",
+        "https://coinmarketcap.com/currencies/eclipse-xyz/"
+      ],
+      "unblock_condition": "One batch diagnostic; satisfy any identity_gate, then apply passing reviewed mappings together. No automatic release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "candidate": {
+        "symbol": "ES",
+        "cmc_id": "36174",
+        "cmc_slug": "eclipse-xyz",
+        "identity_gate": null
+      },
+      "ru_summary": "Кандидат ES/36174. Эмитент связывает ES с Human API; газ сети оплачивается ETH. ECLIPSE не подтверждён как прежний тикер токена.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "ES",
+          "cmcId": "36174",
+          "cmcSlug": "eclipse-xyz"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
+    },
+    {
+      "canonical_id": "fasset",
+      "name": "fasset",
+      "symbol": "FASSET",
+      "input_group": "quarantined",
+      "current_cmc_id": "27555",
+      "current_cmc_slug": "fasset",
+      "last_observed_reasons": [
+        "symbol_mismatch:WBOB",
+        "slug_mismatch:wrapped-bob",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PRODUCT_SELECTION_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer help center describes multiple tokenized stocks, commodities and funds through Dinari, not a universal FASSET asset. Existing mapping returns WBOB. Individual underlying assets cannot supply a platform quote.",
+      "sources": [
+        "https://fassethelpsupport.zendesk.com/hc/en-us/articles/61060247905817-Understanding-tokenized-assets-on-Fasset"
+      ],
+      "unblock_condition": "Specific product/contract or explicit issuer native-token identity; no WBOB quote.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Платформа предлагает разные токенизированные продукты; единый FASSET не установлен. WBOB относится к другому активу."
+    },
+    {
+      "canonical_id": "gravity",
+      "name": "gravity",
+      "symbol": "G",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
+      "category": "NEW_MAPPING_CANDIDATE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Galxe issuer announcement identifies Gravity G, native gas and ERC20 representations, with 0x9C7BEBa8F6eF6643aBd725e45a4E8387eF260649. Provider 32120/G/gravity-token links gravity.xyz and agrees with the abbreviation. Historical GAL migration is context only; no balance conversion or duplicate GAL quote.",
+      "sources": [
+        "https://www.galxe.com/blog/gal-g",
+        "https://coinmarketcap.com/currencies/gravity-token/"
+      ],
+      "unblock_condition": "One batch diagnostic; satisfy any identity_gate, then apply passing reviewed mappings together. No automatic release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "candidate": {
+        "symbol": "G",
+        "cmc_id": "32120",
+        "cmc_slug": "gravity-token",
+        "identity_gate": null
+      },
+      "ru_summary": "Кандидат G/32120; эмитент указывает тот же адрес токена. GAL и G не объединяются по тикеру.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "G",
+          "cmcId": "32120",
+          "cmcSlug": "gravity-token"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
+    },
+    {
+      "canonical_id": "genobank",
+      "name": "genobank",
+      "symbol": "GENE",
+      "input_group": "quarantined",
+      "current_cmc_id": "22555",
+      "current_cmc_slug": "genobank",
+      "last_observed_reasons": [
+        "quote_not_returned"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer describes BioNFT/BioIP genomic-data rights, not a confirmed fungible GENE identity. Missing CMC quote does not establish no token and cannot be filled with GenomesDAO or another GENE.",
+      "sources": [
+        "https://www.genobank.io/platform"
+      ],
+      "unblock_condition": "Issuer fungible-token contract and numeric provider identity, separate from patient BioNFT rights.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "BioNFT/BioIP — права на геномные данные, а не подтверждённая взаимозаменяемая монета GENE."
+    },
+    {
+      "canonical_id": "genomesdao",
+      "name": "genomesdao",
+      "symbol": "GENE",
+      "input_group": "quarantined",
+      "current_cmc_id": "21634",
+      "current_cmc_slug": "genomesdao",
+      "last_observed_reasons": [
+        "symbol_mismatch:JUNI",
+        "slug_mismatch:jackpot-universe",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Current Genomes.io issuer guide identifies NIOME as Subnet 55 alpha, distinct from TAO used to acquire/stake it. Legacy GENE/GENOME lineage and provider selection need further review. Do not auto-replace GENE with GENOME or TAO; Bittensor TAO/22974 is already a separate canonical row. No confirmed numeric NIOME mapping or complete migration entitlement is established here; keep original failed mapping and quarantine.",
+      "sources": [
+        "https://niome.genomes.io/how-to-buy.html",
+        "https://niome.genomes.io/"
+      ],
+      "unblock_condition": "Resolve the documented identity/lifecycle issue with new primary evidence before any release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "CURRENT_SUBNET_ASSET_LINEAGE_REVIEW_REQUIRED",
+        "issuer_url": "https://niome.genomes.io/how-to-buy.html",
+        "additional_sources": [
+          "https://niome.genomes.io/"
+        ],
+        "candidate_symbols": [
+          "GENOME",
+          "NIOME"
+        ],
+        "notes": "Current Genomes.io issuer guide identifies NIOME as Subnet 55 alpha, distinct from TAO used to acquire/stake it. Legacy GENE/GENOME lineage and provider selection need further review. Do not auto-replace GENE with GENOME or TAO; Bittensor TAO/22974 is already a separate canonical row. No confirmed numeric NIOME mapping or complete migration entitlement is established here; keep original failed mapping and quarantine."
+      },
+      "ru_summary": "Текущий NIOME — subnet alpha; TAO — отдельный актив. Историческая связь GENE/GENOME не разрешена."
+    },
+    {
+      "canonical_id": "goldsky",
+      "name": "goldsky",
+      "symbol": "GOLD",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Blockchain data/RPC platform does not establish GOLD. Gold commodity/token quotes cannot be substituted. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://goldsky.com/"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "infura",
+      "name": "infura",
+      "symbol": "INFRA",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Developer infrastructure service does not establish INFRA. Same-ticker Infraxa/infrastructure coins do not match the issuer. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://www.infura.io/"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "junca-cash",
+      "name": "junca-cash",
+      "symbol": "JCA",
+      "input_group": "quarantined",
+      "current_cmc_id": "21587",
+      "current_cmc_slug": "junca-cash",
+      "last_observed_reasons": [
+        "symbol_mismatch:RAINSPIRIT",
+        "slug_mismatch:rainspirit",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "The corporate issuer site links JAIOS technical documentation. Its 2026-10-09 current-identity record distinguishes historical JCC from JSEC, the specified native token of the currently public-testnet SE BASE network. Provider 6914 is legacy JCC, not evidence for a current JCA or JSEC market asset. Do not automatically select JCC, assign a JSEC numeric ID or treat testnet units as tradable coins. Historical candidate identity is recorded only; original failed mapping/quarantine remain.",
+      "sources": [
+        "https://docs.jaios-governance.org/current-identity/",
+        "https://junca-global.group/",
+        "https://coinmarketcap.com/currencies/junca-cash/"
+      ],
+      "unblock_condition": "Resolve the documented identity/lifecycle issue with new primary evidence before any release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "LEGACY_TOKEN_AND_TESTNET_NATIVE_ASSET_REVIEW_REQUIRED",
+        "issuer_url": "https://docs.jaios-governance.org/current-identity/",
+        "additional_sources": [
+          "https://junca-global.group/",
+          "https://coinmarketcap.com/currencies/junca-cash/"
+        ],
+        "candidate_cmc_id": "6914",
+        "candidate_symbol": "JCC",
+        "notes": "The corporate issuer site links JAIOS technical documentation. Its 2026-10-09 current-identity record distinguishes historical JCC from JSEC, the specified native token of the currently public-testnet SE BASE network. Provider 6914 is legacy JCC, not evidence for a current JCA or JSEC market asset. Do not automatically select JCC, assign a JSEC numeric ID or treat testnet units as tradable coins. Historical candidate identity is recorded only; original failed mapping/quarantine remain."
+      },
+      "ru_summary": "Исторический JCC и текущий testnet JSEC различны. Нельзя заменить JCA на один из них по названию."
+    },
+    {
+      "canonical_id": "kakarot",
+      "name": "kakarot",
+      "symbol": "KAKAROT",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer repository says the Cairo EVM emulator is frozen and the team is working on keth; it explicitly says the core EVM is not itself a blockchain. No KAKAROT token identity follows from the software name.",
+      "sources": [
+        "https://github.com/kkrt-labs/kakarot/blob/main/README.md"
+      ],
+      "unblock_condition": "Explicit issuer native-token evidence; no generic KAKAROT ticker lookup.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Репозиторий описывает программный zkEVM и переход работы на keth. Отдельный KAKAROT-токен не установлен."
+    },
+    {
+      "canonical_id": "koinly",
+      "name": "koinly",
+      "symbol": "KOINLY",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer identifies tax/portfolio software, not a wallet or broker. No native KOINLY contract established. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://support.koinly.io/en/articles/10162222-what-is-koinly"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "lofty",
+      "name": "lofty",
+      "symbol": "LOFTY",
+      "input_group": "quarantined",
+      "current_cmc_id": "22617",
+      "current_cmc_slug": "lofty-2",
+      "last_observed_reasons": [
+        "symbol_mismatch:TFLOKI",
+        "slug_mismatch:thanksgiving-floki",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PRODUCT_SELECTION_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer describes distinct property token offerings on Algorand. ALGO is the chain fee coin; a generic LOFTY ticker or one property token is not a platform-wide quote. Wrong TFLOKI mapping stays blocked.",
+      "sources": [
+        "https://lofty-2.gitbook.io/faqs/faq/which-blockchain-is-lofty-ai-using-to-tokenize-properties"
+      ],
+      "unblock_condition": "Select a specific property asset or independently establish a platform token; no ALGO/TFLOKI substitution.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Lofty выпускает отдельные токены недвижимости. ALGO — монета сети; общей котировки LOFTY из этого не следует."
+    },
+    {
+      "canonical_id": "mintchain",
+      "name": "Mintchain",
+      "symbol": "MINT",
+      "input_group": "quarantined",
+      "current_cmc_id": "36005",
+      "current_cmc_slug": "mint-blockchain",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "KNOWN_IDENTITY_QUOTE_UNAVAILABLE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Issuer identifies MINT as the Mint Blockchain ecosystem token, with contract 0x8511138208529fe1b9a37b863c7EEE3Fe234b7Ab on Mint, OP Mainnet and Base. CMC has matching symbol and contract suffix; its page is a preview listing and does not prove live quote availability.",
+      "sources": [
+        "https://www.mintchain.io/mint-token",
+        "https://coinmarketcap.com/currencies/mint-blockchain/"
+      ],
+      "unblock_condition": "A changed provider quote with positive price and exact fields; also satisfy any documented lifecycle/market restrictions.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+        "source_url": "https://coinmarketcap.com/currencies/mint-blockchain/",
+        "issuer_url": "https://www.mintchain.io/mint-token",
+        "reviewed_on": "2026-10-13",
+        "notes": "Issuer identifies MINT as the Mint Blockchain ecosystem token, with contract 0x8511138208529fe1b9a37b863c7EEE3Fe234b7Ab on Mint, OP Mainnet and Base. CMC has matching symbol and contract suffix; its page is a preview listing and does not prove live quote availability.",
+        "audit_at": "2026-10-13T12:59:43.236Z",
+        "audit_commit": "7bae33a583b3202599a75d1d56e279bd84ea1c22",
+        "audit_dataset_sha256": "aca53d7134395f404b65b0485b57e7d4672625126b2b95bc55d96c05d8e06da3",
+        "live_reasons": [
+          "invalid_price"
+        ]
+      },
+      "ru_summary": "Идентичность MINT ранее сопоставлена, но цена API непригодна. Повторять после изменения данных провайдера."
+    },
+    {
+      "canonical_id": "molecule",
+      "name": "molecule",
+      "symbol": "MOL",
+      "input_group": "quarantined",
+      "current_cmc_id": "3502",
+      "current_cmc_slug": "molecule",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_ASSET_SEPARATION",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer IPNFT repository contains deployment examples and a MOL DAO token label alongside Sepolia/test setup. This is not evidence of a currently tradable mainnet MOL. Company/IP-NFT platform and BIO ecosystem tokens must not be conflated.",
+      "sources": [
+        "https://github.com/moleculeprotocol/IPNFT"
+      ],
+      "unblock_condition": "Explicit mainnet issuer token contract/lifecycle and provider identity; no test-token or BIO price substitution.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "В репозитории есть примеры/testnet-развёртывания MOL. Это не подтверждение торгуемого mainnet-токена; BIO не подставляется."
+    },
+    {
+      "canonical_id": "matrixport-rwa",
+      "name": "matrixport-rwa",
+      "symbol": "MTA",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PRODUCT_SELECTION_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Current matrixport.com redirects to BIT, while Matrixdock STBT is already a separate canonical row. Sparse MTA does not establish a Matrixport-wide RWA token. Do not duplicate STBT or infer MTA from the platform name.",
+      "sources": [
+        "https://www.matrixport.com/",
+        "https://www.matrixdock.com/"
+      ],
+      "unblock_condition": "Identify exact Matrixport product/issuer contract, or retain project-only entry.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "MTA не подтверждён как единый актив платформы. STBT уже отдельно учтён у Matrixdock."
+    },
+    {
+      "canonical_id": "connext",
+      "name": "connext",
+      "symbol": "NEXT",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_ASSET_SEPARATION",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Historical NEXT/Connext must be reconciled with the separate canonical everclear/CLEAR/34512 row. Existing issuer registry establishes CLEAR, whose quote currently fails. No alias, duplicate ID or CLEAR quote under NEXT.",
+      "sources": [
+        "https://docs.everclear.org/resources/contracts/mainnet"
+      ],
+      "unblock_condition": "Document old NEXT lifecycle and representation policy; no duplicate CLEAR mapping.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Нужно отделить исторический NEXT от уже существующей записи Everclear/CLEAR. Дублировать CLEAR нельзя."
+    },
+    {
+      "canonical_id": "nucleation",
+      "name": "nucleation",
+      "symbol": "NUCT",
+      "input_group": "quarantined",
+      "current_cmc_id": "25600",
+      "current_cmc_slug": "nucleation",
+      "last_observed_reasons": [
+        "symbol_mismatch:RhinoMars",
+        "slug_mismatch:rhinomars",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Generic scientific nucleation results do not establish an issuer; retain RhinoMars failure quarantine.",
+      "sources": [],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"Nucleation\" \"NUCT\" token"
+      ],
+      "ru_summary": "Научный термин не устанавливает эмитента NUCT. Чужой RhinoMars остаётся заблокирован."
+    },
+    {
+      "canonical_id": "nxyz",
+      "name": "nxyz",
+      "symbol": "NXYZ",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Indexing-company lead exists, but issuer n.xyz retrieval failed and no issuer NXYZ contract/provider identity was established. Retrieval failure does not prove token absence.",
+      "sources": [
+        "https://n.xyz/"
+      ],
+      "unblock_condition": "Current issuer and exact asset announcement/contract; no quote retry without identity evidence.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Эмитент и контракт NXYZ не подтверждены; недоступность сайта не доказывает отсутствие токена."
+    },
+    {
+      "canonical_id": "openlab",
+      "name": "openlab",
+      "symbol": "OPENLAB",
+      "input_group": "quarantined",
+      "current_cmc_id": "25443",
+      "current_cmc_slug": "openlab",
+      "last_observed_reasons": [
+        "symbol_mismatch:BITMOON",
+        "slug_mismatch:bitmoon-token",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "LabDAO OpenLab software is a lead, not evidence of a separate OPENLAB coin; do not duplicate LAB or price test USD.",
+      "sources": [],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"OpenLab\" \"OPENLAB\" token"
+      ],
+      "ru_summary": "Найден софт LabDAO OpenLab, но отдельная монета OPENLAB не подтверждена. LAB и тестовые USD не подставляются."
+    },
+    {
+      "canonical_id": "powerpod",
+      "name": "powerpod",
+      "symbol": "POD",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PRODUCT_SELECTION_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer token dashboard distinguishes behavioral-reward PT and incentive PPD, rather than canonical POD. Rewards, points and a fungible market token require separate treatment.",
+      "sources": [
+        "https://www.powerpod.pro/dashboard/token"
+      ],
+      "unblock_condition": "Determine intended issued asset and current contract/provider; do not rename POD to PT or PPD automatically.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Эмитент различает наградные PT и PPD; исходный POD не подтверждён. Сначала нужен выбор конкретного актива."
+    },
+    {
+      "canonical_id": "polynomial",
+      "name": "polynomial",
+      "symbol": "POLY",
+      "input_group": "quarantined",
+      "current_cmc_id": "27689",
+      "current_cmc_slug": "polynomialfi",
+      "last_observed_reasons": [
+        "symbol_mismatch:PROME",
+        "slug_mismatch:prometheus-3",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_ASSET_SEPARATION",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer Earn FAQ explicitly says there is no protocol token; current staking page announces chain shutdown and paused operations. A separate provider placeholder cannot establish POLY. Retain quarantine pending current issuer asset evidence.",
+      "sources": [
+        "https://docs.earn.polynomial.fi/faq",
+        "https://polynomial.fi/en/mainnet/earn/stake"
+      ],
+      "unblock_condition": "New current issuer token/contract announcement and lifecycle reconciliation; no routine quote retries.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Старая FAQ прямо отрицает протокольный токен; актуальная страница сообщает о закрытии сети. POLY не подтверждён."
+    },
+    {
+      "canonical_id": "psilocin",
+      "name": "psilocin",
+      "symbol": "PSIL",
+      "input_group": "quarantined",
+      "current_cmc_id": "25333",
+      "current_cmc_slug": "psilocin",
+      "last_observed_reasons": [
+        "symbol_mismatch:MURATIAI",
+        "slug_mismatch:muratiai",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Chemical/substance matches do not establish a token issuer; retain MURATIAI failure quarantine.",
+      "sources": [],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"Psilocin\" \"PSIL\" token"
+      ],
+      "ru_summary": "Химическое вещество не устанавливает эмитента PSIL. Чужой MURATIAI остаётся заблокирован."
+    },
+    {
+      "canonical_id": "quicknode",
+      "name": "quicknode",
+      "symbol": "QNODE",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Developer RPC infrastructure does not establish native QNODE. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://www.quicknode.com/"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "rari",
+      "name": "rari",
+      "symbol": "RARI",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
+      "category": "NEW_MAPPING_CANDIDATE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Foundation identifies RARI governance across RARI Chain, Arbitrum and Ethereum. Issuer governance proposal gives Ethereum 0xfca59cd816ab1ead66534d82bc21e7515ce441cf; provider 5877/RARI/rarible links the Foundation and agrees with that abbreviation. This is the ecosystem governance token, not an L2 gas-token assumption.",
+      "sources": [
+        "https://rari.foundation/faq",
+        "https://coinmarketcap.com/currencies/rarible/"
+      ],
+      "unblock_condition": "One batch diagnostic; satisfy any identity_gate, then apply passing reviewed mappings together. No automatic release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "candidate": {
+        "symbol": "RARI",
+        "cmc_id": "5877",
+        "cmc_slug": "rarible",
+        "identity_gate": null
+      },
+      "ru_summary": "Кандидат RARI/5877/rarible — токен управления экосистемой, с подтверждением Foundation.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "RARI",
+          "cmcId": "5877",
+          "cmcSlug": "rarible"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
+    },
+    {
+      "canonical_id": "redbelly-network",
+      "name": "redbelly-network",
+      "symbol": "RBNT",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
+      "category": "NEW_MAPPING_CANDIDATE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Issuer identifies mainnet native RBNT and distinguishes it from testnet faucet coins. Provider 34849/RBNT links redbelly.network. No full cross-chain token-contract match was retrieved; do not select an arbitrary same-ticker Base token.",
+      "sources": [
+        "https://vine.redbelly.network/native-currency/",
+        "https://coinmarketcap.com/currencies/redbelly-network/"
+      ],
+      "unblock_condition": "One batch diagnostic; satisfy any identity_gate, then apply passing reviewed mappings together. No automatic release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "candidate": {
+        "symbol": "RBNT",
+        "cmc_id": "34849",
+        "cmc_slug": "redbelly-network",
+        "identity_gate": null
+      },
+      "ru_summary": "Кандидат RBNT/34849 — mainnet-актив. Тестовые RBNT и случайный токен с тем же тикером исключены.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "RBNT",
+          "cmcId": "34849",
+          "cmcSlug": "redbelly-network"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
+    },
+    {
+      "canonical_id": "realt-coin",
+      "name": "realt-coin",
+      "symbol": "REALT",
+      "input_group": "quarantined",
+      "current_cmc_id": "11814",
+      "current_cmc_slug": "realt",
+      "last_observed_reasons": [
+        "symbol_mismatch:POTATO",
+        "slug_mismatch:potato",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PRODUCT_SELECTION_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer distinguishes property-specific RealTokens from REG ecosystem governance. REG contract 0x0aa1e96d2a46ec6beb2923de1e61addf5f5f1dce does not by itself authorize changing sparse REALT row into REG or an individual property.",
+      "sources": [
+        "https://faq.realt.co/en/article/what-is-the-reg-token-2jzhpg/",
+        "https://faq.realt.co/en/article/introduction-to-the-realtoken-dao-1iyqcfs/"
+      ],
+      "unblock_condition": "Determine whether this record means a particular property security or REG, then match contract/provider.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Нужно выбрать между конкретной недвижимостью и токеном управления REG. Это разные активы, не общий REALT."
+    },
+    {
+      "canonical_id": "redstone-finance",
+      "name": "redstone-finance",
+      "symbol": "RED",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "ELIGIBLE_AFTER_BATCH_RELEASE",
+      "category": "NEW_MAPPING_CANDIDATE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Issuer identifies RED as the RedStone oracle utility token; issuer tokenomics identifies Ethereum ERC20. Provider 21707/RED/redstone links redstone.finance. No full issuer/provider contract match was obtained; the failed guessed /redstone-oracles URL is not the listing.",
+      "sources": [
+        "https://www.redstone.finance/red-token",
+        "https://coinmarketcap.com/currencies/redstone/"
+      ],
+      "unblock_condition": "One batch diagnostic; satisfy any identity_gate, then apply passing reviewed mappings together. No automatic release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "candidate": {
+        "symbol": "RED",
+        "cmc_id": "21707",
+        "cmc_slug": "redstone",
+        "identity_gate": null
+      },
+      "ru_summary": "Кандидат RED/21707 подтверждён названием и доменом эмитента; полного сопоставления контрактов пока нет.",
+      "followup": {
+        "status": "APPLIED",
+        "mapping": {
+          "symbol": "RED",
+          "cmcId": "21707",
+          "cmcSlug": "redstone"
+        },
+        "evidence_report": "reports/stage5c-consolidated-live-audit-20261018.json"
+      }
+    },
+    {
+      "canonical_id": "rwa-x",
+      "name": "rwa-x",
+      "symbol": "RWAX",
+      "input_group": "quarantined",
+      "current_cmc_id": "28623",
+      "current_cmc_slug": "rwa-x",
+      "last_observed_reasons": [
+        "symbol_mismatch:PYPL.D",
+        "slug_mismatch:dinari-pypl",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "IDENTITY_OR_LIFECYCLE_HOLD",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer-branded app uses RWAX and legacy moonapp identifiers; earlier review found candidate 29020/APP/moonapp, which does not match RWAX expectation. Branding alone does not prove ticker/contract continuity or a migration.",
+      "sources": [
+        "https://play.google.com/store/apps/details?id=io.moonapp"
+      ],
+      "unblock_condition": "Current issuer token contract/ticker lineage and provider match; no APP substitution by name.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Бренд RWAX и старый APP/Moonapp требуют подтверждённой связи контрактов. Замена тикера по названию запрещена."
+    },
+    {
+      "canonical_id": "rxbio",
+      "name": "rxbio",
+      "symbol": "RXBIO",
+      "input_group": "quarantined",
+      "current_cmc_id": "24999",
+      "current_cmc_slug": "rxbio",
+      "last_observed_reasons": [
+        "symbol_mismatch:GLI",
+        "slug_mismatch:gli-token",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Same-name biotechnology company is not sufficient token provenance; retain GLI failure quarantine.",
+      "sources": [],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"RXBIO\" token official"
+      ],
+      "ru_summary": "Одноимённая биотехнологическая компания не подтверждает токен RXBIO. Чужой GLI заблокирован."
+    },
+    {
+      "canonical_id": "securitize",
+      "name": "securitize",
+      "symbol": "SECURITIZE",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Tokenization platform identity is established, but retrieved page has no substantive token text. No native SECURITIZE identity established. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://securitize.io/"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "synesis-one",
+      "name": "synesis-one",
+      "symbol": "SNS",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "NEW_MAPPING_CANDIDATE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Issuer whitepaper identifies SNS governance; provider 17231/SNS links synesis.one and displays Solana mint SNSNkV...CDvdMd. Current homepage text was not available. Full current issuer mint/lifecycle confirmation remains required even if the diagnostic quote passes.",
+      "sources": [
+        "https://synesis.gitbook.io/synesisone/12.-anatomy-of-dual-token-model/12.2-on-synesis-usdsns",
+        "https://coinmarketcap.com/currencies/synesis-one/"
+      ],
+      "unblock_condition": "One batch diagnostic; satisfy any identity_gate, then apply passing reviewed mappings together. No automatic release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "candidate": {
+        "symbol": "SNS",
+        "cmc_id": "17231",
+        "cmc_slug": "synesis-one",
+        "identity_gate": "CURRENT_ISSUER_MINT_AND_LIFECYCLE_REQUIRED"
+      },
+      "ru_summary": "Кандидат SNS/17231. Даже после успешной котировки нужны актуальные подтверждения mint и жизненного цикла от эмитента.",
+      "followup": {
+        "status": "HELD",
+        "diagnostic": {
+          "canonical_id": "synesis-one",
+          "cmc_id": "17231",
+          "status": "LIVE",
+          "provider_updated_at": "2026-10-18T16:43:03.000Z",
+          "exact_fields": {
+            "price_usd": true,
+            "change_24h_pct": true,
+            "change_7d_pct": true,
+            "change_30d_pct": true,
+            "market_cap_usd": true,
+            "fdv_usd": true,
+            "volume_24h_usd": true,
+            "market_cap_rank": true
+          },
+          "market": {
+            "price_usd": 1.246743570227e-05,
+            "market_cap_usd": 5688.301925096172,
+            "fdv_usd": 12467.39,
+            "volume_24h_usd": 306.4851396,
+            "change_1h_pct": -1.46946168,
+            "change_24h_pct": 14.00153915,
+            "change_7d_pct": -15.77650046,
+            "change_30d_pct": 5.63267321,
+            "market_cap_rank": 3861,
+            "circulating_supply": 456252758.06,
+            "total_supply": 999996689,
+            "max_supply": null
+          },
+          "reasons": [],
+          "identity_research_gate": "CURRENT_ISSUER_MINT_AND_LIFECYCLE_REQUIRED",
+          "release_authorized": false
+        },
+        "identity_gate": "CURRENT_ISSUER_MINT_AND_LIFECYCLE_REQUIRED"
+      }
+    },
+    {
+      "canonical_id": "sp-global",
+      "name": "sp-global",
+      "symbol": "SPGI",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "CORPORATE_EQUITY_OUTSIDE_CMC",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Issuer investor page identifies SPGI as NYSE-listed common stock. It is not a native cryptocurrency identity; a tokenized SPGI tracker would be a separate issuer/contract/product.",
+      "sources": [
+        "https://investor.spglobal.com/stock-dividends/stock-quote/"
+      ],
+      "unblock_condition": "Keep company/equity record outside this CMC crypto resolver; separate provider/product design if equity pricing is required.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "SPGI — акция NYSE. Токенизированный сертификат на неё был бы отдельным продуктом, а не native-монетой S&P Global."
+    },
+    {
+      "canonical_id": "thirdweb",
+      "name": "thirdweb",
+      "symbol": "THIRDWEB",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Wallet/contract infrastructure does not establish native THIRDWEB. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://thirdweb.com/"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "tenderly",
+      "name": "tenderly",
+      "symbol": "TND",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "PROJECT_NATIVE_ASSET_UNCONFIRMED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Simulation/development infrastructure does not establish native TND. This is not a proof that the company can never issue a token.",
+      "sources": [
+        "https://tenderly.co/"
+      ],
+      "unblock_condition": "An explicit issuer native-asset announcement with chain/contract; no routine quote retry based on the company ticker.",
+      "repeat_full_audit_without_new_evidence": false,
+      "ru_summary": "Проект/сервис установлен, но собственный токен с этим тикером не подтверждён. Нужны объявление эмитента и контракт; отсутствие упоминания на сайте не считается доказательством отсутствия токена."
+    },
+    {
+      "canonical_id": "trademate",
+      "name": "trademate",
+      "symbol": "TRDM",
+      "input_group": "quarantined",
+      "current_cmc_id": "24033",
+      "current_cmc_slug": "trademate",
+      "last_observed_reasons": [
+        "quote_not_returned"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Multiple unrelated trading tools exist. No original TRDM issuer/contract established; absent quote is not evidence of no token.",
+      "sources": [],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"Trademate\" \"TRDM\" official"
+      ],
+      "ru_summary": "Несколько разных торговых сервисов; исходный TRDM-эмитент и контракт не установлены."
+    },
+    {
+      "canonical_id": "traditional-finance",
+      "name": "traditional-finance",
+      "symbol": "TRFI",
+      "input_group": "quarantined",
+      "current_cmc_id": "28512",
+      "current_cmc_slug": "traditional-finance",
+      "last_observed_reasons": [
+        "symbol_mismatch:GME",
+        "slug_mismatch:dumbmoney",
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "ORIGINAL_ISSUER_REQUIRED",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "unverified",
+      "reason": "Generic finance and similarly named TFI/TriFi projects do not establish this asset; retain GME failure quarantine.",
+      "sources": [],
+      "unblock_condition": "New primary issuer identity evidence plus independent provider identity and positive normalized quote verification.",
+      "repeat_full_audit_without_new_evidence": false,
+      "searched_queries": [
+        "\"traditional-finance\" \"TRFI\""
+      ],
+      "ru_summary": "Общее название и похожие TFI/TriFi не устанавливают актив TRFI. Чужой GME заблокирован."
+    },
+    {
+      "canonical_id": "superstate",
+      "name": "superstate",
+      "symbol": "USTB",
+      "input_group": "quarantined",
+      "current_cmc_id": "37086",
+      "current_cmc_slug": "superstate-short-duration-us-government-securities-fund-ustb",
+      "last_observed_reasons": [
+        "invalid_price"
+      ],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "KNOWN_IDENTITY_QUOTE_UNAVAILABLE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Current issuer asset page identifies Invesco USTB and the Ethereum contract prefix/suffix matching the provider. Primary Invesco release states that the manager/name transition maintains the USTB ticker, contracts and token address. Do not substitute USCC or assume a $1 price. Preview listing requires live quote validation.",
+      "sources": [
+        "https://superstate.com/assets/ustb",
+        "https://coinmarketcap.com/currencies/superstate-short-duration-us-government-securities-fund-ustb/"
+      ],
+      "unblock_condition": "A changed provider quote with positive price and exact fields; also satisfy any documented lifecycle/market restrictions.",
+      "repeat_full_audit_without_new_evidence": false,
+      "prior_identity_review": {
+        "status": "PROVIDER_IDENTITY_CONFIRMED_MARKET_DATA_UNAVAILABLE",
+        "source_url": "https://coinmarketcap.com/currencies/superstate-short-duration-us-government-securities-fund-ustb/",
+        "issuer_url": "https://superstate.com/assets/ustb",
+        "reviewed_on": "2026-10-13",
+        "notes": "Current issuer asset page identifies Invesco USTB and the Ethereum contract prefix/suffix matching the provider. Primary Invesco release states that the manager/name transition maintains the USTB ticker, contracts and token address. Do not substitute USCC or assume a $1 price. Preview listing requires live quote validation.",
+        "audit_at": "2026-10-13T18:38:55.920Z",
+        "audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+        "audit_dataset_sha256": "02e2faaa0c512cac6eccebb78bb43b4ca75ed4aa0e538bff5468e0b121ae1d97",
+        "live_reasons": [
+          "invalid_price"
+        ]
+      },
+      "asset_subtype": "tokenized_fund_share",
+      "ru_summary": "Идентичность USTB ранее сопоставлена, но цена API непригодна. Повторять после изменения данных провайдера."
+    },
+    {
+      "canonical_id": "wayru",
+      "name": "wayru",
+      "symbol": "WAYRU",
+      "input_group": "originally_unmapped",
+      "current_cmc_id": null,
+      "current_cmc_slug": null,
+      "last_observed_reasons": [],
+      "current_runtime_action": "BLOCKED_NO_PROVIDER_CALL",
+      "category": "NEW_MAPPING_CANDIDATE",
+      "reviewed_on": "2026-10-18",
+      "proposed_taxonomy": "token",
+      "reason": "Issuer project repository describes WAYRU staking/rewards on Solana; issuer docs describe rewards, while provider 36316 is a preview linking wayru.io/docs.wayru.io and mint WAYRUy...zdrAV3. Direct homepage/docs-root retrieval failed; current full issuer mint and live external market remain unconfirmed.",
+      "sources": [
+        "https://github.com/Wayru-Network/explorer-web",
+        "https://coinmarketcap.com/currencies/wayru/"
+      ],
+      "unblock_condition": "One batch diagnostic; satisfy any identity_gate, then apply passing reviewed mappings together. No automatic release.",
+      "repeat_full_audit_without_new_evidence": false,
+      "candidate": {
+        "symbol": "WAYRU",
+        "cmc_id": "36316",
+        "cmc_slug": "wayru",
+        "identity_gate": "CURRENT_ISSUER_MINT_AND_MARKET_REQUIRED"
+      },
+      "ru_summary": "Кандидат WAYRU/36316 — preview-листинг. Нужны актуальный mint эмитента и пригодный внешний рынок.",
+      "followup": {
+        "status": "HELD",
+        "diagnostic": {
+          "canonical_id": "wayru",
+          "cmc_id": "36316",
+          "status": "INVALID_RESPONSE",
+          "provider_updated_at": null,
+          "exact_fields": {
+            "price_usd": false,
+            "change_24h_pct": false,
+            "change_7d_pct": false,
+            "change_30d_pct": false,
+            "market_cap_usd": false,
+            "fdv_usd": false,
+            "volume_24h_usd": false,
+            "market_cap_rank": false
+          },
+          "market": null,
+          "reasons": [
+            "INVALID_RESPONSE",
+            "INVALID_RUNTIME_PRICE",
+            "FIELD_VALUE_MISMATCH:price_usd",
+            "FIELD_VALUE_MISMATCH:change_24h_pct",
+            "FIELD_VALUE_MISMATCH:change_7d_pct",
+            "FIELD_VALUE_MISMATCH:change_30d_pct",
+            "FIELD_VALUE_MISMATCH:market_cap_usd",
+            "FIELD_VALUE_MISMATCH:fdv_usd",
+            "FIELD_VALUE_MISMATCH:volume_24h_usd",
+            "FIELD_VALUE_MISMATCH:market_cap_rank"
+          ],
+          "identity_research_gate": "CURRENT_ISSUER_MINT_AND_MARKET_REQUIRED",
+          "release_authorized": false
+        },
+        "identity_gate": "CURRENT_ISSUER_MINT_AND_MARKET_REQUIRED"
+      }
+    }
+  ],
+  "followup": {
+    "live_capture": "reports/stage5c-consolidated-live-audit-20261018.json",
+    "decision_report": "reports/stage5c-consolidated-release-20261018.json",
+    "commit": "d32205cf1c1bae2d3747f794d5fe6c988de59d7f",
+    "existing_runtime_pass": 93,
+    "existing_exact_fields": 744,
+    "candidate_pass": 9,
+    "candidate_fail": 1,
+    "applied": [
+      "safe",
+      "movement",
+      "gravity",
+      "redstone-finance",
+      "redbelly-network",
+      "rari",
+      "eclipse"
+    ],
+    "eligible_after": 279,
+    "quarantined_after": 51,
+    "unmapped_after": 24,
+    "stage_complete": false
+  }
+}

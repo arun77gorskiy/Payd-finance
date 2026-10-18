@@ -189,7 +189,7 @@ function fixtureKeyless(cmcId, overrides = {}) {
       } },
     { name: 'PRO_API: max_supply 0 → null (uncapped)',
       fn: () => {
-        const raw = fixtureProAPI('2', { rawCoin: { max_supply: 0 } });
+        const raw = fixtureProAPI('2', { rawCoin: { symbol: 'X', max_supply: 0 } });
         const ctx = { canonicalId: 'x', symbol: 'X', name: 'X', expectedCmcId: '2' };
         const env = normalizer.normalizeCMCQuotes(raw, ctx, new Date());
         assert.strictEqual(env.market.max_supply, null);

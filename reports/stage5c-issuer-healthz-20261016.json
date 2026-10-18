@@ -1,0 +1,61 @@
+{
+  "ok": true,
+  "status": "UP",
+  "stats": {
+    "cache": {
+      "size": 0,
+      "inflight": 0,
+      "ttlMs": 60000
+    },
+    "adapterAuthAvailable": true,
+    "accessMode": "PRO_API",
+    "resolverSize": 354
+  },
+  "resolver": {
+    "total": 354,
+    "cmc_mapped": 323,
+    "no_cmc_mapping": 31
+  },
+  "canonical_dataset": {
+    "sha256": "a2fc5e2be61f246498ccaefd411bd699d4c28f8613324553fbe20e23ca7eb5d5",
+    "git_commit": "3cec2fe7436c16a439c6853ac93394abb51ae41c",
+    "mapping_repair": {
+      "stage": "5C",
+      "status": "ID_AND_SYMBOL_CORRECTIONS_PENDING_LIVE_REAUDIT",
+      "baseline_commit": "d315f64bee3aad11756da1e95db92ac7fcb08681",
+      "source_audit_at": "2026-10-12T10:20:26.406Z",
+      "slug_corrections": 22,
+      "quarantined": 65,
+      "quarantined_symbol_mismatches": 46,
+      "quarantined_market_data_failures": 14,
+      "id_corrections": 88,
+      "identity_review_remaining": 65,
+      "last_live_audit_at": "2026-10-13T18:38:55.920Z",
+      "last_live_audit_commit": "083861149fadfbdb4489fad294670d65509148d2",
+      "last_live_audit_pass": 258,
+      "last_live_audit_fail": 65,
+      "released_after_live_audit": 79,
+      "last_live_audit_dataset_sha256": "02e2faaa0c512cac6eccebb78bb43b4ca75ed4aa0e538bff5468e0b121ae1d97",
+      "pending_id_corrections": 5,
+      "quarantined_quote_pending": 5,
+      "corrected_ids_with_unavailable_market_data": 4,
+      "runtime_parity_checked_releases": 79,
+      "runtime_parity_pending_releases": 0,
+      "last_runtime_audit_at": "2026-10-14T08:41:15.241Z",
+      "last_runtime_audit_commit": "743e1f6050d1876dc0be88bcf3abd6046667ee80",
+      "last_runtime_audit_dataset_sha256": "6a0d3748fd3912040427cd48f4dc7751bd13fc7569d68f73f24b186729b0e311",
+      "last_runtime_audit_pass": 79,
+      "last_runtime_audit_fail": 0,
+      "canonical_symbol_corrections": 3
+    },
+    "eligible": 258,
+    "quarantined": 65
+  },
+  "uptime_seconds": 0,
+  "node_version": "v22.23.2",
+  "vercel_region": "iad1",
+  "vercel_env": "preview",
+  "cmc_api_key_present": true,
+  "ts": "2026-10-16T18:01:43.685Z",
+  "elapsed_ms": 11
+}

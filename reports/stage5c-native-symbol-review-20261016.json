@@ -1,0 +1,149 @@
+{
+  "stage": "5C",
+  "reviewed_on": "2026-10-16",
+  "counts": {
+    "reviewed": 3,
+    "numeric_ids_changed": 0,
+    "symbol_corrections_applied": 3,
+    "slug_corrections_applied": 1,
+    "quarantines_released": 0
+  },
+  "policy": "Permanent canonical IDs, numeric provider IDs, names, sectors and snapshot values remain stable. Manually update current symbols only after explicit primary issuer lineage and exact provider identity review. For native coins use issuer network/denomination evidence; for token lineages record issuer contracts and their evidentiary scope. Preserve previous catalog symbols/mappings and retain quarantine until a fresh strict audit. Never resolve by ticker, apply a unit multiplier, transact, or infer a stablecoin peg.",
+  "applied": [
+    {
+      "canonical_id": "iota",
+      "before": {
+        "symbol": "MIOTA",
+        "cmcId": "1720",
+        "cmcSlug": "iota",
+        "audit_reasons": [
+          "symbol_mismatch:IOTA"
+        ]
+      },
+      "after": {
+        "symbol": "IOTA",
+        "cmcId": "1720",
+        "cmcSlug": "iota"
+      },
+      "status": "LIVE_AUDIT_VERIFIED",
+      "correction_kind": "ISSUER_NATIVE_UNIT_LABEL_CORRECTION",
+      "issuer_url": "https://blog.iota.org/stardust-upgrade-iota-tokenomics/",
+      "provider_url": "https://coinmarketcap.com/currencies/iota/",
+      "additional_sources": [
+        "https://blog.iota.org/rebased-mainnet-upgrade/"
+      ],
+      "notes": "Issuer explicitly states that one old MIOTA is one current IOTA; 1,000,000 micros are one IOTA. The later Rebased issuer guide states no token migration is necessary for existing IOTA holders and links directly to the same provider /iota/ listing, UCID 1720. Correct the catalog unit label without multiplying price, supply or snapshot values. Do not treat an EVM placeholder as a verified ERC20 contract.",
+      "live_audit_at": "2026-10-16T18:52:11.100Z",
+      "live_audit_commit": "d47234dbcbc4b67c1e949d1c6cc53338ae84df65",
+      "live_audit_dataset_sha256": "6dd6d064e7b7b2c86033e2030da70880a8a75120d76bfccf20176ba992fdcf1f"
+    },
+    {
+      "canonical_id": "sentinel",
+      "before": {
+        "symbol": "DVPN",
+        "cmcId": "2643",
+        "cmcSlug": "sentinel",
+        "audit_reasons": [
+          "symbol_mismatch:P2P"
+        ]
+      },
+      "after": {
+        "symbol": "P2P",
+        "cmcId": "2643",
+        "cmcSlug": "sentinel"
+      },
+      "status": "LIVE_AUDIT_VERIFIED",
+      "correction_kind": "ISSUER_NATIVE_COIN_TICKER_REBRAND",
+      "issuer_url": "https://docs.sentinel.co/get-started",
+      "provider_url": "https://coinmarketcap.com/currencies/sentinel/",
+      "additional_sources": [
+        "https://docs.sentinel.co/p2p-coin",
+        "https://docs.sentinel.co/networks/explorers"
+      ],
+      "notes": "Issuer explicitly identifies P2P as the former DVPN native coin of the Sentinel blockchain. The provider has the same rebrand notice, Sentinel website and retained UCID 2643/slug sentinel. This is native-chain identity evidence, not an ERC20-contract assertion. No denomination conversion or IBC transfer is performed; the provider-linked Osmosis IBC representation is not mistaken for another project or merged with Sentinel Protocol UPP.",
+      "live_audit_at": "2026-10-16T18:52:11.100Z",
+      "live_audit_commit": "d47234dbcbc4b67c1e949d1c6cc53338ae84df65",
+      "live_audit_dataset_sha256": "6dd6d064e7b7b2c86033e2030da70880a8a75120d76bfccf20176ba992fdcf1f"
+    },
+    {
+      "canonical_id": "frax",
+      "before": {
+        "symbol": "FXS",
+        "cmcId": "6953",
+        "cmcSlug": "frax",
+        "audit_reasons": [
+          "symbol_mismatch:FRAX",
+          "slug_mismatch:frax-share"
+        ]
+      },
+      "after": {
+        "symbol": "FRAX",
+        "cmcId": "6953",
+        "cmcSlug": "frax-share"
+      },
+      "status": "LIVE_AUDIT_VERIFIED",
+      "correction_kind": "ISSUER_FXS_TO_NATIVE_FRAX_LINEAGE",
+      "issuer_url": "https://docs.frax.com/protocol/frax/overview",
+      "provider_url": "https://coinmarketcap.com/currencies/frax-share/",
+      "additional_sources": [
+        "https://docs.frax.com/protocol/frax/addresses",
+        "https://docs.frax.com/fraxtal/addresses/frax-tokens",
+        "https://frax.com/upgrade-fxs",
+        "https://coinmarketcap.com/currencies/frax/"
+      ],
+      "notes": "Current issuer documentation describes the enacted 1:1 FXS-to-native-FRAX upgrade since 2025-04-28, and its address registry identifies the Ethereum FXS lineage and native/WFRAX representation. Provider UCID 6953 is explicitly Frax (prev. FXS), symbol FRAX, slug frax-share; its displayed 0x3432...c964d0 prefix/suffix agrees with the issuer address. Provider explorer fetching failed, so do not claim an independently fetched full provider contract match or chain execution audit. This is distinct from Legacy Frax Dollar UCID 6952/slug frax at canonical frax-finance, which is unchanged. No constant $1 quote, stablecoin classification, migration transaction, value scaling or ticker-based merge is introduced.",
+      "contracts": {
+        "ethereum_fxs_lineage": "0x3432B6A60D23Ca0dFCa7761B7ab56459D9C964D0",
+        "fraxtal_wfrax": "0xfc00000000000000000000000000000000000002"
+      },
+      "live_audit_at": "2026-10-16T18:52:11.100Z",
+      "live_audit_commit": "d47234dbcbc4b67c1e949d1c6cc53338ae84df65",
+      "live_audit_dataset_sha256": "6dd6d064e7b7b2c86033e2030da70880a8a75120d76bfccf20176ba992fdcf1f"
+    }
+  ],
+  "quote_audit_pending": false,
+  "taxonomy_complete": false,
+  "runtime_evidence": {
+    "commit": "c1f33ea8874e3fbf92b5e0ba7e6c2210b4c60926",
+    "dataset_sha256": "5ab467cf9daee464c05f2e34624e0a4a93a0855fe6959b5fbfe7eca75e7b2b52",
+    "audit_at": "2026-10-16T18:20:29.592Z",
+    "counts": {
+      "checked": 82,
+      "pass": 82,
+      "fail": 0,
+      "fields_per_record": 8,
+      "provider_batches": 1
+    },
+    "exact_field_comparisons": 656
+  },
+  "preserved_separate_identity": {
+    "canonical_id": "frax-finance",
+    "cmcId": "6952",
+    "cmcSlug": "frax",
+    "symbol": "FRAX",
+    "changed": false,
+    "note": "Legacy Frax Dollar is separate from the FXS/FRAX lineage at UCID 6953. A shared ticker never authorizes lookup, replacement or merging."
+  },
+  "source_limitations": [
+    "Public listings establish metadata, not a fresh authenticated strict quote result.",
+    "The Sentinel asset-info page rendered only a loading placeholder; do not invent on-chain denomination fields.",
+    "Frax full issuer addresses were read; provider displays matching abbreviated FXS lineage contract, but its full explorer target could not be fetched.",
+    "No wallet, chain or bridge execution has been audited or performed."
+  ],
+  "followup_live_audit": {
+    "commit": "d47234dbcbc4b67c1e949d1c6cc53338ae84df65",
+    "dataset_sha256": "6dd6d064e7b7b2c86033e2030da70880a8a75120d76bfccf20176ba992fdcf1f",
+    "audit_at": "2026-10-16T18:52:11.100Z",
+    "pass_count": 264,
+    "fail_count": 59,
+    "released": [
+      "iota",
+      "sentinel",
+      "frax"
+    ],
+    "quarantined": [],
+    "report": "reports/stage5c-native-quote-audit-20261016.json",
+    "healthz_report": "reports/stage5c-native-healthz-20261016.json",
+    "scope_note": "Review-time counts remain historical. All three same-ID symbol corrections passed strict quotes and were released. Numeric runtime parity for all 85 corrected releases is pending; the separate Legacy Frax Dollar canonical record remains unchanged."
+  }
+}

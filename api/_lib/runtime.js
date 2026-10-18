@@ -96,6 +96,13 @@ function getHealthSnapshot() {
       cmc_mapped: cmcMapped,
       no_cmc_mapping: records.length - cmcMapped,
     },
+    canonical_dataset: {
+      sha256: service._internals.resolver.datasetSha256,
+      git_commit: process.env.VERCEL_GIT_COMMIT_SHA || null,
+      mapping_repair: service._internals.resolver.dataset._mapping_repair || null,
+      eligible: records.filter((r) => service._internals.resolver.resolve(r.id).ok).length,
+      quarantined: records.filter((r) => r.mapping_status === 'unverified' || r.mapping_status === 'quarantined').length,
+    },
     uptime_seconds: Math.round(process.uptime()),
     node_version: process.version,
     vercel_region: process.env.VERCEL_REGION || 'local',

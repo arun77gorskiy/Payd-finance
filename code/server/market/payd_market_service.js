@@ -99,10 +99,6 @@ function createPaydMarketService({
       return _invalidIdEnvelope(String(canonicalId));
     }
 
-    // Cache hit short-circuits everything
-    const cached = resolvedCache.getSync(String(canonicalId));
-    if (cached) return cached;
-
     // Resolve identity
     const resolution = resolvedResolver.resolve(canonicalId);
 
@@ -126,6 +122,9 @@ function createPaydMarketService({
     }
 
     const ctx = resolution.context;
+    // Resolve before cache reads so quarantined mappings cannot serve old LIVE data.
+    const cached = resolvedCache.getSync(ctx.canonicalId);
+    if (cached) return cached;
     const accessMode = resolvedAdapter.getAccessMode();
 
     // Cache-coalesced provider fetch
@@ -140,6 +139,7 @@ function createPaydMarketService({
             symbol: ctx.symbol,
             name: ctx.name,
             expectedCmcId: ctx.cmcId,
+            cmcSlug: ctx.cmcSlug,
           },
           new Date(_now())
         );
