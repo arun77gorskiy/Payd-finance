@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>PAYD Finance · Equity Intelligence</title>
+<style>
+:root{color-scheme:dark;--bg:#0c0e12;--panel:#15191f;--line:#303641;--text:#f3f5f6;--muted:#a6aeb9;--gold:#d2ad68;--green:#61c4a0}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--text);font:15px/1.5 system-ui,-apple-system,Segoe UI,sans-serif}
+header{border-bottom:1px solid var(--line);padding:20px max(20px,calc((100% - 1120px)/2));display:flex;align-items:center;justify-content:space-between;gap:18px;flex-wrap:wrap}
+a{color:var(--gold)}.brand{font-weight:800;letter-spacing:.08em}.brand span{color:var(--gold)} main{max-width:1120px;margin:0 auto;padding:36px 20px 72px}
+h1{font-size:clamp(26px,4vw,42px);margin:0 0 10px}h2{font-size:20px;margin:0 0 16px}
+p{color:var(--muted)}.intro{max-width:730px;margin-bottom:28px}.panel{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:22px;margin:20px 0}
+form{display:flex;gap:10px;flex-wrap:wrap}input,button{font:inherit;border-radius:8px;padding:12px 14px}input{min-width:150px;flex:1;background:#0c0e12;color:var(--text);border:1px solid var(--line);text-transform:uppercase}button{background:var(--gold);color:#17130c;border:0;font-weight:700;cursor:pointer}button:disabled{opacity:.65;cursor:wait}
+.note{font-size:13px;color:var(--muted)}.status{min-height:25px;color:var(--gold);margin-top:12px}.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(215px,1fr));gap:12px;margin:16px 0}
+.metric{background:#101318;border:1px solid var(--line);border-radius:10px;padding:16px}.metric .label{color:var(--muted);font-size:12px}.metric .value{font-size:24px;font-weight:700;margin:8px 0;overflow-wrap:anywhere}.metric .date{color:var(--muted);font-size:12px}
+table{border-collapse:collapse;width:100%;text-align:left}th,td{border-bottom:1px solid var(--line);padding:10px 8px;font-size:13px}th{color:var(--muted);font-weight:500}
+.hidden{display:none}.pill{display:inline-block;padding:4px 9px;border:1px solid #6f5c3b;color:var(--gold);border-radius:20px;font-size:12px}
+footer{margin-top:40px;color:var(--muted);font-size:12px}
+@media(max-width:550px){.panel{padding:15px}header{padding:16px 20px}}
+</style>
+</head>
+<body>
+<header><div class="brand"><span>◆</span> PAYD FINANCE <small style="color:var(--muted)">/ EQUITY INTELLIGENCE</small></div><nav><a href="/intelligence-v2.html">Crypto Intelligence</a> · <a href="/">Главная</a></nav></header>
+<main>
+<span class="pill">BETA · SEC EDGAR</span>
+<h1>Фундаментальный анализ акций</h1>
+<p class="intro">Изучайте финансовую отчётность американских компаний: выручку, прибыль, денежные потоки, активы и долг. Только проверяемые цифры из официальных документов SEC.</p>
+<section class="panel">
+<h2>Найти компанию</h2>
+<form id="search"><input id="ticker" name="ticker" maxlength="10" value="MSFT" aria-label="Биржевой тикер" placeholder="Например, MSFT" pattern="[A-Za-z][A-Za-z0-9.\-]*" required><button id="go" type="submit">Анализировать</button></form>
+<div id="status" class="status" role="status" aria-live="polite">Введите тикер и запустите анализ.</div>
+<p class="note">Поддерживаются тикеры компаний, включённых в справочник SEC. Доступность отдельных метрик зависит от формата их отчётности.</p>
+</section>
+<section id="result" class="hidden" aria-live="polite">
+<div class="panel"><h2 id="company"></h2><p id="sub"></p><div class="grid" id="metrics"></div></div>
+<div class="panel"><h2>Исторические значения (10-K)</h2><div style="overflow-x:auto"><table><thead><tr><th>Метрика</th><th>Период</th><th>Значение</th></tr></thead><tbody id="history"></tbody></table></div></div>
+<div class="panel"><h2>Проверка качества данных</h2><div id="quality"></div><p class="note">Оценка стоимости, P/E, инвестиционный рейтинг и сигнал покупки пока отключены: для достоверного расчёта требуется интеграция котировок, отраслевые модели и отдельная валидация.</p></div>
+</section>
+<footer>PAYD FINANCE © 2026 · Аналитическая информация, не инвестиционная рекомендация. Источник данных: SEC EDGAR. Последние опубликованные отчёты могут отставать от текущего состояния бизнеса.</footer>
+</main>
+<script>
+(() => {
+'use strict';
+const $ = id => document.getElementById(id);
+const labels={revenue:'Выручка',netIncome:'Чистая прибыль',operatingCashFlow:'Операционный денежный поток',capex:'Капитальные расходы',freeCashFlow:'Свободный денежный поток',assets:'Активы',liabilities:'Обязательства',cash:'Денежные средства',longTermDebt:'Долг (один из доступных тегов)',dilutedEPS:'Разводнённая EPS'};
+const fmt=(v,key)=>v==null?'Нет данных':key==='dilutedEPS'?new Intl.NumberFormat('ru-RU',{maximumFractionDigits:2}).format(v)+' USD':new Intl.NumberFormat('ru-RU',{maximumFractionDigits:2}).format(v/1e9)+' млрд USD';
+function el(tag,cls,text){const n=document.createElement(tag);if(cls)n.className=cls;if(text!=null)n.textContent=text;return n;}
+function draw(data){
+$('result').classList.remove('hidden');
+$('company').textContent=data.company+' · '+data.ticker;
+$('sub').replaceChildren(document.createTextNode('CIK '+data.cik+' · Источник: '),Object.assign(el('a',null,'SEC EDGAR'),{href:data.sourceUrl,target:'_blank',rel:'noopener noreferrer'}));
+$('metrics').replaceChildren();$('history').replaceChildren();
+let count=0;
+for(const [key,label] of Object.entries(labels)){
+ const m=data.metrics?.[key]||null;if(m)count++;
+ const c=el('div','metric');c.append(el('div','label',label),el('div','value',fmt(m?.value,key)),el('div','date',m?.end?'Годовой период до '+m.end:'Не обнаружено в 10-K'));$('metrics').append(c);
+ if(m?.history){for(const h of m.history){const tr=el('tr');tr.append(el('td',null,label),el('td',null,h.end),el('td',null,fmt(h.value,key)));$('history').append(tr);}}
+}
+if(!$('history').children.length)$('history').append(el('tr',null,'Нет исторических данных'));
+$('quality').replaceChildren(el('p',null,'Подтверждённых финансовых показателей: '+count+' из '+Object.keys(labels).length+'. Пропуски отмечены явно. Данные могут относиться к разным финансовым периодам; сравнивайте даты каждого показателя.'));
+}
+$('search').addEventListener('submit',async ev=>{
+ ev.preventDefault();const ticker=$('ticker').value.trim().toUpperCase();if(!/^[A-Z][A-Z0-9.-]{0,9}$/.test(ticker)){$('status').textContent='Некорректный тикер';return;}
+ $('go').disabled=true;$('status').textContent='Получаем официальную отчётность…';$('result').classList.add('hidden');
+ try{const r=await fetch('/api/equities?ticker='+encodeURIComponent(ticker),{headers:{Accept:'application/json'}});const d=await r.json();if(!r.ok)throw Error(d.error||'HTTP '+r.status);draw(d);$('status').textContent='Отчётность загружена. Проверяйте даты и полноту показателей.';}
+ catch(e){$('status').textContent='Не удалось получить отчётность: '+e.message;}
+ finally{$('go').disabled=false;}
+});
+})();
+</script>
+</body>
+</html>
